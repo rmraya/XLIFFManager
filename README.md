@@ -43,7 +43,7 @@ With XLIFF Manager you can create XLIFF for all formats suppported by Open XLIFF
 
 ### Downloads
 
-You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from https:\\www.maxprograms.com 
+You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from https://www.maxprograms.com 
 
 ### Building & running
 
@@ -51,7 +51,7 @@ Requirements:
 [node.js](https://nodejs.org) 10.11.0 or newer
 
 - Checkout this repository.
-- Copy [Open XLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com )
+- Copy [Open XLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).
 - Run `npm install`
 - Finally, run `npm start`
 
