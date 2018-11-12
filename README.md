@@ -7,7 +7,7 @@ An open source UI for
 
 XLIFF Manager lets you create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.
 
-Once your XLIFF files are translated, You can conver them back to original format with XLIFF Manager with a couple of clicks.
+Once your XLIFF files have been translated, You can convert them back to original format with XLIFF Manager with a couple of clicks.
 
 ![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManager.png)
 
@@ -43,8 +43,7 @@ With XLIFF Manager you can create XLIFF for all formats suppported by Open XLIFF
 
 ### Downloads
 
-You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from 
-[https:\\www.maxprograms.com](https:\\www.maxprograms.com) 
+You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from https://www.maxprograms.com/products/xliffmanager.html
 
 ### Building & running
 
@@ -52,8 +51,7 @@ Requirements:
 [node.js](https://nodejs.org) 10.11.0 or newer
 
 - Checkout this repository.
-- Copy [Open XLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from 
-[https:\\www.maxprograms.com](https:\\www.maxprograms.com))
+- Copy [Open XLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).
 - Run `npm install`
 - Finally, run `npm start`
 
