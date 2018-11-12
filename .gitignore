@@ -1,1 +1,11 @@
 /.project
+/bin/
+/catalog/
+/conf/
+/include/
+/legal/
+/lib/
+/node_modules/
+/srx/
+/xmlfilter/
+/release
