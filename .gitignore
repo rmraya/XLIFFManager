@@ -10,4 +10,5 @@
 /xmlfilter/
 /release
 /xliffmanager-darwin-x64/
+/.settings/
 .DS_Store
