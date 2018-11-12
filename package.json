@@ -1,0 +1,23 @@
+{
+  "name": "xliffmanager",
+  "version": "1.0.0",
+  "description": "XLIFF Manager",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "xliff",
+    "filters",
+    "convert",
+    "merge"
+  ],
+  "author": "Rodolfo M. Raya",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "electron": "^3.0.8"
+  }
+}

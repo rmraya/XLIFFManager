@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>XLIFF Manager</title>
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body>
+        <div class="panel">
+            <table class="panel">
+                <tr>
+                    <td class="panel"><h1>Create XLIFF File</h1></td>
+                    <td class="panel"><a id="about" href="#"><img class="right" src="img/info.png"></a></td>
+                </tr>
+            </table>
+            <table class="panel">
+                <tr>
+                    <td class="panel"><label>Source File</label></td>
+                    <td class="panel fill"><input id="sourceFile" type="text" class="fill"></td>
+                    <td class="panel"><button id="browseSource" class="dark">Browse...</button></td>
+                </tr>
+            </table>
+            <table class="panel">
+                <tr>
+                    <td class="panel"><label>Source Language</label></td>
+                    <td class="panel fill"><select id="sourceSelect" class="fill"></select></td>
+                </tr>
+                <tr>
+                        <td class="panel"><label>Target Language</label></td>
+                        <td class="panel fill"><select id="targetSelect" class="fill"></select></td>
+                    </tr>
+                    <tr>
+                        <td class="panel"><label>File Type</label></td>
+                        <td class="panel fill"><select id="typeSelect" class="fill"></select></td>
+                    </tr>
+                    <tr>
+                    <td class="panel"><label>Character Set</label></td>
+                    <td class="panel fill"><select id="charsetSelect" class="fill"></select></td>
+                </tr>
+            </table>
+            <table class="panel">
+                <tr>
+                    <td class="panel">
+                        <div>
+                            <input id="is20" type="checkbox"><label>Generate XLIFF 2.0</label>
+                            <br/>
+                            <input id="isParagraph" type="checkbox"><label>Paragraph Segmentation</label>
+                            <br/>
+                            <input id="isEmbed" type="checkbox"><label>Embed Skeleton</label>
+                        </div>
+                    </td>
+                    <td class="panel">
+                        <button id="createButton" class="primary right">Create XLIFF</button>
+                        <p id="process"></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <hr>
+        <div class="panel">
+            <h1>Merge XLIFF File</h1>
+            <table class="panel">
+                <tr>
+                    <td class="panel"><label>XLIFF File</label></td>
+                    <td class="panel fill"><input id="xliffFile" type="text" class="fill"></td>
+                    <td class="panel"><button id="browseXLIFF" class="dark">Browse...</button></td>
+                </tr>
+                <tr>
+                    <td class="panel"><label>Target File/Folder</label></td>
+                    <td class="panel fill"><input id="targetFile" type="text" class="fill"></td>
+                    <td class="panel"><button id="browseTarget" class="dark">Browse...</button></td>
+                </tr>
+            </table>
+            <table class="panel">
+                <tr>
+                    <td class="panel">
+                        <input id="unapproved" type="checkbox"><label>Accept Unaproved Segments</label>
+                    </td>
+                    <td class="panel">
+                        <p id="merge"></p>
+                    </td>
+                    <td class="panel">
+                        <button id="mergeButton" class="primary right">Merge XLIFF</button>
+                    </td>
+                </tr>
+            </table>            
+        </div>
+        <script>require('./main');</script>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+*  {
+	font-family: Verdana, Arial, sans;	
+}
+
+body {
+	height: 100vh;
+	margin: 0px;
+	padding: 0px;
+}
+
+.panel {
+	background: #212121 ;
+	padding: 3px;
+	border:none;
+	margin: 0px;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+
+h1 {
+	color: #bdbdbd;
+	font-family: Verdana, Arial, sans;	
+	padding: 3px;	
+	font-size: 1.2em;
+	font-weight: normal;
+	white-space: nowrap;
+}
+
+img {
+	border: none;
+	background: #212121 ;
+}
+
+label {
+	color: #64b5f6;
+	font-family: Verdana, Arial, sans;	
+	padding: 3px;	
+	font-size: 0.8em;
+	white-space: nowrap;
+}
+
+p {
+	color: #bdbdbd;
+	font-family: Verdana, Arial, sans;
+	font-size: 0.8em;
+}
+
+.black {
+	color: black;
+}
+
+.dark {
+	color: #444444;
+}
+
+input [type="text"] {
+	font-family: Verdana, Arial, sans;	
+	font-size: 1.2em;
+	margin-bottom: 2px;
+	padding:2px;
+	width: 100%;
+}
+
+input.fill {
+    width: 100%;
+}
+
+select.fill {
+	width: 100%;
+}
+
+div {
+	margin: 0px;
+	padding: 3px;
+	overflow: auto;
+}
+
+button {
+	background: #bebbb8 ;
+	padding: 2px;
+	font-family: Verdana, Arial, sans;	
+	border:none;
+}
+
+button.dark {
+	background: #0d47a1 ;
+	color: #eeeeee;
+	padding-top: 3px;
+	padding-bottom:3px;
+	padding-left: 4px;
+	padding-right: 4px;	
+}
+
+button.primary {
+	background: #1e88e5;
+	color: #eeeeee;
+	padding: 5px;
+	margin: 3px;
+	box-shadow: 3px 3px #424242;
+}
+
+button.primary:hover {
+	background: #1976d2;
+}
+
+button.dark:hover {
+	background: #1565c0;
+}
+
+button:hover {
+	background: #979593 ;
+	border: none;
+}
+
+table {
+	width: 100%;
+	border: 1px solid #666666;
+	border-collapse: collapse;
+	margin: 0px;
+	padding: 0px;
+	overflow-y: auto;
+}
+
+table.panel {
+	width: 100%;
+	border: none;
+}
+
+.icon {
+	height: 16px; 
+	margin-right: 5px; 
+	vertical-align: bottom;
+}
+
+.icon.right {
+	height: 16px; 
+	margin-left: 5px; 
+	margin-right: 0px;
+	vertical-align: bottom;
+}
+
+th {
+	font-family: Verdana, Arial, sans;	
+	font-weight: bold;
+	background: #cccccc;
+	text-align: center;
+	border: 1px solid #bbbbbb;
+	padding: 3px;
+	vertical-align: top;
+}
+
+td {
+	border: 1px solid #bbbbbb;
+	padding: 3px;
+	vertical-align: top;
+}
+
+td.panel.fill {
+	width: 100%;
+}
+
+.highlight {
+	background: #f5f0d2;
+	color: #d32f2f;
+	padding-left: 3px;
+	padding-right: 3px;
+}
