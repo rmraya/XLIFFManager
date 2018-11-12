@@ -43,7 +43,7 @@ With XLIFF Manager you can create XLIFF for all formats suppported by Open XLIFF
 
 ### Downloads
 
-You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from https://www.maxprograms.com 
+You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from https://www.maxprograms.com/products/xliffmanager.html
 
 ### Building & running
 
