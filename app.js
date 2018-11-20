@@ -5,7 +5,7 @@ var request = require('request');
 let win;
 let javapath;
 let killed = false;
-let conversionResult;
+let status;
 
 const locked = app.requestSingleInstanceLock()
 
@@ -63,7 +63,7 @@ app.on('window-all-closed', function () {
 })
 
 function createWindows() {
-    win = new BrowserWindow({width: 600, height: 500, show: false, backgroundColor: '#212121', icon: './icons/openxliff.png'});
+    win = new BrowserWindow({width: 600, height: 580, show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'});
     win.on('closed', () => {
         win = null;
     });
@@ -115,6 +115,18 @@ ipcMain.on('select-xliff-file', (event, arg) => {
     }
 });
 
+ipcMain.on('select-xliff-validation', (event, arg) => {
+    var files = dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters:[
+            {name: 'XLIFF File', extensions: ['xlf']}
+        ]
+    });
+    if (files) {
+        event.sender.send('add-xliff-validation', files[0]);
+    }
+});
+
 ipcMain.on('select-target-file', (event, arg) => {
     var file = dialog.showSaveDialog({title: 'Target File/Folder'});
     if (file) {
@@ -160,16 +172,16 @@ ipcMain.on('convert', (event,arg) => {
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('process-created', '');
-                conversionResult = 'running';
+                status = 'running';
                 var intervalObject = setInterval(function () { 
                     getStatus(body.process);
-                    if (conversionResult === 'completed') { 
-                        event.sender.send('process-completed', conversionResult);
+                    if (status === 'completed') { 
+                        event.sender.send('process-completed', status);
                         clearInterval(intervalObject); 
-                    } else if (conversionResult === 'running') {
+                    } else if (status === 'running') {
                         // it's OK, keep waiting
                     } else {
-                        event.sender.send('show-error', conversionResult);
+                        event.sender.send('show-error', status);
                         clearInterval(intervalObject); 
                     }
                 }, 1000); 
@@ -180,33 +192,73 @@ ipcMain.on('convert', (event,arg) => {
     );
 });
 
+
 function getStatus(processId) {
     request.post('http://localhost:8000/FilterServer',{ json: { command: 'status', process: processId} }, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
-                conversionResult = body.status;
+                status = body.status;
             } else {
-                conversionResult = 'error!';
+                status = 'error!';
             }
         }
     );
 }
+
+ipcMain.on('validate', (event, arg) => {
+    request.post('http://localhost:8000/FilterServer', {json: arg }, 
+    function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            event.sender.send('validation-started', '');
+            status = 'running';
+            var intervalObject = setInterval(function () { 
+                getStatus(body.process);
+                if (status === 'completed') { 
+                    event.sender.send('validation-completed');
+                    getValidationStatus(body.process, event);
+                    clearInterval(intervalObject); 
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    event.sender.send('show-error', status);
+                    clearInterval(intervalObject); 
+                }
+            }, 1000); 
+        } else {
+            event.sender.send('show-error', error);
+        }
+    });
+});
+
+function getValidationStatus(processId, event) {
+    var arg = {command:'validationResult', process: processId}
+    request.post('http://localhost:8000/FilterServer', {json: arg }, 
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                event.sender.send('validation-result', body);
+            } else {
+                event.sender.send('show-error', error);
+            }    
+        } 
+    );
+}
+                    
 
 ipcMain.on('merge', (event,arg) => {
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('merge-created', '');
-                conversionResult = 'running';
+                status = 'running';
                 var intervalObject = setInterval(function () { 
                     getStatus(body.process);
-                    if (conversionResult === 'completed') { 
-                        event.sender.send('merge-completed', conversionResult);
+                    if (status === 'completed') { 
+                        event.sender.send('merge-completed', status);
                         clearInterval(intervalObject); 
-                    } else if (conversionResult === 'running') {
+                    } else if (status === 'running') {
                         // it's OK, keep waiting
                     } else {
-                        event.sender.send('show-error', conversionResult);
+                        event.sender.send('show-error', status);
                         clearInterval(intervalObject); 
                     }
                 }, 1000); 

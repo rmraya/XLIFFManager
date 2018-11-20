@@ -9,7 +9,7 @@ body {
 }
 
 .panel {
-	background: #212121 ;
+	background: #333333 ;
 	padding: 3px;
 	border:none;
 	margin: 0px;
@@ -23,6 +23,9 @@ body {
 	float: left;
 }
 
+hr {
+	margin: 2px;
+}
 
 h1 {
 	color: #bdbdbd;
@@ -31,11 +34,12 @@ h1 {
 	font-size: 1.2em;
 	font-weight: normal;
 	white-space: nowrap;
+	margin:3px;
 }
 
 img {
 	border: none;
-	background: #212121 ;
+	background: #333333 ;
 }
 
 label {

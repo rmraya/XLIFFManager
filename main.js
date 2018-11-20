@@ -57,6 +57,21 @@ createButton.addEventListener('click', () => {
     ipcRenderer.send('convert',args);
 });
 
+document.getElementById('browseXLIFFValidation').addEventListener('click', () => {
+    ipcRenderer.send('select-xliff-validation');
+});
+
+var validateButton = document.getElementById('validateButton');
+validateButton.addEventListener('click', () => {
+    var xliffFile = document.getElementById('xliffFileValidation').value;
+    if (!xliffFile) {
+        dialog.showErrorBox('Attention','Select XLIFF file');
+        return;
+    }
+    var args = {command: 'validateXliff', file: xliffFile};
+    ipcRenderer.send('validate', args);
+});
+
 ipcRenderer.send('get-languages');
 ipcRenderer.send('get-types');
 ipcRenderer.send('get-charsets');
@@ -77,6 +92,10 @@ ipcRenderer.on('add-xliff-file', (event,arg) => {
    document.getElementById('xliffFile').value = arg;
 });
 
+ipcRenderer.on('add-xliff-validation', (event,arg) => {
+    document.getElementById('xliffFileValidation').value = arg;
+ });
+ 
 ipcRenderer.on('add-target-file', (event,arg) => {
     document.getElementById('targetFile').value = arg;
 });
@@ -116,6 +135,23 @@ ipcRenderer.on('process-created', (event, arg) => {
     document.getElementById('process').innerHTML = '<img src="img/working.gif"/>';
 }); 
 
+
+ipcRenderer.on('validation-started', (event, arg) => {
+    document.getElementById('validation').innerHTML = '<img src="img/working.gif"/>';
+}); 
+
+ipcRenderer.on('validation-completed', (event, arg) => {
+    document.getElementById('validation').innerHTML = '';
+}); 
+
+ipcRenderer.on('validation-result', (event, arg) => {
+    if (arg.valid) {
+        dialog.showMessageBox({type:'info', message: arg.comment});
+    } else {
+        dialog.showMessageBox({type:'error', message: arg.reason});
+    }
+});
+
 ipcRenderer.on('process-completed', (event, arg) => {
     document.getElementById('process').innerHTML = '';
     dialog.showMessageBox({type:'info', title:'Success', message: 'XLIFF file created'});
@@ -133,6 +169,7 @@ ipcRenderer.on('merge-completed', (event, arg) => {
 ipcRenderer.on('show-error', (event, arg) => {
     document.getElementById('process').innerHTML = '';
     document.getElementById('merge').innerHTML = '';
+    document.getElementById('validation').innerHTML = '';
     dialog.showMessageBox({type:'error', message: arg});
 }); 
 

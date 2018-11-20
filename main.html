@@ -84,7 +84,29 @@
                         <button id="mergeButton" class="primary right">Merge XLIFF</button>
                     </td>
                 </tr>
-            </table>            
+            </table>   
+        </div>
+        <hr>
+        <div class="panel">
+            <h1>Validate XLIFF File</h1>
+            <table class="panel">
+                <tr>
+                    <td class="panel"><label>XLIFF File</label></td>
+                    <td class="panel fill"><input id="xliffFileValidation" type="text" class="fill"></td>
+                    <td class="panel"><button id="browseXLIFFValidation" class="dark">Browse...</button></td>
+                </tr>
+            </table>
+            <table class="panel">
+                <tr>
+                    <td class="panel"  width="60%">
+                        <p id="validation" class="right"></p>
+                    </td>
+                    <td class="panel">
+                        <button id="validateButton" class="primary right">Validate XLIFF</button>
+                        <p id="validate"></p>
+                    </td>
+                </tr>
+            </table>         
         </div>
         <script>require('./main');</script>
     </body>
