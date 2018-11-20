@@ -63,7 +63,7 @@ app.on('window-all-closed', function () {
 })
 
 function createWindows() {
-    win = new BrowserWindow({width: 600, height: 580, show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'});
+    win = new BrowserWindow({width: 600, height: 540, show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'});
     win.on('closed', () => {
         win = null;
     });
@@ -135,9 +135,9 @@ ipcMain.on('select-target-file', (event, arg) => {
 });
 
 ipcMain.on('show-about', (event, arg) => {
-    var about = new BrowserWindow({parent: win, width: 190, height: 320, 
+    var about = new BrowserWindow({parent: win, width: 190, height: 310, 
         minimizable: false, maximizable: false, resizable: false,
-        show: false, backgroundColor: '#212121', icon: './icons/openxliff.png'
+        show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'
     });
     about.loadURL('file://' + __dirname + '/about.html');
     about.show();
