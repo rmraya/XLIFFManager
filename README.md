@@ -9,9 +9,9 @@ XLIFF Manager lets you create XLIFF 1.2 and 2.0 files that can be translated in 
 
 Once your XLIFF files have been translated, You can convert them back to original format with XLIFF Manager with a couple of clicks.
 
-XLIFF Manager is able to validate XLIFF files produced by any tool. Supported versions are 1.0, 1.1 1.2 and 2.0.
+XLIFF Manager is able to validate XLIFF files produced by any tool. Supported XLIFF versions are 1.0, 1.1 1.2 and 2.0.
 
-![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManager.png)
+![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManagerNew.png)
 ### Releases
 
 Version | Comment | Release Date
