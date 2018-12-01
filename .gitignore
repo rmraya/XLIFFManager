@@ -12,4 +12,7 @@
 /xliffmanager-darwin-x64/
 /xliffmanager-win32-x64/
 /.settings/
+/.scannerwork/
 .DS_Store
+sonar-project.properties
+sonarqube.sh

@@ -36,7 +36,7 @@ createButton.addEventListener('click', () => {
         dialog.showErrorBox('Attention','Select character set');
         return;
     }
-    args = {command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset};
+    var args = {command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset};
     // check optional parameters
     var targetLang = document.getElementById('targetSelect').value;
     if (targetLang !== 'none') {
