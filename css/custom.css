@@ -107,11 +107,12 @@ button.primary {
 	color: #eeeeee;
 	padding: 5px;
 	margin: 3px;
-	box-shadow: 3px 3px #424242;
+	box-shadow: 3px 3px 5px #454545;
 }
 
 button.primary:hover {
 	background: #1976d2;
+	box-shadow: 3px 3px 5px #707070;
 }
 
 button.dark:hover {
