@@ -67,6 +67,7 @@ function createWindows() {
     win.on('closed', () => {
         win = null;
     });
+    win.setMenu(null);
     win.loadURL(`file://${__dirname}/main.html`); 
 }
 
@@ -139,6 +140,7 @@ ipcMain.on('show-about', (event, arg) => {
         minimizable: false, maximizable: false, resizable: false,
         show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'
     });
+    about.setMenu(null);
     about.loadURL('file://' + __dirname + '/about.html');
     about.show();
 });
