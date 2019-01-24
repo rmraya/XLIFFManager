@@ -23,6 +23,6 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^4.0.0"
+    "electron": "^4.0.2"
   }
 }

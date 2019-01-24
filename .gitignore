@@ -16,3 +16,4 @@
 .DS_Store
 sonar-project.properties
 sonarqube.sh
+package-lock.json
