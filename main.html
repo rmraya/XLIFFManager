@@ -11,7 +11,10 @@
             <table class="panel">
                 <tr>
                     <td class="panel"><h1>Create XLIFF File</h1></td>
-                    <td class="panel"><a id="about" href="#"><img class="right" src="img/info.png"></a></td>
+                    <td class="panel">
+                        <a id="update" href="#"><img class="right" src="img/update.png" title="Check for updates"></a>
+                        <a id="about" href="#"><img class="right" src="img/info.png" title="About..."></a>
+                    </td>
                 </tr>
             </table>
             <table class="panel">
@@ -104,6 +107,28 @@
                     <td class="panel">
                         <button id="validateButton" class="primary right">Validate XLIFF</button>
                         <p id="validate"></p>
+                    </td>
+                </tr>
+            </table>         
+        </div>
+        <hr>
+        <div class="panel">
+            <h1>Translation Status Analysis</h1>
+            <table class="panel">
+                <tr>
+                    <td class="panel"><label>XLIFF File</label></td>
+                    <td class="panel fill"><input id="xliffFileAnalysis" type="text" class="fill"></td>
+                    <td class="panel"><button id="browseXLIFFAnalysis" class="dark">Browse...</button></td>
+                </tr>
+            </table>
+            <table class="panel">
+                <tr>
+                    <td class="panel"  width="60%">
+                        <p id="analysis" class="right"></p>
+                    </td>
+                    <td class="panel">
+                        <button id="analyseButton" class="primary right">Analyse XLIFF</button>
+                        <p id="analyse"></p>
                     </td>
                 </tr>
             </table>         

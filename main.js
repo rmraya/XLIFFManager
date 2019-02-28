@@ -12,7 +12,6 @@
 const {ipcRenderer} = require('electron');
 const {dialog} = require('electron').remote
 
-
 document.getElementById('browseSource').addEventListener('click', () => {
     ipcRenderer.send('select-source-file');
 });
@@ -83,6 +82,21 @@ validateButton.addEventListener('click', () => {
     ipcRenderer.send('validate', args);
 });
 
+document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => {
+    ipcRenderer.send('select-xliff-analysis');
+});
+
+var analyseButton = document.getElementById('analyseButton');
+analyseButton.addEventListener('click', () => {
+    var xliffFile = document.getElementById('xliffFileAnalysis').value;
+    if (!xliffFile) {
+        dialog.showErrorBox('Attention','Select XLIFF file');
+        return;
+    }
+    var args = {command: 'analyseXliff', file: xliffFile};
+    ipcRenderer.send('analyse', args);
+});
+
 ipcRenderer.send('get-languages');
 ipcRenderer.send('get-types');
 ipcRenderer.send('get-charsets');
@@ -105,8 +119,12 @@ ipcRenderer.on('add-xliff-file', (event,arg) => {
 
 ipcRenderer.on('add-xliff-validation', (event,arg) => {
     document.getElementById('xliffFileValidation').value = arg;
- });
- 
+});
+
+ipcRenderer.on('add-xliff-analysis', (event,arg) => {
+    document.getElementById('xliffFileAnalysis').value = arg;
+});
+
 ipcRenderer.on('add-target-file', (event,arg) => {
     document.getElementById('targetFile').value = arg;
 });
@@ -146,13 +164,21 @@ ipcRenderer.on('process-created', (event, arg) => {
     document.getElementById('process').innerHTML = '<img src="img/working.gif"/>';
 }); 
 
-
 ipcRenderer.on('validation-started', (event, arg) => {
     document.getElementById('validation').innerHTML = '<img src="img/working.gif"/>';
 }); 
 
 ipcRenderer.on('validation-completed', (event, arg) => {
     document.getElementById('validation').innerHTML = '';
+}); 
+
+ipcRenderer.on('analysis-started', (event, arg) => {
+    document.getElementById('analysis').innerHTML = '<img src="img/working.gif"/>';
+}); 
+
+ipcRenderer.on('analysis-completed', (event, arg) => {
+    document.getElementById('analysis').innerHTML = '';
+    dialog.showMessageBox({type:'info', title:'Success', message: 'Analysis completed'});
 }); 
 
 ipcRenderer.on('validation-result', (event, arg) => {

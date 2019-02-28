@@ -74,7 +74,7 @@ app.on('window-all-closed', function () {
 })
 
 function createWindows() {
-    win = new BrowserWindow({width: 600, height: 540, show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'});
+    win = new BrowserWindow({width: 580, height: 570, show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'});
     win.on('closed', () => {
         win = null;
     });
@@ -139,6 +139,18 @@ ipcMain.on('select-xliff-validation', (event, arg) => {
     }
 });
 
+ipcMain.on('select-xliff-analysis', (event, arg) => {
+    var files = dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters:[
+            {name: 'XLIFF File', extensions: ['xlf']}
+        ]
+    });
+    if (files) {
+        event.sender.send('add-xliff-analysis', files[0]);
+    }
+});
+
 ipcMain.on('select-target-file', (event, arg) => {
     var file = dialog.showSaveDialog({title: 'Target File/Folder'});
     if (file) {
@@ -147,9 +159,9 @@ ipcMain.on('select-target-file', (event, arg) => {
 });
 
 ipcMain.on('show-about', (event, arg) => {
-    var about = new BrowserWindow({parent: win, width: 190, height: 310, 
+    var about = new BrowserWindow({parent: win, width: 190, height: 340, 
         minimizable: false, maximizable: false, resizable: false,
-        show: false, backgroundColor: '#333333', icon: './icons/openxliff.png'
+        show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
     });
     about.setMenu(null);
     about.loadURL('file://' + __dirname + '/about.html');
@@ -205,7 +217,6 @@ ipcMain.on('convert', (event,arg) => {
     );
 });
 
-
 function getStatus(processId) {
     request.post('http://localhost:8000/FilterServer',{ json: { command: 'status', process: processId} }, 
         function (error, response, body) {
@@ -256,6 +267,30 @@ function getValidationStatus(processId, event) {
     );
 }
                     
+ipcMain.on('analyse', (event, arg) => {
+    request.post('http://localhost:8000/FilterServer', {json: arg }, 
+    function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            event.sender.send('analysis-started', '');
+            status = 'running';
+            var intervalObject = setInterval(function () { 
+                getStatus(body.process);
+                if (status === 'completed') { 
+                    event.sender.send('analysis-completed');
+                    getValidationStatus(body.process, event);
+                    clearInterval(intervalObject); 
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    event.sender.send('show-error', status);
+                    clearInterval(intervalObject); 
+                }
+            }, 1000); 
+        } else {
+            event.sender.send('show-error', error);
+        }
+    });
+});
 
 ipcMain.on('merge', (event,arg) => {
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
