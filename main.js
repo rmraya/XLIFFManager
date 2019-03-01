@@ -11,6 +11,7 @@
  *******************************************************************************/ 
 const {ipcRenderer} = require('electron');
 const {dialog} = require('electron').remote
+const { shell } = require('electron')
 
 document.getElementById('browseSource').addEventListener('click', () => {
     ipcRenderer.send('select-source-file');
@@ -179,6 +180,7 @@ ipcRenderer.on('analysis-started', (event, arg) => {
 ipcRenderer.on('analysis-completed', (event, arg) => {
     document.getElementById('analysis').innerHTML = '';
     dialog.showMessageBox({type:'info', title:'Success', message: 'Analysis completed'});
+    shell.openItem(document.getElementById('xliffFileAnalysis').value + '.log.html');
 }); 
 
 ipcRenderer.on('validation-result', (event, arg) => {
