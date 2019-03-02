@@ -159,7 +159,7 @@ ipcMain.on('select-target-file', (event, arg) => {
 });
 
 ipcMain.on('show-about', (event, arg) => {
-    var about = new BrowserWindow({parent: win, width: 190, height: 340, 
+    var about = new BrowserWindow({parent: win, width: 210, height: 280, 
         minimizable: false, maximizable: false, resizable: false,
         show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
     });
