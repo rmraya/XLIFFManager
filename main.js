@@ -25,8 +25,7 @@ document.getElementById('browseTarget').addEventListener('click', () => {
     ipcRenderer.send('select-target-file');
 });
 
-var createButton = document.getElementById('createButton');
-createButton.addEventListener('click', () => {
+document.getElementById('createButton').addEventListener('click', () => {
     var sourceFile = document.getElementById('sourceFile').value;
     if (!sourceFile) {
         dialog.showErrorBox('Attention','Select source file');
@@ -72,8 +71,7 @@ document.getElementById('browseXLIFFValidation').addEventListener('click', () =>
     ipcRenderer.send('select-xliff-validation');
 });
 
-var validateButton = document.getElementById('validateButton');
-validateButton.addEventListener('click', () => {
+document.getElementById('validateButton').addEventListener('click', () => {
     var xliffFile = document.getElementById('xliffFileValidation').value;
     if (!xliffFile) {
         dialog.showErrorBox('Attention','Select XLIFF file');
@@ -87,8 +85,7 @@ document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => {
     ipcRenderer.send('select-xliff-analysis');
 });
 
-var analyseButton = document.getElementById('analyseButton');
-analyseButton.addEventListener('click', () => {
+document.getElementById('analyseButton').addEventListener('click', () => {
     var xliffFile = document.getElementById('xliffFileAnalysis').value;
     if (!xliffFile) {
         dialog.showErrorBox('Attention','Select XLIFF file');
@@ -212,8 +209,7 @@ ipcRenderer.on('show-error', (event, arg) => {
     dialog.showMessageBox({type:'error', message: arg});
 }); 
 
-var mergeButton = document.getElementById('mergeButton');
-mergeButton.addEventListener('click', () => {
+document.getElementById('mergeButton').addEventListener('click', () => {
     var xliffFile = document.getElementById('xliffFile').value;
     if (!xliffFile) {
         dialog.showErrorBox('Attention','Select XLIFF file');
@@ -232,7 +228,18 @@ mergeButton.addEventListener('click', () => {
     ipcRenderer.send('merge',args);
 });
 
-var aboutLink = document.getElementById('about');
-aboutLink.addEventListener('click', () => {
+document.getElementById('about').addEventListener('click', () => {
     ipcRenderer.send('show-about');
+});
+
+document.getElementById('help').addEventListener('click', () => {
+    var help = __dirname + '/xliffmanager.pdf';
+    if (process.platform == 'win32') {
+        __dirname + '\\xliffmanager.pdf'
+    }
+    shell.openItem(help);
+});
+
+document.getElementById('update').addEventListener('click', () => {
+    ipcRenderer.send('check-update');
 });
