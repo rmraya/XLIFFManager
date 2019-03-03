@@ -53,7 +53,8 @@ img {
 	border: none;
 	background: #2d2d2e;
 	padding: 0px;
-	margin: 0px
+	margin: 0px;
+	margin-right: 3px;
 }
 
 label {
