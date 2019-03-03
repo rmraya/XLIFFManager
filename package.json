@@ -13,7 +13,8 @@
     "xliff",
     "filters",
     "convert",
-    "merge"
+    "merge",
+    "statistics"
   ],
   "author": "Rodolfo M. Raya",
   "license": "SEE LICENSE IN LICENSE",
