@@ -52,7 +52,8 @@ h1 {
 img {
 	border: none;
 	background: #2d2d2e;
-	padding: 2px;
+	padding: 0px;
+	margin: 0px
 }
 
 label {
