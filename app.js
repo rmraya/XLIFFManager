@@ -79,7 +79,7 @@ function createWindows() {
         win = null;
     });
     win.setMenu(null);
-    win.loadURL(`file://${__dirname}/main.html`); 
+    win.loadURL('file://' + __dirname + '/main.html'); 
 }
 
 ipcMain.on('select-source-file', (event, arg) => {

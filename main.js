@@ -9,9 +9,8 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/ 
-const {ipcRenderer} = require('electron');
-const {dialog} = require('electron').remote
-const { shell } = require('electron')
+const {ipcRenderer, shell} = require('electron');
+const {dialog} = require('electron').remote;
 
 document.getElementById('browseSource').addEventListener('click', () => {
     ipcRenderer.send('select-source-file');
@@ -64,7 +63,7 @@ document.getElementById('createButton').addEventListener('click', () => {
     if (isEmbed ) {
         args.embed = true;
     }
-    ipcRenderer.send('convert',args);
+    ipcRenderer.send('convert', args);
 });
 
 document.getElementById('browseXLIFFValidation').addEventListener('click', () => {
@@ -225,7 +224,7 @@ document.getElementById('mergeButton').addEventListener('click', () => {
     if (unapproved ) {
         args.unapproved = true;
     }
-    ipcRenderer.send('merge',args);
+    ipcRenderer.send('merge', args);
 });
 
 document.getElementById('about').addEventListener('click', () => {
