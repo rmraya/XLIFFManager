@@ -12,6 +12,7 @@
 const {app, ipcMain, BrowserWindow, dialog} = require('electron');
 const spawn = require('child_process').spawn;
 var request = require('request');
+var pjson = require('./package.json');
 
 let win;
 let javapath;

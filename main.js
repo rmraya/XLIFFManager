@@ -238,7 +238,3 @@ document.getElementById('help').addEventListener('click', () => {
     }
     shell.openItem(help);
 });
-
-document.getElementById('update').addEventListener('click', () => {
-    ipcRenderer.send('check-update');
-});
