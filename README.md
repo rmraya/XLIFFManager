@@ -11,11 +11,14 @@ Once your XLIFF files have been translated, You can convert them back to origina
 
 XLIFF Manager is able to validate XLIFF files produced by any tool. Supported XLIFF versions are 1.0, 1.1 1.2 and 2.0.
 
-![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManagerNew.png)
+XLIFF Manager also lets you produce an HTML file with word counts and segment status statistics from an XLIFF document.
+
+![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManager.png)
 ### Releases
 
 Version | Comment | Release Date
 --------|---------|-------------
+1.2.0 | Added Translation Status Analysis | March 3, 2019
 1.1.0 | Implemented XLIFF validation| November 20, 2018
 1.0.0 | Initial Release | November 12, 2018
 
