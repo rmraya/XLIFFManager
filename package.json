@@ -26,7 +26,11 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "electron": "^4.1.4",
+=======
+    "electron": "^4.1.1",
+>>>>>>> 359ce73624e272ed52f83296dc9fffc81a78316c
     "electron-packager": "^13.1.1"
   }
 }
