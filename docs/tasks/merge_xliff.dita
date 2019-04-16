@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="merge_xliff">
+    <title>Merge XLIFF File</title>
+    <taskbody>
+        <context>
+            <p>Use the <i>Merge XLIFF File</i> option to convert an XLIFF file to original format.</p>
+            <p>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created
+                using <i>Open XLIFF Filters</i>.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>Type the name and location of the XLIFF file to merge in the <uicontrol>XLIFF
+                    File</uicontrol> text box in the <uicontrol>Merge XLIFF File</uicontrol> section  or click the <uicontrol>Browse...</uicontrol>
+                    button next to it to select an XLIFF file from the file system.</cmd>
+                <info>If you use the <uicontrol>Browse...</uicontrol> button to locate the XLIFF
+                    file, the program will try to automatically generate a suitable target file or
+                    folder.</info>
+            </step>
+            <step>
+                <cmd>Type the name of the translated file or folder for translated documents in the
+                        <uicontrol>Target File/Folder</uicontrol> text box or click the
+                        <uicontrol>Browse...</uicontrol> button next to it to select a file or
+                    folder.</cmd>
+                <info>If the XLIFF file contains multiple documents inside, a folder is required to
+                    place all translated files in it. This is usually the case when the XLIFF was
+                    created from a DITA Map.</info>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Merge XLIFF</uicontrol> button.</cmd>
+                <stepresult>XLIFF Manager will try to merge the indicated file.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

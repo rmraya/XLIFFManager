@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="xliffmanager_platforms">
+    <title>Supported Platforms</title>
+    <shortdesc/>
+    <conbody>
+        <ul>
+            <li>Microsoft Windows (8, 8.1 and 10)</li>
+            <li>macOS (10.12, 10.13 and 10.14)</li>
+            <li>Linux (tested and packed on OpenSUSE Leap)</li>
+        </ul>
+    </conbody>
+</concept>

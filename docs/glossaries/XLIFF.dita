@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/glossary.dtd">
+<glossentry id="XLIFF">
+    <glossterm>XLIFF</glossterm>
+    <glossdef>XLIFF (XML Localization Interchange File Format) is an open standard developed by <xref
+        href="http://www.oasis-open.org/" format="html">OASIS</xref> (Organization for the Advancement of
+        Structured Information Standards). The purpose of this vocabulary is to store localizable
+        data and carry it from one step of the localization process to the other, while allowing
+        interoperability between tools.</glossdef>
+</glossentry>

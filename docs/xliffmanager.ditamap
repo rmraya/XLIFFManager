@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
+"http://docs.oasis-open.org/dita/dtd/bookmap.dtd">
+<bookmap>
+    <booktitle>
+        <mainbooktitle>
+            <ph>XLIFF Manager User Guide</ph>
+            <image href="images/openxliff.png" placement="break" scale="80"/>
+        </mainbooktitle>
+        <booktitlealt>
+            <ph>Copyright © 2018-2019 Maxprograms</ph>
+        </booktitlealt>
+    </booktitle>
+    <frontmatter>        
+        <booklists>
+            <toc/>
+        </booklists>
+    </frontmatter>
+    <chapter>
+        <topicmeta>
+            <navtitle>Introduction</navtitle>
+        </topicmeta>
+        <topicref href="concepts/xliffmanager_introduction.dita"/>
+        <topicref href="concepts/xliffmanager_file_formats.dita"/>
+        <topicref href="concepts/xliffmanager_platforms.dita"/>
+    </chapter>
+    <chapter>
+        <topicmeta>
+            <navtitle>Creating and Merging XLIFF Files</navtitle>
+        </topicmeta>
+        <topicref href="tasks/create_xliff.dita"/>
+        <topicref href="tasks/merge_xliff.dita"/>
+    </chapter>  
+    <chapter>
+        <topicmeta>
+            <navtitle>Validating XLIFF Files</navtitle>
+        </topicmeta>
+        <topicref href="tasks/validate_xliff.dita"/>
+    </chapter>
+    <chapter>
+        <topicmeta>
+            <navtitle>Translation Status Analysis</navtitle>
+        </topicmeta>
+        <topicref href="tasks/analysis_xliff.dita"/>
+    </chapter>
+    <backmatter>
+        <booklists>
+            <glossarylist>
+                <topicref href="glossaries/CAT.dita"/>
+                <topicref href="glossaries/character_set.dita"/>
+                <topicref href="glossaries/SRX.dita"/>
+                <topicref href="glossaries/TMX.dita"/>
+                <topicref href="glossaries/XLIFF.dita"/>
+            </glossarylist>
+        </booklists>
+    </backmatter>
+</bookmap>

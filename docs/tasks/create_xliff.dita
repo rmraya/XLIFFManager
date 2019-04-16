@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="create_xliff">
+    <title>Create XLIFF File</title>
+    <shortdesc>Use the <i>Create XLIFF File</i> option to generate an XLIFF file from a selected
+        document.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Type the name and location of the document to convert to XLIFF in the
+                        <uicontrol>Source File</uicontrol> text box or click the
+                        <uicontrol>Browse...</uicontrol> button next to it to select a document from
+                    the file system.</cmd>
+                <info>If you use the <uicontrol>Browse...</uicontrol> button to select a file, the
+                    program will try to automatically guess its file type and character set.</info>
+            </step>
+            <step>
+                <cmd>Select the language of the document to convert using the <uicontrol>Source
+                        Language</uicontrol> drop-down list.</cmd>
+            </step>
+            <step>
+                <cmd>Optionally, select the language of the translated document using the
+                        <uicontrol>Target Language</uicontrol> drop-down list.</cmd>
+            </step>
+            <step>
+                <cmd>Select or adjust the type of source document using the <uicontrol>File
+                        Type</uicontrol> drop-down list.</cmd>
+            </step>
+            <step>
+                <cmd>Select or adjust the character set of the source document using the
+                        <uicontrol>Character Set</uicontrol> drop-down list.</cmd>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>Generate XLIFF 2.0</uicontrol> check box if you want to
+                    generate XLIFF 2.0.</cmd>
+                <info>By default the program generates XLIFF 1.2.</info>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>Paragraph Segmentation</uicontrol> check box if you want
+                    source text to be segmented at paragraph level. </cmd>
+                <info>The program uses sentence-level segmentation by default.</info>
+            </step>
+            <step>
+                <cmd>Select the <uicontrol>Embed Skeleton</uicontrol> option if you want the
+                    skeleton file to be inserted in the generated XLIFF.</cmd>
+                <info>The program generates a separated skeleton file in the folder where the source
+                    document is located by default. An embedded skeleton allows merging the XLIFF
+                    file in any computer, not just the one wheer the XLIFF was generated.</info>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Create XLIFF</uicontrol> button.</cmd>
+            </step>
+        </steps>
+        <result>The program will generate an XLIFF file and the corresponding skeleton in the folder
+            where the source file is located.</result>
+    </taskbody>
+</task>
