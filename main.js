@@ -224,6 +224,10 @@ document.getElementById('mergeButton').addEventListener('click', () => {
     if (unapproved ) {
         args.unapproved = true;
     }
+    var exportTmx = document.getElementById('exportTmx').checked;
+    if (exportTmx ) {
+        args.exportTmx = true;
+    }
     ipcRenderer.send('merge', args);
 });
 
