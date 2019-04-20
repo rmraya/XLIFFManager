@@ -51,6 +51,12 @@ document.getElementById('createButton').addEventListener('click', () => {
     if (targetLang !== 'none') {
         args.tgtLang = targetLang;
     }
+    if (document.getElementById('ditavalFile').disabled === false) {
+        var ditaval = document.getElementById('ditavalFile').value;
+        if (ditaval) {
+            args.ditaval = ditaval;
+        }
+    }
     var is20 = document.getElementById('is20').checked;
     if (is20 ) {
         args.is20 = true;
@@ -103,6 +109,11 @@ ipcRenderer.on('add-source-file', (event,arg) => {
     var type = arg.type;
     if (type !== 'Unknown') {
         document.getElementById('typeSelect').value = type;
+        if ('DITA' === type) {
+            enableDitaVal();
+        } else {
+            disableDitaVal();
+        }
     }
     var encoding = arg.encoding;
     if (encoding !== 'Unknown') {
@@ -157,6 +168,14 @@ ipcRenderer.on('charsets-received', (event,arg) => {
     document.getElementById('typeSelect').innerHTML = options;
  });
  
+document.getElementById('typeSelect').addEventListener('change', ()=>{
+    if ('DITA' === document.getElementById('typeSelect').value) {
+        enableDitaVal();
+    } else {
+        disableDitaVal();
+    }
+});
+
 ipcRenderer.on('process-created', (event, arg) => {
     document.getElementById('process').innerHTML = '<img src="img/working.gif"/>';
 }); 
@@ -241,4 +260,25 @@ document.getElementById('help').addEventListener('click', () => {
         __dirname + '\\xliffmanager.pdf'
     }
     shell.openItem(help);
+});
+
+function enableDitaVal() {
+    document.getElementById('browseDitaVal').disabled = false;
+    document.getElementById('browseDitaVal').className = 'dark';
+    document.getElementById('ditavalFile').disabled = false;
+};
+
+function disableDitaVal() {
+    document.getElementById('browseDitaVal').disabled = true;
+    document.getElementById('browseDitaVal').className = 'disabled';
+    document.getElementById('ditavalFile').value = '';
+    document.getElementById('ditavalFile').disabled = true;
+};
+
+document.getElementById('browseDitaVal').addEventListener('click', () => {
+    ipcRenderer.send('select-ditaval');
+});
+
+ipcRenderer.on('add-ditaval-file', (event, arg) => {
+    document.getElementById('ditavalFile').value = arg;
 });

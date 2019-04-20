@@ -12,13 +12,12 @@
 const {app, ipcMain, BrowserWindow, dialog} = require('electron');
 const spawn = require('child_process').spawn;
 var request = require('request');
-var pjson = require('./package.json');
 
 let win;
 let javapath;
 let killed = false;
 let status;
-
+let sklFolder;
 const locked = app.requestSingleInstanceLock()
 
 if (!locked) {
@@ -34,9 +33,11 @@ if (!locked) {
 }
 
 if (process.platform == 'win32') {
-    javapath = __dirname + '\\bin\\java.exe'
+    javapath = __dirname + '\\bin\\java.exe';
+    sklFolder = app.getPath('appData') + '\\xliffmanager\\skl';
 } else {
-    javapath = __dirname + '/bin/java'
+    javapath = __dirname + '/bin/java';
+    sklFolder = app.getPath('appData') + '/xliffmanager/skl';
 }
 
 const ls = spawn(javapath, ['--module-path', 'lib' ,'-m', 'xliffFilters/com.maxprograms.server.FilterServer'], {cwd: __dirname})
@@ -62,7 +63,7 @@ function stopServer() {
 app.on('ready', () => {
     createWindows();
     win.show();
-    // win.webContents.openDevTools();
+    // win.webContents.openDevTools(); 
 });
 
 app.on('quit', () => {
@@ -152,6 +153,19 @@ ipcMain.on('select-xliff-analysis', (event, arg) => {
     }
 });
 
+ipcMain.on('select-ditaval', (event, arg) => {
+    var files = dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters:[
+            {name: 'DITAVAL File', extensions: ['ditaval']},
+            {name: 'Any File', extensions: ['*']}
+        ]
+    });
+    if (files) {
+        event.sender.send('add-ditaval-file', files[0]);
+    }
+});
+
 ipcMain.on('select-target-file', (event, arg) => {
     var file = dialog.showSaveDialog({title: 'Target File/Folder'});
     if (file) {
@@ -194,6 +208,7 @@ function getTargetFile(event, file) {
  }
 
 ipcMain.on('convert', (event,arg) => {
+    arg.sklFolder = sklFolder;
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
