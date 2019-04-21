@@ -34,10 +34,10 @@ if (!locked) {
 
 if (process.platform == 'win32') {
     javapath = __dirname + '\\bin\\java.exe';
-    sklFolder = app.getPath('appData') + '\\xliffmanager\\skl';
+    sklFolder = app.getPath('appData') + '\\' + app.getName() + '\\skl';
 } else {
     javapath = __dirname + '/bin/java';
-    sklFolder = app.getPath('appData') + '/xliffmanager/skl';
+    sklFolder = app.getPath('appData') + '/' + app.getName() + '/skl';
 }
 
 const ls = spawn(javapath, ['--module-path', 'lib' ,'-m', 'xliffFilters/com.maxprograms.server.FilterServer'], {cwd: __dirname})
@@ -181,6 +181,16 @@ ipcMain.on('show-about', (event, arg) => {
     about.setMenu(null);
     about.loadURL('file://' + __dirname + '/about.html');
     about.show();
+});
+
+ipcMain.on('show-settings', (event, arg) => {
+    var settings = new BrowserWindow({parent: win, width: 500, height: 130, 
+        minimizable: false, maximizable: false, resizable: false,
+        show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
+    });
+    settings.setMenu(null);
+    settings.loadURL('file://' + __dirname + '/settings.html');
+    settings.show();
 });
 
 function getFileType(event, file) {

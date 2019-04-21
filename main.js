@@ -250,6 +250,10 @@ document.getElementById('mergeButton').addEventListener('click', () => {
     ipcRenderer.send('merge', args);
 });
 
+document.getElementById('settings').addEventListener('click', () => {
+    ipcRenderer.send('show-settings');
+});
+
 document.getElementById('about').addEventListener('click', () => {
     ipcRenderer.send('show-about');
 });
