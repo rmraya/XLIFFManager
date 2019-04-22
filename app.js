@@ -197,7 +197,7 @@ ipcMain.on('show-about', (event, arg) => {
 });
 
 ipcMain.on('show-settings', (event, arg) => {
-    settings = new BrowserWindow({parent: win, width: 590, height: 150, 
+    settings = new BrowserWindow({parent: win, width: 590, height: 160, 
         minimizable: false, maximizable: false,  resizable: false, 
         show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
     });
