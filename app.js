@@ -11,14 +11,21 @@
  *******************************************************************************/ 
 const {app, ipcMain, BrowserWindow, dialog} = require('electron');
 const spawn = require('child_process').spawn;
+const fs = require('fs');
 var request = require('request');
 
 let win;
+let settings;
 let javapath;
 let killed = false;
 let status;
+let appHome;
 let sklFolder;
-const locked = app.requestSingleInstanceLock()
+let defaultCatalog;
+let defaultSrcLang = 'none';
+let defaultTgtLang = 'none';
+
+const locked = app.requestSingleInstanceLock();
 
 if (!locked) {
     app.quit()
@@ -34,11 +41,17 @@ if (!locked) {
 
 if (process.platform == 'win32') {
     javapath = __dirname + '\\bin\\java.exe';
-    sklFolder = app.getPath('appData') + '\\' + app.getName() + '\\skl';
+    appHome = app.getPath('appData') + '\\xliffmanager\\';
+    sklFolder = appHome + 'skl\\';
+    defaultCatalog = app.getAppPath() + '\\catalog\\catalog.xml';
 } else {
     javapath = __dirname + '/bin/java';
-    sklFolder = app.getPath('appData') + '/' + app.getName() + '/skl';
+    appHome = app.getPath('appData') + '/xliffmanager/';
+    sklFolder = appHome + 'skl/';
+    defaultCatalog = app.getAppPath() + '/catalog/catalog.xml';
 }
+
+loadDefaults();
 
 const ls = spawn(javapath, ['--module-path', 'lib' ,'-m', 'xliffFilters/com.maxprograms.server.FilterServer'], {cwd: __dirname})
 ls.stdout.on('data', (data) => {
@@ -184,14 +197,45 @@ ipcMain.on('show-about', (event, arg) => {
 });
 
 ipcMain.on('show-settings', (event, arg) => {
-    var settings = new BrowserWindow({parent: win, width: 590, height: 130, 
-        minimizable: false, maximizable: false, resizable: false,
+    settings = new BrowserWindow({parent: win, width: 590, height: 150, 
+        minimizable: false, maximizable: false,  resizable: false, 
         show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
     });
     settings.setMenu(null);
     settings.loadURL('file://' + __dirname + '/settings.html');
     settings.show();
 });
+
+ipcMain.on('save-defaults', (event, arg) => {
+    saveDefaults(arg);
+});
+
+function saveDefaults(defaults) {
+    fs.writeFile(appHome + 'defaults.json', JSON.stringify(defaults) , function(err){
+        if(err) {
+           dialog.showMessageBox({type:'error', message: err.message});
+           return;
+        }
+        defaultCatalog = defaults.catalog;
+        sklFolder = defaults.skeleton;
+        defaultSrcLang = defaults.srcLang;
+        defaultTgtLang = defaults.tgtLang;
+        settings.close();
+    });
+}
+
+function loadDefaults() {
+    fs.readFile(appHome + 'defaults.json', function(err, data) {
+        if (err instanceof Error) {
+            return;
+        }
+        let defaults = JSON.parse(data);
+        sklFolder = defaults.skeleton;
+        defaultCatalog = defaults.catalog;
+        defaultSrcLang = defaults.srcLang;
+        defaultTgtLang = defaults.tgtLang;
+    });
+}
 
 function getFileType(event, file) {
    request.post('http://localhost:8000/FilterServer',{ json: { command: 'getFileType', file: file} }, 
@@ -359,12 +403,22 @@ ipcMain.on('get-languages', (event) => {
     request.post('http://localhost:8000/FilterServer', {json: {command: 'getLanguages'} }, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
+                body.srcLang = defaultSrcLang;
+                body.tgtLang = defaultTgtLang;
                 event.sender.send('languages-received', body);
             } else {
                 event.sender.send('show-error', error);
             }
         }
     );
+});
+
+ipcMain.on('get-skeleton', (event) => {
+    event.sender.send('skeleton-received', {sklFolder: sklFolder});
+});
+
+ipcMain.on('get-catalog', (event) => {
+    event.sender.send('catalog-received', {catalog: defaultCatalog});
 });
 
 ipcMain.on('get-charsets', (event) => {

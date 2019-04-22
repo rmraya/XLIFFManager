@@ -138,14 +138,16 @@ ipcRenderer.on('add-target-file', (event,arg) => {
 });
 
 ipcRenderer.on('languages-received', (event,arg) => {
-   var array =arg.languages;
+   var array = arg.languages;
    var options = '<option value="none">Select Language</option>';
    for (let i=0 ; i<array.length ; i++) {
        var lang = array[i];
        options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
    }
    document.getElementById('sourceSelect').innerHTML = options;
+   document.getElementById('sourceSelect').value = arg.srcLang;
    document.getElementById('targetSelect').innerHTML = options;
+   document.getElementById('targetSelect').value = arg.tgtLang;
 });
 
 ipcRenderer.on('charsets-received', (event,arg) => {
