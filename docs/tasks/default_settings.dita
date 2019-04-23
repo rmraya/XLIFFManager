@@ -19,7 +19,7 @@
             <step>
                 <cmd>If you wish to use a custom catalog for XML files, enter its location in the
                         <uicontrol>System Catalog</uicontrol> text box or use the corresponding
-                        <uicontrol>Browse...</uicontrol> button to select it rom the file
+                        <uicontrol>Browse...</uicontrol> button to select it from the file
                     system.</cmd>
             </step>
             <step>
