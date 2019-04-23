@@ -13,7 +13,7 @@ XLIFF Manager is able to validate XLIFF files produced by any tool. Supported XL
 
 XLIFF Manager also lets you produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManager.png)
+![XLIFF Manager on Windows](https://www.maxprograms.com/images/XliffManager1.png)
 ### Releases
 
 Version | Comment | Release Date
