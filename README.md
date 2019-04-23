@@ -13,13 +13,13 @@ XLIFF Manager is able to validate XLIFF files produced by any tool. Supported XL
 
 XLIFF Manager also lets you produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-<img src="https://www.maxprograms.com/images/XliffManager.png" alt="XLIFF Manager on Windows 10" width="680"/>
+<img src="https://www.maxprograms.com/images/XliffManager1.png" alt="XLIFF Manager on Windows 10" width="680"/>
 
 ### Releases
 
 Version | Comment | Release Date
 --------|---------|-------------
-1.3.0 | Allowed selection of DITAVAL files, added default settings dialog | April 23, 2019
+1.3.0 | Allowed selection of DITAVAL files, added export as TMX, added default settings dialog | April 23, 2019
 1.2.1 | Improved validation of XLIFF 2.0 | April 6, 2019
 1.2.0 | Added Translation Status Analysis | March 3, 2019
 1.1.0 | Implemented XLIFF validation| November 20, 2018
