@@ -89,7 +89,7 @@ app.on('window-all-closed', function () {
 })
 
 function createWindows() {
-    win = new BrowserWindow({width: 580, height: 620, show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'});
+    win = new BrowserWindow({width: 580, height: 640, show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'});
     win.on('closed', () => {
         win = null;
     });
