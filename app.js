@@ -186,6 +186,32 @@ ipcMain.on('select-target-file', (event, arg) => {
     }
 });
 
+ipcMain.on('select-skeleton', (event, arg) => {
+    var file = dialog.showOpenDialog({
+        title: 'Skeleton Folder', 
+        defaultPath: sklFolder, 
+        properties: ['openDirectory', 'createDirectory']
+    });
+    if (file) {
+        event.sender.send('skeleton-received', {sklFolder: file[0]});
+    }
+});
+
+ipcMain.on('select-catalog', (event, arg) => {
+    var files = dialog.showOpenDialog({
+        title: 'Default Catalog', 
+        defaultPath: defaultCatalog, 
+        properties: ['openFile'],
+        filters:[
+            {name: 'XML File', extensions: ['xml']},
+            {name: 'Any File', extensions: ['*']}
+        ]
+    });
+    if (files) {
+        event.sender.send('catalog-received', {catalog: files[0]});
+    }
+});
+
 ipcMain.on('show-about', (event, arg) => {
     var about = new BrowserWindow({parent: win, width: 210, height: 280, 
         minimizable: false, maximizable: false, resizable: false,
@@ -263,6 +289,7 @@ function getTargetFile(event, file) {
 
 ipcMain.on('convert', (event,arg) => {
     arg.sklFolder = sklFolder;
+    arg.catalog = defaultCatalog;
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
@@ -300,6 +327,7 @@ function getStatus(processId) {
 }
 
 ipcMain.on('validate', (event, arg) => {
+    arg.catalog = defaultCatalog;
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -338,6 +366,7 @@ function getValidationStatus(processId, event) {
 }
                     
 ipcMain.on('analyse', (event, arg) => {
+    arg.catalog = defaultCatalog;
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
     function (error, response, body) {
         if (!error && response.statusCode == 200) {
@@ -363,6 +392,7 @@ ipcMain.on('analyse', (event, arg) => {
 });
 
 ipcMain.on('merge', (event,arg) => {
+    arg.catalog = defaultCatalog;
     request.post('http://localhost:8000/FilterServer', {json: arg }, 
         function (error, response, body) {
             if (!error && response.statusCode == 200) {

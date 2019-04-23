@@ -44,3 +44,12 @@ document.getElementById('save').addEventListener('click', () => {
         catalog: document.getElementById('defaultCatalog').value
     });
 });
+
+document.getElementById('browseSkeleton').addEventListener('click', () => {
+    ipcRenderer.send('select-skeleton');
+});
+
+
+document.getElementById('browseCatalog').addEventListener('click', () => {
+    ipcRenderer.send('select-catalog');
+});
