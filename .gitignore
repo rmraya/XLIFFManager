@@ -13,6 +13,7 @@
 /xliffmanager-win32-x64/
 /.settings/
 /.scannerwork/
+/docs/out/
 .DS_Store
 sonar-project.properties
 sonarqube.sh
