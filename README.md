@@ -19,6 +19,7 @@ XLIFF Manager also lets you produce an HTML file with word counts and segment st
 
 Version | Comment | Release Date
 --------|---------|-------------
+1.3.1 | Updated with Open XLIFF Filters 1.3.1 | April 30, 2019
 1.3.0 | Allowed selection of DITAVAL files, added export as TMX, added default settings dialog | April 23, 2019
 1.2.1 | Improved validation of XLIFF 2.0 | April 6, 2019
 1.2.0 | Added Translation Status Analysis | March 3, 2019
