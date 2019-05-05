@@ -13,6 +13,7 @@ const {app, ipcMain, BrowserWindow, dialog} = require('electron');
 const spawn = require('child_process').spawn;
 const fs = require('fs');
 var request = require('request');
+const http = require('http');
 
 let win;
 let settings;
@@ -418,29 +419,81 @@ ipcMain.on('merge', (event,arg) => {
 });
 
 ipcMain.on('get-version', (event) => {
-    request.post('http://localhost:8000/FilterServer', {json: {command: 'version'}}, 
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('set-version', body);
-            } else {
-                event.sender.send('show-error', error);
-            }
+    http.get('http://localhost:8000/FilterServer/', (res) => {
+        const { statusCode } = res;
+        const contentType = res.headers['content-type'];
+
+        let error;
+        if (statusCode !== 200) {
+            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
+        } else if (!/^application\/json/.test(contentType)) {
+            error = new Error('Invalid content-type.\n' +
+                      `Expected application/json but received ${contentType}`);
         }
-    );
+        if (error) {
+            console.error(error.message);
+            // Consume response data to free up memory
+            res.resume();
+            return;
+        }
+
+        res.setEncoding('utf8');
+        let rawData = '';
+        res.on('data', (chunk) => { 
+            rawData += chunk; 
+        });
+        res.on('end', () => {
+            try {
+                const parsedData = JSON.parse(rawData);
+                event.sender.send('set-version', parsedData);
+            } catch (e) {
+                console.error(e.message);
+                event.sender.send('show-error', e.message);
+            }
+        });
+    }).on('error', (e) => {
+        console.error(e.message);
+        event.sender.send('show-error', e.message);
+    });
 });
 
 ipcMain.on('get-languages', (event) => {
-    request.post('http://localhost:8000/FilterServer', {json: {command: 'getLanguages'} }, 
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                body.srcLang = defaultSrcLang;
-                body.tgtLang = defaultTgtLang;
-                event.sender.send('languages-received', body);
-            } else {
-                event.sender.send('show-error', error);
-            }
+    http.get('http://localhost:8000/FilterServer/getLanguages', (res) => {
+        const { statusCode } = res;
+        const contentType = res.headers['content-type'];
+
+        let error;
+        if (statusCode !== 200) {
+            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
+        } else if (!/^application\/json/.test(contentType)) {
+            error = new Error('Invalid content-type.\n' +
+                      `Expected application/json but received ${contentType}`);
         }
-    );
+        if (error) {
+            // Consume response data to free up memory
+            res.resume();
+            return;
+        }
+        res.setEncoding('utf8');
+        let rawData = '';
+        res.on('data', (chunk) => { 
+            rawData += chunk; 
+        });
+        res.on('end', () => {
+            try {
+                const parsedData = JSON.parse(rawData);
+                parsedData.srcLang = defaultSrcLang;
+                parsedData.tgtLang = defaultTgtLang;
+                event.sender.send('languages-received', parsedData);
+            } catch (e) {
+                console.error(e.message);
+                event.sender.send('show-error', e.message);
+            }
+        });
+    }).on('error', (e) => {
+        console.error(e.message);
+        event.sender.send('show-error', e.message);
+    });
 });
 
 ipcMain.on('get-skeleton', (event) => {
@@ -452,25 +505,73 @@ ipcMain.on('get-catalog', (event) => {
 });
 
 ipcMain.on('get-charsets', (event) => {
-    request.post('http://localhost:8000/FilterServer', {json: {command: 'getCharsets'} }, 
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('charsets-received', body);
-            } else {
-                event.sender.send('show-error', error);
-            }
+    http.get('http://localhost:8000/FilterServer/getCharsets', (res) => {
+        const { statusCode } = res;
+        const contentType = res.headers['content-type'];
+
+        let error;
+        if (statusCode !== 200) {
+            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
+        } else if (!/^application\/json/.test(contentType)) {
+            error = new Error('Invalid content-type.\n' +
+                      `Expected application/json but received ${contentType}`);
         }
-    );
+        if (error) {
+            // Consume response data to free up memory
+            res.resume();
+            return;
+        }
+        res.setEncoding('utf8');
+        let rawData = '';
+        res.on('data', (chunk) => { 
+            rawData += chunk; 
+        });
+        res.on('end', () => {
+            try {
+                const parsedData = JSON.parse(rawData);
+                event.sender.send('charsets-received', parsedData);
+            } catch (e) {
+                console.error(e.message);
+                event.sender.send('show-error', e.message);
+            }
+        });
+    }).on('error', (e) => {
+        console.error(e.message);
+        event.sender.send('show-error', e.message);
+    });
 });
 
 ipcMain.on('get-types', (event) => {
-    request.post('http://localhost:8000/FilterServer', {json: {command: 'getTypes'} }, 
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('types-received', body);
-            } else {
-                event.sender.send('show-error', error); 
-            }
+    http.get('http://localhost:8000/FilterServer/getTypes', (res) => {
+        const { statusCode } = res;
+        const contentType = res.headers['content-type'];
+
+        let error;
+        if (statusCode !== 200) {
+            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
+        } else if (!/^application\/json/.test(contentType)) {
+            error = new Error('Invalid content-type.\n' +
+                      `Expected application/json but received ${contentType}`);
         }
-    );
+        if (error) {
+            // Consume response data to free up memory
+            res.resume();
+            return;
+        }
+        res.setEncoding('utf8');
+        let rawData = '';
+        res.on('data', (chunk) => { 
+            rawData += chunk; 
+        });
+        res.on('end', () => {
+            try {
+                const parsedData = JSON.parse(rawData);
+                event.sender.send('types-received', parsedData);
+            } catch (e) {
+                event.sender.send('show-error', e.message);
+            }
+        });
+    }).on('error', (e) => {
+        event.sender.send('show-error', e.message);
+    });
 });
