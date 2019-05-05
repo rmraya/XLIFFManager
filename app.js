@@ -14,9 +14,11 @@ const spawn = require('child_process').spawn;
 const fs = require('fs');
 var request = require('request');
 const http = require('http');
+const https = require('https');
 
 let win;
 let settings;
+let updates;
 let javapath;
 let killed = false;
 let status;
@@ -90,7 +92,16 @@ app.on('window-all-closed', function () {
 })
 
 function createWindows() {
-    win = new BrowserWindow({width: 580, height: 640, show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'});
+    win = new BrowserWindow({
+        width: 580, 
+        height: 640, 
+        show: false, 
+        backgroundColor: '#2d2d2e', 
+        icon: './icons/openxliff.png', 
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
     win.on('closed', () => {
         win = null;
     });
@@ -214,9 +225,18 @@ ipcMain.on('select-catalog', (event, arg) => {
 });
 
 ipcMain.on('show-about', (event, arg) => {
-    var about = new BrowserWindow({parent: win, width: 210, height: 280, 
-        minimizable: false, maximizable: false, resizable: false,
-        show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
+    var about = new BrowserWindow({
+        parent: win, 
+        width: 210, 
+        height: 280, 
+        minimizable: false, 
+        maximizable: false, 
+        resizable: false,
+        show: false, backgroundColor: '#2d2d2e', 
+        icon: './icons/openxliff.png', 
+        webPreferences: {
+            nodeIntegration: true
+        }
     });
     about.setMenu(null);
     about.loadURL('file://' + __dirname + '/about.html');
@@ -224,9 +244,19 @@ ipcMain.on('show-about', (event, arg) => {
 });
 
 ipcMain.on('show-settings', (event, arg) => {
-    settings = new BrowserWindow({parent: win, width: 590, height: 160, 
-        minimizable: false, maximizable: false,  resizable: false, 
-        show: false, backgroundColor: '#2d2d2e', icon: './icons/openxliff.png'
+    settings = new BrowserWindow({
+        parent: win, 
+        width: 590, 
+        height: 160, 
+        minimizable: false, 
+        maximizable: false,  
+        resizable: false, 
+        show: false, 
+        backgroundColor: '#2d2d2e', 
+        icon: './icons/openxliff.png', 
+        webPreferences: {
+            nodeIntegration: true
+        }
     });
     settings.setMenu(null);
     settings.loadURL('file://' + __dirname + '/settings.html');
@@ -421,22 +451,10 @@ ipcMain.on('merge', (event,arg) => {
 ipcMain.on('get-version', (event) => {
     http.get('http://localhost:8000/FilterServer/', (res) => {
         const { statusCode } = res;
-        const contentType = res.headers['content-type'];
-
-        let error;
         if (statusCode !== 200) {
-            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
-        } else if (!/^application\/json/.test(contentType)) {
-            error = new Error('Invalid content-type.\n' +
-                      `Expected application/json but received ${contentType}`);
-        }
-        if (error) {
-            console.error(error.message);
-            // Consume response data to free up memory
-            res.resume();
+            event.sender.send('show-error', 'Version Request Failed.\nStatus code: ' + res.statusCode);
             return;
         }
-
         res.setEncoding('utf8');
         let rawData = '';
         res.on('data', (chunk) => { 
@@ -460,18 +478,8 @@ ipcMain.on('get-version', (event) => {
 ipcMain.on('get-languages', (event) => {
     http.get('http://localhost:8000/FilterServer/getLanguages', (res) => {
         const { statusCode } = res;
-        const contentType = res.headers['content-type'];
-
-        let error;
         if (statusCode !== 200) {
-            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
-        } else if (!/^application\/json/.test(contentType)) {
-            error = new Error('Invalid content-type.\n' +
-                      `Expected application/json but received ${contentType}`);
-        }
-        if (error) {
-            // Consume response data to free up memory
-            res.resume();
+            event.sender.send('show-error', 'Languages Request Failed.\nStatus code: ' + res.statusCode);
             return;
         }
         res.setEncoding('utf8');
@@ -507,18 +515,8 @@ ipcMain.on('get-catalog', (event) => {
 ipcMain.on('get-charsets', (event) => {
     http.get('http://localhost:8000/FilterServer/getCharsets', (res) => {
         const { statusCode } = res;
-        const contentType = res.headers['content-type'];
-
-        let error;
         if (statusCode !== 200) {
-            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
-        } else if (!/^application\/json/.test(contentType)) {
-            error = new Error('Invalid content-type.\n' +
-                      `Expected application/json but received ${contentType}`);
-        }
-        if (error) {
-            // Consume response data to free up memory
-            res.resume();
+            event.sender.send('show-error', 'Charsets Request Failed.\nStatus code: ' + res.statusCode);
             return;
         }
         res.setEncoding('utf8');
@@ -544,18 +542,8 @@ ipcMain.on('get-charsets', (event) => {
 ipcMain.on('get-types', (event) => {
     http.get('http://localhost:8000/FilterServer/getTypes', (res) => {
         const { statusCode } = res;
-        const contentType = res.headers['content-type'];
-
-        let error;
         if (statusCode !== 200) {
-            error = new Error('Request Failed.\n' + `Status Code: ${statusCode}`);
-        } else if (!/^application\/json/.test(contentType)) {
-            error = new Error('Invalid content-type.\n' +
-                      `Expected application/json but received ${contentType}`);
-        }
-        if (error) {
-            // Consume response data to free up memory
-            res.resume();
+            event.sender.send('show-error', 'Types Request Failed.\nStatus code: ' + res.statusCode);
             return;
         }
         res.setEncoding('utf8');
@@ -571,6 +559,40 @@ ipcMain.on('get-types', (event) => {
                 event.sender.send('show-error', e.message);
             }
         });
+    }).on('error', (e) => {
+        event.sender.send('show-error', e.message);
+    });
+});
+
+ipcMain.on('check-updates', (event) => {
+    https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res) => {
+        if (res.statusCode === 200) {
+            let rawData = '';
+            res.on('data', (chunk) => { 
+                rawData += chunk; 
+            });
+            res.on('end', () => {
+                try {
+                    const parsedData = JSON.parse(rawData);
+                    if (app.getVersion() !== parsedData.version) {
+                        dialog.showMessageBox(win, {
+                            type:'info',
+                            title: 'Updates Available',
+                            message: 'Version ' + parsedData.version + ' is available'
+                        });
+                    } else {
+                        dialog.showMessageBox(win, {
+                            type:'info',
+                            message: 'There are currently no updates available.'
+                        });
+                    }
+                } catch (e) {
+                    event.sender.send('show-error', e.message);
+                }
+            });
+        } else {
+            event.sender.send('show-error', 'Updates Request Failed.\nStatus code: ' + res.statusCode);
+        }
     }).on('error', (e) => {
         event.sender.send('show-error', e.message);
     });

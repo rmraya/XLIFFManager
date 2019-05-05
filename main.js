@@ -288,3 +288,7 @@ document.getElementById('browseDitaVal').addEventListener('click', () => {
 ipcRenderer.on('add-ditaval-file', (event, arg) => {
     document.getElementById('ditavalFile').value = arg;
 });
+
+document.getElementById('refresh').addEventListener('click', () => {
+    ipcRenderer.send('check-updates');
+});
