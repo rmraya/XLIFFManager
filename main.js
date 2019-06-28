@@ -263,7 +263,7 @@ document.getElementById('about').addEventListener('click', () => {
 document.getElementById('help').addEventListener('click', () => {
     var help = __dirname + '/xliffmanager.pdf';
     if (process.platform == 'win32') {
-        __dirname + '\\xliffmanager.pdf'
+        help = __dirname + '\\xliffmanager.pdf'
     }
     shell.openItem(help);
 });
