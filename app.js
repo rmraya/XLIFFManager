@@ -80,7 +80,7 @@ function checkServer(url, timeout) {
     request(url, {'timeout': timeout}, function (error, response, body) {
         if (error) {
             console.log(error)
-        }      
+        } 
     });
 }
 
@@ -236,8 +236,8 @@ ipcMain.on('select-catalog', (event, arg) => {
 ipcMain.on('show-about', (event, arg) => {
     var about = new BrowserWindow({
         parent: win, 
-        width: 210, 
-        height: 280, 
+        width: 270, 
+        height: 320, 
         minimizable: false, 
         maximizable: false, 
         resizable: false,
