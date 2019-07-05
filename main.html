@@ -21,32 +21,32 @@
             </table>
             <table class="panel">
                 <tr>
-                    <td class="panel"><label>Source File</label></td>
+                    <td class="panel"><label for="sourceFile">Source File</label></td>
                     <td class="panel fill"><input id="sourceFile" type="text" class="fill"></td>
                     <td class="panel"><button id="browseSource" class="dark">Browse...</button></td>
                 </tr>
             </table>
             <table class="panel">
                 <tr>
-                    <td class="panel"><label>Source Language</label></td>
+                    <td class="panel"><label for="sourceSelect">Source Language</label></td>
                     <td class="panel fill"><select id="sourceSelect" class="fill"></select></td>
                 </tr>
                 <tr>
-                        <td class="panel"><label>Target Language</label></td>
+                        <td class="panel"><label for="targetSelect">Target Language</label></td>
                         <td class="panel fill"><select id="targetSelect" class="fill"></select></td>
                     </tr>
                     <tr>
-                        <td class="panel"><label>File Type</label></td>
+                        <td class="panel"><label for="typeSelect">File Type</label></td>
                         <td class="panel fill"><select id="typeSelect" class="fill"></select></td>
                     </tr>
                     <tr>
-                    <td class="panel"><label>Character Set</label></td>
+                    <td class="panel"><label for="charsetSelect">Character Set</label></td>
                     <td class="panel fill"><select id="charsetSelect" class="fill"></select></td>
                 </tr>
             </table>
             <table class="panel">
                 <tr>
-                    <td class="panel"><label>DITAVAL File</label></td>
+                    <td class="panel"><label for="ditavalFile">DITAVAL File</label></td>
                     <td class="panel fill"><input id="ditavalFile" type="text" class="fill" disabled></td>
                     <td class="panel"><button id="browseDitaVal" class="disabled" disabled>Browse...</button></td>
                 </tr>
@@ -55,11 +55,11 @@
                 <tr>
                     <td class="panel">
                         <div>
-                            <input id="is20" type="checkbox"><label>Generate XLIFF 2.0</label>
+                            <input id="is20" type="checkbox"><label for="is20">Generate XLIFF 2.0</label>
                             <br/>
-                            <input id="isParagraph" type="checkbox"><label>Paragraph Segmentation</label>
+                            <input id="isParagraph" type="checkbox"><label for="isParagraph">Paragraph Segmentation</label>
                             <br/>
-                            <input id="isEmbed" type="checkbox"><label>Embed Skeleton</label>
+                            <input id="isEmbed" type="checkbox"><label for="isEmbed">Embed Skeleton</label>
                         </div>
                     </td>
                     <td class="panel" style="height:40px;">
@@ -74,12 +74,12 @@
             <h1>Merge XLIFF File</h1>
             <table class="panel">
                 <tr>
-                    <td class="panel"><label>XLIFF File</label></td>
+                    <td class="panel"><label for="xliffFile">XLIFF File</label></td>
                     <td class="panel fill"><input id="xliffFile" type="text" class="fill"></td>
                     <td class="panel"><button id="browseXLIFF" class="dark">Browse...</button></td>
                 </tr>
                 <tr>
-                    <td class="panel"><label>Target File/Folder</label></td>
+                    <td class="panel"><label for="targetFile">Target File/Folder</label></td>
                     <td class="panel fill"><input id="targetFile" type="text" class="fill"></td>
                     <td class="panel"><button id="browseTarget" class="dark">Browse...</button></td>
                 </tr>
@@ -87,9 +87,9 @@
             <table class="panel">
                 <tr>
                     <td class="panel">
-                        <input id="unapproved" type="checkbox"><label>Accept Unaproved Segments</label>
+                        <input id="unapproved" type="checkbox"><label for="unapproved">Accept Unaproved Segments</label>
                         <br/>
-                        <input id="exportTmx" type="checkbox"><label>Export Approved Segments as TMX</label>
+                        <input id="exportTmx" type="checkbox"><label for="exportTmx">Export Approved Segments as TMX</label>
                     </td>
                     <td class="panel" style="height:40px;">
                         <p id="merge"></p>
@@ -105,7 +105,7 @@
             <h1>Validate XLIFF File</h1>
             <table class="panel">
                 <tr>
-                    <td class="panel"><label>XLIFF File</label></td>
+                    <td class="panel"><label for="xliffFileValidation">XLIFF File</label></td>
                     <td class="panel fill"><input id="xliffFileValidation" type="text" class="fill"></td>
                     <td class="panel"><button id="browseXLIFFValidation" class="dark">Browse...</button></td>
                 </tr>
@@ -127,7 +127,7 @@
             <h1>Translation Status Analysis</h1>
             <table class="panel">
                 <tr>
-                    <td class="panel"><label>XLIFF File</label></td>
+                    <td class="panel"><label for="xliffFileAnalysis">XLIFF File</label></td>
                     <td class="panel fill"><input id="xliffFileAnalysis" type="text" class="fill"></td>
                     <td class="panel"><button id="browseXLIFFAnalysis" class="dark">Browse...</button></td>
                 </tr>
