@@ -76,10 +76,19 @@ function stopServer() {
     }
 }
 
+function checkServer(url, timeout) {
+    request(url, {'timeout': timeout}, function (error, response, body) {
+        if (error) {
+            console.log(error)
+        }      
+    });
+}
+
 app.on('ready', () => {
+    checkServer('http://localhost:8000/FilterServer', 20000);
     createWindows();
     win.show();
-    // win.webContents.openDevTools(); 
+    // win.webContents.openDevTools();
 });
 
 app.on('quit', () => {
