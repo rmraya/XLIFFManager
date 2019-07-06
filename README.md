@@ -3,7 +3,7 @@
 ## XLIFF Manager
 
 An open source UI for 
-[Open XLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in JavaScript.
+[OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in JavaScript.
 
 XLIFF Manager lets you create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.
 
@@ -19,9 +19,9 @@ XLIFF Manager also lets you produce an HTML file with word counts and segment st
 
 Version | Comment | Release Date
 --------|---------|-------------
-1.3.3 | Updated to Open XLIFF Filters 1.3.3 | July 5, 2019
+1.3.3 | Updated to OpenXLIFF Filters 1.3.3 | July 5, 2019
 1.3.2 | Implemented check for updates | May 5, 2019
-1.3.1 | Updated to Open XLIFF Filters 1.3.1 | April 30, 2019
+1.3.1 | Updated to OpenXLIFF Filters 1.3.1 | April 30, 2019
 1.3.0 | Allowed selection of DITAVAL files, added export as TMX, added default settings dialog | April 23, 2019
 1.2.1 | Improved validation of XLIFF 2.0 | April 6, 2019
 1.2.0 | Added Translation Status Analysis | March 3, 2019
@@ -30,7 +30,7 @@ Version | Comment | Release Date
 
 ### Supported File Formats
 
-With XLIFF Manager you can create XLIFF for all formats supported by Open XLIFF Filters:
+With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF Filters:
 
 - **General Documentation**
   - Adobe InDesign Interchange (INX)
@@ -70,7 +70,7 @@ Requirements:
 [node.js](https://nodejs.org) 10.11.0 or newer
 
 - Checkout this repository.
-- Copy [Open XLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).
+- Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).
 - Run `npm install`
 - Finally, run `npm start`
 
