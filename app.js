@@ -69,7 +69,9 @@ ls.stderr.on('data', (data) => {
 function stopServer() {
     request('http://localhost:8000/FilterServer/stop', { 'timeout': 20000 }, function (error, response, body) {
         if (error) {
-            ls.kill();
+            if (ls) {
+                ls.kill();
+            }
         }
     });
 }
