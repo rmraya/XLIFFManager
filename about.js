@@ -8,8 +8,8 @@
  *
  * Contributors:
  *     Maxprograms - initial API and implementation
- *******************************************************************************/ 
-const {ipcRenderer} = require('electron');
+ *******************************************************************************/
+const { ipcRenderer } = require('electron');
 
 var pjson = require('./package.json');
 document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + pjson.version;
