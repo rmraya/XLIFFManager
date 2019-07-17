@@ -8,7 +8,7 @@
             <p>XLIF Manager lets you produce an HTML file with word counts and segment status
                 statistics from an XLIFF document.</p>
             <fig>
-                <image align="center" placement="break" scale="60" href="../images/alalyzeXliff.png">
+                <image align="center" placement="break" scale="60" href="../images/analyzeXliff.png">
                     <alt>Translation Status Analysis</alt>
                 </image>
             </fig>
