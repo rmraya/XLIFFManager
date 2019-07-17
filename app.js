@@ -67,7 +67,7 @@ ls.stderr.on('data', (data) => {
 });
 
 function stopServer() {
-    request('http://localhost:8050/FilterServer/stop', { 'timeout': 20000 }, function (error, response, body) {
+    request('http://localhost:8000/FilterServer/stop', { 'timeout': 20000 }, function (error, response, body) {
         if (error) {
             if (ls) {
                 ls.kill();
@@ -86,7 +86,7 @@ function checkServer(url, timeout) {
 }
 
 app.on('ready', () => {
-    checkServer('http://localhost:8050/FilterServer', 20000);
+    checkServer('http://localhost:8000/FilterServer', 20000);
     createWindows();
     win.show();
     // win.webContents.openDevTools();
@@ -333,7 +333,7 @@ function loadDefaults() {
 }
 
 function getFileType(event, file) {
-    request.post('http://localhost:8050/FilterServer', { json: { command: 'getFileType', file: file } },
+    request.post('http://localhost:8000/FilterServer', { json: { command: 'getFileType', file: file } },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('add-source-file', body);
@@ -345,7 +345,7 @@ function getFileType(event, file) {
 }
 
 function getTargetFile(event, file) {
-    request.post('http://localhost:8050/FilterServer', { json: { command: 'getTargetFile', file: file } },
+    request.post('http://localhost:8000/FilterServer', { json: { command: 'getTargetFile', file: file } },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 if (body.result === 'Success') {
@@ -364,7 +364,7 @@ ipcMain.on('convert', (event, arg) => {
     arg.sklFolder = sklFolder;
     arg.catalog = defaultCatalog;
     arg.srx = defaultSRX;
-    request.post('http://localhost:8050/FilterServer', { json: arg },
+    request.post('http://localhost:8000/FilterServer', { json: arg },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('conversion-started', '');
@@ -389,7 +389,7 @@ ipcMain.on('convert', (event, arg) => {
 });
 
 function getStatus(processId) {
-    request.post('http://localhost:8050/FilterServer', { json: { command: 'status', process: processId } },
+    request.post('http://localhost:8000/FilterServer', { json: { command: 'status', process: processId } },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 status = body.status;
@@ -402,7 +402,7 @@ function getStatus(processId) {
 
 ipcMain.on('validate', (event, arg) => {
     arg.catalog = defaultCatalog;
-    request.post('http://localhost:8050/FilterServer', { json: arg },
+    request.post('http://localhost:8000/FilterServer', { json: arg },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('validation-started', '');
@@ -427,7 +427,7 @@ ipcMain.on('validate', (event, arg) => {
 
 function getResult(processId, event, command, callback) {
     var arg = { command: command, process: processId }
-    request.post('http://localhost:8050/FilterServer', { json: arg },
+    request.post('http://localhost:8000/FilterServer', { json: arg },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send(callback, body);
@@ -440,7 +440,7 @@ function getResult(processId, event, command, callback) {
 
 ipcMain.on('analyse', (event, arg) => {
     arg.catalog = defaultCatalog;
-    request.post('http://localhost:8050/FilterServer', { json: arg },
+    request.post('http://localhost:8000/FilterServer', { json: arg },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('analysis-started', '');
@@ -465,7 +465,7 @@ ipcMain.on('analyse', (event, arg) => {
 
 ipcMain.on('merge', (event, arg) => {
     arg.catalog = defaultCatalog;
-    request.post('http://localhost:8050/FilterServer', { json: arg },
+    request.post('http://localhost:8000/FilterServer', { json: arg },
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 event.sender.send('merge-created', '');
@@ -487,7 +487,7 @@ ipcMain.on('merge', (event, arg) => {
 });
 
 ipcMain.on('get-version', (event) => {
-    http.get('http://localhost:8050/FilterServer/', (res) => {
+    http.get('http://localhost:8000/FilterServer/', (res) => {
         const { statusCode } = res;
         if (statusCode !== 200) {
             event.sender.send('show-error', 'Version Request Failed.\nStatus code: ' + res.statusCode);
@@ -514,7 +514,7 @@ ipcMain.on('get-version', (event) => {
 });
 
 ipcMain.on('get-languages', (event) => {
-    http.get('http://localhost:8050/FilterServer/getLanguages', (res) => {
+    http.get('http://localhost:8000/FilterServer/getLanguages', (res) => {
         const { statusCode } = res;
         if (statusCode !== 200) {
             event.sender.send('show-error', 'Languages Request Failed.\nStatus code: ' + res.statusCode);
@@ -555,7 +555,7 @@ ipcMain.on('get-srx', (event) => {
 });
 
 ipcMain.on('get-charsets', (event) => {
-    http.get('http://localhost:8050/FilterServer/getCharsets', (res) => {
+    http.get('http://localhost:8000/FilterServer/getCharsets', (res) => {
         const { statusCode } = res;
         if (statusCode !== 200) {
             event.sender.send('show-error', 'Charsets Request Failed.\nStatus code: ' + res.statusCode);
@@ -582,7 +582,7 @@ ipcMain.on('get-charsets', (event) => {
 });
 
 ipcMain.on('get-types', (event) => {
-    http.get('http://localhost:8050/FilterServer/getTypes', (res) => {
+    http.get('http://localhost:8000/FilterServer/getTypes', (res) => {
         const { statusCode } = res;
         if (statusCode !== 200) {
             event.sender.send('show-error', 'Types Request Failed.\nStatus code: ' + res.statusCode);
