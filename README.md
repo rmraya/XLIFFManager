@@ -16,6 +16,7 @@ An open source UI for
 
 Version | Comment | Release Date
 --------|---------|-------------
+1.4.0 | Added option to automatically open translated files, allowed selection of default SRX file | July 17, 2019
 1.3.3 | Updated to OpenXLIFF Filters 1.3.3 | July 5, 2019
 1.3.2 | Implemented check for updates | May 5, 2019
 1.3.1 | Updated to OpenXLIFF Filters 1.3.1 | April 30, 2019
