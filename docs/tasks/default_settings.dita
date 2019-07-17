@@ -34,7 +34,7 @@
             <step>
                 <cmd>To use a custom <xref href="../glossaries/SRX.dita">SRX</xref> file when
                     creating XLIFF files, enter its location in the <uicontrol>Default SRX
-                        File</uicontrol> text box or use the Browse... button to select it from the
+                        File</uicontrol> text box or use the <uicontrol>Browse...</uicontrol> button to select it from the
                     file system.</cmd>
             </step>
             <step>
