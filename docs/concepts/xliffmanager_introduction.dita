@@ -5,17 +5,20 @@
     <shortdesc></shortdesc>
     <conbody>
         <p>XLIFF Manager provides an open source UI for <xref
-                href="https://github.com/rmraya/OpenXLIFF" format="html" scope="external">Open XLIFF
-                Filters</xref>.</p>
-        <p>XLIFF Manager lets you create XLIFF 1.2 and 2.0 files that can be translated in any
-            modern CAT tool.</p>
-        <p>Once your XLIFF files have been translated, you can convert them back to original format
-            with a couple of clicks.</p>
-        <p>With XLIFF Manager you can validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.</p>
-        <p>XLIFF Manager also lets you produce an HTML file with word counts and segment status
-            statistics from an XLIFF document.</p>
-        <image href="../images/XliffManager.png" align="center" scale="60">
-            <alt>XLIFF Manager GUI</alt>
-        </image>
+                href="https://github.com/rmraya/OpenXLIFF" format="html" scope="external">OpenXLIFF
+                Filters</xref>, a set of programs that let you:</p>
+        <ul id="ul_lbj_mm1_l3b">
+            <li>Create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.</li>
+            <li>Convert your translated XLIFF files to original format with a coupl of clicks.</li>
+            <li>Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0,
+                1.1, 1.2 and 2.0.</li>
+            <li>Produce an HTML file with word counts and segment status statistics from an XLIFF
+                document.</li>
+        </ul>
+        <fig>
+            <image href="../images/XliffManager.png" align="center" scale="60">
+                <alt>XLIFF Manager GUI</alt>
+            </image>
+        </fig>
     </conbody>
 </concept>

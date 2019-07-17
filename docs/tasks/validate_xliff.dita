@@ -12,6 +12,11 @@
             <p>In addition to validating all XLIFF 2.0 modules using XML Schema validation, extra
                 validation is performed for XLIFF 2.0 Core and for Metadata, Matches and Glossary
                 modules.</p>
+            <fig>
+                <image align="center" placement="break" href="../images/validateXliff.png" scale="60">
+                    <alt>Validate XLIFF File</alt>
+                </image>
+            </fig>
         </context>
         <steps>
             <step>

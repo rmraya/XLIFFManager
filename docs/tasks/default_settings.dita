@@ -9,8 +9,11 @@
         <steps>
             <step>
                 <cmd>Click on the <image href="../images/gears.png" placement="inline"></image> button at the top of the main window.</cmd>
-                <stepresult>The following dialog appears: <image href="../images/settings.png"
-                        placement="break" scale="60"/></stepresult>
+                <stepresult>The following dialog appears: <fig>
+                    <image href="../images/settings.png" placement="break" scale="60" align="center">
+                        <alt>Default Settings Dialog</alt>
+                    </image>
+                </fig></stepresult>
             </step>
             <step>
                 <cmd>Select the apropriate default source and target languages to use when creating
@@ -27,6 +30,12 @@
                     folder name in the <uicontrol>Skeletons Folder</uicontrol> text box or use the
                         <uicontrol>Browse...</uicontrol> button to select the new location in the
                     file system. </cmd>
+            </step>
+            <step>
+                <cmd>To use a custom <xref href="../glossaries/SRX.dita">SRX</xref> file when
+                    creating XLIFF files, enter its location in the <uicontrol>Default SRX
+                        File</uicontrol> text box or use the Browse... button to select it from the
+                    file system.</cmd>
             </step>
             <step>
                 <cmd>Click the <uicontrol>Save Settings</uicontrol> button.</cmd>
