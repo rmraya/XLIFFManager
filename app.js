@@ -31,7 +31,7 @@ let stopping;
 const locked = app.requestSingleInstanceLock();
 
 if (!locked) {
-    app.quit()
+    app.quit();
 } else {
     if (win) {
         // Someone tried to run a second instance, we should focus our window.

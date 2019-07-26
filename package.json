@@ -1,13 +1,14 @@
 {
   "name": "xliffmanager",
   "productName": "XLIFFManager",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "XLIFF Manager",
   "main": "app.js",
   "scripts": {
     "start": "electron .",
     "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns .",
-    "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico ."
+    "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico .",
+    "package-linux": "electron-packager --overwrite --icon icons/openxliff.png ."
   },
   "keywords": [
     "xliff",
@@ -26,6 +27,6 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^5.0.7"
+    "electron": "^5.0.8"
   }
 }
