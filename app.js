@@ -11,6 +11,7 @@
  *******************************************************************************/
 const { app, ipcMain, BrowserWindow, dialog } = require('electron');
 const spawn = require('child_process').spawn;
+const fileSync = require('child_process').execFileSync;
 const fs = require('fs');
 var request = require('request');
 const http = require('http');
@@ -56,18 +57,7 @@ if (process.platform == 'win32') {
     defaultSRX = app.getAppPath() + '/srx/default.srx';
 }
 
-const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: __dirname })
-ls.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
-});
-
-ls.on('error', (err) => {
-    console.log('Failed to start server.');
-});
-
-ls.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`);
-});
+const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: __dirname});
 
 loadDefaults();
 
@@ -78,23 +68,13 @@ function stopServer() {
     }
 }
 
-function checkServer() {
-    const options = {
-        host: 'localhost',
-        port: 8000,
-        path: '/FilterServer',
-        method: 'CONNECT'
-    }
-    const req = http.request(options);
-    req.on('connect', (res, socket, head) => {
-        console.log('connected!');
-    });
-    req.end();
+const ck = fileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'],{cwd: __dirname});
+if (ck.error != null) {
+    console.log('ck ' + JSON.stringify(ck));
 }
 
 app.on('ready', () => {
     createWindows();
-    checkServer();
     win.show();
     // win.webContents.openDevTools();
 });
