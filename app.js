@@ -61,6 +61,10 @@ ls.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
 });
 
+ls.on('error', (err) => {
+    console.log('Failed to start server.');
+});
+
 ls.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`);
 });
@@ -74,21 +78,23 @@ function stopServer() {
     }
 }
 
-function checkServer(url, timeout) {
-    request(url, { 'timeout': timeout }, function (error, response, body) {
-        if (error) {
-            // not ready yet
-        } else {
-            if (response.statusCode != 200) {
-                console.log('status: ' + response.statusCode + ' - ' + response.statusMessage);
-            }
-        }
+function checkServer() {
+    const options = {
+        host: 'localhost',
+        port: 8000,
+        path: '/FilterServer',
+        method: 'CONNECT'
+    }
+    const req = http.request(options);
+    req.on('connect', (res, socket, head) => {
+        console.log('connected!');
     });
+    req.end();
 }
 
 app.on('ready', () => {
     createWindows();
-    checkServer('http://localhost:8000/FilterServer', 25000);
+    checkServer();
     win.show();
     // win.webContents.openDevTools();
 });
