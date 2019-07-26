@@ -26,6 +26,7 @@ let defaultCatalog;
 let defaultSRX;
 let defaultSrcLang = 'none';
 let defaultTgtLang = 'none';
+let stopping;
 
 const locked = app.requestSingleInstanceLock();
 
@@ -67,19 +68,22 @@ ls.stderr.on('data', (data) => {
 loadDefaults();
 
 function stopServer() {
-    request('http://localhost:8000/FilterServer/stop', { 'timeout': 20000 }, function (error, response, body) {
-        if (error) {
-            if (ls) {
-                ls.kill();
-            }
-        }
-    });
+    if (!stopping) {
+        stopping = true;
+        ls.kill();        
+    }
 }
 
 function checkServer(url, timeout) {
     request(url, { 'timeout': timeout }, function (error, response, body) {
         if (error) {
             console.log(error);
+        } else {
+            if (response.statusCode === 200) {
+                console.log(JSON.stringify(body));
+            } else {
+                console.log('status: ' + response.statusCode + ' - ' + response.statusMessage);
+            }
         }
     });
 }
