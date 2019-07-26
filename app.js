@@ -77,11 +77,9 @@ function stopServer() {
 function checkServer(url, timeout) {
     request(url, { 'timeout': timeout }, function (error, response, body) {
         if (error) {
-            console.log(error);
+            // not ready yet
         } else {
-            if (response.statusCode === 200) {
-                console.log(JSON.stringify(body));
-            } else {
+            if (response.statusCode != 200) {
                 console.log('status: ' + response.statusCode + ' - ' + response.statusMessage);
             }
         }
@@ -89,8 +87,8 @@ function checkServer(url, timeout) {
 }
 
 app.on('ready', () => {
-    checkServer('http://localhost:8000/FilterServer', 25000);
     createWindows();
+    checkServer('http://localhost:8000/FilterServer', 25000);
     win.show();
     // win.webContents.openDevTools();
 });
