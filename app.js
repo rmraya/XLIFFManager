@@ -55,9 +55,7 @@ if (process.platform == 'win32') {
     defaultSRX = app.getAppPath() + '/srx/default.srx';
 }
 
-loadDefaults();
-
-const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'xliffFilters/com.maxprograms.server.FilterServer'], { cwd: __dirname })
+const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: __dirname })
 ls.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
 });
@@ -65,6 +63,8 @@ ls.stdout.on('data', (data) => {
 ls.stderr.on('data', (data) => {
     console.log(`stderr: ${data}`);
 });
+
+loadDefaults();
 
 function stopServer() {
     request('http://localhost:8000/FilterServer/stop', { 'timeout': 20000 }, function (error, response, body) {
@@ -80,13 +80,12 @@ function checkServer(url, timeout) {
     request(url, { 'timeout': timeout }, function (error, response, body) {
         if (error) {
             console.log(error);
-            dialog.showMessageBox({ type: 'error', message: 'Server not ready yet' });
         }
     });
 }
 
 app.on('ready', () => {
-    checkServer('http://localhost:8000/FilterServer', 20000);
+    checkServer('http://localhost:8000/FilterServer', 25000);
     createWindows();
     win.show();
     // win.webContents.openDevTools();
