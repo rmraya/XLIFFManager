@@ -57,18 +57,18 @@ if (process.platform == 'win32') {
     defaultSRX = app.getAppPath() + '/srx/default.srx';
 }
 
-const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: __dirname});
+const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: __dirname });
 
 loadDefaults();
 
 function stopServer() {
     if (!stopping) {
         stopping = true;
-        ls.kill();        
+        ls.kill();
     }
 }
 
-const ck = fileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'],{cwd: __dirname});
+const ck = fileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: __dirname });
 if (ck.error != null) {
     console.log('ck ' + JSON.stringify(ck));
 }
@@ -108,7 +108,7 @@ function createWindows() {
 }
 
 ipcMain.on('select-source-file', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         properties: ['openFile'],
         filters: [
             { name: 'Any File', extensions: ['*'] },
@@ -133,82 +133,103 @@ ipcMain.on('select-source-file', (event, arg) => {
             { name: 'Visio XML Drawing', extensions: ['vsdx'] },
             { name: 'XML Document', extensions: ['xml'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            getFileType(event, value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        getFileType(event, files[0]);
-    }
 });
 
 ipcMain.on('select-xliff-file', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         properties: ['openFile'],
         filters: [
             { name: 'XLIFF File', extensions: ['xlf'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-xliff-file', value.filePaths[0]);
+            getTargetFile(event, value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        event.sender.send('add-xliff-file', files[0]);
-        getTargetFile(event, files[0]);
-    }
 });
 
 ipcMain.on('select-xliff-validation', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         properties: ['openFile'],
         filters: [
             { name: 'XLIFF File', extensions: ['xlf'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-xliff-validation', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        event.sender.send('add-xliff-validation', files[0]);
-    }
 });
 
 ipcMain.on('select-xliff-analysis', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         properties: ['openFile'],
         filters: [
             { name: 'XLIFF File', extensions: ['xlf'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-xliff-analysis', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        event.sender.send('add-xliff-analysis', files[0]);
-    }
 });
 
 ipcMain.on('select-ditaval', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         properties: ['openFile'],
         filters: [
             { name: 'DITAVAL File', extensions: ['ditaval'] },
             { name: 'Any File', extensions: ['*'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-ditaval-file', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        event.sender.send('add-ditaval-file', files[0]);
-    }
 });
 
 ipcMain.on('select-target-file', (event, arg) => {
-    var file = dialog.showSaveDialog({ title: 'Target File/Folder' });
-    if (file) {
-        event.sender.send('add-target-file', file);
-    }
+    dialog.showSaveDialog({ title: 'Target File/Folder' }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-target-file', value.filePath);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
 });
 
 ipcMain.on('select-skeleton', (event, arg) => {
-    var file = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         title: 'Skeleton Folder',
         defaultPath: sklFolder,
         properties: ['openDirectory', 'createDirectory']
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('skeleton-received', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (file) {
-        event.sender.send('skeleton-received', { sklFolder: file[0] });
-    }
 });
 
 ipcMain.on('select-catalog', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         title: 'Default Catalog',
         defaultPath: defaultCatalog,
         properties: ['openFile'],
@@ -216,14 +237,17 @@ ipcMain.on('select-catalog', (event, arg) => {
             { name: 'XML File', extensions: ['xml'] },
             { name: 'Any File', extensions: ['*'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('catalog-received', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        event.sender.send('catalog-received', { catalog: files[0] });
-    }
 });
 
 ipcMain.on('select-srx', (event, arg) => {
-    var files = dialog.showOpenDialog({
+    dialog.showOpenDialog({
         title: 'Default Catalog',
         defaultPath: defaultCatalog,
         properties: ['openFile'],
@@ -231,10 +255,13 @@ ipcMain.on('select-srx', (event, arg) => {
             { name: 'SRX File', extensions: ['srx'] },
             { name: 'Any File', extensions: ['*'] }
         ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('srx-received', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
     });
-    if (files) {
-        event.sender.send('srx-received', { srx: files[0] });
-    }
 });
 
 ipcMain.on('show-about', (event, arg) => {
@@ -530,15 +557,15 @@ ipcMain.on('get-languages', (event) => {
 });
 
 ipcMain.on('get-skeleton', (event) => {
-    event.sender.send('skeleton-received', { sklFolder: sklFolder });
+    event.sender.send('skeleton-received', sklFolder);
 });
 
 ipcMain.on('get-catalog', (event) => {
-    event.sender.send('catalog-received', { catalog: defaultCatalog });
+    event.sender.send('catalog-received', defaultCatalog);
 });
 
 ipcMain.on('get-srx', (event) => {
-    event.sender.send('srx-received', { srx: defaultSRX });
+    event.sender.send('srx-received', defaultSRX);
 });
 
 ipcMain.on('get-charsets', (event) => {

@@ -30,15 +30,15 @@ ipcRenderer.on('languages-received', (event, arg) => {
 });
 
 ipcRenderer.on('skeleton-received', (event, arg) => {
-    document.getElementById('skeletonFolder').value = arg.sklFolder;
+    document.getElementById('skeletonFolder').value = arg;
 });
 
 ipcRenderer.on('catalog-received', (event, arg) => {
-    document.getElementById('defaultCatalog').value = arg.catalog;
+    document.getElementById('defaultCatalog').value = arg;
 });
 
 ipcRenderer.on('srx-received', (event, arg) => {
-    document.getElementById('defaultSRX').value = arg.srx;
+    document.getElementById('defaultSRX').value = arg;
 });
 
 document.getElementById('save').addEventListener('click', () => {
