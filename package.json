@@ -1,7 +1,7 @@
 {
   "name": "xliffmanager",
   "productName": "XLIFFManager",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "XLIFF Manager",
   "main": "app.js",
   "scripts": {
@@ -27,6 +27,6 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^6.0.1"
+    "electron": "^6.0.2"
   }
 }
