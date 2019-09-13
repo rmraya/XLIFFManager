@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "start": "electron .",
-    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns .",
+    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns --app-bundle-id=com.maxprograms.xliffmanager .",
     "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico .",
     "package-linux": "electron-packager --overwrite --icon icons/openxliff.png ."
   },
@@ -27,6 +27,6 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^6.0.7"
+    "electron": "^6.0.9"
   }
 }
