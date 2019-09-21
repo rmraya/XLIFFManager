@@ -92,7 +92,7 @@ app.on('window-all-closed', function () {
 function createWindow() {
     win = new BrowserWindow({
         width: 580,
-        height: 660,
+        height: 680,
         maximizable: false,
         show: false,
         backgroundColor: '#2d2d2e',
@@ -662,12 +662,7 @@ function createMenu() {
     } else {
         template.unshift({
             label: 'File', submenu: [
-                {
-                    label: 'Preferences...', submenu: [
-                        { label: 'Settings', accelerator: 'Cmd+,', click: function () { showSettings() } }
-                    ]
-                },
-                { type: 'separator' }
+               
             ]
         });
         helpMenu = template.pop();
@@ -681,12 +676,12 @@ function createMenu() {
 
     if (process.platform == 'win32') {
         template[0].submenu.push({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: function () { app.quit() } })
-        template[5].submenu.push({ type: 'separator' }, { label: 'About...', click: function () { showAbout() } })
+        template[2].submenu.push({ type: 'separator' }, { label: 'About...', click: function () { showAbout() } })
     }
 
     if (process.platform === 'linux') {
         template[0].submenu.push({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: function () { app.quit() } })
-        template[5].submenu.push({ type: 'separator' }, { label: 'About...', click: showAbout() })
+        template[2].submenu.push({ type: 'separator' }, { label: 'About...', click: showAbout() })
     }
 
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
