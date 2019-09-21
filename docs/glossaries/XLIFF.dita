@@ -3,7 +3,7 @@
 <glossentry id="XLIFF">
     <glossterm>XLIFF</glossterm>
     <glossdef>XLIFF (XML Localization Interchange File Format) is an open standard developed by <xref
-        href="http://www.oasis-open.org/" format="html">OASIS</xref> (Organization for the Advancement of
+        href="http://www.oasis-open.org/" format="html" scope="external">OASIS</xref> (Organization for the Advancement of
         Structured Information Standards). The purpose of this vocabulary is to store localizable
         data and carry it from one step of the localization process to the other, while allowing
         interoperability between tools.</glossdef>

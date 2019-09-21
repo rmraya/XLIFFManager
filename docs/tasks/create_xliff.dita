@@ -46,15 +46,15 @@
                 <cmd>Select the <uicontrol>Paragraph Segmentation</uicontrol> check box if you want
                     source text to be segmented at paragraph level. </cmd>
                 <info>The program uses sentence-level segmentation by default. You can select the
-                    default <xref href="../glossaries/SRX.dita">SRX</xref> file used for
-                    segmentation in the <xref href="default_settings.dita">Settings</xref>
+                    default <xref href="../glossaries/SRX.dita"/> file used for
+                    segmentation in the <xref href="default_settings.dita"/>
                     dialog.</info>
             </step>
             <step>
                 <cmd>Select the <uicontrol>Embed Skeleton</uicontrol> option if you want the
                     skeleton file to be inserted in the generated XLIFF.</cmd>
                 <info>The program generates a separated skeleton file in the folder defined in <xref
-                        href="default_settings.dita">Settings</xref> dialog. An embedded
+                        href="default_settings.dita"/> dialog. An embedded
                     skeleton allows merging the XLIFF file in any computer, not just the one wheer
                     the XLIFF was generated.</info>
             </step>
