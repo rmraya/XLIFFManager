@@ -1,12 +1,12 @@
 {
   "name": "xliffmanager",
-  "productName": "XLIFFManager",
+  "productName": "XLIFF Manager",
   "version": "1.4.2",
   "description": "XLIFF Manager",
   "main": "app.js",
   "scripts": {
     "start": "electron .",
-    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns --app-bundle-id=com.maxprograms.xliffmanager .",
+    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager .",
     "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico .",
     "package-linux": "electron-packager --overwrite --icon icons/openxliff.png ."
   },

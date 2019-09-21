@@ -9,7 +9,7 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
-const { app, ipcMain, BrowserWindow, dialog } = require('electron');
+const { app, ipcMain, BrowserWindow, dialog, Menu, shell } = require('electron');
 const spawn = require('child_process').spawn;
 const fileSync = require('child_process').execFileSync;
 const fs = require('fs');
@@ -74,7 +74,8 @@ if (ck.error != null) {
 }
 
 app.on('ready', () => {
-    createWindows();
+    createWindow();
+    createMenu();
     win.show();
     // win.webContents.openDevTools();
 });
@@ -88,7 +89,7 @@ app.on('window-all-closed', function () {
     app.quit()
 })
 
-function createWindows() {
+function createWindow() {
     win = new BrowserWindow({
         width: 580,
         height: 660,
@@ -265,42 +266,11 @@ ipcMain.on('select-srx', (event, arg) => {
 });
 
 ipcMain.on('show-about', (event, arg) => {
-    var about = new BrowserWindow({
-        parent: win,
-        width: 270,
-        height: 320,
-        minimizable: false,
-        maximizable: false,
-        resizable: false,
-        show: false, backgroundColor: '#2d2d2e',
-        icon: './icons/openxliff.png',
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-    about.setMenu(null);
-    about.loadURL('file://' + __dirname + '/about.html');
-    about.show();
+    showAbout();
 });
 
 ipcMain.on('show-settings', (event, arg) => {
-    settings = new BrowserWindow({
-        parent: win,
-        width: 590,
-        height: 190,
-        minimizable: false,
-        maximizable: false,
-        resizable: false,
-        show: false,
-        backgroundColor: '#2d2d2e',
-        icon: './icons/openxliff.png',
-        webPreferences: {
-            nodeIntegration: true
-        }
-    });
-    settings.setMenu(null);
-    settings.loadURL('file://' + __dirname + '/settings.html');
-    settings.show();
+    showSettings();
 });
 
 ipcMain.on('save-defaults', (event, arg) => {
@@ -621,6 +591,10 @@ ipcMain.on('get-types', (event) => {
 });
 
 ipcMain.on('check-updates', (event) => {
+    checkUpdates();
+});
+
+function checkUpdates() {
     https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res) => {
         if (res.statusCode === 200) {
             let rawData = '';
@@ -643,13 +617,128 @@ ipcMain.on('check-updates', (event) => {
                         });
                     }
                 } catch (e) {
-                    event.sender.send('show-error', e.message);
+                    dialog.showErrorBox('Error', e.message);
                 }
             });
         } else {
-            event.sender.send('show-error', 'Updates Request Failed.\nStatus code: ' + res.statusCode);
+            dialog.showErrorBox('Error', 'Updates Request Failed.\nStatus code: ' + res.statusCode);
         }
     }).on('error', (e) => {
-        event.sender.send('show-error', e.message);
+        dialog.showErrorBox('Error', e.message);
     });
-});
+};
+
+function createMenu() {
+    var template = [
+        {
+            label: 'Help', submenu: [
+                { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: function () { showHelp() } },
+                { type: 'separator' },
+                { label: 'Check for Updates', click: function () { checkUpdates() } },
+                { label: 'View Release History', click: function () { releaseHistory() } }
+            ]
+        }
+    ];
+
+    if (process.platform === 'darwin') {
+        template.unshift({
+            label: 'XLIFF Manager', submenu: [
+                { label: 'About...', click: function () { showAbout() } },
+                {
+                    label: 'Preferences...', submenu: [
+                        { label: 'Settings', accelerator: 'Cmd+,', click: function () { showSettings() } }
+                    ]
+                },
+                { type: 'separator' },
+                {
+                    label: 'Services', role: 'services', submenu: [
+                        { label: 'No Services Apply', enabled: false }
+                    ]
+                },
+                { type: 'separator' },
+                { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: function () { app.quit() } }
+            ]
+        });
+    } else {
+        template.unshift({
+            label: 'File', submenu: [
+                {
+                    label: 'Preferences...', submenu: [
+                        { label: 'Settings', accelerator: 'Cmd+,', click: function () { showSettings() } }
+                    ]
+                },
+                { type: 'separator' }
+            ]
+        });
+        helpMenu = template.pop();
+        template.push({
+            label: 'Settings', submenu: [
+                { label: 'Preferences', click: function () { showSettings() } }
+            ]
+        });
+        template.push(helpMenu);
+    }
+
+    if (process.platform == 'win32') {
+        template[0].submenu.push({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: function () { app.quit() } })
+        template[5].submenu.push({ type: 'separator' }, { label: 'About...', click: function () { showAbout() } })
+    }
+
+    if (process.platform === 'linux') {
+        template[0].submenu.push({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: function () { app.quit() } })
+        template[5].submenu.push({ type: 'separator' }, { label: 'About...', click: showAbout() })
+    }
+
+    Menu.setApplicationMenu(Menu.buildFromTemplate(template));
+};
+
+function showAbout() {
+    var about = new BrowserWindow({
+        parent: win,
+        width: 270,
+        height: 320,
+        minimizable: false,
+        maximizable: false,
+        resizable: false,
+        show: false, backgroundColor: '#2d2d2e',
+        icon: './icons/openxliff.png',
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
+    about.setMenu(null);
+    about.loadURL('file://' + __dirname + '/about.html');
+    about.show();
+};
+
+function showHelp() {
+    var help = __dirname + '/xliffmanager.pdf';
+    if (process.platform == 'win32') {
+        help = __dirname + '\\xliffmanager.pdf'
+    }
+    shell.openItem(help);
+}
+
+function showSettings() {
+    settings = new BrowserWindow({
+        parent: win,
+        width: 590,
+        height: 190,
+        minimizable: false,
+        maximizable: false,
+        resizable: false,
+        show: false,
+        backgroundColor: '#2d2d2e',
+        icon: './icons/openxliff.png',
+        webPreferences: {
+            nodeIntegration: true
+        }
+    });
+    settings.setMenu(null);
+    settings.loadURL('file://' + __dirname + '/settings.html');
+    settings.show();
+};
+
+function releaseHistory() {
+    shell.openExternal("https://www.maxprograms.com/products/xliffmanager.html#releasehistory");
+}
