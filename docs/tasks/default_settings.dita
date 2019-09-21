@@ -9,8 +9,9 @@
         <steps>
             <step>
                 <cmd>Click on the <image href="../images/gears.png" placement="inline"/> button at
-                    the top of the main window or select <uicontrol>Preferences</uicontrol> in
-                        <uicontrol>Settings</uicontrol> menu.</cmd>
+                    the top of the main window or select <uicontrol>Settings</uicontrol> in
+                        <uicontrol>File</uicontrol> menu (<uicontrol>XLIFF Manager</uicontrol> &gt;
+                        <uicontrol>Preferences</uicontrol> &gt; <uicontrol>Settings</uicontrol> on macOS).</cmd>
                 <stepresult>The following dialog appears: <fig>
                         <image href="../images/settings.png" placement="break" scale="60"
                             align="center">

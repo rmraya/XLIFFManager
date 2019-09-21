@@ -662,26 +662,21 @@ function createMenu() {
     } else {
         template.unshift({
             label: 'File', submenu: [
-
+                { label: 'Settings', click: function () { showSettings() } }
             ]
         });
         helpMenu = template.pop();
-        template.push({
-            label: 'Settings', submenu: [
-                { label: 'Preferences', click: function () { showSettings() } }
-            ]
-        });
         template.push(helpMenu);
     }
 
     if (process.platform == 'win32') {
         template[0].submenu.push({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: function () { app.quit() } })
-        template[2].submenu.push({ type: 'separator' }, { label: 'About...', click: function () { showAbout() } })
+        template[1].submenu.push({ type: 'separator' }, { label: 'About...', click: function () { showAbout() } })
     }
 
     if (process.platform === 'linux') {
         template[0].submenu.push({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: function () { app.quit() } })
-        template[2].submenu.push({ type: 'separator' }, { label: 'About...', click: showAbout() })
+        template[1].submenu.push({ type: 'separator' }, { label: 'About...', click: showAbout() })
     }
 
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
