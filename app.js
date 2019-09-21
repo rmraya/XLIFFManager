@@ -662,7 +662,7 @@ function createMenu() {
     } else {
         template.unshift({
             label: 'File', submenu: [
-               
+
             ]
         });
         helpMenu = template.pop();
@@ -695,13 +695,16 @@ function showAbout() {
         minimizable: false,
         maximizable: false,
         resizable: false,
-        show: false, backgroundColor: '#2d2d2e',
+        show: false, 
+        backgroundColor: '#2d2d2e',
         icon: './icons/openxliff.png',
         webPreferences: {
             nodeIntegration: true
         }
     });
-    about.setMenu(null);
+    if (process.platform !== 'darwin') {
+        about.removeMenu();
+    }
     about.loadURL('file://' + __dirname + '/about.html');
     about.show();
 };
@@ -729,7 +732,9 @@ function showSettings() {
             nodeIntegration: true
         }
     });
-    settings.setMenu(null);
+    if (process.platform !== 'darwin') {
+        settings.removeMenu();
+    }
     settings.loadURL('file://' + __dirname + '/settings.html');
     settings.show();
 };
