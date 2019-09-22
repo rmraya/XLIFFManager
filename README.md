@@ -10,7 +10,7 @@ An open source UI for
  - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
  - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-<img src="https://www.maxprograms.com/images/XliffManager3.png" alt="XLIFF Manager on Windows 10" width="680"/>
+<img src="https://www.maxprograms.com/images/XliffManager4.png" alt="XLIFF Manager on Windows 10" width="680"/>
 
 ### Releases
 
