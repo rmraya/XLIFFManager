@@ -732,5 +732,5 @@ function showSettings() {
 };
 
 function releaseHistory() {
-    shell.openExternal("https://www.maxprograms.com/products/xliffmanager.html#releasehistory");
+    shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html");
 }
