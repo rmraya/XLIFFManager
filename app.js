@@ -643,12 +643,8 @@ function createMenu() {
     if (process.platform === 'darwin') {
         template.unshift({
             label: 'XLIFF Manager', submenu: [
-                { label: 'About...', click: function () { showAbout() } },
-                {
-                    label: 'Preferences...', submenu: [
-                        { label: 'Settings', accelerator: 'Cmd+,', click: function () { showSettings() } }
-                    ]
-                },
+                { label: 'About XLIFF Manager', click: function () { showAbout() } },
+                { label: 'Preferences...', accelerator: 'Cmd+,', click: function () { showSettings() } },
                 { type: 'separator' },
                 {
                     label: 'Services', role: 'services', submenu: [
