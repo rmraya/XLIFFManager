@@ -662,7 +662,8 @@ function createMenu() {
     } else {
         template.unshift({
             label: 'File', submenu: [
-                { label: 'Settings', click: function () { showSettings() } }
+                { label: 'Settings', click: function () { showSettings() } },
+                { type: 'separator' }
             ]
         });
         helpMenu = template.pop();
