@@ -16,6 +16,7 @@ An open source UI for
 
 Version | Comment | Release Date
 --------|---------|-------------
+1.5.0 | Added menu and improved DITA support | September 22, 2019
 1.4.2 | Fixed merge errors in XLIFF 2.0; several minor improvements | August 14, 2019
 1.4.1 | Improved performance generating XLIFF 2.0 with embedded skeleton; wait for server to be ready befor opening UI | July 26, 2019
 1.4.0 | Added option to automatically open translated files; allowed selection of default SRX file | July 17, 2019
