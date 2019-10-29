@@ -1,18 +1,17 @@
-![alt text](https://maxprograms.com/images/openxliff_s.png "Open Xliff Filters")
+# XLIFF Manager
 
-## XLIFF Manager
+<img src="https://maxprograms.com/images/xliffmanager_s.png" alt="XLIFF Manager logo" style="padding:2em;"/>
 
-An open source UI for 
-[OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in JavaScript. OpenXLIFF is a set of programs that let you:
+An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in JavaScript. OpenXLIFF is a set of programs that let you:
 
- - Create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.
- - Convert your translated XLIFF files to original format with a couple of clicks.
- - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
- - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
+- Create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.
+- Convert your translated XLIFF files to original format with a couple of clicks.
+- Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
+- Produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
 <img src="https://www.maxprograms.com/images/XliffManager4.png" alt="XLIFF Manager on Windows 10" width="680"/>
 
-### Releases
+## Releases
 
 Version | Comment | Release Date
 --------|---------|-------------
@@ -29,7 +28,7 @@ Version | Comment | Release Date
 1.1.0 | Implemented XLIFF validation| November 20, 2018
 1.0.0 | Initial Release | November 12, 2018
 
-### Supported File Formats
+## Supported File Formats
 
 With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF Filters:
 
@@ -43,14 +42,14 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - OpenOffice / LibreOffice / StarOffice
   - Plain Text
   - SDLXLIFF (Trados Studio)
-  - TXML (GlobalLink/Wordfast PRO)   
+  - TXML (GlobalLink/Wordfast PRO)
 - **XML Formats**
   - XML (Generic)
   - DITA 1.0, 1.1, 1.2 and 1.3
   - DocBook 3.x, 4.x and 5.x
   - SVG
   - Word 2003 ML
-  - XHTML 
+  - XHTML
 - **Software Development**
   - JavaScript
   - Java Properties
@@ -59,13 +58,13 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - ResX (Windows .NET Resources)
   - TS (Qt Linguist translation source)
 
-### Downloads
+## Downloads
 
-You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from https://www.maxprograms.com/products/xliffmanager.html
+You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from [https://www.maxprograms.com/products/xliffmanager.html](https://www.maxprograms.com/products/xliffmanager.html).
 
-"XLIFF Manager User Guide" is available in PDF format from https://www.maxprograms.com/support/xliffmanager.pdf 
+"XLIFF Manager User Guide" is available in PDF format from [https://www.maxprograms.com/support/xliffmanager.pdf](https://www.maxprograms.com/support/xliffmanager.pdf)
 
-### Building & running
+## Building & running
 
 Requirements: 
 [node.js](https://nodejs.org) 12.6.0 or newer
@@ -74,6 +73,3 @@ Requirements:
 - Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).
 - Run `npm install`
 - Finally, run `npm start`
-
-
-
