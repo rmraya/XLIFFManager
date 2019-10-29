@@ -1,6 +1,6 @@
 # XLIFF Manager
 
-<img src="https://maxprograms.com/images/xliffmanager_s.png" alt="XLIFF Manager logo" style="padding:2em;"/>
+<img src="https://maxprograms.com/images/xliffmanager_s.png" alt="XLIFF Manager logo"/>
 
 An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in JavaScript. OpenXLIFF is a set of programs that let you:
 
