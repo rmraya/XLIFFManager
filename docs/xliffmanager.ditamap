@@ -51,7 +51,7 @@
     </chapter>
     <backmatter>
         <booklists>
-            <glossarylist>
+            <glossarylist chunk="to-content">
                 <topicref href="glossaries/CAT.dita"/>
                 <topicref href="glossaries/character_set.dita"/>
                 <topicref href="glossaries/SRX.dita"/>
