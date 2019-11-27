@@ -55,7 +55,7 @@
                     skeleton file to be inserted in the generated XLIFF.</cmd>
                 <info>The program generates a separated skeleton file in the folder defined in <xref
                         href="default_settings.dita">Settings</xref> dialog. An embedded
-                    skeleton allows merging the XLIFF file in any computer, not just the one wheer
+                    skeleton allows merging the XLIFF file in any computer, not just the one where
                     the XLIFF was generated.</info>
             </step>
             <step>
