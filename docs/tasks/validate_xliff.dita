@@ -5,7 +5,7 @@
     <shortdesc></shortdesc>
     <taskbody>
         <context>
-            <p>XLIFF Manager can validate XLIFF 1.0, 1.1, 1.2 and 2.0.</p>
+            <p>XLIFF Manager can validate <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.0, 1.1, 1.2 and 2.0.</p>
             <p> Validating XLIFF against XML grammars (DTD or XML Schemas) is not enough. XML Schema
                 validation does not detect the use of duplicated 'id' attributes, wrong language
                 codes and other constraints written in the different XLIFF specifications.</p>

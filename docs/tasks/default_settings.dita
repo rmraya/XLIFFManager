@@ -4,7 +4,7 @@
     <title>Settings</title>
     <shortdesc>Use the <uicontrol>Settings</uicontrol> dialog to set the default languages used by
         the application and to configure the main XML catalog and default folder used to store
-        skeletons when creating XLIFF files.</shortdesc>
+        skeletons when creating <xref href="../glossaries/XLIFF.dita">XLIFF</xref> files.</shortdesc>
     <taskbody>
         <steps>
             <step>
@@ -36,7 +36,7 @@
                     file system. </cmd>
             </step>
             <step>
-                <cmd>To use a custom <xref href="../glossaries/SRX.dita"/> file when creating XLIFF
+                <cmd>To use a custom <xref href="../glossaries/SRX.dita">SRX</xref> file when creating XLIFF
                     files, enter its location in the <uicontrol>Default SRX File</uicontrol> text
                     box or use the <uicontrol>Browse...</uicontrol> button to select it from the
                     file system.</cmd>

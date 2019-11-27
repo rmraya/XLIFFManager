@@ -4,7 +4,7 @@
     <title>Supported File Formats</title>
     <shortdesc/>
     <conbody>
-        <p>With XLIFF Manager you can create XLIFF files from following document types:</p>
+        <p>With XLIFF Manager you can create <xref href="../glossaries/XLIFF.dita">XLIFF</xref> files from following document types:</p>
         <simpletable>
             <sthead>
                 <stentry>General Documentation Types</stentry>

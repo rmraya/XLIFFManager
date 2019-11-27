@@ -4,7 +4,7 @@
     <title>Merge XLIFF File</title>
     <taskbody>
         <context>
-            <p>Use the <i>Merge XLIFF File</i> Section to convert an XLIFF file to original format.</p>
+            <p>Use the <i>Merge XLIFF File</i> Section to convert an <xref href="../glossaries/XLIFF.dita">XLIFF</xref> file to original format.</p>
             <p>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created with other tools that 
                 use <i>OpenXLIFF Filters</i>.</p>
             <fig>
@@ -38,7 +38,7 @@
             </step>
             <step>
                 <cmd>Select the <uicontrol>Export Approved Segments as TMX</uicontrol> checkbox if
-                    you want to generate a <xref href="../glossaries/TMX.dita"/> file from
+                    you want to generate a <xref href="../glossaries/TMX.dita">TMX</xref> file from
                     the XLIFF file. </cmd>
             </step>
             <step>
