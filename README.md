@@ -43,6 +43,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - Plain Text
   - SDLXLIFF (Trados Studio)
   - TXML (GlobalLink/Wordfast PRO)
+  - WPML XLIFF (WordPress Multilingual Plugin)
 - **XML Formats**
   - XML (Generic)
   - DITA 1.0, 1.1, 1.2 and 1.3

@@ -132,6 +132,7 @@ ipcMain.on('select-source-file', (event, arg) => {
             { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
             { name: 'TXML Document', extensions: ['txml'] },
             { name: 'Visio XML Drawing', extensions: ['vsdx'] },
+            { name: 'WPML XLIFF', extensions: ['xliff'] },
             { name: 'XML Document', extensions: ['xml'] }
         ]
     }).then((value) => {
