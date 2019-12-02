@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+1.6.0 | Added support for XLIFF files from WPML WordPress Plugin | December 2, 2019
 1.5.0 | Added menu and improved DITA support | September 22, 2019
 1.4.2 | Fixed merge errors in XLIFF 2.0; several minor improvements | August 14, 2019
 1.4.1 | Improved performance generating XLIFF 2.0 with embedded skeleton; wait for server to be ready befor opening UI | July 26, 2019
