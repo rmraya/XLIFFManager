@@ -473,59 +473,29 @@ ipcMain.on('merge', (event, arg) => {
 });
 
 ipcMain.on('get-version', (event) => {
-    http.get('http://localhost:8000/FilterServer/', (res) => {
-        const { statusCode } = res;
-        if (statusCode !== 200) {
-            event.sender.send('show-error', 'Version Request Failed.\nStatus code: ' + res.statusCode);
-            return;
+    sendRequest({ command: 'version' },
+        function success(data) {
+            event.sender.send('set-version', data);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
-        res.setEncoding('utf8');
-        let rawData = '';
-        res.on('data', (chunk) => {
-            rawData += chunk;
-        });
-        res.on('end', () => {
-            try {
-                const parsedData = JSON.parse(rawData);
-                event.sender.send('set-version', parsedData);
-            } catch (e) {
-                console.error(e.message);
-                event.sender.send('show-error', e.message);
-            }
-        });
-    }).on('error', (e) => {
-        console.error(e.message);
-        event.sender.send('show-error', e.message);
-    });
+    );
 });
 
 ipcMain.on('get-languages', (event) => {
-    http.get('http://localhost:8000/FilterServer/getLanguages', (res) => {
-        const { statusCode } = res;
-        if (statusCode !== 200) {
-            event.sender.send('show-error', 'Languages Request Failed.\nStatus code: ' + res.statusCode);
-            return;
+    sendRequest({ command: 'getLanguages' },
+        function success(data) {
+            data.srcLang = defaultSrcLang;
+            data.tgtLang = defaultTgtLang;
+            event.sender.send('languages-received', data);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
-        res.setEncoding('utf8');
-        let rawData = '';
-        res.on('data', (chunk) => {
-            rawData += chunk;
-        });
-        res.on('end', () => {
-            try {
-                const parsedData = JSON.parse(rawData);
-                parsedData.srcLang = defaultSrcLang;
-                parsedData.tgtLang = defaultTgtLang;
-                event.sender.send('languages-received', parsedData);
-            } catch (e) {
-                console.error(e.message);
-                event.sender.send('show-error', e.message);
-            }
-        });
-    }).on('error', (e) => {
-        console.error(e.message);
-        event.sender.send('show-error', e.message);
-    });
+    );
 });
 
 ipcMain.on('get-skeleton', (event) => {
@@ -541,55 +511,27 @@ ipcMain.on('get-srx', (event) => {
 });
 
 ipcMain.on('get-charsets', (event) => {
-    http.get('http://localhost:8000/FilterServer/getCharsets', (res) => {
-        const { statusCode } = res;
-        if (statusCode !== 200) {
-            event.sender.send('show-error', 'Charsets Request Failed.\nStatus code: ' + res.statusCode);
-            return;
+    sendRequest({ command: 'getCharsets' },
+        function success(data) {
+            event.sender.send('charsets-received', data);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
-        res.setEncoding('utf8');
-        let rawData = '';
-        res.on('data', (chunk) => {
-            rawData += chunk;
-        });
-        res.on('end', () => {
-            try {
-                const parsedData = JSON.parse(rawData);
-                event.sender.send('charsets-received', parsedData);
-            } catch (e) {
-                console.error(e.message);
-                event.sender.send('show-error', e.message);
-            }
-        });
-    }).on('error', (e) => {
-        console.error(e.message);
-        event.sender.send('show-error', e.message);
-    });
+    );
 });
 
 ipcMain.on('get-types', (event) => {
-    http.get('http://localhost:8000/FilterServer/getTypes', (res) => {
-        const { statusCode } = res;
-        if (statusCode !== 200) {
-            event.sender.send('show-error', 'Types Request Failed.\nStatus code: ' + res.statusCode);
-            return;
+    sendRequest({ command: 'getTypes' },
+        function success(data) {
+            event.sender.send('types-received', data);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
-        res.setEncoding('utf8');
-        let rawData = '';
-        res.on('data', (chunk) => {
-            rawData += chunk;
-        });
-        res.on('end', () => {
-            try {
-                const parsedData = JSON.parse(rawData);
-                event.sender.send('types-received', parsedData);
-            } catch (e) {
-                event.sender.send('show-error', e.message);
-            }
-        });
-    }).on('error', (e) => {
-        event.sender.send('show-error', e.message);
-    });
+    );
 });
 
 ipcMain.on('check-updates', (event) => {
