@@ -19,14 +19,11 @@
   ],
   "author": "Rodolfo M. Raya",
   "license": "SEE LICENSE IN LICENSE",
-  "dependencies": {
-    "request": "^2.88.0"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^7.1.2"
+    "electron": "^7.1.7"
   }
 }

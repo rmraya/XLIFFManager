@@ -13,7 +13,6 @@ const { app, ipcMain, BrowserWindow, dialog, Menu, shell } = require('electron')
 const spawn = require('child_process').spawn;
 const fileSync = require('child_process').execFileSync;
 const fs = require('fs');
-var request = require('request');
 const http = require('http');
 const https = require('https');
 
@@ -318,29 +317,29 @@ function loadDefaults() {
 }
 
 function getFileType(event, file) {
-    request.post('http://localhost:8000/FilterServer', { json: { command: 'getFileType', file: file } },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('add-source-file', body);
-            } else {
-                event.sender.send('show-error', error);
-            }
+    sendRequest({ command: 'getFileType', file: file },
+        function success(data) {
+            event.sender.send('add-source-file', data);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
     );
 }
 
 function getTargetFile(event, file) {
-    request.post('http://localhost:8000/FilterServer', { json: { command: 'getTargetFile', file: file } },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                if (body.result === 'Success') {
-                    event.sender.send('add-target-file', body.target);
-                } else {
-                    dialog.showErrorBox('Error', body.reason);
-                }
+    sendRequest({ command: 'getTargetFile', file: file },
+        function success(data) {
+            if (data.result === 'Success') {
+                event.sender.send('add-target-file', data.target);
             } else {
-                dialog.showErrorBox('Error', error);
+                dialog.showErrorBox('Error', data.reason);
             }
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
     );
 }
@@ -349,124 +348,126 @@ ipcMain.on('convert', (event, arg) => {
     arg.sklFolder = sklFolder;
     arg.catalog = defaultCatalog;
     arg.srx = defaultSRX;
-    request.post('http://localhost:8000/FilterServer', { json: arg },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('conversion-started', '');
-                status = 'running';
-                var intervalObject = setInterval(function () {
-                    getStatus(body.process);
-                    if (status === 'completed') {
-                        getResult(body.process, event, 'conversionResult', 'conversion-completed');
-                        clearInterval(intervalObject);
-                    } else if (status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        clearInterval(intervalObject);
-                        event.sender.send('show-error', error);
-                    }
-                }, 1000);
-            } else {
-                dialog.showErrorBox('Error', error);
-            }
+    sendRequest(arg,
+        function success(data) {
+            event.sender.send('conversion-started', '');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'conversionResult', 'conversion-completed');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
     );
 });
 
 function getStatus(processId) {
-    request.post('http://localhost:8000/FilterServer', { json: { command: 'status', process: processId } },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                status = body.status;
-            } else {
-                status = 'error!';
-            }
+    sendRequest({ command: 'status', process: processId },
+        function success(data) {
+            status = data.status;
+        },
+        function error(reason) {
+            status = 'error';
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
     );
 }
 
 ipcMain.on('validate', (event, arg) => {
     arg.catalog = defaultCatalog;
-    request.post('http://localhost:8000/FilterServer', { json: arg },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('validation-started', '');
-                status = 'running';
-                var intervalObject = setInterval(function () {
-                    getStatus(body.process);
-                    if (status === 'completed') {
-                        getResult(body.process, event, 'validationResult', 'validation-result');
-                        clearInterval(intervalObject);
-                    } else if (status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        event.sender.send('show-error', status);
-                        clearInterval(intervalObject);
-                    }
-                }, 1000);
-            } else {
-                dialog.showErrorBox('Error', error);
-            }
-        });
+    sendRequest(arg,
+        function success(data) {
+            event.sender.send('validation-started', '');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'validationResult', 'validation-result');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+
 });
 
 function getResult(processId, event, command, callback) {
-    var arg = { command: command, process: processId }
-    request.post('http://localhost:8000/FilterServer', { json: arg },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send(callback, body);
-            } else {
-                event.sender.send('show-error', error);
-            }
+    sendRequest({ command: command, process: processId },
+        function success(data) {
+            event.sender.send(callback, data);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
     );
 }
 
 ipcMain.on('analyse', (event, arg) => {
     arg.catalog = defaultCatalog;
-    request.post('http://localhost:8000/FilterServer', { json: arg },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('analysis-started', '');
-                status = 'running';
-                var intervalObject = setInterval(function () {
-                    getStatus(body.process);
-                    if (status === 'completed') {
-                        getResult(body.process, event, 'analysisResult', 'analysis-completed');
-                        clearInterval(intervalObject);
-                    } else if (status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        event.sender.send('show-error', status);
-                        clearInterval(intervalObject);
-                    }
-                }, 1000);
-            } else {
-                dialog.showErrorBox('Error', error);
-            }
-        });
+    sendRequest(arg,
+        function success(data) {
+            event.sender.send('analysis-started', '');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'analysisResult', 'analysis-completed');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
 });
 
 ipcMain.on('merge', (event, arg) => {
     arg.catalog = defaultCatalog;
-    request.post('http://localhost:8000/FilterServer', { json: arg },
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                event.sender.send('merge-created', '');
-                status = 'running';
-                var intervalObject = setInterval(function () {
-                    getStatus(body.process);
-                    if (status === 'completed') {
-                        getResult(body.process, event, 'mergeResult', 'merge-completed');
-                        clearInterval(intervalObject);
-                    } else if (status === 'running') {
-                        // it's OK, keep waiting
-                    }
-                }, 1000);
-            } else {
-                dialog.showErrorBox('Error', error);
-            }
+    sendRequest(arg,
+        function success(data) {
+            event.sender.send('merge-created', '');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'mergeResult', 'merge-completed');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
         }
     );
 });
@@ -688,7 +689,7 @@ function showAbout() {
         minimizable: false,
         maximizable: false,
         resizable: false,
-        show: false, 
+        show: false,
         backgroundColor: '#2d2d2e',
         icon: './icons/openxliff.png',
         webPreferences: {
@@ -734,4 +735,38 @@ function showSettings() {
 
 function releaseHistory() {
     shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html");
+}
+
+function sendRequest(json, success, error) {
+    const postData = JSON.stringify(json);
+    const options = {
+        hostname: 'localhost',
+        port: 8000,
+        path: '/FilterServer',
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': Buffer.byteLength(postData)
+        }
+    }
+    // Make a request
+    const req = http.request(options);
+    req.on('response', (res) => {
+        res.setEncoding('utf-8');
+        if (res.statusCode != 200) {
+            error('sendRequest() error: ' + res.statusMessage);
+        }
+        let rawData = '';
+        res.on('data', (chunk) => {
+            rawData += chunk;
+        });
+        res.on('end', () => {
+            try {
+                success(JSON.parse(rawData));
+            } catch (e) {
+                error(e.message);
+            }
+        });
+    });
+    req.write(postData);
+    req.end()
 }
