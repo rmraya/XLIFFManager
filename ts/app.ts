@@ -11,9 +11,9 @@
  *******************************************************************************/
 import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent } from "electron";
 import { execFileSync, spawn } from "child_process";
-import { existsSync, mkdirSync, readFile, readFileSync, writeFile, writeFileSync } from "fs";
+import { readFile, writeFile } from "fs";
 
-import { ClientRequest, request } from "http";
+import { ClientRequest, request, IncomingMessage } from "http";
 const https = require('https');
 
 var mainWindow: BrowserWindow;
@@ -346,7 +346,7 @@ ipcMain.on('convert', (event, arg) => {
     arg.srx = defaultSRX;
     sendRequest(arg,
         function success(data: any) {
-            event.sender.send('conversion-started', '');
+            event.sender.send('conversion-started');
             status = 'running';
             var intervalObject = setInterval(function () {
                 getStatus(data.process);
@@ -422,7 +422,7 @@ ipcMain.on('analyse', (event, arg) => {
     arg.catalog = defaultCatalog;
     sendRequest(arg,
         function success(data: any) {
-            event.sender.send('analysis-started', '');
+            event.sender.send('analysis-started');
             status = 'running';
             var intervalObject = setInterval(function () {
                 getStatus(data.process);
@@ -447,7 +447,7 @@ ipcMain.on('merge', (event, arg) => {
     arg.catalog = defaultCatalog;
     sendRequest(arg,
         function success(data: any) {
-            event.sender.send('merge-created', '');
+            event.sender.send('merge-created');
             status = 'running';
             var intervalObject = setInterval(function () {
                 getStatus(data.process);
@@ -568,7 +568,7 @@ function checkUpdates() {
     });
 };
 
-function createMenu() {
+function createMenu(): void {
     var helpMenu: Menu = Menu.buildFromTemplate([
         { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: function () { showHelp() } },
         { type: 'separator' },
@@ -616,7 +616,7 @@ function createMenu() {
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 };
 
-function showAbout() {
+function showAbout(): void {
     var about = new BrowserWindow({
         parent: mainWindow,
         width: 270,
@@ -680,7 +680,7 @@ function showSettings() {
     settings.show();
 };
 
-function releaseHistory() {
+function releaseHistory(): void {
     shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html");
 }
 
@@ -698,7 +698,7 @@ function sendRequest(json: any, success: any, error: any) {
     // Make a request
     var req: ClientRequest = request(options);
     req.on('response',
-        function (res: any) {
+        function (res: IncomingMessage) {
             res.setEncoding('utf-8');
             if (res.statusCode != 200) {
                 error('sendRequest() error: ' + res.statusMessage);

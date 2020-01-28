@@ -104,7 +104,6 @@ function analyse(): void {
     ipcRenderer.send('analyse', args);
 };
 
-
 ipcRenderer.on('add-source-file', (event, arg) => {
     (document.getElementById('sourceFile') as HTMLInputElement).value = arg.file;
     var type = arg.type;
@@ -179,15 +178,15 @@ function typeChanged(): void {
     }
 }
 
-ipcRenderer.on('conversion-started', (event, arg) => {
+ipcRenderer.on('conversion-started', () => {
     document.getElementById('process').innerHTML = '<img src="img/working.gif"/>';
 });
 
-ipcRenderer.on('validation-started', (event, arg) => {
+ipcRenderer.on('validation-started', () => {
     document.getElementById('validation').innerHTML = '<img src="img/working.gif"/>';
 });
 
-ipcRenderer.on('analysis-started', (event, arg) => {
+ipcRenderer.on('analysis-started', () => {
     document.getElementById('analysis').innerHTML = '<img src="img/working.gif"/>';
 });
 
@@ -219,7 +218,7 @@ ipcRenderer.on('conversion-completed', (event, arg) => {
     }
 });
 
-ipcRenderer.on('merge-created', (event, arg) => {
+ipcRenderer.on('merge-created', () => {
     document.getElementById('merge').innerHTML = '<img src="img/working.gif"/>';
 });
 
