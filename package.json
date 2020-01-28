@@ -1,15 +1,15 @@
 {
   "name": "xliffmanager",
   "productName": "XLIFF Manager",
-  "version": "1.7.0",
+  "version": "1.8.0",
   "description": "XLIFF Manager",
   "main": "js/app.js",
   "scripts": {
-    "build" : "tsc",
+    "build": "tsc",
     "start": "npm run build && electron .",
-    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager .",
-    "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico .",
-    "package-linux": "electron-packager --overwrite --icon icons/openxliff.png ."
+    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager --ignore 'docs' --ignore 'ts' --ignore 'src' .",
+    "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico --ignore 'docs' --ignore 'ts' --ignore 'src' .",
+    "package-linux": "electron-packager --overwrite --icon icons/openxliff.png --ignore 'docs' --ignore 'ts' --ignore 'src' ."
   },
   "keywords": [
     "xliff",

@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+1.8.0 | Migrated source code to TypeScript | January 28, 2020
 1.7.0 | Major code cleanup; Changed segmentation model for XLIFF 2.0 | January 1, 2020
 1.6.0 | Added support for XLIFF files from WPML WordPress Plugin | December 2, 2019
 1.5.0 | Added menu and improved DITA support | September 22, 2019
