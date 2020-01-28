@@ -5,7 +5,7 @@
   "description": "XLIFF Manager",
   "main": "js/app.js",
   "scripts": {
-    "build" : "tsc",
+    "build": "tsc",
     "start": "npm run build && electron .",
     "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager .",
     "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico .",
