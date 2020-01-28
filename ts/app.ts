@@ -72,7 +72,7 @@ app.on('ready', () => {
     createWindow();
     createMenu();
     mainWindow.show();
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 });
 
 app.on('quit', () => {
