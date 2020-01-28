@@ -3,9 +3,10 @@
   "productName": "XLIFF Manager",
   "version": "1.7.0",
   "description": "XLIFF Manager",
-  "main": "app.js",
+  "main": "js/app.js",
   "scripts": {
-    "start": "electron .",
+    "build" : "tsc",
+    "start": "npm run build && electron .",
     "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager .",
     "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico .",
     "package-linux": "electron-packager --overwrite --icon icons/openxliff.png ."
@@ -24,6 +25,7 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^7.1.7"
+    "electron": "^7.1.10",
+    "typescript": "^3.7.5"
   }
 }

@@ -9,54 +9,52 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
-const { app, ipcMain, BrowserWindow, dialog, Menu, shell } = require('electron');
-const spawn = require('child_process').spawn;
-const fileSync = require('child_process').execFileSync;
-const fs = require('fs');
-const http = require('http');
+import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent } from "electron";
+import { execFileSync, spawn } from "child_process";
+import { existsSync, mkdirSync, readFile, readFileSync, writeFile, writeFileSync } from "fs";
+
+import { ClientRequest, request } from "http";
 const https = require('https');
 
-let win;
-let settings;
-let javapath;
-let status;
-let appHome;
-let sklFolder;
-let defaultCatalog;
-let defaultSRX;
-let defaultSrcLang = 'none';
-let defaultTgtLang = 'none';
-let stopping;
+var mainWindow: BrowserWindow;
+var settings: BrowserWindow;
+let javapath: string;
+var status: string;
+let appHome: string;
+let sklFolder: string;
+let defaultCatalog: string;
+let defaultSRX: string;
+let defaultSrcLang: string = 'none';
+let defaultTgtLang: string = 'none';
+let stopping: boolean;
 
-const locked = app.requestSingleInstanceLock();
-
-if (!locked) {
+if (!app.requestSingleInstanceLock()) {
     app.quit();
 } else {
-    if (win) {
+    if (mainWindow) {
         // Someone tried to run a second instance, we should focus our window.
-        if (win.isMinimized()) {
+        if (mainWindow.isMinimized()) {
             mainWindow.restore()
         }
-        win.focus()
+        mainWindow.focus()
     }
 }
 
 if (process.platform == 'win32') {
-    javapath = __dirname + '\\bin\\java.exe';
+    javapath = app.getAppPath() + '\\bin\\java.exe';
     appHome = app.getPath('appData') + '\\xliffmanager\\';
     sklFolder = appHome + 'skl\\';
     defaultCatalog = app.getAppPath() + '\\catalog\\catalog.xml';
     defaultSRX = app.getAppPath() + '\\srx\\default.srx';
 } else {
-    javapath = __dirname + '/bin/java';
+    javapath = app.getAppPath() + '/bin/java';
     appHome = app.getPath('appData') + '/xliffmanager/';
     sklFolder = appHome + 'skl/';
     defaultCatalog = app.getAppPath() + '/catalog/catalog.xml';
     defaultSRX = app.getAppPath() + '/srx/default.srx';
 }
 
-const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: __dirname });
+const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: app.getAppPath() });
 
 loadDefaults();
 
@@ -67,16 +65,14 @@ function stopServer() {
     }
 }
 
-const ck = fileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: __dirname });
-if (ck.error != null) {
-    console.log('ck ' + JSON.stringify(ck));
-}
+var ck = execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
+console.log(ck.toString());
 
 app.on('ready', () => {
     createWindow();
     createMenu();
-    win.show();
-    // win.webContents.openDevTools();
+    mainWindow.show();
+    mainWindow.webContents.openDevTools();
 });
 
 app.on('quit', () => {
@@ -89,7 +85,7 @@ app.on('window-all-closed', function () {
 })
 
 function createWindow() {
-    win = new BrowserWindow({
+    mainWindow = new BrowserWindow({
         width: 580,
         height: 680,
         maximizable: false,
@@ -100,11 +96,11 @@ function createWindow() {
             nodeIntegration: true
         }
     });
-    win.on('closed', () => {
-        win = null;
+    mainWindow.on('closed', () => {
+        mainWindow = null;
     });
-    win.setMenu(null);
-    win.loadURL('file://' + __dirname + '/main.html');
+    mainWindow.setMenu(null);
+    mainWindow.loadURL('file://' + app.getAppPath() + '/main.html');
 }
 
 ipcMain.on('select-source-file', (event, arg) => {
@@ -277,8 +273,8 @@ ipcMain.on('save-defaults', (event, arg) => {
     saveDefaults(arg);
 });
 
-function saveDefaults(defaults) {
-    fs.writeFile(appHome + 'defaults.json', JSON.stringify(defaults), function (err) {
+function saveDefaults(defaults: any) {
+    writeFile(appHome + 'defaults.json', JSON.stringify(defaults), function (err) {
         if (err) {
             dialog.showMessageBox({ type: 'error', message: err.message });
             return;
@@ -293,11 +289,11 @@ function saveDefaults(defaults) {
 }
 
 function loadDefaults() {
-    fs.readFile(appHome + 'defaults.json', function (err, data) {
+    readFile(appHome + 'defaults.json', function (err: Error, data: Buffer) {
         if (err instanceof Error) {
             return;
         }
-        let defaults = JSON.parse(data);
+        let defaults = JSON.parse(data.toString());
         if (defaults.srx) {
             defaultSRX = defaults.srx;
         }
@@ -316,28 +312,28 @@ function loadDefaults() {
     });
 }
 
-function getFileType(event, file) {
+function getFileType(event: IpcMainEvent, file: string) {
     sendRequest({ command: 'getFileType', file: file },
-        function success(data) {
+        function success(data: any) {
             event.sender.send('add-source-file', data);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
     );
 }
 
-function getTargetFile(event, file) {
+function getTargetFile(event: IpcMainEvent, file: string) {
     sendRequest({ command: 'getTargetFile', file: file },
-        function success(data) {
+        function success(data: any) {
             if (data.result === 'Success') {
                 event.sender.send('add-target-file', data.target);
             } else {
                 dialog.showErrorBox('Error', data.reason);
             }
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -349,7 +345,7 @@ ipcMain.on('convert', (event, arg) => {
     arg.catalog = defaultCatalog;
     arg.srx = defaultSRX;
     sendRequest(arg,
-        function success(data) {
+        function success(data: any) {
             event.sender.send('conversion-started', '');
             status = 'running';
             var intervalObject = setInterval(function () {
@@ -364,19 +360,19 @@ ipcMain.on('convert', (event, arg) => {
                 }
             }, 1000);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
     );
 });
 
-function getStatus(processId) {
+function getStatus(processId: string) {
     sendRequest({ command: 'status', process: processId },
-        function success(data) {
+        function success(data: any) {
             status = data.status;
         },
-        function error(reason) {
+        function error(reason: string) {
             status = 'error';
             dialog.showErrorBox('Error', reason);
             console.log(reason);
@@ -387,7 +383,7 @@ function getStatus(processId) {
 ipcMain.on('validate', (event, arg) => {
     arg.catalog = defaultCatalog;
     sendRequest(arg,
-        function success(data) {
+        function success(data: any) {
             event.sender.send('validation-started', '');
             status = 'running';
             var intervalObject = setInterval(function () {
@@ -402,7 +398,7 @@ ipcMain.on('validate', (event, arg) => {
                 }
             }, 1000);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -410,12 +406,12 @@ ipcMain.on('validate', (event, arg) => {
 
 });
 
-function getResult(processId, event, command, callback) {
+function getResult(processId: string, event: IpcMainEvent, command: string, callback: string) {
     sendRequest({ command: command, process: processId },
-        function success(data) {
+        function success(data: any) {
             event.sender.send(callback, data);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -425,7 +421,7 @@ function getResult(processId, event, command, callback) {
 ipcMain.on('analyse', (event, arg) => {
     arg.catalog = defaultCatalog;
     sendRequest(arg,
-        function success(data) {
+        function success(data: any) {
             event.sender.send('analysis-started', '');
             status = 'running';
             var intervalObject = setInterval(function () {
@@ -440,7 +436,7 @@ ipcMain.on('analyse', (event, arg) => {
                 }
             }, 1000);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -450,7 +446,7 @@ ipcMain.on('analyse', (event, arg) => {
 ipcMain.on('merge', (event, arg) => {
     arg.catalog = defaultCatalog;
     sendRequest(arg,
-        function success(data) {
+        function success(data: any) {
             event.sender.send('merge-created', '');
             status = 'running';
             var intervalObject = setInterval(function () {
@@ -465,7 +461,7 @@ ipcMain.on('merge', (event, arg) => {
                 }
             }, 1000);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -474,10 +470,10 @@ ipcMain.on('merge', (event, arg) => {
 
 ipcMain.on('get-version', (event) => {
     sendRequest({ command: 'version' },
-        function success(data) {
+        function success(data: any) {
             event.sender.send('set-version', data);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -486,12 +482,12 @@ ipcMain.on('get-version', (event) => {
 
 ipcMain.on('get-languages', (event) => {
     sendRequest({ command: 'getLanguages' },
-        function success(data) {
+        function success(data: any) {
             data.srcLang = defaultSrcLang;
             data.tgtLang = defaultTgtLang;
             event.sender.send('languages-received', data);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -512,10 +508,10 @@ ipcMain.on('get-srx', (event) => {
 
 ipcMain.on('get-charsets', (event) => {
     sendRequest({ command: 'getCharsets' },
-        function success(data) {
+        function success(data: any) {
             event.sender.send('charsets-received', data);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -524,10 +520,10 @@ ipcMain.on('get-charsets', (event) => {
 
 ipcMain.on('get-types', (event) => {
     sendRequest({ command: 'getTypes' },
-        function success(data) {
+        function success(data: any) {
             event.sender.send('types-received', data);
         },
-        function error(reason) {
+        function error(reason: string) {
             dialog.showErrorBox('Error', reason);
             console.log(reason);
         }
@@ -539,23 +535,23 @@ ipcMain.on('check-updates', (event) => {
 });
 
 function checkUpdates() {
-    https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res) => {
+    https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res: any) => {
         if (res.statusCode === 200) {
             let rawData = '';
-            res.on('data', (chunk) => {
+            res.on('data', (chunk: string) => {
                 rawData += chunk;
             });
             res.on('end', () => {
                 try {
                     const parsedData = JSON.parse(rawData);
                     if (app.getVersion() !== parsedData.version) {
-                        dialog.showMessageBox(win, {
+                        dialog.showMessageBox(mainWindow, {
                             type: 'info',
                             title: 'Updates Available',
                             message: 'Version ' + parsedData.version + ' is available'
                         });
                     } else {
-                        dialog.showMessageBox(win, {
+                        dialog.showMessageBox(mainWindow, {
                             type: 'info',
                             message: 'There are currently no updates available.'
                         });
@@ -567,57 +563,54 @@ function checkUpdates() {
         } else {
             dialog.showErrorBox('Error', 'Updates Request Failed.\nStatus code: ' + res.statusCode);
         }
-    }).on('error', (e) => {
+    }).on('error', (e: any) => {
         dialog.showErrorBox('Error', e.message);
     });
 };
 
 function createMenu() {
-    var template = [
-        {
-            label: 'Help', submenu: [
-                { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: function () { showHelp() } },
-                { type: 'separator' },
-                { label: 'Check for Updates', click: function () { checkUpdates() } },
-                { label: 'View Release History', click: function () { releaseHistory() } }
-            ]
-        }
+    var helpMenu: Menu = Menu.buildFromTemplate([
+        { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: function () { showHelp() } },
+        { type: 'separator' },
+        { label: 'Check for Updates', click: function () { checkUpdates() } },
+        { label: 'View Release History', click: function () { releaseHistory() } }
+    ]);
+    var template: MenuItem[] = [
+        new MenuItem({ label: 'Help', role: 'help', submenu: helpMenu })
     ];
 
     if (process.platform === 'darwin') {
-        template.unshift({
-            label: 'XLIFF Manager', submenu: [
-                { label: 'About XLIFF Manager', click: function () { showAbout() } },
-                { label: 'Preferences...', accelerator: 'Cmd+,', click: function () { showSettings() } },
-                { type: 'separator' },
-                {
-                    label: 'Services', role: 'services', submenu: [
-                        { label: 'No Services Apply', enabled: false }
-                    ]
-                },
-                { type: 'separator' },
-                { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: function () { app.quit() } }
-            ]
-        });
+        var appleMenu: Menu = Menu.buildFromTemplate([
+            { label: 'About XLIFF Manager', click: function () { showAbout() } },
+            { label: 'Preferences...', accelerator: 'Cmd+,', click: function () { showSettings() } },
+            { type: 'separator' },
+            {
+                label: 'Services', role: 'services', submenu: [
+                    { label: 'No Services Apply', enabled: false }
+                ]
+            },
+            { type: 'separator' },
+            { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: function () { app.quit() } }
+        ]);
+        template.unshift(new MenuItem({ label: 'XLIFF Manager', submenu: appleMenu }));
     } else {
-        template.unshift({
-            label: 'File', submenu: [
-                { label: 'Settings', click: function () { showSettings() } },
-                { type: 'separator' }
-            ]
-        });
-        helpMenu = template.pop();
-        template.push(helpMenu);
+        var fileMenu: Menu = Menu.buildFromTemplate([
+            { label: 'Settings', click: function () { showSettings() } },
+            { type: 'separator' }
+        ]);
+        template.unshift(new MenuItem({ label: 'File', submenu: fileMenu }));
     }
 
     if (process.platform == 'win32') {
-        template[0].submenu.push({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: function () { app.quit() } })
-        template[1].submenu.push({ type: 'separator' }, { label: 'About...', click: function () { showAbout() } })
+        template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: function () { app.quit() } }));
+        template[1].submenu.append(new MenuItem({ type: 'separator' }));
+        template[1].submenu.append(new MenuItem({ label: 'About...', click: function () { showAbout() } }));
     }
 
     if (process.platform === 'linux') {
-        template[0].submenu.push({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: function () { app.quit() } })
-        template[1].submenu.push({ type: 'separator' }, { label: 'About...', click: showAbout() })
+        template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: function () { app.quit() } }));
+        template[1].submenu.append(new MenuItem({ type: 'separator' }));
+        template[1].submenu.append(new MenuItem({ label: 'About...', click: function () { showAbout() } }));
     }
 
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
@@ -625,7 +618,7 @@ function createMenu() {
 
 function showAbout() {
     var about = new BrowserWindow({
-        parent: win,
+        parent: mainWindow,
         width: 270,
         height: 320,
         minimizable: false,
@@ -641,21 +634,33 @@ function showAbout() {
     if (process.platform !== 'darwin') {
         about.removeMenu();
     }
-    about.loadURL('file://' + __dirname + '/about.html');
+    about.loadURL('file://' + app.getAppPath() + '/about.html');
     about.show();
 };
 
 function showHelp() {
-    var help = __dirname + '/xliffmanager.pdf';
+    var help = app.getAppPath() + '/xliffmanager.pdf';
     if (process.platform == 'win32') {
-        help = __dirname + '\\xliffmanager.pdf'
+        help = app.getAppPath() + '\\xliffmanager.pdf'
     }
     shell.openItem(help);
 }
 
+ipcMain.on('show-help', () => {
+    showHelp();
+});
+
+ipcMain.on('show-file', (event, arg) => {
+    shell.openItem(arg.file);
+});
+
+ipcMain.on('show-dialog', (event, arg) => {
+    dialog.showMessageBox(arg);
+});
+
 function showSettings() {
     settings = new BrowserWindow({
-        parent: win,
+        parent: mainWindow,
         width: 590,
         height: 190,
         minimizable: false,
@@ -671,7 +676,7 @@ function showSettings() {
     if (process.platform !== 'darwin') {
         settings.removeMenu();
     }
-    settings.loadURL('file://' + __dirname + '/settings.html');
+    settings.loadURL('file://' + app.getAppPath() + '/settings.html');
     settings.show();
 };
 
@@ -679,8 +684,8 @@ function releaseHistory() {
     shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html");
 }
 
-function sendRequest(json, success, error) {
-    const postData = JSON.stringify(json);
+function sendRequest(json: any, success: any, error: any) {
+    const postData: string = JSON.stringify(json);
     const options = {
         hostname: 'localhost',
         port: 8000,
@@ -691,24 +696,26 @@ function sendRequest(json, success, error) {
         }
     }
     // Make a request
-    const req = http.request(options);
-    req.on('response', (res) => {
-        res.setEncoding('utf-8');
-        if (res.statusCode != 200) {
-            error('sendRequest() error: ' + res.statusMessage);
-        }
-        let rawData = '';
-        res.on('data', (chunk) => {
-            rawData += chunk;
-        });
-        res.on('end', () => {
-            try {
-                success(JSON.parse(rawData));
-            } catch (e) {
-                error(e.message);
+    var req: ClientRequest = request(options);
+    req.on('response',
+        function (res: any) {
+            res.setEncoding('utf-8');
+            if (res.statusCode != 200) {
+                error('sendRequest() error: ' + res.statusMessage);
             }
-        });
-    });
+            var rawData: string = '';
+            res.on('data', function (chunk: string) {
+                rawData += chunk;
+            });
+            res.on('end', function () {
+                try {
+                    success(JSON.parse(rawData));
+                } catch (e) {
+                    error(e.message);
+                }
+            });
+        }
+    );
     req.write(postData);
-    req.end()
+    req.end();
 }

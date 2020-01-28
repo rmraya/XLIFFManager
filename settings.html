@@ -21,22 +21,22 @@
             <tr>
                 <td class="panel"><label for="defaultCatalog">System Catalog</label></td>
                 <td class="panel fill"><input id="defaultCatalog" type="text" class="fill"></td>
-                <td class="panel"><button id="browseCatalog" class="dark">Browse...</button></td>
+                <td class="panel"><button class="dark" onclick="browseCatalog()">Browse...</button></td>
             </tr>
             <tr>
                 <td class="panel"><label for="skeletonFolder">Skeletons Folder</label></td>
                 <td class="panel fill"><input id="skeletonFolder" type="text" class="fill"></td>
-                <td class="panel"><button id="browseSkeleton" class="dark">Browse...</button></td>
+                <td class="panel"><button class="dark" onclick="browseSkeleton()">Browse...</button></td>
             </tr>
             <tr>
                 <td class="panel"><label for="defaultSRX">Default SRX File</label></td>
                 <td class="panel fill"><input id="defaultSRX" type="text" class="fill"></td>
-                <td class="panel"><button id="browseSRX" class="dark">Browse...</button></td>
+                <td class="panel"><button class="dark" onclick="browseSRX()">Browse...</button></td>
             </tr>
         </table>
         <div class="panel">
-            <button id="save" class="primary right">Save Settings</button>
+            <button class="primary right" onclick="saveSettings()">Save Settings</button>
         </div>
-        <script>require('./settings');</script>
+        <script src="./js/settings"></script>
     </body>
 </html>

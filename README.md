@@ -70,7 +70,10 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 ## Building & running
 
 Requirements: 
-[node.js](https://nodejs.org) 12.6.0 or newer
+- [node.js](https://nodejs.org) 12.10.0 or newer
+- [TypeScript](https://www.typescriptlang.org) 3.7.5 or newer
+
+Building: 
 
 - Checkout this repository.
 - Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).

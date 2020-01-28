@@ -120,13 +120,9 @@ button.dark {
 	padding-right: 4px;	
 }
 
-button.disabled {
+button:disabled {
 	background: #979593;
 	color: #bbbbbb;
-	padding-top: 3px;
-	padding-bottom:3px;
-	padding-left: 4px;
-	padding-right: 4px;	
 }
 
 button.primary {
