@@ -535,7 +535,7 @@ ipcMain.on('check-updates', (event) => {
 });
 
 function checkUpdates() {
-    https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res: any) => {
+    https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res: IncomingMessage) => {
         if (res.statusCode === 200) {
             let rawData = '';
             res.on('data', (chunk: string) => {
