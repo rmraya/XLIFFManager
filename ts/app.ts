@@ -467,6 +467,8 @@ ipcMain.on('merge', (event, arg) => {
 ipcMain.on('get-version', (event) => {
     sendRequest({ command: 'version' },
         function success(data: any) {
+            const jsonPackage = require('../package.json');
+            data.xliffManager = jsonPackage.version;
             event.sender.send('set-version', data);
         },
         function error(reason: string) {

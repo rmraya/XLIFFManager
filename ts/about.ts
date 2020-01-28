@@ -13,9 +13,7 @@
  var _b = require('electron');
 _b.ipcRenderer.send('get-version');
 
-var pjson = require('../package.json');
-document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + pjson.version;
-
 _b.ipcRenderer.on('set-version', (event, arg) => {
+    document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
     document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
 });
