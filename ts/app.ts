@@ -58,7 +58,7 @@ const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprog
 
 loadDefaults();
 
-function stopServer() {
+function stopServer(): void {
     if (!stopping) {
         stopping = true;
         ls.kill();
@@ -84,7 +84,7 @@ app.on('window-all-closed', function () {
     app.quit()
 })
 
-function createWindow() {
+function createWindow(): void {
     mainWindow = new BrowserWindow({
         width: 580,
         height: 680,
@@ -273,12 +273,8 @@ ipcMain.on('save-defaults', (event, arg) => {
     saveDefaults(arg);
 });
 
-function saveDefaults(defaults: any) {
-    writeFile(appHome + 'defaults.json', JSON.stringify(defaults), function (err) {
-        if (err) {
-            dialog.showMessageBox({ type: 'error', message: err.message });
-            return;
-        }
+function saveDefaults(defaults: any): void {
+    writeFile(appHome + 'defaults.json', JSON.stringify(defaults), function () {
         defaultCatalog = defaults.catalog;
         sklFolder = defaults.skeleton;
         defaultSrcLang = defaults.srcLang;
@@ -288,7 +284,7 @@ function saveDefaults(defaults: any) {
     });
 }
 
-function loadDefaults() {
+function loadDefaults(): void {
     readFile(appHome + 'defaults.json', function (err: Error, data: Buffer) {
         if (err instanceof Error) {
             return;
@@ -312,7 +308,7 @@ function loadDefaults() {
     });
 }
 
-function getFileType(event: IpcMainEvent, file: string) {
+function getFileType(event: IpcMainEvent, file: string): void {
     sendRequest({ command: 'getFileType', file: file },
         function success(data: any) {
             event.sender.send('add-source-file', data);
@@ -324,7 +320,7 @@ function getFileType(event: IpcMainEvent, file: string) {
     );
 }
 
-function getTargetFile(event: IpcMainEvent, file: string) {
+function getTargetFile(event: IpcMainEvent, file: string): void {
     sendRequest({ command: 'getTargetFile', file: file },
         function success(data: any) {
             if (data.result === 'Success') {
@@ -367,7 +363,7 @@ ipcMain.on('convert', (event, arg) => {
     );
 });
 
-function getStatus(processId: string) {
+function getStatus(processId: string): void {
     sendRequest({ command: 'status', process: processId },
         function success(data: any) {
             status = data.status;
@@ -406,7 +402,7 @@ ipcMain.on('validate', (event, arg) => {
 
 });
 
-function getResult(processId: string, event: IpcMainEvent, command: string, callback: string) {
+function getResult(processId: string, event: IpcMainEvent, command: string, callback: string): void {
     sendRequest({ command: command, process: processId },
         function success(data: any) {
             event.sender.send(callback, data);
@@ -534,7 +530,7 @@ ipcMain.on('check-updates', (event) => {
     checkUpdates();
 });
 
-function checkUpdates() {
+function checkUpdates(): void {
     https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res: IncomingMessage) => {
         if (res.statusCode === 200) {
             let rawData = '';
@@ -638,7 +634,7 @@ function showAbout(): void {
     about.show();
 };
 
-function showHelp() {
+function showHelp(): void {
     var help = app.getAppPath() + '/xliffmanager.pdf';
     if (process.platform == 'win32') {
         help = app.getAppPath() + '\\xliffmanager.pdf'
@@ -658,7 +654,7 @@ ipcMain.on('show-dialog', (event, arg) => {
     dialog.showMessageBox(arg);
 });
 
-function showSettings() {
+function showSettings(): void {
     settings = new BrowserWindow({
         parent: mainWindow,
         width: 590,
@@ -684,7 +680,7 @@ function releaseHistory(): void {
     shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html");
 }
 
-function sendRequest(json: any, success: any, error: any) {
+function sendRequest(json: any, success: any, error: any): void {
     const postData: string = JSON.stringify(json);
     const options = {
         hostname: 'localhost',
