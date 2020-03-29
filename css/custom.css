@@ -20,6 +20,10 @@ body {
 	padding: 0px;
 }
 
+.wait {
+	cursor: wait !important;
+}
+
 .panel {
 	background: #2d2d2e ;
 	padding-left: 5px;

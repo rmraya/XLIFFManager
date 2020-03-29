@@ -12,54 +12,59 @@
 
 var _s = require('electron');
 
-_s.ipcRenderer.send('get-languages');
-_s.ipcRenderer.send('get-catalog');
-_s.ipcRenderer.send('get-skeleton');
-_s.ipcRenderer.send('get-srx');
+class Settings {
 
-_s.ipcRenderer.on('languages-received', (event, arg) => {
-    var array = arg.languages;
-    var options = '<option value="none">Select Language</option>';
-    for (let i = 0; i < array.length; i++) {
-        var lang = array[i];
-        options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
+    constructor() {
+        _s.ipcRenderer.send('get-languages');
+        _s.ipcRenderer.send('get-catalog');
+        _s.ipcRenderer.send('get-skeleton');
+        _s.ipcRenderer.send('get-srx');
+
+        document.getElementById('browseCatalog').addEventListener('click', () => { _s.ipcRenderer.send('select-catalog'); });
+        document.getElementById('browseSkeleton').addEventListener('click', () => { _s.ipcRenderer.send('select-skeleton'); });
+        document.getElementById('browseSRX').addEventListener('click', () => { _s.ipcRenderer.send('select-srx'); });
+        document.getElementById('saveSettings').addEventListener('click', () => { this.saveSettings(); });
+
+        _s.ipcRenderer.on('languages-received', (event, arg) => {
+            this.languagesReceived(arg);
+        });
+
+        _s.ipcRenderer.on('skeleton-received', (event, arg) => {
+            (document.getElementById('skeletonFolder') as HTMLInputElement).value = arg;
+        });
+
+        _s.ipcRenderer.on('catalog-received', (event, arg) => {
+            (document.getElementById('defaultCatalog') as HTMLInputElement).value = arg;
+        });
+
+        _s.ipcRenderer.on('srx-received', (event, arg) => {
+            (document.getElementById('defaultSRX') as HTMLInputElement).value = arg;
+        });
     }
-    document.getElementById('sourceSelect').innerHTML = options;
-    (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
-    document.getElementById('targetSelect').innerHTML = options;
-    (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
-});
 
-_s.ipcRenderer.on('skeleton-received', (event, arg) => {
-    (document.getElementById('skeletonFolder') as HTMLInputElement).value = arg;
-});
+    languagesReceived(arg: any): void {
+        var array = arg.languages;
+        var options = '<option value="none">Select Language</option>';
+        for (let i = 0; i < array.length; i++) {
+            var lang = array[i];
+            options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
+        }
+        document.getElementById('sourceSelect').innerHTML = options;
+        (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
+        document.getElementById('targetSelect').innerHTML = options;
+        (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
+    }
 
-_s.ipcRenderer.on('catalog-received', (event, arg) => {
-    (document.getElementById('defaultCatalog') as HTMLInputElement).value = arg;
-});
+    saveSettings(): void {
+        _s.ipcRenderer.send('save-defaults', {
+            srcLang: (document.getElementById('sourceSelect') as HTMLSelectElement).value,
+            tgtLang: (document.getElementById('targetSelect') as HTMLSelectElement).value,
+            skeleton: (document.getElementById('skeletonFolder') as HTMLInputElement).value,
+            catalog: (document.getElementById('defaultCatalog') as HTMLInputElement).value,
+            srx: (document.getElementById('defaultSRX') as HTMLInputElement).value
+        });
+    }
 
-_s.ipcRenderer.on('srx-received', (event, arg) => {
-    (document.getElementById('defaultSRX') as HTMLInputElement).value = arg;
-});
-
-function saveSettings(): void {
-    _s.ipcRenderer.send('save-defaults', {
-        srcLang: (document.getElementById('sourceSelect') as HTMLSelectElement).value,
-        tgtLang: (document.getElementById('targetSelect') as HTMLSelectElement).value,
-        skeleton: (document.getElementById('skeletonFolder') as HTMLInputElement).value,
-        catalog: (document.getElementById('defaultCatalog') as HTMLInputElement).value,
-        srx: (document.getElementById('defaultSRX') as HTMLInputElement).value
-    });
 }
 
-function browseSkeleton(): void {
-    _s.ipcRenderer.send('select-skeleton');
-}
-
-function browseCatalog(): void  {
-    _s.ipcRenderer.send('select-catalog');
-}
-
-function browseSRX(): void {
-    _s.ipcRenderer.send('select-srx');
-}
+new Settings();

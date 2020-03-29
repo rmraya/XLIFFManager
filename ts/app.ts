@@ -102,7 +102,7 @@ function createWindow(): void {
         mainWindow = null;
     });
     mainWindow.setMenu(null);
-    mainWindow.loadURL('file://' + app.getAppPath() + '/main.html');
+    mainWindow.loadURL('file://' + app.getAppPath() + '/html/main.html');
 }
 
 ipcMain.on('select-source-file', (event, arg) => {
@@ -647,7 +647,7 @@ function showAbout(): void {
     if (process.platform !== 'darwin') {
         about.removeMenu();
     }
-    about.loadURL('file://' + app.getAppPath() + '/about.html');
+    about.loadURL('file://' + app.getAppPath() + '/html/about.html');
     about.show();
 }
 
@@ -689,7 +689,7 @@ function showSettings(): void {
     if (process.platform !== 'darwin') {
         settings.removeMenu();
     }
-    settings.loadURL('file://' + app.getAppPath() + '/settings.html');
+    settings.loadURL('file://' + app.getAppPath() + '/html/settings.html');
     settings.show();
 }
 

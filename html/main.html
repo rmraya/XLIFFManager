@@ -5,10 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>XLIFF Manager</title>
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="../css/custom.css">
 </head>
 
-<body>
+<body id="body">
     <div class="panel">
         <table class="panel">
             <tr>
@@ -16,17 +16,17 @@
                     <h1>Create XLIFF File</h1>
                 </td>
                 <td class="panel">
-                    <a href="#" onclick="help()">
-                        <img class="right" src="img/help.png" title="Help..." style="margin-left:4px;">
+                    <a id="helpButton" href="#">
+                        <img class="right" src="../img/help.png" title="Help..." style="margin-left:4px;">
                     </a>
-                    <a href="#" onclick="about()">
-                        <img class="right" src="img/info.png" title="About..." style="margin-left:4px;">
+                    <a id="infoButton" href="#">
+                        <img class="right" src="../img/info.png" title="About..." style="margin-left:4px;">
                     </a>
-                    <a href="#" onclick="checkUpdates()">
-                        <img class="right" src="img/refresh.png" title="Check for Updates..." style="margin-left:4px;">
+                    <a id="updatesButton" href="#">
+                        <img class="right" src="../img/refresh.png" title="Check for Updates..." style="margin-left:4px;">
                     </a>
-                    <a href="#" onclick="settings()">
-                        <img class="right" src="img/gears.png" title="Settings..." style="margin-left:4px;">
+                    <a id="settingsButton" href="#">
+                        <img class="right" src="../img/gears.png" title="Settings..." style="margin-left:4px;">
                     </a>
                 </td>
             </tr>
@@ -35,7 +35,7 @@
             <tr>
                 <td class="panel"><label for="sourceFile">Source File</label></td>
                 <td class="panel fill"><input id="sourceFile" type="text" class="fill"></td>
-                <td class="panel"><button class="dark" onclick="browseSource()">Browse...</button></td>
+                <td id="browseSource" class="panel"><button class="dark">Browse...</button></td>
             </tr>
         </table>
         <table class="panel">
@@ -49,7 +49,7 @@
             </tr>
             <tr>
                 <td class="panel"><label for="typeSelect">File Type</label></td>
-                <td class="panel fill"><select id="typeSelect" class="fill" onchange="typeChanged()"></select></td>
+                <td class="panel fill"><select id="typeSelect" class="fill"></select></td>
             </tr>
             <tr>
                 <td class="panel"><label for="charsetSelect">Character Set</label></td>
@@ -60,8 +60,7 @@
             <tr>
                 <td class="panel"><label for="ditavalFile">DITAVAL File</label></td>
                 <td class="panel fill"><input id="ditavalFile" type="text" class="fill" disabled></td>
-                <td class="panel"><button id="browseDitaVal" class="dark" disabled
-                        onclick="browseDitaVal()">Browse...</button></td>
+                <td class="panel"><button id="browseDitaVal" class="dark" disabled>Browse...</button></td>
             </tr>
         </table>
         <table class="panel">
@@ -76,7 +75,7 @@
                     </div>
                 </td>
                 <td class="panel" style="height:40px;">
-                    <button class="primary right" onclick="createXLIFF()">Create XLIFF</button>
+                    <button id="createXLIFF" class="primary right">Create XLIFF</button>
                     <p id="process"></p>
                 </td>
             </tr>
@@ -89,12 +88,12 @@
             <tr>
                 <td class="panel"><label for="xliffFile">XLIFF File</label></td>
                 <td class="panel fill"><input id="xliffFile" type="text" class="fill"></td>
-                <td class="panel"><button class="dark" onclick="browseXLIFF()">Browse...</button></td>
+                <td class="panel"><button id="browseXLIFF" class="dark">Browse...</button></td>
             </tr>
             <tr>
                 <td class="panel"><label for="targetFile">Target File/Folder</label></td>
                 <td class="panel fill"><input id="targetFile" type="text" class="fill"></td>
-                <td class="panel"><button class="dark" onclick="browseTarget()">Browse...</button></td>
+                <td class="panel"><button id="browseTarget" class="dark">Browse...</button></td>
             </tr>
         </table>
         <table class="panel">
@@ -111,7 +110,7 @@
                     <p id="merge"></p>
                 </td>
                 <td class="panel">
-                    <button class="primary right" onclick="mergeXLIFF()">Merge XLIFF</button>
+                    <button id="mergeXLIFF" class="primary right">Merge XLIFF</button>
                 </td>
             </tr>
         </table>
@@ -123,7 +122,7 @@
             <tr>
                 <td class="panel"><label for="xliffFileValidation">XLIFF File</label></td>
                 <td class="panel fill"><input id="xliffFileValidation" type="text" class="fill"></td>
-                <td class="panel"><button class="dark" onclick="browseXLIFFValidation()">Browse...</button></td>
+                <td class="panel"><button id="browseXLIFFValidation" class="dark">Browse...</button></td>
             </tr>
         </table>
         <table class="panel">
@@ -132,7 +131,7 @@
                     <p id="validation" class="right"></p>
                 </td>
                 <td class="panel">
-                    <button class="primary right" onclick="validate()">Validate XLIFF</button>
+                    <button id="validateButton" class="primary right">Validate XLIFF</button>
                     <p id="validate"></p>
                 </td>
             </tr>
@@ -145,7 +144,7 @@
             <tr>
                 <td class="panel"><label for="xliffFileAnalysis">XLIFF File</label></td>
                 <td class="panel fill"><input id="xliffFileAnalysis" type="text" class="fill"></td>
-                <td class="panel"><button class="dark" onclick="browseXLIFFAnalysis()">Browse...</button></td>
+                <td class="panel"><button id="browseXLIFFAnalysis" class="dark">Browse...</button></td>
             </tr>
         </table>
         <table class="panel">
@@ -154,13 +153,13 @@
                     <p id="analysis" class="right"></p>
                 </td>
                 <td class="panel">
-                    <button class="primary right" onclick="analyse()">Analyse XLIFF</button>
+                    <button id="analyseButton" class="primary right">Analyse XLIFF</button>
                     <p id="analyse"></p>
                 </td>
             </tr>
         </table>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
