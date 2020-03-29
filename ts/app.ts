@@ -16,6 +16,8 @@ import { readFile, writeFile } from "fs";
 import { ClientRequest, request, IncomingMessage } from "http";
 const https = require('https');
 
+app.allowRendererProcessReuse = true;
+
 var mainWindow: BrowserWindow;
 var settings: BrowserWindow;
 let javapath: string;
@@ -124,6 +126,7 @@ ipcMain.on('select-source-file', (event, arg) => {
             { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
             { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
             { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
+            { name: 'Trados Studio Package', extensions: ['sdlppx'] },
             { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
             { name: 'TXML Document', extensions: ['txml'] },
             { name: 'Visio XML Drawing', extensions: ['vsdx'] },
@@ -528,6 +531,18 @@ ipcMain.on('get-types', (event) => {
     );
 });
 
+ipcMain.on('get-package-languages', (event, arg) => {
+    sendRequest(arg,
+        function success(data: any) {
+            event.sender.send('package-languages', data);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+});
+
 ipcMain.on('check-updates', (event) => {
     checkUpdates();
 });
@@ -564,7 +579,7 @@ function checkUpdates(): void {
     }).on('error', (e: any) => {
         dialog.showErrorBox('Error', e.message);
     });
-};
+}
 
 function createMenu(): void {
     var helpMenu: Menu = Menu.buildFromTemplate([
@@ -612,7 +627,7 @@ function createMenu(): void {
     }
 
     Menu.setApplicationMenu(Menu.buildFromTemplate(template));
-};
+}
 
 function showAbout(): void {
     var about = new BrowserWindow({
@@ -634,7 +649,7 @@ function showAbout(): void {
     }
     about.loadURL('file://' + app.getAppPath() + '/about.html');
     about.show();
-};
+}
 
 function showHelp(): void {
     var help = app.getAppPath() + '/xliffmanager.pdf';
@@ -676,7 +691,7 @@ function showSettings(): void {
     }
     settings.loadURL('file://' + app.getAppPath() + '/settings.html');
     settings.show();
-};
+}
 
 function releaseHistory(): void {
     shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html");

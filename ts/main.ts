@@ -12,6 +12,8 @@
 
 const { ipcRenderer } = require('electron');
 
+var languagesChanged: boolean = false;
+
 ipcRenderer.send('get-languages');
 ipcRenderer.send('get-types');
 ipcRenderer.send('get-charsets');
@@ -74,7 +76,7 @@ function createXLIFF(): void {
         args.embed = true;
     }
     ipcRenderer.send('convert', args);
-};
+}
 
 function browseXLIFFValidation(): void {
     ipcRenderer.send('select-xliff-validation');
@@ -102,7 +104,7 @@ function analyse(): void {
     }
     var args = { command: 'analyseXliff', file: xliffFile };
     ipcRenderer.send('analyse', args);
-};
+}
 
 ipcRenderer.on('add-source-file', (event, arg) => {
     (document.getElementById('sourceFile') as HTMLInputElement).value = arg.file;
@@ -114,11 +116,49 @@ ipcRenderer.on('add-source-file', (event, arg) => {
         } else {
             disableDitaVal();
         }
+        if ('SDLPPX' === type) {
+            ipcRenderer.send('get-package-languages', { command: 'getPackageLangs', package: arg.file });
+        } else {
+            if (languagesChanged) {
+                ipcRenderer.send('get-languages');
+            }
+        }
     }
     var encoding = arg.encoding;
     if (encoding !== 'Unknown') {
         (document.getElementById('charsetSelect') as HTMLSelectElement).value = encoding;
     }
+});
+
+ipcRenderer.on('package-languages', (event, arg) => {
+    if (arg.reason) {
+        ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+        (document.getElementById('typeSelect') as HTMLSelectElement).value = 'none';
+        return;
+    }
+
+    var srcArray = arg.srcLangs;
+    var srcOptions: string = '<option value="none">Select Language</option>';
+    for (let i = 0; i < srcArray.length; i++) {
+        var lang = srcArray[i];
+        srcOptions = srcOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
+    }
+    document.getElementById('sourceSelect').innerHTML = srcOptions;
+    if (srcArray.length === 1) {
+        (document.getElementById('sourceSelect') as HTMLSelectElement).value = srcArray[0].code;
+    }
+
+    var tgtArray = arg.tgtLangs;
+    var tgtOptions: string = '<option value="none">Select Language</option>';
+    for (let i = 0; i < tgtArray.length; i++) {
+        var lang = tgtArray[i];
+        tgtOptions = tgtOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
+    }
+    document.getElementById('targetSelect').innerHTML = tgtOptions;
+    if (tgtArray.length === 1) {
+        (document.getElementById('targetSelect') as HTMLSelectElement).value = tgtArray[0].code;
+    }
+    languagesChanged = true;
 });
 
 ipcRenderer.on('add-xliff-file', (event, arg) => {
@@ -139,15 +179,16 @@ ipcRenderer.on('add-target-file', (event, arg) => {
 
 ipcRenderer.on('languages-received', (event, arg) => {
     var array = arg.languages;
-    var options = '<option value="none">Select Language</option>';
+    var languageOptions = '<option value="none">Select Language</option>';
     for (let i = 0; i < array.length; i++) {
         var lang = array[i];
-        options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
+        languageOptions = languageOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
     }
-    document.getElementById('sourceSelect').innerHTML = options;
+    document.getElementById('sourceSelect').innerHTML = languageOptions;
     (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
-    document.getElementById('targetSelect').innerHTML = options;
+    document.getElementById('targetSelect').innerHTML = languageOptions;
     (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
+    languagesChanged = false;
 });
 
 ipcRenderer.on('charsets-received', (event, arg) => {
