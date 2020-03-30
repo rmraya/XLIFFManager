@@ -225,7 +225,7 @@ ipcMain.on('show-dialog', (event, arg) => {
 function createWindow(): void {
     mainWindow = new BrowserWindow({
         width: 580,
-        height: 680,
+        height: 700,
         maximizable: false,
         show: false,
         icon: './icons/openxliff.png',

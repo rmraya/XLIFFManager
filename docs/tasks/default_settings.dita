@@ -42,6 +42,18 @@
                     file system.</cmd>
             </step>
             <step>
+                <cmd>Use the <uicontrol>Theme</uicontrol> drop-down to select the colors used in the
+                    graphical user interface. Available options are:
+                   
+                </cmd>
+                <choices>
+                    <choice><b>System Default</b>: automatically selects Dark or Light colors
+                        according to the preferences set in the operating system.</choice>
+                    <choice><b>Dark</b>: Uses dark background with white text.</choice>
+                    <choice><b>Light</b>: Uses light grey background with dark text</choice>
+                </choices>
+            </step>
+            <step>
                 <cmd>Click the <uicontrol>Save Settings</uicontrol> button.</cmd>
             </step>
         </steps>
