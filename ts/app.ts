@@ -9,9 +9,9 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
-import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent } from "electron";
+import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent, nativeTheme } from "electron";
 import { execFileSync, spawn } from "child_process";
-import { readFile, writeFile } from "fs";
+import { existsSync, readFileSync, writeFileSync } from "fs";
 
 import { ClientRequest, request, IncomingMessage } from "http";
 const https = require('https');
@@ -20,6 +20,8 @@ app.allowRendererProcessReuse = true;
 
 var mainWindow: BrowserWindow;
 var settings: BrowserWindow;
+var currentTheme: string;
+var defaultTheme: string = 'system';
 let javapath: string;
 var status: string;
 let appHome: string;
@@ -58,7 +60,15 @@ if (process.platform == 'win32') {
 
 const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: app.getAppPath() });
 
-loadDefaults();
+if (!existsSync(appHome + 'defaults.json')) {
+    let defaults: any = {
+        srx: defaultSRX,
+        catalog: defaultCatalog,
+        skeleton: sklFolder,
+        theme: 'system'
+    }
+    writeFileSync(appHome + 'defaults.json', JSON.stringify(defaults));
+}
 
 function stopServer(): void {
     if (!stopping) {
@@ -73,6 +83,7 @@ console.log(ck.toString());
 app.on('ready', () => {
     createWindow();
     createMenu();
+    loadDefaults();
     mainWindow.show();
     // mainWindow.webContents.openDevTools();
 });
@@ -84,6 +95,10 @@ app.on('quit', () => {
 app.on('window-all-closed', function () {
     stopServer();
     app.quit()
+});
+
+nativeTheme.on('updated', () => {
+    loadDefaults();
 });
 
 ipcMain.on('select-source-file', (event) => {
@@ -150,6 +165,14 @@ ipcMain.on('save-defaults', (event, arg) => {
     saveDefaults(arg);
 });
 
+ipcMain.on('get-theme', (event) => {
+    event.sender.send('set-theme', currentTheme);
+});
+
+ipcMain.on('get-defaultTheme', (event) => {
+    event.sender.send('set-defaultTheme', defaultTheme);
+});
+
 
 ipcMain.on('get-version', (event) => {
     getVersion(event);
@@ -205,7 +228,6 @@ function createWindow(): void {
         height: 680,
         maximizable: false,
         show: false,
-        backgroundColor: '#2d2d2e',
         icon: './icons/openxliff.png',
         webPreferences: {
             nodeIntegration: true
@@ -218,39 +240,59 @@ function createWindow(): void {
     mainWindow.loadURL('file://' + app.getAppPath() + '/html/main.html');
 }
 
+
 function saveDefaults(defaults: any): void {
-    writeFile(appHome + 'defaults.json', JSON.stringify(defaults), function () {
-        defaultCatalog = defaults.catalog;
-        sklFolder = defaults.skeleton;
-        defaultSrcLang = defaults.srcLang;
-        defaultTgtLang = defaults.tgtLang;
-        defaultSRX = defaults.srx;
-        settings.close();
-    });
+    writeFileSync(appHome + 'defaults.json', JSON.stringify(defaults));
+    settings.close();
+    loadDefaults();
+    setTheme();
 }
 
 function loadDefaults(): void {
-    readFile(appHome + 'defaults.json', function (err: Error, data: Buffer) {
-        if (err instanceof Error) {
-            return;
+
+    var data: Buffer = readFileSync(appHome + 'defaults.json');
+    var defaults = JSON.parse(data.toString());
+    
+    if (defaults.srx) {
+        defaultSRX = defaults.srx;
+    }
+    if (defaults.skeleton) {
+        sklFolder = defaults.skeleton;
+    }
+    if (defaults.catalog) {
+        defaultCatalog = defaults.catalog;
+    }
+    if (defaults.srcLang) {
+        defaultSrcLang = defaults.srcLang;
+    }
+    if (defaults.tgtLang) {
+        defaultTgtLang = defaults.tgtLang;
+    }
+    if (defaults.theme) {
+        defaultTheme = defaults.theme;
+    }
+
+    if (defaultTheme === 'system') {
+        if (nativeTheme.shouldUseDarkColors) {
+            currentTheme = app.getAppPath() + '/css/dark.css';
+            nativeTheme.themeSource = 'dark';
+        } else {
+            currentTheme = app.getAppPath() + '/css/light.css';
+            nativeTheme.themeSource = 'light';
         }
-        let defaults = JSON.parse(data.toString());
-        if (defaults.srx) {
-            defaultSRX = defaults.srx;
-        }
-        if (defaults.skeleton) {
-            sklFolder = defaults.skeleton;
-        }
-        if (defaults.catalog) {
-            defaultCatalog = defaults.catalog;
-        }
-        if (defaults.srcLang) {
-            defaultSrcLang = defaults.srcLang;
-        }
-        if (defaults.tgtLang) {
-            defaultTgtLang = defaults.tgtLang;
-        }
-    });
+    }
+    if (defaultTheme === 'dark') {
+        currentTheme = app.getAppPath() + '/css/dark.css';
+        nativeTheme.themeSource = 'dark';
+    }
+    if (defaultTheme === 'light') {
+        currentTheme = app.getAppPath() + '/css/light.css';
+        nativeTheme.themeSource = 'light';
+    }
+}
+
+function setTheme(): void {
+    mainWindow.webContents.send('set-theme', currentTheme);
 }
 
 function getLanguages(event: IpcMainEvent): void {
@@ -658,7 +700,6 @@ function showAbout(): void {
         maximizable: false,
         resizable: false,
         show: false,
-        backgroundColor: '#2d2d2e',
         icon: './icons/openxliff.png',
         webPreferences: {
             nodeIntegration: true
@@ -697,12 +738,11 @@ function showSettings(): void {
     settings = new BrowserWindow({
         parent: mainWindow,
         width: 590,
-        height: 190,
+        height: 220,
         minimizable: false,
         maximizable: false,
         resizable: false,
         show: false,
-        backgroundColor: '#2d2d2e',
         icon: './icons/openxliff.png',
         webPreferences: {
             nodeIntegration: true
@@ -712,6 +752,7 @@ function showSettings(): void {
         settings.removeMenu();
     }
     settings.loadURL('file://' + app.getAppPath() + '/html/settings.html');
+    // settings.webContents.openDevTools();
     settings.show();
 }
 

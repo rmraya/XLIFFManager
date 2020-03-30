@@ -15,10 +15,15 @@
  class About {
      constructor() {
         _b.ipcRenderer.send('get-version');
+        _b.ipcRenderer.send('get-theme');
 
         _b.ipcRenderer.on('set-version', (event, arg) => {
             document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
             document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
+        });
+
+        _b.ipcRenderer.on('set-theme', (event, arg) => {
+            (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
      }
 }

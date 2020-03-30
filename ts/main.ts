@@ -20,6 +20,7 @@ class Main {
         ipcRenderer.send('get-languages');
         ipcRenderer.send('get-types');
         ipcRenderer.send('get-charsets');
+        ipcRenderer.send('get-theme');
 
         document.getElementById('helpButton').addEventListener('click', () => { ipcRenderer.send('show-help'); });
         document.getElementById('infoButton').addEventListener('click', () => { ipcRenderer.send('show-about'); });
@@ -37,6 +38,10 @@ class Main {
         document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { ipcRenderer.send('select-xliff-analysis'); });
         document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
 
+        ipcRenderer.on('set-theme', (event, arg) => {
+            (document.getElementById('theme') as HTMLLinkElement).href = arg;
+        });
+        
         ipcRenderer.on('add-source-file', (event, arg) => {
             this.addSourceFile(arg);
         });

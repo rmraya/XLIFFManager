@@ -1,0 +1,205 @@
+/*******************************************************************************
+ * Copyright (c) 2018-2020 Maxprograms.
+ *
+ * This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License 1.0
+ * which accompanies this distribution, and is available at
+ * https://www.eclipse.org/org/documents/epl-v10.html
+ *
+ * Contributors:
+ *     Maxprograms - initial API and implementation
+ *******************************************************************************/
+
+* {
+    font-family: sans-serif;
+}
+
+:root {
+    --background: #bdbdbd;
+    --text-color: #2d2d2e;
+    --title-color: #030597;
+    --button-text: #eeeeee;
+}
+
+svg {
+    fill: var(--text-color);
+    margin-left: 4px;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-color);
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wait {
+    cursor: wait !important;
+}
+
+.panel {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border: none;
+    margin: 0px;
+}
+
+.buttonArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+hr {
+    border-top: 1px solid var(--title-color);
+    margin: 2px;
+}
+
+h1 {
+    color: var(--title-color);
+    font-family: sans-serif;
+    padding: 2px;
+    font-size: 1.1em;
+    font-weight: normal;
+    white-space: nowrap;
+    margin: 3px;
+}
+
+img {
+    border: none;
+    background: var(--background);
+    padding: 0px;
+    margin: 0px;
+    margin-right: 3px;
+}
+
+label {
+    color: var(--text-color);
+    font-family: sans-serif;
+    padding: 3px;
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+p {
+    color: var(--text-color);
+    font-family: sans-serif;
+    font-size: 0.8em;
+}
+
+input [type="text"] {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 2px;
+    padding: 2px;
+    width: 100%;
+}
+
+input.fill {
+    width: 100%;
+    height: 1.4em;
+    border: 1px solid var(--text-color);
+}
+
+select {
+    height: 1.4em;
+    border: 1px solid var(--text-color);
+}
+
+select.fill {
+    width: 100%;
+}
+
+div {
+    margin: 0px;
+    padding: 3px;
+    overflow: auto;
+}
+
+button {
+    padding: 2px;
+    font-family: sans-serif;
+    border: none;
+}
+
+button.dark {
+    background: #0d47a1;
+    color: var(--button-text);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+button:disabled {
+    background: #979593;
+    color: var(--button-text);
+}
+
+button.primary {
+    background: #1e88e5;
+    color: var(--button-text);
+    padding: 5px;
+    margin: 3px;
+    border-radius: 2px;
+}
+
+button.primary:hover {
+    background: #1976d2;
+}
+
+button.dark:hover {
+    background: #1565c0;
+}
+
+button:hover {
+    background: #979593;
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: auto;
+}
+
+table.panel {
+    width: 100%;
+    border: none;
+}
+
+.icon {
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.icon.right {
+    height: 16px;
+    margin-left: 5px;
+    margin-right: 0px;
+    vertical-align: bottom;
+}
+
+
+td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+td.panel.fill {
+    width: 100%;
+}

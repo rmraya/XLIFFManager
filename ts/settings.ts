@@ -19,11 +19,21 @@ class Settings {
         _s.ipcRenderer.send('get-catalog');
         _s.ipcRenderer.send('get-skeleton');
         _s.ipcRenderer.send('get-srx');
+        _s.ipcRenderer.send('get-theme');
+        _s.ipcRenderer.send('get-defaultTheme');
 
         document.getElementById('browseCatalog').addEventListener('click', () => { _s.ipcRenderer.send('select-catalog'); });
         document.getElementById('browseSkeleton').addEventListener('click', () => { _s.ipcRenderer.send('select-skeleton'); });
         document.getElementById('browseSRX').addEventListener('click', () => { _s.ipcRenderer.send('select-srx'); });
         document.getElementById('saveSettings').addEventListener('click', () => { this.saveSettings(); });
+
+        _s.ipcRenderer.on('set-theme', (event, arg) => {
+            (document.getElementById('theme') as HTMLLinkElement).href = arg;
+        });
+
+        _s.ipcRenderer.on('set-defaultTheme', (event, arg) => {
+            (document.getElementById('themeColor') as HTMLSelectElement).value = arg;
+        });
 
         _s.ipcRenderer.on('languages-received', (event, arg) => {
             this.languagesReceived(arg);
@@ -61,7 +71,8 @@ class Settings {
             tgtLang: (document.getElementById('targetSelect') as HTMLSelectElement).value,
             skeleton: (document.getElementById('skeletonFolder') as HTMLInputElement).value,
             catalog: (document.getElementById('defaultCatalog') as HTMLInputElement).value,
-            srx: (document.getElementById('defaultSRX') as HTMLInputElement).value
+            srx: (document.getElementById('defaultSRX') as HTMLInputElement).value,
+            theme: (document.getElementById('themeColor') as HTMLSelectElement).value
         });
     }
 
