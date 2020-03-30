@@ -7,9 +7,9 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && electron .",
-    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager --ignore 'docs' --ignore 'ts' --ignore 'src' .",
-    "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico --ignore 'docs' --ignore 'ts' --ignore 'src' .",
-    "package-linux": "electron-packager --overwrite --icon icons/openxliff.png --ignore 'docs' --ignore 'ts' --ignore 'src' ."
+    "package-mac": "electron-packager --overwrite --darwinDarkModeSupport=true --icon icons/openxliff.icns  --app-bundle-id=com.maxprograms.xliffmanager --ignore 'docs' --ignore 'ts' .",
+    "package-win": "electron-packager --overwrite --icon icons\\openxliff.ico --ignore 'docs' --ignore 'ts' .",
+    "package-linux": "electron-packager --overwrite --icon icons/openxliff.png --ignore 'docs' --ignore 'ts' ."
   },
   "keywords": [
     "xliff",
