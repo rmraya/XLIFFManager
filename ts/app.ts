@@ -84,7 +84,120 @@ app.on('quit', () => {
 app.on('window-all-closed', function () {
     stopServer();
     app.quit()
-})
+});
+
+ipcMain.on('select-source-file', (event) => {
+    selectSourceFile(event);
+});
+
+ipcMain.on('select-xliff-file', (event) => {
+    selectXliffFile(event);
+});
+
+ipcMain.on('convert', (event, arg) => {
+    convert(event, arg);
+});
+
+ipcMain.on('select-xliff-validation', (event) => {
+    selectXliffValidation(event);
+});
+
+ipcMain.on('validate', (event, arg) => {
+    validate(event, arg);
+});
+
+ipcMain.on('select-xliff-analysis', (event) => {
+    selectXliffAnalysis(event);
+});
+
+ipcMain.on('select-ditaval', (event) => {
+    selectDitaval(event);
+});
+
+ipcMain.on('select-target-file', (event) => {
+    selectTargetFile(event);
+});
+
+ipcMain.on('analyse', (event, arg) => {
+    analyse(event, arg);
+});
+
+ipcMain.on('merge', (event, arg) => {
+    merge(event, arg);
+});
+
+ipcMain.on('select-skeleton', (event) => {
+    selectSkeleton(event);
+});
+
+ipcMain.on('select-catalog', (event) => {
+    selectCatalog(event);
+});
+
+ipcMain.on('select-srx', (event) => {
+    selectSrx(event);
+});
+
+ipcMain.on('show-about', () => {
+    showAbout();
+});
+
+ipcMain.on('show-settings', () => {
+    showSettings();
+});
+
+ipcMain.on('save-defaults', (event, arg) => {
+    saveDefaults(arg);
+});
+
+
+ipcMain.on('get-version', (event) => {
+    getVersion(event);
+});
+
+ipcMain.on('get-languages', (event) => {
+    getLanguages(event);
+});
+
+ipcMain.on('get-skeleton', (event) => {
+    event.sender.send('skeleton-received', sklFolder);
+});
+
+ipcMain.on('get-catalog', (event) => {
+    event.sender.send('catalog-received', defaultCatalog);
+});
+
+ipcMain.on('get-srx', (event) => {
+    event.sender.send('srx-received', defaultSRX);
+});
+
+ipcMain.on('get-charsets', (event) => {
+    getCharsets(event);
+});
+
+ipcMain.on('get-types', (event) => {
+    getTypes(event);
+});
+
+ipcMain.on('get-package-languages', (event, arg) => {
+    getPackageLanguages(event, arg);
+});
+
+ipcMain.on('check-updates', (event) => {
+    checkUpdates();
+});
+
+ipcMain.on('show-help', () => {
+    showHelp();
+});
+
+ipcMain.on('show-file', (event, arg) => {
+    shell.openItem(arg.file);
+});
+
+ipcMain.on('show-dialog', (event, arg) => {
+    dialog.showMessageBox(arg);
+});
 
 function createWindow(): void {
     mainWindow = new BrowserWindow({
@@ -104,177 +217,6 @@ function createWindow(): void {
     mainWindow.setMenu(null);
     mainWindow.loadURL('file://' + app.getAppPath() + '/html/main.html');
 }
-
-ipcMain.on('select-source-file', (event, arg) => {
-    dialog.showOpenDialog({
-        properties: ['openFile'],
-        filters: [
-            { name: 'Any File', extensions: ['*'] },
-            { name: 'Adobe InDesign Interchange', extensions: ['inx'] },
-            { name: 'Adobe InDesign IDML', extensions: ['idml'] },
-            { name: 'DITA Map', extensions: ['ditamap', 'dita', 'xml'] },
-            { name: 'HTML Page', extensions: ['html', 'htm'] },
-            { name: 'JavaScript', extensions: ['js'] },
-            { name: 'Java Properties', extensions: ['properties'] },
-            { name: 'MIF (Maker Interchange Format)', extensions: ['mif'] },
-            { name: 'Microsoft Office 2007 Document', extensions: ['docx', 'xlsx', 'pptx'] },
-            { name: 'OpenOffice 1.x Document', extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
-            { name: 'OpenOffice 2.x Document', extensions: ['odt', 'ods', 'odp', 'odg'] },
-            { name: 'Plain Text', extensions: ['txt'] },
-            { name: 'PO (Portable Objects)', extensions: ['po', 'pot'] },
-            { name: 'RC (Windows C/C++ Resources)', extensions: ['rc'] },
-            { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
-            { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
-            { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
-            { name: 'Trados Studio Package', extensions: ['sdlppx'] },
-            { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
-            { name: 'TXML Document', extensions: ['txml'] },
-            { name: 'Visio XML Drawing', extensions: ['vsdx'] },
-            { name: 'WPML XLIFF', extensions: ['xliff'] },
-            { name: 'XML Document', extensions: ['xml'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            getFileType(event, value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-xliff-file', (event, arg) => {
-    dialog.showOpenDialog({
-        properties: ['openFile'],
-        filters: [
-            { name: 'XLIFF File', extensions: ['xlf'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('add-xliff-file', value.filePaths[0]);
-            getTargetFile(event, value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-xliff-validation', (event, arg) => {
-    dialog.showOpenDialog({
-        properties: ['openFile'],
-        filters: [
-            { name: 'XLIFF File', extensions: ['xlf'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('add-xliff-validation', value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-xliff-analysis', (event, arg) => {
-    dialog.showOpenDialog({
-        properties: ['openFile'],
-        filters: [
-            { name: 'XLIFF File', extensions: ['xlf'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('add-xliff-analysis', value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-ditaval', (event, arg) => {
-    dialog.showOpenDialog({
-        properties: ['openFile'],
-        filters: [
-            { name: 'DITAVAL File', extensions: ['ditaval'] },
-            { name: 'Any File', extensions: ['*'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('add-ditaval-file', value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-target-file', (event, arg) => {
-    dialog.showSaveDialog({ title: 'Target File/Folder' }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('add-target-file', value.filePath);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-skeleton', (event, arg) => {
-    dialog.showOpenDialog({
-        title: 'Skeleton Folder',
-        defaultPath: sklFolder,
-        properties: ['openDirectory', 'createDirectory']
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('skeleton-received', value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-catalog', (event, arg) => {
-    dialog.showOpenDialog({
-        title: 'Default Catalog',
-        defaultPath: defaultCatalog,
-        properties: ['openFile'],
-        filters: [
-            { name: 'XML File', extensions: ['xml'] },
-            { name: 'Any File', extensions: ['*'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('catalog-received', value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('select-srx', (event, arg) => {
-    dialog.showOpenDialog({
-        title: 'Default Catalog',
-        defaultPath: defaultCatalog,
-        properties: ['openFile'],
-        filters: [
-            { name: 'SRX File', extensions: ['srx'] },
-            { name: 'Any File', extensions: ['*'] }
-        ]
-    }).then((value) => {
-        if (!value.canceled) {
-            event.sender.send('srx-received', value.filePaths[0]);
-        }
-    }).catch((error) => {
-        console.log(error);
-    });
-});
-
-ipcMain.on('show-about', (event, arg) => {
-    showAbout();
-});
-
-ipcMain.on('show-settings', (event, arg) => {
-    showSettings();
-});
-
-ipcMain.on('save-defaults', (event, arg) => {
-    saveDefaults(arg);
-});
 
 function saveDefaults(defaults: any): void {
     writeFile(appHome + 'defaults.json', JSON.stringify(defaults), function () {
@@ -311,6 +253,267 @@ function loadDefaults(): void {
     });
 }
 
+function getLanguages(event: IpcMainEvent): void {
+    sendRequest({ command: 'getLanguages' },
+        function success(data: any) {
+            data.srcLang = defaultSrcLang;
+            data.tgtLang = defaultTgtLang;
+            event.sender.send('languages-received', data);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function getPackageLanguages(event: IpcMainEvent, arg: any): void {
+    sendRequest(arg,
+        function success(data: any) {
+            event.sender.send('package-languages', data);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function getCharsets(event: IpcMainEvent): void {
+    sendRequest({ command: 'getCharsets' },
+        function success(data: any) {
+            event.sender.send('charsets-received', data);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function getTypes(event: IpcMainEvent): void {
+    sendRequest({ command: 'getTypes' },
+        function success(data: any) {
+            event.sender.send('types-received', data);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function selectSourceFile(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+            { name: 'Any File', extensions: ['*'] },
+            { name: 'Adobe InDesign Interchange', extensions: ['inx'] },
+            { name: 'Adobe InDesign IDML', extensions: ['idml'] },
+            { name: 'DITA Map', extensions: ['ditamap', 'dita', 'xml'] },
+            { name: 'HTML Page', extensions: ['html', 'htm'] },
+            { name: 'JavaScript', extensions: ['js'] },
+            { name: 'Java Properties', extensions: ['properties'] },
+            { name: 'MIF (Maker Interchange Format)', extensions: ['mif'] },
+            { name: 'Microsoft Office 2007 Document', extensions: ['docx', 'xlsx', 'pptx'] },
+            { name: 'OpenOffice 1.x Document', extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
+            { name: 'OpenOffice 2.x Document', extensions: ['odt', 'ods', 'odp', 'odg'] },
+            { name: 'Plain Text', extensions: ['txt'] },
+            { name: 'PO (Portable Objects)', extensions: ['po', 'pot'] },
+            { name: 'RC (Windows C/C++ Resources)', extensions: ['rc'] },
+            { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
+            { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
+            { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
+            { name: 'Trados Studio Package', extensions: ['sdlppx'] },
+            { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
+            { name: 'TXML Document', extensions: ['txml'] },
+            { name: 'Visio XML Drawing', extensions: ['vsdx'] },
+            { name: 'WPML XLIFF', extensions: ['xliff'] },
+            { name: 'XML Document', extensions: ['xml'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            getFileType(event, value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function selectXliffFile(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+            { name: 'XLIFF File', extensions: ['xlf'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-xliff-file', value.filePaths[0]);
+            getTargetFile(event, value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function selectDitaval(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+            { name: 'DITAVAL File', extensions: ['ditaval'] },
+            { name: 'Any File', extensions: ['*'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-ditaval-file', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function convert(event: IpcMainEvent, arg: any): void {
+    arg.sklFolder = sklFolder;
+    arg.catalog = defaultCatalog;
+    arg.srx = defaultSRX;
+    sendRequest(arg,
+        function success(data: any) {
+            event.sender.send('conversion-started');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'conversionResult', 'conversion-completed');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function selectXliffValidation(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+            { name: 'XLIFF File', extensions: ['xlf'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-xliff-validation', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function validate(event: IpcMainEvent, arg: any): void {
+    arg.catalog = defaultCatalog;
+    sendRequest(arg,
+        function success(data: any) {
+            event.sender.send('validation-started', '');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'validationResult', 'validation-result');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function selectTargetFile(event: IpcMainEvent): void {
+    dialog.showSaveDialog({ title: 'Target File/Folder' }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-target-file', value.filePath);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function merge(event: IpcMainEvent, arg: any): void {
+    arg.catalog = defaultCatalog;
+    sendRequest(arg,
+        function success(data: any) {
+            event.sender.send('merge-created');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'mergeResult', 'merge-completed');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
+function selectXliffAnalysis(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        properties: ['openFile'],
+        filters: [
+            { name: 'XLIFF File', extensions: ['xlf'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('add-xliff-analysis', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function analyse(event: IpcMainEvent, arg: any): void {
+    arg.catalog = defaultCatalog;
+    sendRequest(arg,
+        function success(data: any) {
+            event.sender.send('analysis-started');
+            status = 'running';
+            var intervalObject = setInterval(function () {
+                getStatus(data.process);
+                if (status === 'completed') {
+                    getResult(data.process, event, 'analysisResult', 'analysis-completed');
+                    clearInterval(intervalObject);
+                } else if (status === 'running') {
+                    // it's OK, keep waiting
+                } else {
+                    clearInterval(intervalObject);
+                }
+            }, 1000);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
 function getFileType(event: IpcMainEvent, file: string): void {
     sendRequest({ command: 'getFileType', file: file },
         function success(data: any) {
@@ -339,33 +542,6 @@ function getTargetFile(event: IpcMainEvent, file: string): void {
     );
 }
 
-ipcMain.on('convert', (event, arg) => {
-    arg.sklFolder = sklFolder;
-    arg.catalog = defaultCatalog;
-    arg.srx = defaultSRX;
-    sendRequest(arg,
-        function success(data: any) {
-            event.sender.send('conversion-started');
-            status = 'running';
-            var intervalObject = setInterval(function () {
-                getStatus(data.process);
-                if (status === 'completed') {
-                    getResult(data.process, event, 'conversionResult', 'conversion-completed');
-                    clearInterval(intervalObject);
-                } else if (status === 'running') {
-                    // it's OK, keep waiting
-                } else {
-                    clearInterval(intervalObject);
-                }
-            }, 1000);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
 function getStatus(processId: string): void {
     sendRequest({ command: 'status', process: processId },
         function success(data: any) {
@@ -379,32 +555,6 @@ function getStatus(processId: string): void {
     );
 }
 
-ipcMain.on('validate', (event, arg) => {
-    arg.catalog = defaultCatalog;
-    sendRequest(arg,
-        function success(data: any) {
-            event.sender.send('validation-started', '');
-            status = 'running';
-            var intervalObject = setInterval(function () {
-                getStatus(data.process);
-                if (status === 'completed') {
-                    getResult(data.process, event, 'validationResult', 'validation-result');
-                    clearInterval(intervalObject);
-                } else if (status === 'running') {
-                    // it's OK, keep waiting
-                } else {
-                    clearInterval(intervalObject);
-                }
-            }, 1000);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-
-});
-
 function getResult(processId: string, event: IpcMainEvent, command: string, callback: string): void {
     sendRequest({ command: command, process: processId },
         function success(data: any) {
@@ -416,136 +566,6 @@ function getResult(processId: string, event: IpcMainEvent, command: string, call
         }
     );
 }
-
-ipcMain.on('analyse', (event, arg) => {
-    arg.catalog = defaultCatalog;
-    sendRequest(arg,
-        function success(data: any) {
-            event.sender.send('analysis-started');
-            status = 'running';
-            var intervalObject = setInterval(function () {
-                getStatus(data.process);
-                if (status === 'completed') {
-                    getResult(data.process, event, 'analysisResult', 'analysis-completed');
-                    clearInterval(intervalObject);
-                } else if (status === 'running') {
-                    // it's OK, keep waiting
-                } else {
-                    clearInterval(intervalObject);
-                }
-            }, 1000);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('merge', (event, arg) => {
-    arg.catalog = defaultCatalog;
-    sendRequest(arg,
-        function success(data: any) {
-            event.sender.send('merge-created');
-            status = 'running';
-            var intervalObject = setInterval(function () {
-                getStatus(data.process);
-                if (status === 'completed') {
-                    getResult(data.process, event, 'mergeResult', 'merge-completed');
-                    clearInterval(intervalObject);
-                } else if (status === 'running') {
-                    // it's OK, keep waiting
-                } else {
-                    clearInterval(intervalObject);
-                }
-            }, 1000);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('get-version', (event) => {
-    sendRequest({ command: 'version' },
-        function success(data: any) {
-            const jsonPackage = require('../package.json');
-            data.xliffManager = jsonPackage.version;
-            event.sender.send('set-version', data);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('get-languages', (event) => {
-    sendRequest({ command: 'getLanguages' },
-        function success(data: any) {
-            data.srcLang = defaultSrcLang;
-            data.tgtLang = defaultTgtLang;
-            event.sender.send('languages-received', data);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('get-skeleton', (event) => {
-    event.sender.send('skeleton-received', sklFolder);
-});
-
-ipcMain.on('get-catalog', (event) => {
-    event.sender.send('catalog-received', defaultCatalog);
-});
-
-ipcMain.on('get-srx', (event) => {
-    event.sender.send('srx-received', defaultSRX);
-});
-
-ipcMain.on('get-charsets', (event) => {
-    sendRequest({ command: 'getCharsets' },
-        function success(data: any) {
-            event.sender.send('charsets-received', data);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('get-types', (event) => {
-    sendRequest({ command: 'getTypes' },
-        function success(data: any) {
-            event.sender.send('types-received', data);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('get-package-languages', (event, arg) => {
-    sendRequest(arg,
-        function success(data: any) {
-            event.sender.send('package-languages', data);
-        },
-        function error(reason: string) {
-            dialog.showErrorBox('Error', reason);
-            console.log(reason);
-        }
-    );
-});
-
-ipcMain.on('check-updates', (event) => {
-    checkUpdates();
-});
 
 function checkUpdates(): void {
     https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', (res: IncomingMessage) => {
@@ -651,6 +671,20 @@ function showAbout(): void {
     about.show();
 }
 
+function getVersion(event: IpcMainEvent): void {
+    sendRequest({ command: 'version' },
+        function success(data: any) {
+            const jsonPackage = require('../package.json');
+            data.xliffManager = jsonPackage.version;
+            event.sender.send('set-version', data);
+        },
+        function error(reason: string) {
+            dialog.showErrorBox('Error', reason);
+            console.log(reason);
+        }
+    );
+}
+
 function showHelp(): void {
     var help = app.getAppPath() + '/xliffmanager.pdf';
     if (process.platform == 'win32') {
@@ -658,18 +692,6 @@ function showHelp(): void {
     }
     shell.openItem(help);
 }
-
-ipcMain.on('show-help', () => {
-    showHelp();
-});
-
-ipcMain.on('show-file', (event, arg) => {
-    shell.openItem(arg.file);
-});
-
-ipcMain.on('show-dialog', (event, arg) => {
-    dialog.showMessageBox(arg);
-});
 
 function showSettings(): void {
     settings = new BrowserWindow({
@@ -691,6 +713,56 @@ function showSettings(): void {
     }
     settings.loadURL('file://' + app.getAppPath() + '/html/settings.html');
     settings.show();
+}
+
+function selectSrx(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        title: 'Default Catalog',
+        defaultPath: defaultCatalog,
+        properties: ['openFile'],
+        filters: [
+            { name: 'SRX File', extensions: ['srx'] },
+            { name: 'Any File', extensions: ['*'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('srx-received', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function selectCatalog(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        title: 'Default Catalog',
+        defaultPath: defaultCatalog,
+        properties: ['openFile'],
+        filters: [
+            { name: 'XML File', extensions: ['xml'] },
+            { name: 'Any File', extensions: ['*'] }
+        ]
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('catalog-received', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
+}
+
+function selectSkeleton(event: IpcMainEvent): void {
+    dialog.showOpenDialog({
+        title: 'Skeleton Folder',
+        defaultPath: sklFolder,
+        properties: ['openDirectory', 'createDirectory']
+    }).then((value) => {
+        if (!value.canceled) {
+            event.sender.send('skeleton-received', value.filePaths[0]);
+        }
+    }).catch((error) => {
+        console.log(error);
+    });
 }
 
 function releaseHistory(): void {
