@@ -249,7 +249,6 @@ function saveDefaults(defaults: any): void {
 }
 
 function loadDefaults(): void {
-
     var data: Buffer = readFileSync(appHome + 'defaults.json');
     var defaults = JSON.parse(data.toString());
     

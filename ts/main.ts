@@ -79,15 +79,15 @@ class Main {
         });
 
         ipcRenderer.on('conversion-started', () => {
-            document.getElementById('process').innerHTML = '<img src="img/working.gif"/>';
+            document.getElementById('process').innerHTML = '<img src="../img/working.gif"/>';
         });
 
         ipcRenderer.on('validation-started', () => {
-            document.getElementById('validation').innerHTML = '<img src="img/working.gif"/>';
+            document.getElementById('validation').innerHTML = '<img src="../img/working.gif"/>';
         });
 
         ipcRenderer.on('analysis-started', () => {
-            document.getElementById('analysis').innerHTML = '<img src="img/working.gif"/>';
+            document.getElementById('analysis').innerHTML = '<img src="../img/working.gif"/>';
         });
 
         ipcRenderer.on('analysis-completed', (event, arg) => {
@@ -103,7 +103,7 @@ class Main {
         });
 
         ipcRenderer.on('merge-created', () => {
-            document.getElementById('merge').innerHTML = '<img src="img/working.gif"/>';
+            document.getElementById('merge').innerHTML = '<img src="../img/working.gif"/>';
         });
 
         ipcRenderer.on('merge-completed', (event, arg) => {
