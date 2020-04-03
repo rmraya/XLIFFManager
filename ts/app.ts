@@ -11,7 +11,7 @@
  *******************************************************************************/
 import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent, nativeTheme } from "electron";
 import { execFileSync, spawn } from "child_process";
-import { existsSync, readFileSync, writeFileSync } from "fs";
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from "fs";
 
 import { ClientRequest, request, IncomingMessage } from "http";
 const https = require('https');
@@ -61,6 +61,7 @@ if (process.platform == 'win32') {
 const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: app.getAppPath() });
 
 if (!existsSync(appHome + 'defaults.json')) {
+    mkdirSync(appHome);
     let defaults: any = {
         srx: defaultSRX,
         catalog: defaultCatalog,
