@@ -46,6 +46,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - OpenOffice / LibreOffice / StarOffice
   - Plain Text
   - SDLXLIFF (Trados Studio)
+  - Trados Studio packages
   - TXML (GlobalLink/Wordfast PRO)
   - WPML XLIFF (WordPress Multilingual Plugin)
 - **XML Formats**
