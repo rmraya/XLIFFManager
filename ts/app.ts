@@ -59,9 +59,10 @@ if (process.platform == 'win32') {
 }
 
 const ls = spawn(javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer'], { cwd: app.getAppPath() });
-
-if (!existsSync(appHome + 'defaults.json')) {
+if (!existsSync(appHome)) {
     mkdirSync(appHome);
+}
+if (!existsSync(appHome + 'defaults.json')) {
     let defaults: any = {
         srx: defaultSRX,
         catalog: defaultCatalog,
