@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.0.1 | Updated libraries used in binaries | April 17, 2020
 2.0.0 | Added light & dark themes; implemented support for Trados Studio packages | April 3, 2020
 1.8.0 | Migrated source code to TypeScript | January 28, 2020
 1.7.0 | Major code cleanup; Changed segmentation model for XLIFF 2.0 | January 1, 2020
@@ -72,13 +73,14 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 
 ## Building & running
 
-Requirements: 
-- [node.js](https://nodejs.org) 12.10.0 or newer
-- [TypeScript](https://www.typescriptlang.org) 3.7.5 or newer
+Requirements:
 
-Building: 
+- [node.js](https://nodejs.org) 12.13.0 or newer
+- [TypeScript](https://www.typescriptlang.org) 3.8.3 or newer
+
+Building:
 
 - Checkout this repository.
-- Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from https://www.maxprograms.com ).
+- Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from [https://www.maxprograms.com](https://www.maxprograms.com)).
 - Run `npm install`
 - Finally, run `npm start`
