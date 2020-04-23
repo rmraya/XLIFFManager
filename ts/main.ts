@@ -41,7 +41,7 @@ class Main {
         ipcRenderer.on('set-theme', (event, arg) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
-        
+
         ipcRenderer.on('add-source-file', (event, arg) => {
             this.addSourceFile(arg);
         });
@@ -130,6 +130,10 @@ class Main {
     addSourceFile(arg: any): void {
         (document.getElementById('sourceFile') as HTMLInputElement).value = arg.file;
         var type = arg.type;
+        if (type === 'XLIFF') {
+            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Selected file is already an XLIFF document' });
+            return;
+        }
         if (type !== 'Unknown') {
             (document.getElementById('typeSelect') as HTMLSelectElement).value = type;
             if ('DITA' === type) {
