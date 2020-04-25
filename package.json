@@ -1,7 +1,7 @@
 {
   "name": "xliffmanager",
   "productName": "XLIFF Manager",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "XLIFF Manager",
   "main": "js/app.js",
   "scripts": {
