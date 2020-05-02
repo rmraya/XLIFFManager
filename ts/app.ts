@@ -759,7 +759,7 @@ function showSettings(): void {
 
 function selectSrx(event: IpcMainEvent): void {
     dialog.showOpenDialog({
-        title: 'Default Catalog',
+        title: 'Default SRX File',
         defaultPath: defaultCatalog,
         properties: ['openFile'],
         filters: [
