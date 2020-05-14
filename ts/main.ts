@@ -10,111 +10,111 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
-const { ipcRenderer } = require('electron');
 
 class Main {
 
+    electron  = require('electron');
     languagesChanged: boolean = false;
 
     constructor() {
-        ipcRenderer.send('get-languages');
-        ipcRenderer.send('get-types');
-        ipcRenderer.send('get-charsets');
-        ipcRenderer.send('get-theme');
+        this.electron.ipcRenderer.send('get-languages');
+        this.electron.ipcRenderer.send('get-types');
+        this.electron.ipcRenderer.send('get-charsets');
+        this.electron.ipcRenderer.send('get-theme');
 
-        document.getElementById('helpButton').addEventListener('click', () => { ipcRenderer.send('show-help'); });
-        document.getElementById('infoButton').addEventListener('click', () => { ipcRenderer.send('show-about'); });
-        document.getElementById('updatesButton').addEventListener('click', () => { ipcRenderer.send('check-updates'); });
-        document.getElementById('settingsButton').addEventListener('click', () => { ipcRenderer.send('show-settings'); });
-        document.getElementById('browseSource').addEventListener('click', () => { ipcRenderer.send('select-source-file'); });
+        document.getElementById('helpButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-help'); });
+        document.getElementById('infoButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
+        document.getElementById('updatesButton').addEventListener('click', () => { this.electron.ipcRenderer.send('check-updates'); });
+        document.getElementById('settingsButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-settings'); });
+        document.getElementById('browseSource').addEventListener('click', () => { this.electron.ipcRenderer.send('select-source-file'); });
         document.getElementById('typeSelect').addEventListener('change', () => { this.typeChanged(); });
-        document.getElementById('browseDitaVal').addEventListener('click', () => { ipcRenderer.send('select-ditaval'); });
+        document.getElementById('browseDitaVal').addEventListener('click', () => { this.electron.ipcRenderer.send('select-ditaval'); });
         document.getElementById('createXLIFF').addEventListener('click', () => { this.createXLIFF(); });
-        document.getElementById('browseXLIFF').addEventListener('click', () => { ipcRenderer.send('select-xliff-file'); });
-        document.getElementById('browseTarget').addEventListener('click', () => { ipcRenderer.send('select-target-file'); });
+        document.getElementById('browseXLIFF').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-file'); });
+        document.getElementById('browseTarget').addEventListener('click', () => { this.electron.ipcRenderer.send('select-target-file'); });
         document.getElementById('mergeXLIFF').addEventListener('click', () => { this.mergeXLIFF(); });
-        document.getElementById('browseXLIFFValidation').addEventListener('click', () => { ipcRenderer.send('select-xliff-validation'); });
+        document.getElementById('browseXLIFFValidation').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-validation'); });
         document.getElementById('validateButton').addEventListener('click', () => { this.validate(); });
-        document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { ipcRenderer.send('select-xliff-analysis'); });
+        document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
         document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
 
-        ipcRenderer.on('set-theme', (event, arg) => {
+        this.electron.ipcRenderer.on('set-theme', (event, arg) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
 
-        ipcRenderer.on('add-source-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-source-file', (event, arg) => {
             this.addSourceFile(arg);
         });
 
-        ipcRenderer.on('package-languages', (event, arg) => {
+        this.electron.ipcRenderer.on('package-languages', (event, arg) => {
             this.packageLanguages(arg);
         });
 
-        ipcRenderer.on('add-xliff-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-xliff-file', (event, arg) => {
             (document.getElementById('xliffFile') as HTMLInputElement).value = arg;
         });
 
-        ipcRenderer.on('add-xliff-validation', (event, arg) => {
+        this.electron.ipcRenderer.on('add-xliff-validation', (event, arg) => {
             (document.getElementById('xliffFileValidation') as HTMLInputElement).value = arg;
         });
 
-        ipcRenderer.on('add-xliff-analysis', (event, arg) => {
+        this.electron.ipcRenderer.on('add-xliff-analysis', (event, arg) => {
             (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value = arg;
         });
 
-        ipcRenderer.on('add-target-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-target-file', (event, arg) => {
             (document.getElementById('targetFile') as HTMLInputElement).value = arg;
         });
 
-        ipcRenderer.on('languages-received', (event, arg) => {
+        this.electron.ipcRenderer.on('languages-received', (event, arg) => {
             this.languagesReceived(arg);
         });
 
-        ipcRenderer.on('charsets-received', (event, arg) => {
+        this.electron.ipcRenderer.on('charsets-received', (event, arg) => {
             this.charsetsReceived(arg);
         });
 
-        ipcRenderer.on('types-received', (event, arg) => {
+        this.electron.ipcRenderer.on('types-received', (event, arg) => {
             this.typesReceived(arg);
         });
 
-        ipcRenderer.on('conversion-started', () => {
+        this.electron.ipcRenderer.on('conversion-started', () => {
             document.getElementById('process').innerHTML = '<img src="../img/working.gif"/>';
         });
 
-        ipcRenderer.on('validation-started', () => {
+        this.electron.ipcRenderer.on('validation-started', () => {
             document.getElementById('validation').innerHTML = '<img src="../img/working.gif"/>';
         });
 
-        ipcRenderer.on('analysis-started', () => {
+        this.electron.ipcRenderer.on('analysis-started', () => {
             document.getElementById('analysis').innerHTML = '<img src="../img/working.gif"/>';
         });
 
-        ipcRenderer.on('analysis-completed', (event, arg) => {
+        this.electron.ipcRenderer.on('analysis-completed', (event, arg) => {
             this.analysisCompleted(arg);
         });
 
-        ipcRenderer.on('validation-result', (event, arg) => {
+        this.electron.ipcRenderer.on('validation-result', (event, arg) => {
             this.validationResult(arg);
         });
 
-        ipcRenderer.on('conversion-completed', (event, arg) => {
+        this.electron.ipcRenderer.on('conversion-completed', (event, arg) => {
             this.conversionCompleted(arg);
         });
 
-        ipcRenderer.on('merge-created', () => {
+        this.electron.ipcRenderer.on('merge-created', () => {
             document.getElementById('merge').innerHTML = '<img src="../img/working.gif"/>';
         });
 
-        ipcRenderer.on('merge-completed', (event, arg) => {
+        this.electron.ipcRenderer.on('merge-completed', (event, arg) => {
             this.mergeCompleted(arg);
         });
 
-        ipcRenderer.on('show-error', (event, arg) => {
+        this.electron.ipcRenderer.on('show-error', (event, arg) => {
             this.showError(arg);
         });
 
-        ipcRenderer.on('add-ditaval-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-ditaval-file', (event, arg) => {
             (document.getElementById('ditavalFile') as HTMLInputElement).value = arg;
         });
     }
@@ -131,7 +131,7 @@ class Main {
         (document.getElementById('sourceFile') as HTMLInputElement).value = arg.file;
         var type = arg.type;
         if (type === 'XLIFF') {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Selected file is already an XLIFF document' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Selected file is already an XLIFF document' });
             return;
         }
         if (type !== 'Unknown') {
@@ -142,10 +142,10 @@ class Main {
                 this.disableDitaVal();
             }
             if ('SDLPPX' === type) {
-                ipcRenderer.send('get-package-languages', { command: 'getPackageLangs', package: arg.file });
+                this.electron.ipcRenderer.send('get-package-languages', { command: 'getPackageLangs', package: arg.file });
             } else {
                 if (this.languagesChanged) {
-                    ipcRenderer.send('get-languages');
+                    this.electron.ipcRenderer.send('get-languages');
                 }
             }
         }
@@ -158,22 +158,22 @@ class Main {
     createXLIFF(): void {
         var sourceFile = (document.getElementById('sourceFile') as HTMLInputElement).value;
         if (!sourceFile) {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source file' });
             return;
         }
         var sourceLang = (document.getElementById('sourceSelect') as HTMLSelectElement).value;
         if (sourceLang === 'none') {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source language' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source language' });
             return;
         }
         var fileType = (document.getElementById('typeSelect') as HTMLSelectElement).value;
         if (fileType === 'none') {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select file type' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select file type' });
             return;
         }
         var charset = (document.getElementById('charsetSelect') as HTMLSelectElement).value;
         if (charset === 'none') {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select character set' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select character set' });
             return;
         }
         var args: any = { command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset };
@@ -201,37 +201,37 @@ class Main {
             args.embed = true;
         }
         this.startWaiting();
-        ipcRenderer.send('convert', args);
+        this.electron.ipcRenderer.send('convert', args);
     }
 
     conversionCompleted(arg: any): any {
         this.endWaiting();
         document.getElementById('process').innerHTML = '';
         if (arg.result === 'Success') {
-            ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file created' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file created' });
         } else {
-            ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
     }
 
     validate(): void {
         var xliffFile = (document.getElementById('xliffFileValidation') as HTMLInputElement).value;
         if (!xliffFile) {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
             return;
         }
         var args = { command: 'validateXliff', file: xliffFile };
         this.startWaiting();
-        ipcRenderer.send('validate', args);
+        this.electron.ipcRenderer.send('validate', args);
     }
 
     validationResult(arg: any): void {
         this.endWaiting();
         document.getElementById('validation').innerHTML = '';
         if (arg.valid) {
-            ipcRenderer.send('show-dialog', { type: 'info', message: arg.comment });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', message: arg.comment });
         } else {
-            ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
     }
 
@@ -239,28 +239,28 @@ class Main {
         document.getElementById('process').innerHTML = '';
         document.getElementById('merge').innerHTML = '';
         document.getElementById('validation').innerHTML = '';
-        ipcRenderer.send('show-dialog', { type: 'error', message: arg });
+        this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg });
     }
 
     analyse(): void {
         var xliffFile = (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value;
         if (!xliffFile) {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
             return;
         }
         var args = { command: 'analyseXliff', file: xliffFile };
         this.startWaiting();
-        ipcRenderer.send('analyse', args);
+        this.electron.ipcRenderer.send('analyse', args);
     }
 
     analysisCompleted(arg: any): void {
         this.endWaiting();
         document.getElementById('analysis').innerHTML = '';
         if (arg.result === 'Success') {
-            ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'Analysis completed' });
-            ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'Analysis completed' });
+            this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
         } else {
-            ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
     }
 
@@ -294,7 +294,7 @@ class Main {
 
     packageLanguages(arg: any): any {
         if (arg.reason) {
-            ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
             (document.getElementById('typeSelect') as HTMLSelectElement).value = 'none';
             return;
         }
@@ -340,12 +340,12 @@ class Main {
     mergeXLIFF(): void {
         var xliffFile = (document.getElementById('xliffFile') as HTMLInputElement).value;
         if (!xliffFile) {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
             return;
         }
         var targetFile = (document.getElementById('targetFile') as HTMLInputElement).value;
         if (!targetFile) {
-            ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select target file/folder' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select target file/folder' });
             return;
         }
         var args: any = { command: 'merge', xliff: xliffFile, target: targetFile };
@@ -358,19 +358,19 @@ class Main {
             args.exportTmx = true;
         }
         this.startWaiting();
-        ipcRenderer.send('merge', args);
+        this.electron.ipcRenderer.send('merge', args);
     }
 
     mergeCompleted(arg: any): void {
         this.endWaiting();
         document.getElementById('merge').innerHTML = '';
         if (arg.result === 'Success') {
-            ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file merged' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file merged' });
             if ((document.getElementById('openTranslated') as HTMLInputElement).checked) {
-                ipcRenderer.send('show-file', { file: (document.getElementById('targetFile') as HTMLInputElement).value });
+                this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('targetFile') as HTMLInputElement).value });
             }
         } else {
-            ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
     }
 
