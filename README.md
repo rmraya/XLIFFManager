@@ -77,7 +77,7 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 Requirements:
 
 - [node.js](https://nodejs.org) 12.13.0 or newer
-- [TypeScript](https://www.typescriptlang.org) 3.8.3 or newer
+- [TypeScript](https://www.typescriptlang.org) 3.9.2 or newer
 
 Building:
 
