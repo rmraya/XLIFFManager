@@ -19,12 +19,12 @@ class About {
         this.electron.ipcRenderer.send('get-version');
         this.electron.ipcRenderer.send('get-theme');
 
-        this.electron.ipcRenderer.on('set-version', (event, arg) => {
+        this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
             document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
             document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
         });
 
-        this.electron.ipcRenderer.on('set-theme', (event, arg) => {
+        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
     }

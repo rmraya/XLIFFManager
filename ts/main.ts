@@ -38,43 +38,43 @@ class Main {
         document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
         document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
 
-        this.electron.ipcRenderer.on('set-theme', (event, arg) => {
+        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
 
-        this.electron.ipcRenderer.on('add-source-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
         });
 
-        this.electron.ipcRenderer.on('package-languages', (event, arg) => {
+        this.electron.ipcRenderer.on('package-languages', (event: Electron.IpcRendererEvent, arg: any) => {
             this.packageLanguages(arg);
         });
 
-        this.electron.ipcRenderer.on('add-xliff-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-xliff-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('xliffFile') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('add-xliff-validation', (event, arg) => {
+        this.electron.ipcRenderer.on('add-xliff-validation', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('xliffFileValidation') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('add-xliff-analysis', (event, arg) => {
+        this.electron.ipcRenderer.on('add-xliff-analysis', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('add-target-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-target-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('targetFile') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('languages-received', (event, arg) => {
+        this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.languagesReceived(arg);
         });
 
-        this.electron.ipcRenderer.on('charsets-received', (event, arg) => {
+        this.electron.ipcRenderer.on('charsets-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.charsetsReceived(arg);
         });
 
-        this.electron.ipcRenderer.on('types-received', (event, arg) => {
+        this.electron.ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.typesReceived(arg);
         });
 
@@ -90,15 +90,15 @@ class Main {
             document.getElementById('analysis').innerHTML = '<img src="../img/working.gif"/>';
         });
 
-        this.electron.ipcRenderer.on('analysis-completed', (event, arg) => {
+        this.electron.ipcRenderer.on('analysis-completed', (event: Electron.IpcRendererEvent, arg: any) => {
             this.analysisCompleted(arg);
         });
 
-        this.electron.ipcRenderer.on('validation-result', (event, arg) => {
+        this.electron.ipcRenderer.on('validation-result', (event: Electron.IpcRendererEvent, arg: any) => {
             this.validationResult(arg);
         });
 
-        this.electron.ipcRenderer.on('conversion-completed', (event, arg) => {
+        this.electron.ipcRenderer.on('conversion-completed', (event: Electron.IpcRendererEvent, arg: any) => {
             this.conversionCompleted(arg);
         });
 
@@ -106,15 +106,15 @@ class Main {
             document.getElementById('merge').innerHTML = '<img src="../img/working.gif"/>';
         });
 
-        this.electron.ipcRenderer.on('merge-completed', (event, arg) => {
+        this.electron.ipcRenderer.on('merge-completed', (event: Electron.IpcRendererEvent, arg: any) => {
             this.mergeCompleted(arg);
         });
 
-        this.electron.ipcRenderer.on('show-error', (event, arg) => {
+        this.electron.ipcRenderer.on('show-error', (event: Electron.IpcRendererEvent, arg: any) => {
             this.showError(arg);
         });
 
-        this.electron.ipcRenderer.on('add-ditaval-file', (event, arg) => {
+        this.electron.ipcRenderer.on('add-ditaval-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('ditavalFile') as HTMLInputElement).value = arg;
         });
     }
@@ -384,7 +384,6 @@ class Main {
         (document.getElementById('ditavalFile') as HTMLInputElement).value = '';
         (document.getElementById('ditavalFile') as HTMLInputElement).disabled = true;
     }
-
 }
 
 new Main();

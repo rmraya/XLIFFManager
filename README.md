@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.2.0 | Upgraded OpenXLIFF, TypeScript and Electron | June 12, 2020
 2.1.0 | Improved entity resolution in catalog manager; added XInclude to default XML catalog | April 25, 2020
 2.0.1 | Updated libraries used in binaries | April 17, 2020
 2.0.0 | Added light & dark themes; implemented support for Trados Studio packages | April 3, 2020
@@ -77,7 +78,7 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 Requirements:
 
 - [node.js](https://nodejs.org) 12.13.0 or newer
-- [TypeScript](https://www.typescriptlang.org) 3.9.2 or newer
+- [TypeScript](https://www.typescriptlang.org) 3.9.5 or newer
 
 Building:
 

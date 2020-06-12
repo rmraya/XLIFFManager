@@ -28,27 +28,27 @@ class Settings {
         document.getElementById('browseSRX').addEventListener('click', () => { this.electron.ipcRenderer.send('select-srx'); });
         document.getElementById('saveSettings').addEventListener('click', () => { this.saveSettings(); });
 
-        this.electron.ipcRenderer.on('set-theme', (event, arg) => {
+        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
 
-        this.electron.ipcRenderer.on('set-defaultTheme', (event, arg) => {
+        this.electron.ipcRenderer.on('set-defaultTheme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('themeColor') as HTMLSelectElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('languages-received', (event, arg) => {
+        this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.languagesReceived(arg);
         });
 
-        this.electron.ipcRenderer.on('skeleton-received', (event, arg) => {
+        this.electron.ipcRenderer.on('skeleton-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('skeletonFolder') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('catalog-received', (event, arg) => {
+        this.electron.ipcRenderer.on('catalog-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('defaultCatalog') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('srx-received', (event, arg) => {
+        this.electron.ipcRenderer.on('srx-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('defaultSRX') as HTMLInputElement).value = arg;
         });
     }
