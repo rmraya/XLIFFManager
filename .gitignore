@@ -20,3 +20,4 @@
 sonar-project.properties
 sonarqube.sh
 package-lock.json
+build.xml
