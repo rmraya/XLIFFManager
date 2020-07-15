@@ -22,7 +22,7 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^9.0.3",
-    "typescript": "^3.9.5"
+    "electron": "^9.1.0",
+    "typescript": "^3.9.6"
   }
 }
