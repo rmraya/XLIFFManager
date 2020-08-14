@@ -9,7 +9,7 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
-import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent, nativeTheme } from "electron";
+import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent, nativeTheme, Rectangle } from "electron";
 import { execFileSync, spawn, ChildProcessWithoutNullStreams } from "child_process";
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "fs";
 import { ClientRequest, request, IncomingMessage } from "http";
@@ -20,7 +20,8 @@ class App {
     static path = require('path');
 
     static mainWindow: BrowserWindow;
-    static settings: BrowserWindow;
+    static settingsWindow: BrowserWindow;
+    static aboutWindow: BrowserWindow;
     static currentTheme: string;
     static defaultTheme: string = 'system';
     static appIcon: string;
@@ -33,6 +34,8 @@ class App {
     static defaultsFile: string;
     static defaultSrcLang: string = 'none';
     static defaultTgtLang: string = 'none';
+
+    verticalPadding: number = 48;
 
     ls: ChildProcessWithoutNullStreams;
     stopping: boolean;
@@ -82,7 +85,8 @@ class App {
             this.createWindow();
             this.createMenu();
             this.loadDefaults();
-            App.mainWindow.once('ready-to-show', () => {
+            App.mainWindow.once('ready-to-show', (event: IpcMainEvent) => {
+                event.sender.send('get-height');
                 App.mainWindow.show();
                 App.checkUpdates(true);
             });
@@ -99,6 +103,35 @@ class App {
 
         nativeTheme.on('updated', () => {
             this.loadDefaults();
+        });
+
+        nativeTheme.on('updated', () => {
+            if (App.defaultTheme === 'system') {
+                if (nativeTheme.shouldUseDarkColors) {
+                    App.currentTheme = App.path.join(app.getAppPath(), 'css', 'dark.css');
+                } else {
+                    App.currentTheme = App.path.join(app.getAppPath(), 'css', 'light.css');
+                }
+                App.mainWindow.webContents.send('set-theme', App.currentTheme);
+            }
+        });
+
+        ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
+            let rect: Rectangle = App.mainWindow.getBounds();
+            rect.height = arg.height + this.verticalPadding + 16;
+            App.mainWindow.setBounds(rect);
+        });
+
+        ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
+            let rect: Rectangle = App.aboutWindow.getBounds();
+            rect.height = arg.height + this.verticalPadding;
+            App.aboutWindow.setBounds(rect);
+        });
+
+        ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
+            let rect: Rectangle = App.settingsWindow.getBounds();
+            rect.height = arg.height + this.verticalPadding;
+            App.settingsWindow.setBounds(rect);
         });
 
         ipcMain.on('select-source-file', (event) => {
@@ -249,7 +282,7 @@ class App {
 
     saveDefaults(defaults: any): void {
         writeFileSync(App.defaultsFile, JSON.stringify(defaults));
-        App.settings.close();
+        App.settingsWindow.close();
         this.loadDefaults();
         this.setTheme();
     }
@@ -702,7 +735,7 @@ class App {
     }
 
     static showAbout(): void {
-        var about = new BrowserWindow({
+        App.aboutWindow = new BrowserWindow({
             parent: App.mainWindow,
             width: 270,
             height: 320,
@@ -715,12 +748,11 @@ class App {
                 nodeIntegration: true
             }
         });
-        if (process.platform !== 'darwin') {
-            about.removeMenu();
-        }
-        about.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
-        about.on('ready-to-show', () => {
-            about.show();
+        App.aboutWindow.setMenu(null);
+        App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
+        App.aboutWindow.on('ready-to-show', (event: IpcMainEvent) => {
+            event.sender.send('get-height');
+            App.aboutWindow.show();
         });
     }
 
@@ -746,7 +778,7 @@ class App {
     }
 
     static showSettings(): void {
-        App.settings = new BrowserWindow({
+        App.settingsWindow = new BrowserWindow({
             parent: App.mainWindow,
             width: 590,
             height: 220,
@@ -759,13 +791,11 @@ class App {
                 nodeIntegration: true
             }
         });
-        if (process.platform !== 'darwin') {
-            App.settings.removeMenu();
-        }
-
-        App.settings.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
-        App.settings.on('ready-to-show', () => {
-            App.settings.show();
+        App.settingsWindow.setMenu(null);
+        App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
+        App.settingsWindow.on('ready-to-show', (event: IpcMainEvent) => {
+            event.sender.send('get-height');
+            App.settingsWindow.show();
         });
     }
 
