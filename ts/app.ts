@@ -35,7 +35,9 @@ class App {
     static defaultSrcLang: string = 'none';
     static defaultTgtLang: string = 'none';
 
-    verticalPadding: number = 60;
+    mainPadding: number = 48;
+    settingsPadding: number = 28;
+    aboutPadding: number = 40;
 
     ls: ChildProcessWithoutNullStreams;
     stopping: boolean;
@@ -58,12 +60,19 @@ class App {
         App.defaultCatalog = App.path.join(app.getAppPath(), 'catalog', 'catalog.xml');
         App.sklFolder = App.path.join(app.getPath('appData'), app.name, 'skl');
         App.defaultsFile = App.path.join(app.getPath('appData'), app.name, 'defaults.json');
-        if (process.platform == 'win32') {
+        if (process.platform === 'win32') {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
+            this.mainPadding = 80;
+            this.settingsPadding = 52;
+            this.aboutPadding = 60;
         } else {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
         }
-
+        if (process.platform === 'darwin') {
+            this.mainPadding = 48;
+            this.settingsPadding = 40;
+            this.aboutPadding = 52;
+        }
         if (!existsSync(App.appHome)) {
             mkdirSync(App.appHome);
         }
@@ -118,19 +127,19 @@ class App {
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
             let rect: Rectangle = App.mainWindow.getBounds();
-            rect.height = arg.height + this.verticalPadding + 20;
+            rect.height = arg.height + this.mainPadding;
             App.mainWindow.setBounds(rect);
         });
 
         ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
             let rect: Rectangle = App.aboutWindow.getBounds();
-            rect.height = arg.height + this.verticalPadding;
+            rect.height = arg.height + this.aboutPadding;
             App.aboutWindow.setBounds(rect);
         });
 
         ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
             let rect: Rectangle = App.settingsWindow.getBounds();
-            rect.height = arg.height + this.verticalPadding;
+            rect.height = arg.height + this.settingsPadding;
             App.settingsWindow.setBounds(rect);
         });
 
@@ -718,7 +727,7 @@ class App {
             template.unshift(new MenuItem({ label: '&File', submenu: fileMenu }));
         }
 
-        if (process.platform == 'win32') {
+        if (process.platform === 'win32') {
             template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit() } }));
             template[1].submenu.append(new MenuItem({ type: 'separator' }));
             template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout() } }));
