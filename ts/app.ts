@@ -9,10 +9,10 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
-import { app, ipcMain, BrowserWindow, dialog, Menu, shell, MenuItem, IpcMainEvent, nativeTheme, Rectangle } from "electron";
-import { execFileSync, spawn, ChildProcessWithoutNullStreams } from "child_process";
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from "fs";
-import { ClientRequest, request, IncomingMessage } from "http";
+import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
+import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell } from "electron";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
+import { ClientRequest, IncomingMessage, request } from "http";
 
 class App {
 
@@ -35,7 +35,7 @@ class App {
     static defaultSrcLang: string = 'none';
     static defaultTgtLang: string = 'none';
 
-    verticalPadding: number = 48;
+    verticalPadding: number = 60;
 
     ls: ChildProcessWithoutNullStreams;
     stopping: boolean;
@@ -118,7 +118,7 @@ class App {
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
             let rect: Rectangle = App.mainWindow.getBounds();
-            rect.height = arg.height + this.verticalPadding + 16;
+            rect.height = arg.height + this.verticalPadding + 20;
             App.mainWindow.setBounds(rect);
         });
 
@@ -268,8 +268,7 @@ class App {
 
     createWindow(): void {
         App.mainWindow = new BrowserWindow({
-            width: 580,
-            height: 700,
+            width: 620,
             maximizable: false,
             show: false,
             icon: App.appIcon,
@@ -694,7 +693,7 @@ class App {
             { label: 'View Release History', click: () => { App.releaseHistory() } }
         ]);
         var template: MenuItem[] = [
-            new MenuItem({ label: 'Help', role: 'help', submenu: helpMenu })
+            new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
         ];
 
         if (process.platform === 'darwin') {
@@ -716,7 +715,7 @@ class App {
                 { label: 'Settings', click: () => { App.showSettings() } },
                 { type: 'separator' }
             ]);
-            template.unshift(new MenuItem({ label: 'File', submenu: fileMenu }));
+            template.unshift(new MenuItem({ label: '&File', submenu: fileMenu }));
         }
 
         if (process.platform == 'win32') {
@@ -737,8 +736,7 @@ class App {
     static showAbout(): void {
         App.aboutWindow = new BrowserWindow({
             parent: App.mainWindow,
-            width: 270,
-            height: 320,
+            width: 320,
             minimizable: false,
             maximizable: false,
             resizable: false,
@@ -750,7 +748,7 @@ class App {
         });
         App.aboutWindow.setMenu(null);
         App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
-        App.aboutWindow.on('ready-to-show', (event: IpcMainEvent) => {
+        App.aboutWindow.once('ready-to-show', (event: IpcMainEvent) => {
             event.sender.send('get-height');
             App.aboutWindow.show();
         });
@@ -780,8 +778,7 @@ class App {
     static showSettings(): void {
         App.settingsWindow = new BrowserWindow({
             parent: App.mainWindow,
-            width: 590,
-            height: 220,
+            width: 640,
             minimizable: false,
             maximizable: false,
             resizable: false,
@@ -793,7 +790,7 @@ class App {
         });
         App.settingsWindow.setMenu(null);
         App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
-        App.settingsWindow.on('ready-to-show', (event: IpcMainEvent) => {
+        App.settingsWindow.once('ready-to-show', (event: IpcMainEvent) => {
             event.sender.send('get-height');
             App.settingsWindow.show();
         });

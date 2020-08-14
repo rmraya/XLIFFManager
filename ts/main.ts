@@ -84,15 +84,15 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('conversion-started', () => {
-            document.getElementById('process').innerHTML = '<img src="../img/working.gif"/>';
+            this.setStatus('Conversion started');
         });
 
         this.electron.ipcRenderer.on('validation-started', () => {
-            document.getElementById('validation').innerHTML = '<img src="../img/working.gif"/>';
+            this.setStatus('Validation started');
         });
 
         this.electron.ipcRenderer.on('analysis-started', () => {
-            document.getElementById('analysis').innerHTML = '<img src="../img/working.gif"/>';
+            this.setStatus('Analysys started');
         });
 
         this.electron.ipcRenderer.on('analysis-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -108,7 +108,7 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('merge-created', () => {
-            document.getElementById('merge').innerHTML = '<img src="../img/working.gif"/>';
+            this.setStatus('Merge started');
         });
 
         this.electron.ipcRenderer.on('merge-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -211,7 +211,7 @@ class Main {
 
     conversionCompleted(arg: any): any {
         this.endWaiting();
-        document.getElementById('process').innerHTML = '';
+        this.setStatus('');
         if (arg.result === 'Success') {
             this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file created' });
         } else {
@@ -232,7 +232,7 @@ class Main {
 
     validationResult(arg: any): void {
         this.endWaiting();
-        document.getElementById('validation').innerHTML = '';
+        this.setStatus('');
         if (arg.valid) {
             this.electron.ipcRenderer.send('show-dialog', { type: 'info', message: arg.comment });
         } else {
@@ -241,9 +241,7 @@ class Main {
     }
 
     showError(arg: any): void {
-        document.getElementById('process').innerHTML = '';
-        document.getElementById('merge').innerHTML = '';
-        document.getElementById('validation').innerHTML = '';
+        this.setStatus('');
         this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg });
     }
 
@@ -260,7 +258,7 @@ class Main {
 
     analysisCompleted(arg: any): void {
         this.endWaiting();
-        document.getElementById('analysis').innerHTML = '';
+        this.setStatus('');
         if (arg.result === 'Success') {
             this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'Analysis completed' });
             this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
@@ -368,7 +366,7 @@ class Main {
 
     mergeCompleted(arg: any): void {
         this.endWaiting();
-        document.getElementById('merge').innerHTML = '';
+        this.setStatus('');
         if (arg.result === 'Success') {
             this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file merged' });
             if ((document.getElementById('openTranslated') as HTMLInputElement).checked) {
@@ -389,6 +387,17 @@ class Main {
         (document.getElementById('ditavalFile') as HTMLInputElement).value = '';
         (document.getElementById('ditavalFile') as HTMLInputElement).disabled = true;
     }
+
+    setStatus(arg: any): void {
+        var status: HTMLDivElement = document.getElementById('status') as HTMLDivElement;
+        status.innerHTML = arg;
+        if (arg.length > 0) {
+            status.style.display = 'block';
+        } else {
+            status.style.display = 'none';
+        }
+    }
+
 }
 
 new Main();
