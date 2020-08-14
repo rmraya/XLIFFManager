@@ -9,12 +9,13 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
 - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-<img src="https://www.maxprograms.com/images/XliffManager4.png" alt="XLIFF Manager on Windows 10" width="680"/>
+<img src="https://www.maxprograms.com/images/XliffManager5.png" alt="XLIFF Manager on Windows 10" width="680"/>
 
 ## Releases
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.3.0 | Upgraded OpenXLIFF and TypeScript; updated layout and theme handling | August 14, 2020
 2.2.0 | Upgraded OpenXLIFF, TypeScript and Electron | June 12, 2020
 2.1.0 | Improved entity resolution in catalog manager; added XInclude to default XML catalog | April 25, 2020
 2.0.1 | Updated libraries used in binaries | April 17, 2020
