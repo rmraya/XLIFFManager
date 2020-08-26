@@ -25,6 +25,7 @@
                         <li>SDLXLIFF (Trados Studio)</li>
                         <li>TXML (GlobalLink/Wordfast PRO)</li>
                         <li>WPML XLIFF (WordPress Multilingual Plugin)</li>
+                        <li>XLIFF from Other Tools (.mqxliff, .txlf, .xliff)</li>
                         <li>XML (Generic)</li>
                         <li>XML with ready to use configuration files for: <ul>
                                 <li>DITA 1.0, 1.1, 1.2 and 1.3</li>

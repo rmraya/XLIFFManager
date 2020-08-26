@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.4.0 | Allowed conversion of 3rd party XLIFF and improved support for XLIFF 2.0 | August 26, 2020
 2.3.0 | Upgraded OpenXLIFF and TypeScript; updated layout and theme handling | August 14, 2020
 2.2.0 | Upgraded OpenXLIFF, TypeScript and Electron | June 12, 2020
 2.1.0 | Improved entity resolution in catalog manager; added XInclude to default XML catalog | April 25, 2020
@@ -53,6 +54,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - Trados Studio packages
   - TXML (GlobalLink/Wordfast PRO)
   - WPML XLIFF (WordPress Multilingual Plugin)
+  - XLIFF from Other Tools (.mqxliff, .txlf, .xliff, etc.)
 - **XML Formats**
   - XML (Generic)
   - DITA 1.0, 1.1, 1.2 and 1.3
@@ -78,8 +80,7 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 
 Requirements:
 
-- [node.js](https://nodejs.org) 12.13.0 or newer
-- [TypeScript](https://www.typescriptlang.org) 3.9.5 or newer
+- [node.js](https://nodejs.org) 12.16.3 or newer
 
 Building:
 

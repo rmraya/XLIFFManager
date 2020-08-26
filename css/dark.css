@@ -1,6 +1,6 @@
 :root {
-	--normal-background: #333333;
-	--normal-color: #fefefe;
+	--normal-background: #323538;
+	--normal-color: #ddddde;
 	--accent-color: #3465aa;
 	--accent-alternative: #0551bb;
 	--accent-contrast: #ffffff;
@@ -11,8 +11,9 @@
 	--tab-hover: #2f363d;
 	--input-background: #313131;
 	--input-color: #fefefe;
+	--input-border: #626568;
 	--focus-border: #f57c00;
-	--disabled-input: #555555;
+	--disabled-input: #424348;
 	--even-row-background: #2a2a2a;
 	--odd-row-background: #313131;
 	--selected-row: #424242;
@@ -32,6 +33,11 @@ body {
 	color: var(--normal-color);
 	fill: var(--normal-color);
 	stroke: var(--normal-color);
+}
+
+.borderBottom {
+	border-bottom: 1px solid var(--disabled-input);
+	margin-bottom: 12px;
 }
 
 .hdivider {
@@ -222,7 +228,7 @@ th {
 input {
 	background-color: var(--input-background);
 	color: var(--input-color);
-	border: 1px solid var(--input-color);
+	border: 1px solid var(--input-border);
 	margin-top: 3px;
 	height: 1.4rem;
 	font-size: 1rem;
@@ -252,7 +258,7 @@ input[type=number] {
 select {
 	background-color: var(--input-background);
 	color: var(--input-color);
-	border: 1px solid var(--input-color);
+	border: 1px solid var(--input-border);
 	font-size: 1em;
 	height: 1.6em;
 	border-radius: 0px;
@@ -274,7 +280,7 @@ textarea {
 	font-size: medium;
 	background-color: var(--input-background);
 	color: var(--input-color);
-	border: 1px solid var(--input-color);
+	border: 1px solid var(--input-border);
 	outline: none;
 }
 
@@ -553,7 +559,7 @@ svg {
 }
 
 .bordered {
-	border: 1px solid var(--normal-color) !important;
+	border: 1px solid var(--input-border) !important;
 }
 
 .error {

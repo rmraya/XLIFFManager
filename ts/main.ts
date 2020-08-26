@@ -135,10 +135,6 @@ class Main {
     addSourceFile(arg: any): void {
         (document.getElementById('sourceFile') as HTMLInputElement).value = arg.file;
         var type = arg.type;
-        if (type === 'XLIFF') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Selected file is already an XLIFF document' });
-            return;
-        }
         if (type !== 'Unknown') {
             (document.getElementById('typeSelect') as HTMLSelectElement).value = type;
             if ('DITA' === type) {
