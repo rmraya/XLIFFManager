@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.4.1 | Fixed support for TXLF files and improved XML catalog handling | September 5, 2020
 2.4.0 | Allowed conversion of 3rd party XLIFF and improved support for XLIFF 2.0 | August 26, 2020
 2.3.0 | Upgraded OpenXLIFF and TypeScript; updated layout and theme handling | August 14, 2020
 2.2.0 | Upgraded OpenXLIFF, TypeScript and Electron | June 12, 2020
