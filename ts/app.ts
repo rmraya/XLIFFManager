@@ -35,9 +35,7 @@ class App {
     static defaultSrcLang: string = 'none';
     static defaultTgtLang: string = 'none';
 
-    mainPadding: number = 48;
-    settingsPadding: number = 28;
-    aboutPadding: number = 40;
+    static verticalPadding: number = 46;
 
     ls: ChildProcessWithoutNullStreams;
     stopping: boolean;
@@ -62,16 +60,8 @@ class App {
         App.defaultsFile = App.path.join(app.getPath('appData'), app.name, 'defaults.json');
         if (process.platform === 'win32') {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
-            this.mainPadding = 80;
-            this.settingsPadding = 52;
-            this.aboutPadding = 60;
         } else {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
-        }
-        if (process.platform === 'darwin') {
-            this.mainPadding = 48;
-            this.settingsPadding = 40;
-            this.aboutPadding = 52;
         }
         if (!existsSync(App.appHome)) {
             mkdirSync(App.appHome);
@@ -96,8 +86,9 @@ class App {
             this.loadDefaults();
             App.mainWindow.once('ready-to-show', (event: IpcMainEvent) => {
                 event.sender.send('get-height');
-                App.mainWindow.show();
-                App.checkUpdates(true);
+                setTimeout(() => {
+                    App.checkUpdates(true);
+                }, 1000);
             });
         });
 
@@ -126,21 +117,15 @@ class App {
         });
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
-            let rect: Rectangle = App.mainWindow.getBounds();
-            rect.height = arg.height + this.mainPadding;
-            App.mainWindow.setBounds(rect);
+            App.setHeight(App.mainWindow, arg);
         });
 
         ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
-            let rect: Rectangle = App.aboutWindow.getBounds();
-            rect.height = arg.height + this.aboutPadding;
-            App.aboutWindow.setBounds(rect);
+            App.setHeight(App.aboutWindow, arg);
         });
 
         ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
-            let rect: Rectangle = App.settingsWindow.getBounds();
-            rect.height = arg.height + this.settingsPadding;
-            App.settingsWindow.setBounds(rect);
+            App.setHeight(App.settingsWindow, arg);
         });
 
         ipcMain.on('select-source-file', (event) => {
@@ -273,6 +258,13 @@ class App {
             this.stopping = true;
             this.ls.kill();
         }
+    }
+
+    static setHeight(window: BrowserWindow, arg: any) {
+        let rect: Rectangle = window.getBounds();
+        rect.height = arg.height + App.verticalPadding;
+        window.setBounds(rect);
+        window.show();
     }
 
     createWindow(): void {
@@ -759,7 +751,6 @@ class App {
         App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
         App.aboutWindow.once('ready-to-show', (event: IpcMainEvent) => {
             event.sender.send('get-height');
-            App.aboutWindow.show();
         });
     }
 
@@ -801,7 +792,6 @@ class App {
         App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
         App.settingsWindow.once('ready-to-show', (event: IpcMainEvent) => {
             event.sender.send('get-height');
-            App.settingsWindow.show();
         });
     }
 
