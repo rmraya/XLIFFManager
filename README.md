@@ -2,7 +2,7 @@
 
 <img src="https://maxprograms.com/images/xliffmanager_s.png" alt="XLIFF Manager logo"/>
 
-An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in JavaScript. OpenXLIFF is a set of programs that let you:
+An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in TypeScript. OpenXLIFF is a set of programs that let you:
 
 - Create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.
 - Convert your translated XLIFF files to original format with a couple of clicks.
