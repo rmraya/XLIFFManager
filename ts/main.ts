@@ -13,7 +13,7 @@
 
 class Main {
 
-    electron  = require('electron');
+    electron = require('electron');
     languagesChanged: boolean = false;
 
     constructor() {
@@ -40,11 +40,6 @@ class Main {
 
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
-        });
-
-        this.electron.ipcRenderer.on('get-height', () => {
-            let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-            this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
         });
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -122,6 +117,8 @@ class Main {
         this.electron.ipcRenderer.on('add-ditaval-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('ditavalFile') as HTMLInputElement).value = arg;
         });
+        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
     }
 
     startWaiting(): void {

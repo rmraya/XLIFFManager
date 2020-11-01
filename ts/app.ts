@@ -60,6 +60,7 @@ class App {
         App.defaultsFile = App.path.join(app.getPath('appData'), app.name, 'defaults.json');
         if (process.platform === 'win32') {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
+            App.verticalPadding = 56;
         } else {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
         }
@@ -85,7 +86,7 @@ class App {
             this.createMenu();
             this.loadDefaults();
             App.mainWindow.once('ready-to-show', (event: IpcMainEvent) => {
-                event.sender.send('get-height');
+                App.mainWindow.show();
                 setTimeout(() => {
                     App.checkUpdates(true);
                 }, 1000);
@@ -264,7 +265,6 @@ class App {
         let rect: Rectangle = window.getBounds();
         rect.height = arg.height + App.verticalPadding;
         window.setBounds(rect);
-        window.show();
     }
 
     createWindow(): void {
@@ -282,7 +282,9 @@ class App {
 
     saveDefaults(defaults: any): void {
         writeFileSync(App.defaultsFile, JSON.stringify(defaults));
-        App.settingsWindow.close();
+        App.settingsWindow.hide();
+        App.settingsWindow.destroy();
+        App.mainWindow.focus();
         this.loadDefaults();
         this.setTheme();
     }
@@ -750,7 +752,7 @@ class App {
         App.aboutWindow.setMenu(null);
         App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
         App.aboutWindow.once('ready-to-show', (event: IpcMainEvent) => {
-            event.sender.send('get-height');
+            App.aboutWindow.show();
         });
     }
 
@@ -791,7 +793,7 @@ class App {
         App.settingsWindow.setMenu(null);
         App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
         App.settingsWindow.once('ready-to-show', (event: IpcMainEvent) => {
-            event.sender.send('get-height');
+            App.settingsWindow.show();
         });
     }
 
