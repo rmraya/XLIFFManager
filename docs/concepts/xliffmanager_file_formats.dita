@@ -13,6 +13,7 @@
             <strow>
                 <stentry>
                     <ul>
+                        <li>Adobe InCopy ICML</li>
                         <li>Adobe InDesign Interchange (INX)</li>
                         <li>Adobe InDesign IDML CS4, CS5, CS6 &amp; CC</li>
                         <li>HTML</li>
@@ -23,6 +24,7 @@
                         <li>Plain Text</li>
                         <li>Trados Studio Packages</li>
                         <li>SDLXLIFF (Trados Studio)</li>
+                        <li>SRT Subtitles</li>
                         <li>TXML (GlobalLink/Wordfast PRO)</li>
                         <li>WPML XLIFF (WordPress Multilingual Plugin)</li>
                         <li>XLIFF from Other Tools (.mqxliff, .txlf, .xliff)</li>

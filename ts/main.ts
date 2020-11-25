@@ -17,10 +17,22 @@ class Main {
     languagesChanged: boolean = false;
 
     constructor() {
-        this.electron.ipcRenderer.send('get-languages');
-        this.electron.ipcRenderer.send('get-types');
-        this.electron.ipcRenderer.send('get-charsets');
         this.electron.ipcRenderer.send('get-theme');
+
+        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
+            (document.getElementById('theme') as HTMLLinkElement).href = arg;
+            this.electron.ipcRenderer.send('get-languages');
+        });
+
+        this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
+            this.languagesReceived(arg);
+        });
+        
+        this.electron.ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
+            this.typesReceived(arg);
+        });
+
+        
 
         document.getElementById('helpButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-help'); });
         document.getElementById('infoButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
@@ -38,9 +50,6 @@ class Main {
         document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
         document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
 
-        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
-            (document.getElementById('theme') as HTMLLinkElement).href = arg;
-        });
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
@@ -66,17 +75,11 @@ class Main {
             (document.getElementById('targetFile') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
-            this.languagesReceived(arg);
-        });
 
         this.electron.ipcRenderer.on('charsets-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.charsetsReceived(arg);
         });
 
-        this.electron.ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
-            this.typesReceived(arg);
-        });
 
         this.electron.ipcRenderer.on('conversion-started', () => {
             this.setStatus('Conversion started');
@@ -117,8 +120,6 @@ class Main {
         this.electron.ipcRenderer.on('add-ditaval-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('ditavalFile') as HTMLInputElement).value = arg;
         });
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
     }
 
     startWaiting(): void {
@@ -276,6 +277,7 @@ class Main {
             options = options + '<option value="' + type.type + '">' + type.description + '</option>';
         }
         document.getElementById('typeSelect').innerHTML = options;
+        this.electron.ipcRenderer.send('get-charsets');
     }
 
     charsetsReceived(arg: any): any {
@@ -286,6 +288,9 @@ class Main {
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
         }
         document.getElementById('charsetSelect').innerHTML = options;
+        
+        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
     }
 
     packageLanguages(arg: any): any {
@@ -331,6 +336,7 @@ class Main {
         document.getElementById('targetSelect').innerHTML = languageOptions;
         (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
         this.languagesChanged = false;
+        this.electron.ipcRenderer.send('get-types');
     }
 
     mergeXLIFF(): void {

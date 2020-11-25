@@ -274,7 +274,8 @@ class App {
             show: false,
             icon: App.appIcon,
             webPreferences: {
-                nodeIntegration: true
+                nodeIntegration: true,
+                contextIsolation: false
             }
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
@@ -389,6 +390,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: 'Any File', extensions: [] },
+                { name: 'Adobe InCopy ICML', extensions: ['icml'] },
                 { name: 'Adobe InDesign Interchange', extensions: ['inx'] },
                 { name: 'Adobe InDesign IDML', extensions: ['idml'] },
                 { name: 'DITA Map', extensions: ['ditamap', 'dita', 'xml'] },
@@ -404,6 +406,7 @@ class App {
                 { name: 'RC (Windows C/C++ Resources)', extensions: ['rc'] },
                 { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
                 { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
+                { name: 'SRT Subtitles', extensions: ['srt'] },
                 { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
                 { name: 'Trados Studio Package', extensions: ['sdlppx'] },
                 { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
@@ -746,7 +749,8 @@ class App {
             show: false,
             icon: App.appIcon,
             webPreferences: {
-                nodeIntegration: true
+                nodeIntegration: true,
+                contextIsolation: false
             }
         });
         App.aboutWindow.setMenu(null);
@@ -787,7 +791,8 @@ class App {
             show: false,
             icon: App.appIcon,
             webPreferences: {
-                nodeIntegration: true
+                nodeIntegration: true,
+                contextIsolation: false
             }
         });
         App.settingsWindow.setMenu(null);
@@ -854,8 +859,8 @@ class App {
     }
 
     static sendRequest(json: any, success: any, error: any): void {
-        const postData: string = JSON.stringify(json);
-        const options = {
+        var postData: string = JSON.stringify(json);
+        var options = {
             hostname: 'localhost',
             port: 8000,
             path: '/FilterServer',
@@ -867,19 +872,20 @@ class App {
         // Make a request
         var req: ClientRequest = request(options);
         req.on('response',
-            function (res: IncomingMessage) {
+            (res: IncomingMessage) => {
                 res.setEncoding('utf-8');
                 if (res.statusCode != 200) {
                     error('sendRequest() error: ' + res.statusMessage);
                 }
                 var rawData: string = '';
-                res.on('data', function (chunk: string) {
+                res.on('data', (chunk: string) => {
                     rawData += chunk;
                 });
                 res.on('end', () => {
                     try {
                         success(JSON.parse(rawData));
                     } catch (e) {
+                        console.log('Received data: ' + rawData);
                         error(e.message);
                     }
                 });

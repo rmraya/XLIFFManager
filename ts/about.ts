@@ -16,20 +16,19 @@ class About {
     electron = require('electron');
 
     constructor() {
-        this.electron.ipcRenderer.send('get-version');
         this.electron.ipcRenderer.send('get-theme');
+
+        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
+            (document.getElementById('theme') as HTMLLinkElement).href = arg;
+            this.electron.ipcRenderer.send('get-version');
+        });
 
         this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
             document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
             document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
+            let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+            this.electron.ipcRenderer.send('about-height', { width: body.clientWidth, height: (body.clientHeight + 20) });
         });
-
-        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
-            (document.getElementById('theme') as HTMLLinkElement).href = arg;
-        });
-
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('about-height', { width: body.clientWidth, height: (body.clientHeight + 20) });
     }
 }
 

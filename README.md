@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.6.0 | Added support for SRT subtitles and Adobe InCopy ICML | November 25, 2020
 2.5.1 | Fixed JSON encoding and import of XLIFF matches | November 1, 2020
 2.5.0 | Added support for JSON files | October 1, 2020
 2.4.1 | Fixed support for TXLF files and improved XML catalog handling | September 5, 2020
@@ -45,6 +46,7 @@ Version | Comment | Release Date
 With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF Filters:
 
 - **General Documentation**
+  - Adobe InCopy ICML
   - Adobe InDesign Interchange (INX)
   - Adobe InDesign IDML CS4, CS5, CS6 & CC
   - HTML
@@ -54,6 +56,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - OpenOffice / LibreOffice / StarOffice
   - Plain Text
   - SDLXLIFF (Trados Studio)
+  - SRT Subtitles
   - Trados Studio packages
   - TXML (GlobalLink/Wordfast PRO)
   - WPML XLIFF (WordPress Multilingual Plugin)
@@ -83,7 +86,7 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 
 Requirements:
 
-- [node.js](https://nodejs.org) 12.16.3 or newer
+- [node.js](https://nodejs.org) 12.18.3 or newer
 
 Building:
 

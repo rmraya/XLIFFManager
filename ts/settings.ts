@@ -16,12 +16,7 @@ class Settings {
     electron = require('electron');
 
     constructor() {
-        this.electron.ipcRenderer.send('get-languages');
-        this.electron.ipcRenderer.send('get-catalog');
-        this.electron.ipcRenderer.send('get-skeleton');
-        this.electron.ipcRenderer.send('get-srx');
         this.electron.ipcRenderer.send('get-theme');
-        this.electron.ipcRenderer.send('get-defaultTheme');
 
         document.getElementById('browseCatalog').addEventListener('click', () => { this.electron.ipcRenderer.send('select-catalog'); });
         document.getElementById('browseSkeleton').addEventListener('click', () => { this.electron.ipcRenderer.send('select-skeleton'); });
@@ -30,10 +25,13 @@ class Settings {
 
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
+            this.electron.ipcRenderer.send('get-languages');
         });
 
         this.electron.ipcRenderer.on('set-defaultTheme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('themeColor') as HTMLSelectElement).value = arg;
+            let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+            this.electron.ipcRenderer.send('settings-height', { width: body.clientWidth, height: body.clientHeight });
         });
 
         this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -42,17 +40,18 @@ class Settings {
 
         this.electron.ipcRenderer.on('skeleton-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('skeletonFolder') as HTMLInputElement).value = arg;
+            this.electron.ipcRenderer.send('get-srx');
         });
 
         this.electron.ipcRenderer.on('catalog-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('defaultCatalog') as HTMLInputElement).value = arg;
+            this.electron.ipcRenderer.send('get-skeleton');
         });
 
         this.electron.ipcRenderer.on('srx-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('defaultSRX') as HTMLInputElement).value = arg;
+            this.electron.ipcRenderer.send('get-defaultTheme');
         });
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('settings-height', { width: body.clientWidth, height: body.clientHeight });
     }
 
     languagesReceived(arg: any): void {
@@ -66,6 +65,7 @@ class Settings {
         (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
         document.getElementById('targetSelect').innerHTML = options;
         (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
+        this.electron.ipcRenderer.send('get-catalog');
     }
 
     saveSettings(): void {
