@@ -5,7 +5,7 @@
     <shortdesc></shortdesc>
     <taskbody>
         <context>
-            <p>XLIF Manager lets you produce an HTML file with word counts and segment status
+            <p>XLIFF Manager lets you produce an HTML file with word counts and segment status
                 statistics from an <xref href="../glossaries/XLIFF.dita">XLIFF</xref> document.</p>
             <fig>
                 <image align="center" placement="break" scale="60" href="../images/analyzeXliff.png">
