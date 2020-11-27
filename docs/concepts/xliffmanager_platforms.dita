@@ -4,15 +4,11 @@
     <title>Supported Platforms</title>
     <shortdesc/>
     <conbody>
-       <conbody>
-        <p>
-            <ul>
-                <li>Microsoft Windows (8, 8.1 and 10)</li>          
-                <li>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15) and Big Sur
-                    (11.0)</li>            
-                <li>Linux (with GNOME Desktop Manager)</li>
-            </ul>
-        </p>
-    </conbody>
+        <p>XLIFF Manager works on these platforms:</p>
+        <ul>
+            <li>Microsoft Windows (8, 8.1 and 10)</li>
+            <li>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15) and Big Sur (11.0)</li>
+            <li>Linux (with GNOME Desktop Manager)</li>
+        </ul>
     </conbody>
 </concept>
