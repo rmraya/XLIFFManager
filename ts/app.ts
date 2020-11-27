@@ -428,7 +428,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: 'XLIFF File', extensions: ['xlf', 'xliff'] }
             ]
         }).then((value) => {
             if (!value.canceled) {
@@ -487,7 +487,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: 'XLIFF File', extensions: ['xlf', 'xliff'] }
             ]
         }).then((value) => {
             if (!value.canceled) {
@@ -562,7 +562,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: 'XLIFF File', extensions: ['xlf', 'xliff'] }
             ]
         }).then((value) => {
             if (!value.canceled) {
