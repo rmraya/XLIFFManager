@@ -10,31 +10,33 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
-
-class About {
+class Updates {
 
     electron = require('electron');
 
     constructor() {
         this.electron.ipcRenderer.send('get-theme');
-
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
-            this.electron.ipcRenderer.send('get-version');
         });
-
-        this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
-            document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
-            document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
+        this.electron.ipcRenderer.send('get-versions');
+        this.electron.ipcRenderer.on('set-versions', (event: Electron.IpcRendererEvent, arg: any) => {
+            document.getElementById('current').innerText = arg.current;
+            document.getElementById('latest').innerText = arg.latest;
             let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-            this.electron.ipcRenderer.send('about-height', { width: body.clientWidth, height: (body.clientHeight + 20) });
+            this.electron.ipcRenderer.send('updates-height', { width: body.clientWidth, height: body.clientHeight });
         });
         document.addEventListener('keydown', (event: KeyboardEvent) => {
+            if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+                this.electron.ipcRenderer.send('download-latest');
+            }
             if (event.code === 'Escape') {
-                this.electron.ipcRenderer.send('close-about');
+                this.electron.ipcRenderer.send('close-updates');
             }
         });
+        document.getElementById('release').addEventListener('click', () => { this.electron.ipcRenderer.send('release-history'); });
+        document.getElementById('download').addEventListener('click', () => { this.electron.ipcRenderer.send('download-latest'); });
     }
 }
 
-new About();
+new Updates();

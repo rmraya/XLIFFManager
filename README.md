@@ -1,6 +1,6 @@
 # XLIFF Manager
 
-<img src="https://maxprograms.com/images/xliffmanager_s.png" alt="XLIFF Manager logo"/>
+<img src="https://maxprograms.com/images/xliffmanager_90.png" alt="XLIFF Manager logo"/>
 
 An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) written in TypeScript. OpenXLIFF is a set of programs that let you:
 
@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+2.7.0 | New check for updates dialog; Improved XLIFF validation | February 3rd, 2021
 2.6.1 | Improved support for Trados Studio packages; improved conversion to/from XLIFF| January 1st, 2021
 2.6.0 | Added support for SRT subtitles and Adobe InCopy ICML | November 25th, 2020
 2.5.1 | Fixed JSON encoding and import of XLIFF matches | November 1st, 2020

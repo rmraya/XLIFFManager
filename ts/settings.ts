@@ -52,6 +52,11 @@ class Settings {
             (document.getElementById('defaultSRX') as HTMLInputElement).value = arg;
             this.electron.ipcRenderer.send('get-defaultTheme');
         });
+        document.addEventListener('keydown', (event: KeyboardEvent) => {
+            if (event.code === 'Escape') {
+                this.electron.ipcRenderer.send('close-settings');
+            }
+        });
     }
 
     languagesReceived(arg: any): void {

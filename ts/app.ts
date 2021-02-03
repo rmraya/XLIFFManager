@@ -22,6 +22,8 @@ class App {
     static mainWindow: BrowserWindow;
     static settingsWindow: BrowserWindow;
     static aboutWindow: BrowserWindow;
+    static updatesWindow: BrowserWindow;
+
     static currentTheme: string;
     static defaultTheme: string = 'system';
     static appIcon: string;
@@ -36,6 +38,9 @@ class App {
     static defaultTgtLang: string = 'none';
 
     static verticalPadding: number = 46;
+
+    static latestVersion: string;
+    static downloadLink: string;
 
     ls: ChildProcessWithoutNullStreams;
     stopping: boolean;
@@ -86,6 +91,7 @@ class App {
             this.createMenu();
             this.loadDefaults();
             App.mainWindow.once('ready-to-show', (event: IpcMainEvent) => {
+                App.loadLocation();
                 App.mainWindow.show();
                 setTimeout(() => {
                     App.checkUpdates(true);
@@ -95,11 +101,11 @@ class App {
 
         app.on('quit', () => {
             this.stopServer();
-        })
+        });
 
         app.on('window-all-closed', () => {
             this.stopServer();
-            app.quit()
+            app.quit();
         });
 
         nativeTheme.on('updated', () => {
@@ -120,127 +126,117 @@ class App {
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.mainWindow, arg);
         });
-
         ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.aboutWindow, arg);
         });
-
+        ipcMain.on('close-about', () => {
+            App.destroyWindow(App.aboutWindow);
+        });
         ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.settingsWindow, arg);
         });
-
+        ipcMain.on('close-settings', () => {
+            App.destroyWindow(App.settingsWindow);
+        });
         ipcMain.on('select-source-file', (event) => {
             this.selectSourceFile(event);
         });
-
         ipcMain.on('select-xliff-file', (event) => {
             this.selectXliffFile(event);
         });
-
         ipcMain.on('convert', (event, arg) => {
             this.convert(event, arg);
         });
-
         ipcMain.on('select-xliff-validation', (event) => {
             this.selectXliffValidation(event);
         });
-
         ipcMain.on('validate', (event, arg) => {
             this.validate(event, arg);
         });
-
         ipcMain.on('select-xliff-analysis', (event) => {
             this.selectXliffAnalysis(event);
         });
-
         ipcMain.on('select-ditaval', (event) => {
             this.selectDitaval(event);
         });
-
         ipcMain.on('select-target-file', (event) => {
             this.selectTargetFile(event);
         });
-
         ipcMain.on('analyse', (event, arg) => {
             this.analyse(event, arg);
         });
-
         ipcMain.on('merge', (event, arg) => {
             this.merge(event, arg);
         });
-
         ipcMain.on('select-skeleton', (event) => {
             this.selectSkeleton(event);
         });
-
         ipcMain.on('select-catalog', (event) => {
             this.selectCatalog(event);
         });
-
         ipcMain.on('select-srx', (event) => {
             this.selectSrx(event);
         });
-
         ipcMain.on('show-about', () => {
             App.showAbout();
         });
-
         ipcMain.on('show-settings', () => {
             App.showSettings();
         });
-
         ipcMain.on('save-defaults', (event, arg) => {
             this.saveDefaults(arg);
         });
-
         ipcMain.on('get-theme', (event) => {
             event.sender.send('set-theme', App.currentTheme);
         });
-
         ipcMain.on('get-defaultTheme', (event) => {
             event.sender.send('set-defaultTheme', App.defaultTheme);
         });
-
         ipcMain.on('get-version', (event) => {
             this.getVersion(event);
         });
-
         ipcMain.on('get-languages', (event) => {
             this.getLanguages(event);
         });
-
         ipcMain.on('get-skeleton', (event) => {
             event.sender.send('skeleton-received', App.sklFolder);
         });
-
         ipcMain.on('get-catalog', (event) => {
             event.sender.send('catalog-received', App.defaultCatalog);
         });
-
         ipcMain.on('get-srx', (event) => {
             event.sender.send('srx-received', App.defaultSRX);
         });
-
         ipcMain.on('get-charsets', (event) => {
             this.getCharsets(event);
         });
-
         ipcMain.on('get-types', (event) => {
             this.getTypes(event);
         });
-
         ipcMain.on('get-package-languages', (event, arg) => {
             this.getPackageLanguages(event, arg);
         });
-
         ipcMain.on('check-updates', (event) => {
             App.checkUpdates(false);
         });
-
         ipcMain.on('show-help', () => {
             App.showHelp();
         });
-
+        ipcMain.on('get-versions', (event: IpcMainEvent) => {
+            event.sender.send('set-versions', { current: app.getVersion(), latest: App.latestVersion });
+        });
+        ipcMain.on('updates-height', (event: IpcMainEvent, arg: any) => {
+            App.setHeight(App.updatesWindow, arg);
+        });
+        ipcMain.on('release-history', () => {
+            App.releaseHistory();
+        });
+        ipcMain.on('download-latest', () => {
+            App.downloadLatest();
+        });
+        ipcMain.on('close-updates', () => {
+            App.destroyWindow(App.updatesWindow);
+        });
         ipcMain.on('show-file', (event, arg) => {
             shell.openExternal('file://' + arg.file, {
                 activate: true, workingDirectory: app.getAppPath()
@@ -248,7 +244,6 @@ class App {
                 dialog.showErrorBox('Error', error.message);
             });
         });
-
         ipcMain.on('show-dialog', (event, arg) => {
             dialog.showMessageBox(arg);
         });
@@ -267,6 +262,24 @@ class App {
         window.setBounds(rect);
     }
 
+    static destroyWindow(window: BrowserWindow): void {
+        if (window) {
+            try {
+                let parent: BrowserWindow = window.getParentWindow();
+                window.hide();
+                window.destroy();
+                window = undefined;
+                if (parent) {
+                    parent.focus();
+                } else {
+                    App.mainWindow.focus();
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        }
+    }
+
     createWindow(): void {
         App.mainWindow = new BrowserWindow({
             width: 620,
@@ -279,6 +292,29 @@ class App {
             }
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
+        App.mainWindow.on('resize', () => {
+            App.saveLocation();
+        });
+        App.mainWindow.on('move', () => {
+            App.saveLocation();
+        });
+    }
+
+    static saveLocation(): void {
+        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
+        writeFileSync(defaultsFile, JSON.stringify(App.mainWindow.getBounds()));
+    }
+
+    static loadLocation(): void {
+        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
+        if (existsSync(defaultsFile)) {
+            try {
+                var data: Buffer = readFileSync(defaultsFile);
+                App.mainWindow.setBounds(JSON.parse(data.toString()));
+            } catch (err) {
+                console.log(err);
+            }
+        }
     }
 
     saveDefaults(defaults: any): void {
@@ -386,10 +422,14 @@ class App {
     }
 
     selectSourceFile(event: IpcMainEvent): void {
+        let anyFile: string[] = [];
+        if (process.platform === 'linux') {
+            anyFile = ['*'];
+        }
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'Any File', extensions: [] },
+                { name: 'Any File', extensions: anyFile },
                 { name: 'Adobe InCopy ICML', extensions: ['icml'] },
                 { name: 'Adobe InDesign Interchange', extensions: ['inx'] },
                 { name: 'Adobe InDesign IDML', extensions: ['idml'] },
@@ -397,6 +437,7 @@ class App {
                 { name: 'HTML Page', extensions: ['html', 'htm'] },
                 { name: 'JavaScript', extensions: ['js'] },
                 { name: 'Java Properties', extensions: ['properties'] },
+                { name: 'JSON', extensions: ['json'] },
                 { name: 'MIF (Maker Interchange Format)', extensions: ['mif'] },
                 { name: 'Microsoft Office 2007 Document', extensions: ['docx', 'xlsx', 'pptx'] },
                 { name: 'OpenOffice 1.x Document', extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
@@ -406,13 +447,13 @@ class App {
                 { name: 'RC (Windows C/C++ Resources)', extensions: ['rc'] },
                 { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
                 { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
-                { name: 'SRT Subtitles', extensions: ['srt'] },
+                { name: 'SRT Subtitle', extensions: ['srt'] },
                 { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
                 { name: 'Trados Studio Package', extensions: ['sdlppx'] },
                 { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
                 { name: 'TXML Document', extensions: ['txml'] },
                 { name: 'Visio XML Drawing', extensions: ['vsdx'] },
-                { name: 'WPML XLIFF', extensions: ['xliff'] },
+                { name: 'XLIFF', extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
                 { name: 'XML Document', extensions: ['xml'] }
             ]
         }).then((value) => {
@@ -652,7 +693,7 @@ class App {
     }
 
     static checkUpdates(silent: boolean): void {
-        App.https.get('https://raw.githubusercontent.com/rmraya/XLIFFManager/master/package.json', { timeout: 1500 }, (res: IncomingMessage) => {
+        App.https.get('https://maxprograms.com/xliffchecker.json', (res: IncomingMessage) => {
             if (res.statusCode === 200) {
                 let rawData = '';
                 res.on('data', (chunk: string) => {
@@ -662,10 +703,33 @@ class App {
                     try {
                         const parsedData = JSON.parse(rawData);
                         if (app.getVersion() !== parsedData.version) {
-                            dialog.showMessageBox(App.mainWindow, {
-                                type: 'info',
-                                title: 'Updates Available',
-                                message: 'Version ' + parsedData.version + ' is available'
+                            App.latestVersion = parsedData.version;
+                            switch (process.platform) {
+                                case 'darwin': App.downloadLink = parsedData.darwin;
+                                    break;
+                                case 'win32': App.downloadLink = parsedData.win32;
+                                    break;
+                                case 'linux': App.downloadLink = parsedData.linux;
+                                    break;
+                            }
+                            App.updatesWindow = new BrowserWindow({
+                                parent: this.mainWindow,
+                                width: 600,
+                                useContentSize: true,
+                                minimizable: false,
+                                maximizable: false,
+                                resizable: false,
+                                show: false,
+                                icon: App.appIcon,
+                                webPreferences: {
+                                    nodeIntegration: true,
+                                    contextIsolation: false
+                                }
+                            });
+                            App.updatesWindow.setMenu(null);
+                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
+                            App.updatesWindow.once('ready-to-show', () => {
+                                App.updatesWindow.show();
                             });
                         } else {
                             if (!silent) {
@@ -676,17 +740,17 @@ class App {
                             }
                         }
                     } catch (e) {
-                        dialog.showErrorBox('Error', e.message);
+                        dialog.showMessageBox(App.mainWindow, { type: 'error', message: e.message });
                     }
                 });
             } else {
                 if (!silent) {
-                    dialog.showErrorBox('Error', 'Updates Request Failed.\nStatus code: ' + res.statusCode);
+                    dialog.showMessageBox(App.mainWindow, { type: 'error', message: 'Updates Request Failed.\nStatus code: ' + res.statusCode });
                 }
             }
         }).on('error', (e: any) => {
             if (!silent) {
-                dialog.showErrorBox('Error', e.message);
+                dialog.showMessageBox(App.mainWindow, { type: 'error', message: e.message });
             }
         });
     }
@@ -902,6 +966,15 @@ class App {
             console.log('Params: ' + JSON.stringify(json));
         });
         req.end();
+    }
+
+    static downloadLatest(): void {
+        shell.openExternal(App.downloadLink).catch((reason: any) => {
+            if (reason instanceof Error) {
+                console.log(reason.message);
+            }
+            dialog.showErrorBox('Error', 'Unable to download latest version.');
+        });
     }
 }
 
