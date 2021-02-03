@@ -693,7 +693,7 @@ class App {
     }
 
     static checkUpdates(silent: boolean): void {
-        App.https.get('https://maxprograms.com/xliffchecker.json', (res: IncomingMessage) => {
+        App.https.get('https://maxprograms.com/xliffmanager.json', (res: IncomingMessage) => {
             if (res.statusCode === 200) {
                 let rawData = '';
                 res.on('data', (chunk: string) => {
