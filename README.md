@@ -59,7 +59,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - Plain Text
   - SDLXLIFF (Trados Studio)
   - SRT Subtitles
-  - Trados Studio packages
+  - Trados Studio Packages (*.sdlppx)
   - TXML (GlobalLink/Wordfast PRO)
   - WPML XLIFF (WordPress Multilingual Plugin)
   - XLIFF from Other Tools (.mqxliff, .txlf, .xliff, etc.)
@@ -72,6 +72,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - XHTML
 - **Software Development**
   - JavaScript
+  - JSON
   - Java Properties
   - PO (Portable Objects)
   - RC (Windows C/C++ Resources)
