@@ -27,12 +27,15 @@ class Main {
         this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.languagesReceived(arg);
         });
-        
+
         this.electron.ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.typesReceived(arg);
         });
 
-        
+        document.getElementById('createTab').addEventListener('click', () => { this.showCreate(); });
+        document.getElementById('mergeTab').addEventListener('click', () => { this.showMerge(); });
+        document.getElementById('validateTab').addEventListener('click', () => { this.showValidate(); });
+        document.getElementById('analysisTab').addEventListener('click', () => { this.showAnalysis(); });
 
         document.getElementById('helpButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-help'); });
         document.getElementById('infoButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
@@ -49,7 +52,6 @@ class Main {
         document.getElementById('validateButton').addEventListener('click', () => { this.validate(); });
         document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
         document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
-
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
@@ -75,11 +77,9 @@ class Main {
             (document.getElementById('targetFile') as HTMLInputElement).value = arg;
         });
 
-
         this.electron.ipcRenderer.on('charsets-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.charsetsReceived(arg);
         });
-
 
         this.electron.ipcRenderer.on('conversion-started', () => {
             this.setStatus('Conversion started');
@@ -288,7 +288,6 @@ class Main {
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
         }
         document.getElementById('charsetSelect').innerHTML = options;
-        
         let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
         this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
     }
@@ -397,6 +396,57 @@ class Main {
         }
     }
 
+    showCreate(): void {
+        document.getElementById('createTab').classList.add('selectedTab');
+        document.getElementById('mergeTab').classList.remove('selectedTab');
+        document.getElementById('validateTab').classList.remove('selectedTab');
+        document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('create').className = 'tabContent';
+        document.getElementById('merge').className = 'hiddenTab';
+        document.getElementById('validate').className = 'hiddenTab';
+        document.getElementById('analysis').className = 'hiddenTab';
+        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+    }
+
+    showMerge(): void {
+        document.getElementById('createTab').classList.remove('selectedTab');
+        document.getElementById('mergeTab').classList.add('selectedTab');
+        document.getElementById('validateTab').classList.remove('selectedTab');
+        document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('create').className = 'hiddenTab';
+        document.getElementById('merge').className = 'tabContent';
+        document.getElementById('validate').className = 'hiddenTab';
+        document.getElementById('analysis').className = 'hiddenTab';
+        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+    }
+
+    showValidate(): void {
+        document.getElementById('createTab').classList.remove('selectedTab');
+        document.getElementById('mergeTab').classList.remove('selectedTab');
+        document.getElementById('validateTab').classList.add('selectedTab');
+        document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('create').className = 'hiddenTab';
+        document.getElementById('merge').className = 'hiddenTab';
+        document.getElementById('validate').className = 'tabContent';
+        document.getElementById('analysis').className = 'hiddenTab';
+        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+    }
+
+    showAnalysis(): void {
+        document.getElementById('createTab').classList.remove('selectedTab');
+        document.getElementById('mergeTab').classList.remove('selectedTab');
+        document.getElementById('validateTab').classList.remove('selectedTab');
+        document.getElementById('analysisTab').classList.add('selectedTab');
+        document.getElementById('create').className = 'hiddenTab';
+        document.getElementById('merge').className = 'hiddenTab';
+        document.getElementById('validate').className = 'hiddenTab';
+        document.getElementById('analysis').className = 'tabContent';
+        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
+        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+    }
 }
 
 new Main();

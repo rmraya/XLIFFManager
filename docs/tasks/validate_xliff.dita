@@ -20,6 +20,9 @@
         </context>
         <steps>
             <step>
+                <cmd>Click on the <uicontrol>Validate XLIFF</uicontrol> tab.</cmd>
+            </step>
+            <step>
                 <cmd>Type the name and location of the XLIFF file to validate in the <uicontrol>XLIFF
                     File</uicontrol> text box in the <uicontrol>Validate XLIFF File</uicontrol> section or click the <uicontrol>Browse...</uicontrol>
                     button next to it to select an XLIFF file from the file system.</cmd>

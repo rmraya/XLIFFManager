@@ -63,11 +63,10 @@ class App {
         App.defaultCatalog = App.path.join(app.getAppPath(), 'catalog', 'catalog.xml');
         App.sklFolder = App.path.join(app.getPath('appData'), app.name, 'skl');
         App.defaultsFile = App.path.join(app.getPath('appData'), app.name, 'defaults.json');
+        App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
         if (process.platform === 'win32') {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
             App.verticalPadding = 56;
-        } else {
-            App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
         }
         if (!existsSync(App.appHome)) {
             mkdirSync(App.appHome);
@@ -705,11 +704,14 @@ class App {
                         if (app.getVersion() !== parsedData.version) {
                             App.latestVersion = parsedData.version;
                             switch (process.platform) {
-                                case 'darwin': App.downloadLink = parsedData.darwin;
+                                case 'darwin':
+                                    App.downloadLink = process.arch === 'arm64' ? parsedData.amd64 : parsedData.darwin;
                                     break;
-                                case 'win32': App.downloadLink = parsedData.win32;
+                                case 'win32':
+                                    App.downloadLink = parsedData.win32;
                                     break;
-                                case 'linux': App.downloadLink = parsedData.linux;
+                                case 'linux':
+                                    App.downloadLink = parsedData.linux;
                                     break;
                             }
                             App.updatesWindow = new BrowserWindow({

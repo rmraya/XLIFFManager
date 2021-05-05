@@ -16,6 +16,9 @@
         </context>
         <steps>
             <step>
+                <cmd>Click on the <uicontrol>Merge XLIFF</uicontrol> tab.</cmd>
+            </step>
+            <step>
                 <cmd>Type the name and location of the XLIFF file to merge in the <uicontrol>XLIFF
                         File</uicontrol> text box in the <uicontrol>Merge XLIFF File</uicontrol>
                     section or click the <uicontrol>Browse...</uicontrol> button next to it to

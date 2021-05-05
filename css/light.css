@@ -1,83 +1,23 @@
-:root {
-	--normal-background: #e5e5e5;
-	--normal-color: #272727;
-	--accent-color: #3465aa;
-	--accent-alternative: #0551bb;
-	--accent-contrast: #ffffff;
-	--tooltip-background: #0d47a1;
-	--tooltip-color: #fefefe;
-	--tabHolder-background: #9a9a9a;
-	--tab-background: #dedede;
-	--tab-hover: #cdcdcd;
-	--input-background: #fefefe;
-	--input-color: #2e2e2e;
-	--input-border: #626568;
-	--focus-border: #f57c00;
-	--disabled-input: #c3c3c3;
-	--even-row-background: #ececec;
-	--odd-row-background: #fcfcfc;
-	--selected-row: #b0bec5;
-	--highlight-row: #bbdefb;
-	--highlight-color: #ecf01b;
-	--error-color: #960303;
-	--difference-color: #272727;
-	--difference-background: #bbdefb;
-}
-
+@import "./theme.css";
+@import "./neutrals.css";
 * {
-	font-family: sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
-	background: var(--normal-background);
-	color: var(--normal-color);
-	fill: var(--normal-color);
-	stroke: var(--normal-color);
-}
-
-.borderBottom {
-	border-bottom: 1px solid var(--disabled-input);
-	margin-bottom: 12px;
-}
-
-.hdivider {
-	width: 2px;
-	background: var(--accent-color);
-	height: 100%;
-	position: relative;
-	cursor: col-resize;
-	display: block;
-	z-index: 5;
-}
-
-.vdivider {
-	width: 100%;
-	height: 2px;
-	background: var(--accent-color);
-	position: relative;
-	cursor: row-resize;
-	display: block;
-	z-index: 5;
+	background: var(--gray30);
+	color: var(--gray190);
+	fill: var(--gray190);
+	stroke: var(--gray190);
+	margin: 0;
 }
 
 .wait {
 	cursor: wait !important;
 }
 
-header {
-	background: var(--accent-color);
-	color: var(--accent-contrast);
-	border-bottom: solid 2px var(--accent-color);
-}
-
-footer {
-	background: var(--accent-color);
-	color: var(--accent-contrast);
-	border-top: 2px solid var(--accent-color);
-}
-
 a {
-	color: var(--accent-color);
+	color: var(--themePrimary);
 	cursor: pointer;
 }
 
@@ -87,14 +27,14 @@ a:hover {
 
 .status {
 	position: absolute;
-	top: 200px;
+	top: 10%;
 	left: calc(40% - 100px);
 	width: 200px;
 	margin: auto;
-	background-color: var(--tooltip-background);
-	color: var(--tooltip-color);
+	background-color: var(--themeDarker);
+	color: var(--white);
 	padding: 20px;
-	border: 1px solid var(--tooltip-color);
+	border: 1px solid var(--white);
 }
 
 /* tables */
@@ -104,111 +44,20 @@ table {
 	border-collapse: collapse;
 }
 
-thead {
-	height: 24px;
-	background: var(--accent-color);
-	color: var(--accent-contrast);
-}
-
-thead tr {
-	background: inherit !important;
-	color: inherit !important;
-}
-
 tbody {
 	overflow-y: scroll;
 	overflow-x: scroll;
 }
 
 td {
-	padding: 4px;
+	padding: 8px 4px;
 	vertical-align: top;
 	font-size: medium;
 }
 
-td.editing {
-	background-color: var(--normal-background) !important;
-}
-
-td.fixed {
-	text-align: center;
+td.list {
 	vertical-align: middle;
-	color: var(--normal-color);
-	cursor: default !important;
-}
-
-td.initial {
-	border-right: 3px solid var(--normal-background);
-}
-
-td.translated {
-	border-right: 3px solid #ff9800;
-}
-
-td.reviewed {
-	border-right: 3px solid #ff9800;
-}
-
-td.final {
-	border-right: 3px solid #009688;
-}
-
-tr.selected {
-	background-color: var(--selected-row);
-}
-
-tr.selected:hover {
-	background-color: var(--accent-color) !important;
-	color: var(--accent-contrast);
-}
-
-tr.discover:hover {
-	background-color: var(--highlight-row);
-}
-
-th {
-	position: sticky;
-	top: 0;
-	z-index: 5;
-	font-weight: lighter;
-	background: var(--accent-color);
-	color: var(--accent-contrast);
-}
-
-.stripes tr:nth-child(odd) {
-	background-color: var(--odd-row-background) !important;
-}
-
-.stripes tr:nth-child(even) {
-	background-color: var(--even-row-background) !important;
-}
-
-.currentRow {
-	border-top: 1px solid var(--focus-border);
-	border-bottom: 1px solid var(--focus-border);
-}
-
-.fixed {
-	width: 1px;
-	text-align: center;
-}
-
-.highlighted {
-	color: var(--highlight-color);
-	background-color: var(--accent-color);
-	padding-left: 2px;
-	padding-right: 2px;
-}
-
-.difference {
-	color: var(--difference-color);
-	background-color: var(--difference-background);
-	padding-left: 2px;
-	padding-right: 2px;
-}
-
-.right {
-	float: right;
+	white-space: nowrap;
 }
 
 .hidden {
@@ -226,85 +75,68 @@ th {
 /* inputs */
 
 input {
-	background-color: var(--input-background);
-	color: var(--input-color);
-	border: 1px solid var(--input-border);
+	background-color: var(--gray20);
+	color: var(--gray190);
+	border: 1px solid var(--gray190);
 	margin-top: 3px;
 	height: 1.4rem;
 	font-size: 1rem;
-}
-
-.table_input {
-	width: calc(100% - 10px);
+	border-radius: 2px;
 }
 
 input:focus {
 	outline: none !important;
-	border: 1px solid var(--focus-border);
+	border: 1px solid var(--themePrimary);
 }
 
 input:disabled {
-	background-color: var(--disabled-input);
-}
-
-input[type=number] {
-	font-size: 0.8em;
-	width: 40px;
-	margin: 0;
-	padding: 0;
-	padding-left: 2px;
+	background-color: var(--gray60);
 }
 
 select {
-	background-color: var(--input-background);
-	color: var(--input-color);
-	border: 1px solid var(--input-border);
+	background-color: var(--gray20);
+	color: var(--gray190);
+	border: 1px solid var(--gray190);
 	font-size: 1em;
 	height: 1.6em;
-	border-radius: 0;
+	border-radius: 2px;
 }
 
 select:focus {
 	outline: none !important;
-	border: 1px solid var(--focus-border);
+	border: 1px solid var(--themePrimary);
 }
 
 option {
 	font-size: 1em;
-	background-color: var(--input-background) !important;
-	color: var(--input-color);
-}
-
-textarea {
-	padding: 0;
-	font-size: medium;
-	background-color: var(--input-background);
-	color: var(--input-color);
-	border: 1px solid var(--input-border);
-	outline: none;
-}
-
-textarea:focus {
-	outline: none !important;
-	border: 1px solid var(--focus-border);
+	background-color: var(--gray20);
+	color: var(--gray190);
 }
 
 button {
-	color: var(--accent-contrast);
-	background: var(--accent-color);
-	border: 1px solid var(--accent-color);
+	color: var(--white);
+	background: var(--themePrimary);
+	border: 1px solid var(--themePrimary);
 	border-radius: 2px;
 	font-size: 1em;
 	text-align: center;
-	margin: 3px;
-	padding-left: 4px;
-	padding-right: 4px;
+	margin: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
 	white-space: nowrap;
 }
 
+button:focus {
+	outline: none !important;
+}
+
 button:hover {
-	background: var(--accent-alternative);
-	border: 1px solid var(--accent-alternative);
+	background: var(--themeDarkAlt);
+	border: 1px solid var(--themeDarkAlt);
+	transition-property: all;
+	transition-duration: 0.5s;
+	transition-timing-function: cubic-bezier(0.14, 0.71, 0.38, 1);
+	transition-delay: 0s;
 }
 
 .row {
@@ -312,6 +144,15 @@ button:hover {
 	flex-direction: row;
 	width: 100%;
 	padding: 0;
+}
+
+.toprow {
+	display: flex;
+	flex-direction: row;
+	background-color: var(--gray50);
+	width: 100%;
+	padding: 0;
+	margin: 0px;
 }
 
 label {
@@ -332,16 +173,6 @@ label {
 	white-space: nowrap;
 }
 
-.paddedArea {
-	padding: 4px;
-	margin: 4px;
-}
-
-.optionBox {
-	border: 1px solid grey;
-	border-radius: 4px;
-}
-
 .buttonArea {
 	display: flex;
 	flex-direction: row;
@@ -351,75 +182,33 @@ label {
 	justify-content: flex-end;
 }
 
-.inputArea {
-	display: flex;
-	flex-direction: row;
-	vertical-align: middle;
-}
-
-/* toolbars */
-
-.toolbar {
-	display: flex;
-	flex-direction: row;
-	background: var(--tab-background);
-	color: var(--normal-color);
-	fill: var(--accent-color);
-	stroke: var(--accent-color);
-	padding-bottom: 0;
-	padding-top: 0;
-	padding-left: 4px;
-	padding-right: 4px;
-	justify-content: flex-start;
-	border-top: 1px solid var(--normal-background);
-}
-
-.toolbar button {
-	padding: 5px;
-	background: inherit;
-	border: none;
-	outline: none;
+.toprow a {
 	color: inherit;
 	fill: inherit;
 	stroke: inherit;
-	text-align: left;
-	font-size: 0.8em;
-	vertical-align: middle;
-	box-shadow: none;
 }
 
-.toolbar button img {
-	padding: 4px;
+.toprow a svg {
+	margin-top: 6px;
+	color: var(--gray160);
+	fill: var(--gray160);
+	stroke: var(--gray160);
 }
 
-.toolbar a {
-	color: inherit;
-	fill: inherit;
-	stroke: inherit;
-	margin-left: 2px;
-	margin-right: 2px;
-}
-
-.toolbar a img {
-	padding-top: 4px;
-}
-
-.toolbar a svg {
-	padding-top: 4px;
-	color: var(--normal-color);
-	fill: var(--normal-color);
-	stroke: var(--normal-color);
-}
-
-.toolbar a:hover {
-	background-color: var(--input-background);
+.toprow a:hover {
+	color: var(--themePrimary);
 	text-decoration: none !important;
 }
 
 svg {
-	fill: var(--normal-color);
-	stroke: var(--normal-color);
+	fill: var(--black);
+	stroke: var(--black);
 	stroke-width: 0.3;
+}
+
+.padded {
+	padding-right: 4px;
+	padding-left: 4px;
 }
 
 /* tabs */
@@ -427,152 +216,68 @@ svg {
 .tabHolder {
 	display: flex;
 	flex-flow: row;
-	color: var(--normal-color);
-	background: var(--tabHolder-background);
-	padding: 2px 0 0 8px;
+	color: var(--black);
+	background: var(--gray30);
+	margin: 0;
+	padding: 0;
 }
 
 .tab {
 	overflow: hidden;
-	background: var(--tab-background);
-	color: var(--normal-color);
-	fill: var(--accent-color);
-	stroke: var(--accent-color);
-	padding-top: 4px;
-	padding-left: 6px;
-	padding-right: 6px;
+	background: var(--gray50);
+	color: var(--gray150);
+	fill: var(--gray150);
+	stroke: var(--gray150);
+	padding: 8px 16px;
 	margin: 0;
-	margin-right: 1px !important;
+	vertical-align: middle;
 	box-shadow: none !important;
-	border-bottom: 3px solid var(--tab-background);
 	text-decoration: none !important;
+	white-space: nowrap;
 }
 
 .selectedTab {
-	border-bottom: 3px solid var(--accent-color);
+	background: var(--gray30);
+	color: var(--black);
+	border-left: 1px solid var(--gray60) !important;
+	border-right: 1px solid var(--gray60) !important;
 }
 
 .tab:hover {
-	background: var(--tab-hover);
-	border-bottom: 3px solid var(--tab-hover);
+	color: var(--black);
+	fill: var(--black);
+	stroke: var(--black);
 }
 
 .selectedTab:hover {
-	border-bottom: 3px solid var(--accent-color) !important;
+	color: var(--black);
+	fill: var(--black);
+	stroke: var(--black);
 }
 
 .tab a {
+	padding-left: 8px !important;
+	padding-right: 8px !important;
 	color: inherit;
+	fill: inherit;
+	stroke: inherit;
 	text-decoration: none;
 	cursor: pointer;
 }
 
 .tab a:hover {
-	background: var(--tab-hover);
+	color: inherit;
+	fill: inherit;
+	stroke: inherit;
 }
 
 .tabContent {
 	display: block;
+	padding-top: 8px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 
 .hiddenTab {
 	display: none;
-}
-
-.panel {
-	z-index: 5;
-	display: block;
-	overflow-y: scroll;
-}
-
-.titlepanel {
-	margin: 0;
-	padding-top: 0;
-	padding-left: 4px;
-	background: var(--accent-color);
-	color: var(--accent-contrast);
-	border-bottom: 1px solid var(--normal-background);
-	white-space: nowrap;
-	overflow-x: hidden;
-}
-
-.titlepanel a:hover {
-	background: var(--accent-alternative);
-}
-
-.panelcontent {
-	z-index: -20;
-	display: block;
-	width: 100%;
-	overflow-y: auto;
-	overflow-x: auto;
-}
-
-.panelcontent table {
-	z-index: -30;
-}
-
-/* tooltips */
-
-.tooltip {
-	position: relative;
-	display: inline-block;
-}
-
-.tooltip .tooltiptext {
-	background-color: var(--tooltip-background);
-	color: var(--tooltip-color);
-	visibility: hidden;
-	padding: 4px;
-	border-radius: 2px;
-	white-space: nowrap;
-	/* Position the tooltip */
-	position: absolute;
-	z-index: 100;
-}
-
-.topTooltip {
-	bottom: 120%;
-	left: 20px;
-}
-
-.bottomTooltip {
-	top: 120%;
-	left: 20px;
-}
-
-.bottomRightTooltip {
-	top: 120%;
-	right: 20px;
-}
-
-.tooltip:hover .tooltiptext {
-	visibility: visible;
-}
-
-.highlight {
-	color: var(--highlight-color);
-}
-
-.active {
-	background: var(--highlight-color);
-}
-
-.bordered {
-	border: 1px solid var(--input-border) !important;
-}
-
-.error {
-	color: var(--error-color) !important;
-}
-
-.preserve {
-	white-space: pre-wrap;
-}
-
-.divContainer {
-	/* Any container that needs to scroll content */
-	width: 100%;
-	height: 100%;
-	overflow: auto;
 }
