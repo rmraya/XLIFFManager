@@ -89,7 +89,7 @@ class App {
             this.createWindow();
             this.createMenu();
             this.loadDefaults();
-            App.mainWindow.once('ready-to-show', (event: IpcMainEvent) => {
+            App.mainWindow.once('ready-to-show', () => {
                 App.loadLocation();
                 App.mainWindow.show();
                 setTimeout(() => {
@@ -281,7 +281,7 @@ class App {
 
     createWindow(): void {
         App.mainWindow = new BrowserWindow({
-            width: 620,
+            width: 800,
             maximizable: false,
             show: false,
             icon: App.appIcon,
