@@ -84,13 +84,16 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
 
 You can get ready to use installers of XLIFF Manager for Windows, macOS and Linux from [https://www.maxprograms.com/products/xliffmanager.html](https://www.maxprograms.com/products/xliffmanager.html).
 
-"XLIFF Manager User Guide" is available in PDF format from [https://www.maxprograms.com/support/xliffmanager.pdf](https://www.maxprograms.com/support/xliffmanager.pdf)
+## Documentation
 
+ - [XLIFF Manager User Guide](https://www.maxprograms.com/support/xliffmanager.pdf) (PDF)
+ - [XLIFF Manager User Guide](https://www.maxprograms.com/support/xliffmanager.html) (Web Help)
+ 
 ## Building & running
 
 Requirements:
 
-- [node.js](https://nodejs.org) 12.18.3 or newer
+- [node.js](https://nodejs.org) 14.16.0 or newer
 
 Building:
 
