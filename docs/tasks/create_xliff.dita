@@ -4,11 +4,11 @@
     <title>Create XLIFF File</title>
     <taskbody>
         <context>
-            <p>Use the <i>Create XLIFF File</i> section to generate an <xref href="../glossaries/XLIFF.dita">XLIFF</xref> file from a selected
-                document.</p>
+            <p>Use the <i>Create XLIFF File</i> section to generate an <xref
+                    href="../glossaries/XLIFF.dita">XLIFF</xref> file from a selected document.</p>
             <fig id="fig_q44_2p1_l3b">
                 <image placement="break" href="../images/createXliff.png" align="center" scale="60">
-                    <alt>Create XLIFF File</alt>    
+                    <alt>Create XLIFF File</alt>
                 </image>
             </fig>
         </context>
@@ -21,8 +21,11 @@
                         <uicontrol>Source File</uicontrol> text box or click the
                         <uicontrol>Browse...</uicontrol> button next to it to select a document from
                     the file system.</cmd>
-                <info>If you use the <uicontrol>Browse...</uicontrol> button to select a file, the
-                    program will try to automatically guess its file type and character set.</info>
+                <info>
+                    <note type="tip">If you use the <uicontrol>Browse...</uicontrol> button to
+                        select a file, the program will try to automatically guess its file type and
+                        character set.</note>
+                </info>
             </step>
             <step>
                 <cmd>Select the language of the document to convert using the <uicontrol>Source
@@ -37,29 +40,34 @@
                         Type</uicontrol> drop-down list.</cmd>
             </step>
             <step>
-                <cmd>Select or adjust the <xref href="../glossaries/character_set.dita">character set</xref> of the source document using the
-                        <uicontrol>Character Set</uicontrol> drop-down list.</cmd>
+                <cmd>Select or adjust the <xref href="../glossaries/character_set.dita">character
+                        set</xref> of the source document using the <uicontrol>Character
+                        Set</uicontrol> drop-down list.</cmd>
             </step>
             <step>
                 <cmd>Select the <uicontrol>Generate XLIFF 2.0</uicontrol> check box if you want to
                     generate XLIFF 2.0.</cmd>
-                <info>By default the program generates XLIFF 1.2.</info>
+                <info>
+                    <note type="notice">The program generates XLIFF 1.2 by default.</note>
+                </info>
             </step>
             <step>
                 <cmd>Select the <uicontrol>Paragraph Segmentation</uicontrol> check box if you want
                     source text to be segmented at paragraph level. </cmd>
-                <info>The program uses sentence-level segmentation by default. You can select the
+                <info><note type="notice">The program uses sentence-level segmentation by default. You can select the
                     default <xref href="../glossaries/SRX.dita">SRX</xref> file used for
                     segmentation in the <xref href="default_settings.dita">Settings</xref>
-                    dialog.</info>
+                    dialog.</note></info>
             </step>
             <step>
                 <cmd>Select the <uicontrol>Embed Skeleton</uicontrol> option if you want the
                     skeleton file to be inserted in the generated XLIFF.</cmd>
-                <info>The program generates a separated skeleton file in the folder defined in <xref
-                        href="default_settings.dita">Settings</xref> dialog. An embedded
-                    skeleton allows merging the XLIFF file in any computer, not just the one where
-                    the XLIFF was generated.</info>
+                <info>
+                    <note type="notice">The program generates a separated skeleton file in the folder defined in
+                            <xref href="default_settings.dita">Settings</xref> dialog. An embedded
+                        skeleton allows merging the XLIFF file in any computer, not just the one
+                        where the XLIFF was generated.</note>
+                </info>
             </step>
             <step>
                 <cmd>Click the <uicontrol>Create XLIFF</uicontrol> button.</cmd>
