@@ -10,6 +10,15 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
+class Charset {
+    code: string;
+    description: string;
+}
+
+class Language {
+    code: string;
+    description: string;
+}
 
 class Main {
 
@@ -132,7 +141,7 @@ class Main {
 
     addSourceFile(arg: any): void {
         (document.getElementById('sourceFile') as HTMLInputElement).value = arg.file;
-        var type = arg.type;
+        let type: string = arg.type;
         if (type !== 'Unknown') {
             (document.getElementById('typeSelect') as HTMLSelectElement).value = type;
             if ('DITA' === type) {
@@ -148,54 +157,54 @@ class Main {
                 }
             }
         }
-        var encoding = arg.encoding;
+        let encoding: string = arg.encoding;
         if (encoding !== 'Unknown') {
             (document.getElementById('charsetSelect') as HTMLSelectElement).value = encoding;
         }
     }
 
     createXLIFF(): void {
-        var sourceFile = (document.getElementById('sourceFile') as HTMLInputElement).value;
+        let sourceFile: string = (document.getElementById('sourceFile') as HTMLInputElement).value;
         if (!sourceFile) {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source file' });
             return;
         }
-        var sourceLang = (document.getElementById('sourceSelect') as HTMLSelectElement).value;
+        let sourceLang: string = (document.getElementById('sourceSelect') as HTMLSelectElement).value;
         if (sourceLang === 'none') {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source language' });
             return;
         }
-        var fileType = (document.getElementById('typeSelect') as HTMLSelectElement).value;
+        let fileType: string = (document.getElementById('typeSelect') as HTMLSelectElement).value;
         if (fileType === 'none') {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select file type' });
             return;
         }
-        var charset = (document.getElementById('charsetSelect') as HTMLSelectElement).value;
+        let charset: string = (document.getElementById('charsetSelect') as HTMLSelectElement).value;
         if (charset === 'none') {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select character set' });
             return;
         }
-        var args: any = { command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset };
+        let args: any = { command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset };
         // check optional parameters
-        var targetLang = (document.getElementById('targetSelect') as HTMLSelectElement).value;
+        let targetLang: string = (document.getElementById('targetSelect') as HTMLSelectElement).value;
         if (targetLang !== 'none') {
             args.tgtLang = targetLang;
         }
         if ((document.getElementById('ditavalFile') as HTMLInputElement).disabled === false) {
-            var ditaval = (document.getElementById('ditavalFile') as HTMLInputElement).value;
+            let ditaval: string = (document.getElementById('ditavalFile') as HTMLInputElement).value;
             if (ditaval) {
                 args.ditaval = ditaval;
             }
         }
-        var is20: boolean = (document.getElementById('is20') as HTMLInputElement).checked;
+        let is20: boolean = (document.getElementById('is20') as HTMLInputElement).checked;
         if (is20) {
             args.is20 = true;
         }
-        var isParagraph = (document.getElementById('isParagraph') as HTMLInputElement).checked;
+        let isParagraph: boolean = (document.getElementById('isParagraph') as HTMLInputElement).checked;
         if (isParagraph) {
             args.paragraph = true;
         }
-        var isEmbed = (document.getElementById('isEmbed') as HTMLInputElement).checked;
+        let isEmbed: boolean = (document.getElementById('isEmbed') as HTMLInputElement).checked;
         if (isEmbed) {
             args.embed = true;
         }
@@ -214,12 +223,12 @@ class Main {
     }
 
     validate(): void {
-        var xliffFile = (document.getElementById('xliffFileValidation') as HTMLInputElement).value;
+        let xliffFile: string = (document.getElementById('xliffFileValidation') as HTMLInputElement).value;
         if (!xliffFile) {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
             return;
         }
-        var args = { command: 'validateXliff', file: xliffFile };
+        let args = { command: 'validateXliff', file: xliffFile };
         this.startWaiting();
         this.electron.ipcRenderer.send('validate', args);
     }
@@ -240,12 +249,12 @@ class Main {
     }
 
     analyse(): void {
-        var xliffFile = (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value;
+        let xliffFile: string = (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value;
         if (!xliffFile) {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
             return;
         }
-        var args = { command: 'analyseXliff', file: xliffFile };
+        let args = { command: 'analyseXliff', file: xliffFile };
         this.startWaiting();
         this.electron.ipcRenderer.send('analyse', args);
     }
@@ -270,10 +279,10 @@ class Main {
     }
 
     typesReceived(arg: any): void {
-        var array = arg.types;
-        var options = '<option value="none">Select File Type</option>';
+        let array: any[] = arg.types;
+        let options: string = '<option value="none">Select File Type</option>';
         for (let i = 0; i < array.length; i++) {
-            var type = array[i];
+            let type: any = array[i];
             options = options + '<option value="' + type.type + '">' + type.description + '</option>';
         }
         document.getElementById('typeSelect').innerHTML = options;
@@ -281,10 +290,10 @@ class Main {
     }
 
     charsetsReceived(arg: any): any {
-        var array = arg.charsets;
-        var options = '<option value="none">Select Character Set</option>';
+        let array: Charset[] = arg.charsets;
+        let options: string = '<option value="none">Select Character Set</option>';
         for (let i = 0; i < array.length; i++) {
-            var charset = array[i];
+            let charset: Charset = array[i];
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
         }
         document.getElementById('charsetSelect').innerHTML = options;
@@ -299,10 +308,10 @@ class Main {
             return;
         }
 
-        var srcArray = arg.srcLangs;
-        var srcOptions: string = '<option value="none">Select Language</option>';
+        let srcArray: Language[] = arg.srcLangs;
+        let srcOptions: string = '<option value="none">Select Language</option>';
         for (let i = 0; i < srcArray.length; i++) {
-            var lang = srcArray[i];
+            let lang: Language = srcArray[i];
             srcOptions = srcOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         }
         document.getElementById('sourceSelect').innerHTML = srcOptions;
@@ -310,10 +319,10 @@ class Main {
             (document.getElementById('sourceSelect') as HTMLSelectElement).value = srcArray[0].code;
         }
 
-        var tgtArray = arg.tgtLangs;
-        var tgtOptions: string = '<option value="none">Select Language</option>';
+        let tgtArray: Language[] = arg.tgtLangs;
+        let tgtOptions: string = '<option value="none">Select Language</option>';
         for (let i = 0; i < tgtArray.length; i++) {
-            var lang = tgtArray[i];
+            let lang: Language = tgtArray[i];
             tgtOptions = tgtOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         }
         document.getElementById('targetSelect').innerHTML = tgtOptions;
@@ -324,10 +333,10 @@ class Main {
     }
 
     languagesReceived(arg: any): void {
-        var array = arg.languages;
-        var languageOptions = '<option value="none">Select Language</option>';
+        let array: Language[] = arg.languages;
+        let languageOptions: string = '<option value="none">Select Language</option>';
         for (let i = 0; i < array.length; i++) {
-            var lang = array[i];
+            let lang: Language = array[i];
             languageOptions = languageOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         }
         document.getElementById('sourceSelect').innerHTML = languageOptions;
@@ -339,22 +348,22 @@ class Main {
     }
 
     mergeXLIFF(): void {
-        var xliffFile = (document.getElementById('xliffFile') as HTMLInputElement).value;
+        let xliffFile: string = (document.getElementById('xliffFile') as HTMLInputElement).value;
         if (!xliffFile) {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
             return;
         }
-        var targetFile = (document.getElementById('targetFile') as HTMLInputElement).value;
+        let targetFile: string = (document.getElementById('targetFile') as HTMLInputElement).value;
         if (!targetFile) {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select target file/folder' });
             return;
         }
-        var args: any = { command: 'merge', xliff: xliffFile, target: targetFile };
-        var unapproved = (document.getElementById('unapproved') as HTMLInputElement).checked;
+        let args: any = { command: 'merge', xliff: xliffFile, target: targetFile };
+        let unapproved: boolean = (document.getElementById('unapproved') as HTMLInputElement).checked;
         if (unapproved) {
             args.unapproved = true;
         }
-        var exportTmx = (document.getElementById('exportTmx') as HTMLInputElement).checked;
+        let exportTmx: boolean = (document.getElementById('exportTmx') as HTMLInputElement).checked;
         if (exportTmx) {
             args.exportTmx = true;
         }
@@ -386,8 +395,8 @@ class Main {
         (document.getElementById('ditavalFile') as HTMLInputElement).disabled = true;
     }
 
-    setStatus(arg: any): void {
-        var status: HTMLDivElement = document.getElementById('status') as HTMLDivElement;
+    setStatus(arg: string): void {
+        let status: HTMLDivElement = document.getElementById('status') as HTMLDivElement;
         status.innerHTML = arg;
         if (arg.length > 0) {
             status.style.display = 'block';

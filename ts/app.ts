@@ -9,14 +9,14 @@
  * Contributors:
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
+
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
 import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell } from "electron";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import { ClientRequest, IncomingMessage, request } from "http";
+import fetch from "node-fetch";
 
 class App {
 
-    static https = require('https');
     static path = require('path');
 
     static mainWindow: BrowserWindow;
@@ -82,7 +82,7 @@ class App {
         }
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
 
-        var ck = execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
+        let ck = execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
         console.log(ck.toString());
 
         app.on('ready', () => {
@@ -273,8 +273,8 @@ class App {
                 } else {
                     App.mainWindow.focus();
                 }
-            } catch (e) {
-                console.log(e);
+            } catch (error: any) {
+                console.log(JSON.stringify(error));
             }
         }
     }
@@ -308,10 +308,10 @@ class App {
         let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
         if (existsSync(defaultsFile)) {
             try {
-                var data: Buffer = readFileSync(defaultsFile);
+                let data: Buffer = readFileSync(defaultsFile);
                 App.mainWindow.setBounds(JSON.parse(data.toString()));
-            } catch (err) {
-                console.log(err);
+            } catch (error: any) {
+                console.log(JSON.stringify(error));
             }
         }
     }
@@ -326,8 +326,8 @@ class App {
     }
 
     loadDefaults(): void {
-        var data: Buffer = readFileSync(App.defaultsFile);
-        var defaults = JSON.parse(data.toString());
+        let data: Buffer = readFileSync(App.defaultsFile);
+        let defaults = JSON.parse(data.toString());
 
         if (defaults.srx) {
             App.defaultSRX = defaults.srx;
@@ -455,12 +455,12 @@ class App {
                 { name: 'XLIFF', extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
                 { name: 'XML Document', extensions: ['xml'] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 this.getFileType(event, value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -470,13 +470,13 @@ class App {
             filters: [
                 { name: 'XLIFF File', extensions: ['xlf'] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-xliff-file', value.filePaths[0]);
                 this.getTargetFile(event, value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -487,12 +487,12 @@ class App {
                 { name: 'DITAVAL File', extensions: ['ditaval'] },
                 { name: 'Any File', extensions: [] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-ditaval-file', value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -504,7 +504,7 @@ class App {
             function success(data: any) {
                 event.sender.send('conversion-started');
                 App.status = 'running';
-                var intervalObject = setInterval(() => {
+                let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
                     if (App.status === 'completed') {
                         App.getResult(data.process, event, 'conversionResult', 'conversion-completed');
@@ -529,12 +529,12 @@ class App {
             filters: [
                 { name: 'XLIFF File', extensions: ['xlf'] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-xliff-validation', value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -544,7 +544,7 @@ class App {
             function success(data: any) {
                 event.sender.send('validation-started', '');
                 App.status = 'running';
-                var intervalObject = setInterval(() => {
+                let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
                     if (App.status === 'completed') {
                         App.getResult(data.process, event, 'validationResult', 'validation-result');
@@ -564,12 +564,14 @@ class App {
     }
 
     selectTargetFile(event: IpcMainEvent): void {
-        dialog.showSaveDialog({ title: 'Target File/Folder' }).then((value) => {
+        dialog.showSaveDialog({
+            title: 'Target File/Folder'
+        }).then((value: Electron.SaveDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-target-file', value.filePath);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -579,7 +581,7 @@ class App {
             function success(data: any) {
                 event.sender.send('merge-created');
                 App.status = 'running';
-                var intervalObject = setInterval(() => {
+                let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
                     if (App.status === 'completed') {
                         App.getResult(data.process, event, 'mergeResult', 'merge-completed');
@@ -604,12 +606,12 @@ class App {
             filters: [
                 { name: 'XLIFF File', extensions: ['xlf'] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-xliff-analysis', value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -619,7 +621,7 @@ class App {
             function success(data: any) {
                 event.sender.send('analysis-started');
                 App.status = 'running';
-                var intervalObject = setInterval(() => {
+                let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
                     if (App.status === 'completed') {
                         App.getResult(data.process, event, 'analysisResult', 'analysis-completed');
@@ -692,84 +694,71 @@ class App {
     }
 
     static checkUpdates(silent: boolean): void {
-        App.https.get('https://maxprograms.com/xliffmanager.json', (res: IncomingMessage) => {
-            if (res.statusCode === 200) {
-                let rawData = '';
-                res.on('data', (chunk: string) => {
-                    rawData += chunk;
-                });
-                res.on('end', () => {
-                    try {
-                        const parsedData = JSON.parse(rawData);
-                        if (app.getVersion() !== parsedData.version) {
-                            App.latestVersion = parsedData.version;
-                            switch (process.platform) {
-                                case 'darwin':
-                                    App.downloadLink = process.arch === 'arm64' ? parsedData.amd64 : parsedData.darwin;
-                                    break;
-                                case 'win32':
-                                    App.downloadLink = parsedData.win32;
-                                    break;
-                                case 'linux':
-                                    App.downloadLink = parsedData.linux;
-                                    break;
-                            }
-                            App.updatesWindow = new BrowserWindow({
-                                parent: this.mainWindow,
-                                width: 600,
-                                useContentSize: true,
-                                minimizable: false,
-                                maximizable: false,
-                                resizable: false,
-                                show: false,
-                                icon: App.appIcon,
-                                webPreferences: {
-                                    nodeIntegration: true,
-                                    contextIsolation: false
-                                }
-                            });
-                            App.updatesWindow.setMenu(null);
-                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
-                            App.updatesWindow.once('ready-to-show', () => {
-                                App.updatesWindow.show();
-                            });
-                        } else {
-                            if (!silent) {
-                                dialog.showMessageBox(App.mainWindow, {
-                                    type: 'info',
-                                    message: 'There are currently no updates available'
-                                });
-                            }
-                        }
-                    } catch (e) {
-                        dialog.showMessageBox(App.mainWindow, { type: 'error', message: e.message });
+        fetch('https://maxprograms.com/xliffmanager.json', {
+            method: 'GET'
+        }).then(async (response) => {
+            let parsedData: any = await response.json();
+            if (app.getVersion() !== parsedData.version) {
+                App.latestVersion = parsedData.version;
+                switch (process.platform) {
+                    case 'darwin':
+                        App.downloadLink = process.arch === 'arm64' ? parsedData.amd64 : parsedData.darwin;
+                        break;
+                    case 'win32':
+                        App.downloadLink = parsedData.win32;
+                        break;
+                    case 'linux':
+                        App.downloadLink = parsedData.linux;
+                        break;
+                }
+                App.updatesWindow = new BrowserWindow({
+                    parent: this.mainWindow,
+                    width: 600,
+                    useContentSize: true,
+                    minimizable: false,
+                    maximizable: false,
+                    resizable: false,
+                    show: false,
+                    icon: App.appIcon,
+                    webPreferences: {
+                        nodeIntegration: true,
+                        contextIsolation: false
                     }
+                });
+                App.updatesWindow.setMenu(null);
+                App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
+                App.updatesWindow.once('ready-to-show', () => {
+                    App.updatesWindow.show();
                 });
             } else {
                 if (!silent) {
-                    dialog.showMessageBox(App.mainWindow, { type: 'error', message: 'Updates Request Failed.\nStatus code: ' + res.statusCode });
+                    dialog.showMessageBox(App.mainWindow, {
+                        type: 'info',
+                        message: 'There are currently no updates available'
+                    });
                 }
             }
-        }).on('error', (e: any) => {
-            if (!silent) {
-                dialog.showMessageBox(App.mainWindow, { type: 'error', message: e.message });
-            }
+        }).catch((reason: any) => {
+            dialog.showMessageBox(App.mainWindow, {
+                type: 'error',
+                message: JSON.stringify(reason)
+            });
         });
     }
 
     createMenu(): void {
-        var helpMenu: Menu = Menu.buildFromTemplate([
+        let helpMenu: Menu = Menu.buildFromTemplate([
             { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
             { label: 'Check for Updates', click: () => { App.checkUpdates(false) } },
             { label: 'View Release History', click: () => { App.releaseHistory() } }
         ]);
-        var template: MenuItem[] = [
+        let template: MenuItem[] = [
             new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
         ];
 
         if (process.platform === 'darwin') {
-            var appleMenu: Menu = Menu.buildFromTemplate([
+            let appleMenu: Menu = Menu.buildFromTemplate([
                 { label: 'About XLIFF Manager', click: () => { App.showAbout() } },
                 { label: 'Preferences...', accelerator: 'Cmd+,', click: () => { App.showSettings() } },
                 { type: 'separator' },
@@ -783,7 +772,7 @@ class App {
             ]);
             template.unshift(new MenuItem({ label: 'XLIFF Manager', submenu: appleMenu }));
         } else {
-            var fileMenu: Menu = Menu.buildFromTemplate([
+            let fileMenu: Menu = Menu.buildFromTemplate([
                 { label: 'Settings', click: () => { App.showSettings() } },
                 { type: 'separator' }
             ]);
@@ -821,7 +810,7 @@ class App {
         });
         App.aboutWindow.setMenu(null);
         App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
-        App.aboutWindow.once('ready-to-show', (event: IpcMainEvent) => {
+        App.aboutWindow.once('ready-to-show', () => {
             App.aboutWindow.show();
         });
     }
@@ -863,7 +852,7 @@ class App {
         });
         App.settingsWindow.setMenu(null);
         App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
-        App.settingsWindow.once('ready-to-show', (event: IpcMainEvent) => {
+        App.settingsWindow.once('ready-to-show', () => {
             App.settingsWindow.show();
         });
     }
@@ -877,12 +866,12 @@ class App {
                 { name: 'SRX File', extensions: ['srx'] },
                 { name: 'Any File', extensions: [] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('srx-received', value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -895,12 +884,12 @@ class App {
                 { name: 'XML File', extensions: ['xml'] },
                 { name: 'Any File', extensions: [] }
             ]
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('catalog-received', value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -909,12 +898,12 @@ class App {
             title: 'Skeleton Folder',
             defaultPath: App.sklFolder,
             properties: ['openDirectory', 'createDirectory']
-        }).then((value) => {
+        }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('skeleton-received', value.filePaths[0]);
             }
-        }).catch((error) => {
-            console.log(error);
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
         });
     }
 
@@ -924,50 +913,20 @@ class App {
         });
     }
 
-    static sendRequest(json: any, success: any, error: any): void {
-        var postData: string = JSON.stringify(json);
-        var options = {
-            hostname: 'localhost',
-            port: 8000,
-            path: '/FilterServer',
-            headers: {
-                'Content-Type': 'application/json',
-                'Content-Length': Buffer.byteLength(postData)
-            }
-        }
-        // Make a request
-        var req: ClientRequest = request(options);
-        req.on('response',
-            (res: IncomingMessage) => {
-                res.setEncoding('utf-8');
-                if (res.statusCode != 200) {
-                    error('sendRequest() error: ' + res.statusMessage);
-                }
-                var rawData: string = '';
-                res.on('data', (chunk: string) => {
-                    rawData += chunk;
-                });
-                res.on('end', () => {
-                    try {
-                        success(JSON.parse(rawData));
-                    } catch (e) {
-                        console.log('Received data: ' + rawData);
-                        error(e.message);
-                    }
-                });
-            }
-        );
-        req.write(postData, (err: Error) => {
-            if (err) {
-                console.log('Write error:  ' + err.message);
-            }
+    static sendRequest(json: any, success: Function, error: Function): void {
+        fetch('http://localhost:8000/FilterServer', {
+            method: 'POST',
+            headers: [
+                ['Content-Type', 'application/json'],
+                ['Accept', 'application/json']
+            ],
+            body: JSON.stringify(json)
+        }).then(async (response) => {
+            let json: any = await response.json();
+            success(json);
+        }).catch((reason: any) => {
+            error(JSON.stringify(reason));
         });
-        req.on('error', (err: Error) => {
-            error(err.message);
-            console.log('Error:  ' + err.message);
-            console.log('Params: ' + JSON.stringify(json));
-        });
-        req.end();
     }
 
     static downloadLatest(): void {

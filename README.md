@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+3.1.0 | Updated libraries | June 18, 2021
 3.0.0 | Redesigned UI; updated OpenXLIFF | May 5, 2021
 2.7.0 | New check for updates dialog; Improved XLIFF validation | February 3rd, 2021
 2.6.1 | Improved support for Trados Studio packages; improved conversion to/from XLIFF| January 1st, 2021

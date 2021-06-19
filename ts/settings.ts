@@ -10,7 +10,6 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
-
 class Settings {
 
     electron = require('electron');
@@ -60,10 +59,10 @@ class Settings {
     }
 
     languagesReceived(arg: any): void {
-        var array = arg.languages;
-        var options = '<option value="none">Select Language</option>';
+        var array: Language[] = arg.languages;
+        var options: string = '<option value="none">Select Language</option>';
         for (let i = 0; i < array.length; i++) {
-            var lang = array[i];
+            var lang: Language = array[i];
             options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
         }
         document.getElementById('sourceSelect').innerHTML = options;
