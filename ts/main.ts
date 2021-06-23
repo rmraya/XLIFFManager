@@ -99,7 +99,7 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('analysis-started', () => {
-            this.setStatus('Analysys started');
+            this.setStatus('Analysis started');
         });
 
         this.electron.ipcRenderer.on('analysis-completed', (event: Electron.IpcRendererEvent, arg: any) => {
