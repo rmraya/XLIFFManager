@@ -15,7 +15,7 @@
         </context>
         <steps>
             <step>
-                <cmd>Click on the <uicontrol>Analyze XLIFF</uicontrol> tab.</cmd>
+                <cmd>Click on the <uicontrol>Analyse XLIFF</uicontrol> tab.</cmd>
             </step>
             <step>
                 <cmd>Type the name and location of the XLIFF file to analyse in the <uicontrol>XLIFF
