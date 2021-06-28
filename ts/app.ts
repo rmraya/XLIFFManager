@@ -739,10 +739,12 @@ class App {
                 }
             }
         }).catch((reason: any) => {
-            dialog.showMessageBox(App.mainWindow, {
-                type: 'error',
-                message: JSON.stringify(reason)
-            });
+            if (!silent) {
+                dialog.showMessageBox(App.mainWindow, {
+                    type: 'error',
+                    message: JSON.stringify(reason)
+                });
+            }
         });
     }
 
