@@ -702,7 +702,7 @@ class App {
                 App.latestVersion = parsedData.version;
                 switch (process.platform) {
                     case 'darwin':
-                        App.downloadLink = process.arch === 'arm64' ? parsedData.amd64 : parsedData.darwin;
+                        App.downloadLink = process.arch === 'arm64' ? parsedData.arm64 : parsedData.darwin;
                         break;
                     case 'win32':
                         App.downloadLink = parsedData.win32;
@@ -935,6 +935,7 @@ class App {
         shell.openExternal(App.downloadLink).catch((reason: any) => {
             if (reason instanceof Error) {
                 console.log(reason.message);
+                return;
             }
             dialog.showErrorBox('Error', 'Unable to download latest version.');
         });
