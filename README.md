@@ -102,3 +102,5 @@ Building:
 - Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from [https://www.maxprograms.com](https://www.maxprograms.com)).
 - Run `npm install`
 - Finally, run `npm start`
+
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/rmraya/XLIFFManager)
