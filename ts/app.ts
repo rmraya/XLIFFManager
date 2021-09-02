@@ -13,7 +13,7 @@
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
 import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell } from "electron";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import fetch from "electron-fetch";
+import fetch from "node-fetch";
 
 class App {
 
