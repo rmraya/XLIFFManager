@@ -78,7 +78,6 @@ input {
 	background-color: var(--gray20);
 	color: var(--gray190);
 	border: 1px solid var(--gray190);
-	margin-top: 3px;
 	height: 1.4rem;
 	font-size: 1rem;
 	border-radius: 2px;
@@ -125,8 +124,7 @@ button {
 	font-size: 1em;
 	text-align: center;
 	margin: 4px;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding: 4px 8px;
 	white-space: nowrap;
 }
 

@@ -15,6 +15,8 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) w
 
 Version | Comment | Release Date
 --------|---------|-------------
+3.3.0 | Updated OpenXLIFF to 1.13.0 | September 2, 2021
+3.2.0 | Updated libraries; fixed automatic downloads of Apple M1 installer | July 4 2021
 3.1.0 | Updated libraries | June 18, 2021
 3.0.0 | Redesigned UI; updated OpenXLIFF | May 5, 2021
 2.7.0 | New check for updates dialog; Improved XLIFF validation | February 3rd, 2021

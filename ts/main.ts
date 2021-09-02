@@ -299,6 +299,7 @@ class Main {
         document.getElementById('charsetSelect').innerHTML = options;
         let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
         this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
     packageLanguages(arg: any): any {
@@ -416,6 +417,7 @@ class Main {
         document.getElementById('analysis').className = 'hiddenTab';
         let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
         this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
     showMerge(): void {
@@ -429,6 +431,7 @@ class Main {
         document.getElementById('analysis').className = 'hiddenTab';
         let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
         this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        (document.getElementById('xliffFile') as HTMLInputElement).focus();
     }
 
     showValidate(): void {
@@ -442,6 +445,7 @@ class Main {
         document.getElementById('analysis').className = 'hiddenTab';
         let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
         this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        (document.getElementById('xliffFileValidation') as HTMLInputElement).focus();
     }
 
     showAnalysis(): void {
@@ -455,6 +459,7 @@ class Main {
         document.getElementById('analysis').className = 'tabContent';
         let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
         this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
     }
 }
 

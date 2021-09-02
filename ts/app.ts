@@ -13,7 +13,7 @@
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
 import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell } from "electron";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import fetch from "node-fetch";
+import fetch from "electron-fetch";
 
 class App {
 
@@ -46,15 +46,14 @@ class App {
     stopping: boolean;
 
     constructor() {
-        app.allowRendererProcessReuse = true;
         if (!app.requestSingleInstanceLock()) {
             app.quit();
         } else {
             if (App.mainWindow) {
                 if (App.mainWindow.isMinimized()) {
-                    App.mainWindow.restore()
+                    App.mainWindow.restore();
                 }
-                App.mainWindow.focus()
+                App.mainWindow.focus();
             }
         }
         App.appHome = App.path.join(app.getPath('appData'), app.name);
@@ -287,7 +286,8 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false
+                contextIsolation: false,
+                nativeWindowOpen: true
             }
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
@@ -714,7 +714,6 @@ class App {
                 App.updatesWindow = new BrowserWindow({
                     parent: this.mainWindow,
                     width: 600,
-                    useContentSize: true,
                     minimizable: false,
                     maximizable: false,
                     resizable: false,
@@ -722,7 +721,8 @@ class App {
                     icon: App.appIcon,
                     webPreferences: {
                         nodeIntegration: true,
-                        contextIsolation: false
+                        contextIsolation: false,
+                        nativeWindowOpen: true
                     }
                 });
                 App.updatesWindow.setMenu(null);
@@ -807,7 +807,8 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false
+                contextIsolation: false,
+                nativeWindowOpen: true
             }
         });
         App.aboutWindow.setMenu(null);
@@ -849,7 +850,8 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false
+                contextIsolation: false,
+                nativeWindowOpen: true
             }
         });
         App.settingsWindow.setMenu(null);
