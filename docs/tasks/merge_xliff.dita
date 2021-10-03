@@ -4,8 +4,8 @@
     <title>Merge XLIFF File</title>
     <taskbody>
         <context>
-            <p>Use the <i>Merge XLIFF File</i> Section to convert an <xref
-                    href="../glossaries/XLIFF.dita">XLIFF</xref> file to original format.</p>
+            <p>Use the <i>Merge XLIFF</i> tab to convert an <xref href="../glossaries/XLIFF.dita"
+                    >XLIFF</xref> file to original format.</p>
             <p>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created
                 with other tools that use <i>OpenXLIFF Filters</i>.</p>
             <fig>
@@ -20,11 +20,10 @@
             </step>
             <step>
                 <cmd>Type the name and location of the XLIFF file to merge in the <uicontrol>XLIFF
-                        File</uicontrol> text box in the <uicontrol>Merge XLIFF File</uicontrol>
-                    section or click the <uicontrol>Browse...</uicontrol> button next to it to
-                    select an XLIFF file from the file system.</cmd>
+                        File</uicontrol> text box or click the <uicontrol>Browse...</uicontrol>
+                    button next to it to select an XLIFF file from the file system.</cmd>
                 <info>If you use the <uicontrol>Browse...</uicontrol> button to locate the XLIFF
-                    file, the program will try to automatically generate a suitable target file or
+                    file, the program tries to automatically generate a suitable target file or
                     folder.</info>
             </step>
             <step>
@@ -53,7 +52,7 @@
             </step>
             <step>
                 <cmd>Click the <uicontrol>Merge XLIFF</uicontrol> button.</cmd>
-                <stepresult>XLIFF Manager will try to merge the indicated file.</stepresult>
+                <stepresult>XLIFF Manager merges the indicated file.</stepresult>
             </step>
         </steps>
     </taskbody>

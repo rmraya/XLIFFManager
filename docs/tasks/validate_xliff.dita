@@ -23,13 +23,14 @@
                 <cmd>Click on the <uicontrol>Validate XLIFF</uicontrol> tab.</cmd>
             </step>
             <step>
-                <cmd>Type the name and location of the XLIFF file to validate in the <uicontrol>XLIFF
-                    File</uicontrol> text box in the <uicontrol>Validate XLIFF File</uicontrol> section or click the <uicontrol>Browse...</uicontrol>
-                    button next to it to select an XLIFF file from the file system.</cmd>
+                <cmd>Type the name and location of the XLIFF file to validate in the
+                        <uicontrol>XLIFF File</uicontrol> text box or click the
+                        <uicontrol>Browse...</uicontrol> button to select an XLIFF file from the
+                    file system.</cmd>
             </step>
             <step>
                 <cmd>Click the <uicontrol>Validate XLIFF</uicontrol> button.</cmd>
-                <stepresult>XLIFF Manager will try to validate the indicated file.</stepresult>
+                <stepresult>XLIFF Manager validates the indicated file.</stepresult>
             </step>
         </steps>
     </taskbody>
