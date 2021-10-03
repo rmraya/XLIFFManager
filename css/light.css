@@ -220,9 +220,8 @@ svg {
 	display: flex;
 	flex-flow: row;
 	color: var(--black);
-	background: var(--gray30);
 	margin: 0;
-	padding: 0;
+	padding: 0px 0px 0px 8px;
 }
 
 .tab {
