@@ -6,9 +6,9 @@
     <conbody>
         <p>XLIFF Manager works on these platforms:</p>
         <ul>
-            <li>Microsoft Windows (10 and 11)</li>
-            <li>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15) and Big Sur (11.x -
-                Intel and Apple Silicon)</li>
+            <li>Microsoft Windows (8, 8.1, 10 and 11)</li>
+            <li>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11.0) and
+                Monterey (12.0)</li>
             <li>Linux (with GNOME Desktop Manager)</li>
         </ul>
     </conbody>
