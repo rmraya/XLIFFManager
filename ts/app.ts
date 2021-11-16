@@ -11,9 +11,9 @@
  *******************************************************************************/
 
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell } from "electron";
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
-import fetch from "node-fetch";
+import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell, net, ClientRequest, session } from "electron";
+import { IncomingMessage } from "electron/main";
+import { existsSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, unlinkSync } from "fs";
 
 class App {
 
@@ -502,7 +502,6 @@ class App {
         arg.srx = App.defaultSRX;
         App.sendRequest(arg,
             function success(data: any) {
-                event.sender.send('conversion-started');
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -694,57 +693,73 @@ class App {
     }
 
     static checkUpdates(silent: boolean): void {
-        fetch('https://maxprograms.com/xliffmanager.json', {
-            method: 'GET'
-        }).then(async (response) => {
-            let parsedData: any = await response.json();
-            if (app.getVersion() !== parsedData.version) {
-                App.latestVersion = parsedData.version;
-                switch (process.platform) {
-                    case 'darwin':
-                        App.downloadLink = process.arch === 'arm64' ? parsedData.arm64 : parsedData.darwin;
-                        break;
-                    case 'win32':
-                        App.downloadLink = parsedData.win32;
-                        break;
-                    case 'linux':
-                        App.downloadLink = parsedData.linux;
-                        break;
-                }
-                App.updatesWindow = new BrowserWindow({
-                    parent: this.mainWindow,
-                    width: 600,
-                    minimizable: false,
-                    maximizable: false,
-                    resizable: false,
-                    show: false,
-                    icon: App.appIcon,
-                    webPreferences: {
-                        nodeIntegration: true,
-                        contextIsolation: false,
-                        nativeWindowOpen: true
+        session.defaultSession.clearCache().then(() => {
+            let request: Electron.ClientRequest = net.request({
+                url: 'https://maxprograms.com/xliffmanager.json',
+                session: session.defaultSession
+            });
+            request.on('response', (response: IncomingMessage) => {
+                let responseData: string = '';
+                response.on('data', (chunk: Buffer) => {
+                    responseData += chunk;
+                });
+                response.on('end', () => {
+                    try {
+                        let parsedData = JSON.parse(responseData);
+                        if (app.getVersion() !== parsedData.version) {
+                            App.latestVersion = parsedData.version;
+                            switch (process.platform) {
+                                case 'darwin':
+                                    App.downloadLink = process.arch === 'arm64' ? parsedData.arm64 : parsedData.darwin;
+                                    break;
+                                case 'win32':
+                                    App.downloadLink = parsedData.win32;
+                                    break;
+                                case 'linux':
+                                    App.downloadLink = parsedData.linux;
+                                    break;
+                            }
+                            App.updatesWindow = new BrowserWindow({
+                                parent: this.mainWindow,
+                                width: 600,
+                                minimizable: false,
+                                maximizable: false,
+                                resizable: false,
+                                show: false,
+                                icon: App.appIcon,
+                                webPreferences: {
+                                    nodeIntegration: true,
+                                    contextIsolation: false,
+                                    nativeWindowOpen: true
+                                }
+                            });
+                            App.updatesWindow.setMenu(null);
+                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
+                            App.updatesWindow.once('ready-to-show', () => {
+                                App.updatesWindow.show();
+                            });
+                            App.updatesWindow.on('close', () => {
+                                App.mainWindow.focus();
+                            });
+                        } else {
+                            if (!silent) {
+                                dialog.showMessageBox(App.mainWindow, {
+                                    type: 'info',
+                                    message: 'There are currently no updates available'
+                                });
+                            }
+                        }
+                    } catch (reason: any) {
+                        if (!silent) {
+                            dialog.showMessageBox(App.mainWindow, {
+                                type: 'error',
+                                message: JSON.stringify(reason)
+                            });
+                        }
                     }
                 });
-                App.updatesWindow.setMenu(null);
-                App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
-                App.updatesWindow.once('ready-to-show', () => {
-                    App.updatesWindow.show();
-                });
-            } else {
-                if (!silent) {
-                    dialog.showMessageBox(App.mainWindow, {
-                        type: 'info',
-                        message: 'There are currently no updates available'
-                    });
-                }
-            }
-        }).catch((reason: any) => {
-            if (!silent) {
-                dialog.showMessageBox(App.mainWindow, {
-                    type: 'error',
-                    message: JSON.stringify(reason)
-                });
-            }
+            });
+            request.end();
         });
     }
 
@@ -816,6 +831,9 @@ class App {
         App.aboutWindow.once('ready-to-show', () => {
             App.aboutWindow.show();
         });
+        App.aboutWindow.on('close', () => {
+            App.mainWindow.focus();
+        });
     }
 
     getVersion(event: IpcMainEvent): void {
@@ -858,6 +876,9 @@ class App {
         App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
         App.settingsWindow.once('ready-to-show', () => {
             App.settingsWindow.show();
+        });
+        App.settingsWindow.on('close', () => {
+            App.mainWindow.focus();
         });
     }
 
@@ -918,29 +939,90 @@ class App {
     }
 
     static sendRequest(json: any, success: Function, error: Function): void {
-        fetch('http://localhost:8000/FilterServer', {
-            method: 'POST',
-            headers: [
-                ['Content-Type', 'application/json'],
-                ['Accept', 'application/json']
-            ],
-            body: JSON.stringify(json)
-        }).then(async (response) => {
-            let json: any = await response.json();
-            success(json);
-        }).catch((reason: any) => {
-            error(JSON.stringify(reason));
+        let options: any = {
+            url: 'http://localhost:8000/FilterServer',
+            method: 'POST'
+        }
+        let request: ClientRequest = net.request(options);
+        let responseData: string = '';
+        request.setHeader('Content-Type', 'application/json');
+        request.setHeader('Accept', 'application/json');
+        request.on('response', (response: IncomingMessage) => {
+            response.on('error', (e: Error) => {
+                error(e.message);
+            });
+            response.on('aborted', () => {
+                error('Request aborted');
+            });
+            response.on('end', () => {
+                try {
+                    let json = JSON.parse(responseData);
+                    success(json);
+                } catch (reason: any) {
+                    error(JSON.stringify(reason));
+                }
+            });
+            response.on('data', (chunk: Buffer) => {
+                responseData += chunk.toString();
+            });
         });
+        request.write(JSON.stringify(json));
+        request.end();
     }
 
     static downloadLatest(): void {
-        shell.openExternal(App.downloadLink).catch((reason: any) => {
-            if (reason instanceof Error) {
-                console.log(reason.message);
-                return;
-            }
-            dialog.showErrorBox('Error', 'Unable to download latest version.');
+        let downloadsFolder = app.getPath('downloads');
+        let url: URL = new URL(App.downloadLink);
+        let path: string = url.pathname;
+        path = path.substring(path.lastIndexOf('/') + 1);
+        let file: string = downloadsFolder + (process.platform === 'win32' ? '\\' : '/') + path;
+        if (existsSync(file)) {
+            unlinkSync(file);
+        }
+        let request: Electron.ClientRequest = net.request({
+            url: App.downloadLink,
+            session: session.defaultSession
         });
+        App.mainWindow.webContents.send('set-status', 'Downloading...');
+        App.updatesWindow.destroy();
+        request.on('response', (response: IncomingMessage) => {
+            let fileSize = Number.parseInt(response.headers['content-length'] as string);
+            let received: number = 0;
+            response.on('data', (chunk: Buffer) => {
+                received += chunk.length;
+                if (process.platform === 'win32' || process.platform === 'darwin') {
+                    App.mainWindow.setProgressBar(received / fileSize);
+                }
+                App.mainWindow.webContents.send('set-status', { status: 'Downloaded: ' + Math.trunc(received * 100 / fileSize) + '%' });
+                appendFileSync(file, chunk);
+            });
+            response.on('end', () => {
+                App.mainWindow.webContents.send('set-status', { status: '' });
+                dialog.showMessageBox({
+                    type: 'info',
+                    message: 'Update downloaded'
+                });
+                if (process.platform === 'win32' || process.platform === 'darwin') {
+                    App.mainWindow.setProgressBar(0);
+                    shell.openPath(file).then(() => {
+                        app.quit();
+                    }).catch((reason: string) => {
+                        dialog.showErrorBox('Error', reason);
+                    });
+                }
+                if (process.platform === 'linux') {
+                    shell.showItemInFolder(file);
+                }
+            });
+            response.on('error', (reason: string) => {
+                App.mainWindow.webContents.send('set-status', { status: '' });
+                dialog.showErrorBox('Error', reason);
+                if (process.platform === 'win32' || process.platform === 'darwin') {
+                    App.mainWindow.setProgressBar(0);
+                }
+            });
+        });
+        request.end();
     }
 }
 

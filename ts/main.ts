@@ -40,6 +40,9 @@ class Main {
         this.electron.ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.typesReceived(arg);
         });
+        this.electron.ipcRenderer.on('set-status', (event:Electron.IpcRendererEvent, arg: any) => {
+            this.setStatus(arg.status);
+        });
 
         document.getElementById('createTab').addEventListener('click', () => { this.showCreate(); });
         document.getElementById('mergeTab').addEventListener('click', () => { this.showMerge(); });
