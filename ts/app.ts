@@ -65,7 +65,7 @@ class App {
         App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
         if (process.platform === 'win32') {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
-            App.verticalPadding = 56;
+            App.verticalPadding = 60;
         }
         if (!existsSync(App.appHome)) {
             mkdirSync(App.appHome);
