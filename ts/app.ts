@@ -759,6 +759,14 @@ class App {
                     }
                 });
             });
+            request.on('error', (error: Error) => {
+                if (!silent) {
+                    dialog.showMessageBox(App.mainWindow, {
+                        type: 'error',
+                        message: error.message
+                    });
+                }
+            });
             request.end();
         });
     }
@@ -767,8 +775,8 @@ class App {
         let helpMenu: Menu = Menu.buildFromTemplate([
             { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
-            { label: 'Check for Updates', click: () => { App.checkUpdates(false) } },
-            { label: 'View Release History', click: () => { App.releaseHistory() } }
+            { label: 'Check for Updates', click: () => { App.checkUpdates(false); } },
+            { label: 'View Release History', click: () => { App.releaseHistory(); } }
         ]);
         let template: MenuItem[] = [
             new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
@@ -776,8 +784,8 @@ class App {
 
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([
-                { label: 'About XLIFF Manager', click: () => { App.showAbout() } },
-                { label: 'Preferences...', accelerator: 'Cmd+,', click: () => { App.showSettings() } },
+                { label: 'About XLIFF Manager', click: () => { App.showAbout(); } },
+                { label: 'Preferences...', accelerator: 'Cmd+,', click: () => { App.showSettings(); } },
                 { type: 'separator' },
                 {
                     label: 'Services', role: 'services', submenu: [
@@ -785,27 +793,27 @@ class App {
                     ]
                 },
                 { type: 'separator' },
-                { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit() } }
+                { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
             ]);
             template.unshift(new MenuItem({ label: 'XLIFF Manager', submenu: appleMenu }));
         } else {
             let fileMenu: Menu = Menu.buildFromTemplate([
-                { label: 'Settings', click: () => { App.showSettings() } },
+                { label: 'Settings', click: () => { App.showSettings(); } },
                 { type: 'separator' }
             ]);
             template.unshift(new MenuItem({ label: '&File', submenu: fileMenu }));
         }
 
         if (process.platform === 'win32') {
-            template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit() } }));
+            template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
             template[1].submenu.append(new MenuItem({ type: 'separator' }));
-            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout() } }));
+            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
         }
 
         if (process.platform === 'linux') {
-            template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit() } }));
+            template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
             template[1].submenu.append(new MenuItem({ type: 'separator' }));
-            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout() } }));
+            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
         }
 
         Menu.setApplicationMenu(Menu.buildFromTemplate(template));
@@ -956,8 +964,8 @@ class App {
             });
             response.on('end', () => {
                 try {
-                    let json = JSON.parse(responseData);
-                    success(json);
+                    let result = JSON.parse(responseData);
+                    success(result);
                 } catch (reason: any) {
                     error(JSON.stringify(reason));
                 }
@@ -983,7 +991,7 @@ class App {
             url: App.downloadLink,
             session: session.defaultSession
         });
-        App.mainWindow.webContents.send('set-status', 'Downloading...');
+        App.mainWindow.webContents.send('set-status', { status: 'Downloading...' });
         App.updatesWindow.destroy();
         request.on('response', (response: IncomingMessage) => {
             let fileSize = Number.parseInt(response.headers['content-length'] as string);

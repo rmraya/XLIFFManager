@@ -31,7 +31,7 @@ a:hover {
 	left: calc(40% - 100px);
 	width: 200px;
 	margin: auto;
-	background-color: var(--themeDarker);
+	background-color: var(--themePrimary);
 	color: var(--white);
 	padding: 20px;
 	border-radius: 8px;
