@@ -81,9 +81,8 @@ class App {
         }
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
 
-        let ck = execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
-        console.log(ck.toString());
-
+        execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
+        
         app.on('ready', () => {
             this.createWindow();
             this.createMenu();
