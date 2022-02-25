@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018-2021 Maxprograms.
+ * Copyright (c) 2018-2022 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -22,7 +22,6 @@ class About {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
             this.electron.ipcRenderer.send('get-version');
         });
-
         this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
             document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
             document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
@@ -33,6 +32,9 @@ class About {
             if (event.code === 'Escape') {
                 this.electron.ipcRenderer.send('close-about');
             }
+        });
+        document.getElementById('maxprograms').addEventListener('click', ()=> {
+            this.electron.ipcRenderer.send('show-home');
         });
     }
 }

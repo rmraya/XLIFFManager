@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018-2021 Maxprograms.
+ * Copyright (c) 2018-2022 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -82,7 +82,7 @@ class App {
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
 
         execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
-        
+
         app.on('ready', () => {
             this.createWindow();
             this.createMenu();
@@ -228,6 +228,9 @@ class App {
         ipcMain.on('release-history', () => {
             App.releaseHistory();
         });
+        ipcMain.on('show-home', () => {
+            App.showHomePage();
+        }); 
         ipcMain.on('download-latest', () => {
             App.downloadLatest();
         });
@@ -941,6 +944,12 @@ class App {
 
     static releaseHistory(): void {
         shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html").catch((error: Error) => {
+            dialog.showErrorBox('Error', error.message);
+        });
+    }
+
+    static showHomePage(): void {
+        shell.openExternal("https://www.maxprograms.com/").catch((error: Error) => {
             dialog.showErrorBox('Error', error.message);
         });
     }
