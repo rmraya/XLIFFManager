@@ -104,8 +104,9 @@ Requirements:
 
 Building:
 
-- Checkout this repository.
-- Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository (build yourself or download from [https://www.maxprograms.com](https://www.maxprograms.com)).
+- Checkout [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) repository and build it
+- Checkout this repository
+- Copy [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF) binaries to your local copy of this repository
 - Run `npm install`
 - Finally, run `npm start`
 
