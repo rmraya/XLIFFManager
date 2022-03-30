@@ -29,8 +29,7 @@ class Settings {
 
         this.electron.ipcRenderer.on('set-defaultTheme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('themeColor') as HTMLSelectElement).value = arg;
-            let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-            this.electron.ipcRenderer.send('settings-height', { width: body.clientWidth, height: body.clientHeight });
+            this.electron.ipcRenderer.send('settings-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         });
 
         this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -61,10 +60,9 @@ class Settings {
     languagesReceived(arg: any): void {
         var array: Language[] = arg.languages;
         var options: string = '<option value="none">Select Language</option>';
-        for (let i = 0; i < array.length; i++) {
-            var lang: Language = array[i];
+        array.forEach((lang: Language) => {
             options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
-        }
+        });
         document.getElementById('sourceSelect').innerHTML = options;
         (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
         document.getElementById('targetSelect').innerHTML = options;

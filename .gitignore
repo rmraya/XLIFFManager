@@ -1,15 +1,11 @@
-/.project
 /js/
 /bin/
-/catalog/
 /conf/
 /include/
 /legal/
 /lib/
 /node_modules/
-/srx/
 /man/
-/xmlfilter/
 /release
 /XLIFF Manager-darwin-x64/
 /XLIFF Manager-darwin-arm64/
@@ -17,9 +13,7 @@
 /XLIFF Manager-linux-x64/
 /.settings/
 /.scannerwork/
-/docs/out/
 .DS_Store
 sonar-project.properties
 sonarqube.sh
 package-lock.json
-build.xml

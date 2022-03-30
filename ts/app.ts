@@ -23,6 +23,7 @@ class App {
     static settingsWindow: BrowserWindow;
     static aboutWindow: BrowserWindow;
     static updatesWindow: BrowserWindow;
+    static licensesWindow: BrowserWindow;
 
     static currentTheme: string;
     static defaultTheme: string = 'system';
@@ -79,9 +80,9 @@ class App {
             }
             writeFileSync(App.defaultsFile, JSON.stringify(defaults));
         }
-        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
 
-        execFileSync('bin/java', ['--module-path', 'lib', '-m', 'openxliff/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
+        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
+        execFileSync(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
 
         app.on('ready', () => {
             this.createWindow();
@@ -90,9 +91,7 @@ class App {
             App.mainWindow.once('ready-to-show', () => {
                 App.loadLocation();
                 App.mainWindow.show();
-                setTimeout(() => {
-                    App.checkUpdates(true);
-                }, 1000);
+                App.startup();
             });
         });
 
@@ -128,6 +127,9 @@ class App {
         });
         ipcMain.on('close-about', () => {
             App.destroyWindow(App.aboutWindow);
+        });
+        ipcMain.on('licenses-clicked', () => {
+            App.showLicenses({ from: 'about' });
         });
         ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.settingsWindow, arg);
@@ -230,7 +232,7 @@ class App {
         });
         ipcMain.on('show-home', () => {
             App.showHomePage();
-        }); 
+        });
         ipcMain.on('download-latest', () => {
             App.downloadLatest();
         });
@@ -247,6 +249,24 @@ class App {
         ipcMain.on('show-dialog', (event, arg) => {
             dialog.showMessageBox(arg);
         });
+        ipcMain.on('show-message', (event, arg) => {
+            dialog.showMessageBoxSync(arg);
+        });
+        ipcMain.on('licenses-height', (event: IpcMainEvent, arg: any) => {
+            App.setHeight(App.licensesWindow, arg);
+        });
+        ipcMain.on('close-licenses', () => {
+            App.destroyWindow(App.licensesWindow);
+        });
+        ipcMain.on('open-license', (event: IpcMainEvent, arg: any) => {
+            App.openLicense(arg.type);
+        });
+    }
+
+    static startup(): void {
+        setTimeout(() => {
+            App.checkUpdates(true);
+        }, 1000);
     }
 
     stopServer(): void {
@@ -374,12 +394,12 @@ class App {
 
     getLanguages(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getLanguages' },
-            function success(data: any) {
+            (data: any) => {
                 data.srcLang = App.defaultSrcLang;
                 data.tgtLang = App.defaultTgtLang;
                 event.sender.send('languages-received', data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -388,10 +408,10 @@ class App {
 
     getPackageLanguages(event: IpcMainEvent, arg: any): void {
         App.sendRequest(arg,
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('package-languages', data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -400,10 +420,10 @@ class App {
 
     getCharsets(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getCharsets' },
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('charsets-received', data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -412,10 +432,10 @@ class App {
 
     getTypes(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getTypes' },
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('types-received', data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -503,7 +523,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         arg.srx = App.defaultSRX;
         App.sendRequest(arg,
-            function success(data: any) {
+            (data: any) => {
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -517,7 +537,7 @@ class App {
                     }
                 }, 1000);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -542,7 +562,7 @@ class App {
     validate(event: IpcMainEvent, arg: any): void {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('validation-started', '');
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
@@ -557,7 +577,7 @@ class App {
                     }
                 }, 1000);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -579,7 +599,7 @@ class App {
     merge(event: IpcMainEvent, arg: any): void {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('merge-created');
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
@@ -594,7 +614,7 @@ class App {
                     }
                 }, 1000);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -619,7 +639,7 @@ class App {
     analyse(event: IpcMainEvent, arg: any): void {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('analysis-started');
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
@@ -634,7 +654,7 @@ class App {
                     }
                 }, 1000);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -643,10 +663,10 @@ class App {
 
     getFileType(event: IpcMainEvent, file: string): void {
         App.sendRequest({ command: 'getFileType', file: file },
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send('add-source-file', data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -655,14 +675,14 @@ class App {
 
     getTargetFile(event: IpcMainEvent, file: string): void {
         App.sendRequest({ command: 'getTargetFile', file: file },
-            function success(data: any) {
+            (data: any) => {
                 if (data.result === 'Success') {
                     event.sender.send('add-target-file', data.target);
                 } else {
                     dialog.showErrorBox('Error', data.reason);
                 }
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -671,10 +691,10 @@ class App {
 
     static getStatus(processId: string): void {
         App.sendRequest({ command: 'status', process: processId },
-            function success(data: any) {
+            (data: any) => {
                 App.status = data.status;
             },
-            function error(reason: string) {
+            (reason: string) => {
                 App.status = 'error';
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
@@ -684,10 +704,10 @@ class App {
 
     static getResult(processId: string, event: IpcMainEvent, command: string, callback: string): void {
         App.sendRequest({ command: command, process: processId },
-            function success(data: any) {
+            (data: any) => {
                 event.sender.send(callback, data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -778,7 +798,11 @@ class App {
             { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
             { label: 'Check for Updates', click: () => { App.checkUpdates(false); } },
-            { label: 'View Release History', click: () => { App.releaseHistory(); } }
+            { type: 'separator' },
+            { label: 'View Licenses', click: () => { App.showLicenses({ from: 'menu' }); } },
+            { type: 'separator' },
+            { label: 'View Release History', click: () => { App.releaseHistory(); } },
+            { label: 'Support Group', click: () => { App.showSupportGroup(); } },
         ]);
         let template: MenuItem[] = [
             new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
@@ -848,11 +872,11 @@ class App {
 
     getVersion(event: IpcMainEvent): void {
         App.sendRequest({ command: 'version' },
-            function success(data: any) {
+            (data: any) => {
                 data.xliffManager = app.getVersion();
                 event.sender.send('set-version', data);
             },
-            function error(reason: string) {
+            (reason: string) => {
                 dialog.showErrorBox('Error', reason);
                 console.log(reason);
             }
@@ -944,6 +968,102 @@ class App {
 
     static releaseHistory(): void {
         shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html").catch((error: Error) => {
+            dialog.showErrorBox('Error', error.message);
+        });
+    }
+
+    static showLicenses(arg: any): void {
+        let parent: BrowserWindow = App.mainWindow;
+        if (arg.from === 'about' && App.aboutWindow) {
+            parent = App.aboutWindow;
+        }
+        App.licensesWindow = new BrowserWindow({
+            parent: parent,
+            width: 430,
+            minimizable: false,
+            maximizable: false,
+            resizable: false,
+            show: false,
+            icon: App.appIcon,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false,
+                nativeWindowOpen: true
+            }
+        });
+        App.licensesWindow.setMenu(null);
+        App.licensesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'licenses.html'));
+        App.licensesWindow.once('ready-to-show', () => {
+            App.licensesWindow.show();
+        });
+        App.licensesWindow.on('close', () => {
+            parent.focus();
+        });
+    }
+
+    static openLicense(type: string) {
+        let licenseFile = '';
+        let title = '';
+        switch (type) {
+            case 'XLIFFManager':
+            case "OpenXLIFF":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
+                title = 'Eclipse Public License 1.0';
+                break;
+            case "electron":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'electron.txt');
+                title = 'MIT License';
+                break;
+            case "TypeScript":
+            case "MapDB":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'Apache2.0.html');
+                title = 'Apache 2.0';
+                break;
+            case "Java":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'java.html');
+                title = 'GPL2 with Classpath Exception';
+                break;
+            case "JSON":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'json.txt');
+                title = 'JSON.org License';
+                break;
+            case "jsoup":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'jsoup.txt');
+                title = 'MIT License';
+                break;
+            case "DTDParser":
+                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'LGPL2.1.txt');
+                title = 'LGPL 2.1';
+                break;
+            default:
+                dialog.showErrorBox('Error', 'Unknown license');
+                return;
+        }
+        let licenseWindow = new BrowserWindow({
+            parent: this.licensesWindow,
+            width: 680,
+            height: 400,
+            show: false,
+            title: title,
+            icon: App.appIcon,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false,
+                nativeWindowOpen: true
+            }
+        });
+        licenseWindow.setMenu(null);
+        licenseWindow.loadURL(licenseFile);
+        licenseWindow.once('ready-to-show', () => {
+            licenseWindow.show();
+        });
+        licenseWindow.on('close', () => {
+            App.licensesWindow.focus();
+        });
+    }
+
+    static showSupportGroup(): void {
+        shell.openExternal('https://groups.io/g/maxprograms/').catch((error: Error) => {
             dialog.showErrorBox('Error', error.message);
         });
     }

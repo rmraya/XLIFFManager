@@ -25,15 +25,18 @@ class About {
         this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
             document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
             document.getElementById('openxliff').innerHTML = arg.tool + '<br/>Version: ' + arg.version + '<br/>Build: ' + arg.build;
-            let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-            this.electron.ipcRenderer.send('about-height', { width: body.clientWidth, height: (body.clientHeight + 20) });
+            this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: (document.body.clientHeight + 40) });
+        });
+        document.getElementById('licensesButton').addEventListener('click', () => {
+            this.electron.ipcRenderer.send('licenses-clicked');
+            document.getElementById('licensesButton').blur();
         });
         document.addEventListener('keydown', (event: KeyboardEvent) => {
             if (event.code === 'Escape') {
                 this.electron.ipcRenderer.send('close-about');
             }
         });
-        document.getElementById('maxprograms').addEventListener('click', ()=> {
+        document.getElementById('maxprograms').addEventListener('click', () => {
             this.electron.ipcRenderer.send('show-home');
         });
     }

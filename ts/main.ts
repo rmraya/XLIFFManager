@@ -40,7 +40,7 @@ class Main {
         this.electron.ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.typesReceived(arg);
         });
-        this.electron.ipcRenderer.on('set-status', (event:Electron.IpcRendererEvent, arg: any) => {
+        this.electron.ipcRenderer.on('set-status', (event: Electron.IpcRendererEvent, arg: any) => {
             this.setStatus(arg.status);
         });
 
@@ -135,11 +135,11 @@ class Main {
     }
 
     startWaiting(): void {
-        document.getElementById('body').classList.add("wait");
+        document.body.classList.add("wait");
     }
 
     endWaiting(): void {
-        document.getElementById('body').classList.remove("wait");
+        document.body.classList.remove("wait");
     }
 
     addSourceFile(arg: any): void {
@@ -284,10 +284,9 @@ class Main {
     typesReceived(arg: any): void {
         let array: any[] = arg.types;
         let options: string = '<option value="none">Select File Type</option>';
-        for (let i = 0; i < array.length; i++) {
-            let type: any = array[i];
+        array.forEach((type: any) => {
             options = options + '<option value="' + type.type + '">' + type.description + '</option>';
-        }
+        });
         document.getElementById('typeSelect').innerHTML = options;
         this.electron.ipcRenderer.send('get-charsets');
     }
@@ -295,13 +294,11 @@ class Main {
     charsetsReceived(arg: any): any {
         let array: Charset[] = arg.charsets;
         let options: string = '<option value="none">Select Character Set</option>';
-        for (let i = 0; i < array.length; i++) {
-            let charset: Charset = array[i];
+        array.forEach((charset: Charset) => {
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
-        }
+        });
         document.getElementById('charsetSelect').innerHTML = options;
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
@@ -314,10 +311,9 @@ class Main {
 
         let srcArray: Language[] = arg.srcLangs;
         let srcOptions: string = '<option value="none">Select Language</option>';
-        for (let i = 0; i < srcArray.length; i++) {
-            let lang: Language = srcArray[i];
+        srcArray.forEach((lang: Language) => {
             srcOptions = srcOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
-        }
+        });
         document.getElementById('sourceSelect').innerHTML = srcOptions;
         if (srcArray.length === 1) {
             (document.getElementById('sourceSelect') as HTMLSelectElement).value = srcArray[0].code;
@@ -325,10 +321,9 @@ class Main {
 
         let tgtArray: Language[] = arg.tgtLangs;
         let tgtOptions: string = '<option value="none">Select Language</option>';
-        for (let i = 0; i < tgtArray.length; i++) {
-            let lang: Language = tgtArray[i];
+        tgtArray.forEach((lang: Language) => {
             tgtOptions = tgtOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
-        }
+        });
         document.getElementById('targetSelect').innerHTML = tgtOptions;
         if (tgtArray.length === 1) {
             (document.getElementById('targetSelect') as HTMLSelectElement).value = tgtArray[0].code;
@@ -339,10 +334,9 @@ class Main {
     languagesReceived(arg: any): void {
         let array: Language[] = arg.languages;
         let languageOptions: string = '<option value="none">Select Language</option>';
-        for (let i = 0; i < array.length; i++) {
-            let lang: Language = array[i];
+        array.forEach((lang: Language) => {
             languageOptions = languageOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
-        }
+        });
         document.getElementById('sourceSelect').innerHTML = languageOptions;
         (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
         document.getElementById('targetSelect').innerHTML = languageOptions;
@@ -418,8 +412,7 @@ class Main {
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'hiddenTab';
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
@@ -432,8 +425,7 @@ class Main {
         document.getElementById('merge').className = 'tabContent';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'hiddenTab';
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('xliffFile') as HTMLInputElement).focus();
     }
 
@@ -446,8 +438,7 @@ class Main {
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'tabContent';
         document.getElementById('analysis').className = 'hiddenTab';
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('xliffFileValidation') as HTMLInputElement).focus();
     }
 
@@ -460,8 +451,7 @@ class Main {
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'tabContent';
-        let body: HTMLBodyElement = document.getElementById('body') as HTMLBodyElement;
-        this.electron.ipcRenderer.send('main-height', { width: body.clientWidth, height: body.clientHeight });
+        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
     }
 }
