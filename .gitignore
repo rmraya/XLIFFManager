@@ -6,6 +6,7 @@
 /lib/
 /node_modules/
 /man/
+/out/
 /release
 /XLIFF Manager-darwin-x64/
 /XLIFF Manager-darwin-arm64/
