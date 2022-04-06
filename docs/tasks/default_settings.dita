@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="default_settings">
+    <title>Settings</title>
+    <shortdesc>Use the <uicontrol>Settings</uicontrol> dialog to set the default languages used by
+        the application and to configure the main XML catalog and default folder used to store
+        skeletons when creating <xref href="../glossaries/XLIFF.dita">XLIFF</xref> files.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Click on the <image href="../images/gears.png" placement="inline"/> button at
+                    the top of the main window or select <menucascade>
+                        <uicontrol>File</uicontrol>
+                        <uicontrol>Settings</uicontrol>
+                    </menucascade> in main menu (<menucascade>
+                        <uicontrol>XLIFF Manager</uicontrol>
+                        <uicontrol>Preferences</uicontrol>
+                    </menucascade> on macOS).</cmd>
+                <stepresult>The following dialog appears: <fig>
+                        <image href="../images/settings.png" placement="break" scale="60"
+                            align="center">
+                            <alt>Settings Dialog</alt>
+                        </image>
+                    </fig></stepresult>
+            </step>
+            <step>
+                <cmd>Select the apropriate default source and target languages to use when creating
+                    XLIFF files.</cmd>
+            </step>
+            <step>
+                <cmd>If you wish to use a custom catalog for XML files, enter its location in the
+                        <uicontrol>System Catalog</uicontrol> text box or use the corresponding
+                        <uicontrol>Browse...</uicontrol> button to select it from the file
+                    system.</cmd>
+            </step>
+            <step>
+                <cmd>If you wish to change the folder where skeleton files are saved, enter the
+                    folder name in the <uicontrol>Skeletons Folder</uicontrol> text box or use the
+                        <uicontrol>Browse...</uicontrol> button to select the new location in the
+                    file system. </cmd>
+            </step>
+            <step>
+                <cmd>To use a custom <xref href="../glossaries/SRX.dita">SRX</xref> file when creating XLIFF
+                    files, enter its location in the <uicontrol>Default SRX File</uicontrol> text
+                    box or use the <uicontrol>Browse...</uicontrol> button to select it from the
+                    file system.</cmd>
+            </step>
+            <step>
+                <cmd>Use the <uicontrol>Theme</uicontrol> drop-down to select the colors used in the
+                    graphical user interface. Available options are:
+                   
+                </cmd>
+                <choices>
+                    <choice><b>System Default</b>: automatically selects Dark or Light colors
+                        according to the preferences set in the operating system.</choice>
+                    <choice><b>Dark</b>: Uses dark background with white text.</choice>
+                    <choice><b>Light</b>: Uses light grey background with dark text</choice>
+                </choices>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Save Settings</uicontrol> button.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

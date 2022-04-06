@@ -308,8 +308,7 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false,
-                nativeWindowOpen: true
+                contextIsolation: false
             }
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
@@ -751,8 +750,7 @@ class App {
                                 icon: App.appIcon,
                                 webPreferences: {
                                     nodeIntegration: true,
-                                    contextIsolation: false,
-                                    nativeWindowOpen: true
+                                    contextIsolation: false
                                 }
                             });
                             App.updatesWindow.setMenu(null);
@@ -856,8 +854,7 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false,
-                nativeWindowOpen: true
+                contextIsolation: false
             }
         });
         App.aboutWindow.setMenu(null);
@@ -902,8 +899,7 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false,
-                nativeWindowOpen: true
+                contextIsolation: false
             }
         });
         App.settingsWindow.setMenu(null);
@@ -987,8 +983,7 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false,
-                nativeWindowOpen: true
+                contextIsolation: false
             }
         });
         App.licensesWindow.setMenu(null);
@@ -1048,8 +1043,7 @@ class App {
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
-                contextIsolation: false,
-                nativeWindowOpen: true
+                contextIsolation: false
             }
         });
         licenseWindow.setMenu(null);
