@@ -99,33 +99,9 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
  
 ## Licenses
 
-XLIFF Manager is available in two modes:
-
-- Source Code
-- Yearly Subscriptions for installers and support
-
-### Source Code
-
 Source code of XLIFF Manager is free. Anyone can download the source code, compile, modify and use it at no cost in compliance with the accompanying license terms.
 
-You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at Groups.io and request peer assistance for the source code version there.
-
-### Subscriptions
-
-The version of XLIFF Manager included in the official installers from [Maxprograms Download Page](https://www.maxprograms.com/downloads/index.html) can be used at no cost for 7 days requesting a free Evaluation Key.
-
-Personal Subscription Keys are available in  [Maxprograms Online Store](https://www.maxprograms.com/store/buy.html). Subscription Keys cannot be shared or transferred to different machines.
-
-Subscription version includes unlimited email support at tech@maxprograms.com
-
-### Differences sumary
-Differences | Source Code | Subscription Based
--|----------- | -------------
-Ready To Use Installers| No | Yes
-Notarized macOS launcher| No | Yes
-Signed launcher and installer for Windows | No | Yes
-Restricted Features | None | None
-Technical Support |  Peer support at  [Groups.io](https://groups.io/g/maxprograms/)| - Direct email at tech@maxprograms.com  <br> - Peer support at [Groups.io](https://groups.io/g/maxprograms/)
+You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at Groups.io and request peer assistance for the source code there.
 
 ## Requirements
 
