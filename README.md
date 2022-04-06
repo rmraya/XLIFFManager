@@ -15,15 +15,16 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 --------|---------|-------------
-4.0.0 | Updated OpenXLIFF to 2.0.0 | March 29, 2022
-3.7.0 | Updated OpenXLIFF to 1.17.2 | February 25, 2022
-3.6.0 | Updated OpenXLIFF to 1.17.0 | December 1, 2021
-3.5.0 | Improved updates downloader and updated libraries | November 16, 2021
-3.4.0 | Updated OpenXLIFF to 1.14.0; updated libraries | October 3, 2021
-3.3.0 | Updated OpenXLIFF to 1.13.0 | September 2, 2021
-3.2.0 | Updated libraries; fixed automatic downloads of Apple M1 installer | July 4 2021
-3.1.0 | Updated libraries | June 18, 2021
-3.0.0 | Redesigned UI; updated OpenXLIFF | May 5, 2021
+4.0.1 | Updated electron library to version 18.0.2| April 6th, 2022
+4.0.0 | Updated OpenXLIFF to 2.0.0 | March 29th, 2022
+3.7.0 | Updated OpenXLIFF to 1.17.2 | February 25th, 2022
+3.6.0 | Updated OpenXLIFF to 1.17.0 | December 1st, 2021
+3.5.0 | Improved updates downloader and updated libraries | November 16th, 2021
+3.4.0 | Updated OpenXLIFF to 1.14.0; updated libraries | October 3rd, 2021
+3.3.0 | Updated OpenXLIFF to 1.13.0 | September 2nd, 2021
+3.2.0 | Updated libraries; fixed automatic downloads of Apple M1 installer | July 4th 2021
+3.1.0 | Updated libraries | June 18th, 2021
+3.0.0 | Redesigned UI; updated OpenXLIFF | May 5th, 2021
 2.7.0 | New check for updates dialog; Improved XLIFF validation | February 3rd, 2021
 2.6.1 | Improved support for Trados Studio packages; improved conversion to/from XLIFF| January 1st, 2021
 2.6.0 | Added support for SRT subtitles and Adobe InCopy ICML | November 25th, 2020
