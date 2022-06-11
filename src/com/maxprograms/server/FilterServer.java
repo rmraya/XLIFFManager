@@ -22,7 +22,7 @@ import java.nio.file.Files;
 import com.maxprograms.converters.Constants;
 import com.sun.net.httpserver.HttpServer;
 
-public class FilterServer implements IServer {
+public class FilterServer {
 
 	private static final Logger LOGGER = System.getLogger(FilterServer.class.getName());
 
@@ -61,14 +61,12 @@ public class FilterServer implements IServer {
 		LOGGER.log(Level.INFO, "OpenXLIFF Server started");
 	}
 
-	@Override
 	public void stop() {
 		server.removeContext("/FilterServer");
 		LOGGER.log(Level.INFO, "OpenXLIFF Server closed");
 		System.exit(0);
 	}
 
-	@Override
 	public File getWorkFolder() throws IOException {
 		if (workDir == null) {
 			String os = System.getProperty("os.name").toLowerCase();
