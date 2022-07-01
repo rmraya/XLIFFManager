@@ -335,6 +335,10 @@ public class XliffHandler implements HttpHandler {
 		if (json.has("ditaval")) {
 			ditaval = json.getString("ditaval");
 		}
+		String config = "";
+		if (json.has("config")) {
+			config = json.getString("config");
+		}
 		embed = false;
 		if (json.has("embed")) {
 			embed = json.getBoolean("embed");
@@ -364,6 +368,9 @@ public class XliffHandler implements HttpHandler {
 		}
 		if (type.equals(FileFormats.DITA) && !ditaval.isEmpty()) {
 			params.put("ditaval", ditaval);
+		}
+		if (type.equals(FileFormats.JSON) && !config.isEmpty()) {
+			params.put("config", config);
 		}
 
 		new Thread(new Runnable() {

@@ -120,7 +120,11 @@ class App {
         });
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
-            App.setHeight(App.mainWindow, arg);
+            let rect: Rectangle = App.mainWindow.getBounds();
+            if (rect.height < arg.height) {
+                rect.height = arg.height + App.verticalPadding;
+                App.mainWindow.setBounds(rect);
+            }
         });
         ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.aboutWindow, arg);
@@ -157,6 +161,9 @@ class App {
         });
         ipcMain.on('select-ditaval', (event) => {
             this.selectDitaval(event);
+        });
+        ipcMain.on('select-config', (event) => {
+            this.selectConfig(event);
         });
         ipcMain.on('select-target-file', (event) => {
             this.selectTargetFile(event);
@@ -264,6 +271,7 @@ class App {
     }
 
     static startup(): void {
+        App.mainWindow.webContents.send('get-height', App.currentTheme);
         setTimeout(() => {
             App.checkUpdates(true);
         }, 1000);
@@ -309,28 +317,29 @@ class App {
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
-            }
+            },
+            height: 500
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
-        App.mainWindow.on('resize', () => {
-            App.saveLocation();
-        });
         App.mainWindow.on('move', () => {
             App.saveLocation();
         });
     }
 
     static saveLocation(): void {
-        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
-        writeFileSync(defaultsFile, JSON.stringify(App.mainWindow.getBounds()));
+        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
+        let position: number[] = App.mainWindow.getPosition();
+        let pos: any = { x: position[0], y: position[1] }
+        writeFileSync(defaultsFile, JSON.stringify(pos));
     }
 
     static loadLocation(): void {
-        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
+        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
         if (existsSync(defaultsFile)) {
             try {
                 let data: Buffer = readFileSync(defaultsFile);
-                App.mainWindow.setBounds(JSON.parse(data.toString()));
+                let pos: any = JSON.parse(data.toString());
+                App.mainWindow.setPosition(pos.x, pos.y);
             } catch (error: any) {
                 console.log(JSON.stringify(error));
             }
@@ -511,6 +520,22 @@ class App {
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-ditaval-file', value.filePaths[0]);
+            }
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
+        });
+    }
+
+    selectConfig(event: IpcMainEvent): void {
+        dialog.showOpenDialog({
+            properties: ['openFile'],
+            filters: [
+                { name: 'JSON File', extensions: ['json'] },
+                { name: 'Any File', extensions: [] }
+            ]
+        }).then((value: Electron.OpenDialogReturnValue) => {
+            if (!value.canceled) {
+                event.sender.send('add-config-file', value.filePaths[0]);
             }
         }).catch((error: any) => {
             console.log(JSON.stringify(error));
@@ -805,6 +830,9 @@ class App {
         let template: MenuItem[] = [
             new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
         ];
+        if (!app.isPackaged) {
+            helpMenu.append(new MenuItem({ label: 'Open Development Tools', accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
+        }
 
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([

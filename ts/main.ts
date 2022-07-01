@@ -48,14 +48,13 @@ class Main {
         document.getElementById('mergeTab').addEventListener('click', () => { this.showMerge(); });
         document.getElementById('validateTab').addEventListener('click', () => { this.showValidate(); });
         document.getElementById('analysisTab').addEventListener('click', () => { this.showAnalysis(); });
-
-        document.getElementById('helpButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-help'); });
         document.getElementById('infoButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
         document.getElementById('updatesButton').addEventListener('click', () => { this.electron.ipcRenderer.send('check-updates'); });
         document.getElementById('settingsButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-settings'); });
         document.getElementById('browseSource').addEventListener('click', () => { this.electron.ipcRenderer.send('select-source-file'); });
         document.getElementById('typeSelect').addEventListener('change', () => { this.typeChanged(); });
         document.getElementById('browseDitaVal').addEventListener('click', () => { this.electron.ipcRenderer.send('select-ditaval'); });
+        document.getElementById('browseConfig').addEventListener('click', () => { this.electron.ipcRenderer.send('select-config'); });
         document.getElementById('createXLIFF').addEventListener('click', () => { this.createXLIFF(); });
         document.getElementById('browseXLIFF').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-file'); });
         document.getElementById('browseTarget').addEventListener('click', () => { this.electron.ipcRenderer.send('select-target-file'); });
@@ -132,6 +131,14 @@ class Main {
         this.electron.ipcRenderer.on('add-ditaval-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('ditavalFile') as HTMLInputElement).value = arg;
         });
+
+        this.electron.ipcRenderer.on('add-config-file', (event: Electron.IpcRendererEvent, arg: any) => {
+            (document.getElementById('configFile') as HTMLInputElement).value = arg;
+        });
+
+        this.electron.ipcRenderer.on('get-height',()=>{
+            this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
+        })
     }
 
     startWaiting(): void {
@@ -151,6 +158,11 @@ class Main {
                 this.enableDitaVal();
             } else {
                 this.disableDitaVal();
+            }
+            if ('JSON' === type) {
+                this.enableConfig();
+            } else {
+                this.disableConfig();
             }
             if ('SDLPPX' === type) {
                 this.electron.ipcRenderer.send('get-package-languages', { command: 'getPackageLangs', package: arg.file });
@@ -199,6 +211,12 @@ class Main {
                 args.ditaval = ditaval;
             }
         }
+        if ((document.getElementById('configFile') as HTMLInputElement).disabled === false) {
+            let config: string = (document.getElementById('configFile') as HTMLInputElement).value;
+            if (config) {
+                args.config = config;
+            }
+        }
         let is20: boolean = (document.getElementById('is20') as HTMLInputElement).checked;
         if (is20) {
             args.is20 = true;
@@ -212,6 +230,7 @@ class Main {
             args.embed = true;
         }
         this.startWaiting();
+        console.log(args);
         this.electron.ipcRenderer.send('convert', args);
     }
 
@@ -298,7 +317,6 @@ class Main {
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
         });
         document.getElementById('charsetSelect').innerHTML = options;
-        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
@@ -393,6 +411,17 @@ class Main {
         (document.getElementById('ditavalFile') as HTMLInputElement).disabled = true;
     }
 
+    enableConfig(): void {
+        (document.getElementById('browseConfig') as HTMLButtonElement).disabled = false;
+        (document.getElementById('configFile') as HTMLInputElement).disabled = false;
+    }
+
+    disableConfig(): void {
+        (document.getElementById('browseConfig') as HTMLButtonElement).disabled = true;
+        (document.getElementById('configFile') as HTMLInputElement).value = '';
+        (document.getElementById('configFile') as HTMLInputElement).disabled = true;
+    }
+
     setStatus(arg: string): void {
         let status: HTMLDivElement = document.getElementById('status') as HTMLDivElement;
         status.innerHTML = arg;
@@ -412,7 +441,6 @@ class Main {
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'hiddenTab';
-        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
@@ -425,7 +453,6 @@ class Main {
         document.getElementById('merge').className = 'tabContent';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'hiddenTab';
-        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('xliffFile') as HTMLInputElement).focus();
     }
 
@@ -438,7 +465,6 @@ class Main {
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'tabContent';
         document.getElementById('analysis').className = 'hiddenTab';
-        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('xliffFileValidation') as HTMLInputElement).focus();
     }
 
@@ -451,7 +477,6 @@ class Main {
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'tabContent';
-        this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
     }
 }
