@@ -11,9 +11,9 @@
  *******************************************************************************/
 
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell, net, ClientRequest, session } from "electron";
+import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, net, Rectangle, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
-import { existsSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, unlinkSync } from "fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
 
 class App {
 
@@ -121,7 +121,7 @@ class App {
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
             let rect: Rectangle = App.mainWindow.getBounds();
-            if (rect.height < arg.height) {
+            if (rect.height < arg.height + App.verticalPadding) {
                 rect.height = arg.height + App.verticalPadding;
                 App.mainWindow.setBounds(rect);
             }
