@@ -7,7 +7,7 @@
             <p>Use the <i>Create XLIFF</i> panel to generate an <xref
                     href="../glossaries/XLIFF.dita">XLIFF</xref> file from a selected document.</p>
             <fig id="fig_q44_2p1_l3b">
-                <image placement="break" href="../images/createXliff.png" align="center" scale="70">
+                <image placement="break" href="../images/createXliff.png" align="center" scale="80">
                     <alt>Create XLIFF File</alt>
                 </image>
             </fig>

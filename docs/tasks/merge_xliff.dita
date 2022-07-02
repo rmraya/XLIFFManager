@@ -9,7 +9,7 @@
             <p>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created
                 with other tools that use <i>OpenXLIFF Filters</i>.</p>
             <fig>
-                <image placement="break" href="../images/mergeXliff.png" scale="70" align="center">
+                <image placement="break" href="../images/mergeXliff.png" scale="80" align="center">
                     <alt>Merge XLIFF File</alt>
                 </image>
             </fig>
