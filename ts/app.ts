@@ -548,6 +548,7 @@ class App {
         arg.srx = App.defaultSRX;
         App.sendRequest(arg,
             (data: any) => {
+                event.sender.send('conversion-started');
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);

@@ -230,7 +230,6 @@ class Main {
             args.embed = true;
         }
         this.startWaiting();
-        console.log(args);
         this.electron.ipcRenderer.send('convert', args);
     }
 
