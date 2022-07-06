@@ -35,11 +35,20 @@ import java.util.TreeMap;
 
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+import org.xml.sax.SAXException;
+
+import com.maxprograms.converters.ApproveAll;
 import com.maxprograms.converters.Constants;
 import com.maxprograms.converters.Convert;
+import com.maxprograms.converters.CopySources;
 import com.maxprograms.converters.EncodingResolver;
 import com.maxprograms.converters.FileFormats;
 import com.maxprograms.converters.Merge;
+import com.maxprograms.converters.PseudoTranslation;
+import com.maxprograms.converters.RemoveTargets;
 import com.maxprograms.converters.TmxExporter;
 import com.maxprograms.converters.sdlppx.Sdlppx2Xliff;
 import com.maxprograms.languages.Language;
@@ -50,12 +59,14 @@ import com.maxprograms.xliff2.ToXliff2;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-import org.xml.sax.SAXException;
-
 public class XliffHandler implements HttpHandler {
+
+	private static final String RESULT = "result";
+	private static final String SUCCESS = "Success";
+	private static final String FAILED = "Failed";
+	private static final String REASON = "reason";
+	private static final String RUNNING = "running";
+	private static final String COMPLETED = "completed";
 
 	private static final Logger LOGGER = System.getLogger(XliffHandler.class.getName());
 
@@ -64,6 +75,7 @@ public class XliffHandler implements HttpHandler {
 	private Map<String, JSONObject> conversionResults;
 	private Map<String, JSONObject> mergeResults;
 	private Map<String, JSONObject> analysisResults;
+	private Map<String, JSONObject> tasksResults;
 	private boolean embed;
 	private String xliff;
 	private String catalog;
@@ -78,6 +90,7 @@ public class XliffHandler implements HttpHandler {
 		conversionResults = new HashMap<>();
 		mergeResults = new HashMap<>();
 		analysisResults = new HashMap<>();
+		tasksResults = new HashMap<>();
 	}
 
 	@Override
@@ -152,6 +165,16 @@ public class XliffHandler implements HttpHandler {
 			if (command.equals("getPackageLangs")) {
 				response = getPackageLangs(json);
 			}
+			if (command.equals("copySources") || command.equals("pseudoTranslate") ||
+					command.equals("removeTargets") || command.equals("approveAll")) {
+				response = processTasks(json);
+			}
+			if (command.equals("analysisResult")) {
+				response = getAnalysisResult(json);
+			}
+			if (command.equals("tasksResult")) {
+				response = tasksResult(json);
+			}
 			byte[] bytes = response.getBytes(StandardCharsets.UTF_8);
 			exchange.getResponseHeaders().add("content-type", "application/json");
 			exchange.sendResponseHeaders(200, bytes.length);
@@ -168,13 +191,66 @@ public class XliffHandler implements HttpHandler {
 		}
 	}
 
+	private String tasksResult(JSONObject json) {
+		JSONObject result = new JSONObject();
+		if (json.has("process")) {
+			String process = json.getString("process");
+			result = tasksResults.get(process);
+			tasksResults.remove(process);
+		} else {
+			result.put(RESULT, FAILED);
+			result.put(REASON, "Error retrieving result from server");
+		}
+		return result.toString(2);
+	}
+
+	private String processTasks(final JSONObject json) {
+		String process = "" + System.currentTimeMillis();
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				running.put(process, RUNNING);
+				JSONObject jsonResult = new JSONObject();
+				try {
+					switch (json.getString("command")) {
+						case "approveAll":
+							ApproveAll.approveAll(json.getString("file"), json.getString("catalog"));
+							break;
+						case "removeTargets":
+							RemoveTargets.removeTargets(json.getString("file"), json.getString("catalog"));
+							break;
+						case "pseudoTranslate":
+							PseudoTranslation.pseudoTranslate(json.getString("file"), json.getString("catalog"));
+							break;
+						case "copySources":
+							CopySources.copySources(json.getString("file"), json.getString("catalog"));
+							break;
+						default:
+							throw new IOException("Unknown task");
+					}
+					jsonResult.put(RESULT, SUCCESS);
+				} catch (IOException | JSONException | SAXException | ParserConfigurationException
+						| URISyntaxException e) {
+					jsonResult.put(RESULT, FAILED);
+					jsonResult.put(REASON, e.getMessage());
+				}
+				tasksResults.put(process, jsonResult);
+				if (running.get(process).equals((RUNNING))) {
+					running.put(process, COMPLETED);
+				}
+			}
+		}).start();
+		return "{\"process\":\"" + process + "\"}";
+	}
+
 	private static String getPackageLangs(JSONObject json) {
 		try {
 			return Sdlppx2Xliff.getPackageLanguages(json.getString("package")).toString();
 		} catch (JSONException | IOException | SAXException | ParserConfigurationException e) {
 			JSONObject error = new JSONObject();
-			error.put("result", "Failed");
-			error.put("reason", e.getMessage());
+			error.put(RESULT, FAILED);
+			error.put(REASON, e.getMessage());
 			return error.toString();
 		}
 	}
@@ -220,7 +296,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, "running");
+				running.put(process, RUNNING);
 
 				List<String> result = Merge.merge(xliff, target, catalog, unapproved);
 				if (exportTmx && Constants.SUCCESS.equals(result.get(0))) {
@@ -234,14 +310,14 @@ public class XliffHandler implements HttpHandler {
 				}
 				JSONObject jsonResult = new JSONObject();
 				if (Constants.SUCCESS.equals(result.get(0))) {
-					jsonResult.put("result", "Success");
+					jsonResult.put(RESULT, SUCCESS);
 				} else {
-					jsonResult.put("result", "Failed");
-					jsonResult.put("reason", result.get(1));
+					jsonResult.put(RESULT, FAILED);
+					jsonResult.put(REASON, result.get(1));
 				}
 				mergeResults.put(process, jsonResult);
-				if (running.get(process).equals(("running"))) {
-					running.put(process, "completed");
+				if (running.get(process).equals((RUNNING))) {
+					running.put(process, COMPLETED);
 				}
 			}
 		}).start();
@@ -377,7 +453,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, "running");
+				running.put(process, RUNNING);
 				List<String> result = Convert.run(params);
 				if (embed && Constants.SUCCESS.equals(result.get(0))) {
 					result = Convert.addSkeleton(xliff, catalog);
@@ -387,14 +463,14 @@ public class XliffHandler implements HttpHandler {
 				}
 				JSONObject jsonResult = new JSONObject();
 				if (Constants.SUCCESS.equals(result.get(0))) {
-					jsonResult.put("result", "Success");
+					jsonResult.put(RESULT, SUCCESS);
 				} else {
-					jsonResult.put("result", "Failed");
-					jsonResult.put("reason", result.get(1));
+					jsonResult.put(RESULT, FAILED);
+					jsonResult.put(REASON, result.get(1));
 				}
 				conversionResults.put(process, jsonResult);
-				if (running.get(process).equals(("running"))) {
-					running.put(process, "completed");
+				if (running.get(process).equals((RUNNING))) {
+					running.put(process, COMPLETED);
 				}
 			}
 		}).start();
@@ -476,8 +552,8 @@ public class XliffHandler implements HttpHandler {
 			result = analysisResults.get(process);
 			analysisResults.remove(process);
 		} else {
-			result.put("result", "Failed");
-			result.put("reason", "Error retrieving result from server");
+			result.put(RESULT, FAILED);
+			result.put(REASON, "Error retrieving result from server");
 		}
 		return result.toString(2);
 	}
@@ -489,8 +565,8 @@ public class XliffHandler implements HttpHandler {
 			result = mergeResults.get(process);
 			mergeResults.remove(process);
 		} else {
-			result.put("result", "Failed");
-			result.put("reason", "Error retrieving result from server");
+			result.put(RESULT, FAILED);
+			result.put(REASON, "Error retrieving result from server");
 		}
 		return result.toString(2);
 	}
@@ -502,8 +578,8 @@ public class XliffHandler implements HttpHandler {
 			result = conversionResults.get(process);
 			conversionResults.remove(process);
 		} else {
-			result.put("result", "Failed");
-			result.put("reason", "Error retrieving result from server");
+			result.put(RESULT, FAILED);
+			result.put(REASON, "Error retrieving result from server");
 		}
 		return result.toString(2);
 	}
@@ -524,7 +600,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, "running");
+				running.put(process, RUNNING);
 				List<String> result = new ArrayList<>();
 				try {
 					RepetitionAnalysis instance = new RepetitionAnalysis();
@@ -537,13 +613,13 @@ public class XliffHandler implements HttpHandler {
 				}
 				JSONObject jsonResult = new JSONObject();
 				if (Constants.SUCCESS.equals(result.get(0))) {
-					jsonResult.put("result", "Success");
+					jsonResult.put(RESULT, SUCCESS);
 				} else {
-					jsonResult.put("result", "Failed");
-					jsonResult.put("reason", result.get(1));
+					jsonResult.put(RESULT, FAILED);
+					jsonResult.put(REASON, result.get(1));
 				}
 				analysisResults.put(process, jsonResult);
-				running.put(process, "completed");
+				running.put(process, COMPLETED);
 			}
 		}).start();
 		return "{\"process\":\"" + process + "\"}";
@@ -565,7 +641,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, "running");
+				running.put(process, RUNNING);
 				try {
 					XliffChecker validator = new XliffChecker();
 					boolean valid = validator.validate(file, catalog);
@@ -576,12 +652,12 @@ public class XliffHandler implements HttpHandler {
 						result.put("comment", "Selected file is valid XLIFF " + version);
 					} else {
 						String reason = validator.getReason();
-						result.put("reason", reason);
+						result.put(REASON, reason);
 					}
 					validationResults.put(process, result);
-					if (running.get(process).equals(("running"))) {
+					if (running.get(process).equals((RUNNING))) {
 						LOGGER.log(Level.INFO, "Validation completed");
-						running.put(process, "completed");
+						running.put(process, COMPLETED);
 					}
 				} catch (IOException e) {
 					LOGGER.log(Level.ERROR, "Error validating file", e);
@@ -601,11 +677,11 @@ public class XliffHandler implements HttpHandler {
 			if (target.isEmpty()) {
 				target = "Unknown";
 			}
-			result.put("result", "Success");
+			result.put(RESULT, SUCCESS);
 		} catch (IOException | SAXException | ParserConfigurationException e) {
 			LOGGER.log(Level.ERROR, "Error getting target file", e);
-			result.put("result", "Failed");
-			result.put("reason", e.getMessage());
+			result.put(RESULT, FAILED);
+			result.put(REASON, e.getMessage());
 		}
 		result.put("target", target);
 		return result.toString();
@@ -648,7 +724,7 @@ public class XliffHandler implements HttpHandler {
 			validationResults.remove(process);
 		} else {
 			result.put("valid", false);
-			result.put("reason", "Error retrieving result from server");
+			result.put(REASON, "Error retrieving result from server");
 		}
 		return result.toString(2);
 	}

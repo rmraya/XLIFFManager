@@ -64,6 +64,11 @@ class Main {
         document.getElementById('validateButton').addEventListener('click', () => { this.validate(); });
         document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
         document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
+        document.getElementById('browseXLIFFTasks').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-tasks'); });
+        document.getElementById('copySourcesButton').addEventListener('click', () => { this.copySources(); });
+        document.getElementById('pseudoTranslateButton').addEventListener('click', () => { this.pseudoTranslate(); });
+        document.getElementById('removeTargetsButton').addEventListener('click', () => { this.removeTargets(); });
+        document.getElementById('approveAllButton').addEventListener('click', () => { this.approveAll(); });
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
@@ -85,6 +90,10 @@ class Main {
             (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value = arg;
         });
 
+        this.electron.ipcRenderer.on('add-xliff-tasks', (event: Electron.IpcRendererEvent, arg: any) => {
+            (document.getElementById('xliffFileTasks') as HTMLInputElement).value = arg;
+        });
+
         this.electron.ipcRenderer.on('add-target-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('targetFile') as HTMLInputElement).value = arg;
         });
@@ -99,6 +108,14 @@ class Main {
 
         this.electron.ipcRenderer.on('validation-started', () => {
             this.setStatus('Validation started');
+        });
+
+        this.electron.ipcRenderer.on('process-started', () => {
+            this.setStatus('Processing started');
+        });
+
+        this.electron.ipcRenderer.on('process-completed', (event: Electron.IpcRendererEvent, arg: any) => {
+            this.processCompleted(arg);
         });
 
         this.electron.ipcRenderer.on('analysis-started', () => {
@@ -137,7 +154,7 @@ class Main {
             (document.getElementById('configFile') as HTMLInputElement).value = arg;
         });
 
-        this.electron.ipcRenderer.on('get-height',()=>{
+        this.electron.ipcRenderer.on('get-height', () => {
             this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         })
     }
@@ -500,6 +517,58 @@ class Main {
         document.getElementById('analysis').className = 'hiddenTab';
         document.getElementById('tasks').className = 'tabContent';
         (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
+    }
+
+    copySources(): void {
+        let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
+        if (!xliffFile) {
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            return;
+        }
+        let args = { command: 'copySources', file: xliffFile };
+        this.startWaiting();
+        this.electron.ipcRenderer.send('processTask', args);
+    }
+
+    pseudoTranslate(): void {
+        let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
+        if (!xliffFile) {
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            return;
+        }
+        let args = { command: 'pseudoTranslate', file: xliffFile };
+        this.startWaiting();
+        this.electron.ipcRenderer.send('processTask', args);
+    }
+
+    removeTargets(): void {
+        let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
+        if (!xliffFile) {
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            return;
+        }
+        let args = { command: 'removeTargets', file: xliffFile };
+        this.startWaiting();
+        this.electron.ipcRenderer.send('processTask', args);
+    }
+
+    approveAll(): void {
+        let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
+        if (!xliffFile) {
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            return;
+        }
+        let args = { command: 'approveAll', file: xliffFile };
+        this.startWaiting();
+        this.electron.ipcRenderer.send('processTask', args);
+    }
+
+    processCompleted(arg: any): void {
+        this.endWaiting();
+        this.setStatus('');
+        if (arg.result !== 'Success') {
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+        }
     }
 }
 

@@ -141,46 +141,52 @@ class App {
         ipcMain.on('close-settings', () => {
             App.destroyWindow(App.settingsWindow);
         });
-        ipcMain.on('select-source-file', (event) => {
+        ipcMain.on('select-source-file', (event: IpcMainEvent) => {
             this.selectSourceFile(event);
         });
-        ipcMain.on('select-xliff-file', (event) => {
+        ipcMain.on('select-xliff-file', (event: IpcMainEvent) => {
             this.selectXliffFile(event);
         });
-        ipcMain.on('convert', (event, arg) => {
+        ipcMain.on('convert', (event: IpcMainEvent, arg: any) => {
             this.convert(event, arg);
         });
-        ipcMain.on('select-xliff-validation', (event) => {
+        ipcMain.on('select-xliff-validation', (event: IpcMainEvent) => {
             this.selectXliffValidation(event);
         });
-        ipcMain.on('validate', (event, arg) => {
+        ipcMain.on('select-xliff-tasks', (event: IpcMainEvent) => {
+            this.selectXliffTasks(event);
+        });
+        ipcMain.on('processTask', (event: IpcMainEvent, arg: any) => {
+            this.processTask(event, arg);
+        });
+        ipcMain.on('validate', (event: IpcMainEvent, arg: any) => {
             this.validate(event, arg);
         });
-        ipcMain.on('select-xliff-analysis', (event) => {
+        ipcMain.on('select-xliff-analysis', (event: IpcMainEvent) => {
             this.selectXliffAnalysis(event);
         });
-        ipcMain.on('select-ditaval', (event) => {
+        ipcMain.on('select-ditaval', (event: IpcMainEvent) => {
             this.selectDitaval(event);
         });
-        ipcMain.on('select-config', (event) => {
+        ipcMain.on('select-config', (event: IpcMainEvent) => {
             this.selectConfig(event);
         });
-        ipcMain.on('select-target-file', (event) => {
+        ipcMain.on('select-target-file', (event: IpcMainEvent) => {
             this.selectTargetFile(event);
         });
-        ipcMain.on('analyse', (event, arg) => {
+        ipcMain.on('analyse', (event: IpcMainEvent, arg: any) => {
             this.analyse(event, arg);
         });
-        ipcMain.on('merge', (event, arg) => {
+        ipcMain.on('merge', (event: IpcMainEvent, arg: any) => {
             this.merge(event, arg);
         });
-        ipcMain.on('select-skeleton', (event) => {
+        ipcMain.on('select-skeleton', (event: IpcMainEvent) => {
             this.selectSkeleton(event);
         });
-        ipcMain.on('select-catalog', (event) => {
+        ipcMain.on('select-catalog', (event: IpcMainEvent) => {
             this.selectCatalog(event);
         });
-        ipcMain.on('select-srx', (event) => {
+        ipcMain.on('select-srx', (event: IpcMainEvent) => {
             this.selectSrx(event);
         });
         ipcMain.on('show-about', () => {
@@ -189,40 +195,40 @@ class App {
         ipcMain.on('show-settings', () => {
             App.showSettings();
         });
-        ipcMain.on('save-defaults', (event, arg) => {
+        ipcMain.on('save-defaults', (event: IpcMainEvent, arg: any) => {
             this.saveDefaults(arg);
         });
-        ipcMain.on('get-theme', (event) => {
+        ipcMain.on('get-theme', (event: IpcMainEvent) => {
             event.sender.send('set-theme', App.currentTheme);
         });
-        ipcMain.on('get-defaultTheme', (event) => {
+        ipcMain.on('get-defaultTheme', (event: IpcMainEvent) => {
             event.sender.send('set-defaultTheme', App.defaultTheme);
         });
-        ipcMain.on('get-version', (event) => {
+        ipcMain.on('get-version', (event: IpcMainEvent) => {
             this.getVersion(event);
         });
-        ipcMain.on('get-languages', (event) => {
+        ipcMain.on('get-languages', (event: IpcMainEvent) => {
             this.getLanguages(event);
         });
-        ipcMain.on('get-skeleton', (event) => {
+        ipcMain.on('get-skeleton', (event: IpcMainEvent) => {
             event.sender.send('skeleton-received', App.sklFolder);
         });
-        ipcMain.on('get-catalog', (event) => {
+        ipcMain.on('get-catalog', (event: IpcMainEvent) => {
             event.sender.send('catalog-received', App.defaultCatalog);
         });
-        ipcMain.on('get-srx', (event) => {
+        ipcMain.on('get-srx', (event: IpcMainEvent) => {
             event.sender.send('srx-received', App.defaultSRX);
         });
-        ipcMain.on('get-charsets', (event) => {
+        ipcMain.on('get-charsets', (event: IpcMainEvent) => {
             this.getCharsets(event);
         });
-        ipcMain.on('get-types', (event) => {
+        ipcMain.on('get-types', (event: IpcMainEvent) => {
             this.getTypes(event);
         });
-        ipcMain.on('get-package-languages', (event, arg) => {
+        ipcMain.on('get-package-languages', (event: IpcMainEvent, arg: any) => {
             this.getPackageLanguages(event, arg);
         });
-        ipcMain.on('check-updates', (event) => {
+        ipcMain.on('check-updates', (event: IpcMainEvent) => {
             App.checkUpdates(false);
         });
         ipcMain.on('show-help', () => {
@@ -246,17 +252,17 @@ class App {
         ipcMain.on('close-updates', () => {
             App.destroyWindow(App.updatesWindow);
         });
-        ipcMain.on('show-file', (event, arg) => {
+        ipcMain.on('show-file', (event: IpcMainEvent, arg: any) => {
             shell.openExternal('file://' + arg.file, {
                 activate: true, workingDirectory: app.getAppPath()
             }).catch((error: Error) => {
                 dialog.showErrorBox('Error', error.message);
             });
         });
-        ipcMain.on('show-dialog', (event, arg) => {
+        ipcMain.on('show-dialog', (event: IpcMainEvent, arg: any) => {
             dialog.showMessageBox(arg);
         });
-        ipcMain.on('show-message', (event, arg) => {
+        ipcMain.on('show-message', (event: IpcMainEvent, arg: any) => {
             dialog.showMessageBoxSync(arg);
         });
         ipcMain.on('licenses-height', (event: IpcMainEvent, arg: any) => {
@@ -584,6 +590,21 @@ class App {
         });
     }
 
+    selectXliffTasks(event: IpcMainEvent): void {
+        dialog.showOpenDialog({
+            properties: ['openFile'],
+            filters: [
+                { name: 'XLIFF File', extensions: ['xlf'] }
+            ]
+        }).then((value: Electron.OpenDialogReturnValue) => {
+            if (!value.canceled) {
+                event.sender.send('add-xliff-tasks', value.filePaths[0]);
+            }
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
+        });
+    }
+
     validate(event: IpcMainEvent, arg: any): void {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
@@ -594,6 +615,31 @@ class App {
                     App.getStatus(data.process);
                     if (App.status === 'completed') {
                         App.getResult(data.process, event, 'validationResult', 'validation-result');
+                        clearInterval(intervalObject);
+                    } else if (App.status === 'running') {
+                        // it's OK, keep waiting
+                    } else {
+                        clearInterval(intervalObject);
+                    }
+                }, 1000);
+            },
+            (reason: string) => {
+                dialog.showErrorBox('Error', reason);
+                console.log(reason);
+            }
+        );
+    }
+
+    processTask(event: IpcMainEvent, arg: any): void {
+        arg.catalog = App.defaultCatalog;
+        App.sendRequest(arg,
+            (data: any) => {
+                event.sender.send('process-started', '');
+                App.status = 'running';
+                let intervalObject = setInterval(() => {
+                    App.getStatus(data.process);
+                    if (App.status === 'completed') {
+                        App.getResult(data.process, event, 'tasksResult', 'process-completed');
                         clearInterval(intervalObject);
                     } else if (App.status === 'running') {
                         // it's OK, keep waiting
