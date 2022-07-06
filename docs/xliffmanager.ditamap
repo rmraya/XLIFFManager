@@ -11,7 +11,7 @@
             <ph>Copyright © 2018-2022 Maxprograms</ph>
         </booktitlealt>
     </booktitle>
-    <frontmatter>        
+    <frontmatter>
         <booklists>
             <toc/>
         </booklists>
@@ -26,9 +26,15 @@
         </topicmeta>
         <topicref href="tasks/create_xliff.dita"/>
         <topicref href="tasks/merge_xliff.dita"/>
-    </chapter>  
+    </chapter>
     <chapter href="tasks/validate_xliff.dita"/>
     <chapter href="tasks/analysis_xliff.dita"/>
+    <chapter href="concepts/translationTaks.dita">
+        <topicref href="tasks/copySources.dita"/>
+        <topicref href="tasks/pseudoTranslate.dita"/>
+        <topicref href="tasks/removeTargets.dita"/>
+        <topicref href="tasks/approveAll.dita"/>
+    </chapter>
     <chapter href="tasks/default_settings.dita"/>
     <backmatter>
         <booklists>

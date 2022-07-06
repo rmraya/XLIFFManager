@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="approveAll">
+    <title>Confirm all Segments</title>
+    <shortdesc>Set <codeph>approved="true"</codeph> in all <codeph>&lt;trans-unit></codeph> elements
+        in an XLIFF 1.2 file or set <codeph>state="final"</codeph> in all <codeph>&lt;unit></codeph>
+        elements of an XLIFF 2.0 document.</shortdesc>
+    <taskbody>
+        <context>
+            <p>Some translation tools do not offer a way to confirm segments at translation time.
+                Use this feature to confirm all segments, so you can select the <uicontrol>Export
+                    Approved Segments as TMX</uicontrol> option when merging your XLIFF file. </p>
+        </context>
+        <steps>
+            <step>
+                <cmd>On the left panel, click on the <uicontrol><image href="../images/tasks.png"
+                            placement="inline"/> Translation Tasks</uicontrol> option.</cmd>
+            </step>
+            <step>
+                <cmd>Type the name and location of the XLIFF file to process in the <uicontrol>XLIFF
+                        File</uicontrol> text box or click the <uicontrol>Browse...</uicontrol>
+                    button to select an XLIFF file from the file system.</cmd>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Confirm all Translations</uicontrol> button.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
