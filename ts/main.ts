@@ -48,6 +48,7 @@ class Main {
         document.getElementById('mergeTab').addEventListener('click', () => { this.showMerge(); });
         document.getElementById('validateTab').addEventListener('click', () => { this.showValidate(); });
         document.getElementById('analysisTab').addEventListener('click', () => { this.showAnalysis(); });
+        document.getElementById('tasksTab').addEventListener('click', () => { this.showTasks(); });
         document.getElementById('infoButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
         document.getElementById('updatesButton').addEventListener('click', () => { this.electron.ipcRenderer.send('check-updates'); });
         document.getElementById('settingsButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-settings'); });
@@ -436,10 +437,12 @@ class Main {
         document.getElementById('mergeTab').classList.remove('selectedTab');
         document.getElementById('validateTab').classList.remove('selectedTab');
         document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('tasksTab').classList.remove('selectedTab');
         document.getElementById('create').className = 'tabContent';
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'hiddenTab';
+        document.getElementById('tasks').className = 'hiddenTab';
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
@@ -448,10 +451,12 @@ class Main {
         document.getElementById('mergeTab').classList.add('selectedTab');
         document.getElementById('validateTab').classList.remove('selectedTab');
         document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('tasksTab').classList.remove('selectedTab');
         document.getElementById('create').className = 'hiddenTab';
         document.getElementById('merge').className = 'tabContent';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'hiddenTab';
+        document.getElementById('tasks').className = 'hiddenTab';
         (document.getElementById('xliffFile') as HTMLInputElement).focus();
     }
 
@@ -460,10 +465,12 @@ class Main {
         document.getElementById('mergeTab').classList.remove('selectedTab');
         document.getElementById('validateTab').classList.add('selectedTab');
         document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('tasksTab').classList.remove('selectedTab');
         document.getElementById('create').className = 'hiddenTab';
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'tabContent';
         document.getElementById('analysis').className = 'hiddenTab';
+        document.getElementById('tasks').className = 'hiddenTab';
         (document.getElementById('xliffFileValidation') as HTMLInputElement).focus();
     }
 
@@ -472,10 +479,26 @@ class Main {
         document.getElementById('mergeTab').classList.remove('selectedTab');
         document.getElementById('validateTab').classList.remove('selectedTab');
         document.getElementById('analysisTab').classList.add('selectedTab');
+        document.getElementById('tasksTab').classList.remove('selectedTab');
         document.getElementById('create').className = 'hiddenTab';
         document.getElementById('merge').className = 'hiddenTab';
         document.getElementById('validate').className = 'hiddenTab';
         document.getElementById('analysis').className = 'tabContent';
+        document.getElementById('tasks').className = 'hiddenTab';
+        (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
+    }
+
+    showTasks(): void {
+        document.getElementById('createTab').classList.remove('selectedTab');
+        document.getElementById('mergeTab').classList.remove('selectedTab');
+        document.getElementById('validateTab').classList.remove('selectedTab');
+        document.getElementById('analysisTab').classList.remove('selectedTab');
+        document.getElementById('tasksTab').classList.add('selectedTab');
+        document.getElementById('create').className = 'hiddenTab';
+        document.getElementById('merge').className = 'hiddenTab';
+        document.getElementById('validate').className = 'hiddenTab';
+        document.getElementById('analysis').className = 'hiddenTab';
+        document.getElementById('tasks').className = 'tabContent';
         (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
     }
 }

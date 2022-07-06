@@ -310,7 +310,7 @@ class App {
 
     createWindow(): void {
         App.mainWindow = new BrowserWindow({
-            width: 800,
+            width: 860,
             maximizable: false,
             show: false,
             icon: App.appIcon,

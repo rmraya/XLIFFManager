@@ -13,9 +13,9 @@
         <tr>
             <td class="leftSide">
                 <div class="toprow">
-                    <a id="createTab" class="selectedTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" title="Create XLIFF"
-                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" width="24"
-                            height="24" xml:space="preserve">
+                    <a id="createTab" class="selectedTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            title="Create XLIFF" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 24 24" width="24" height="24" xml:space="preserve">
                             <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19
                    c1.1,0,2,0.9,2,2V19C21,20.1,20.1,21,19,21z" />
                             <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="12" y1="7" x2="12" y2="17" />
@@ -59,6 +59,16 @@
                             <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="17" y1="17" x2="17" y2="10" />
                             <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="7" y1="17" x2="7" y2="13" />
                         </svg><span>Analyse XLIFF</span></a>
+                    <a id="tasksTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" title="Translation Tasks"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" width="24"
+                            height="24" xml:space="preserve">
+                            <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19
+                   c1.1,0,2,0.9,2,2V19C21,20.1,20.1,21,19,21z" />
+                            <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="6" y1="10" x2="11" y2="10" />
+                            <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="6" y1="15" x2="11" y2="15" />
+                            <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="13" y1="10" x2="18" y2="10" />
+                            <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="13" y1="15" x2="18" y2="15" />
+                        </svg><span>Translation Tasks</span></a>
                 </div>
                 <div class="bottomRow">
                     <a id="updatesButton">
@@ -210,6 +220,30 @@
                     <div class="buttonArea">
                         <button id="analyseButton">Analyse XLIFF</button>
                     </div>
+                </div>
+
+                <div class="hiddenTab" id="tasks">
+                    <table>
+                        <tr>
+                            <td class="noWrap middle"><label for="xliffFileTasks">XLIFF File</label></td>
+                            <td class="fill_width middle"><input id="xliffFileTasks" type="text" class="fill_width">
+                            </td>
+                            <td class="middle"><button id="browseXLIFFTasks">Browse...</button></td>
+                        </tr>
+                    </table>
+
+                    <table style="width: calc(100% - 16px);">
+                        <tr>
+                            <td class="fill_width">&nbsp;</td>
+                            <td><button id="copySourcesButton" class="fill_width">Copy Source to Target</button></td>
+                            <td><button id="pseudoTranslateButton" class="fill_width">Pseudo-Translate</button></td>
+                        </tr>
+                        <tr>
+                            <td class="fill_width">&nbsp;</td>
+                            <td><button id="removeTargetsButton" class="fill_width">Remove all Targets</button></td>
+                            <td><button id="approveAllButton" class="fill_width">Confirm all Translations</button></td>
+                        </tr>
+                    </table>
                 </div>
                 <div id="status" class="status" style="display:none;"></div>
             </td>
