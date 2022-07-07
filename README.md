@@ -9,17 +9,18 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
 - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-<img src="https://www.maxprograms.com/images/XliffManager5.png" alt="XLIFF Manager on Windows 10" width="680"/>
+<img src="https://www.maxprograms.com/images/XliffManager_Windows.png" alt="XLIFF Manager on Windows 11" width="680"/>
 
 ## Releases
 
 Version | Comment | Release Date
---------|---------|-------------
+:------:|---------|:-----------:
+5.0.0 | Redesigned GUI and added new Translation Tasks panel | July 7th, 2022
 4.0.1 | Updated electron library to version 18.0.2| April 6th, 2022
 4.0.0 | Updated OpenXLIFF to 2.0.0 | March 29th, 2022
 3.7.0 | Updated OpenXLIFF to 1.17.2 | February 25th, 2022
 3.6.0 | Updated OpenXLIFF to 1.17.0 | December 1st, 2021
-3.5.0 | Improved updates downloader and updated libraries | November 16th, 2021
+3.5.0 | Improved updates downloader and updated libraries | November&nbsp;16th,&nbsp;2021
 3.4.0 | Updated OpenXLIFF to 1.14.0; updated libraries | October 3rd, 2021
 3.3.0 | Updated OpenXLIFF to 1.13.0 | September 2nd, 2021
 3.2.0 | Updated libraries; fixed automatic downloads of Apple M1 installer | July 4th 2021
@@ -31,7 +32,7 @@ Version | Comment | Release Date
 2.5.1 | Fixed JSON encoding and import of XLIFF matches | November 1st, 2020
 2.5.0 | Added support for JSON files | October 1st, 2020
 2.4.1 | Fixed support for TXLF files and improved XML catalog handling | September 5th, 2020
-2.4.0 | Allowed conversion of 3rd party XLIFF and improved support for XLIFF 2.0 | August 26th, 2020
+2.4.0 | Allowed conversion of 3rd party XLIFF and improved support for XLIFF 2.0 | August 26th,&nbsp;2020
 2.3.0 | Upgraded OpenXLIFF and TypeScript; updated layout and theme handling | August 14th, 2020
 2.2.0 | Upgraded OpenXLIFF, TypeScript and Electron | June 12th, 2020
 2.1.0 | Improved entity resolution in catalog manager; added XInclude to default XML catalog | April 25th, 2020
@@ -40,7 +41,7 @@ Version | Comment | Release Date
 1.8.0 | Migrated source code to TypeScript | January 28th, 2020
 1.7.0 | Major code cleanup; Changed segmentation model for XLIFF 2.0 | January 1st, 2020
 1.6.0 | Added support for XLIFF files from WPML WordPress Plugin | December 2nd, 2019
-1.5.0 | Added menu and improved DITA support | September 22nd, 2019
+1.5.0 | Added menu and improved DITA support | September&nbsp;22nd,&nbsp;2019
 1.4.2 | Fixed merge errors in XLIFF 2.0; several minor improvements | August 14th, 2019
 1.4.1 | Improved performance generating XLIFF 2.0 with embedded skeleton; wait for server to be ready befor opening UI | July 26th, 2019
 1.4.0 | Added option to automatically open translated files; allowed selection of default SRX file | July 17th, 2019
