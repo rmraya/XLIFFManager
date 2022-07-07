@@ -9,7 +9,7 @@
             <li><xref href="../tasks/copySources.dita">Copy Source to all Untranslated Segments</xref></li>
             <li><xref href="../tasks/pseudoTranslate.dita">Pseudo-Translate Untranslated Segments</xref></li>
             <li><xref href="../tasks/removeTargets.dita">Remove all Targets</xref></li>
-            <li><xref href="../tasks/approveAll.dita">Confirm all Segments</xref></li>
+            <li><xref href="../tasks/approveAll.dita">Approve all Segments</xref></li>
         </ul>
         <fig>
             <image align="center" placement="break" href="../images/translationTasks.png"

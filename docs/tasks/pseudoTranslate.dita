@@ -7,10 +7,10 @@
         an accented version (e.g.: e => é).</shortdesc>
     <taskbody>
         <context>
-            <p>Use this method to generate a fake translation that you can use to test the Merge
-                process. After making sure that Merge runs successfully, you can use the <xref
-                    href="removeTargets.dita">Remove all Targets</xref> option to clean your XLIFF
-                file.</p>
+            <p>Use this method to generate a fake translation that you can use to test the <xref
+                    href="merge_xliff.dita">Merge XLIFF File</xref> process. After making sure that
+                Merge runs successfully, you can use the <xref href="removeTargets.dita">Remove all
+                    Targets</xref> option to clean your XLIFF file.</p>
         </context>
         <steps>
             <step>
