@@ -103,15 +103,15 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('conversion-started', () => {
-            this.setStatus('Conversion started');
+            this.setStatus('Creating XLIFF');
         });
 
         this.electron.ipcRenderer.on('validation-started', () => {
-            this.setStatus('Validation started');
+            this.setStatus('Validating XLIFF');
         });
 
         this.electron.ipcRenderer.on('process-started', () => {
-            this.setStatus('Processing started');
+            this.setStatus('Processing XLIFF');
         });
 
         this.electron.ipcRenderer.on('process-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -119,7 +119,7 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('analysis-started', () => {
-            this.setStatus('Analysis started');
+            this.setStatus('Analysing XLIFF');
         });
 
         this.electron.ipcRenderer.on('analysis-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -135,7 +135,7 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('merge-created', () => {
-            this.setStatus('Merge started');
+            this.setStatus('Merging XLIFF');
         });
 
         this.electron.ipcRenderer.on('merge-completed', (event: Electron.IpcRendererEvent, arg: any) => {

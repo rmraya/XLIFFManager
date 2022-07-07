@@ -82,6 +82,14 @@ class App {
         }
 
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
+        if (!app.isPackaged) {
+            this.ls.stdout.on('data', (data: Buffer | string) => {
+                console.log(data instanceof Buffer ? data.toString() : data);
+            });
+            this.ls.stderr.on('data', (data: Buffer | string) => {
+                console.error(data instanceof Buffer ? data.toString() : data);
+            });
+        }
         execFileSync(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
 
         app.on('ready', () => {
@@ -106,9 +114,6 @@ class App {
 
         nativeTheme.on('updated', () => {
             this.loadDefaults();
-        });
-
-        nativeTheme.on('updated', () => {
             if (App.defaultTheme === 'system') {
                 if (nativeTheme.shouldUseDarkColors) {
                     App.currentTheme = App.path.join(app.getAppPath(), 'css', 'dark.css');
@@ -228,7 +233,7 @@ class App {
         ipcMain.on('get-package-languages', (event: IpcMainEvent, arg: any) => {
             this.getPackageLanguages(event, arg);
         });
-        ipcMain.on('check-updates', (event: IpcMainEvent) => {
+        ipcMain.on('check-updates', () => {
             App.checkUpdates(false);
         });
         ipcMain.on('show-help', () => {
@@ -280,7 +285,7 @@ class App {
         App.mainWindow.webContents.send('get-height', App.currentTheme);
         setTimeout(() => {
             App.checkUpdates(true);
-        }, 1000);
+        }, 800);
     }
 
     stopServer(): void {
@@ -723,7 +728,7 @@ class App {
                     } else {
                         clearInterval(intervalObject);
                     }
-                }, 1000);
+                }, 600);
             },
             (reason: string) => {
                 dialog.showErrorBox('Error', reason);
@@ -780,7 +785,6 @@ class App {
             },
             (reason: string) => {
                 dialog.showErrorBox('Error', reason);
-                console.log(reason);
             }
         );
     }
@@ -1161,15 +1165,18 @@ class App {
             });
             response.on('end', () => {
                 try {
-                    let result = JSON.parse(responseData);
+                    let result: any = JSON.parse(responseData);
                     success(result);
                 } catch (reason: any) {
                     error(JSON.stringify(reason));
                 }
             });
-            response.on('data', (chunk: Buffer) => {
-                responseData += chunk.toString();
+            response.on('data', (chunk: Buffer | string) => {
+                responseData += chunk instanceof Buffer ? chunk.toString() : chunk;
             });
+        });
+        request.on('error', (e: Error) => {
+            error(e.message);
         });
         request.write(JSON.stringify(json));
         request.end();

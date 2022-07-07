@@ -169,9 +169,6 @@ public class XliffHandler implements HttpHandler {
 					command.equals("removeTargets") || command.equals("approveAll")) {
 				response = processTasks(json);
 			}
-			if (command.equals("analysisResult")) {
-				response = getAnalysisResult(json);
-			}
 			if (command.equals("tasksResult")) {
 				response = tasksResult(json);
 			}
@@ -551,6 +548,7 @@ public class XliffHandler implements HttpHandler {
 			String process = json.getString("process");
 			result = analysisResults.get(process);
 			analysisResults.remove(process);
+			result.put(RESULT, SUCCESS);
 		} else {
 			result.put(RESULT, FAILED);
 			result.put(REASON, "Error retrieving result from server");
@@ -605,6 +603,7 @@ public class XliffHandler implements HttpHandler {
 				try {
 					RepetitionAnalysis instance = new RepetitionAnalysis();
 					instance.analyse(file, catalog);
+					LOGGER.log(Level.INFO, "Analysis completed");
 					result.add(Constants.SUCCESS);
 				} catch (IOException | SAXException | ParserConfigurationException | URISyntaxException e) {
 					LOGGER.log(Level.ERROR, "Error analysing file", e);
