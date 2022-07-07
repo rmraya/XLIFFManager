@@ -190,8 +190,11 @@ public class XliffHandler implements HttpHandler {
 
 	private String tasksResult(JSONObject json) {
 		JSONObject result = new JSONObject();
+		String process = "";
 		if (json.has("process")) {
-			String process = json.getString("process");
+			process = json.getString("process");
+		}
+		if (tasksResults.containsKey(process)) {
 			result = tasksResults.get(process);
 			tasksResults.remove(process);
 		} else {
@@ -544,11 +547,13 @@ public class XliffHandler implements HttpHandler {
 
 	private String getAnalysisResult(JSONObject json) {
 		JSONObject result = new JSONObject();
+		String process = "";
 		if (json.has("process")) {
-			String process = json.getString("process");
+			process = json.getString("process");
+		}
+		if (analysisResults.containsKey(process)) {
 			result = analysisResults.get(process);
 			analysisResults.remove(process);
-			result.put(RESULT, SUCCESS);
 		} else {
 			result.put(RESULT, FAILED);
 			result.put(REASON, "Error retrieving result from server");
@@ -558,8 +563,11 @@ public class XliffHandler implements HttpHandler {
 
 	private String getMergeResult(JSONObject json) {
 		JSONObject result = new JSONObject();
+		String process = "";
 		if (json.has("process")) {
-			String process = json.getString("process");
+			process = json.getString("process");
+		}
+		if (mergeResults.containsKey(process)) {
 			result = mergeResults.get(process);
 			mergeResults.remove(process);
 		} else {
@@ -571,8 +579,11 @@ public class XliffHandler implements HttpHandler {
 
 	private String getConversionResult(JSONObject json) {
 		JSONObject result = new JSONObject();
+		String process = "";
 		if (json.has("process")) {
-			String process = json.getString("process");
+			process = json.getString("process");
+		}
+		if (conversionResults.containsKey(process)) {
 			result = conversionResults.get(process);
 			conversionResults.remove(process);
 		} else {
@@ -717,8 +728,11 @@ public class XliffHandler implements HttpHandler {
 
 	private String getValidationResult(JSONObject json) {
 		JSONObject result = new JSONObject();
+		String process = "";
 		if (json.has("process")) {
-			String process = json.getString("process");
+			process = json.getString("process");
+		}
+		if (validationResults.containsKey(process)) {
 			result = validationResults.get(process);
 			validationResults.remove(process);
 		} else {
