@@ -11,9 +11,9 @@
  *******************************************************************************/
 
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { app, BrowserWindow, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, Rectangle, shell, net, ClientRequest, session } from "electron";
+import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, net, Rectangle, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
-import { existsSync, mkdirSync, readFileSync, writeFileSync, appendFileSync, unlinkSync } from "fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
 
 class App {
 
@@ -82,6 +82,14 @@ class App {
         }
 
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
+        if (!app.isPackaged) {
+            this.ls.stdout.on('data', (data: Buffer | string) => {
+                console.log(data instanceof Buffer ? data.toString() : data);
+            });
+            this.ls.stderr.on('data', (data: Buffer | string) => {
+                console.error(data instanceof Buffer ? data.toString() : data);
+            });
+        }
         execFileSync(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
 
         app.on('ready', () => {
@@ -106,9 +114,6 @@ class App {
 
         nativeTheme.on('updated', () => {
             this.loadDefaults();
-        });
-
-        nativeTheme.on('updated', () => {
             if (App.defaultTheme === 'system') {
                 if (nativeTheme.shouldUseDarkColors) {
                     App.currentTheme = App.path.join(app.getAppPath(), 'css', 'dark.css');
@@ -120,7 +125,11 @@ class App {
         });
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
-            App.setHeight(App.mainWindow, arg);
+            let rect: Rectangle = App.mainWindow.getBounds();
+            if (rect.height < arg.height + App.verticalPadding) {
+                rect.height = arg.height + App.verticalPadding;
+                App.mainWindow.setBounds(rect);
+            }
         });
         ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.aboutWindow, arg);
@@ -137,43 +146,52 @@ class App {
         ipcMain.on('close-settings', () => {
             App.destroyWindow(App.settingsWindow);
         });
-        ipcMain.on('select-source-file', (event) => {
+        ipcMain.on('select-source-file', (event: IpcMainEvent) => {
             this.selectSourceFile(event);
         });
-        ipcMain.on('select-xliff-file', (event) => {
+        ipcMain.on('select-xliff-file', (event: IpcMainEvent) => {
             this.selectXliffFile(event);
         });
-        ipcMain.on('convert', (event, arg) => {
+        ipcMain.on('convert', (event: IpcMainEvent, arg: any) => {
             this.convert(event, arg);
         });
-        ipcMain.on('select-xliff-validation', (event) => {
+        ipcMain.on('select-xliff-validation', (event: IpcMainEvent) => {
             this.selectXliffValidation(event);
         });
-        ipcMain.on('validate', (event, arg) => {
+        ipcMain.on('select-xliff-tasks', (event: IpcMainEvent) => {
+            this.selectXliffTasks(event);
+        });
+        ipcMain.on('processTask', (event: IpcMainEvent, arg: any) => {
+            this.processTask(event, arg);
+        });
+        ipcMain.on('validate', (event: IpcMainEvent, arg: any) => {
             this.validate(event, arg);
         });
-        ipcMain.on('select-xliff-analysis', (event) => {
+        ipcMain.on('select-xliff-analysis', (event: IpcMainEvent) => {
             this.selectXliffAnalysis(event);
         });
-        ipcMain.on('select-ditaval', (event) => {
+        ipcMain.on('select-ditaval', (event: IpcMainEvent) => {
             this.selectDitaval(event);
         });
-        ipcMain.on('select-target-file', (event) => {
+        ipcMain.on('select-config', (event: IpcMainEvent) => {
+            this.selectConfig(event);
+        });
+        ipcMain.on('select-target-file', (event: IpcMainEvent) => {
             this.selectTargetFile(event);
         });
-        ipcMain.on('analyse', (event, arg) => {
+        ipcMain.on('analyse', (event: IpcMainEvent, arg: any) => {
             this.analyse(event, arg);
         });
-        ipcMain.on('merge', (event, arg) => {
+        ipcMain.on('merge', (event: IpcMainEvent, arg: any) => {
             this.merge(event, arg);
         });
-        ipcMain.on('select-skeleton', (event) => {
+        ipcMain.on('select-skeleton', (event: IpcMainEvent) => {
             this.selectSkeleton(event);
         });
-        ipcMain.on('select-catalog', (event) => {
+        ipcMain.on('select-catalog', (event: IpcMainEvent) => {
             this.selectCatalog(event);
         });
-        ipcMain.on('select-srx', (event) => {
+        ipcMain.on('select-srx', (event: IpcMainEvent) => {
             this.selectSrx(event);
         });
         ipcMain.on('show-about', () => {
@@ -182,40 +200,40 @@ class App {
         ipcMain.on('show-settings', () => {
             App.showSettings();
         });
-        ipcMain.on('save-defaults', (event, arg) => {
+        ipcMain.on('save-defaults', (event: IpcMainEvent, arg: any) => {
             this.saveDefaults(arg);
         });
-        ipcMain.on('get-theme', (event) => {
+        ipcMain.on('get-theme', (event: IpcMainEvent) => {
             event.sender.send('set-theme', App.currentTheme);
         });
-        ipcMain.on('get-defaultTheme', (event) => {
+        ipcMain.on('get-defaultTheme', (event: IpcMainEvent) => {
             event.sender.send('set-defaultTheme', App.defaultTheme);
         });
-        ipcMain.on('get-version', (event) => {
+        ipcMain.on('get-version', (event: IpcMainEvent) => {
             this.getVersion(event);
         });
-        ipcMain.on('get-languages', (event) => {
+        ipcMain.on('get-languages', (event: IpcMainEvent) => {
             this.getLanguages(event);
         });
-        ipcMain.on('get-skeleton', (event) => {
+        ipcMain.on('get-skeleton', (event: IpcMainEvent) => {
             event.sender.send('skeleton-received', App.sklFolder);
         });
-        ipcMain.on('get-catalog', (event) => {
+        ipcMain.on('get-catalog', (event: IpcMainEvent) => {
             event.sender.send('catalog-received', App.defaultCatalog);
         });
-        ipcMain.on('get-srx', (event) => {
+        ipcMain.on('get-srx', (event: IpcMainEvent) => {
             event.sender.send('srx-received', App.defaultSRX);
         });
-        ipcMain.on('get-charsets', (event) => {
+        ipcMain.on('get-charsets', (event: IpcMainEvent) => {
             this.getCharsets(event);
         });
-        ipcMain.on('get-types', (event) => {
+        ipcMain.on('get-types', (event: IpcMainEvent) => {
             this.getTypes(event);
         });
-        ipcMain.on('get-package-languages', (event, arg) => {
+        ipcMain.on('get-package-languages', (event: IpcMainEvent, arg: any) => {
             this.getPackageLanguages(event, arg);
         });
-        ipcMain.on('check-updates', (event) => {
+        ipcMain.on('check-updates', () => {
             App.checkUpdates(false);
         });
         ipcMain.on('show-help', () => {
@@ -239,17 +257,17 @@ class App {
         ipcMain.on('close-updates', () => {
             App.destroyWindow(App.updatesWindow);
         });
-        ipcMain.on('show-file', (event, arg) => {
+        ipcMain.on('show-file', (event: IpcMainEvent, arg: any) => {
             shell.openExternal('file://' + arg.file, {
                 activate: true, workingDirectory: app.getAppPath()
             }).catch((error: Error) => {
                 dialog.showErrorBox('Error', error.message);
             });
         });
-        ipcMain.on('show-dialog', (event, arg) => {
+        ipcMain.on('show-dialog', (event: IpcMainEvent, arg: any) => {
             dialog.showMessageBox(arg);
         });
-        ipcMain.on('show-message', (event, arg) => {
+        ipcMain.on('show-message', (event: IpcMainEvent, arg: any) => {
             dialog.showMessageBoxSync(arg);
         });
         ipcMain.on('licenses-height', (event: IpcMainEvent, arg: any) => {
@@ -264,9 +282,10 @@ class App {
     }
 
     static startup(): void {
+        App.mainWindow.webContents.send('get-height', App.currentTheme);
         setTimeout(() => {
             App.checkUpdates(true);
-        }, 1000);
+        }, 800);
     }
 
     stopServer(): void {
@@ -302,35 +321,36 @@ class App {
 
     createWindow(): void {
         App.mainWindow = new BrowserWindow({
-            width: 800,
+            width: 860,
             maximizable: false,
             show: false,
             icon: App.appIcon,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
-            }
+            },
+            height: 500
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
-        App.mainWindow.on('resize', () => {
-            App.saveLocation();
-        });
         App.mainWindow.on('move', () => {
             App.saveLocation();
         });
     }
 
     static saveLocation(): void {
-        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
-        writeFileSync(defaultsFile, JSON.stringify(App.mainWindow.getBounds()));
+        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
+        let position: number[] = App.mainWindow.getPosition();
+        let pos: any = { x: position[0], y: position[1] }
+        writeFileSync(defaultsFile, JSON.stringify(pos));
     }
 
     static loadLocation(): void {
-        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'location.json');
+        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
         if (existsSync(defaultsFile)) {
             try {
                 let data: Buffer = readFileSync(defaultsFile);
-                App.mainWindow.setBounds(JSON.parse(data.toString()));
+                let pos: any = JSON.parse(data.toString());
+                App.mainWindow.setPosition(pos.x, pos.y);
             } catch (error: any) {
                 console.log(JSON.stringify(error));
             }
@@ -517,12 +537,29 @@ class App {
         });
     }
 
+    selectConfig(event: IpcMainEvent): void {
+        dialog.showOpenDialog({
+            properties: ['openFile'],
+            filters: [
+                { name: 'JSON File', extensions: ['json'] },
+                { name: 'Any File', extensions: [] }
+            ]
+        }).then((value: Electron.OpenDialogReturnValue) => {
+            if (!value.canceled) {
+                event.sender.send('add-config-file', value.filePaths[0]);
+            }
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
+        });
+    }
+
     convert(event: IpcMainEvent, arg: any): void {
         arg.sklFolder = App.sklFolder;
         arg.catalog = App.defaultCatalog;
         arg.srx = App.defaultSRX;
         App.sendRequest(arg,
             (data: any) => {
+                event.sender.send('conversion-started');
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -558,6 +595,21 @@ class App {
         });
     }
 
+    selectXliffTasks(event: IpcMainEvent): void {
+        dialog.showOpenDialog({
+            properties: ['openFile'],
+            filters: [
+                { name: 'XLIFF File', extensions: ['xlf'] }
+            ]
+        }).then((value: Electron.OpenDialogReturnValue) => {
+            if (!value.canceled) {
+                event.sender.send('add-xliff-tasks', value.filePaths[0]);
+            }
+        }).catch((error: any) => {
+            console.log(JSON.stringify(error));
+        });
+    }
+
     validate(event: IpcMainEvent, arg: any): void {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
@@ -568,6 +620,31 @@ class App {
                     App.getStatus(data.process);
                     if (App.status === 'completed') {
                         App.getResult(data.process, event, 'validationResult', 'validation-result');
+                        clearInterval(intervalObject);
+                    } else if (App.status === 'running') {
+                        // it's OK, keep waiting
+                    } else {
+                        clearInterval(intervalObject);
+                    }
+                }, 1000);
+            },
+            (reason: string) => {
+                dialog.showErrorBox('Error', reason);
+                console.log(reason);
+            }
+        );
+    }
+
+    processTask(event: IpcMainEvent, arg: any): void {
+        arg.catalog = App.defaultCatalog;
+        App.sendRequest(arg,
+            (data: any) => {
+                event.sender.send('process-started', '');
+                App.status = 'running';
+                let intervalObject = setInterval(() => {
+                    App.getStatus(data.process);
+                    if (App.status === 'completed') {
+                        App.getResult(data.process, event, 'tasksResult', 'process-completed');
                         clearInterval(intervalObject);
                     } else if (App.status === 'running') {
                         // it's OK, keep waiting
@@ -651,7 +728,7 @@ class App {
                     } else {
                         clearInterval(intervalObject);
                     }
-                }, 1000);
+                }, 600);
             },
             (reason: string) => {
                 dialog.showErrorBox('Error', reason);
@@ -708,7 +785,6 @@ class App {
             },
             (reason: string) => {
                 dialog.showErrorBox('Error', reason);
-                console.log(reason);
             }
         );
     }
@@ -805,6 +881,9 @@ class App {
         let template: MenuItem[] = [
             new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
         ];
+        if (!app.isPackaged) {
+            helpMenu.append(new MenuItem({ label: 'Open Development Tools', accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
+        }
 
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([
@@ -1086,15 +1165,18 @@ class App {
             });
             response.on('end', () => {
                 try {
-                    let result = JSON.parse(responseData);
+                    let result: any = JSON.parse(responseData);
                     success(result);
                 } catch (reason: any) {
                     error(JSON.stringify(reason));
                 }
             });
-            response.on('data', (chunk: Buffer) => {
-                responseData += chunk.toString();
+            response.on('data', (chunk: Buffer | string) => {
+                responseData += chunk instanceof Buffer ? chunk.toString() : chunk;
             });
+        });
+        request.on('error', (e: Error) => {
+            error(e.message);
         });
         request.write(JSON.stringify(json));
         request.end();

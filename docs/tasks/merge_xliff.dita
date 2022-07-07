@@ -4,19 +4,20 @@
     <title>Merge XLIFF File</title>
     <taskbody>
         <context>
-            <p>Use the <i>Merge XLIFF</i> tab to convert an <xref href="../glossaries/XLIFF.dita"
+            <p>Use the <i>Merge XLIFF</i> panel to convert an <xref href="../glossaries/XLIFF.dita"
                     >XLIFF</xref> file to original format.</p>
             <p>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created
                 with other tools that use <i>OpenXLIFF Filters</i>.</p>
             <fig>
-                <image placement="break" href="../images/mergeXliff.png" scale="60" align="center">
+                <image placement="break" href="../images/mergeXliff.png" scale="80" align="center">
                     <alt>Merge XLIFF File</alt>
                 </image>
             </fig>
         </context>
         <steps>
             <step>
-                <cmd>Click on the <uicontrol>Merge XLIFF</uicontrol> tab.</cmd>
+                <cmd>On the left panel, click on the <uicontrol><image href="../images/merge.png" placement="inline"/> Merge XLIFF</uicontrol>
+                    option.</cmd>
             </step>
             <step>
                 <cmd>Type the name and location of the XLIFF file to merge in the <uicontrol>XLIFF
