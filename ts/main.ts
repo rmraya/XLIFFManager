@@ -571,5 +571,3 @@ class Main {
         }
     }
 }
-
-new Main();

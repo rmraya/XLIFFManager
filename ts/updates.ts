@@ -37,5 +37,3 @@ class Updates {
         document.getElementById('download').addEventListener('click', () => { this.electron.ipcRenderer.send('download-latest'); });
     }
 }
-
-new Updates();

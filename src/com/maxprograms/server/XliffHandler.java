@@ -70,7 +70,7 @@ public class XliffHandler implements HttpHandler {
 
 	private static final Logger LOGGER = System.getLogger(XliffHandler.class.getName());
 
-	private Map<String, String> running;
+	private Map<String, String> processMap;
 	private Map<String, JSONObject> validationResults;
 	private Map<String, JSONObject> conversionResults;
 	private Map<String, JSONObject> mergeResults;
@@ -85,7 +85,7 @@ public class XliffHandler implements HttpHandler {
 	private boolean exportTmx;
 
 	public XliffHandler() {
-		running = new HashMap<>();
+		processMap = new HashMap<>();
 		validationResults = new HashMap<>();
 		conversionResults = new HashMap<>();
 		mergeResults = new HashMap<>();
@@ -210,7 +210,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, RUNNING);
+				processMap.put(process, RUNNING);
 				JSONObject jsonResult = new JSONObject();
 				try {
 					switch (json.getString("command")) {
@@ -236,8 +236,8 @@ public class XliffHandler implements HttpHandler {
 					jsonResult.put(REASON, e.getMessage());
 				}
 				tasksResults.put(process, jsonResult);
-				if (running.get(process).equals((RUNNING))) {
-					running.put(process, COMPLETED);
+				if (processMap.get(process).equals((RUNNING))) {
+					processMap.put(process, COMPLETED);
 				}
 			}
 		}).start();
@@ -296,7 +296,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, RUNNING);
+				processMap.put(process, RUNNING);
 
 				List<String> result = Merge.merge(xliff, target, catalog, unapproved);
 				if (exportTmx && Constants.SUCCESS.equals(result.get(0))) {
@@ -316,8 +316,8 @@ public class XliffHandler implements HttpHandler {
 					jsonResult.put(REASON, result.get(1));
 				}
 				mergeResults.put(process, jsonResult);
-				if (running.get(process).equals((RUNNING))) {
-					running.put(process, COMPLETED);
+				if (processMap.get(process).equals((RUNNING))) {
+					processMap.put(process, COMPLETED);
 				}
 			}
 		}).start();
@@ -453,7 +453,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, RUNNING);
+				processMap.put(process, RUNNING);
 				List<String> result = Convert.run(params);
 				if (embed && Constants.SUCCESS.equals(result.get(0))) {
 					result = Convert.addSkeleton(xliff, catalog);
@@ -469,8 +469,8 @@ public class XliffHandler implements HttpHandler {
 					jsonResult.put(REASON, result.get(1));
 				}
 				conversionResults.put(process, jsonResult);
-				if (running.get(process).equals((RUNNING))) {
-					running.put(process, COMPLETED);
+				if (processMap.get(process).equals((RUNNING))) {
+					processMap.put(process, COMPLETED);
 				}
 			}
 		}).start();
@@ -609,7 +609,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, RUNNING);
+				processMap.put(process, RUNNING);
 				List<String> result = new ArrayList<>();
 				try {
 					RepetitionAnalysis instance = new RepetitionAnalysis();
@@ -629,7 +629,7 @@ public class XliffHandler implements HttpHandler {
 					jsonResult.put(REASON, result.get(1));
 				}
 				analysisResults.put(process, jsonResult);
-				running.put(process, COMPLETED);
+				processMap.put(process, COMPLETED);
 			}
 		}).start();
 		return "{\"process\":\"" + process + "\"}";
@@ -651,7 +651,7 @@ public class XliffHandler implements HttpHandler {
 
 			@Override
 			public void run() {
-				running.put(process, RUNNING);
+				processMap.put(process, RUNNING);
 				try {
 					XliffChecker validator = new XliffChecker();
 					boolean valid = validator.validate(file, catalog);
@@ -665,13 +665,13 @@ public class XliffHandler implements HttpHandler {
 						result.put(REASON, reason);
 					}
 					validationResults.put(process, result);
-					if (running.get(process).equals((RUNNING))) {
+					if (processMap.get(process).equals((RUNNING))) {
 						LOGGER.log(Level.INFO, "Validation completed");
-						running.put(process, COMPLETED);
+						processMap.put(process, COMPLETED);
 					}
 				} catch (IOException e) {
 					LOGGER.log(Level.ERROR, "Error validating file", e);
-					running.put(process, e.getMessage());
+					processMap.put(process, e.getMessage());
 				}
 			}
 		}).start();
@@ -718,7 +718,7 @@ public class XliffHandler implements HttpHandler {
 		String status = "unknown";
 		if (json.has("process")) {
 			String process = json.getString("process");
-			status = running.get(process);
+			status = processMap.get(process);
 		}
 		if (status == null) {
 			status = "Error";

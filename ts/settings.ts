@@ -58,8 +58,8 @@ class Settings {
     }
 
     languagesReceived(arg: any): void {
-        var array: Language[] = arg.languages;
-        var options: string = '<option value="none">Select Language</option>';
+        let array: Language[] = arg.languages;
+        let options: string = '<option value="none">Select Language</option>';
         array.forEach((lang: Language) => {
             options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
@@ -82,5 +82,3 @@ class Settings {
     }
 
 }
-
-new Settings();
