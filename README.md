@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+5.1.0 | Updated OpenXLIFF to 2.6.0 | July 17th, 2022
 5.0.0 | Redesigned GUI and added new Translation Tasks panel; Updated OpenXLIFF to version 2.5.0 | July 7th, 2022
 4.2.0 | Updated OpenXLIFF to 2.4.1 | June 11th, 2022
 4.1.0 | Updated OpenXLIFF to 2.3.0 | May 27th, 2022
@@ -98,9 +99,9 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 
 ## Documentation
 
- - [XLIFF Manager User Guide](https://www.maxprograms.com/support/xliffmanager.pdf) (PDF)
- - [XLIFF Manager User Guide](https://www.maxprograms.com/support/xliffmanager.html) (Web Help)
- 
+- [XLIFF Manager User Guide](https://www.maxprograms.com/support/xliffmanager.pdf) (PDF)
+- [XLIFF Manager User Guide](https://www.maxprograms.com/support/xliffmanager.html) (Web Help)
+
 ## Licenses
 
 Source code of XLIFF Manager is free. Anyone can download the source code, compile, modify and use it at no cost in compliance with the accompanying license terms.
