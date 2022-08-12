@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+5.2.0 | Updated OpenXLIFF to 2.7.0; updated electron to 20.0.2 | August 12th, 2022
 5.1.0 | Updated OpenXLIFF to 2.6.0 | July 17th, 2022
 5.0.0 | Redesigned GUI and added new Translation Tasks panel; Updated OpenXLIFF to version 2.5.0 | July 7th, 2022
 4.2.0 | Updated OpenXLIFF to 2.4.1 | June 11th, 2022
