@@ -233,6 +233,9 @@ class App {
         ipcMain.on('get-package-languages', (event: IpcMainEvent, arg: any) => {
             this.getPackageLanguages(event, arg);
         });
+        ipcMain.on('get-xliff-languages', (event: IpcMainEvent, arg: any) => {
+            this.getXliffLanguages(event, arg);
+        });
         ipcMain.on('check-updates', () => {
             App.checkUpdates(false);
         });
@@ -437,6 +440,18 @@ class App {
         );
     }
 
+    getXliffLanguages(event: IpcMainEvent, arg: any): void {
+        App.sendRequest(arg,
+            (data: any) => {
+                event.sender.send('xliff-languages', data);
+            },
+            (reason: string) => {
+                dialog.showErrorBox('Error', reason);
+                console.log(reason);
+            }
+        );
+    }
+
     getCharsets(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getCharsets' },
             (data: any) => {
@@ -493,7 +508,8 @@ class App {
                 { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
                 { name: 'TXML Document', extensions: ['txml'] },
                 { name: 'Visio XML Drawing', extensions: ['vsdx'] },
-                { name: 'XLIFF', extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
+                { name: 'Wordfast/GlobalLink XLIFF Document', extensions: ['txlf'] },
+                { name: 'XLIFF Document', extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
                 { name: 'XML Document', extensions: ['xml'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {

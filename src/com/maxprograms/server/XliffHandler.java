@@ -51,6 +51,7 @@ import com.maxprograms.converters.PseudoTranslation;
 import com.maxprograms.converters.RemoveTargets;
 import com.maxprograms.converters.TmxExporter;
 import com.maxprograms.converters.sdlppx.Sdlppx2Xliff;
+import com.maxprograms.converters.xliff.XliffUtils;
 import com.maxprograms.languages.Language;
 import com.maxprograms.languages.LanguageUtils;
 import com.maxprograms.stats.RepetitionAnalysis;
@@ -165,6 +166,9 @@ public class XliffHandler implements HttpHandler {
 			if (command.equals("getPackageLangs")) {
 				response = getPackageLangs(json);
 			}
+			if (command.equals("getXliffLangs")) {
+				response = getXliffLangs(json);
+			}
 			if (command.equals("copySources") || command.equals("pseudoTranslate") ||
 					command.equals("removeTargets") || command.equals("approveAll")) {
 				response = processTasks(json);
@@ -247,6 +251,18 @@ public class XliffHandler implements HttpHandler {
 	private static String getPackageLangs(JSONObject json) {
 		try {
 			return Sdlppx2Xliff.getPackageLanguages(json.getString("package")).toString();
+		} catch (JSONException | IOException | SAXException | ParserConfigurationException e) {
+			JSONObject error = new JSONObject();
+			error.put(RESULT, FAILED);
+			error.put(REASON, e.getMessage());
+			return error.toString();
+		}
+	}
+
+	private static String getXliffLangs(JSONObject json) {
+		try {
+			File xliff = new File(json.getString("xliff"));
+			return XliffUtils.getXliffLanguages(xliff).toString();
 		} catch (JSONException | IOException | SAXException | ParserConfigurationException e) {
 			JSONObject error = new JSONObject();
 			error.put(RESULT, FAILED);

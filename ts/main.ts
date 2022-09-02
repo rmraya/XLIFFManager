@@ -78,6 +78,10 @@ class Main {
             this.packageLanguages(arg);
         });
 
+        this.electron.ipcRenderer.on('xliff-languages', (event: Electron.IpcRendererEvent, arg: any) => {
+            this.xliffLanguages(arg);
+        });
+
         this.electron.ipcRenderer.on('add-xliff-file', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('xliffFile') as HTMLInputElement).value = arg;
         });
@@ -182,7 +186,9 @@ class Main {
             } else {
                 this.disableConfig();
             }
-            if ('SDLPPX' === type) {
+            if ('XLIFF' === type || 'TXLF' === type || 'WPML' === type || 'SDLXLIFF' === type) {
+                this.electron.ipcRenderer.send('get-xliff-languages', { command: 'getXliffLangs', xliff: arg.file });
+            } else if ('SDLPPX' === type) {
                 this.electron.ipcRenderer.send('get-package-languages', { command: 'getPackageLangs', package: arg.file });
             } else {
                 if (this.languagesChanged) {
@@ -362,6 +368,22 @@ class Main {
         document.getElementById('targetSelect').innerHTML = tgtOptions;
         if (tgtArray.length === 1) {
             (document.getElementById('targetSelect') as HTMLSelectElement).value = tgtArray[0].code;
+        }
+        this.languagesChanged = true;
+    }
+
+    xliffLanguages(arg: any): any {
+        if (arg.reason) {
+            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+            (document.getElementById('typeSelect') as HTMLSelectElement).value = 'none';
+            return;
+        }
+
+        let sourceSelect: HTMLSelectElement = document.getElementById('sourceSelect') as HTMLSelectElement;
+        sourceSelect.value = arg.srcLang;
+        if (arg.tgtLang !== '') {
+            let targetSelect: HTMLSelectElement = document.getElementById('targetSelect') as HTMLSelectElement;
+            targetSelect.value = arg.tgtLang;
         }
         this.languagesChanged = true;
     }
