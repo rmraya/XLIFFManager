@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+5.4.0 | Updated TXLF, JSON and DITA filters | October 8th, 2022
 5.3.0 | Added new filter for TXLF files; Updated OpenXLIFF to 2.8.0  | September 2nd, 2022
 5.2.0 | Updated OpenXLIFF to 2.7.0; updated electron to 20.0.2 | August 12th, 2022
 5.1.0 | Updated OpenXLIFF to 2.6.0 | July 17th, 2022
