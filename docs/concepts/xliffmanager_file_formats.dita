@@ -26,10 +26,10 @@
                         <li>Trados Studio Packages</li>
                         <li>SDLXLIFF (Trados Studio)</li>
                         <li>SRT Subtitles</li>
-                        <li>TXML (GlobalLink/Wordfast PRO)</li>
-                        <li>Wordfast/GlobalLink XLIFF (.txlf)</li>
+                        <li>Wordfast/GlobalLink TXML (*.txml)</li>
+                        <li>Wordfast/GlobalLink XLIFF (*.txlf)</li>
                         <li>WPML XLIFF (WordPress Multilingual Plugin)</li>
-                        <li>XLIFF from Other Tools (.mqxliff, .xliff)</li>
+                        <li>XLIFF from Other Tools (*.mqxliff, *.xliff)</li>
                         <li>XML (Generic)</li>
                         <li>XML with ready to use configuration files for: <ul>
                                 <li>DITA 1.0, 1.1, 1.2 and 1.3</li>
@@ -46,6 +46,7 @@
                         <li>JavaScript</li>
                         <li>Java Properties</li>
                         <li>JSON</li>
+                        <li>PHP Arrays</li>
                         <li>PO (Portable Objects)</li>
                         <li>RC (Windows C/C++ Resources)</li>
                         <li>ResX (Windows .NET Resources)</li>
