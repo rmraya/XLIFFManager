@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018-2022 Maxprograms.
+ * Copyright (c) 2023 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -1097,6 +1097,7 @@ class App {
         switch (type) {
             case 'XLIFFManager':
             case "OpenXLIFF":
+            case "XMLJava":
                 licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
                 title = 'Eclipse Public License 1.0';
                 break;
@@ -1253,5 +1254,8 @@ class App {
         request.end();
     }
 }
-
-new App();
+try {
+    new App();
+} catch (e) {
+    console.error(e);
+}

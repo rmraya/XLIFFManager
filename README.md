@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+5.7.0 | Updated OpenXLIFF Filters to version 3.1.0 | January 24th, 2023
 5.6.0 | Updated OpenXLIFF Filters to version 2.12.0 | December 6th, 2022
 5.5.0 | Added support for PHP Arrays; Updated OpenXLIFF to 2.9.1  | October 22nd, 2022
 5.4.0 | Updated TXLF, JSON and DITA filters | October 8th, 2022
@@ -116,9 +117,9 @@ You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at 
 ## Requirements
 
 - JDK 17 or newer is required for compiling and building. Get it from [Adoptium](https://adoptium.net/).
-- Apache Ant 1.10.10 or newer. Get it from [https://ant.apache.org/](https://ant.apache.org/)
+- Apache Ant 1.10.12 or newer. Get it from [https://ant.apache.org/](https://ant.apache.org/)
 - Node.js 16.13.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- TypeScript 4.7.4 or newer. Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+- TypeScript 4.8.4.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
 
 ## Building
 

@@ -16,7 +16,8 @@
                 document.</li>
         </ul>
         <fig>
-            <image href="../images/XliffManager.png" align="center" scalefit="yes">
+            <image href="../images/XliffManager.png" align="center" placement="break"
+                scalefit="yes">
                 <alt>XLIFF Manager GUI</alt>
             </image>
         </fig>

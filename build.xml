@@ -9,6 +9,7 @@
         <pathelement location="jars/jsoup.jar" />
         <pathelement location="jars/mapdb.jar" />
         <pathelement location="jars/openxliff.jar" />
+        <pathelement location="jars/xmljava.jar" />
     </path>
     <condition property="isWindows">
         <os family="windows" />

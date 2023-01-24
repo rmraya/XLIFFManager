@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2022 Maxprograms.
+ * Copyright (c) 2023 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -445,6 +445,8 @@ public class XliffHandler implements HttpHandler {
 		}
 		String process = "" + System.currentTimeMillis();
 
+		File xmlfilter = new File(new File(System.getProperty("user.dir")), "xmlfilter");
+
 		Map<String, String> params = new HashMap<>();
 		params.put("source", source);
 		params.put("srcLang", srcLang);
@@ -455,6 +457,7 @@ public class XliffHandler implements HttpHandler {
 		params.put("srcEncoding", enc);
 		params.put("paragraph", paragraph ? "yes" : "no");
 		params.put("srxFile", srx);
+		params.put("xmlfilter", xmlfilter.getAbsolutePath());
 		if (!tgtLang.isEmpty()) {
 			params.put("tgtLang", tgtLang);
 		}

@@ -5,6 +5,7 @@
         "jars/json.jar",
         "jars/jsoup.jar",
         "jars/mapdb.jar",
-        "jars/openxliff.jar"
+        "jars/openxliff.jar",
+        "jars/xmljava.jar"
     ]
 }
