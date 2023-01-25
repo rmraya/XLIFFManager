@@ -941,7 +941,7 @@ class App {
     static showAbout(): void {
         App.aboutWindow = new BrowserWindow({
             parent: App.mainWindow,
-            width: 320,
+            width: 360,
             minimizable: false,
             maximizable: false,
             resizable: false,
