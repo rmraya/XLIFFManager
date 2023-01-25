@@ -15,7 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
-5.7.0 | Updated OpenXLIFF Filters to version 3.1.0 | January 24th, 2023
+5.7.0 | Updated OpenXLIFF Filters to version 3.1.0 | January 25th, 2023
 5.6.0 | Updated OpenXLIFF Filters to version 2.12.0 | December 6th, 2022
 5.5.0 | Added support for PHP Arrays; Updated OpenXLIFF to 2.9.1  | October 22nd, 2022
 5.4.0 | Updated TXLF, JSON and DITA filters | October 8th, 2022
