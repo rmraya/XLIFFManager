@@ -20,7 +20,7 @@ import java.net.URL;
 
 public class CheckURL {
 
-	protected static final Logger LOGGER = System.getLogger(CheckURL.class.getName());
+	private static Logger logger = System.getLogger(CheckURL.class.getName());
 
 	public static void main(String[] args) {
 		if (args.length < 1) {
@@ -29,7 +29,7 @@ public class CheckURL {
 		checkURL(args[0]);
 	}
 
-	protected static void checkURL(String string) {
+	private static void checkURL(String string) {
 		boolean waiting = true;
 		int count = 0;
 		while (waiting && count < 40) {
@@ -41,13 +41,13 @@ public class CheckURL {
 					Thread.sleep(500);
 					count++;
 				} catch (InterruptedException e1) {
-					LOGGER.log(Level.ERROR, e1.getMessage(), e1);
+					logger.log(Level.ERROR, e1.getMessage(), e1);
 					Thread.currentThread().interrupt();
 				}
 			}
 		}
 		if (count < 40) {
-			LOGGER.log(Level.INFO, "ready");
+			logger.log(Level.INFO, Messages.getString("CheckURL.0"));
 		} else {
 			System.exit(1);
 		}

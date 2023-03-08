@@ -25,6 +25,7 @@ import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -69,7 +70,7 @@ public class XliffHandler implements HttpHandler {
 	private static final String RUNNING = "running";
 	private static final String COMPLETED = "completed";
 
-	private static final Logger LOGGER = System.getLogger(XliffHandler.class.getName());
+	private static Logger logger = System.getLogger(XliffHandler.class.getName());
 
 	private Map<String, String> processMap;
 	private Map<String, JSONObject> validationResults;
@@ -203,7 +204,7 @@ public class XliffHandler implements HttpHandler {
 			tasksResults.remove(process);
 		} else {
 			result.put(RESULT, FAILED);
-			result.put(REASON, "Error retrieving result from server");
+			result.put(REASON, Messages.getString("XliffHandler.0"));
 		}
 		return result.toString(2);
 	}
@@ -340,7 +341,7 @@ public class XliffHandler implements HttpHandler {
 		return "{\"process\":\"" + process + "\"}";
 	}
 
-	private String convert(JSONObject json) {
+	private String convert(JSONObject json) throws JSONException, IOException {
 		String source = "";
 		if (json.has("file")) {
 			source = json.getString("file");
@@ -364,14 +365,15 @@ public class XliffHandler implements HttpHandler {
 				try {
 					Files.createDirectories(sklFolder.toPath());
 				} catch (IOException e) {
-					LOGGER.log(Level.ERROR, "Unable to create skeleton folder " + json.getString("sklFolder"));
+					MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.1"));
+					throw new IOException(mf.format(new String[] { json.getString("sklFolder") }));
 				}
 			}
 			try {
 				File tmp = File.createTempFile(new File(source).getName(), ".skl", sklFolder);
 				skl = tmp.getAbsolutePath();
 			} catch (IOException e) {
-				LOGGER.log(Level.ERROR, "Error creating skeleton", e);
+				throw new IOException(Messages.getString("XliffHandler.2"), e);
 			}
 		}
 		if (json.has("skl")) {
@@ -389,9 +391,10 @@ public class XliffHandler implements HttpHandler {
 			String detected = FileFormats.detectFormat(source);
 			if (detected != null) {
 				type = detected;
-				LOGGER.log(Level.INFO, "Auto-detected type: " + type);
+				MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.3"));
+				logger.log(Level.INFO, mf.format(new String[] { type }));
 			} else {
-				LOGGER.log(Level.ERROR, "Unable to auto-detect file format. Use '-type' parameter.");
+				throw new IOException(Messages.getString("XliffHandler.4"));
 			}
 		}
 		String enc = "";
@@ -402,9 +405,10 @@ public class XliffHandler implements HttpHandler {
 			Charset charset = EncodingResolver.getEncoding(source, type);
 			if (charset != null) {
 				enc = charset.name();
-				LOGGER.log(Level.INFO, "Auto-detected encoding: " + enc);
+				MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.5"));
+				logger.log(Level.INFO, mf.format(new String[] { enc }));
 			} else {
-				LOGGER.log(Level.ERROR, "Unable to auto-detect character set. Use '-enc' parameter.");
+				throw new IOException(Messages.getString("XliffHandler.6"));
 			}
 		}
 		String srx = "";
@@ -575,7 +579,7 @@ public class XliffHandler implements HttpHandler {
 			analysisResults.remove(process);
 		} else {
 			result.put(RESULT, FAILED);
-			result.put(REASON, "Error retrieving result from server");
+			result.put(REASON, Messages.getString("XliffHandler.0"));
 		}
 		return result.toString(2);
 	}
@@ -591,7 +595,7 @@ public class XliffHandler implements HttpHandler {
 			mergeResults.remove(process);
 		} else {
 			result.put(RESULT, FAILED);
-			result.put(REASON, "Error retrieving result from server");
+			result.put(REASON, Messages.getString("XliffHandler.0"));
 		}
 		return result.toString(2);
 	}
@@ -607,7 +611,7 @@ public class XliffHandler implements HttpHandler {
 			conversionResults.remove(process);
 		} else {
 			result.put(RESULT, FAILED);
-			result.put(REASON, "Error retrieving result from server");
+			result.put(REASON, Messages.getString("XliffHandler.0"));
 		}
 		return result.toString(2);
 	}
@@ -633,10 +637,10 @@ public class XliffHandler implements HttpHandler {
 				try {
 					RepetitionAnalysis instance = new RepetitionAnalysis();
 					instance.analyse(file, catalog);
-					LOGGER.log(Level.INFO, "Analysis completed");
+					logger.log(Level.INFO, "Analysis completed");
 					result.add(Constants.SUCCESS);
 				} catch (IOException | SAXException | ParserConfigurationException | URISyntaxException e) {
-					LOGGER.log(Level.ERROR, "Error analysing file", e);
+					logger.log(Level.ERROR, "Error analysing file", e);
 					result.add(Constants.ERROR);
 					result.add(e.getMessage());
 				}
@@ -678,18 +682,19 @@ public class XliffHandler implements HttpHandler {
 					result.put("valid", valid);
 					if (valid) {
 						String version = validator.getVersion();
-						result.put("comment", "Selected file is valid XLIFF " + version);
+						MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.7"));
+						result.put("comment", mf.format(new String[] { version }));
 					} else {
 						String reason = validator.getReason();
 						result.put(REASON, reason);
 					}
 					validationResults.put(process, result);
 					if (processMap.get(process).equals((RUNNING))) {
-						LOGGER.log(Level.INFO, "Validation completed");
+						logger.log(Level.INFO, Messages.getString("XliffHandler.8"));
 						processMap.put(process, COMPLETED);
 					}
 				} catch (IOException e) {
-					LOGGER.log(Level.ERROR, "Error validating file", e);
+					logger.log(Level.ERROR, Messages.getString("XliffHandler.9"), e);
 					processMap.put(process, e.getMessage());
 				}
 			}
@@ -708,7 +713,7 @@ public class XliffHandler implements HttpHandler {
 			}
 			result.put(RESULT, SUCCESS);
 		} catch (IOException | SAXException | ParserConfigurationException e) {
-			LOGGER.log(Level.ERROR, "Error getting target file", e);
+			logger.log(Level.ERROR, Messages.getString("XliffHandler.10"), e);
 			result.put(RESULT, FAILED);
 			result.put(REASON, e.getMessage());
 		}
@@ -756,7 +761,7 @@ public class XliffHandler implements HttpHandler {
 			validationResults.remove(process);
 		} else {
 			result.put("valid", false);
-			result.put(REASON, "Error retrieving result from server");
+			result.put(REASON, Messages.getString("XliffHandler.0"));
 		}
 		return result.toString(2);
 	}

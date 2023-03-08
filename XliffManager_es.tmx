@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd" >
+<tmx version="1.4">
+<header 
+      creationtool="OpenXLIFF" 
+      creationtoolversion="3.4.0" 
+      srclang="en" 
+      adminlang="en"  
+      datatype="xml" 
+      o-tmf="XLIFF" 
+      segtype="block"
+>
+</header>
+<body>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-48" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>OpenXLIFF Server ready</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Servidor OpenXLIFF listo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-49" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Version: {0} Build: {1}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Versión: {0} Compilación: {1}</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-50" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>OpenXLIFF Server error</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Error de Servidor OpenXLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-51" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>OpenXLIFF Server started</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Servidor OpenXLIFF iniciado</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-52" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>OpenXLIFF Server closed</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Servidor OpenXLIFF cerrado</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-53" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Error retrieving result from server</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Error al recuperar el resultado del servidor</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-54" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Unable to create skeleton folder {0}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>No se puede crear la carpeta de esqueleto {0}</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-55" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Error creating skeleton</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Error al crear esqueleto</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-56" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Auto-detected type: {0}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Tipo detectado automáticamente: {0}</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-57" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Unable to auto-detect file format</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>No se puede detectar automáticamente el formato de archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-1567" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Auto-detected encoding: {0}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Codificación detectada automáticamente: {0}</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-1568" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Unable to auto-detect character set</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>No se puede detectar automáticamente el juego de caracteres</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-1569" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Selected file is valid XLIFF {0}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>El archivo seleccionado es XLIFF {0} válido</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-1570" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Validation completed</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Validación completada</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-1571" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Error validating file</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Error al validar el archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.4.0" tuid="-1506379015-0-1572" creationdate="20230308T120353Z">
+<tuv xml:lang="en" creationdate="20230308T120353Z">
+<seg>Error getting target file</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230308T120353Z">
+<seg>Error al obtener el archivo de destino</seg>
+</tuv>
+</tu>
+</body>
+</tmx>

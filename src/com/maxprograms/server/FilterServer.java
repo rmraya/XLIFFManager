@@ -18,13 +18,16 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.net.InetSocketAddress;
 import java.nio.file.Files;
+import java.text.MessageFormat;
+import java.util.Locale;
 
 import com.maxprograms.converters.Constants;
+import com.maxprograms.languages.LanguageUtils;
 import com.sun.net.httpserver.HttpServer;
 
 public class FilterServer {
 
-	private static final Logger LOGGER = System.getLogger(FilterServer.class.getName());
+	private static Logger logger = System.getLogger(FilterServer.class.getName());
 
 	private HttpServer server;
 	private File workDir;
@@ -34,18 +37,30 @@ public class FilterServer {
 		for (int i = 0; i < args.length; i++) {
 			String arg = args[i];
 			if (arg.equals("-version")) {
-				LOGGER.log(Level.INFO, () -> "Version: " + Constants.VERSION + " Build: " + Constants.BUILD);
+				MessageFormat mf = new MessageFormat(Messages.getString("FilterServer.0"));
+				logger.log(Level.INFO, () -> mf.format(new String[] { Constants.VERSION, Constants.BUILD }));
 				return;
 			}
 			if (arg.equals("-port") && (i + 1) < args.length) {
 				port = args[i + 1];
+			}
+			if (arg.equals("-lang") && (i + 1) < args.length) {
+				String lang = args[i + 1];
+				try {
+					if (LanguageUtils.getLanguage(lang) != null) {
+						Locale locale = new Locale(lang);
+						Locale.setDefault(locale);
+					}
+				} catch (IOException e) {
+					logger.log(Level.WARNING, e);
+				}
 			}
 		}
 		try {
 			FilterServer instance = new FilterServer(Integer.valueOf(port));
 			instance.run();
 		} catch (Exception e) {
-			LOGGER.log(Level.ERROR, "Server error", e);
+			logger.log(Level.ERROR, Messages.getString("FilterServer.1"), e);
 		}
 	}
 
@@ -58,12 +73,12 @@ public class FilterServer {
 
 	public void run() {
 		server.start();
-		LOGGER.log(Level.INFO, "OpenXLIFF Server started");
+		logger.log(Level.INFO, Messages.getString("FilterServer.2"));
 	}
 
 	public void stop() {
 		server.removeContext("/FilterServer");
-		LOGGER.log(Level.INFO, "OpenXLIFF Server closed");
+		logger.log(Level.INFO, Messages.getString("FilterServer.3"));
 		System.exit(0);
 	}
 
