@@ -17,6 +17,9 @@ import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Locale;
+
+import com.maxprograms.languages.LanguageUtils;
 
 public class CheckURL {
 
@@ -25,6 +28,20 @@ public class CheckURL {
 	public static void main(String[] args) {
 		if (args.length < 1) {
 			return;
+		}
+		for (int i = 0; i < args.length; i++) {
+			String arg = args[i];
+			if (arg.equals("-lang") && (i + 1) < args.length) {
+				String lang = args[i + 1];
+				try {
+					if (LanguageUtils.getLanguage(lang) != null) {
+						Locale locale = new Locale(lang);
+						Locale.setDefault(locale);
+					}
+				} catch (IOException e) {
+					logger.log(Level.WARNING, e);
+				}
+			}
 		}
 		checkURL(args[0]);
 	}
