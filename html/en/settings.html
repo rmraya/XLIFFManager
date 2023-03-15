@@ -5,18 +5,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Settings</title>
-    <link id="theme" rel="stylesheet" href="../css/light.css">
+    <link id="theme" rel="stylesheet" href="../../css/light.css">
 </head>
 
 <body onload="new Settings();">
     <div class="tabContent">
-        <table  style="width: calc(100% - 8px);">
+        <table style="width: calc(100% - 8px);">
             <tr>
                 <td class="middle noWrap"><label for="sourceSelect">Default Source Language</label></td>
                 <td class="fill_width" colspan="2"><select id="sourceSelect" class="fill_width"></select></td>
             </tr>
             <tr>
-                <td class="middle"><label for="targetSelect">Default Target Language</label></td>
+                <td class="middle noWrap"><label for="targetSelect">Default Target Language</label></td>
                 <td class="fill_width" colspan="2"><select id="targetSelect" class="fill_width"></select></td>
             </tr>
             <tr>
@@ -38,6 +38,15 @@
 
         <table>
             <tr>
+                <td class="middle noWrap"><label for="sourceSelect">Application Language</label></td>
+                <td class="fill_width">
+                    <select id="appLangSelect"  style="width: 300px;">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
                 <td class="middle noWrap"><label for="themeColor">Theme</label></td>
                 <td class="fill_width">
                     <select id="themeColor" style="width: 300px;">
@@ -52,7 +61,7 @@
             <button id="saveSettings">Save Settings</button>
         </div>
     </div>
-    <script src="../js/settings.js"></script>
+    <script src="../../js/settings.js"></script>
 </body>
 
 </html>

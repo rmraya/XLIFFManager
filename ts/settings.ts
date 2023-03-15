@@ -32,6 +32,10 @@ class Settings {
             this.electron.ipcRenderer.send('settings-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         });
 
+        this.electron.ipcRenderer.on('set-appLanguage', (event: Electron.IpcRendererEvent, arg: any) => {
+            (document.getElementById('appLangSelect') as HTMLSelectElement).value = arg;
+        });
+
         this.electron.ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.languagesReceived(arg);
         });
@@ -48,6 +52,7 @@ class Settings {
 
         this.electron.ipcRenderer.on('srx-received', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('defaultSRX') as HTMLInputElement).value = arg;
+            this.electron.ipcRenderer.send('get-appLanguage');
             this.electron.ipcRenderer.send('get-defaultTheme');
         });
         document.addEventListener('keydown', (event: KeyboardEvent) => {
@@ -77,7 +82,8 @@ class Settings {
             skeleton: (document.getElementById('skeletonFolder') as HTMLInputElement).value,
             catalog: (document.getElementById('defaultCatalog') as HTMLInputElement).value,
             srx: (document.getElementById('defaultSRX') as HTMLInputElement).value,
-            theme: (document.getElementById('themeColor') as HTMLSelectElement).value
+            theme: (document.getElementById('themeColor') as HTMLSelectElement).value,
+            appLang:  (document.getElementById('appLangSelect') as HTMLSelectElement).value
         });
     }
 

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>XLIFF Manager</title>
+    <link id="theme" rel="stylesheet" href="../../css/light.css">
+</head>
+
+<body onload="new Main();">
+    <table style="height: 100vh;">
+        <tr>
+            <td class="leftSide">
+                <div class="toprow">
+                    <a id="createTab" class="selectedTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 24 24" width="24" height="24" xml:space="preserve">
+                            <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19
+                   c1.1,0,2,0.9,2,2V19C21,20.1,20.1,21,19,21z" />
+                            <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="12" y1="7" x2="12" y2="17" />
+                            <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="7" y1="12" x2="17" y2="12" />
+                        </svg><span>Crear XLIFF</span></a> <a id="mergeTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" titele="Merge XLIFF" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" width="24" height="24" xml:space="preserve"> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="3" y1="5" x2="3" y2="19" /> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M3,5c0-1.11,0.89-2,2-2" /> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M5,21c-1.11,0-2-0.89-2-2" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="5" y1="3" x2="10.5" y2="3" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="5" y1="21" x2="10.5" y2="21" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="21" y1="19" x2="21" y2="5" /> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M21,19c0,1.11-0.89,2-2,2" /> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,3c1.11,0,2,0.89,2,2" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="19" y1="21" x2="13.5" y2="21" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="19" y1="3" x2="13.5" y2="3" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="9" y1="12" x2="4" y2="12" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="15" y1="12" x2="20" y2="12" /> <polyline fill="none" stroke-width="2" stroke-miterlimit="10" points="6.75,9.5 9.25,12 6.75,14.5 " /> <polyline fill="none" stroke-width="2" stroke-miterlimit="10" points="17.25,14.5 14.75,12 17.25,9.5 " /> </svg><span>Combinar XLIFF</span></a> <a id="validateTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" width="24" height="24" xml:space="preserve"> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19 c1.1,0,2,0.9,2,2V19C21,20.1,20.1,21,19,21z" /> <polyline fill="none" stroke-width="2" stroke-miterlimit="10" points="7,11.8 10,15 17,8 " /> </svg><span>Validar XLIFF</span></a> <a id="analysisTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" width="24" height="24" xml:space="preserve"> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19 c1.1,0,2,0.9,2,2V19C21,20.1,20.1,21,19,21z" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="12" y1="7" x2="12" y2="17" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="17" y1="17" x2="17" y2="10" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="7" y1="17" x2="7" y2="13" /> </svg><span>Analizar XLIFF</span></a> <a id="tasksTab"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 24" width="24" height="24" xml:space="preserve"> <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M19,21H5c-1.1,0-2-0.9-2-2V5c0-1.1,0.9-2,2-2H19 c1.1,0,2,0.9,2,2V19C21,20.1,20.1,21,19,21z" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="6" y1="10" x2="11" y2="10" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="6" y1="15" x2="11" y2="15" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="13" y1="10" x2="18" y2="10" /> <line fill="none" stroke-width="2" stroke-miterlimit="10" x1="13" y1="15" x2="18" y2="15" /> </svg><span>Traducciones</span></a>
+                </div>
+                <div class="filler">
+                    <p>&nbsp;</p>
+                </div>
+                <div class="bottomRow">
+                    <a id="updatesButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M4 20v-2h2.75l-.4-.35q-1.3-1.15-1.825-2.625Q4 13.55 4 12.05q0-2.775 1.662-4.938Q7.325 4.95 10 4.25v2.1Q8.2 7 7.1 8.562 6 10.125 6 12.05q0 1.125.425 2.187Q6.85 15.3 7.75 16.2l.25.25V14h2v6Zm10-.25v-2.1q1.8-.65 2.9-2.212Q18 13.875 18 11.95q0-1.125-.425-2.188Q17.15 8.7 16.25 7.8L16 7.55V10h-2V4h6v2h-2.75l.4.35q1.225 1.225 1.788 2.662Q20 10.45 20 11.95q0 2.775-1.663 4.937Q16.675 19.05 14 19.75Z" />
+                        </svg><span>Buscar Actualizaciones</span> </a> <a id="settingsButton"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path d="m9.25 22-.4-3.2q-.325-.125-.612-.3-.288-.175-.563-.375L4.7 19.375l-2.75-4.75 2.575-1.95Q4.5 12.5 4.5 12.337v-.675q0-.162.025-.337L1.95 9.375l2.75-4.75 2.975 1.25q.275-.2.575-.375.3-.175.6-.3l.4-3.2h5.5l.4 3.2q.325.125.613.3.287.175.562.375l2.975-1.25 2.75 4.75-2.575 1.95q.025.175.025.337v.675q0 .163-.05.338l2.575 1.95-2.75 4.75-2.95-1.25q-.275.2-.575.375-.3.175-.6.3l-.4 3.2Zm2.8-6.5q1.45 0 2.475-1.025Q15.55 13.45 15.55 12q0-1.45-1.025-2.475Q13.5 8.5 12.05 8.5q-1.475 0-2.488 1.025Q8.55 10.55 8.55 12q0 1.45 1.012 2.475Q10.575 15.5 12.05 15.5Zm0-2q-.625 0-1.062-.438-.438-.437-.438-1.062t.438-1.062q.437-.438 1.062-.438t1.063.438q.437.437.437 1.062t-.437 1.062q-.438.438-1.063.438ZM12 12Zm-1 8h1.975l.35-2.65q.775-.2 1.438-.588.662-.387 1.212-.937l2.475 1.025.975-1.7-2.15-1.625q.125-.35.175-.738.05-.387.05-.787t-.05-.788q-.05-.387-.175-.737l2.15-1.625-.975-1.7-2.475 1.05q-.55-.575-1.212-.963-.663-.387-1.438-.587L13 4h-1.975l-.35 2.65q-.775.2-1.437.587-.663.388-1.213.938L5.55 7.15l-.975 1.7 2.15 1.6q-.125.375-.175.75-.05.375-.05.8 0 .4.05.775t.175.75l-2.15 1.625.975 1.7 2.475-1.05q.55.575 1.213.962.662.388 1.437.588Z" /> </svg><span>Configuraci&oacute;n</span> </a> <a id="infoButton"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"> <path d="M11 17h2v-6h-2Zm1-8q.425 0 .713-.288Q13 8.425 13 8t-.287-.713Q12.425 7 12 7t-.712.287Q11 7.575 11 8t.288.712Q11.575 9 12 9Zm0 13q-2.075 0-3.9-.788-1.825-.787-3.175-2.137-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175 1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138 1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175-1.35 1.35-3.175 2.137Q14.075 22 12 22Zm0-2q3.35 0 5.675-2.325Q20 15.35 20 12q0-3.35-2.325-5.675Q15.35 4 12 4 8.65 4 6.325 6.325 4 8.65 4 12q0 3.35 2.325 5.675Q8.65 20 12 20Zm0-8Z" /> </svg><span>Acerca de...</span>
+                    </a>
+                </div>
+            </td>
+            <td class="fill_width">
+                <div class="tabContent" id="create">
+                    <table style="width: calc(100% - 8px);">
+                        <tr>
+                            <td class="noWrap middle"><label for="sourceFile">Archivo de origen</label></td>
+                            <td class="fill_width middle"><input id="sourceFile" type="text" class="fill_width"></td>
+                            <td class="middle"><button id="browseSource">Examinar...</button></td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="sourceSelect">Idioma de origen</label></td>
+                            <td class="fill_width" colspan="2"><select id="sourceSelect" class="fill_width"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="targetSelect">Idioma de destino</label></td>
+                            <td class="fill_width middle" colspan="2"><select id="targetSelect"
+                                    class="fill_width"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="typeSelect">Tipo de archivo</label></td>
+                            <td class="fill_width middle" colspan="2"><select id="typeSelect"
+                                    class="fill_width"></select></td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="charsetSelect">Juego de caracteres</label></td>
+                            <td class="fill_width middle" colspan="2"><select id="charsetSelect"
+                                    class="fill_width"></select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="ditavalFile">Archivo DITAVAL</label></td>
+                            <td class="fill_width middle"><input id="ditavalFile" type="text" class="fill_width"
+                                    disabled></td>
+                            <td class="middle"><button id="browseDitaVal" disabled>Examinar...</button></td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="configFile">Configuraci&oacute;n de JSON</label></td>
+                            <td class="fill_width middle"><input id="configFile" type="text" class="fill_width"
+                                    disabled></td>
+                            <td class="middle"><button id="browseConfig" disabled>Examinar...</button></td>
+                        </tr>
+                    </table>
+
+                    <div class="row middle">
+                        <input id="is20" type="checkbox">
+                        <label for="is20" style="padding-top: 4px;" class="noWrap">Generar XLIFF 2.0</label>
+                    </div>
+                    <div class="row middle">
+                        <input id="isParagraph" type="checkbox">
+                        <label for="isParagraph" style="padding-top: 4px;" class="noWrap">Segmentar por p&aacute;rrafos</label>
+                    </div>
+                    <div class="row middle">
+                        <input id="isEmbed" type="checkbox">
+                        <label for="isEmbed" style="padding-top: 4px;" class="noWrap">Incrustar esqueleto</label>
+                    </div>
+                    <div class="buttonArea">
+                        <button id="createXLIFF">Crear XLIFF</button>
+                    </div>
+                </div>
+
+                <div class="hiddenTab" id="merge">
+                    <table>
+                        <tr>
+                            <td class="noWrap middle"><label for="xliffFile">Archivo XLIFF</label></td>
+                            <td class="fill_width middle"><input id="xliffFile" type="text" class="fill_width"></td>
+                            <td class="middle"><button id="browseXLIFF">Examinar...</button></td>
+                        </tr>
+                        <tr>
+                            <td class="noWrap middle"><label for="targetFile">Archivo/carpeta de destino</label></td>
+                            <td class="fill_width middle"><input id="targetFile" type="text" class="fill_width"></td>
+                            <td class="middle"><button id="browseTarget">Examinar...</button></td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="row middle">
+                                    <input id="unapproved" type="checkbox">
+                                    <label for="unapproved" style="padding-top: 4px;" class="noWrap">Aceptar segmentos no aprobados</label>
+                                </div>
+                                <div class="row middle">
+                                    <input id="exportTmx" type="checkbox">
+                                    <label for="exportTmx" style="padding-top: 4px;" class="noWrap">Exportar segmentos aprobados como TMX</label>
+                                </div>
+                                <div class="row middle">
+                                    <input id="openTranslated" type="checkbox">
+                                    <label for="openTranslated" style="padding-top: 4px;" class="noWrap">Abrir archivo/carpeta traducido despu&eacute;s de combinar</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="buttonArea">
+                        <button id="mergeXLIFF">Combinar XLIFF</button>
+                    </div>
+                </div>
+
+                <div class="hiddenTab" id="validate">
+                    <table>
+                        <tr>
+                            <td class="noWrap middle"><label for="xliffFileValidation">Archivo XLIFF</label></td>
+                            <td class="fill_width middle"><input id="xliffFileValidation" type="text"
+                                    class="fill_width"></td>
+                            <td class="middle"><button id="browseXLIFFValidation">Examinar...</button></td>
+                        </tr>
+                    </table>
+                    <div class="buttonArea">
+                        <button id="validateButton">Validar XLIFF</button>
+                    </div>
+                </div>
+
+                <div class="hiddenTab" id="analysis">
+                    <table>
+                        <tr>
+                            <td class="noWrap middle"><label for="xliffFileAnalysis">Archivo XLIFF</label></td>
+                            <td class="fill_width middle"><input id="xliffFileAnalysis" type="text" class="fill_width">
+                            </td>
+                            <td class="middle"><button id="browseXLIFFAnalysis">Examinar...</button></td>
+                        </tr>
+                    </table>
+                    <div class="buttonArea">
+                        <button id="analyseButton">Analizar XLIFF</button>
+                    </div>
+                </div>
+
+                <div class="hiddenTab" id="tasks">
+                    <table>
+                        <tr>
+                            <td class="noWrap middle"><label for="xliffFileTasks">Archivo XLIFF</label></td>
+                            <td class="fill_width middle"><input id="xliffFileTasks" type="text" class="fill_width">
+                            </td>
+                            <td class="middle"><button id="browseXLIFFTasks">Examinar...</button></td>
+                        </tr>
+                    </table>
+
+                    <table style="width: calc(100% - 16px);">
+                        <tr>
+                            <td class="fill_width">&nbsp;</td>
+                            <td><button id="copySourcesButton" class="fill_width">Copiar Origen a Destino</button></td>
+                            <td><button id="pseudoTranslateButton" class="fill_width">Pseudo-Traducir</button></td>
+                        </tr>
+                        <tr>
+                            <td class="fill_width">&nbsp;</td>
+                            <td><button id="removeTargetsButton" class="fill_width">Eliminar Todas las Traducciones</button></td>
+                            <td><button id="approveAllButton" class="fill_width">Aprobar Todos los Segmentos</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="status" class="status" style="display:none;"></div>
+            </td>
+        </tr>
+    </table>
+    <script src="../../js/main.js"></script>
+</body>
+
+</html>

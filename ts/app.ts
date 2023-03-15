@@ -43,6 +43,8 @@ class App {
     static latestVersion: string;
     static downloadLink: string;
 
+    static lang: string = 'en';
+
     ls: ChildProcessWithoutNullStreams;
     stopping: boolean;
 
@@ -76,10 +78,12 @@ class App {
                 srx: App.defaultSRX,
                 catalog: App.defaultCatalog,
                 skeleton: App.sklFolder,
-                theme: 'system'
+                theme: 'system',
+                appLang: 'en'
             }
-            writeFileSync(App.defaultsFile, JSON.stringify(defaults));
+            writeFileSync(App.defaultsFile, JSON.stringify(defaults, null, 2));
         }
+        this.loadDefaults();
 
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
         if (!app.isPackaged) {
@@ -95,7 +99,6 @@ class App {
         app.on('ready', () => {
             this.createWindow();
             this.createMenu();
-            this.loadDefaults();
             App.mainWindow.once('ready-to-show', () => {
                 App.loadLocation();
                 App.mainWindow.show();
@@ -208,6 +211,9 @@ class App {
         });
         ipcMain.on('get-defaultTheme', (event: IpcMainEvent) => {
             event.sender.send('set-defaultTheme', App.defaultTheme);
+        });
+        ipcMain.on('get-appLanguage', (event: IpcMainEvent) => {
+            event.sender.send('set-appLanguage', App.lang);
         });
         ipcMain.on('get-version', (event: IpcMainEvent) => {
             this.getVersion(event);
@@ -334,7 +340,7 @@ class App {
             },
             height: 500
         });
-        App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
+        App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'main.html'));
         App.mainWindow.on('move', () => {
             App.saveLocation();
         });
@@ -344,7 +350,7 @@ class App {
         let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
         let position: number[] = App.mainWindow.getPosition();
         let pos: any = { x: position[0], y: position[1] }
-        writeFileSync(defaultsFile, JSON.stringify(pos));
+        writeFileSync(defaultsFile, JSON.stringify(pos, null, 2));
     }
 
     static loadLocation(): void {
@@ -361,7 +367,7 @@ class App {
     }
 
     saveDefaults(defaults: any): void {
-        writeFileSync(App.defaultsFile, JSON.stringify(defaults));
+        writeFileSync(App.defaultsFile, JSON.stringify(defaults, null, 2));
         App.settingsWindow.hide();
         App.settingsWindow.destroy();
         App.mainWindow.focus();
@@ -391,7 +397,13 @@ class App {
         if (defaults.theme) {
             App.defaultTheme = defaults.theme;
         }
-
+        if (defaults.appLang) {
+            if (app.isReady() && defaults.appLang !== App.lang) {
+                // TODO
+                dialog.showMessageBox({ type: 'info', message: 'Language settings will be applied on next start' });
+            }
+            App.lang = defaults.appLang;
+        }
         let light = App.path.join(app.getAppPath(), 'css', 'light.css');
         let dark = App.path.join(app.getAppPath(), 'css', 'dark.css');
 
@@ -846,7 +858,7 @@ class App {
                                 }
                             });
                             App.updatesWindow.setMenu(null);
-                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
+                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', App.lang, 'updates.html'));
                             App.updatesWindow.once('ready-to-show', () => {
                                 App.updatesWindow.show();
                             });
@@ -953,7 +965,7 @@ class App {
             }
         });
         App.aboutWindow.setMenu(null);
-        App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
+        App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'about.html'));
         App.aboutWindow.once('ready-to-show', () => {
             App.aboutWindow.show();
         });
@@ -998,7 +1010,7 @@ class App {
             }
         });
         App.settingsWindow.setMenu(null);
-        App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
+        App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'settings.html'));
         App.settingsWindow.once('ready-to-show', () => {
             App.settingsWindow.show();
         });
@@ -1082,7 +1094,7 @@ class App {
             }
         });
         App.licensesWindow.setMenu(null);
-        App.licensesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'licenses.html'));
+        App.licensesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', App.lang, 'licenses.html'));
         App.licensesWindow.once('ready-to-show', () => {
             App.licensesWindow.show();
         });

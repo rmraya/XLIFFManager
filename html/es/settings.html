@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Configuraci&oacute;n</title>
+    <link id="theme" rel="stylesheet" href="../../css/light.css">
+</head>
+
+<body onload="new Settings();">
+    <div class="tabContent">
+        <table style="width: calc(100% - 8px);">
+            <tr>
+                <td class="middle noWrap"><label for="sourceSelect">Idioma de origen predeterminado</label></td>
+                <td class="fill_width" colspan="2"><select id="sourceSelect" class="fill_width"></select></td>
+            </tr>
+            <tr>
+                <td class="middle noWrap"><label for="targetSelect">Idioma de destino predeterminado</label></td>
+                <td class="fill_width" colspan="2"><select id="targetSelect" class="fill_width"></select></td>
+            </tr>
+            <tr>
+                <td class="middle noWrap"><label for="defaultCatalog">Cat&aacute;logo del sistema</label></td>
+                <td class="middle fill_width"><input id="defaultCatalog" type="text" class="fill_width"></td>
+                <td class="middle"><button id="browseCatalog" class="dark">Examinar...</button></td>
+            </tr>
+            <tr>
+                <td class="middle noWrap"><label for="skeletonFolder">Carpeta de esqueletos</label></td>
+                <td class="middle fill_width"><input id="skeletonFolder" type="text" class="fill_width"></td>
+                <td class="middle"><button id="browseSkeleton" class="dark">Examinar...</button></td>
+            </tr>
+            <tr>
+                <td class="middle noWrap"><label for="defaultSRX">Archivo SRX predeterminado</label></td>
+                <td class="middle fill_width"><input id="defaultSRX" type="text" class="fill_width"></td>
+                <td class="middle"><button id="browseSRX" class="dark">Examinar...</button></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <td class="middle noWrap"><label for="sourceSelect">Idioma de la aplicaci&oacute;n</label></td>
+                <td class="fill_width">
+                    <select id="appLangSelect"  style="width: 300px;">
+                        <option value="en">Ingl&eacute;s</option> <option value="es">Espa&ntilde;ol</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="middle noWrap"><label for="themeColor">Tema</label></td>
+                <td class="fill_width">
+                    <select id="themeColor" style="width: 300px;">
+                        <option value="system">Predeterminado del sistema</option> <option value="dark">Oscuro</option> <option value="light">Claro</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div class="buttonArea">
+            <button id="saveSettings">Guardar Configuraci&oacute;n</button>
+        </div>
+    </div>
+    <script src="../../js/settings.js"></script>
+</body>
+
+</html>
