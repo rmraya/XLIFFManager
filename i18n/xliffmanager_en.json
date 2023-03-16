@@ -1,0 +1,5 @@
+{
+    "App.languageChanged": "Application language settings will be applied on next start",
+    "About.xliffmanager" :  "XLIFF Manager {0}",
+    "About.openxliff" : "{0} {1} Build {2}"
+}

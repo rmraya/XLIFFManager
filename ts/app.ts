@@ -14,6 +14,7 @@ import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_proce
 import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, net, Rectangle, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
+import { I18n } from "./i18n";
 
 class App {
 
@@ -43,10 +44,11 @@ class App {
     static latestVersion: string;
     static downloadLink: string;
 
+    static i18n: I18n;
     static lang: string = 'en';
 
     ls: ChildProcessWithoutNullStreams;
-    stopping: boolean;
+    stopping: boolean = false;
 
     constructor() {
         if (!app.requestSingleInstanceLock()) {
@@ -84,6 +86,8 @@ class App {
             writeFileSync(App.defaultsFile, JSON.stringify(defaults, null, 2));
         }
         this.loadDefaults();
+
+        App.i18n = new I18n(App.path.join(app.getAppPath(), 'i18n', 'xliffmanager_' + App.lang + '.json'));
 
         this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
         if (!app.isPackaged) {
@@ -313,10 +317,10 @@ class App {
     static destroyWindow(window: BrowserWindow): void {
         if (window) {
             try {
-                let parent: BrowserWindow = window.getParentWindow();
+                let parent: BrowserWindow | null = window.getParentWindow();
                 window.hide();
                 window.destroy();
-                window = undefined;
+                // TODO window = undefined;
                 if (parent) {
                     parent.focus();
                 } else {
@@ -399,8 +403,7 @@ class App {
         }
         if (defaults.appLang) {
             if (app.isReady() && defaults.appLang !== App.lang) {
-                // TODO
-                dialog.showMessageBox({ type: 'info', message: 'Language settings will be applied on next start' });
+                dialog.showMessageBox({ type: 'info', message: App.i18n.getString('App.languageChanged') });
             }
             App.lang = defaults.appLang;
         }
@@ -936,15 +939,23 @@ class App {
         }
 
         if (process.platform === 'win32') {
-            template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
-            template[1].submenu.append(new MenuItem({ type: 'separator' }));
-            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+            if (template[0].submenu) {
+                template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
+            }
+            if (template[1].submenu) {
+                template[1].submenu.append(new MenuItem({ type: 'separator' }));
+                template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+            }
         }
 
         if (process.platform === 'linux') {
-            template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
-            template[1].submenu.append(new MenuItem({ type: 'separator' }));
-            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+            if (template[0].submenu) {
+                template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
+            }
+            if (template[1].submenu) {
+                template[1].submenu.append(new MenuItem({ type: 'separator' }));
+                template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+            }
         }
 
         Menu.setApplicationMenu(Menu.buildFromTemplate(template));
@@ -977,7 +988,8 @@ class App {
     getVersion(event: IpcMainEvent): void {
         App.sendRequest({ command: 'version' },
             (data: any) => {
-                data.xliffManager = app.getVersion();
+                data.xliffManager = App.i18n.format(App.i18n.getString('About.xliffmanager'), [app.getVersion()]);
+                data.openxliff = App.i18n.format(App.i18n.getString('About.openxliff'), [data.tool, data.version, data.build]);
                 event.sender.send('set-version', data);
             },
             (reason: string) => {

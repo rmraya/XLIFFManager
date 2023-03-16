@@ -10,7 +10,6 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
-
 class About {
 
     electron = require('electron');
@@ -23,8 +22,8 @@ class About {
             this.electron.ipcRenderer.send('get-version');
         });
         this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
-            document.getElementById('xliffmanager').innerHTML = 'XLIFF Manager ' + arg.xliffManager;
-            document.getElementById('openxliff').innerHTML = arg.tool + ' ' + arg.version + ' ' + arg.build;
+            document.getElementById('xliffmanager').innerHTML = arg.xliffManager;
+            document.getElementById('openxliff').innerHTML = arg.openxliff;
             this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: (document.body.clientHeight + 40) });
         });
         document.getElementById('licensesButton').addEventListener('click', () => {
