@@ -89,7 +89,7 @@ class App {
 
         App.i18n = new I18n(App.path.join(app.getAppPath(), 'i18n', 'xliffmanager_' + App.lang + '.json'));
 
-        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
+        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000', '-lang', App.lang], { cwd: app.getAppPath() });
         if (!app.isPackaged) {
             this.ls.stdout.on('data', (data: Buffer | string) => {
                 console.log(data instanceof Buffer ? data.toString() : data);
