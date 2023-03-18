@@ -1183,7 +1183,7 @@ class App {
     }
 
     static showHomePage(): void {
-        shell.openExternal("https://www.maxprograms.com/").catch((error: Error) => {
+        shell.openExternal("https://maxprograms.com/").catch((error: Error) => {
             dialog.showErrorBox('Error', error.message);
         });
     }
@@ -1277,7 +1277,12 @@ class App {
         });
         request.end();
     }
+
+    static getString(key: string) {
+        return this.i18n.getString(key);
+    }
 }
+
 try {
     new App();
 } catch (e) {

@@ -17,10 +17,12 @@ class Settings {
     constructor() {
         this.electron.ipcRenderer.send('get-theme');
 
-        document.getElementById('browseCatalog').addEventListener('click', () => { this.electron.ipcRenderer.send('select-catalog'); });
-        document.getElementById('browseSkeleton').addEventListener('click', () => { this.electron.ipcRenderer.send('select-skeleton'); });
-        document.getElementById('browseSRX').addEventListener('click', () => { this.electron.ipcRenderer.send('select-srx'); });
-        document.getElementById('saveSettings').addEventListener('click', () => { this.saveSettings(); });
+        document.addEventListener('keydown', (event: KeyboardEvent) => { KeyboardHandler.keyListener(event); });
+
+        (document.getElementById('browseCatalog') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-catalog'); });
+        (document.getElementById('browseSkeleton') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-skeleton'); });
+        (document.getElementById('browseSRX') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-srx'); });
+        (document.getElementById('saveSettings') as HTMLButtonElement).addEventListener('click', () => { this.saveSettings(); });
 
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
@@ -68,10 +70,12 @@ class Settings {
         array.forEach((lang: Language) => {
             options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
-        document.getElementById('sourceSelect').innerHTML = options;
-        (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
-        document.getElementById('targetSelect').innerHTML = options;
-        (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
+        let sourceSelect: HTMLSelectElement = document.getElementById('sourceSelect') as HTMLSelectElement;
+        sourceSelect.innerHTML = options;
+        sourceSelect.value = arg.srcLang;
+        let targetSelect: HTMLSelectElement = document.getElementById('targetSelect') as HTMLSelectElement;
+        targetSelect.innerHTML = options;
+        targetSelect.value = arg.tgtLang;
         this.electron.ipcRenderer.send('get-catalog');
     }
 
@@ -83,7 +87,7 @@ class Settings {
             catalog: (document.getElementById('defaultCatalog') as HTMLInputElement).value,
             srx: (document.getElementById('defaultSRX') as HTMLInputElement).value,
             theme: (document.getElementById('themeColor') as HTMLSelectElement).value,
-            appLang:  (document.getElementById('appLangSelect') as HTMLSelectElement).value
+            appLang: (document.getElementById('appLangSelect') as HTMLSelectElement).value
         });
     }
 

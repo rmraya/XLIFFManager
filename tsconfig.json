@@ -12,7 +12,8 @@
                 "node_modules/*"
             ]
         },
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "strict": true
     },
     "include": [
         "ts/**/*"

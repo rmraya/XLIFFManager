@@ -19,34 +19,34 @@ class Licenses {
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
         });
-        document.getElementById('XLIFFManager').addEventListener('click', () => {
+        (document.getElementById('XLIFFManager') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('XLIFFManager');
         });
-        document.getElementById('electron').addEventListener('click', () => {
+        (document.getElementById('electron') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('electron');
         });
-        document.getElementById('TypeScript').addEventListener('click', () => {
+        (document.getElementById('TypeScript') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('TypeScript');
         });
-        document.getElementById('Java').addEventListener('click', () => {
+        (document.getElementById('Java') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('Java');
         });
-        document.getElementById('OpenXLIFF').addEventListener('click', () => {
+        (document.getElementById('OpenXLIFF') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('OpenXLIFF');
         });
-        document.getElementById('XMLJava').addEventListener('click', () => {
+        (document.getElementById('XMLJava') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('XMLJava');
         });
-        document.getElementById('JSON').addEventListener('click', () => {
+        (document.getElementById('JSON') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('JSON');
         });
-        document.getElementById('MapDB').addEventListener('click', () => {
+        (document.getElementById('MapDB') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('MapDB');
         });
-        document.getElementById('jsoup').addEventListener('click', () => {
+        (document.getElementById('jsoup') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('jsoup');
         });
-        document.getElementById('DTDParser').addEventListener('click', () => {
+        (document.getElementById('DTDParser') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('DTDParser');
         });
         document.addEventListener('keydown', (event: KeyboardEvent) => {

@@ -22,20 +22,21 @@ class About {
             this.electron.ipcRenderer.send('get-version');
         });
         this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
-            document.getElementById('xliffmanager').innerHTML = arg.xliffManager;
-            document.getElementById('openxliff').innerHTML = arg.openxliff;
+            (document.getElementById('xliffmanager') as HTMLHeadingElement).innerHTML = arg.xliffManager;
+            (document.getElementById('openxliff') as HTMLParagraphElement).innerHTML = arg.openxliff;
             this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: (document.body.clientHeight + 40) });
         });
-        document.getElementById('licensesButton').addEventListener('click', () => {
+        let licensesButton: HTMLButtonElement = document.getElementById('licensesButton') as HTMLButtonElement;
+        licensesButton.addEventListener('click', () => {
             this.electron.ipcRenderer.send('licenses-clicked');
-            document.getElementById('licensesButton').blur();
+            licensesButton.blur();
         });
         document.addEventListener('keydown', (event: KeyboardEvent) => {
             if (event.code === 'Escape') {
                 this.electron.ipcRenderer.send('close-about');
             }
         });
-        document.getElementById('maxprograms').addEventListener('click', () => {
+        (document.getElementById('maxprograms') as HTMLAnchorElement).addEventListener('click', () => {
             this.electron.ipcRenderer.send('show-home');
         });
     }
