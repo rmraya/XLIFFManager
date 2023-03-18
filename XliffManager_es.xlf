@@ -11,9 +11,9 @@ aWZmSGFuZGxlci41PSUlJTEwJSUlClhsaWZmSGFuZGxlci42PSUlJTExJSUlClhsaWZmSGFuZGxl
 ci43PSUlJTEyJSUlClhsaWZmSGFuZGxlci44PSUlJTEzJSUlClhsaWZmSGFuZGxlci45PSUlJTE0
 JSUlClhsaWZmSGFuZGxlci4xMD0lJSUxNSUlJQo=</internal-file>
       </skl>
-      <tool tool-version="3.4.0 20230306_0912" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+      <tool tool-version="3.5.0 20230317_1252" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
     </header>
-    <?encoding ISO-8859-1?>
+    <?encoding UTF-8?>
     <body>
       <trans-unit resname="CheckURL.0=" approved="yes" id="0" xml:space="preserve">
       <source>OpenXLIFF Server ready</source>
