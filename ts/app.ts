@@ -274,7 +274,7 @@ class App {
             shell.openExternal('file://' + arg.file, {
                 activate: true, workingDirectory: app.getAppPath()
             }).catch((error: Error) => {
-                dialog.showErrorBox('Error', error.message);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
             });
         });
         ipcMain.on('show-dialog', (event: IpcMainEvent, arg: any) => {
@@ -326,14 +326,13 @@ class App {
                 let parent: BrowserWindow | null = window.getParentWindow();
                 window.hide();
                 window.destroy();
-                // TODO window = undefined;
                 if (parent) {
                     parent.focus();
                 } else {
                     App.mainWindow.focus();
                 }
             } catch (error: any) {
-                console.log(JSON.stringify(error));
+                console.error(error);
             }
         }
     }
@@ -371,7 +370,7 @@ class App {
                 let pos: any = JSON.parse(data.toString());
                 App.mainWindow.setPosition(pos.x, pos.y);
             } catch (error: any) {
-                console.log(JSON.stringify(error));
+                console.error(error);
             }
         }
     }
@@ -454,7 +453,7 @@ class App {
                 event.sender.send('languages-received', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -466,7 +465,7 @@ class App {
                 event.sender.send('package-languages', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -478,7 +477,7 @@ class App {
                 event.sender.send('xliff-languages', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -491,7 +490,7 @@ class App {
                 event.sender.send('charsets-received', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -504,7 +503,7 @@ class App {
                 event.sender.send('types-received', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -551,7 +550,7 @@ class App {
                 this.getFileType(event, value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -567,7 +566,7 @@ class App {
                 this.getTargetFile(event, value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -575,7 +574,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'DITAVAL File', extensions: ['ditaval'] },
+                { name: App.i18n.getString('App', 'ditaval'), extensions: ['ditaval'] },
                 { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
@@ -583,7 +582,7 @@ class App {
                 event.sender.send('add-ditaval-file', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -591,7 +590,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'JSON File', extensions: ['json'] },
+                { name: App.i18n.getString('App', 'jsonFile'), extensions: ['json'] },
                 { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
@@ -599,7 +598,7 @@ class App {
                 event.sender.send('add-config-file', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -624,7 +623,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -641,7 +640,7 @@ class App {
                 event.sender.send('add-xliff-validation', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -656,7 +655,7 @@ class App {
                 event.sender.send('add-xliff-tasks', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -679,7 +678,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -704,7 +703,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -718,7 +717,7 @@ class App {
                 event.sender.send('add-target-file', value.filePath);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -741,7 +740,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -758,7 +757,7 @@ class App {
                 event.sender.send('add-xliff-analysis', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -781,7 +780,7 @@ class App {
                 }, 600);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -793,7 +792,7 @@ class App {
                 event.sender.send('add-source-file', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -805,11 +804,11 @@ class App {
                 if (data.result === 'Success') {
                     event.sender.send('add-target-file', data.target);
                 } else {
-                    dialog.showErrorBox('Error', data.reason);
+                    dialog.showErrorBox(App.i18n.getString('App', 'error'), data.reason);
                 }
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -822,7 +821,7 @@ class App {
             },
             (reason: string) => {
                 App.status = 'error';
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -834,7 +833,7 @@ class App {
                 event.sender.send(callback, data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
             }
         );
     }
@@ -891,7 +890,7 @@ class App {
                             if (!silent) {
                                 dialog.showMessageBox(App.mainWindow, {
                                     type: 'info',
-                                    message: 'There are currently no updates available'
+                                    message: App.i18n.getString('App', 'noUpdates')
                                 });
                             }
                         }
@@ -919,61 +918,61 @@ class App {
 
     createMenu(): void {
         let helpMenu: Menu = Menu.buildFromTemplate([
-            { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: () => { App.showHelp() } },
+            { label: App.i18n.getString('App', 'userGuide'), accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
-            { label: 'Check for Updates', click: () => { App.checkUpdates(false); } },
+            { label: App.i18n.getString('App', 'checkUpdates'), click: () => { App.checkUpdates(false); } },
             { type: 'separator' },
-            { label: 'View Licenses', click: () => { App.showLicenses({ from: 'menu' }); } },
+            { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.showLicenses({ from: 'menu' }); } },
             { type: 'separator' },
-            { label: 'View Release History', click: () => { App.releaseHistory(); } },
-            { label: 'Support Group', click: () => { App.showSupportGroup(); } },
+            { label: App.i18n.getString('App', 'releaseHistory'), click: () => { App.releaseHistory(); } },
+            { label: App.i18n.getString('App', 'supportGroup'), click: () => { App.showSupportGroup(); } },
         ]);
         let template: MenuItem[] = [
-            new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
+            new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
         ];
         if (!app.isPackaged) {
-            helpMenu.append(new MenuItem({ label: 'Open Development Tools', accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
+            helpMenu.append(new MenuItem({ label: App.i18n.getString('App', 'developmentTools'), accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
         }
 
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([
-                { label: 'About XLIFF Manager', click: () => { App.showAbout(); } },
-                { label: 'Preferences...', accelerator: 'Cmd+,', click: () => { App.showSettings(); } },
+                { label: App.i18n.getString('App', 'aboutMac'), click: () => { App.showAbout(); } },
+                { label: App.i18n.getString('App', 'preferences'), accelerator: 'Cmd+,', click: () => { App.showSettings(); } },
                 { type: 'separator' },
                 {
-                    label: 'Services', role: 'services', submenu: [
-                        { label: 'No Services Apply', enabled: false }
+                    label: App.i18n.getString('App', 'services'), role: 'services', submenu: [
+                        { label: App.i18n.getString('App', 'noServices'), enabled: false }
                     ]
                 },
                 { type: 'separator' },
-                { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
+                { label: App.i18n.getString('App', 'quitMac'), accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
             ]);
-            template.unshift(new MenuItem({ label: 'XLIFF Manager', submenu: appleMenu }));
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'xliffManager'), submenu: appleMenu }));
         } else {
             let fileMenu: Menu = Menu.buildFromTemplate([
-                { label: 'Settings', click: () => { App.showSettings(); } },
+                { label: App.i18n.getString('App', 'settings'), click: () => { App.showSettings(); } },
                 { type: 'separator' }
             ]);
-            template.unshift(new MenuItem({ label: '&File', submenu: fileMenu }));
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'fileMenu'), submenu: fileMenu }));
         }
 
         if (process.platform === 'win32') {
             if (template[0].submenu) {
-                template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
+                template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'exit'), accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
             }
             if (template[1].submenu) {
                 template[1].submenu.append(new MenuItem({ type: 'separator' }));
-                template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+                template[1].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
             }
         }
 
         if (process.platform === 'linux') {
             if (template[0].submenu) {
-                template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
+                template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'quit'), accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
             }
             if (template[1].submenu) {
                 template[1].submenu.append(new MenuItem({ type: 'separator' }));
-                template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+                template[1].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
             }
         }
 
@@ -1012,7 +1011,7 @@ class App {
                 event.sender.send('set-version', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -1022,7 +1021,7 @@ class App {
         shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager.pdf'), {
             activate: true, workingDirectory: app.getAppPath()
         }).catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
@@ -1056,7 +1055,7 @@ class App {
             defaultPath: App.defaultSRX,
             properties: ['openFile'],
             filters: [
-                { name: 'SRX File', extensions: ['srx'] },
+                { name: App.i18n.getString('App', 'srxFile'), extensions: ['srx'] },
                 { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
@@ -1064,7 +1063,7 @@ class App {
                 event.sender.send('srx-received', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -1074,7 +1073,7 @@ class App {
             defaultPath: App.defaultCatalog,
             properties: ['openFile'],
             filters: [
-                { name: 'XML File', extensions: ['xml'] },
+                { name: App.i18n.getString('App', 'xmlFile'), extensions: ['xml'] },
                 { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
@@ -1082,7 +1081,7 @@ class App {
                 event.sender.send('catalog-received', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -1096,13 +1095,13 @@ class App {
                 event.sender.send('skeleton-received', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
     static releaseHistory(): void {
         shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html").catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
@@ -1170,7 +1169,7 @@ class App {
                 title = 'LGPL 2.1';
                 break;
             default:
-                dialog.showErrorBox('Error', 'Unknown license');
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), 'Unknown license');
                 return;
         }
         let licenseWindow = new BrowserWindow({
@@ -1197,13 +1196,13 @@ class App {
 
     static showSupportGroup(): void {
         shell.openExternal('https://groups.io/g/maxprograms/').catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
     static showHomePage(): void {
         shell.openExternal("https://maxprograms.com/").catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
@@ -1221,7 +1220,7 @@ class App {
                 error(e.message);
             });
             response.on('aborted', () => {
-                error('Request aborted');
+                error(App.i18n.getString('App', 'requestAborted'));
             });
             response.on('end', () => {
                 try {
@@ -1260,26 +1259,29 @@ class App {
         request.on('response', (response: IncomingMessage) => {
             let fileSize = Number.parseInt(response.headers['content-length'] as string);
             let received: number = 0;
+            let downloaded: string = App.i18n.getString('App', 'downloaded');
             response.on('data', (chunk: Buffer) => {
                 received += chunk.length;
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(received / fileSize);
                 }
-                App.mainWindow.webContents.send('set-status', { status: 'Downloaded: ' + Math.trunc(received * 100 / fileSize) + '%' });
+                App.mainWindow.webContents.send('set-status', {
+                    status: App.i18n.format(downloaded, ['' + Math.trunc(received * 100 / fileSize)])
+                });
                 appendFileSync(file, chunk);
             });
             response.on('end', () => {
                 App.mainWindow.webContents.send('set-status', { status: '' });
                 dialog.showMessageBox({
                     type: 'info',
-                    message: 'Update downloaded'
+                    message: App.i18n.getString('App', 'updateDownloaded')
                 });
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(0);
                     shell.openPath(file).then(() => {
                         app.quit();
                     }).catch((reason: string) => {
-                        dialog.showErrorBox('Error', reason);
+                        dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                     });
                 }
                 if (process.platform === 'linux') {
@@ -1288,7 +1290,7 @@ class App {
             });
             response.on('error', (reason: string) => {
                 App.mainWindow.webContents.send('set-status', { status: '' });
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(0);
                 }
