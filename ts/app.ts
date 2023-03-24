@@ -278,6 +278,12 @@ class App {
             });
         });
         ipcMain.on('show-dialog', (event: IpcMainEvent, arg: any) => {
+            if (arg.key) {
+                arg.message = App.i18n.getString('Main', arg.key);
+            }
+            if (arg.titleKey) {
+                arg.title = App.i18n.getString('Main', arg.titleKey);
+            }
             dialog.showMessageBox(arg);
         });
         ipcMain.on('show-message', (event: IpcMainEvent, arg: any) => {
@@ -444,6 +450,7 @@ class App {
             (data: any) => {
                 data.srcLang = App.defaultSrcLang;
                 data.tgtLang = App.defaultTgtLang;
+                data.none = App.i18n.getString('Main', 'selectLanguage');
                 event.sender.send('languages-received', data);
             },
             (reason: string) => {
@@ -480,6 +487,7 @@ class App {
     getCharsets(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getCharsets' },
             (data: any) => {
+                data.none = App.i18n.getString('Main', 'selectCharset');
                 event.sender.send('charsets-received', data);
             },
             (reason: string) => {
@@ -492,6 +500,7 @@ class App {
     getTypes(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getTypes' },
             (data: any) => {
+                data.none = App.i18n.getString('Main', 'selectFileType');
                 event.sender.send('types-received', data);
             },
             (reason: string) => {
@@ -520,22 +529,22 @@ class App {
                 { name: App.i18n.getString('App', 'json'), extensions: ['json'] },
                 { name: App.i18n.getString('App', 'mif'), extensions: ['mif'] },
                 { name: App.i18n.getString('App', 'office'), extensions: ['docx', 'xlsx', 'pptx'] },
-                { name: 'OpenOffice 1.x Document', extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
-                { name: 'OpenOffice 2.x Document', extensions: ['odt', 'ods', 'odp', 'odg'] },
-                { name: 'Plain Text', extensions: ['txt'] },
-                { name: 'PO (Portable Objects)', extensions: ['po', 'pot'] },
-                { name: 'RC (Windows C/C++ Resources)', extensions: ['rc'] },
-                { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
-                { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
-                { name: 'SRT Subtitle', extensions: ['srt'] },
-                { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
-                { name: 'Trados Studio Package', extensions: ['sdlppx'] },
-                { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
-                { name: 'TXML Document', extensions: ['txml'] },
-                { name: 'Visio XML Drawing', extensions: ['vsdx'] },
-                { name: 'Wordfast/GlobalLink XLIFF Document', extensions: ['txlf'] },
-                { name: 'XLIFF Document', extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
-                { name: 'XML Document', extensions: ['xml'] }
+                { name: App.i18n.getString('App', 'openOffice1'), extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
+                { name: App.i18n.getString('App', 'openOffice2'), extensions: ['odt', 'ods', 'odp', 'odg'] },
+                { name: App.i18n.getString('App', 'plainText'), extensions: ['txt'] },
+                { name: App.i18n.getString('App', 'po'), extensions: ['po', 'pot'] },
+                { name: App.i18n.getString('App', 'rc'), extensions: ['rc'] },
+                { name: App.i18n.getString('App', 'resx'), extensions: ['resx'] },
+                { name: App.i18n.getString('App', 'sdlxliff'), extensions: ['sdlxliff'] },
+                { name: App.i18n.getString('App', 'srt'), extensions: ['srt'] },
+                { name: App.i18n.getString('App', 'svg'), extensions: ['svg'] },
+                { name: App.i18n.getString('App', 'tradosPackage'), extensions: ['sdlppx'] },
+                { name: App.i18n.getString('App', 'ts'), extensions: ['ts'] },
+                { name: App.i18n.getString('App', 'txml'), extensions: ['txml'] },
+                { name: App.i18n.getString('App', 'visio'), extensions: ['vsdx'] },
+                { name: App.i18n.getString('App', 'txlf'), extensions: ['txlf'] },
+                { name: App.i18n.getString('App', 'xliff'), extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
+                { name: App.i18n.getString('App', 'xml'), extensions: ['xml'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -550,7 +559,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('App', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -625,7 +634,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('App', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -640,7 +649,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('App', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -703,7 +712,7 @@ class App {
 
     selectTargetFile(event: IpcMainEvent): void {
         dialog.showSaveDialog({
-            title: 'Target File/Folder'
+            title: App.i18n.getString('App', 'targetFolder')
         }).then((value: Electron.SaveDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-target-file', value.filePath);
@@ -742,7 +751,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('App', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -1043,7 +1052,7 @@ class App {
 
     selectSrx(event: IpcMainEvent): void {
         dialog.showOpenDialog({
-            title: 'Default SRX File',
+            title: App.i18n.getString('App', 'defaultSRX'),
             defaultPath: App.defaultSRX,
             properties: ['openFile'],
             filters: [
@@ -1061,7 +1070,7 @@ class App {
 
     selectCatalog(event: IpcMainEvent): void {
         dialog.showOpenDialog({
-            title: 'Default Catalog',
+            title: App.i18n.getString('App', 'defaultCatalog'),
             defaultPath: App.defaultCatalog,
             properties: ['openFile'],
             filters: [
@@ -1079,7 +1088,7 @@ class App {
 
     selectSkeleton(event: IpcMainEvent): void {
         dialog.showOpenDialog({
-            title: 'Skeleton Folder',
+            title: App.i18n.getString('App', 'skeletonFolder'),
             defaultPath: App.sklFolder,
             properties: ['openDirectory', 'createDirectory']
         }).then((value: Electron.OpenDialogReturnValue) => {
@@ -1286,10 +1295,6 @@ class App {
             });
         });
         request.end();
-    }
-
-    static getString(fileStrings: string, key: string) {
-        return this.i18n.getString(fileStrings, key);
     }
 }
 

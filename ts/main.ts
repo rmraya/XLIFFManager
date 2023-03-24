@@ -27,7 +27,7 @@ class Main {
 
     constructor() {
         this.electron.ipcRenderer.send('get-theme');
-        
+
         document.addEventListener('keydown', (event: KeyboardEvent) => { KeyboardHandler.keyListener(event); });
 
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -207,22 +207,22 @@ class Main {
     createXLIFF(): void {
         let sourceFile: string = (document.getElementById('sourceFile') as HTMLInputElement).value;
         if (!sourceFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectSourceFile' });
             return;
         }
         let sourceLang: string = (document.getElementById('sourceSelect') as HTMLSelectElement).value;
         if (sourceLang === 'none') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source language' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectSourceLanguage' });
             return;
         }
         let fileType: string = (document.getElementById('typeSelect') as HTMLSelectElement).value;
         if (fileType === 'none') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select file type' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectType' });
             return;
         }
         let charset: string = (document.getElementById('charsetSelect') as HTMLSelectElement).value;
         if (charset === 'none') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select character set' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectCharacterSet' });
             return;
         }
         let args: any = { command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset };
@@ -263,7 +263,7 @@ class Main {
         this.endWaiting();
         this.setStatus('');
         if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file created' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'xliffCreated' });
         } else {
             this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
@@ -272,7 +272,7 @@ class Main {
     validate(): void {
         let xliffFile: string = (document.getElementById('xliffFileValidation') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let args = { command: 'validateXliff', file: xliffFile };
@@ -298,7 +298,7 @@ class Main {
     analyse(): void {
         let xliffFile: string = (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let args = { command: 'analyseXliff', file: xliffFile };
@@ -310,7 +310,7 @@ class Main {
         this.endWaiting();
         this.setStatus('');
         if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'Analysis completed' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'analysisCompleted' });
             this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
         } else {
             this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
@@ -327,7 +327,7 @@ class Main {
 
     typesReceived(arg: any): void {
         let array: any[] = arg.types;
-        let options: string = '<option value="none">Select File Type</option>';
+        let options: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((type: any) => {
             options = options + '<option value="' + type.type + '">' + type.description + '</option>';
         });
@@ -337,7 +337,7 @@ class Main {
 
     charsetsReceived(arg: any): any {
         let array: Charset[] = arg.charsets;
-        let options: string = '<option value="none">Select Character Set</option>';
+        let options: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((charset: Charset) => {
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
         });
@@ -394,7 +394,7 @@ class Main {
 
     languagesReceived(arg: any): void {
         let array: Language[] = arg.languages;
-        let languageOptions: string = '<option value="none">Select Language</option>';
+        let languageOptions: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((lang: Language) => {
             languageOptions = languageOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
@@ -411,12 +411,12 @@ class Main {
     mergeXLIFF(): void {
         let xliffFile: string = (document.getElementById('xliffFile') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let targetFile: string = (document.getElementById('targetFile') as HTMLInputElement).value;
         if (!targetFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select target file/folder' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectTargetFile' });
             return;
         }
         let args: any = { command: 'merge', xliff: xliffFile, target: targetFile };
@@ -436,7 +436,7 @@ class Main {
         this.endWaiting();
         this.setStatus('');
         if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file merged' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'xliffMerged' });
             if ((document.getElementById('openTranslated') as HTMLInputElement).checked) {
                 this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('targetFile') as HTMLInputElement).value });
             }
@@ -550,7 +550,7 @@ class Main {
     copySources(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let args = { command: 'copySources', file: xliffFile };
@@ -561,7 +561,7 @@ class Main {
     pseudoTranslate(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let args = { command: 'pseudoTranslate', file: xliffFile };
@@ -572,7 +572,7 @@ class Main {
     removeTargets(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let args = { command: 'removeTargets', file: xliffFile };
@@ -583,7 +583,7 @@ class Main {
     approveAll(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'selectXliffFile' });
             return;
         }
         let args = { command: 'approveAll', file: xliffFile };

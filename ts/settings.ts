@@ -66,7 +66,7 @@ class Settings {
 
     languagesReceived(arg: any): void {
         let array: Language[] = arg.languages;
-        let options: string = '<option value="none">Select Language</option>';
+        let options: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((lang: Language) => {
             options = options + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
