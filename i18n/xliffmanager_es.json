@@ -42,7 +42,7 @@
     "error": "Error",
     "updateDownloaded": "Actualización descargada",
     "json": "JSON",
-    "fileMenu": "Archivo",
+    "fileMenu": "&Archivo",
     "skeletonFolder": "Carpeta de esqueletos",
     "xliffFile": "Archivo XLIFF",
     "languageChanged": "La configuración de idioma se aplicará en el próximo inicio",
