@@ -21,10 +21,13 @@ export class I18n {
         this.resources = JSON.parse(data.toString());
     }
 
-    getString(key: string): string {
-        let value: string = this.resources[key];
-        if (value) {
-            return value;
+    getString(group: string, key: string): string {
+        let fileStrings: any = this.resources[group];
+        if (fileStrings) {
+            let value: string = fileStrings[key];
+            if (value) {
+                return value;
+            }
         }
         return '!' + key + '!';
     }

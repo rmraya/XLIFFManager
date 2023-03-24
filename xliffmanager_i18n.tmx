@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd" >
+<tmx version="1.4">
+<header 
+      creationtool="OpenXLIFF" 
+      creationtoolversion="3.5.0" 
+      srclang="en" 
+      adminlang="en"  
+      datatype="xml" 
+      o-tmf="XLIFF" 
+      segtype="block"
+>
+</header>
+<body>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-48" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Application language settings will be applied on next start</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>La configuración de idioma se aplicará en el próximo inicio</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-49" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Restart Now</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Reiniciar Ahora</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-50" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>DITA Map</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Mapa DITA</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-51" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Adobe InCopy ICML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Adobe InCopy ICML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-52" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Dismiss</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Ignorar</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-53" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Adobe InDesign IDML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Adobe InDesign IDML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-54" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>MIF (Maker Interchange Format)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>MIF (Maker Interchange Format)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-55" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Microsoft Office 2007 Document</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Documento de Microsoft Office 2007</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-56" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>JavaScript</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>JavaScript</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-57" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Adobe InDesign Interchange</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Adobe InDesign Interchange</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1567" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Any File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Cualquier archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1568" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>JSON</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>JSON</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1569" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>HTML Page</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Página HTML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1570" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>Java Properties</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>Propiedades de Java</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1571" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>{0} {1} Build {2}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>{0} {1} Compilación {2}</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1572" creationdate="20230324T123527Z">
+<tuv xml:lang="en" creationdate="20230324T123527Z">
+<seg>XLIFF Manager {0}</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T123527Z">
+<seg>XLIFF Manager {0}</seg>
+</tuv>
+</tu>
+</body>
+</tmx>

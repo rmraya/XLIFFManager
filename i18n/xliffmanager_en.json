@@ -1,5 +1,22 @@
 {
-    "App.languageChanged": "Application language settings will be applied on next start",
-    "About.xliffmanager" :  "XLIFF Manager {0}",
-    "About.openxliff" : "{0} {1} Build {2}"
+    "App": {
+        "languageChanged": "Application language settings will be applied on next start",
+        "restart": "Restart Now",
+        "dismiss": "Dismiss",
+        "anyFile": "Any File",
+        "icml": "Adobe InCopy ICML",
+        "inx": "Adobe InDesign Interchange",
+        "idml": "Adobe InDesign IDML",
+        "ditamap": "DITA Map",
+        "html": "HTML Page",
+        "javascript": "JavaScript",
+        "properties": "Java Properties",
+        "json": "JSON",
+        "mif": "MIF (Maker Interchange Format)",
+        "office": "Microsoft Office 2007 Document"
+    },
+    "About": {
+        "xliffmanager": "XLIFF Manager {0}",
+        "openxliff": "{0} {1} Build {2}"
+    }
 }

@@ -11,7 +11,7 @@
  *******************************************************************************/
 
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, net, Rectangle, session, shell } from "electron";
+import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, nativeTheme, net, Rectangle, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
 import { I18n } from "./i18n";
@@ -403,7 +403,17 @@ class App {
         }
         if (defaults.appLang) {
             if (app.isReady() && defaults.appLang !== App.lang) {
-                dialog.showMessageBox({ type: 'info', message: App.i18n.getString('App.languageChanged') });
+                dialog.showMessageBox({
+                    type: 'question',
+                    message: App.i18n.getString('App', 'languageChanged'),
+                    buttons: [App.i18n.getString('App', 'restart'), App.i18n.getString('App', 'dismiss')],
+                    cancelId: 1
+                }).then((value: MessageBoxReturnValue) => {
+                    if (value.response == 0) {
+                        app.relaunch();
+                        app.quit();
+                    }
+                });
             }
             App.lang = defaults.appLang;
         }
@@ -499,17 +509,17 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'Any File', extensions: anyFile },
-                { name: 'Adobe InCopy ICML', extensions: ['icml'] },
-                { name: 'Adobe InDesign Interchange', extensions: ['inx'] },
-                { name: 'Adobe InDesign IDML', extensions: ['idml'] },
-                { name: 'DITA Map', extensions: ['ditamap', 'dita', 'xml'] },
-                { name: 'HTML Page', extensions: ['html', 'htm'] },
-                { name: 'JavaScript', extensions: ['js'] },
-                { name: 'Java Properties', extensions: ['properties'] },
-                { name: 'JSON', extensions: ['json'] },
-                { name: 'MIF (Maker Interchange Format)', extensions: ['mif'] },
-                { name: 'Microsoft Office 2007 Document', extensions: ['docx', 'xlsx', 'pptx'] },
+                { name: App.i18n.getString('App', 'anyFile'), extensions: anyFile },
+                { name: App.i18n.getString('App', 'icml'), extensions: ['icml'] },
+                { name: App.i18n.getString('App', 'inx'), extensions: ['inx'] },
+                { name: App.i18n.getString('App', 'idml'), extensions: ['idml'] },
+                { name: App.i18n.getString('App', 'ditamap'), extensions: ['ditamap', 'dita', 'xml'] },
+                { name: App.i18n.getString('App', 'html'), extensions: ['html', 'htm'] },
+                { name: App.i18n.getString('App', 'javascript'), extensions: ['js'] },
+                { name: App.i18n.getString('App', 'properties'), extensions: ['properties'] },
+                { name: App.i18n.getString('App', 'json'), extensions: ['json'] },
+                { name: App.i18n.getString('App', 'mif'), extensions: ['mif'] },
+                { name: App.i18n.getString('App', 'office'), extensions: ['docx', 'xlsx', 'pptx'] },
                 { name: 'OpenOffice 1.x Document', extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
                 { name: 'OpenOffice 2.x Document', extensions: ['odt', 'ods', 'odp', 'odg'] },
                 { name: 'Plain Text', extensions: ['txt'] },
@@ -557,7 +567,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: 'DITAVAL File', extensions: ['ditaval'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -573,7 +583,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: 'JSON File', extensions: ['json'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -988,8 +998,8 @@ class App {
     getVersion(event: IpcMainEvent): void {
         App.sendRequest({ command: 'version' },
             (data: any) => {
-                data.xliffManager = App.i18n.format(App.i18n.getString('About.xliffmanager'), [app.getVersion()]);
-                data.openxliff = App.i18n.format(App.i18n.getString('About.openxliff'), [data.tool, data.version, data.build]);
+                data.xliffManager = App.i18n.format(App.i18n.getString('About', 'xliffmanager'), [app.getVersion()]);
+                data.openxliff = App.i18n.format(App.i18n.getString('About', 'openxliff'), [data.tool, data.version, data.build]);
                 event.sender.send('set-version', data);
             },
             (reason: string) => {
@@ -1038,7 +1048,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: 'SRX File', extensions: ['srx'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -1056,7 +1066,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: 'XML File', extensions: ['xml'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('App', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -1278,8 +1288,8 @@ class App {
         request.end();
     }
 
-    static getString(key: string) {
-        return this.i18n.getString(key);
+    static getString(fileStrings: string, key: string) {
+        return this.i18n.getString(fileStrings, key);
     }
 }
 

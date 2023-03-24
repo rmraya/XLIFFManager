@@ -1,5 +1,22 @@
 {
-  "About.xliffmanager": "XLIFF Manager {0}",
-  "About.openxliff": "{0} {1} Compilación {2}",
-  "App.languageChanged": "La configuración de idioma de la aplicación se aplicará en el próximo inicio"
+  "App": {
+    "languageChanged": "La configuración de idioma se aplicará en el próximo inicio",
+    "restart": "Reiniciar Ahora",
+    "ditamap": "Mapa DITA",
+    "icml": "Adobe InCopy ICML",
+    "dismiss": "Ignorar",
+    "idml": "Adobe InDesign IDML",
+    "mif": "MIF (Maker Interchange Format)",
+    "office": "Documento de Microsoft Office 2007",
+    "javascript": "JavaScript",
+    "inx": "Adobe InDesign Interchange",
+    "anyFile": "Cualquier archivo",
+    "json": "JSON",
+    "html": "Página HTML",
+    "properties": "Propiedades de Java"
+  },
+  "About": {
+    "openxliff": "{0} {1} Compilación {2}",
+    "xliffmanager": "XLIFF Manager {0}"
+  }
 }
