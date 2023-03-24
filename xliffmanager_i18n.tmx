@@ -12,131 +12,531 @@
 >
 </header>
 <body>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-48" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>Application language settings will be applied on next start</seg>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-48" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>There are currently no updates available</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>La configuración de idioma se aplicará en el próximo inicio</seg>
-</tuv>
-</tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-49" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>Restart Now</seg>
-</tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>Reiniciar Ahora</seg>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>No hay actualizaciones disponibles</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-50" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>DITA Map</seg>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-51" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>DITAVAL File</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>Mapa DITA</seg>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo DITAVAL</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-51" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-52" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>About XLIFF Manager</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Acerca de XLIFF Manager</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-53" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
 <seg>Adobe InCopy ICML</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
+<tuv xml:lang="es" creationdate="20230324T184341Z">
 <seg>Adobe InCopy ICML</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-52" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>Dismiss</seg>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-54" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>About...</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>Ignorar</seg>
-</tuv>
-</tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-53" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>Adobe InDesign IDML</seg>
-</tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>Adobe InDesign IDML</seg>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Acerca de...</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-54" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>MIF (Maker Interchange Format)</seg>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-55" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Default SRX File</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>MIF (Maker Interchange Format)</seg>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo SRX predeterminado</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-55" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-56" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Default Catalog</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Catálogo Predeterminado</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-57" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
 <seg>Microsoft Office 2007 Document</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
+<tuv xml:lang="es" creationdate="20230324T184341Z">
 <seg>Documento de Microsoft Office 2007</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-56" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>JavaScript</seg>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1567" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>View Release History</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>JavaScript</seg>
-</tuv>
-</tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-57" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>Adobe InDesign Interchange</seg>
-</tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>Adobe InDesign Interchange</seg>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Ver Historial</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1567" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>Any File</seg>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1568" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Target File/Folder</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>Cualquier archivo</seg>
-</tuv>
-</tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1568" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
-<seg>JSON</seg>
-</tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
-<seg>JSON</seg>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo/carpeta de destino</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1569" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1569" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>TXML Document</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Documento TXML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1570" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XML Document</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Documento XML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1571" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Plain Text</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Texto sin formato</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1572" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
 <seg>HTML Page</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
+<tuv xml:lang="es" creationdate="20230324T184341Z">
 <seg>Página HTML</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1570" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1573" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XLIFF Manager User Guide</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Guía del usuario de XLIFF Manager</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1574" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Settings</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Configuración</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1575" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>SRX File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo SRX</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1576" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XLIFF Manager</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>XLIFF Manager</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1598" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Dismiss</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Ignorar</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1599" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>&amp;Help</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>A&amp;yuda</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1600" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Downloaded: {0}%</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Descargado: {0}%</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1601" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>JavaScript</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>JavaScript</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1602" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>RC (Windows C/C++ Resources)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>RC (Recursos de Windows C/C++)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1603" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Exit</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Salir</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1604" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Any File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Cualquier Archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1606" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XLIFF Document</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Documento XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1631" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>DITA Map</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Mapa DITA</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1632" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>JSON File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo JSON</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1633" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Wordfast/GlobalLink XLIFF Document</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Documento XLIFF de Wordfast/GlobalLink</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1634" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Adobe InDesign IDML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Adobe InDesign IDML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1635" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>MIF (Maker Interchange Format)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>MIF (Maker Interchange Format)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1636" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Check for Updates</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Buscar actualizaciones</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1637" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XML File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo XML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1638" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Error</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Error</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1660" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Update downloaded</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Actualización descargada</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1661" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>JSON</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>JSON</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1662" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>&amp;File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>&amp;Archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1663" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Skeleton Folder</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Carpeta de esqueletos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1664" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XLIFF File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1665" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Application language settings will be applied on next start</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>La configuración de idioma se aplicará en el próximo inicio</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1666" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Preferences...</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Preferencias...</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1667" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>View Licenses</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Ver Licencias</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1668" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Restart Now</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Reiniciar Ahora</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1692" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Services</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Servicios</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1693" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>ResX (Windows .NET Resources)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>ResX (Recursos de Windows .NET)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1694" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Support Group</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Grupo de soporte</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1695" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Adobe InDesign Interchange</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Adobe InDesign Interchange</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1696" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>SRT Subtitle</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Subtítulo SRT</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1700" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
 <seg>Java Properties</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
+<tuv xml:lang="es" creationdate="20230324T184341Z">
 <seg>Propiedades de Java</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1571" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1722" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>PO (Portable Objects)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>PO (Portable Objects)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1723" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>TS (Qt Linguist translation source)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>TS (fuente de traducción de Qt Linguist)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1724" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select Language</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione Idioma</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1725" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select character set</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Selecione juego de caracteres</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1726" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select source file</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione archivo origen</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1727" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select source language</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione idioma de origen</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1728" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XLIFF file created</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo XLIFF creado</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1729" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select XLIFF file</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1730" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select target file/folder</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione archivo o carpeta de destino</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1731" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Analysis completed</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Análisis completado</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1753" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select File Type</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione Tipo de Archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1754" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select file type</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Seleccione tipo de archivo</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1755" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Select Character Set</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Selecione Juego de Caracteres</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1756" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>Success</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Éxito</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1757" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
+<seg>XLIFF file merged</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230324T184341Z">
+<seg>Archivo XLIFF combinado</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1758" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
 <seg>{0} {1} Build {2}</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
+<tuv xml:lang="es" creationdate="20230324T184341Z">
 <seg>{0} {1} Compilación {2}</seg>
 </tuv>
 </tu>
-<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1572" creationdate="20230324T123527Z">
-<tuv xml:lang="en" creationdate="20230324T123527Z">
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.5.0" tuid="-2095947698-0-1759" creationdate="20230324T184341Z">
+<tuv xml:lang="en" creationdate="20230324T184341Z">
 <seg>XLIFF Manager {0}</seg>
 </tuv>
-<tuv xml:lang="es" creationdate="20230324T123527Z">
+<tuv xml:lang="es" creationdate="20230324T184341Z">
 <seg>XLIFF Manager {0}</seg>
 </tuv>
 </tu>
