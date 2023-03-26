@@ -15,5 +15,6 @@
 /XLIFF Manager-linux-x64/
 /.settings/
 /.scannerwork/
+/.vscode/
 .DS_Store
 package-lock.json

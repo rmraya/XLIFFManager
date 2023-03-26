@@ -27,6 +27,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -533,16 +534,24 @@ public class XliffHandler implements HttpHandler {
 
 	private static String getTypes() {
 		String[] formats = FileFormats.getFormats();
+		List<FileType> types = new ArrayList<>();
+		for (int i = 0; i < formats.length; i++) {
+			String code = FileFormats.getShortName(formats[i]);
+			String description = FileFormats.getLocalizedName(formats[i]);
+			types.add(new FileType(code, description));
+		}
+		Collections.sort(types);
 		StringBuilder builder = new StringBuilder();
 		builder.append("{\"types\": [\n");
-		for (int i = 0; i < formats.length; i++) {
+		for (int i = 0; i < types.size(); i++) {
+			FileType type = types.get(i);
 			if (i > 0) {
 				builder.append(",\n");
 			}
 			builder.append("{\"type\":\"");
-			builder.append(FileFormats.getShortName(formats[i]));
+			builder.append(type.getCode());
 			builder.append("\", \"description\":\"");
-			builder.append(formats[i]);
+			builder.append(type.getDescription());
 			builder.append("\"}");
 		}
 		builder.append("]}\n");
