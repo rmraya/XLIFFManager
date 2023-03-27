@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task xml:lang="es" id="removeTargets">
+  <title>Eliminar todas las traducciones</title>
+  <shortdesc>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</shortdesc>
+  <taskbody>
+    <steps>
+      <step>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/> Traducciones</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
+      </step>
+      <step>
+        <cmd>Haga clic en el botón <uicontrol>Eliminar Todas las Traducciones</uicontrol>.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task xml:lang="es" id="approveAll">
+  <title>Aprobar Todos los Segmentos</title>
+  <shortdesc>Set <codeph>approved="true"</codeph> in all <codeph>&lt;trans-unit&gt;</codeph> elements in an XLIFF 1.2 file or set <codeph>state="final"</codeph> in all <codeph>&lt;unit&gt;</codeph> elements of an XLIFF 2.0 document.</shortdesc>
+  <taskbody>
+    <context>
+      <p>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> cuando utilice la opción <xref href="merge_xliff.dita">Combinar XLIFF</xref>. </p>
+    </context>
+    <steps>
+      <step>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/> Traducciones</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
+      </step>
+      <step>
+        <cmd>Haga clic en el botón <uicontrol>Aprobar Todos los Segmentos</uicontrol>.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

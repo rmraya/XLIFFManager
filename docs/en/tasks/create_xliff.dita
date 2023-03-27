@@ -58,7 +58,7 @@
                         <uicontrol>Browse...</uicontrol> button next to it to select a file from the
                     file system.</cmd>
                 <info>
-                    <note type="tip">Information ion configuration files for the JSON filter is
+                    <note type="tip">Information on configuration files for the JSON filter is
                         available at <xref
                             href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme"
                             format="html" scope="external"

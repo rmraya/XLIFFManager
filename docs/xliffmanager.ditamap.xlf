@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <?encoding UTF-8?>
+  <file source-language="en" original="concepts/translationTaks.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0idHJhbnNsYXRpb25UYWtzIj4gPHRpdGxlIGNs
+YXNzPSItIHRvcGljL3RpdGxlICI+JSUlMSUlJQo8L3RpdGxlPiA8c2hvcnRkZXNjIGNsYXNzPSIt
+IHRvcGljL3Nob3J0ZGVzYyAiLz4gPGNvbmJvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSAgY29uY2Vw
+dC9jb25ib2R5ICI+IDxwIGNsYXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPHVsIGNsYXNz
+PSItIHRvcGljL3VsICI+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rh
+c2tzL2NvcHlTb3VyY2VzLmRpdGEiIGNsYXNzPSItIHRvcGljL3hyZWYgIj4lJSUzJSUlCjwveHJl
+Zj48L2xpPiA8bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj48eHJlZiBocmVmPSIuLi90YXNrcy9wc2V1
+ZG9UcmFuc2xhdGUuZGl0YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTQlJSUKPC94cmVmPjwv
+bGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rhc2tzL3JlbW92ZVRh
+cmdldHMuZGl0YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTUlJSUKPC94cmVmPjwvbGk+IDxs
+aSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rhc2tzL2FwcHJvdmVBbGwuZGl0
+YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTYlJSUKPC94cmVmPjwvbGk+IDwvdWw+IDxmaWcg
+Y2xhc3M9Ii0gdG9waWMvZmlnICI+IDxpbWFnZSBocmVmPSIuLi9pbWFnZXMvdHJhbnNsYXRpb25U
+YXNrcy5wbmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9
+IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU3JSUlCjwv
+YWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb25ib2R5PiA8L2NvbmNlcHQ+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Translation Tasks</source>
+      <target>Traducciones</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>Use the options in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Translation Tasks<ph id="1">&lt;/uicontrol&gt;</ph> panel to:</source>
+      <target>Utilice las opciones del panel <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Traducciones<ph id="1">&lt;/uicontrol&gt;</ph> para:</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>Copy Source to all Untranslated Segments</source>
+      <target>Copiar origen a destino en todos los segmentos no traducidos</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>Pseudo-Translate Untranslated Segments</source>
+      <target>Pseudo-traducir segmentos no traducidos</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Remove all Targets</source>
+      <target>Eliminar todas las traducciones</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>Approve all Segments</source>
+      <target>Aprobar Todos los Segmentos</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="7">
+      <source>Translation Tasks</source>
+      <target>Traducciones</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3RyYW5zbGF0aW9uVGFza3MucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy90
+cmFuc2xhdGlvblRhc2tzLnBuZyJ9?>
+  </file>
+  <file source-language="en" original="concepts/xliffmanager_file_formats.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0ieGxpZmZtYW5hZ2VyX2ZpbGVfZm9ybWF0cyI+
+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVz
+YyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIi8+IDxjb25ib2R5IGNsYXNzPSItIHRvcGljL2Jv
+ZHkgIGNvbmNlcHQvY29uYm9keSAiPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMiUlJQo8L3A+
+IDxzaW1wbGV0YWJsZSBjbGFzcz0iLSB0b3BpYy9zaW1wbGV0YWJsZSAiPiA8c3RoZWFkIGNsYXNz
+PSItIHRvcGljL3N0aGVhZCAiPiA8c3RlbnRyeSBjbGFzcz0iLSB0b3BpYy9zdGVudHJ5ICI+JSUl
+MyUlJQo8L3N0ZW50cnk+IDxzdGVudHJ5IGNsYXNzPSItIHRvcGljL3N0ZW50cnkgIj4lJSU0JSUl
+Cjwvc3RlbnRyeT4gPC9zdGhlYWQ+IDxzdHJvdyBjbGFzcz0iLSB0b3BpYy9zdHJvdyAiPiA8c3Rl
+bnRyeSBjbGFzcz0iLSB0b3BpYy9zdGVudHJ5ICI+IDx1bCBjbGFzcz0iLSB0b3BpYy91bCAiPiA8
+bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSU1JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9s
+aSAiPiUlJTYlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlNyUlJQo8L2xpPiA8
+bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSU4JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9s
+aSAiPiUlJTklJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTAlJSUKPC9saT4g
+PGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTElJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGlj
+L2xpICI+JSUlMTIlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTMlJSUKPC9s
+aT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTQlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRv
+cGljL2xpICI+JSUlMTUlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTYlJSUK
+PC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTclJSUKPC9saT4gPGxpIGNsYXNzPSIt
+IHRvcGljL2xpICI+JSUlMTglJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTkl
+JSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMjAlJSUKPC9saT4gPGxpIGNsYXNz
+PSItIHRvcGljL2xpICI+JSUlMjElJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUl
+MjIlJSUKPHVsIGNsYXNzPSItIHRvcGljL3VsICI+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUl
+JTIzJSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUlJTI0JSUlCjwvbGk+IDxsaSBj
+bGFzcz0iLSB0b3BpYy9saSAiPiUlJTI1JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAi
+PiUlJTI2JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUlJTI3JSUlCjwvbGk+IDwv
+dWw+IDwvbGk+IDwvdWw+IDwvc3RlbnRyeT4gPHN0ZW50cnkgY2xhc3M9Ii0gdG9waWMvc3RlbnRy
+eSAiPiA8dWwgY2xhc3M9Ii0gdG9waWMvdWwgIj4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUl
+MjglJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMjklJSUKPC9saT4gPGxpIGNs
+YXNzPSItIHRvcGljL2xpICI+JSUlMzAlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+
+JSUlMzElJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMzIlJSUKPC9saT4gPGxp
+IGNsYXNzPSItIHRvcGljL2xpICI+JSUlMzMlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xp
+ICI+JSUlMzQlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMzUlJSUKPC9saT4g
+PC91bD4gPC9zdGVudHJ5PiA8L3N0cm93PiA8L3NpbXBsZXRhYmxlPiA8cCBjbGFzcz0iLSB0b3Bp
+Yy9wICI+JSUlMzYlJSUKPC9wPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="no" xml:space="preserve" id="1">
+      <source>Supported File Formats</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>With XLIFF Manager you can create <ph ctype="x-link" id="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="1">&lt;/xref&gt;</ph> files from the following document formats:</source>
+      <target>Con XLIFF Manager puede crear archivos <ph ctype="x-link" id="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="1">&lt;/xref&gt;</ph> a partir de los siguientes formatos de documento:</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="3">
+      <source>General Documentation</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="4">
+      <source>Software Development</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Adobe InCopy ICML</source>
+      <target>Adobe InCopy ICML</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="6">
+      <source>Adobe InDesign Interchange (INX)</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="7">
+      <source>Adobe InDesign IDML CS4, CS5, CS6 &amp; CC</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="8">
+      <source>HTML</source>
+      <target>HTML</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="9">
+      <source>Microsoft Office 2007/2008/2010/2011/2013/2016</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="10">
+      <source>Microsoft Visio XML Drawings 2007/2010/2013</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="11">
+      <source>MIF (Maker Interchange Format)</source>
+      <target>MIF (Maker Interchange Format)</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="12">
+      <source>OpenOffice/LibreOffice/StarOffice 1.x/2.x/3.x/4.x/5.x</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="13">
+      <source>Plain Text</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="14">
+      <source>Trados Studio Packages</source>
+      <target>Paquetes de Trados Studio</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="15">
+      <source>SDLXLIFF (Trados Studio)</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="16">
+      <source>SRT Subtitles</source>
+      <target>Subtítulos SRT</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="17">
+      <source>Wordfast/GlobalLink TXML (*.txml)</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="18">
+      <source>Wordfast/GlobalLink XLIFF (*.txlf)</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="19">
+      <source>WPML XLIFF (WordPress Multilingual Plugin)</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="20">
+      <source>XLIFF from Other Tools (*.mqxliff, *.xliff)</source>
+      <target>XLIFF de otras herramientas (*.mqxliff, *.xliff)</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="21">
+      <source>XML (Generic)</source>
+      <target>XML (Genérico)</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="22">
+      <source>XML with ready to use configuration files for: </source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="23">
+      <source>DITA 1.0, 1.1, 1.2 and 1.3</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="24">
+      <source>DocBook 3.x, 4.x and 5.x</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="25">
+      <source>SVG</source>
+      <target>SVG</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="26">
+      <source>Word 2003 ML</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="27">
+      <source>XHTML</source>
+      <target>XHTML</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="28">
+      <source>JavaScript</source>
+      <target>JavaScript</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="29">
+      <source>Java Properties</source>
+      <target>Propiedades de Java</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="30">
+      <source>JSON</source>
+      <target>JSON</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="31">
+      <source>PHP Arrays</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="32">
+      <source>PO (Portable Objects)</source>
+      <target>PO (Portable Objects)</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="33">
+      <source>RC (Windows C/C++ Resources)</source>
+      <target>RC (Recursos de Windows C/C++)</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="34">
+      <source>ResX (Windows .NET Resources)</source>
+      <target>ResX (Recursos de Windows .NET)</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="35">
+      <source>TS (Qt Linguist translation source)</source>
+      <target>TS (Fuente de Traducción de Qt Linguist)</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="36">
+      <source>The filter for XML files supports custom configuration. Users can define conversion rules for almost any XML vocabulary. Instructions for configuring the XML filer are available in <ph ctype="x-link" id="0">&lt;xref href="https://www.maxprograms.com/products/swordfish.html" scope="external" class="- topic/xref " format="html"&gt;</ph>Swordfish's<ph id="1">&lt;/xref&gt;</ph> documentation.</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="concepts/xliffmanager_introduction.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0ieGxpZmZtYW5hZ2VyX2ludHJvZHVjdGlvbiI+
+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVz
+YyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIi8+IDxjb25ib2R5IGNsYXNzPSItIHRvcGljL2Jv
+ZHkgIGNvbmNlcHQvY29uYm9keSAiPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMiUlJQo8L3A+
+IDx1bCBjbGFzcz0iLSB0b3BpYy91bCAiIGlkPSJ1bF9sYmpfbW0xX2wzYiI+IDxsaSBjbGFzcz0i
+LSB0b3BpYy9saSAiPiUlJTMlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlNCUl
+JQo8L2xpPiA8bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSU1JSUlCjwvbGk+IDxsaSBjbGFzcz0i
+LSB0b3BpYy9saSAiPiUlJTYlJSUKPC9saT4gPC91bD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcg
+Ij4gPGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9YbGlmZk1hbmFnZXIucG5nIiBwbGFjZW1lbnQ9ImJy
+ZWFrIiBzY2FsZWZpdD0ieWVzIiBjbGFzcz0iLSB0b3BpYy9pbWFnZSAiIGFsaWduPSJjZW50ZXIi
+PiA8YWx0IGNsYXNzPSItIHRvcGljL2FsdCAiPiUlJTclJSUKPC9hbHQ+IDwvaW1hZ2U+IDwvZmln
+PiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Introduction</source>
+      <target>Introducción</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>XLIFF Manager provides an open source UI for <ph ctype="x-link" id="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF" scope="external" class="- topic/xref " format="html"&gt;</ph>OpenXLIFF Filters<ph id="1">&lt;/xref&gt;</ph>, a set of programs that let you:</source>
+      <target>XLIFF Manager proporciona una interfaz de usuario de código abierto para <ph ctype="x-link" id="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF" scope="external" class="- topic/xref " format="html"&gt;</ph>OpenXLIFF Filters<ph id="1">&lt;/xref&gt;</ph>, un conjunto de programas que le permiten:</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="3">
+      <source>Create <ph ctype="x-link" id="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="1">&lt;/xref&gt;</ph> 1.2 and 2.0 files that can be translated in any modern <ph ctype="x-link" id="2">&lt;xref href="../glossaries/CAT.dita" class="- topic/xref "&gt;</ph>CAT<ph id="3">&lt;/xref&gt;</ph> tool.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>Convert your translated XLIFF files to original format with a couple of clicks.</source>
+      <target>Convertir sus archivos XLIFF traducidos al formato original con un par de clics.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.</source>
+      <target>Validar archivos XLIFF creados por cualquier herramienta. La validación es compatible con XLIFF 1.0, 1.1, 1.2 y 2.0.</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="6">
+      <source>Produce an HTML file with word counts and segment status statistics from an XLIFF document.</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="7">
+      <source>XLIFF Manager GUI</source>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL1hsaWZmTWFuYWdlci5wbmciLCJocmVmIjoiLi4vaW1hZ2VzL1hsaWZm
+TWFuYWdlci5wbmcifQ==?>
+  </file>
+  <file source-language="en" original="concepts/xliffmanager_platforms.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0ieGxpZmZtYW5hZ2VyX3BsYXRmb3JtcyI+IDx0
+aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVzYyBj
+bGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIi8+IDxjb25ib2R5IGNsYXNzPSItIHRvcGljL2JvZHkg
+IGNvbmNlcHQvY29uYm9keSAiPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMiUlJQo8L3A+IDx1
+bCBjbGFzcz0iLSB0b3BpYy91bCAiPiA8bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSUzJSUlCjwv
+bGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUlJTQlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRv
+cGljL2xpICI+JSUlNSUlJQo8L2xpPiA8L3VsPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="no" xml:space="preserve" id="1">
+      <source>Supported Platforms</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>XLIFF Manager works on these platforms:</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="3">
+      <source>Microsoft Windows (8, 8.1, 10 and 11)</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="4">
+      <source>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11.0), Monterey (12.0) and Ventura (13.0)</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="5">
+      <source>Linux (with GNOME Desktop Manager)</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="glossaries/CAT.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJDQVQiPiA8Z2xvc3N0
+ZXJtIGNsYXNzPSItIHRvcGljL3RpdGxlIGNvbmNlcHQvdGl0bGUgZ2xvc3NlbnRyeS9nbG9zc3Rl
+cm0gIj4lJSUxJSUlCjwvZ2xvc3N0ZXJtPiA8Z2xvc3NkZWYgY2xhc3M9Ii0gdG9waWMvYWJzdHJh
+Y3QgY29uY2VwdC9hYnN0cmFjdCBnbG9zc2VudHJ5L2dsb3NzZGVmICI+JSUlMiUlJQo8L2dsb3Nz
+ZGVmPiA8L2dsb3NzZW50cnk+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding utf-8?>
+    <body>
+      <trans-unit approved="no" xml:space="preserve" id="1">
+      <source>Computer Aided Translation (CAT)</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>Computer technology application designed to assist human translators in the translation process.</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="glossaries/SRX.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJTUlgiPiA8Z2xvc3N0
+ZXJtIGNsYXNzPSItIHRvcGljL3RpdGxlIGNvbmNlcHQvdGl0bGUgZ2xvc3NlbnRyeS9nbG9zc3Rl
+cm0gIj4lJSUxJSUlCjwvZ2xvc3N0ZXJtPiA8Z2xvc3NkZWYgY2xhc3M9Ii0gdG9waWMvYWJzdHJh
+Y3QgY29uY2VwdC9hYnN0cmFjdCBnbG9zc2VudHJ5L2dsb3NzZGVmICI+JSUlMiUlJQo8L2dsb3Nz
+ZGVmPiA8L2dsb3NzZW50cnk+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding utf-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>SRX</source>
+      <target>SRX</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>Segmentation Rules eXchange (SRX) is an XML-based open standard, published by LISA (Localization Industry Standards Association), for describing how translation and other language-processing tools segment text for processing.</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="glossaries/TMX.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJUTVgiPiA8Z2xvc3N0
+ZXJtIGNsYXNzPSItIHRvcGljL3RpdGxlIGNvbmNlcHQvdGl0bGUgZ2xvc3NlbnRyeS9nbG9zc3Rl
+cm0gIj4lJSUxJSUlCjwvZ2xvc3N0ZXJtPiA8Z2xvc3NkZWYgY2xhc3M9Ii0gdG9waWMvYWJzdHJh
+Y3QgY29uY2VwdC9hYnN0cmFjdCBnbG9zc2VudHJ5L2dsb3NzZGVmICI+JSUlMiUlJQo8L2dsb3Nz
+ZGVmPiA8L2dsb3NzZW50cnk+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding utf-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>TMX</source>
+      <target>TMX</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>Translation Memory eXchange (TMX) is an open standard originally published by LISA (Localization Industry Standards Association). The purpose of TMX is to allow easier exchange of translation memory data between tools and/or translation vendors with little or no loss of critical data during the process.</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="glossaries/XLIFF.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJYTElGRiI+IDxnbG9z
+c3Rlcm0gY2xhc3M9Ii0gdG9waWMvdGl0bGUgY29uY2VwdC90aXRsZSBnbG9zc2VudHJ5L2dsb3Nz
+dGVybSAiPiUlJTElJSUKPC9nbG9zc3Rlcm0+IDxnbG9zc2RlZiBjbGFzcz0iLSB0b3BpYy9hYnN0
+cmFjdCBjb25jZXB0L2Fic3RyYWN0IGdsb3NzZW50cnkvZ2xvc3NkZWYgIj4lJSUyJSUlCjwvZ2xv
+c3NkZWY+IDwvZ2xvc3NlbnRyeT4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding utf-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>XLIFF</source>
+      <target>XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>XLIFF (XML Localization Interchange File Format) is an open standard developed by <ph ctype="x-link" id="0">&lt;xref href="http://www.oasis-open.org/" scope="external" class="- topic/xref " format="html"&gt;</ph>OASIS<ph id="1">&lt;/xref&gt;</ph> (Organization for the Advancement of Structured Information Standards). The purpose of this vocabulary is to store localizable data and carry it from one step of the localization process to the other, while allowing interoperability between tools.</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="glossaries/character_set.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJjaGFyYWN0ZXJfc2V0
+Ij4gPGdsb3NzdGVybSBjbGFzcz0iLSB0b3BpYy90aXRsZSBjb25jZXB0L3RpdGxlIGdsb3NzZW50
+cnkvZ2xvc3N0ZXJtICI+JSUlMSUlJQo8L2dsb3NzdGVybT4gPGdsb3NzZGVmIGNsYXNzPSItIHRv
+cGljL2Fic3RyYWN0IGNvbmNlcHQvYWJzdHJhY3QgZ2xvc3NlbnRyeS9nbG9zc2RlZiAiPiUlJTIl
+JSUKPC9nbG9zc2RlZj4gPC9nbG9zc2VudHJ5Pg==</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding utf-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Character Set</source>
+      <target>Juego de Caracteres</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>A character set (sometimes referred to as code page) is a collection of characters that are associated with a sequence of natural numbers in order to facilitate the storage of text in computers and the transmission of text through telecommunication networks.</source>
+   </trans-unit>
+    </body>
+  </file>
+  <file source-language="en" original="tasks/analysis_xliff.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgR2VuZXJhbCBUYXNrLy9FTiIgImdlbmVyYWxUYXNrLmR0
+ZCI+Cjx0YXNrIGRvbWFpbnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyB0YXNrL3Rhc2sgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcv
+YXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0iYW5hbHlzaXNfeGxpZmYiPiA8dGl0bGUgY2xhc3M9Ii0g
+dG9waWMvdGl0bGUgIj4lJSUxJSUlCjwvdGl0bGU+IDxzaG9ydGRlc2MgY2xhc3M9Ii0gdG9waWMv
+c2hvcnRkZXNjICIvPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
+ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
+YXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcgIj4g
+PGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9hbmFseXplWGxpZmYucG5nIiBwbGFjZW1lbnQ9ImJyZWFr
+IiBjbGFzcz0iLSB0b3BpYy9pbWFnZSAiIHNjYWxlPSI4MCIgYWxpZ249ImNlbnRlciI+IDxhbHQg
+Y2xhc3M9Ii0gdG9waWMvYWx0ICI+JSUlMyUlJQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwvY29u
+dGV4dD4gPHN0ZXBzIGNsYXNzPSItIHRvcGljL29sIHRhc2svc3RlcHMgIj4gPHN0ZXAgY2xhc3M9
+Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
+Ij4lJSU0JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
+cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNSUlJQo8L2NtZD4gPC9z
+dGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0
+b3BpYy9waCB0YXNrL2NtZCAiPiUlJTYlJSUKPC9jbWQ+IDxzdGVwcmVzdWx0IGNsYXNzPSItIHRv
+cGljL2l0ZW1ncm91cCB0YXNrL3N0ZXByZXN1bHQgIj4lJSU3JSUlCjwvc3RlcHJlc3VsdD4gPC9z
+dGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="no" xml:space="preserve" id="1">
+      <source>Generate Word Counts and Segment Statistics</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>XLIFF Manager lets you produce an HTML file with word counts and segment status statistics from an <ph ctype="x-link" id="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="1">&lt;/xref&gt;</ph> document.</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="3">
+      <source>Translation Status Analysis</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/stats.png" placement="inline" class="- topic/image "/&gt;</ph> Analyse XLIFF<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/stats.png" placement="inline" class="- topic/image "/&gt;</ph> Analizar XLIFF<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Type the name and location of the XLIFF file to analyse in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Analyse XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Analizar XLIFF<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="7">
+      <source>XLIFF Manager generates an HTML report in the folder where the XLIFF file is located and its name is the name of the XLIFF plus <ph ctype="x-other" id="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>.log.html<ph id="1">&lt;/codeph&gt;</ph>.</source>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL2FuYWx5emVYbGlmZi5wbmciLCJocmVmIjoiLi4vaW1hZ2VzL2FuYWx5
+emVYbGlmZi5wbmcifQ==?>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3N0YXRzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvc3RhdHMucG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/approveAll.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0iYXBwcm92ZUFsbCI+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTEl
+JSUKPC90aXRsZT4gPHNob3J0ZGVzYyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIj4lJSUyJSUl
+Cjwvc2hvcnRkZXNjPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
+ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
+YXNzPSItIHRvcGljL3AgIj4lJSUzJSUlCjwvcD4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0g
+dG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAg
+Ij4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwvc3Rl
+cD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9w
+aWMvcGggdGFzay9jbWQgIj4lJSU1JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRv
+cGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUl
+NiUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Approve all Segments</source>
+      <target>Aprobar Todos los Segmentos</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>Set <ph ctype="x-other" id="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>approved="true"<ph id="1">&lt;/codeph&gt;</ph> in all <ph ctype="x-other" id="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;trans-unit&gt;<ph id="3">&lt;/codeph&gt;</ph> elements in an XLIFF 1.2 file or set <ph ctype="x-other" id="4">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>state="final"<ph id="5">&lt;/codeph&gt;</ph> in all <ph ctype="x-other" id="6">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;unit&gt;<ph id="7">&lt;/codeph&gt;</ph> elements of an XLIFF 2.0 document.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>Some translation tools do not offer a way to confirm segments at translation time. Use this feature to confirm all segments, so you can select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Export Approved Segments as TMX<ph id="1">&lt;/uicontrol&gt;</ph> option when using the <ph ctype="x-link" id="2">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Merge XLIFF File<ph id="3">&lt;/xref&gt;</ph> option. </source>
+      <target>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Exportar segmentos aprobados como TMX<ph id="1">&lt;/uicontrol&gt;</ph> cuando utilice la opción <ph ctype="x-link" id="2">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Combinar XLIFF<ph id="3">&lt;/xref&gt;</ph>. </target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Type the name and location of the XLIFF file to process in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Approve all Segments<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Aprobar Todos los Segmentos<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/copySources.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0iY29weVNvdXJjZXMiPiA8dGl0bGUgY2xhc3M9Ii0gdG9waWMvdGl0bGUgIj4lJSUx
+JSUlCjwvdGl0bGU+IDxzaG9ydGRlc2MgY2xhc3M9Ii0gdG9waWMvc2hvcnRkZXNjICI+JSUlMiUl
+JQo8L3Nob3J0ZGVzYz4gPHRhc2tib2R5IGNsYXNzPSItIHRvcGljL2JvZHkgdGFzay90YXNrYm9k
+eSAiPiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTMlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
+ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU0JSUlCjwvY21kPiA8L3N0
+ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRv
+cGljL3BoIHRhc2svY21kICI+JSUlNSUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2ti
+b2R5PiA8L3Rhc2s+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Copy Source to all Untranslated Segments</source>
+      <target>Copiar origen a destino en todos los segmentos no traducidos</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>Copy the content of <ph ctype="x-other" id="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph id="1">&lt;/codeph&gt;</ph> elements to new or existing empty <ph ctype="x-other" id="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph id="3">&lt;/codeph&gt;</ph> elements in an XLIFF file.</source>
+      <target>Copiar el contenido de los elementos <ph ctype="x-other" id="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph id="1">&lt;/codeph&gt;</ph> a los elementos <ph ctype="x-other" id="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph id="3">&lt;/codeph&gt;</ph> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>Type the name and location of the XLIFF file to process in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Copy Source to Target<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Copiar origen a Destino<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/create_xliff.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0iY3JlYXRlX3hsaWZmIj4gPHRpdGxlIGNsYXNzPSItIHRvcGljL3RpdGxlICI+JSUl
+MSUlJQo8L3RpdGxlPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
+ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
+YXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcgIiBp
+ZD0iZmlnX3E0NF8ycDFfbDNiIj4gPGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9jcmVhdGVYbGlmZi5w
+bmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9IjgwIiBh
+bGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSUzJSUlCjwvYWx0PiA8
+L2ltYWdlPiA8L2ZpZz4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9z
+dGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0i
+LSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9
+Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
+Ij4lJSU1JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZv
+ICI+IDxub3RlIHR5cGU9InRpcCIgY2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTYlJSUKPC9ub3Rl
+PiA8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxj
+bWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0ZXA+IDxz
+dGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3Bo
+IHRhc2svY21kICI+JSUlOCUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9s
+aSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTklJSUK
+PC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQg
+Y2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVwPiA8c3Rl
+cCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0
+YXNrL2NtZCAiPiUlJTExJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xp
+IHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTIlJSUK
+PC9jbWQ+IDxpbmZvIGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4gPG5vdGUg
+dHlwZT0idGlwIiBjbGFzcz0iLSB0b3BpYy9ub3RlICI+JSUlMTMlJSUKPC9ub3RlPiA8L2luZm8+
+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
+Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxNCUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9w
+aWMvaXRlbWdyb3VwIHRhc2svaW5mbyAiPiA8bm90ZSB0eXBlPSJub3RpY2UiIGNsYXNzPSItIHRv
+cGljL25vdGUgIj4lJSUxNSUlJQo8L25vdGU+IDwvaW5mbz4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTE2JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZv
+ICI+PG5vdGUgdHlwZT0ibm90aWNlIiBjbGFzcz0iLSB0b3BpYy9ub3RlICI+JSUlMTclJSUKPC9u
+b3RlPjwvaW5mbz4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4g
+PGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTE4JSUlCjwvY21kPiA8aW5mbyBj
+bGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+IDxub3RlIHR5cGU9Im5vdGljZSIg
+Y2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTE5JSUlCjwvbm90ZT4gPC9pbmZvPiA8L3N0ZXA+IDxz
+dGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3Bo
+IHRhc2svY21kICI+JSUlMjAlJSUKPC9jbWQ+IDwvc3RlcD4gPC9zdGVwcz4gPHJlc3VsdCBjbGFz
+cz0iLSB0b3BpYy9zZWN0aW9uIHRhc2svcmVzdWx0ICI+JSUlMjElJSUKPC9yZXN1bHQ+IDwvdGFz
+a2JvZHk+IDwvdGFzaz4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Create XLIFF File</source>
+      <target>Crear Archivo XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>Use the <ph ctype="x-italic" id="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Create XLIFF<ph id="1">&lt;/i&gt;</ph> panel to generate an <ph ctype="x-link" id="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="3">&lt;/xref&gt;</ph> file from a selected document.</source>
+      <target>Utilice el panel <ph ctype="x-italic" id="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Crear XLIFF<ph id="1">&lt;/i&gt;</ph> para generar un archivo <ph ctype="x-link" id="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="3">&lt;/xref&gt;</ph> a partir de un documento seleccionado.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>Create XLIFF File</source>
+      <target>Crear Archivo XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>On the left panel, click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/plus.png" placement="inline" class="- topic/image "/&gt;</ph> Create XLIFF<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/plus.png" placement="inline" class="- topic/image "/&gt;</ph> Crear XLIFF<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Type the name and location of the document to convert to XLIFF in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Source File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button next to it to select a document from the file system.</source>
+      <target>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo de origen<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> junto a él para seleccionar un documento del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>If you use the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="1">&lt;/uicontrol&gt;</ph> button to select a file, the program tries to automatically guess its file type and character set.</source>
+      <target>Si utiliza el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="1">&lt;/uicontrol&gt;</ph> para seleccionar un archivo, el programa intenta adivinar automáticamente su tipo de archivo y juego de caracteres.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="7">
+      <source>Select the language of the document to convert using the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Source Language<ph id="1">&lt;/uicontrol&gt;</ph> drop-down list.</source>
+      <target>Seleccione el idioma del documento que desea convertir mediante la lista desplegable <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Idioma de origen<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="8">
+      <source>Optionally, select the language of the translated document using the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Target Language<ph id="1">&lt;/uicontrol&gt;</ph> drop-down list.</source>
+      <target>Opcionalmente, seleccione el idioma del documento traducido mediante la lista desplegable <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Idioma de destino<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="9">
+      <source>Select or adjust the type of source document using the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>File Type<ph id="1">&lt;/uicontrol&gt;</ph> drop-down list.</source>
+      <target>Seleccione o ajuste el tipo de documento de origen mediante la lista desplegable <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Tipo de archivo<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="10">
+      <source>Select or adjust the <ph ctype="x-link" id="0">&lt;xref href="../glossaries/character_set.dita" class="- topic/xref "&gt;</ph>character set<ph id="1">&lt;/xref&gt;</ph> of the source document using the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Character Set<ph id="3">&lt;/uicontrol&gt;</ph> drop-down list.</source>
+      <target>Seleccione o ajuste el <ph ctype="x-link" id="0">&lt;xref href="../glossaries/character_set.dita" class="- topic/xref "&gt;</ph>juego de caracteres<ph id="1">&lt;/xref&gt;</ph> del documento de origen mediante la lista desplegable <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Juego de caracteres<ph id="3">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="11">
+      <source>If you are converting a DITA map and need to use a .ditaval file for conditional filtering, enter its path in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>DITAVAL File<ph id="1">&lt;/uicontrol&gt;</ph> text box or use the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button next to it to select a file from the file system.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="12">
+      <source>If you are converting a JSON document and need to use a custom configuration file, enter its name and location in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>JSON Configuration<ph id="1">&lt;/uicontrol&gt;</ph> text box or use the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button next to it to select a file from the file system.</source>
+      <target>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Configuración de JSON<ph id="1">&lt;/uicontrol&gt;</ph> o use el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> junto a él para seleccionar un archivo del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="13">
+      <source>Information on configuration files for the JSON filter is available at <ph ctype="x-link" id="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" class="- topic/xref " format="html"&gt;</ph>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph id="1">&lt;/xref&gt;</ph></source>
+      <target>La información sobre los archivos de configuración para el filtro JSON está disponible en <ph ctype="x-link" id="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" class="- topic/xref " format="html"&gt;</ph>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph id="1">&lt;/xref&gt;</ph></target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="14">
+      <source>Select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Generate XLIFF 2.0<ph id="1">&lt;/uicontrol&gt;</ph> check box if you want to generate XLIFF 2.0.</source>
+      <target>Active la casilla <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Generar XLIFF 2.0<ph id="1">&lt;/uicontrol&gt;</ph> si desea generar XLIFF 2.0.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="15">
+      <source>The program generates XLIFF 1.2 by default.</source>
+      <target>El programa genera XLIFF 1.2 de forma predeterminada.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="16">
+      <source>Select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Paragraph Segmentation<ph id="1">&lt;/uicontrol&gt;</ph> check box if you want source text to be segmented at paragraph level. </source>
+      <target>Active la casilla <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Segmentar por párrafos<ph id="1">&lt;/uicontrol&gt;</ph> si desea que el texto de origen se segmente en el nivel de párrafo. </target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="17">
+      <source>The program uses sentence-level segmentation by default. You can select the default <ph ctype="x-link" id="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph id="1">&lt;/xref&gt;</ph> file used for segmentation in the <ph ctype="x-link" id="2">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Settings<ph id="3">&lt;/xref&gt;</ph> dialog.</source>
+      <target>El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <ph ctype="x-link" id="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph id="1">&lt;/xref&gt;</ph> predeterminado utilizado para la segmentación en el cuadro de diálogo <ph ctype="x-link" id="2">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Configuración<ph id="3">&lt;/xref&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="18">
+      <source>Select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Embed Skeleton<ph id="1">&lt;/uicontrol&gt;</ph> option if you want the skeleton file to be inserted in the generated XLIFF.</source>
+      <target>Seleccione la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Incrustar esqueleto<ph id="1">&lt;/uicontrol&gt;</ph> si desea que el archivo esqueleto se inserte en el XLIFF generado.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="19">
+      <source>The program generates a separated skeleton file in the folder defined in <ph ctype="x-link" id="0">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Settings<ph id="1">&lt;/xref&gt;</ph> dialog. An embedded skeleton allows merging the XLIFF file in any computer, not just the one where the XLIFF was generated.</source>
+      <target>El programa genera un archivo esqueleto separado en la carpeta definida en el cuadro de diálogo <ph ctype="x-link" id="0">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Configuración<ph id="1">&lt;/xref&gt;</ph>. Un esqueleto incrustado permite combinar el archivo XLIFF en cualquier computadora, no solo en aquella donde se generó el archivo XLIFF.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="20">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Create XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Crear XLIFF<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="21">
+      <source>The program generates an XLIFF file and the corresponding skeleton.</source>
+      <target>El programa genera un archivo XLIFF y el esqueleto correspondiente.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL2NyZWF0ZVhsaWZmLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvY3JlYXRl
+WGxpZmYucG5nIn0=?>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9?>
+  </file>
+  <file source-language="en" original="tasks/default_settings.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgR2VuZXJhbCBUYXNrLy9FTiIgImdlbmVyYWxUYXNrLmR0
+ZCI+Cjx0YXNrIGRvbWFpbnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyB0YXNrL3Rhc2sgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcv
+YXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0iZGVmYXVsdF9zZXR0aW5ncyI+IDx0aXRsZSBjbGFzcz0i
+LSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVzYyBjbGFzcz0iLSB0b3Bp
+Yy9zaG9ydGRlc2MgIj4lJSUyJSUlCjwvc2hvcnRkZXNjPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9w
+aWMvYm9keSB0YXNrL3Rhc2tib2R5ICI+IDxzdGVwcyBjbGFzcz0iLSB0b3BpYy9vbCB0YXNrL3N0
+ZXBzICI+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSIt
+IHRvcGljL3BoIHRhc2svY21kICI+JSUlMyUlJQo8dWljb250cm9sIGNsYXNzPSIrIHRvcGljL3Bo
+IHVpLWQvdWljb250cm9sICI+PHN2Zy1jb250YWluZXIgY2xhc3M9IisgdG9waWMvZm9yZWlnbiBz
+dmctZC9zdmctY29udGFpbmVyICI+IDxzdmc6c3ZnIGNvbnRlbnRTY3JpcHRUeXBlPSJhcHBsaWNh
+dGlvbi9lY21hc2NyaXB0IiB3aWR0aD0iMjQiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlk
+IG1lZXQiIGNvbnRlbnRTdHlsZVR5cGU9InRleHQvY3NzIiB6b29tQW5kUGFuPSJtYWduaWZ5IiB2
+ZXJzaW9uPSIxLjEiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBo
+ZWlnaHQ9IjI0IiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94
+PSIwIDAgMjQgMjQiPiA8c3ZnOnBhdGggZD0ibTkuMjUgMjItLjQtMy4ycS0uMzI1LS4xMjUtLjYx
+Mi0uMy0uMjg4LS4xNzUtLjU2My0uMzc1TDQuNyAxOS4zNzVsLTIuNzUtNC43NSAyLjU3NS0xLjk1
+UTQuNSAxMi41IDQuNSAxMi4zMzd2LS42NzVxMC0uMTYyLjAyNS0uMzM3TDEuOTUgOS4zNzVsMi43
+NS00Ljc1IDIuOTc1IDEuMjVxLjI3NS0uMi41NzUtLjM3NS4zLS4xNzUuNi0uM2wuNC0zLjJoNS41
+bC40IDMuMnEuMzI1LjEyNS42MTMuMy4yODcuMTc1LjU2Mi4zNzVsMi45NzUtMS4yNSAyLjc1IDQu
+NzUtMi41NzUgMS45NXEuMDI1LjE3NS4wMjUuMzM3di42NzVxMCAuMTYzLS4wNS4zMzhsMi41NzUg
+MS45NS0yLjc1IDQuNzUtMi45NS0xLjI1cS0uMjc1LjItLjU3NS4zNzUtLjMuMTc1LS42LjNsLS40
+IDMuMlptMi44LTYuNXExLjQ1IDAgMi40NzUtMS4wMjVRMTUuNTUgMTMuNDUgMTUuNTUgMTJxMC0x
+LjQ1LTEuMDI1LTIuNDc1UTEzLjUgOC41IDEyLjA1IDguNXEtMS40NzUgMC0yLjQ4OCAxLjAyNVE4
+LjU1IDEwLjU1IDguNTUgMTJxMCAxLjQ1IDEuMDEyIDIuNDc1UTEwLjU3NSAxNS41IDEyLjA1IDE1
+LjVabTAtMnEtLjYyNSAwLTEuMDYyLS40MzgtLjQzOC0uNDM3LS40MzgtMS4wNjJ0LjQzOC0xLjA2
+MnEuNDM3LS40MzggMS4wNjItLjQzOHQxLjA2My40MzhxLjQzNy40MzcuNDM3IDEuMDYydC0uNDM3
+IDEuMDYycS0uNDM4LjQzOC0xLjA2My40MzhaTTEyIDEyWm0tMSA4aDEuOTc1bC4zNS0yLjY1cS43
+NzUtLjIgMS40MzgtLjU4OC42NjItLjM4NyAxLjIxMi0uOTM3bDIuNDc1IDEuMDI1Ljk3NS0xLjct
+Mi4xNS0xLjYyNXEuMTI1LS4zNS4xNzUtLjczOC4wNS0uMzg3LjA1LS43ODd0LS4wNS0uNzg4cS0u
+MDUtLjM4Ny0uMTc1LS43MzdsMi4xNS0xLjYyNS0uOTc1LTEuNy0yLjQ3NSAxLjA1cS0uNTUtLjU3
+NS0xLjIxMi0uOTYzLS42NjMtLjM4Ny0xLjQzOC0uNTg3TDEzIDRoLTEuOTc1bC0uMzUgMi42NXEt
+Ljc3NS4yLTEuNDM3LjU4Ny0uNjYzLjM4OC0xLjIxMy45MzhMNS41NSA3LjE1bC0uOTc1IDEuNyAy
+LjE1IDEuNnEtLjEyNS4zNzUtLjE3NS43NS0uMDUuMzc1LS4wNS44IDAgLjQuMDUuNzc1dC4xNzUu
+NzVsLTIuMTUgMS42MjUuOTc1IDEuNyAyLjQ3NS0xLjA1cS41NS41NzUgMS4yMTMuOTYyLjY2Mi4z
+ODggMS40MzcuNTg4WiIvPiA8L3N2Zzpzdmc+IDwvc3ZnLWNvbnRhaW5lcj4lJSU0JSUlCjwvY21k
+PiA8c3RlcHJlc3VsdCBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9zdGVwcmVzdWx0ICI+
+JSUlNSUlJQo8ZmlnIGNsYXNzPSItIHRvcGljL2ZpZyAiPiA8aW1hZ2UgaHJlZj0iLi4vaW1hZ2Vz
+L3NldHRpbmdzLnBuZyIgcGxhY2VtZW50PSJicmVhayIgY2xhc3M9Ii0gdG9waWMvaW1hZ2UgIiBz
+Y2FsZT0iNjAiIGFsaWduPSJjZW50ZXIiPiA8YWx0IGNsYXNzPSItIHRvcGljL2FsdCAiPiUlJTYl
+JSUKPC9hbHQ+IDwvaW1hZ2U+IDwvZmlnPjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8c3RlcCBjbGFz
+cz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2Nt
+ZCAiPiUlJTclJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9z
+dGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU4JSUlCjwvY21kPiA8
+L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSIt
+IHRvcGljL3BoIHRhc2svY21kICI+JSUlOSUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTEwJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
+cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTElJSUKPC9jbWQ+IDxp
+bmZvIGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4lJSUxMiUlJQo8L2luZm8+
+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
+Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMyUlJQo8L2NtZD4gPGNob2ljZXMgY2xhc3M9Ii0g
+dG9waWMvdWwgdGFzay9jaG9pY2VzICI+IDxjaG9pY2UgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9j
+aG9pY2UgIj4lJSUxNCUlJQo8L2Nob2ljZT4gPGNob2ljZSBjbGFzcz0iLSB0b3BpYy9saSB0YXNr
+L2Nob2ljZSAiPiUlJTE1JSUlCjwvY2hvaWNlPiA8Y2hvaWNlIGNsYXNzPSItIHRvcGljL2xpIHRh
+c2svY2hvaWNlICI+JSUlMTYlJSUKPC9jaG9pY2U+IDwvY2hvaWNlcz4gPC9zdGVwPiA8c3RlcCBj
+bGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNr
+L2NtZCAiPiUlJTE3JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFz
+az4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Settings</source>
+      <target>Configuración</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>Use the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Settings<ph id="1">&lt;/uicontrol&gt;</ph> dialog to set the default languages used by the application and to configure the main XML catalog and default folder used to store skeletons when creating <ph ctype="x-link" id="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="3">&lt;/xref&gt;</ph> files.</source>
+      <target>Utilice el cuadro de diálogo <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Configuración<ph id="1">&lt;/uicontrol&gt;</ph> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <ph ctype="x-link" id="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="3">&lt;/xref&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>On the left panel, click the </source>
+      <target>En el panel izquierdo, haga clic en la opción </target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source> Settings<ph id="0">&lt;/uicontrol&gt;</ph> option or select <ph ctype="x-other" id="1">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>File<ph id="3">&lt;/uicontrol&gt;</ph> <ph ctype="x-other" id="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Settings<ph id="5">&lt;/uicontrol&gt;</ph> <ph id="6">&lt;/menucascade&gt;</ph> in main menu (<ph ctype="x-other" id="7">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph ctype="x-other" id="8">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF Manager<ph id="9">&lt;/uicontrol&gt;</ph> <ph ctype="x-other" id="10">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Preferences<ph id="11">&lt;/uicontrol&gt;</ph> <ph id="12">&lt;/menucascade&gt;</ph> on macOS).</source>
+      <target> Configuración<ph id="0">&lt;/uicontrol&gt;</ph> o seleccione <ph ctype="x-other" id="1">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo<ph id="3">&lt;/uicontrol&gt;</ph> <ph ctype="x-other" id="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Configuración<ph id="5">&lt;/uicontrol&gt;</ph> <ph id="6">&lt;/menucascade&gt;</ph> en el menú principal ( <ph ctype="x-other" id="7">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph ctype="x-other" id="8">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF Manager<ph id="9">&lt;/uicontrol&gt;</ph> <ph ctype="x-other" id="10">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Preferencias...<ph id="11">&lt;/uicontrol&gt;</ph> <ph id="12">&lt;/menucascade&gt;</ph> en macOS).</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>The following dialog appears: </source>
+      <target>Aparece el siguiente cuadro de diálogo: </target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>Settings Dialog</source>
+      <target>Cuadro de diálogo Configuración</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="7">
+      <source>Select the apropriate default source and target languages to use when creating XLIFF files.</source>
+      <target>Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="8">
+      <source>If you wish to use a custom catalog for XML files, enter its location in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>System Catalog<ph id="1">&lt;/uicontrol&gt;</ph> text box or use the corresponding <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select it from the file system.</source>
+      <target>Si desea utilizar un catálogo personalizado para archivos XML, introduzca su ubicación en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Catálogo del sistema<ph id="1">&lt;/uicontrol&gt;</ph> o utilice el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionarlo del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="9">
+      <source>If you wish to change the folder where skeleton files are saved, enter the folder name in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Skeletons Folder<ph id="1">&lt;/uicontrol&gt;</ph> text box or use the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select the new location in the file system. </source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="10">
+      <source>To use a custom <ph ctype="x-link" id="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph id="1">&lt;/xref&gt;</ph> file when creating XLIFF files, enter its location in the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Default SRX File<ph id="3">&lt;/uicontrol&gt;</ph> text box or use the <ph ctype="x-other" id="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="5">&lt;/uicontrol&gt;</ph> button to select it from the file system.</source>
+      <target>Para utilizar un archivo <ph ctype="x-link" id="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph id="1">&lt;/xref&gt;</ph> personalizado al crear archivos XLIFF, introduzca su ubicación en el cuadro de texto <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo SRX predeterminado<ph id="3">&lt;/uicontrol&gt;</ph> o utilice el botón <ph ctype="x-other" id="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="5">&lt;/uicontrol&gt;</ph> para seleccionarlo del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="11">
+      <source>Use the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Application Language<ph id="1">&lt;/uicontrol&gt;</ph> drop-down to select the language used in XLIFF Manager graphical user interface.</source>
+      <target>Utilice el menú desplegable <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Idioma de la aplicación<ph id="1">&lt;/uicontrol&gt;</ph> para seleccionar el idioma utilizado en la interfaz gráfica de usuario de XLIFF Manager.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="12">
+      <source>Changes to the application language will take effect after you restart the program.</source>
+      <target>Los cambios en el idioma de la aplicación surtirán efecto después de reiniciar el programa.</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="13">
+      <source>Use the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Theme<ph id="1">&lt;/uicontrol&gt;</ph> drop-down to select the colors used in the graphical user interface. Available options are: </source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="14">
+      <source><ph ctype="x-bold" id="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>System Default<ph id="1">&lt;/b&gt;</ph>: automatically selects Dark or Light colors according to the preferences set in the operating system.</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="15">
+      <source><ph ctype="x-bold" id="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Dark<ph id="1">&lt;/b&gt;</ph>: Uses dark background with white text.</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="16">
+      <source><ph ctype="x-bold" id="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Light<ph id="1">&lt;/b&gt;</ph>: Uses light grey background with dark text</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="17">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Save Settings<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Guardar Configuración<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3NldHRpbmdzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvc2V0dGluZ3Mu
+cG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/merge_xliff.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0ibWVyZ2VfeGxpZmYiPiA8dGl0bGUgY2xhc3M9Ii0gdG9waWMvdGl0bGUgIj4lJSUx
+JSUlCjwvdGl0bGU+IDx0YXNrYm9keSBjbGFzcz0iLSB0b3BpYy9ib2R5IHRhc2svdGFza2JvZHkg
+Ij4gPGNvbnRleHQgY2xhc3M9Ii0gdG9waWMvc2VjdGlvbiB0YXNrL2NvbnRleHQgIj4gPHAgY2xh
+c3M9Ii0gdG9waWMvcCAiPiUlJTIlJSUKPC9wPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMyUl
+JQo8L3A+IDxmaWcgY2xhc3M9Ii0gdG9waWMvZmlnICI+IDxpbWFnZSBocmVmPSIuLi9pbWFnZXMv
+bWVyZ2VYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIg
+c2NhbGU9IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU0
+JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9w
+aWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4g
+PGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTUlJSUKPC9jbWQ+IDwvc3RlcD4g
+PHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMv
+cGggdGFzay9jbWQgIj4lJSU2JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3Jv
+dXAgdGFzay9pbmZvICI+JSUlNyUlJQo8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9w
+aWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU4
+JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+JSUl
+OSUlJQo8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+
+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVw
+PiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3Bp
+Yy9waCB0YXNrL2NtZCAiPiUlJTExJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRv
+cGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUl
+MTIlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+
+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMyUlJQo8L2NtZD4gPHN0ZXBy
+ZXN1bHQgY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2svc3RlcHJlc3VsdCAiPiUlJTE0JSUl
+Cjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Merge XLIFF File</source>
+      <target>Combinar Archivo XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>Use the <ph ctype="x-italic" id="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Merge XLIFF<ph id="1">&lt;/i&gt;</ph> panel to convert an <ph ctype="x-link" id="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="3">&lt;/xref&gt;</ph> file to original format.</source>
+      <target>Utilice el panel <ph ctype="x-italic" id="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Combinar XLIFF<ph id="1">&lt;/i&gt;</ph> para convertir un archivo <ph ctype="x-link" id="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="3">&lt;/xref&gt;</ph> al formato original.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created with other tools that use <ph ctype="x-italic" id="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>OpenXLIFF Filters<ph id="1">&lt;/i&gt;</ph>.</source>
+      <target>XLIFF Manager solo puede combinar archivos XLIFF que generó o archivos XLIFF creados con otras herramientas que utilizan <ph ctype="x-italic" id="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>OpenXLIFF Filters<ph id="1">&lt;/i&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>Merge XLIFF File</source>
+      <target>Combinar Archivo XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/merge.png" placement="inline" class="- topic/image "/&gt;</ph> Merge XLIFF<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/merge.png" placement="inline" class="- topic/image "/&gt;</ph> Combinar XLIFF<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>Type the name and location of the XLIFF file to merge in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button next to it to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="7">
+      <source>If you use the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="1">&lt;/uicontrol&gt;</ph> button to locate the XLIFF file, the program tries to automatically generate a suitable target file or folder.</source>
+      <target>Si utiliza el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="1">&lt;/uicontrol&gt;</ph> para localizar el archivo XLIFF, el programa intenta generar automáticamente un archivo o carpeta de destino adecuado.</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="8">
+      <source>Type the name of the translated file or folder for translated documents in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Target File/Folder<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button next to it to select a file or folder.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="9">
+      <source>If the XLIFF file contains multiple documents inside, a folder is required to place all translated files in it. This is usually the case when the XLIFF was created from a DITA Map.</source>
+      <target>Si el archivo XLIFF contiene varios documentos en su interior, se requiere una carpeta para guardar los documentos traducidos. Este suele ser el caso cuando el archivo XLIFF se creó a partir de un mapa DITA.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="10">
+      <source>Select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Accept Unapproved Segments<ph id="1">&lt;/uicontrol&gt;</ph> checkbox if you want to consider all segments as translated, even when the <ph ctype="x-other" id="2">&lt;xmlatt class="+ topic/keyword markup-d/markupname xml-d/xmlatt "&gt;</ph>approved<ph id="3">&lt;/xmlatt&gt;</ph> attribute is not set to "yes".</source>
+      <target>Seleccione la casilla de verificación <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Aceptar segmentos no aprobados<ph id="1">&lt;/uicontrol&gt;</ph> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<ph ctype="x-other" id="2">&lt;xmlatt class="+ topic/keyword markup-d/markupname xml-d/xmlatt "&gt;</ph>approved<ph id="3">&lt;/xmlatt&gt;</ph>" no esté establecido en "yes".</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="11">
+      <source>Select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Export Approved Segments as TMX<ph id="1">&lt;/uicontrol&gt;</ph> checkbox if you want to generate a <ph ctype="x-link" id="2">&lt;xref href="../glossaries/TMX.dita" class="- topic/xref "&gt;</ph>TMX<ph id="3">&lt;/xref&gt;</ph> file from the XLIFF file. </source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="12">
+      <source>Select the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Open Translated File/Folder After Merging<ph id="1">&lt;/uicontrol&gt;</ph> checkbox if you want to automatically open the translated document or folder after a successful merge operation.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="13">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Merge XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Combinar XLIFF<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="14">
+      <source>XLIFF Manager merges the indicated file.</source>
+      <target>XLIFF Manager combina el archivo indicado.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL21lcmdlWGxpZmYucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9tZXJnZVhs
+aWZmLnBuZyJ9?>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL21lcmdlLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvbWVyZ2UucG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/pseudoTranslate.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0icHNldWRvVHJhbnNsYXRlIj4gPHRpdGxlIGNsYXNzPSItIHRvcGljL3RpdGxlICI+
+JSUlMSUlJQo8L3RpdGxlPiA8c2hvcnRkZXNjIGNsYXNzPSItIHRvcGljL3Nob3J0ZGVzYyAiPiUl
+JTIlJSUKPC9zaG9ydGRlc2M+IDx0YXNrYm9keSBjbGFzcz0iLSB0b3BpYy9ib2R5IHRhc2svdGFz
+a2JvZHkgIj4gPGNvbnRleHQgY2xhc3M9Ii0gdG9waWMvc2VjdGlvbiB0YXNrL2NvbnRleHQgIj4g
+PHAgY2xhc3M9Ii0gdG9waWMvcCAiPiUlJTMlJSUKPC9wPiA8L2NvbnRleHQ+IDxzdGVwcyBjbGFz
+cz0iLSB0b3BpYy9vbCB0YXNrL3N0ZXBzICI+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2sv
+c3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNCUlJQo8L2NtZD4g
+PC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0i
+LSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTUlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9
+Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
+Ij4lJSU2JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Pseudo-Translate Untranslated Segments</source>
+      <target>Pseudo-traducir segmentos no traducidos</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>Copy the content of <ph ctype="x-other" id="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph id="1">&lt;/codeph&gt;</ph> elements to new or existing empty <ph ctype="x-other" id="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target<ph id="3">&lt;/codeph&gt;</ph> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</source>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="3">
+      <source>Use this method to generate a fake translation that you can use to test the <ph ctype="x-link" id="0">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Merge XLIFF File<ph id="1">&lt;/xref&gt;</ph> process. After making sure that Merge runs successfully, you can use the <ph ctype="x-link" id="2">&lt;xref href="removeTargets.dita" class="- topic/xref "&gt;</ph>Remove all Targets<ph id="3">&lt;/xref&gt;</ph> option to clean your XLIFF file.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Type the name and location of the XLIFF file to process in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Pseudo-Translate<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Pseudo-Traducir<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/removeTargets.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0icmVtb3ZlVGFyZ2V0cyI+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUl
+JTElJSUKPC90aXRsZT4gPHNob3J0ZGVzYyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIj4lJSUy
+JSUlCjwvc2hvcnRkZXNjPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2ti
+b2R5ICI+IDxzdGVwcyBjbGFzcz0iLSB0b3BpYy9vbCB0YXNrL3N0ZXBzICI+IDxzdGVwIGNsYXNz
+PSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21k
+ICI+JSUlMyUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0
+ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwv
+c3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0g
+dG9waWMvcGggdGFzay9jbWQgIj4lJSU1JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFz
+a2JvZHk+IDwvdGFzaz4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Remove all Targets</source>
+      <target>Eliminar todas las traducciones</target>
+   </trans-unit>
+      <trans-unit approved="no" xml:space="preserve" id="2">
+      <source>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</source>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>Type the name and location of the XLIFF file to process in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Remove all Targets<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Eliminar Todas las Traducciones<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=?>
+  </file>
+  <file source-language="en" original="tasks/validate_xliff.dita" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0idmFsaWRhdGVfeGxpZmYiPiA8dGl0bGUgY2xhc3M9Ii0gdG9waWMvdGl0bGUgIj4l
+JSUxJSUlCjwvdGl0bGU+IDxzaG9ydGRlc2MgY2xhc3M9Ii0gdG9waWMvc2hvcnRkZXNjICIvPiA8
+dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5ICI+IDxjb250ZXh0IGNs
+YXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNsYXNzPSItIHRvcGljL3Ag
+Ij4lJSUyJSUlCjwvcD4gPHAgY2xhc3M9Ii0gdG9waWMvcCAiPiUlJTMlJSUKPC9wPiA8cCBjbGFz
+cz0iLSB0b3BpYy9wICI+JSUlNCUlJQo8L3A+IDxmaWcgY2xhc3M9Ii0gdG9waWMvZmlnICI+IDxp
+bWFnZSBocmVmPSIuLi9pbWFnZXMvdmFsaWRhdGVYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsi
+IGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBj
+bGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU1JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb250
+ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTYlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
+ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0
+ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRv
+cGljL3BoIHRhc2svY21kICI+JSUlOCUlJQo8L2NtZD4gPHN0ZXByZXN1bHQgY2xhc3M9Ii0gdG9w
+aWMvaXRlbWdyb3VwIHRhc2svc3RlcHJlc3VsdCAiPiUlJTklJSUKPC9zdGVwcmVzdWx0PiA8L3N0
+ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source>Validate XLIFF</source>
+      <target>Validar XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>XLIFF Manager can validate <ph ctype="x-link" id="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="1">&lt;/xref&gt;</ph> 1.0, 1.1, 1.2 and 2.0.</source>
+      <target>XLIFF Manager puede validar <ph ctype="x-link" id="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph id="1">&lt;/xref&gt;</ph> 1.0, 1.1, 1.2 y 2.0.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="3">
+      <source> Validating XLIFF against XML grammars (DTD or XML Schemas) is not enough. XML Schema validation does not detect the use of duplicated 'id' attributes, wrong language codes and other constraints written in the different XLIFF specifications.</source>
+      <target> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usand esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="4">
+      <source>In addition to validating all XLIFF 2.0 modules using XML Schema validation, extra validation is performed for XLIFF 2.0 Core and for Metadata, Matches and Glossary modules.</source>
+      <target>Además de validar todos los módulos XLIFF 2.0 mediante la validación de esquemas XML, se realiza una validación adicional para XLIFF 2.0 Core y para los módulos Metadata, Matches y Glossary.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="5">
+      <source>Validate XLIFF File</source>
+      <target>Validar Archivo XLIFF</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="6">
+      <source>On the left panel, click on the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/check.png" placement="inline" class="- topic/image "/&gt;</ph> Validate XLIFF<ph id="2">&lt;/uicontrol&gt;</ph> option.</source>
+      <target>En el panel izquierdo, haga clic en la opción <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph ctype="image" id="1">&lt;image href="../images/check.png" placement="inline" class="- topic/image "/&gt;</ph> Validar XLIFF<ph id="2">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="7">
+      <source>Type the name and location of the XLIFF file to validate in the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph id="1">&lt;/uicontrol&gt;</ph> text box or click the <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph id="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</source>
+      <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph ctype="x-other" id="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph id="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="8">
+      <source>Click the <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Validate XLIFF<ph id="1">&lt;/uicontrol&gt;</ph> button.</source>
+      <target>Haga clic en el botón <ph ctype="x-other" id="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Validar XLIFF<ph id="1">&lt;/uicontrol&gt;</ph>.</target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="9">
+      <source>XLIFF Manager validates the indicated file.</source>
+      <target>XLIFF Manager valida el archivo indicado.</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3ZhbGlkYXRlWGxpZmYucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy92YWxp
+ZGF0ZVhsaWZmLnBuZyJ9?>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL2NoZWNrLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvY2hlY2sucG5nIn0=?>
+  </file>
+  <file source-language="en" original="xliffmanager.ditamap" datatype="x-ditamap" target-language="es" tool-id="OpenXLIFF">
+    <header>
+      <skl>
+        <internal-file form="base64">PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGJvb2ttYXAg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQm9va01hcC8vRU4iCiJodHRwOi8vZG9jcy5vYXNp
+cy1vcGVuLm9yZy9kaXRhL2R0ZC9ib29rbWFwLmR0ZCI+Cjxib29rbWFwIGRvbWFpbnM9IihtYXAg
+bWFwZ3JvdXAtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKG1hcCBib29rbWFwKSAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICh0b3BpYyBkZWxheS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICBhKHBy
+b3BzIGRlbGl2ZXJ5VGFyZ2V0KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAobWFwIGRpdGF2
+YWxyZWYtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhhemFyZC1kKSAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGktZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIGluZGV4aW5nLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3Bp
+YyBtYXJrdXAtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHByLWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyByZWxtZ210LWQpICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICh0b3BpYyBzdy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+dWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyB4bmFsLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4z
+IiBjbGFzcz0iLSBtYXAvbWFwIGJvb2ttYXAvYm9va21hcCAiIHhtbG5zOmRpdGFhcmNoPSJodHRw
+Oi8vZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iPiA8Ym9va3RpdGxlIGNs
+YXNzPSItIHRvcGljL3RpdGxlIGJvb2ttYXAvYm9va3RpdGxlICI+IDxtYWluYm9va3RpdGxlIGNs
+YXNzPSItIHRvcGljL3BoIGJvb2ttYXAvbWFpbmJvb2t0aXRsZSAiPiUlJTElJSUKPC9ib29rdGl0
+bGVhbHQ+IDwvYm9va3RpdGxlPiA8ZnJvbnRtYXR0ZXIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmIGJv
+b2ttYXAvZnJvbnRtYXR0ZXIgIj4gPGJvb2tsaXN0cyBjbGFzcz0iLSBtYXAvdG9waWNyZWYgYm9v
+a21hcC9ib29rbGlzdHMgIj4gPHRvYyBjbGFzcz0iLSBtYXAvdG9waWNyZWYgYm9va21hcC90b2Mg
+Ii8+IDwvYm9va2xpc3RzPiA8L2Zyb250bWF0dGVyPiA8Y2hhcHRlciBocmVmPSJjb25jZXB0cy94
+bGlmZm1hbmFnZXJfaW50cm9kdWN0aW9uLmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiBib29r
+bWFwL2NoYXB0ZXIgIj4gPHRvcGljcmVmIGhyZWY9ImNvbmNlcHRzL3hsaWZmbWFuYWdlcl9maWxl
+X2Zvcm1hdHMuZGl0YSIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmICIvPiA8dG9waWNyZWYgaHJlZj0i
+Y29uY2VwdHMveGxpZmZtYW5hZ2VyX3BsYXRmb3Jtcy5kaXRhIiBjbGFzcz0iLSBtYXAvdG9waWNy
+ZWYgIi8+IDwvY2hhcHRlcj4gPGNoYXB0ZXIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmIGJvb2ttYXAv
+Y2hhcHRlciAiPiA8dG9waWNtZXRhIGNsYXNzPSItIG1hcC90b3BpY21ldGEgIj4gPG5hdnRpdGxl
+IGNsYXNzPSItIHRvcGljL25hdnRpdGxlICI+JSUlMiUlJQo8L25hdnRpdGxlPiA8L3RvcGljbWV0
+YT4gPHRvcGljcmVmIGhyZWY9InRhc2tzL2NyZWF0ZV94bGlmZi5kaXRhIiBjbGFzcz0iLSBtYXAv
+dG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJ0YXNrcy9tZXJnZV94bGlmZi5kaXRhIiBjbGFz
+cz0iLSBtYXAvdG9waWNyZWYgIi8+IDwvY2hhcHRlcj4gPGNoYXB0ZXIgaHJlZj0idGFza3MvdmFs
+aWRhdGVfeGxpZmYuZGl0YSIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmIGJvb2ttYXAvY2hhcHRlciAi
+Lz4gPGNoYXB0ZXIgaHJlZj0idGFza3MvYW5hbHlzaXNfeGxpZmYuZGl0YSIgY2xhc3M9Ii0gbWFw
+L3RvcGljcmVmIGJvb2ttYXAvY2hhcHRlciAiLz4gPGNoYXB0ZXIgaHJlZj0iY29uY2VwdHMvdHJh
+bnNsYXRpb25UYWtzLmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiBib29rbWFwL2NoYXB0ZXIg
+Ij4gPHRvcGljcmVmIGhyZWY9InRhc2tzL2NvcHlTb3VyY2VzLmRpdGEiIGNsYXNzPSItIG1hcC90
+b3BpY3JlZiAiLz4gPHRvcGljcmVmIGhyZWY9InRhc2tzL3BzZXVkb1RyYW5zbGF0ZS5kaXRhIiBj
+bGFzcz0iLSBtYXAvdG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJ0YXNrcy9yZW1vdmVUYXJn
+ZXRzLmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiAiLz4gPHRvcGljcmVmIGhyZWY9InRhc2tz
+L2FwcHJvdmVBbGwuZGl0YSIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmICIvPiA8L2NoYXB0ZXI+IDxj
+aGFwdGVyIGhyZWY9InRhc2tzL2RlZmF1bHRfc2V0dGluZ3MuZGl0YSIgY2xhc3M9Ii0gbWFwL3Rv
+cGljcmVmIGJvb2ttYXAvY2hhcHRlciAiLz4gPGJhY2ttYXR0ZXIgY2xhc3M9Ii0gbWFwL3RvcGlj
+cmVmIGJvb2ttYXAvYmFja21hdHRlciAiPiA8Ym9va2xpc3RzIGNsYXNzPSItIG1hcC90b3BpY3Jl
+ZiBib29rbWFwL2Jvb2tsaXN0cyAiPiA8Z2xvc3NhcnlsaXN0IGNodW5rPSJ0by1jb250ZW50IiBj
+bGFzcz0iLSBtYXAvdG9waWNyZWYgYm9va21hcC9nbG9zc2FyeWxpc3QgIj4gPHRvcGljcmVmIGhy
+ZWY9Imdsb3NzYXJpZXMvQ0FULmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiAiLz4gPHRvcGlj
+cmVmIGhyZWY9Imdsb3NzYXJpZXMvY2hhcmFjdGVyX3NldC5kaXRhIiBjbGFzcz0iLSBtYXAvdG9w
+aWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJnbG9zc2FyaWVzL1NSWC5kaXRhIiBjbGFzcz0iLSBt
+YXAvdG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJnbG9zc2FyaWVzL1RNWC5kaXRhIiBjbGFz
+cz0iLSBtYXAvdG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJnbG9zc2FyaWVzL1hMSUZGLmRp
+dGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiAiLz4gPC9nbG9zc2FyeWxpc3Q+IDwvYm9va2xpc3Rz
+PiA8L2JhY2ttYXR0ZXI+IDwvYm9va21hcD4=</internal-file>
+      </skl>
+      <tool tool-version="3.5.0 20230326_0842" tool-id="OpenXLIFF" tool-name="OpenXLIFF Filters"/>
+    </header>
+    <?encoding UTF-8?>
+    <body>
+      <trans-unit approved="yes" xml:space="preserve" id="1">
+      <source> <ph ctype="x-other" id="0">&lt;ph class="- topic/ph "&gt;</ph>XLIFF Manager User Guide<ph id="1">&lt;/ph&gt;</ph> <ph ctype="image" id="2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="80"/&gt;</ph> <ph id="3">&lt;/mainbooktitle&gt;</ph> <ph ctype="x-other" id="4">&lt;booktitlealt class="- topic/ph bookmap/booktitlealt "&gt;</ph> <ph ctype="x-other" id="5">&lt;ph class="- topic/ph "&gt;</ph>Copyright © 2018-2023 Maxprograms<ph id="6">&lt;/ph&gt;</ph> </source>
+      <target> <ph ctype="x-other" id="0">&lt;ph class="- topic/ph "&gt;</ph>Guía del Usuario de XLIFF Manager<ph id="1">&lt;/ph&gt;</ph> <ph ctype="image" id="2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="80"/&gt;</ph> <ph id="3">&lt;/mainbooktitle&gt;</ph> <ph ctype="x-other" id="4">&lt;booktitlealt class="- topic/ph bookmap/booktitlealt "&gt;</ph> <ph ctype="x-other" id="5">&lt;ph class="- topic/ph "&gt;</ph> Derechos de autor © 2018-2023 Maxprograms<ph id="6">&lt;/ph&gt;</ph> </target>
+   </trans-unit>
+      <trans-unit approved="yes" xml:space="preserve" id="2">
+      <source>Creating and Merging XLIFF Files</source>
+      <target>Crear y Combinar Archivos XLIFF</target>
+   </trans-unit>
+    </body>
+    <?images eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL29wZW54bGlmZi5wbmciLCJocmVmIjoiaW1hZ2VzL29wZW54bGlmZi5w
+bmcifQ==?>
+  </file>
+</xliff>

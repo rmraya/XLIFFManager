@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xml:lang="es" id="xliffmanager_introduction">
+  <title>Introducción</title>
+  <shortdesc/>
+  <conbody>
+    <p>XLIFF Manager proporciona una interfaz de usuario de código abierto para <xref href="https://github.com/rmraya/OpenXLIFF" scope="external" format="html">OpenXLIFF Filters</xref>, un conjunto de programas que le permiten:</p>
+    <ul id="ul_lbj_mm1_l3b">
+      <li>Create <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.2 and 2.0 files that can be translated in any modern <xref href="../glossaries/CAT.dita">CAT</xref> tool.</li>
+      <li>Convertir sus archivos XLIFF traducidos al formato original con un par de clics.</li>
+      <li>Validar archivos XLIFF creados por cualquier herramienta. La validación es compatible con XLIFF 1.0, 1.1, 1.2 y 2.0.</li>
+      <li>Produce an HTML file with word counts and segment status statistics from an XLIFF document.</li>
+    </ul>
+    <fig>
+      <image href="../images/XliffManager.png" placement="break" scalefit="yes" align="center">
+        <alt>XLIFF Manager GUI</alt>
+      </image>
+    </fig>
+  </conbody>
+</concept>

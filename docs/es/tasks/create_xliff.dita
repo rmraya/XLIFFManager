@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task xml:lang="es" id="create_xliff">
+  <title>Crear Archivo XLIFF</title>
+  <taskbody>
+    <context>
+      <p>Utilice el panel <i>Crear XLIFF</i> para generar un archivo <xref href="../glossaries/XLIFF.dita">XLIFF</xref> a partir de un documento seleccionado.</p>
+      <fig id="fig_q44_2p1_l3b">
+        <image href="../images/createXliff.png" placement="break" scale="80" align="center">
+          <alt>Crear Archivo XLIFF</alt>
+        </image>
+      </fig>
+    </context>
+    <steps>
+      <step>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/plus.png" placement="inline"/> Crear XLIFF</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <uicontrol>Archivo de origen</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un documento del sistema de archivos.</cmd>
+        <info>
+          <note type="tip">Si utiliza el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo, el programa intenta adivinar automáticamente su tipo de archivo y juego de caracteres.</note>
+        </info>
+      </step>
+      <step>
+        <cmd>Seleccione el idioma del documento que desea convertir mediante la lista desplegable <uicontrol>Idioma de origen</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Opcionalmente, seleccione el idioma del documento traducido mediante la lista desplegable <uicontrol>Idioma de destino</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Seleccione o ajuste el tipo de documento de origen mediante la lista desplegable <uicontrol>Tipo de archivo</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Seleccione o ajuste el <xref href="../glossaries/character_set.dita">juego de caracteres</xref> del documento de origen mediante la lista desplegable <uicontrol>Juego de caracteres</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>If you are converting a DITA map and need to use a .ditaval file for conditional filtering, enter its path in the <uicontrol>DITAVAL File</uicontrol> text box or use the <uicontrol>Browse...</uicontrol> button next to it to select a file from the file system.</cmd>
+      </step>
+      <step>
+        <cmd>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <uicontrol>Configuración de JSON</uicontrol> o use el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo del sistema de archivos.</cmd>
+        <info>
+          <note type="tip">La información sobre los archivos de configuración para el filtro JSON está disponible en <xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" format="html">https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme</xref></note>
+        </info>
+      </step>
+      <step>
+        <cmd>Active la casilla <uicontrol>Generar XLIFF 2.0</uicontrol> si desea generar XLIFF 2.0.</cmd>
+        <info>
+          <note type="notice">El programa genera XLIFF 1.2 de forma predeterminada.</note>
+        </info>
+      </step>
+      <step>
+        <cmd>Active la casilla <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente en el nivel de párrafo. </cmd>
+        <info>
+          <note type="notice">El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <xref href="../glossaries/SRX.dita">SRX</xref> predeterminado utilizado para la segmentación en el cuadro de diálogo <xref href="default_settings.dita">Configuración</xref>.</note>
+        </info>
+      </step>
+      <step>
+        <cmd>Seleccione la opción <uicontrol>Incrustar esqueleto</uicontrol> si desea que el archivo esqueleto se inserte en el XLIFF generado.</cmd>
+        <info>
+          <note type="notice">El programa genera un archivo esqueleto separado en la carpeta definida en el cuadro de diálogo <xref href="default_settings.dita">Configuración</xref>. Un esqueleto incrustado permite combinar el archivo XLIFF en cualquier computadora, no solo en aquella donde se generó el archivo XLIFF.</note>
+        </info>
+      </step>
+      <step>
+        <cmd>Haga clic en el botón <uicontrol>Crear XLIFF</uicontrol>.</cmd>
+      </step>
+    </steps>
+    <result>El programa genera un archivo XLIFF y el esqueleto correspondiente.</result>
+  </taskbody>
+</task>

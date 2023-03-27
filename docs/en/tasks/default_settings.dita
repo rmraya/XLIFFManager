@@ -23,8 +23,8 @@
                         <uicontrol>Preferences</uicontrol>
                     </menucascade> on macOS).</cmd>
                 <stepresult>The following dialog appears: <fig>
-                        <image href="../images/settings.png" placement="break" scale="60"
-                            align="center">
+                        <image href="../images/settings.png" placement="break" align="center"
+                            scale="60">
                             <alt>Settings Dialog</alt>
                         </image>
                     </fig></stepresult>
@@ -50,6 +50,11 @@
                     creating XLIFF files, enter its location in the <uicontrol>Default SRX
                         File</uicontrol> text box or use the <uicontrol>Browse...</uicontrol> button
                     to select it from the file system.</cmd>
+            </step>
+            <step>
+                <cmd>Use the <uicontrol>Application Language</uicontrol> drop-down to select the
+                    language used in XLIFF Manager graphical user interface.</cmd>
+                <info>Changes to the application language will take effect after you restart the program.</info>
             </step>
             <step>
                 <cmd>Use the <uicontrol>Theme</uicontrol> drop-down to select the colors used in the

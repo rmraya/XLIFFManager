@@ -3,7 +3,7 @@
 <task id="copySources">
     <title>Copy Source to all Untranslated Segments</title>
     <shortdesc>Copy the content of <codeph>&lt;source></codeph> elements to new or existing empty
-            <codeph>&lt;target</codeph> elements in an XLIFF file.</shortdesc>
+            <codeph>&lt;target></codeph> elements in an XLIFF file.</shortdesc>
     <taskbody>
         <steps>
             <step>

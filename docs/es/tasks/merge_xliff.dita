@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task xml:lang="es" id="merge_xliff">
+  <title>Combinar Archivo XLIFF</title>
+  <taskbody>
+    <context>
+      <p>Utilice el panel <i>Combinar XLIFF</i> para convertir un archivo <xref href="../glossaries/XLIFF.dita">XLIFF</xref> al formato original.</p>
+      <p>XLIFF Manager solo puede combinar archivos XLIFF que generó o archivos XLIFF creados con otras herramientas que utilizan <i>OpenXLIFF Filters</i>.</p>
+      <fig>
+        <image href="../images/mergeXliff.png" placement="break" scale="80" align="center">
+          <alt>Combinar Archivo XLIFF</alt>
+        </image>
+      </fig>
+    </context>
+    <steps>
+      <step>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/merge.png" placement="inline"/> Combinar XLIFF</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
+        <info>Si utiliza el botón <uicontrol>Examinar...</uicontrol> para localizar el archivo XLIFF, el programa intenta generar automáticamente un archivo o carpeta de destino adecuado.</info>
+      </step>
+      <step>
+        <cmd>Type the name of the translated file or folder for translated documents in the <uicontrol>Target File/Folder</uicontrol> text box or click the <uicontrol>Browse...</uicontrol> button next to it to select a file or folder.</cmd>
+        <info>Si el archivo XLIFF contiene varios documentos en su interior, se requiere una carpeta para guardar los documentos traducidos. Este suele ser el caso cuando el archivo XLIFF se creó a partir de un mapa DITA.</info>
+      </step>
+      <step>
+        <cmd>Seleccione la casilla de verificación <uicontrol>Aceptar segmentos no aprobados</uicontrol> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<xmlatt>approved</xmlatt>" no esté establecido en "yes".</cmd>
+      </step>
+      <step>
+        <cmd>Select the <uicontrol>Export Approved Segments as TMX</uicontrol> checkbox if you want to generate a <xref href="../glossaries/TMX.dita">TMX</xref> file from the XLIFF file. </cmd>
+      </step>
+      <step>
+        <cmd>Select the <uicontrol>Open Translated File/Folder After Merging</uicontrol> checkbox if you want to automatically open the translated document or folder after a successful merge operation.</cmd>
+      </step>
+      <step>
+        <cmd>Haga clic en el botón <uicontrol>Combinar XLIFF</uicontrol>.</cmd>
+        <stepresult>XLIFF Manager combina el archivo indicado.</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>
