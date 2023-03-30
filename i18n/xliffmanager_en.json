@@ -29,7 +29,12 @@
         "quit": "Quit",
         "requestAborted": "Request aborted",
         "downloaded": "Downloaded: {0}%",
-        "updateDownloaded": "Update downloaded"
+        "updateDownloaded": "Update downloaded",
+        "creatingXliff": "Creating XLIFF",
+        "validatingXliff": "Validating XLIFF",
+        "processingXliff": "Processing XLIFF",
+        "mergingXliff": "Merging XLIFF",
+        "analysingXliff": "Analysing XLIFF"
     },
     "FileFormats": {
         "anyFile": "Any File",

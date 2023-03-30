@@ -608,7 +608,7 @@ class App {
         arg.srx = App.defaultSRX;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('conversion-started');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'creatingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -663,7 +663,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('validation-started', '');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'validatingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -688,7 +688,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('process-started', '');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -725,7 +725,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('merge-created');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'mergingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -765,7 +765,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('analysis-started');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'analysingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -1018,7 +1018,7 @@ class App {
     }
 
     static showHelp(): void {
-        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager_'+ App.lang +'.pdf'), {
+        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager_' + App.lang + '.pdf'), {
             activate: true, workingDirectory: app.getAppPath()
         }).catch((error: Error) => {
             dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
