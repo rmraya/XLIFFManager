@@ -7,7 +7,7 @@
     <context>
       <p>XLIFF Manager le permite generar un archivo HTML con conteos de palabras y estadísticas de estado de segmentos a partir de un documento <xref href="../glossaries/XLIFF.dita">XLIFF</xref>.</p>
       <fig>
-        <image href="../images/analyzeXliff.png" placement="break" align="center" scalefit="yes">
+        <image href="../images/analyzeXliff.png" placement="break" scalefit="yes" align="center">
           <alt>Estado de la Traducción</alt>
         </image>
       </fig>

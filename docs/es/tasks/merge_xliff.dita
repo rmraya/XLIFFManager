@@ -7,7 +7,7 @@
       <p>Utilice el panel <i>Combinar XLIFF</i> para convertir un archivo <xref href="../glossaries/XLIFF.dita">XLIFF</xref> al formato original.</p>
       <p>XLIFF Manager solo puede combinar archivos XLIFF que generó o archivos XLIFF creados con otras herramientas que utilizan <i>OpenXLIFF Filters</i>.</p>
       <fig>
-        <image href="../images/mergeXliff.png" placement="break" align="center" scalefit="yes">
+        <image href="../images/mergeXliff.png" placement="break" scalefit="yes" align="center">
           <alt>Combinar Archivo XLIFF</alt>
         </image>
       </fig>

@@ -18,7 +18,7 @@
             <uicontrol>Preferencias...</uicontrol>
           </menucascade>  en macOS).</cmd>
         <stepresult>Aparece el siguiente cuadro de diálogo: <fig>
-            <image href="../images/settings.png" placement="break" align="center" scalefit="yes">
+            <image href="../images/settings.png" placement="break" scalefit="yes" align="center">
               <alt>Cuadro de diálogo Configuración</alt>
             </image>
           </fig></stepresult>

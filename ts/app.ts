@@ -1018,7 +1018,7 @@ class App {
     }
 
     static showHelp(): void {
-        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager.pdf'), {
+        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager_'+ App.lang +'.pdf'), {
             activate: true, workingDirectory: app.getAppPath()
         }).catch((error: Error) => {
             dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);

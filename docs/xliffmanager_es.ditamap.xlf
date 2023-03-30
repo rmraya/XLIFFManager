@@ -30,9 +30,9 @@ cmdldHMuZGl0YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTUlJSUKPC94cmVmPjwvbGk+IDxs
 aSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rhc2tzL2FwcHJvdmVBbGwuZGl0
 YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTYlJSUKPC94cmVmPjwvbGk+IDwvdWw+IDxmaWcg
 Y2xhc3M9Ii0gdG9waWMvZmlnICI+IDxpbWFnZSBocmVmPSIuLi9pbWFnZXMvdHJhbnNsYXRpb25U
-YXNrcy5wbmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9
-IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU3JSUlCjwv
-YWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb25ib2R5PiA8L2NvbmNlcHQ+</skeleton>
+YXNrcy5wbmciIHBsYWNlbWVudD0iYnJlYWsiIHNjYWxlZml0PSJ5ZXMiIGNsYXNzPSItIHRvcGlj
+L2ltYWdlICIgYWxpZ249ImNlbnRlciI+IDxhbHQgY2xhc3M9Ii0gdG9waWMvYWx0ICI+JSUlNyUl
+JQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwvY29uYm9keT4gPC9jb25jZXB0Pg==</skeleton>
     <mda:metadata>
       <mda:metaGroup category="format">
         <mda:meta type="datatype">x-ditamap</mda:meta>
@@ -40,7 +40,7 @@ YWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb25ib2R5PiA8L2NvbmNlcHQ+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -164,7 +164,7 @@ Yy9wICI+JSUlMzYlJSUKPC9wPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -383,6 +383,24 @@ Yy9wICI+JSUlMzYlJSUKPC9wPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       </segment>
     </unit>
     <unit id="34">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#34" matchQuality="71.0">
+          <source>RC (Windows C/C++ Resources)</source>
+          <target>RC (Recursos de Windows C/C++)</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#34" matchQuality="71.0">
+          <source>RC (Windows C/C++ Resources)</source>
+          <target>RC (Recursos de Windows C/C++)</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#34" matchQuality="100.0">
+          <source>ResX (Windows .NET Resources)</source>
+          <target>ResX (Recursos de Windows .NET)</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#34" matchQuality="100.0">
+          <source>ResX (Windows .NET Resources)</source>
+          <target>ResX (Recursos de Windows .NET)</target>
+        </mtc:match>
+      </mtc:matches>
       <segment state="final" id="34">
         <source xml:space="preserve">ResX (Windows .NET Resources)</source>
         <target xml:space="preserve">ResX (Recursos de Windows .NET)</target>
@@ -390,24 +408,24 @@ Yy9wICI+JSUlMzYlJSUKPC9wPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
     </unit>
     <unit id="35">
       <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#35" matchQuality="100.0">
+        <mtc:match origin="1680174732565" ref="#35" matchQuality="90.0">
           <source>TS (Qt Linguist translation source)</source>
           <target>TS (Fuente de Traducción de Qt Linguist)</target>
         </mtc:match>
-        <mtc:match origin="1680174732565" ref="#35" matchQuality="100.0">
+        <mtc:match origin="1680174732565" ref="#35" matchQuality="90.0">
           <source>TS (Qt Linguist translation source)</source>
           <target>TS (Fuente de Traducción de Qt Linguist)</target>
         </mtc:match>
       </mtc:matches>
       <segment state="final" id="35">
-        <source xml:space="preserve">TS (Qt Linguist translation source)</source>
+        <source xml:space="preserve">TS (Qt Linguist Translation Source)</source>
         <target xml:space="preserve">TS (Fuente de Traducción de Qt Linguist)</target>
       </segment>
     </unit>
     <unit id="36">
       <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#36" matchQuality="97.0">
-          <source>The filter for XML files supports custom configuration. Users can define conversion rules for almost any XML vocabulary. Instructions for configuring the XML filer are available in <ph id="ph0"/>Swordfish's<ph id="ph1"/> documentation.</source>
+        <mtc:match origin="1680174732565" ref="#36" matchQuality="100.0">
+          <source>The filter for XML files supports custom configuration. Users can define conversion rules for almost any XML vocabulary. Instructions for configuring the XML filter are available in <ph id="ph0"/>Swordfish's<ph id="ph1"/> documentation.</source>
           <target>El filtro para archivos XML admite la configuración personalizada. Los usuarios pueden definir reglas de conversión para casi cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles en la documentación de <ph id="ph0"/>Swordfish<ph id="ph1"/>.</target>
         </mtc:match>
       </mtc:matches>
@@ -462,7 +480,7 @@ PiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -573,7 +591,7 @@ cGljL2xpICI+JSUlNSUlJQo8L2xpPiA8L3VsPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -646,7 +664,7 @@ ZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -702,7 +720,7 @@ L2dsb3NzZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -781,7 +799,7 @@ ZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -836,7 +854,7 @@ c3NkZWY+IDwvZ2xvc3NlbnRyeT4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -900,7 +918,7 @@ JSUKPC9nbG9zc2RlZj4gPC9nbG9zc2VudHJ5Pg==</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -947,16 +965,16 @@ c2hvcnRkZXNjICIvPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
 ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
 YXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcgIj4g
 PGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9hbmFseXplWGxpZmYucG5nIiBwbGFjZW1lbnQ9ImJyZWFr
-IiBjbGFzcz0iLSB0b3BpYy9pbWFnZSAiIHNjYWxlPSI4MCIgYWxpZ249ImNlbnRlciI+IDxhbHQg
-Y2xhc3M9Ii0gdG9waWMvYWx0ICI+JSUlMyUlJQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwvY29u
-dGV4dD4gPHN0ZXBzIGNsYXNzPSItIHRvcGljL29sIHRhc2svc3RlcHMgIj4gPHN0ZXAgY2xhc3M9
-Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
-Ij4lJSU0JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
-cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNSUlJQo8L2NtZD4gPC9z
-dGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0
-b3BpYy9waCB0YXNrL2NtZCAiPiUlJTYlJSUKPC9jbWQ+IDxzdGVwcmVzdWx0IGNsYXNzPSItIHRv
-cGljL2l0ZW1ncm91cCB0YXNrL3N0ZXByZXN1bHQgIj4lJSU3JSUlCjwvc3RlcHJlc3VsdD4gPC9z
-dGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
+IiBzY2FsZWZpdD0ieWVzIiBjbGFzcz0iLSB0b3BpYy9pbWFnZSAiIGFsaWduPSJjZW50ZXIiPiA8
+YWx0IGNsYXNzPSItIHRvcGljL2FsdCAiPiUlJTMlJSUKPC9hbHQ+IDwvaW1hZ2U+IDwvZmlnPiA8
+L2NvbnRleHQ+IDxzdGVwcyBjbGFzcz0iLSB0b3BpYy9vbCB0YXNrL3N0ZXBzICI+IDxzdGVwIGNs
+YXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2sv
+Y21kICI+JSUlNCUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNr
+L3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTUlJSUKPC9jbWQ+
+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
+Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU2JSUlCjwvY21kPiA8c3RlcHJlc3VsdCBjbGFzcz0i
+LSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9zdGVwcmVzdWx0ICI+JSUlNyUlJQo8L3N0ZXByZXN1bHQ+
+IDwvc3RlcD4gPC9zdGVwcz4gPC90YXNrYm9keT4gPC90YXNrPg==</skeleton>
     <mda:metadata>
       <mda:metaGroup category="format">
         <mda:meta type="datatype">x-ditamap</mda:meta>
@@ -964,7 +982,7 @@ dGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1113,7 +1131,7 @@ NiUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1272,7 +1290,7 @@ b2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1389,41 +1407,41 @@ MSUlJQo8L3RpdGxlPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
 ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
 YXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcgIiBp
 ZD0iZmlnX3E0NF8ycDFfbDNiIj4gPGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9jcmVhdGVYbGlmZi5w
-bmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9IjgwIiBh
-bGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSUzJSUlCjwvYWx0PiA8
-L2ltYWdlPiA8L2ZpZz4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9z
-dGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0i
-LSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9
-Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
-Ij4lJSU1JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZv
-ICI+IDxub3RlIHR5cGU9InRpcCIgY2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTYlJSUKPC9ub3Rl
-PiA8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxj
-bWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0ZXA+IDxz
-dGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3Bo
-IHRhc2svY21kICI+JSUlOCUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9s
-aSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTklJSUK
-PC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQg
-Y2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVwPiA8c3Rl
-cCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0
-YXNrL2NtZCAiPiUlJTExJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xp
-IHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTIlJSUK
-PC9jbWQ+IDxpbmZvIGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4gPG5vdGUg
-dHlwZT0idGlwIiBjbGFzcz0iLSB0b3BpYy9ub3RlICI+JSUlMTMlJSUKPC9ub3RlPiA8L2luZm8+
-IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
-Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxNCUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9w
-aWMvaXRlbWdyb3VwIHRhc2svaW5mbyAiPiA8bm90ZSB0eXBlPSJub3RpY2UiIGNsYXNzPSItIHRv
-cGljL25vdGUgIj4lJSUxNSUlJQo8L25vdGU+IDwvaW5mbz4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
-LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
-PiUlJTE2JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZv
-ICI+PG5vdGUgdHlwZT0ibm90aWNlIiBjbGFzcz0iLSB0b3BpYy9ub3RlICI+JSUlMTclJSUKPC9u
-b3RlPjwvaW5mbz4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4g
-PGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTE4JSUlCjwvY21kPiA8aW5mbyBj
-bGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+IDxub3RlIHR5cGU9Im5vdGljZSIg
-Y2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTE5JSUlCjwvbm90ZT4gPC9pbmZvPiA8L3N0ZXA+IDxz
-dGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3Bo
-IHRhc2svY21kICI+JSUlMjAlJSUKPC9jbWQ+IDwvc3RlcD4gPC9zdGVwcz4gPHJlc3VsdCBjbGFz
-cz0iLSB0b3BpYy9zZWN0aW9uIHRhc2svcmVzdWx0ICI+JSUlMjElJSUKPC9yZXN1bHQ+IDwvdGFz
-a2JvZHk+IDwvdGFzaz4=</skeleton>
+bmciIHBsYWNlbWVudD0iYnJlYWsiIHNjYWxlZml0PSJ5ZXMiIGNsYXNzPSItIHRvcGljL2ltYWdl
+ICIgYWxpZ249ImNlbnRlciI+IDxhbHQgY2xhc3M9Ii0gdG9waWMvYWx0ICI+JSUlMyUlJQo8L2Fs
+dD4gPC9pbWFnZT4gPC9maWc+IDwvY29udGV4dD4gPHN0ZXBzIGNsYXNzPSItIHRvcGljL29sIHRh
+c2svc3RlcHMgIj4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xh
+c3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU0JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNs
+YXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2sv
+Y21kICI+JSUlNSUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2sv
+aW5mbyAiPiA8bm90ZSB0eXBlPSJ0aXAiIGNsYXNzPSItIHRvcGljL25vdGUgIj4lJSU2JSUlCjwv
+bm90ZT4gPC9pbmZvPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAi
+PiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNyUlJQo8L2NtZD4gPC9zdGVw
+PiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3Bp
+Yy9waCB0YXNrL2NtZCAiPiUlJTglJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9w
+aWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU5
+JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8
+Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTAlJSUKPC9jbWQ+IDwvc3RlcD4g
+PHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMv
+cGggdGFzay9jbWQgIj4lJSUxMSUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3Bp
+Yy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTEy
+JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+IDxu
+b3RlIHR5cGU9InRpcCIgY2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTEzJSUlCjwvbm90ZT4gPC9p
+bmZvPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNs
+YXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTQlJSUKPC9jbWQ+IDxpbmZvIGNsYXNzPSIt
+IHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4gPG5vdGUgdHlwZT0ibm90aWNlIiBjbGFzcz0i
+LSB0b3BpYy9ub3RlICI+JSUlMTUlJSUKPC9ub3RlPiA8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xh
+c3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9j
+bWQgIj4lJSUxNiUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2sv
+aW5mbyAiPjxub3RlIHR5cGU9Im5vdGljZSIgY2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTE3JSUl
+Cjwvbm90ZT48L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
+ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxOCUlJQo8L2NtZD4gPGlu
+Zm8gY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2svaW5mbyAiPiA8bm90ZSB0eXBlPSJub3Rp
+Y2UiIGNsYXNzPSItIHRvcGljL25vdGUgIj4lJSUxOSUlJQo8L25vdGU+IDwvaW5mbz4gPC9zdGVw
+PiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3Bp
+Yy9waCB0YXNrL2NtZCAiPiUlJTIwJSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDxyZXN1bHQg
+Y2xhc3M9Ii0gdG9waWMvc2VjdGlvbiB0YXNrL3Jlc3VsdCAiPiUlJTIxJSUlCjwvcmVzdWx0PiA8
+L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
     <mda:metadata>
       <mda:metaGroup category="format">
         <mda:meta type="datatype">x-ditamap</mda:meta>
@@ -1431,7 +1449,7 @@ a2JvZHk+IDwvdGFzaz4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1619,6 +1637,16 @@ L2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</mda:me
       </segment>
     </unit>
     <unit id="12">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#12" matchQuality="96.0">
+          <source>If you are converting a JSON document and need to use a custom configuration file, enter its name and location in the <ph id="phph1"/>JSON Configuration<ph id="phph2"/> text box or use the <ph id="phph3"/>Browse...<ph id="phph4"/> button next to it to select a file from the file system.</source>
+          <target>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <ph id="phph1"/>Configuración de JSON<ph id="phph2"/> o use el botón <ph id="phph3"/>Examinar...<ph id="phph4"/> junto a él para seleccionar un archivo del sistema de archivos.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#12" matchQuality="100.0">
+          <source>If you are converting a JSON document and need to use a custom configuration file, enter its name and location in the <ph id="ph0"/>JSON Configuration<ph id="ph1"/> text box or use the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a file from the file system.</source>
+          <target>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <ph id="ph0"/>Configuración de JSON<ph id="ph1"/> o use el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un archivo del sistema de archivos.</target>
+        </mtc:match>
+      </mtc:matches>
       <mda:metadata id="12">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1649,11 +1677,21 @@ L2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</mda:me
         <data id="ph1">&lt;/xref&gt;</data>
       </originalData>
       <segment state="final" id="13">
-        <source xml:space="preserve">Information on configuration files for the JSON filter is available at <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph id="ph1"/></source>
-        <target xml:space="preserve">La información sobre los archivos de configuración para el filtro JSON está disponible en <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph id="ph1"/></target>
+        <source xml:space="preserve">Information on configuration files for the JSON filter is available at <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF<ph id="ph1"/></source>
+        <target xml:space="preserve">Información sobre los archivos de configuración para el filtro JSON está disponible en <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF<ph id="ph1"/></target>
       </segment>
     </unit>
     <unit id="14">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#14" matchQuality="98.0">
+          <source>Select the <ph id="phph1"/>Generate XLIFF 2.0<ph id="phph2"/> check box if you want to generate XLIFF 2.0.</source>
+          <target>Active la casilla <ph id="phph1"/>Generar XLIFF 2.0<ph id="phph2"/> si desea generar XLIFF 2.0.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#14" matchQuality="100.0">
+          <source>Select the <ph id="ph0"/>Generate XLIFF 2.0<ph id="ph1"/> check box if you want to generate XLIFF 2.0.</source>
+          <target>Active la casilla <ph id="ph0"/>Generar XLIFF 2.0<ph id="ph1"/> si desea generar XLIFF 2.0.</target>
+        </mtc:match>
+      </mtc:matches>
       <mda:metadata id="14">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1813,27 +1851,27 @@ NzVsLTIuMTUgMS42MjUuOTc1IDEuNyAyLjQ3NS0xLjA1cS41NS41NzUgMS4yMTMuOTYyLjY2Mi4z
 ODggMS40MzcuNTg4WiIvPiA8L3N2Zzpzdmc+IDwvc3ZnLWNvbnRhaW5lcj4lJSU0JSUlCjwvY21k
 PiA8c3RlcHJlc3VsdCBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9zdGVwcmVzdWx0ICI+
 JSUlNSUlJQo8ZmlnIGNsYXNzPSItIHRvcGljL2ZpZyAiPiA8aW1hZ2UgaHJlZj0iLi4vaW1hZ2Vz
-L3NldHRpbmdzLnBuZyIgcGxhY2VtZW50PSJicmVhayIgY2xhc3M9Ii0gdG9waWMvaW1hZ2UgIiBz
-Y2FsZT0iNjAiIGFsaWduPSJjZW50ZXIiPiA8YWx0IGNsYXNzPSItIHRvcGljL2FsdCAiPiUlJTYl
-JSUKPC9hbHQ+IDwvaW1hZ2U+IDwvZmlnPjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8c3RlcCBjbGFz
-cz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2Nt
-ZCAiPiUlJTclJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9z
-dGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU4JSUlCjwvY21kPiA8
-L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSIt
-IHRvcGljL3BoIHRhc2svY21kICI+JSUlOSUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
-LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
-PiUlJTEwJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
-cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTElJSUKPC9jbWQ+IDxp
-bmZvIGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4lJSUxMiUlJQo8L2luZm8+
-IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
-Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMyUlJQo8L2NtZD4gPGNob2ljZXMgY2xhc3M9Ii0g
-dG9waWMvdWwgdGFzay9jaG9pY2VzICI+IDxjaG9pY2UgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9j
-aG9pY2UgIj4lJSUxNCUlJQo8L2Nob2ljZT4gPGNob2ljZSBjbGFzcz0iLSB0b3BpYy9saSB0YXNr
-L2Nob2ljZSAiPiUlJTE1JSUlCjwvY2hvaWNlPiA8Y2hvaWNlIGNsYXNzPSItIHRvcGljL2xpIHRh
-c2svY2hvaWNlICI+JSUlMTYlJSUKPC9jaG9pY2U+IDwvY2hvaWNlcz4gPC9zdGVwPiA8c3RlcCBj
-bGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNr
-L2NtZCAiPiUlJTE3JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFz
-az4=</skeleton>
+L3NldHRpbmdzLnBuZyIgcGxhY2VtZW50PSJicmVhayIgc2NhbGVmaXQ9InllcyIgY2xhc3M9Ii0g
+dG9waWMvaW1hZ2UgIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4l
+JSU2JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz48L3N0ZXByZXN1bHQ+IDwvc3RlcD4gPHN0ZXAg
+Y2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFz
+ay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRh
+c2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlOCUlJQo8L2Nt
+ZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFz
+cz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTklJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xh
+c3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9j
+bWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNr
+L3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTExJSUlCjwvY21k
+PiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+JSUlMTIlJSUKPC9p
+bmZvPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNs
+YXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTMlJSUKPC9jbWQ+IDxjaG9pY2VzIGNsYXNz
+PSItIHRvcGljL3VsIHRhc2svY2hvaWNlcyAiPiA8Y2hvaWNlIGNsYXNzPSItIHRvcGljL2xpIHRh
+c2svY2hvaWNlICI+JSUlMTQlJSUKPC9jaG9pY2U+IDxjaG9pY2UgY2xhc3M9Ii0gdG9waWMvbGkg
+dGFzay9jaG9pY2UgIj4lJSUxNSUlJQo8L2Nob2ljZT4gPGNob2ljZSBjbGFzcz0iLSB0b3BpYy9s
+aSB0YXNrL2Nob2ljZSAiPiUlJTE2JSUlCjwvY2hvaWNlPiA8L2Nob2ljZXM+IDwvc3RlcD4gPHN0
+ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGgg
+dGFzay9jbWQgIj4lJSUxNyUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8
+L3Rhc2s+</skeleton>
     <mda:metadata>
       <mda:metaGroup category="format">
         <mda:meta type="datatype">x-ditamap</mda:meta>
@@ -1841,7 +1879,7 @@ az4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2131,25 +2169,25 @@ JSUlCjwvdGl0bGU+IDx0YXNrYm9keSBjbGFzcz0iLSB0b3BpYy9ib2R5IHRhc2svdGFza2JvZHkg
 Ij4gPGNvbnRleHQgY2xhc3M9Ii0gdG9waWMvc2VjdGlvbiB0YXNrL2NvbnRleHQgIj4gPHAgY2xh
 c3M9Ii0gdG9waWMvcCAiPiUlJTIlJSUKPC9wPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMyUl
 JQo8L3A+IDxmaWcgY2xhc3M9Ii0gdG9waWMvZmlnICI+IDxpbWFnZSBocmVmPSIuLi9pbWFnZXMv
-bWVyZ2VYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIg
-c2NhbGU9IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU0
-JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9w
-aWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4g
-PGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTUlJSUKPC9jbWQ+IDwvc3RlcD4g
-PHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMv
-cGggdGFzay9jbWQgIj4lJSU2JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3Jv
-dXAgdGFzay9pbmZvICI+JSUlNyUlJQo8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9w
-aWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU4
-JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+JSUl
-OSUlJQo8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+
-IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVw
-PiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3Bp
-Yy9waCB0YXNrL2NtZCAiPiUlJTExJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRv
-cGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUl
-MTIlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+
-IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMyUlJQo8L2NtZD4gPHN0ZXBy
-ZXN1bHQgY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2svc3RlcHJlc3VsdCAiPiUlJTE0JSUl
-Cjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
+bWVyZ2VYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsiIHNjYWxlZml0PSJ5ZXMiIGNsYXNzPSIt
+IHRvcGljL2ltYWdlICIgYWxpZ249ImNlbnRlciI+IDxhbHQgY2xhc3M9Ii0gdG9waWMvYWx0ICI+
+JSUlNCUlJQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwvY29udGV4dD4gPHN0ZXBzIGNsYXNzPSIt
+IHRvcGljL29sIHRhc2svc3RlcHMgIj4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
+ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU1JSUlCjwvY21kPiA8L3N0
+ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRv
+cGljL3BoIHRhc2svY21kICI+JSUlNiUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9waWMvaXRl
+bWdyb3VwIHRhc2svaW5mbyAiPiUlJTclJSUKPC9pbmZvPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSIt
+IHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+
+JSUlOCUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2svaW5mbyAi
+PiUlJTklJSUKPC9pbmZvPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
+cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTAlJSUKPC9jbWQ+IDwv
+c3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0g
+dG9waWMvcGggdGFzay9jbWQgIj4lJSUxMSUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTEyJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
+cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTMlJSUKPC9jbWQ+IDxz
+dGVwcmVzdWx0IGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL3N0ZXByZXN1bHQgIj4lJSUx
+NCUlJQo8L3N0ZXByZXN1bHQ+IDwvc3RlcD4gPC9zdGVwcz4gPC90YXNrYm9keT4gPC90YXNrPg==</skeleton>
     <mda:metadata>
       <mda:metaGroup category="format">
         <mda:meta type="datatype">x-ditamap</mda:meta>
@@ -2157,7 +2195,7 @@ Cjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2413,7 +2451,7 @@ Ij4lJSU2JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</skelet
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2427,40 +2465,12 @@ L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</md
       </mda:metaGroup>
     </mda:metadata>
     <unit id="1">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
-          <source>Pseudo-Translate Untranslated Segments</source>
-          <target>Pseudo-traducir segmentos no traducidos</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
-          <source>Pseudo-Translate Untranslated Segments</source>
-          <target>Pseudo-traducir segmentos no traducidos</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
-          <source>Pseudo-Translate Untranslated Segments</source>
-          <target>Pseudo-traducir segmentos no traducidos</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
-          <source>Pseudo-Translate Untranslated Segments</source>
-          <target>Pseudo-traducir segmentos no traducidos</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="1">
         <source xml:space="preserve">Pseudo-Translate Untranslated Segments</source>
         <target xml:space="preserve">Pseudo-traducir Segmentos no Traducidos</target>
       </segment>
     </unit>
     <unit id="2">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="93.0">
-          <source>Copy the content of <ph id="phph1"/>&lt;source&gt;<ph id="phph2"/> elements to new or existing empty <ph id="phph3"/>&lt;target<ph id="phph4"/> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</source>
-          <target>Copie el contenido de los elementos <ph id="phph1"/>&lt;source&gt;<ph id="phph2"/> a los correspondientes elementos <ph id="phph3"/>&lt;target&gt;<ph id="phph4"/> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="97.0">
-          <source>Copy the content of <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> elements to new or existing empty <ph id="ph2"/>&lt;target<ph id="ph3"/> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</source>
-          <target>Copie el contenido de los elementos <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> a los correspondientes elementos <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="2">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2481,16 +2491,6 @@ L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</md
       </segment>
     </unit>
     <unit id="3">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="96.0">
-          <source>Use this method to generate a fake translation that you can use to test the <ph id="phph1"/>Merge XLIFF File<ph id="phph2"/> process. After making sure that Merge runs successfully, you can use the <ph id="phph3"/>Remove all Targets<ph id="phph4"/> option to clean your XLIFF file.</source>
-          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="phph1"/>Combinar XLIFF<ph id="phph2"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="phph3"/>Eliminar Todas las Traducciones<ph id="phph4"/> para limpiar el archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Use this method to generate a fake translation that you can use to test the <ph id="ph0"/>Merge XLIFF File<ph id="ph1"/> process. After making sure that Merge runs successfully, you can use the <ph id="ph2"/>Remove all Targets<ph id="ph3"/> option to clean your XLIFF file.</source>
-          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="ph0"/>Combinar XLIFF<ph id="ph1"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="ph2"/>Eliminar Todas las Traducciones<ph id="ph3"/> para limpiar el archivo XLIFF.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="3">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-link</mda:meta>
@@ -2600,7 +2600,7 @@ a2JvZHk+IDwvdGFzaz4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2620,16 +2620,6 @@ L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</md
       </segment>
     </unit>
     <unit id="2">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</source>
-          <target>Utilice esta función para eliminar todos los elementos &lt;target&gt; del archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</source>
-          <target>Utilice esta función para eliminar todos los elementos &lt;target&gt; del archivo XLIFF.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="2">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2724,16 +2714,16 @@ YXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNsYXNzPSItIHRvcGljL3Ag
 Ij4lJSUyJSUlCjwvcD4gPHAgY2xhc3M9Ii0gdG9waWMvcCAiPiUlJTMlJSUKPC9wPiA8cCBjbGFz
 cz0iLSB0b3BpYy9wICI+JSUlNCUlJQo8L3A+IDxmaWcgY2xhc3M9Ii0gdG9waWMvZmlnICI+IDxp
 bWFnZSBocmVmPSIuLi9pbWFnZXMvdmFsaWRhdGVYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsi
-IGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBj
-bGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU1JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb250
-ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0i
-LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
-PiUlJTYlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
-ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0
-ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRv
-cGljL3BoIHRhc2svY21kICI+JSUlOCUlJQo8L2NtZD4gPHN0ZXByZXN1bHQgY2xhc3M9Ii0gdG9w
-aWMvaXRlbWdyb3VwIHRhc2svc3RlcHJlc3VsdCAiPiUlJTklJSUKPC9zdGVwcmVzdWx0PiA8L3N0
-ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</skeleton>
+IHNjYWxlZml0PSJ5ZXMiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgYWxpZ249ImNlbnRlciI+IDxh
+bHQgY2xhc3M9Ii0gdG9waWMvYWx0ICI+JSUlNSUlJQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwv
+Y29udGV4dD4gPHN0ZXBzIGNsYXNzPSItIHRvcGljL29sIHRhc2svc3RlcHMgIj4gPHN0ZXAgY2xh
+c3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9j
+bWQgIj4lJSU2JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2sv
+c3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNyUlJQo8L2NtZD4g
+PC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0i
+LSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTglJSUKPC9jbWQ+IDxzdGVwcmVzdWx0IGNsYXNzPSIt
+IHRvcGljL2l0ZW1ncm91cCB0YXNrL3N0ZXByZXN1bHQgIj4lJSU5JSUlCjwvc3RlcHJlc3VsdD4g
+PC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
     <mda:metadata>
       <mda:metaGroup category="format">
         <mda:meta type="datatype">x-ditamap</mda:meta>
@@ -2741,7 +2731,7 @@ ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2920,7 +2910,7 @@ PiA8L2JhY2ttYXR0ZXI+IDwvYm9va21hcD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">1</mda:meta>
+        <mda:meta type="build-number">2</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2935,6 +2925,16 @@ bmcifQ==</mda:meta>
       </mda:metaGroup>
     </mda:metadata>
     <unit id="1">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#1" matchQuality="93.0">
+          <source> <ph id="phph1"/>XLIFF Manager User Guide<ph id="phph2"/> <ph id="phph3"/> <ph id="phph4"/> <ph id="phph5"/> <ph id="phph6"/>Copyright © 2018-2023 Maxprograms<ph id="phph7"/> </source>
+          <target> <ph id="phph1"/>Guía del Usuario de XLIFF Manager<ph id="phph2"/> <ph id="phph3"/> <ph id="phph4"/> <ph id="phph5"/> <ph id="phph6"/> Derechos de autor © 2018-2023 Maxprograms<ph id="phph7"/> </target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
+          <source> <ph id="ph0"/>XLIFF Manager User Guide<ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/>Copyright © 2018-2023 Maxprograms<ph id="ph6"/> </source>
+          <target> <ph id="ph0"/>Guía del Usuario de XLIFF Manager<ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/> Derechos de autor © 2018-2023 Maxprograms<ph id="ph6"/> </target>
+        </mtc:match>
+      </mtc:matches>
       <mda:metadata id="1">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2952,7 +2952,7 @@ bmcifQ==</mda:meta>
       <originalData>
         <data id="ph0">&lt;ph class="- topic/ph "&gt;</data>
         <data id="ph1">&lt;/ph&gt;</data>
-        <data id="ph2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="80"/&gt;</data>
+        <data id="ph2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="60"/&gt;</data>
         <data id="ph3">&lt;/mainbooktitle&gt;</data>
         <data id="ph4">&lt;booktitlealt class="- topic/ph bookmap/booktitlealt "&gt;</data>
         <data id="ph5">&lt;ph class="- topic/ph "&gt;</data>
@@ -2960,7 +2960,7 @@ bmcifQ==</mda:meta>
       </originalData>
       <segment state="final" id="1">
         <source xml:space="preserve"> <ph id="ph0"/>XLIFF Manager User Guide<ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/>Copyright © 2018-2023 Maxprograms<ph id="ph6"/> </source>
-        <target xml:space="preserve"> <ph id="ph0"/>Guía del Usuario de XLIFF Manager<ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/> Derechos de autor © 2018-2023 Maxprograms<ph id="ph6"/> </target>
+        <target xml:space="preserve"> <ph id="ph0"/>Guía del Usuario de XLIFF Manager <ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/>Derechos de autor © 2018-2023 Maxprograms<ph id="ph6"/> </target>
       </segment>
     </unit>
     <unit id="2">
