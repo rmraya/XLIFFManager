@@ -1041,7 +1041,7 @@ L2RvY3MvZW4vaW1hZ2VzL3N0YXRzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvc3RhdHMucG5nIn0=</md
       </originalData>
       <segment state="final" id="4">
         <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Analyse XLIFF<ph id="ph2"/> option.</source>
-        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/>Analizar XLIFF<ph id="ph2"/>.</target>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Analizar XLIFF<ph id="ph2"/>.</target>
       </segment>
     </unit>
     <unit id="5">
@@ -1306,7 +1306,7 @@ L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</md
     <unit id="1">
       <segment state="final" id="1">
         <source xml:space="preserve">Copy Source to all Untranslated Segments</source>
-        <target xml:space="preserve">Copiar origen a destino en todos los segmentos no traducidos</target>
+        <target xml:space="preserve">Copiar Origen a Destino en Todos los Segmentos no Traducidos</target>
       </segment>
     </unit>
     <unit id="2">
@@ -1380,7 +1380,7 @@ L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</md
       </originalData>
       <segment state="final" id="5">
         <source xml:space="preserve">Click the <ph id="ph0"/>Copy Source to Target<ph id="ph1"/> button.</source>
-        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Copiar origen a Destino<ph id="ph1"/>.</target>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Copiar Origen a Destino<ph id="ph1"/>.</target>
       </segment>
     </unit>
   </file>
@@ -2526,7 +2526,7 @@ L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</md
       </originalData>
       <segment state="final" id="4">
         <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Translation Tasks<ph id="ph2"/> option.</source>
-        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/>Traducciones<ph id="ph2"/>.</target>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Traducciones<ph id="ph2"/>.</target>
       </segment>
     </unit>
     <unit id="5">
@@ -2771,7 +2771,7 @@ L2RvY3MvZW4vaW1hZ2VzL2NoZWNrLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvY2hlY2sucG5nIn0=</md
     <unit id="3">
       <segment state="final" id="3">
         <source xml:space="preserve"> Validating XLIFF against XML grammars (DTD or XML Schemas) is not enough. XML Schema validation does not detect the use of duplicated 'id' attributes, wrong language codes and other constraints written in the different XLIFF specifications.</source>
-        <target xml:space="preserve"> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usand esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</target>
+        <target xml:space="preserve"> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usando esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</target>
       </segment>
     </unit>
     <unit id="4">
@@ -2802,7 +2802,7 @@ L2RvY3MvZW4vaW1hZ2VzL2NoZWNrLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvY2hlY2sucG5nIn0=</md
       </originalData>
       <segment state="final" id="6">
         <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Validate XLIFF<ph id="ph2"/> option.</source>
-        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/>Validar XLIFF<ph id="ph2"/>.</target>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Validar XLIFF<ph id="ph2"/>.</target>
       </segment>
     </unit>
     <unit id="7">

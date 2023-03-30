@@ -6,7 +6,7 @@
   <taskbody>
     <context>
       <p>XLIFF Manager puede validar <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.0, 1.1, 1.2 y 2.0.</p>
-      <p> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usand esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</p>
+      <p> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usando esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</p>
       <p>Además de validar todos los módulos XLIFF 2.0 mediante la validación de esquemas XML, se realiza una validación adicional para XLIFF 2.0 Core y para los módulos Metadata, Matches y Glossary.</p>
       <fig>
         <image href="../images/validateXliff.png" placement="break" scalefit="yes" align="center">
@@ -16,7 +16,7 @@
     </context>
     <steps>
       <step>
-        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/check.png" placement="inline"/>Validar XLIFF</uicontrol>.</cmd>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/check.png" placement="inline"/> Validar XLIFF</uicontrol>.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>

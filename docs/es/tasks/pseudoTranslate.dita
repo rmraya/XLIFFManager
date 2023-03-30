@@ -9,7 +9,7 @@
     </context>
     <steps>
       <step>
-        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/>Traducciones</uicontrol>.</cmd>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/> Traducciones</uicontrol>.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
