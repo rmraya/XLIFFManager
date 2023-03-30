@@ -24,7 +24,7 @@
                     </menucascade> on macOS).</cmd>
                 <stepresult>The following dialog appears: <fig>
                         <image href="../images/settings.png" placement="break" align="center"
-                            scale="60">
+                            scalefit="yes">
                             <alt>Settings Dialog</alt>
                         </image>
                     </fig></stepresult>

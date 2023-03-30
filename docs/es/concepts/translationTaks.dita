@@ -20,7 +20,7 @@
       </li>
     </ul>
     <fig>
-      <image href="../images/translationTasks.png" placement="break" scale="80" align="center">
+      <image href="../images/translationTasks.png" placement="break" align="center" scalefit="yes">
         <alt>Traducciones</alt>
       </image>
     </fig>

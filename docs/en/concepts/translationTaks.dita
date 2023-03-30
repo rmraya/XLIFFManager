@@ -13,7 +13,7 @@
         </ul>
         <fig>
             <image align="center" placement="break" href="../images/translationTasks.png"
-                scale="80">
+                scalefit="yes">
                 <alt>Translation Tasks</alt>
             </image>
         </fig>

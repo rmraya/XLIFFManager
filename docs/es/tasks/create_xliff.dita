@@ -6,7 +6,7 @@
     <context>
       <p>Utilice el panel <i>Crear XLIFF</i> para generar un archivo <xref href="../glossaries/XLIFF.dita">XLIFF</xref> a partir de un documento seleccionado.</p>
       <fig id="fig_q44_2p1_l3b">
-        <image href="../images/createXliff.png" placement="break" scale="80" align="center">
+        <image href="../images/createXliff.png" placement="break" align="center" scalefit="yes">
           <alt>Crear Archivo XLIFF</alt>
         </image>
       </fig>
@@ -39,7 +39,7 @@
       <step>
         <cmd>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <uicontrol>Configuración de JSON</uicontrol> o use el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo del sistema de archivos.</cmd>
         <info>
-          <note type="tip">La información sobre los archivos de configuración para el filtro JSON está disponible en <xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" format="html">https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme</xref></note>
+          <note type="tip">La información sobre los archivos de configuración para el filtro JSON está disponible en <xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" format="html">https://github.com/rmraya/OpenXLIFF</xref></note>
         </info>
       </step>
       <step>

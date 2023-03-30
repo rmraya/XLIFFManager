@@ -14,7 +14,7 @@
                 modules.</p>
             <fig>
                 <image align="center" placement="break" href="../images/validateXliff.png"
-                    scale="80">
+                    scalefit="yes">
                     <alt>Validate XLIFF File</alt>
                 </image>
             </fig>

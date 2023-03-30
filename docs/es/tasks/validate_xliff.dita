@@ -9,7 +9,7 @@
       <p> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usand esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</p>
       <p>Además de validar todos los módulos XLIFF 2.0 mediante la validación de esquemas XML, se realiza una validación adicional para XLIFF 2.0 Core y para los módulos Metadata, Matches y Glossary.</p>
       <fig>
-        <image href="../images/validateXliff.png" placement="break" scale="80" align="center">
+        <image href="../images/validateXliff.png" placement="break" align="center" scalefit="yes">
           <alt>Validar Archivo XLIFF</alt>
         </image>
       </fig>
