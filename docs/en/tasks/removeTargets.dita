@@ -2,7 +2,8 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="removeTargets">
     <title>Remove all Targets</title>
-    <shortdesc>Use this feature to remove all &lt;target> elements from your XLIFF file.</shortdesc>
+    <shortdesc>Use this feature to remove all <codeph>&lt;target></codeph> elements from your XLIFF
+        file.</shortdesc>
     <taskbody>
         <steps>
             <step>

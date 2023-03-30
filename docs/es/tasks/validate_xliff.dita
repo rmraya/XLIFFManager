@@ -16,7 +16,7 @@
     </context>
     <steps>
       <step>
-        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/check.png" placement="inline"/> Validar XLIFF</uicontrol>.</cmd>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/check.png" placement="inline"/>Validar XLIFF</uicontrol>.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>

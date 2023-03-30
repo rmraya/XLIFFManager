@@ -16,7 +16,7 @@
           </menucascade> en el menú principal ( <menucascade>
             <uicontrol>XLIFF Manager</uicontrol>
             <uicontrol>Preferencias...</uicontrol>
-          </menucascade> en macOS).</cmd>
+          </menucascade>  en macOS).</cmd>
         <stepresult>Aparece el siguiente cuadro de diálogo: <fig>
             <image href="../images/settings.png" placement="break" scale="60" align="center">
               <alt>Cuadro de diálogo Configuración</alt>
@@ -30,7 +30,7 @@
         <cmd>Si desea utilizar un catálogo personalizado para archivos XML, introduzca su ubicación en el cuadro de texto <uicontrol>Catálogo del sistema</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionarlo del sistema de archivos.</cmd>
       </step>
       <step>
-        <cmd>If you wish to change the folder where skeleton files are saved, enter the folder name in the <uicontrol>Skeletons Folder</uicontrol> text box or use the <uicontrol>Browse...</uicontrol> button to select the new location in the file system. </cmd>
+        <cmd>Si desea cambiar la carpeta donde se guardan los archivos esqueleto, introduzca el nombre de la carpeta en el cuadro de texto <uicontrol>Carpeta de esqueletos</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionar la nueva ubicación en el sistema de archivos. </cmd>
       </step>
       <step>
         <cmd>Para utilizar un archivo <xref href="../glossaries/SRX.dita">SRX</xref> personalizado al crear archivos XLIFF, introduzca su ubicación en el cuadro de texto <uicontrol>Archivo SRX predeterminado</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionarlo del sistema de archivos.</cmd>
@@ -40,11 +40,11 @@
         <info>Los cambios en el idioma de la aplicación surtirán efecto después de reiniciar el programa.</info>
       </step>
       <step>
-        <cmd>Use the <uicontrol>Theme</uicontrol> drop-down to select the colors used in the graphical user interface. Available options are: </cmd>
+        <cmd>Utilice el menú desplegable <uicontrol>Tema</uicontrol> para seleccionar los colores utilizados en la interfaz gráfica de usuario. Las opciones disponibles son: </cmd>
         <choices>
-          <choice><b>System Default</b>: automatically selects Dark or Light colors according to the preferences set in the operating system.</choice>
-          <choice><b>Dark</b>: Uses dark background with white text.</choice>
-          <choice><b>Light</b>: Uses light grey background with dark text</choice>
+          <choice><b>Predeterminado del sistema</b>: selecciona automáticamente los colores oscuros o claros según las preferencias establecidas en el sistema operativo.</choice>
+          <choice><b>Oscuro</b>: utiliza fondo oscuro con texto blanco.</choice>
+          <choice><b>Claro</b>: utiliza fondo gris claro con texto oscuro</choice>
         </choices>
       </step>
       <step>

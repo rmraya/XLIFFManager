@@ -21,17 +21,17 @@
         <info>Si utiliza el botón <uicontrol>Examinar...</uicontrol> para localizar el archivo XLIFF, el programa intenta generar automáticamente un archivo o carpeta de destino adecuado.</info>
       </step>
       <step>
-        <cmd>Type the name of the translated file or folder for translated documents in the <uicontrol>Target File/Folder</uicontrol> text box or click the <uicontrol>Browse...</uicontrol> button next to it to select a file or folder.</cmd>
+        <cmd>Escriba el nombre del archivo o carpeta para los documentos traducidos en el cuadro de texto <uicontrol>Archivo/carpeta de destino</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo o carpeta.</cmd>
         <info>Si el archivo XLIFF contiene varios documentos en su interior, se requiere una carpeta para guardar los documentos traducidos. Este suele ser el caso cuando el archivo XLIFF se creó a partir de un mapa DITA.</info>
       </step>
       <step>
         <cmd>Seleccione la casilla de verificación <uicontrol>Aceptar segmentos no aprobados</uicontrol> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<xmlatt>approved</xmlatt>" no esté establecido en "yes".</cmd>
       </step>
       <step>
-        <cmd>Select the <uicontrol>Export Approved Segments as TMX</uicontrol> checkbox if you want to generate a <xref href="../glossaries/TMX.dita">TMX</xref> file from the XLIFF file. </cmd>
+        <cmd>Seleccione la casilla de verificación <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> si desea generar un archivo <xref href="../glossaries/TMX.dita">TMX</xref> a partir del archivo XLIFF. </cmd>
       </step>
       <step>
-        <cmd>Select the <uicontrol>Open Translated File/Folder After Merging</uicontrol> checkbox if you want to automatically open the translated document or folder after a successful merge operation.</cmd>
+        <cmd>Seleccione la casilla de verificación <uicontrol>Abrir archivo/carpeta traducido después de combinar</uicontrol> si desea abrir automáticamente el documento o carpeta traducidos después de una operación de combinación correcta.</cmd>
       </step>
       <step>
         <cmd>Haga clic en el botón <uicontrol>Combinar XLIFF</uicontrol>.</cmd>

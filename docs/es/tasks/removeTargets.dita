@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task xml:lang="es" id="removeTargets">
-  <title>Eliminar todas las traducciones</title>
-  <shortdesc>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</shortdesc>
+  <title>Eliminar Todas las Traducciones</title>
+  <shortdesc>Utilice esta función para eliminar todos los elementos <codeph>&lt;target&gt;</codeph> del archivo XLIFF.</shortdesc>
   <taskbody>
     <steps>
       <step>

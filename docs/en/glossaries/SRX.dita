@@ -2,7 +2,17 @@
 <!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/glossary.dtd">
 <glossentry id="SRX">
     <glossterm>SRX</glossterm>
-    <glossdef>Segmentation Rules eXchange (SRX) is an XML-based open standard, published by LISA
-        (Localization Industry Standards Association), for describing how translation and
-        other language-processing tools segment text for processing.</glossdef>
+    <glossdef>
+        <p>Segmentation Rules eXchange (SRX) is an XML-based standard that was
+            maintained by Localization Industry Standards Association, until it became insolvent in
+            2011, and then by the <xref href="https://www.gala-global.org/" scope="external"
+                format="html">Globalization and Localization Association</xref> (GALA).</p>
+        <p>SRX provides a common way to describe how to segment text for translation and other
+            language-related processes. It was created when it was realized that TMX was less useful
+            than expected in certain instances due to differences in how tools segment text. SRX is
+            intended to enhance the <xref href="TMX.dita">TMX </xref> standard so that translation
+            memory (TM) data that is exchanged between applications can be used more effectively.
+            Having the segmentation rules available that were used when a TM was created increases
+            the usefulness of the TM data.</p>
+    </glossdef>
 </glossentry>

@@ -1,0 +1,1280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd" >
+<tmx version="1.4">
+<header 
+      creationtool="OpenXLIFF" 
+      creationtoolversion="3.3.0" 
+      srclang="en" 
+      adminlang="en"  
+      datatype="xml" 
+      o-tmf="XLIFF" 
+      segtype="block"
+>
+</header>
+<body>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Translation Tasks</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Traducciones</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use the options in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Translation Tasks<ph x="1">&lt;/uicontrol&gt;</ph> panel to:</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice las opciones del panel <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Traducciones<ph x="1">&lt;/uicontrol&gt;</ph> para:</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Copy Source to all Untranslated Segments</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Copiar origen a destino en todos los segmentos no traducidos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Pseudo-Translate Untranslated Segments</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Pseudo-traducir segmentos no traducidos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Remove all Targets</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Eliminar todas las traducciones</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Approve all Segments</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Aprobar todos los segmentos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1438027714-0-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Translation Tasks</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Traducciones</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Supported File Formats</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Tipos de Archivo Compatibles</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>With XLIFF Manager you can create <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> files from the following document formats:</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Con XLIFF Manager puede crear archivos <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> a partir de los siguientes tipos de documentos:</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>General Documentation</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Documentación General</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Software Development</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Desarrollo de Software</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Adobe InCopy ICML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Adobe InCopy ICML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Adobe InDesign Interchange (INX)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Adobe InDesign Interchange (INX)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Adobe InDesign IDML CS4, CS5, CS6 &amp; CC</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Adobe InDesign IDML CS4, CS5, CS6 y CC</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-56" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>HTML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>HTML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-57" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Microsoft Office 2007/2008/2010/2011/2013/2016</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Microsoft Office 2007/2008/2010/2011/2013/2016</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1567" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Microsoft Visio XML Drawings 2007/2010/2013</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Microsoft Visio XML Drawings 2007/2010/2013</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1568" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>MIF (Maker Interchange Format)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>MIF (Maker Interchange Format)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1569" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>OpenOffice/LibreOffice/StarOffice 1.x/2.x/3.x/4.x/5.x</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>OpenOffice/LibreOffice/StarOffice 1.x/2.x/3.x/4.x/5.x</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1570" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Plain Text</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Texto sin Formato</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1571" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Trados Studio Packages</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Paquetes de Trados Studio</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1572" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>SDLXLIFF (Trados Studio)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>SDLXLIFF (Trados Studio)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1573" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>SRT Subtitles</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Subtítulos SRT</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1574" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Wordfast/GlobalLink TXML (*.txml)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>TXML de Wordfast/GlobalLink (*.txml)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1575" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Wordfast/GlobalLink XLIFF (*.txlf)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF de Wordfast/GlobalLink (*.txlf)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1576" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>WPML XLIFF (WordPress Multilingual Plugin)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF de WPML (WordPress Multilingual Plugin)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1598" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF from Other Tools (*.mqxliff, *.xliff)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF de otras herramientas (*.mqxliff, *.xliff)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1599" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XML (Generic)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XML (Genérico)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1600" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XML with ready to use configuration files for: </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XML con archivos de configuración listos para usar para: </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1601" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>DITA 1.0, 1.1, 1.2 and 1.3</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>DITA 1.0, 1.1, 1.2 y 1.3</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1602" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>DocBook 3.x, 4.x and 5.x</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>DocBook 3.x, 4.x y 5.x</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1603" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>SVG</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>SVG</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1604" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Word 2003 ML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Word 2003 ML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1605" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XHTML</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XHTML</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1606" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>JavaScript</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>JavaScript</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1607" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Java Properties</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Propiedades de Java</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1629" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>JSON</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>JSON</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1630" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>PHP Arrays</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>PHP Arrays</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1631" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>PO (Portable Objects)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>PO (Portable Objects)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1632" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>RC (Windows C/C++ Resources)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>RC (Recursos de Windows C/C++)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1633" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>ResX (Windows .NET Resources)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>ResX (Recursos de Windows .NET)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1634" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>TS (Qt Linguist translation source)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>TS (Fuente de Traducción de Qt Linguist)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="951711876-1-1635" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>The filter for XML files supports custom configuration. Users can define conversion rules for almost any XML vocabulary. Instructions for configuring the XML filter are available in <ph type="x-link" x="0">&lt;xref href="https://www.maxprograms.com/products/swordfish.html" scope="external" class="- topic/xref " format="html"&gt;</ph>Swordfish's<ph x="1">&lt;/xref&gt;</ph> documentation.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>El filtro para archivos XML admite la configuración personalizada. Los usuarios pueden definir reglas de conversión para casi cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles en la documentación de <ph type="x-link" x="0">&lt;xref href="https://www.maxprograms.com/products/swordfish.html" scope="external" class="- topic/xref " format="html"&gt;</ph>Swordfish<ph x="1">&lt;/xref&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Introduction</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Introducción</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager provides an open source UI for <ph type="x-link" x="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF" scope="external" class="- topic/xref " format="html"&gt;</ph>OpenXLIFF Filters<ph x="1">&lt;/xref&gt;</ph>, a set of programs that let you:</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager proporciona una interfaz de usuario de código abierto para <ph type="x-link" x="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF" scope="external" class="- topic/xref " format="html"&gt;</ph>OpenXLIFF Filters<ph x="1">&lt;/xref&gt;</ph>, un conjunto de programas que le permiten:</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Create <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> 1.2 and 2.0 files that can be translated in any modern <ph type="x-link" x="2">&lt;xref href="../glossaries/CAT.dita" class="- topic/xref "&gt;</ph>CAT<ph x="3">&lt;/xref&gt;</ph> tool.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Cree archivos <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> 1.2 y 2.0 que se pueden traducir en cualquier herramienta <ph type="x-link" x="2">&lt;xref href="../glossaries/CAT.dita" class="- topic/xref "&gt;</ph>TAO<ph x="3">&lt;/xref&gt;</ph> moderna.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Convert your translated XLIFF files to original format with a couple of clicks.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Convertir sus archivos XLIFF traducidos al formato original con un par de clics.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Validar archivos XLIFF creados por cualquier herramienta. La validación es compatible con XLIFF 1.0, 1.1, 1.2 y 2.0.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Produce an HTML file with word counts and segment status statistics from an XLIFF document.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Generar un archivo HTML con conteos de palabras y estadísticas de estado de segmentos a partir de un documento XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="460075171-2-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager GUI</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager GUI</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2085357571-3-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Supported Platforms</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Plataformas Compatibles</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2085357571-3-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager works on these platforms:</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager funciona en estas plataformas:</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2085357571-3-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Microsoft Windows (8, 8.1, 10 and 11)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Microsoft Windows (8, 8.1, 10 y 11)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2085357571-3-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11.0), Monterey (12.0) and Ventura (13.0)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11.0), Monterey (12.0) y Ventura (13.0)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2085357571-3-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Linux (with GNOME Desktop Manager)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Linux (con GNOME Desktop Manager)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="810638941-4-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Computer Assisted Translation (CAT)</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Traducción asistida por ordenador (TAO)</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="810638941-4-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Computer technology application designed to assist human translators in the translation process.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Aplicación informática diseñada para ayudar a los traductores humanos en el proceso de traducción.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="948010522-5-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>SRX</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>SRX</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="948010522-5-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Segmentation Rules eXchange (SRX) is an XML-based standard that was maintained by Localization Industry Standards Association, until it became insolvent in 2011, and then by the <ph type="x-link" x="0">&lt;xref href="https://www.gala-global.org/" scope="external" class="- topic/xref " format="html"&gt;</ph>Globalization and Localization Association<ph x="1">&lt;/xref&gt;</ph> (GALA).</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Segmentation Rules eXchange (SRX) es un estándar basado en XML que fue mantenido por la Localization Industry Standards Association, hasta que se declaró insolvente en 2011, y luego por  <ph type="x-link" x="0">&lt;xref href="https://www.gala-global.org/" scope="external" class="- topic/xref " format="html"&gt;</ph>Globalization and Localization Association<ph x="1">&lt;/xref&gt;</ph> (GALA).</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="948010522-5-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>SRX provides a common way to describe how to segment text for translation and other language-related processes. It was created when it was realized that TMX was less useful than expected in certain instances due to differences in how tools segment text. SRX is intended to enhance the <ph type="x-link" x="0">&lt;xref href="TMX.dita" class="- topic/xref "&gt;</ph>TMX <ph x="1">&lt;/xref&gt;</ph> standard so that translation memory (TM) data that is exchanged between applications can be used more effectively. Having the segmentation rules available that were used when a TM was created increases the usefulness of the TM data.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>SRX proporciona una forma estandar de describir cómo segmentar texto para traducción y otros procesos relacionados con el lenguaje. Se creó cuando se hizo evidente que TMX era menos útil de lo esperado en ciertos casos debido a las diferencias en la forma en que las herramientas segmentan el texto. SRX está diseñado para mejorar el estándar <ph type="x-link" x="0">&lt;xref href="TMX.dita" class="- topic/xref "&gt;</ph>TMX<ph x="1">&lt;/xref&gt;</ph> para que los datos de la memoria de traducción (TM) que se intercambian entre aplicaciones se puedan utilizar de manera más efectiva. Tener disponibles las reglas de segmentación que se usaron cuando se creó una TM aumenta la utilidad de los datos de TM.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1746697548-6-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>TMX</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>TMX</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1746697548-6-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Translation Memory eXchange (TMX) is an open standard originally published by LISA (Localization Industry Standards Association). The purpose of TMX is to allow easier exchange of translation memory data between tools and/or translation vendors with little or no loss of critical data during the process.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Translation Memory eXchange (TMX) es un estándar abierto publicado originalmente por LISA (Localization Industry Standards Association). El propósito de TMX es permitir un intercambio más fácil de datos de memorias de traducción entre herramientas y/o proveedores de traducción con poca o ninguna pérdida de datos críticos durante el proceso.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="316342622-7-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="316342622-7-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF (XML Localization Interchange File Format) is an open standard developed by <ph type="x-link" x="0">&lt;xref href="http://www.oasis-open.org/" scope="external" class="- topic/xref " format="html"&gt;</ph>OASIS<ph x="1">&lt;/xref&gt;</ph> (Organization for the Advancement of Structured Information Standards). The purpose of this vocabulary is to store localizable data and carry it from one step of the localization process to the other, while allowing interoperability between tools.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF (XML Localization Interchange File Format) es un estándar abierto desarrollado por <ph type="x-link" x="0">&lt;xref href="http://www.oasis-open.org/" scope="external" class="- topic/xref " format="html"&gt;</ph>OASIS<ph x="1">&lt;/xref&gt;</ph> (Organization for the Advancement of Structured Information Standards). El propósito de este vocabulario es almacenar datos localizables y llevarlos de un paso del proceso de localización a otro, al tiempo que permite la interoperabilidad entre herramientas.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="893202887-8-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Character Set</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Juego de Caracteres</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="893202887-8-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>A character set (sometimes referred to as code page) is a collection of characters that are associated with a sequence of natural numbers in order to facilitate the storage of text in computers and the transmission of text through telecommunication networks.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Un juego de caracteres (a veces denominado página de códigos) es una colección de caracteres que están asociados con una secuencia de números naturales para facilitar el almacenamiento de texto en computadoras y la transmisión de texto a través de redes de telecomunicaciones.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Generate Word Counts and Segment Statistics</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Generar Conteos de Palabras y Estadísticas de Segmentos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager lets you produce an HTML file with word counts and segment status statistics from an <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> document.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager le permite generar un archivo HTML con conteos de palabras y estadísticas de estado de segmentos a partir de un documento <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Translation Status Analysis</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Estado de la Traducción</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/stats.png" placement="inline" class="- topic/image "/&gt;</ph> Analyse XLIFF<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/stats.png" placement="inline" class="- topic/image "/&gt;</ph>Analizar XLIFF<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to analyse in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Analyse XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Analizar XLIFF<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="639695309-9-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager generates an HTML report in the folder where the XLIFF file is located and its name is the name of the XLIFF plus <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>.log.html<ph x="1">&lt;/codeph&gt;</ph>.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager genera un informe HTML en la carpeta donde se encuentra el archivo XLIFF y su nombre es el nombre del XLIFF mas <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>.log.html<ph x="1">&lt;/codeph&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1680396235-10-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Approve all Segments</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Aprobar Todos los Segmentos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1680396235-10-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Set <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>approved="true"<ph x="1">&lt;/codeph&gt;</ph> in all <ph type="x-other" x="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;trans-unit&gt;<ph x="3">&lt;/codeph&gt;</ph> elements in an XLIFF 1.2 file or set <ph type="x-other" x="4">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>state="final"<ph x="5">&lt;/codeph&gt;</ph> in all <ph type="x-other" x="6">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;unit&gt;<ph x="7">&lt;/codeph&gt;</ph> elements of an XLIFF 2.0 document.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Asignar <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>approved="true"<ph x="1">&lt;/codeph&gt;</ph> en todos los elementos  <ph type="x-other" x="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;trans-unit&gt;<ph x="3">&lt;/codeph&gt;</ph> de un archivo XLIFF 1.2 o asignar <ph type="x-other" x="4">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>state="final"<ph x="5">&lt;/codeph&gt;</ph> en todos los elementos <ph type="x-other" x="6">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;unit&gt;<ph x="7">&lt;/codeph&gt;</ph> de un documento XLIFF 2.0.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1680396235-10-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Some translation tools do not offer a way to confirm segments at translation time. Use this feature to confirm all segments, so you can select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Export Approved Segments as TMX<ph x="1">&lt;/uicontrol&gt;</ph> option when using the <ph type="x-link" x="2">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Merge XLIFF File<ph x="3">&lt;/xref&gt;</ph> option. </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Exportar segmentos aprobados como TMX<ph x="1">&lt;/uicontrol&gt;</ph> cuando utilice la opción <ph type="x-link" x="2">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Combinar XLIFF<ph x="3">&lt;/xref&gt;</ph>. </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1680396235-10-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1680396235-10-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to process in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1680396235-10-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Approve all Segments<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Aprobar Todos los Segmentos<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="626839198-11-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Copy Source to all Untranslated Segments</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Copiar origen a destino en todos los segmentos no traducidos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="626839198-11-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Copy the content of <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph x="1">&lt;/codeph&gt;</ph> elements to new or existing empty <ph type="x-other" x="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph x="3">&lt;/codeph&gt;</ph> elements in an XLIFF file.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Copiar el contenido de los elementos <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph x="1">&lt;/codeph&gt;</ph> a los elementos <ph type="x-other" x="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph x="3">&lt;/codeph&gt;</ph> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="626839198-11-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="626839198-11-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to process in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="626839198-11-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Copy Source to Target<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Copiar origen a Destino<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Create XLIFF File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Crear Archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use the <ph type="x-italic" x="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Create XLIFF<ph x="1">&lt;/i&gt;</ph> panel to generate an <ph type="x-link" x="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="3">&lt;/xref&gt;</ph> file from a selected document.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice el panel <ph type="x-italic" x="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Crear XLIFF<ph x="1">&lt;/i&gt;</ph> para generar un archivo <ph type="x-link" x="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="3">&lt;/xref&gt;</ph> a partir de un documento seleccionado.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Create XLIFF File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Crear Archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/plus.png" placement="inline" class="- topic/image "/&gt;</ph> Create XLIFF<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/plus.png" placement="inline" class="- topic/image "/&gt;</ph> Crear XLIFF<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the document to convert to XLIFF in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Source File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button next to it to select a document from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo de origen<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> junto a él para seleccionar un documento del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If you use the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="1">&lt;/uicontrol&gt;</ph> button to select a file, the program tries to automatically guess its file type and character set.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si utiliza el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="1">&lt;/uicontrol&gt;</ph> para seleccionar un archivo, el programa intenta adivinar automáticamente su tipo de archivo y juego de caracteres.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the language of the document to convert using the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Source Language<ph x="1">&lt;/uicontrol&gt;</ph> drop-down list.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione el idioma del documento que desea convertir mediante la lista desplegable <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Idioma de origen<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-56" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Optionally, select the language of the translated document using the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Target Language<ph x="1">&lt;/uicontrol&gt;</ph> drop-down list.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Opcionalmente, seleccione el idioma del documento traducido mediante la lista desplegable <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Idioma de destino<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-57" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select or adjust the type of source document using the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>File Type<ph x="1">&lt;/uicontrol&gt;</ph> drop-down list.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione o ajuste el tipo de documento de origen mediante la lista desplegable <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Tipo de archivo<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1567" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select or adjust the <ph type="x-link" x="0">&lt;xref href="../glossaries/character_set.dita" class="- topic/xref "&gt;</ph>character set<ph x="1">&lt;/xref&gt;</ph> of the source document using the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Character Set<ph x="3">&lt;/uicontrol&gt;</ph> drop-down list.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione o ajuste el <ph type="x-link" x="0">&lt;xref href="../glossaries/character_set.dita" class="- topic/xref "&gt;</ph>juego de caracteres<ph x="1">&lt;/xref&gt;</ph> del documento de origen mediante la lista desplegable <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Juego de caracteres<ph x="3">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1568" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If you are converting a DITA map and need to use a .ditaval file for conditional filtering, enter its path in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>DITAVAL File<ph x="1">&lt;/uicontrol&gt;</ph> text box or use the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button next to it to select a file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si está convirtiendo un mapa DITA y necesita utilizar un archivo .ditaval para el filtrado condicional, introduzca su ruta en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo DITAVAL<ph x="1">&lt;/uicontrol&gt;</ph> o utilice el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> junto a él para seleccionar un archivo del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1569" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If you are converting a JSON document and need to use a custom configuration file, enter its name and location in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>JSON Configuration<ph x="1">&lt;/uicontrol&gt;</ph> text box or use the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button next to it to select a file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Configuración de JSON<ph x="1">&lt;/uicontrol&gt;</ph> o use el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> junto a él para seleccionar un archivo del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1570" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Information on configuration files for the JSON filter is available at <ph type="x-link" x="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" class="- topic/xref " format="html"&gt;</ph>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph x="1">&lt;/xref&gt;</ph></seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>La información sobre los archivos de configuración para el filtro JSON está disponible en <ph type="x-link" x="0">&lt;xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" class="- topic/xref " format="html"&gt;</ph>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph x="1">&lt;/xref&gt;</ph></seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1571" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Generate XLIFF 2.0<ph x="1">&lt;/uicontrol&gt;</ph> check box if you want to generate XLIFF 2.0.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Active la casilla <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Generar XLIFF 2.0<ph x="1">&lt;/uicontrol&gt;</ph> si desea generar XLIFF 2.0.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1572" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>The program generates XLIFF 1.2 by default.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>El programa genera XLIFF 1.2 de forma predeterminada.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1573" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Paragraph Segmentation<ph x="1">&lt;/uicontrol&gt;</ph> check box if you want source text to be segmented at paragraph level. </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Active la casilla <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Segmentar por párrafos<ph x="1">&lt;/uicontrol&gt;</ph> si desea que el texto de origen se segmente en el nivel de párrafo. </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1574" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>The program uses sentence-level segmentation by default. You can select the default <ph type="x-link" x="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph x="1">&lt;/xref&gt;</ph> file used for segmentation in the <ph type="x-link" x="2">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Settings<ph x="3">&lt;/xref&gt;</ph> dialog.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <ph type="x-link" x="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph x="1">&lt;/xref&gt;</ph> predeterminado utilizado para la segmentación en el cuadro de diálogo <ph type="x-link" x="2">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Configuración<ph x="3">&lt;/xref&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1575" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Embed Skeleton<ph x="1">&lt;/uicontrol&gt;</ph> option if you want the skeleton file to be inserted in the generated XLIFF.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Incrustar esqueleto<ph x="1">&lt;/uicontrol&gt;</ph> si desea que el archivo esqueleto se inserte en el XLIFF generado.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1576" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>The program generates a separated skeleton file in the folder defined in <ph type="x-link" x="0">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Settings<ph x="1">&lt;/xref&gt;</ph> dialog. An embedded skeleton allows merging the XLIFF file in any computer, not just the one where the XLIFF was generated.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>El programa genera un archivo esqueleto separado en la carpeta definida en el cuadro de diálogo <ph type="x-link" x="0">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</ph>Configuración<ph x="1">&lt;/xref&gt;</ph>. Un esqueleto incrustado permite combinar el archivo XLIFF en cualquier computadora, no solo en aquella donde se generó el archivo XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1598" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Create XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Crear XLIFF<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="76442477-12-1599" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>The program generates an XLIFF file and the corresponding skeleton.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>El programa genera un archivo XLIFF y el esqueleto correspondiente.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Settings</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Configuración</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Settings<ph x="1">&lt;/uicontrol&gt;</ph> dialog to set the default languages used by the application and to configure the main XML catalog and default folder used to store skeletons when creating <ph type="x-link" x="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="3">&lt;/xref&gt;</ph> files.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice el cuadro de diálogo <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Configuración<ph x="1">&lt;/uicontrol&gt;</ph> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <ph type="x-link" x="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="3">&lt;/xref&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click the </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg> Settings<ph x="0">&lt;/uicontrol&gt;</ph> option or select <ph type="x-other" x="1">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>File<ph x="3">&lt;/uicontrol&gt;</ph> <ph type="x-other" x="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Settings<ph x="5">&lt;/uicontrol&gt;</ph> <ph x="6">&lt;/menucascade&gt;</ph> in main menu (<ph type="x-other" x="7">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph type="x-other" x="8">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF Manager<ph x="9">&lt;/uicontrol&gt;</ph> <ph type="x-other" x="10">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Preferences<ph x="11">&lt;/uicontrol&gt;</ph> <ph x="12">&lt;/menucascade&gt;</ph> on macOS).</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg> Configuración<ph x="0">&lt;/uicontrol&gt;</ph> o seleccione <ph type="x-other" x="1">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo<ph x="3">&lt;/uicontrol&gt;</ph> <ph type="x-other" x="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Configuración<ph x="5">&lt;/uicontrol&gt;</ph> <ph x="6">&lt;/menucascade&gt;</ph> en el menú principal ( <ph type="x-other" x="7">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</ph> <ph type="x-other" x="8">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF Manager<ph x="9">&lt;/uicontrol&gt;</ph> <ph type="x-other" x="10">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Preferencias...<ph x="11">&lt;/uicontrol&gt;</ph> <ph x="12">&lt;/menucascade&gt;</ph>  en macOS).</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>The following dialog appears: </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Aparece el siguiente cuadro de diálogo: </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Settings Dialog</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Cuadro de diálogo Configuración</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the apropriate default source and target languages to use when creating XLIFF files.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-56" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If you wish to use a custom catalog for XML files, enter its location in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>System Catalog<ph x="1">&lt;/uicontrol&gt;</ph> text box or use the corresponding <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select it from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si desea utilizar un catálogo personalizado para archivos XML, introduzca su ubicación en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Catálogo del sistema<ph x="1">&lt;/uicontrol&gt;</ph> o utilice el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionarlo del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-57" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If you wish to change the folder where skeleton files are saved, enter the folder name in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Skeletons Folder<ph x="1">&lt;/uicontrol&gt;</ph> text box or use the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select the new location in the file system. </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si desea cambiar la carpeta donde se guardan los archivos esqueleto, introduzca el nombre de la carpeta en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Carpeta de esqueletos<ph x="1">&lt;/uicontrol&gt;</ph> o utilice el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar la nueva ubicación en el sistema de archivos. </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1567" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>To use a custom <ph type="x-link" x="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph x="1">&lt;/xref&gt;</ph> file when creating XLIFF files, enter its location in the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Default SRX File<ph x="3">&lt;/uicontrol&gt;</ph> text box or use the <ph type="x-other" x="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="5">&lt;/uicontrol&gt;</ph> button to select it from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Para utilizar un archivo <ph type="x-link" x="0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</ph>SRX<ph x="1">&lt;/xref&gt;</ph> personalizado al crear archivos XLIFF, introduzca su ubicación en el cuadro de texto <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo SRX predeterminado<ph x="3">&lt;/uicontrol&gt;</ph> o utilice el botón <ph type="x-other" x="4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="5">&lt;/uicontrol&gt;</ph> para seleccionarlo del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1568" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Application Language<ph x="1">&lt;/uicontrol&gt;</ph> drop-down to select the language used in XLIFF Manager graphical user interface.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice el menú desplegable <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Idioma de la aplicación<ph x="1">&lt;/uicontrol&gt;</ph> para seleccionar el idioma utilizado en la interfaz gráfica de usuario de XLIFF Manager.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1569" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Changes to the application language will take effect after you restart the program.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Los cambios en el idioma de la aplicación surtirán efecto después de reiniciar el programa.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1570" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Theme<ph x="1">&lt;/uicontrol&gt;</ph> drop-down to select the colors used in the graphical user interface. Available options are: </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice el menú desplegable <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Tema<ph x="1">&lt;/uicontrol&gt;</ph> para seleccionar los colores utilizados en la interfaz gráfica de usuario. Las opciones disponibles son: </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1571" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg><ph type="x-bold" x="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>System Default<ph x="1">&lt;/b&gt;</ph>: automatically selects Dark or Light colors according to the preferences set in the operating system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg><ph type="x-bold" x="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Predeterminado del sistema<ph x="1">&lt;/b&gt;</ph>: selecciona automáticamente los colores oscuros o claros según las preferencias establecidas en el sistema operativo.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1572" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg><ph type="x-bold" x="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Dark<ph x="1">&lt;/b&gt;</ph>: Uses dark background with white text.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg><ph type="x-bold" x="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Oscuro<ph x="1">&lt;/b&gt;</ph>: utiliza fondo oscuro con texto blanco.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1573" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg><ph type="x-bold" x="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Light<ph x="1">&lt;/b&gt;</ph>: Uses light grey background with dark text</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg><ph type="x-bold" x="0">&lt;b class="+ topic/ph hi-d/b "&gt;</ph>Claro<ph x="1">&lt;/b&gt;</ph>: utiliza fondo gris claro con texto oscuro</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1909503138-13-1574" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Save Settings<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Guardar Configuración<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Merge XLIFF File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Combinar Archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use the <ph type="x-italic" x="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Merge XLIFF<ph x="1">&lt;/i&gt;</ph> panel to convert an <ph type="x-link" x="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="3">&lt;/xref&gt;</ph> file to original format.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice el panel <ph type="x-italic" x="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>Combinar XLIFF<ph x="1">&lt;/i&gt;</ph> para convertir un archivo <ph type="x-link" x="2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="3">&lt;/xref&gt;</ph> al formato original.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created with other tools that use <ph type="x-italic" x="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>OpenXLIFF Filters<ph x="1">&lt;/i&gt;</ph>.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager solo puede combinar archivos XLIFF que generó o archivos XLIFF creados con otras herramientas que utilizan <ph type="x-italic" x="0">&lt;i class="+ topic/ph hi-d/i "&gt;</ph>OpenXLIFF Filters<ph x="1">&lt;/i&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Merge XLIFF File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Combinar Archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/merge.png" placement="inline" class="- topic/image "/&gt;</ph> Merge XLIFF<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/merge.png" placement="inline" class="- topic/image "/&gt;</ph> Combinar XLIFF<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to merge in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button next to it to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If you use the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="1">&lt;/uicontrol&gt;</ph> button to locate the XLIFF file, the program tries to automatically generate a suitable target file or folder.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si utiliza el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="1">&lt;/uicontrol&gt;</ph> para localizar el archivo XLIFF, el programa intenta generar automáticamente un archivo o carpeta de destino adecuado.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-56" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name of the translated file or folder for translated documents in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Target File/Folder<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button next to it to select a file or folder.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre del archivo o carpeta para los documentos traducidos en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo/carpeta de destino<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> junto a él para seleccionar un archivo o carpeta.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-57" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>If the XLIFF file contains multiple documents inside, a folder is required to place all translated files in it. This is usually the case when the XLIFF was created from a DITA Map.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Si el archivo XLIFF contiene varios documentos en su interior, se requiere una carpeta para guardar los documentos traducidos. Este suele ser el caso cuando el archivo XLIFF se creó a partir de un mapa DITA.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-1567" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Accept Unapproved Segments<ph x="1">&lt;/uicontrol&gt;</ph> checkbox if you want to consider all segments as translated, even when the <ph type="x-other" x="2">&lt;xmlatt class="+ topic/keyword markup-d/markupname xml-d/xmlatt "&gt;</ph>approved<ph x="3">&lt;/xmlatt&gt;</ph> attribute is not set to "yes".</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione la casilla de verificación <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Aceptar segmentos no aprobados<ph x="1">&lt;/uicontrol&gt;</ph> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<ph type="x-other" x="2">&lt;xmlatt class="+ topic/keyword markup-d/markupname xml-d/xmlatt "&gt;</ph>approved<ph x="3">&lt;/xmlatt&gt;</ph>" no esté establecido en "yes".</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-1568" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Export Approved Segments as TMX<ph x="1">&lt;/uicontrol&gt;</ph> checkbox if you want to generate a <ph type="x-link" x="2">&lt;xref href="../glossaries/TMX.dita" class="- topic/xref "&gt;</ph>TMX<ph x="3">&lt;/xref&gt;</ph> file from the XLIFF file. </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione la casilla de verificación <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Exportar segmentos aprobados como TMX<ph x="1">&lt;/uicontrol&gt;</ph> si desea generar un archivo <ph type="x-link" x="2">&lt;xref href="../glossaries/TMX.dita" class="- topic/xref "&gt;</ph>TMX<ph x="3">&lt;/xref&gt;</ph> a partir del archivo XLIFF. </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-1569" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Select the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Open Translated File/Folder After Merging<ph x="1">&lt;/uicontrol&gt;</ph> checkbox if you want to automatically open the translated document or folder after a successful merge operation.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Seleccione la casilla de verificación <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Abrir archivo/carpeta traducido después de combinar<ph x="1">&lt;/uicontrol&gt;</ph> si desea abrir automáticamente el documento o carpeta traducidos después de una operación de combinación correcta.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-1570" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Merge XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Combinar XLIFF<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1636505773-14-1571" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager merges the indicated file.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager combina el archivo indicado.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1605837935-15-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Pseudo-Translate Untranslated Segments</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Pseudo-traducir Segmentos no Traducidos</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1605837935-15-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Copy the content of <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph x="1">&lt;/codeph&gt;</ph> elements to new or existing empty <ph type="x-other" x="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph x="3">&lt;/codeph&gt;</ph> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Copie el contenido de los elementos <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;source&gt;<ph x="1">&lt;/codeph&gt;</ph> a los correspondientes elementos <ph type="x-other" x="2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph x="3">&lt;/codeph&gt;</ph> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1605837935-15-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use this method to generate a fake translation that you can use to test the <ph type="x-link" x="0">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Merge XLIFF File<ph x="1">&lt;/xref&gt;</ph> process. After making sure that Merge runs successfully, you can use the <ph type="x-link" x="2">&lt;xref href="removeTargets.dita" class="- topic/xref "&gt;</ph>Remove all Targets<ph x="3">&lt;/xref&gt;</ph> option to clean your XLIFF file.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph type="x-link" x="0">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</ph>Combinar XLIFF<ph x="1">&lt;/xref&gt;</ph>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph type="x-link" x="2">&lt;xref href="removeTargets.dita" class="- topic/xref "&gt;</ph>Eliminar Todas las Traducciones<ph x="3">&lt;/xref&gt;</ph> para limpiar el archivo XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1605837935-15-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph>Traducciones<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1605837935-15-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to process in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1605837935-15-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Pseudo-Translate<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Pseudo-Traducir<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2129657315-16-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Remove all Targets</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Eliminar Todas las Traducciones</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2129657315-16-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Use this feature to remove all <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph x="1">&lt;/codeph&gt;</ph> elements from your XLIFF file.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Utilice esta función para eliminar todos los elementos <ph type="x-other" x="0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</ph>&lt;target&gt;<ph x="1">&lt;/codeph&gt;</ph> del archivo XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2129657315-16-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Translation Tasks<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</ph> Traducciones<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2129657315-16-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to process in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="2129657315-16-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Remove all Targets<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Eliminar Todas las Traducciones<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Validate XLIFF</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Validar XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager can validate <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> 1.0, 1.1, 1.2 and 2.0.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager puede validar <ph type="x-link" x="0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</ph>XLIFF<ph x="1">&lt;/xref&gt;</ph> 1.0, 1.1, 1.2 y 2.0.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-51" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg> Validating XLIFF against XML grammars (DTD or XML Schemas) is not enough. XML Schema validation does not detect the use of duplicated 'id' attributes, wrong language codes and other constraints written in the different XLIFF specifications.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usand esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-52" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>In addition to validating all XLIFF 2.0 modules using XML Schema validation, extra validation is performed for XLIFF 2.0 Core and for Metadata, Matches and Glossary modules.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Además de validar todos los módulos XLIFF 2.0 mediante la validación de esquemas XML, se realiza una validación adicional para XLIFF 2.0 Core y para los módulos Metadata, Matches y Glossary.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-53" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Validate XLIFF File</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Validar Archivo XLIFF</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-54" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>On the left panel, click on the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/check.png" placement="inline" class="- topic/image "/&gt;</ph> Validate XLIFF<ph x="2">&lt;/uicontrol&gt;</ph> option.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>En el panel izquierdo, haga clic en la opción <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph><ph type="image" x="1">&lt;image href="../images/check.png" placement="inline" class="- topic/image "/&gt;</ph>Validar XLIFF<ph x="2">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-55" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Type the name and location of the XLIFF file to validate in the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>XLIFF File<ph x="1">&lt;/uicontrol&gt;</ph> text box or click the <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Browse...<ph x="3">&lt;/uicontrol&gt;</ph> button to select an XLIFF file from the file system.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Archivo XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> o haga clic en el botón <ph type="x-other" x="2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Examinar...<ph x="3">&lt;/uicontrol&gt;</ph> para seleccionar un archivo XLIFF del sistema de archivos.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-56" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Click the <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Validate XLIFF<ph x="1">&lt;/uicontrol&gt;</ph> button.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Haga clic en el botón <ph type="x-other" x="0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</ph>Validar XLIFF<ph x="1">&lt;/uicontrol&gt;</ph>.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="1872481107-17-57" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>XLIFF Manager validates the indicated file.</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>XLIFF Manager valida el archivo indicado.</seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1760831212-18-49" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg> <ph type="x-other" x="0">&lt;ph class="- topic/ph "&gt;</ph>XLIFF Manager User Guide<ph x="1">&lt;/ph&gt;</ph> <ph type="image" x="2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="80"/&gt;</ph> <ph x="3">&lt;/mainbooktitle&gt;</ph> <ph type="x-other" x="4">&lt;booktitlealt class="- topic/ph bookmap/booktitlealt "&gt;</ph> <ph type="x-other" x="5">&lt;ph class="- topic/ph "&gt;</ph>Copyright © 2018-2023 Maxprograms<ph x="6">&lt;/ph&gt;</ph> </seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg> <ph type="x-other" x="0">&lt;ph class="- topic/ph "&gt;</ph>Guía del Usuario de XLIFF Manager<ph x="1">&lt;/ph&gt;</ph> <ph type="image" x="2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="80"/&gt;</ph> <ph x="3">&lt;/mainbooktitle&gt;</ph> <ph type="x-other" x="4">&lt;booktitlealt class="- topic/ph bookmap/booktitlealt "&gt;</ph> <ph type="x-other" x="5">&lt;ph class="- topic/ph "&gt;</ph> Derechos de autor © 2018-2023 Maxprograms<ph x="6">&lt;/ph&gt;</ph> </seg>
+</tuv>
+</tu>
+<tu creationtool="OpenXLIFF Filters" creationtoolversion="3.3.0" tuid="-1760831212-18-50" creationdate="20230330T154308Z">
+<tuv xml:lang="en" creationdate="20230330T154308Z">
+<seg>Creating and Merging XLIFF Files</seg>
+</tuv>
+<tuv xml:lang="es" creationdate="20230330T154308Z">
+<seg>Crear y Combinar Archivos XLIFF</seg>
+</tuv>
+</tu>
+</body>
+</tmx>

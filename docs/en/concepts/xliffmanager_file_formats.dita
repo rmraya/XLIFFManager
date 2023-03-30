@@ -50,14 +50,15 @@
                         <li>PO (Portable Objects)</li>
                         <li>RC (Windows C/C++ Resources)</li>
                         <li>ResX (Windows .NET Resources)</li>
-                        <li>TS (Qt Linguist translation source)</li>
+                        <li>TS (Qt Linguist Translation Source)</li>
                     </ul>
                 </stentry>
             </strow>
         </simpletable>
         <p>The filter for XML files supports custom configuration. Users can define conversion rules
-            for almost any XML vocabulary. Instructions for configuring the XML filer are available 
-            in <xref format="html" scope="external" 
-                href="https://www.maxprograms.com/products/swordfish.html">Swordfish's</xref> documentation.</p>
+            for almost any XML vocabulary. Instructions for configuring the XML filter are available
+            in <xref format="html" scope="external"
+                href="https://www.maxprograms.com/products/swordfish.html">Swordfish's</xref>
+            documentation.</p>
     </conbody>
 </concept>

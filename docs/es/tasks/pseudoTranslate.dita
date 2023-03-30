@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task xml:lang="es" id="pseudoTranslate">
-  <title>Pseudo-traducir segmentos no traducidos</title>
-  <shortdesc>Copy the content of <codeph>&lt;source&gt;</codeph> elements to new or existing empty <codeph>&lt;target</codeph> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</shortdesc>
+  <title>Pseudo-traducir Segmentos no Traducidos</title>
+  <shortdesc>Copie el contenido de los elementos <codeph>&lt;source&gt;</codeph> a los correspondientes elementos <codeph>&lt;target&gt;</codeph> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</shortdesc>
   <taskbody>
     <context>
-      <p>Use this method to generate a fake translation that you can use to test the <xref href="merge_xliff.dita">Merge XLIFF File</xref> process. After making sure that Merge runs successfully, you can use the <xref href="removeTargets.dita">Remove all Targets</xref> option to clean your XLIFF file.</p>
+      <p>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <xref href="merge_xliff.dita">Combinar XLIFF</xref>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <xref href="removeTargets.dita">Eliminar Todas las Traducciones</xref> para limpiar el archivo XLIFF.</p>
     </context>
     <steps>
       <step>
-        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/> Traducciones</uicontrol>.</cmd>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/>Traducciones</uicontrol>.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE glossentry PUBLIC "-//OASIS//DTD DITA Glossary//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/glossary.dtd">
 <glossentry xml:lang="es" id="CAT">
-  <glossterm>Computer Aided Translation (CAT)</glossterm>
-  <glossdef>Computer technology application designed to assist human translators in the translation process.</glossdef>
+  <glossterm>Traducción asistida por ordenador (TAO)</glossterm>
+  <glossdef>Aplicación informática diseñada para ayudar a los traductores humanos en el proceso de traducción.</glossdef>
 </glossentry>

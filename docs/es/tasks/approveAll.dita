@@ -2,7 +2,7 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task xml:lang="es" id="approveAll">
   <title>Aprobar Todos los Segmentos</title>
-  <shortdesc>Set <codeph>approved="true"</codeph> in all <codeph>&lt;trans-unit&gt;</codeph> elements in an XLIFF 1.2 file or set <codeph>state="final"</codeph> in all <codeph>&lt;unit&gt;</codeph> elements of an XLIFF 2.0 document.</shortdesc>
+  <shortdesc>Asignar <codeph>approved="true"</codeph> en todos los elementos  <codeph>&lt;trans-unit&gt;</codeph> de un archivo XLIFF 1.2 o asignar <codeph>state="final"</codeph> en todos los elementos <codeph>&lt;unit&gt;</codeph> de un documento XLIFF 2.0.</shortdesc>
   <taskbody>
     <context>
       <p>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> cuando utilice la opción <xref href="merge_xliff.dita">Combinar XLIFF</xref>. </p>

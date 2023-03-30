@@ -1,0 +1,2973 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff srcLang="en" xmlns:mtc="urn:oasis:names:tc:xliff:matches:2.0" version="2.0" xmlns:mda="urn:oasis:names:tc:xliff:metadata:2.0" trgLang="es" xmlns="urn:oasis:names:tc:xliff:document:2.0">
+  <file original="concepts/translationTaks.dita" id="1">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0idHJhbnNsYXRpb25UYWtzIj4gPHRpdGxlIGNs
+YXNzPSItIHRvcGljL3RpdGxlICI+JSUlMSUlJQo8L3RpdGxlPiA8c2hvcnRkZXNjIGNsYXNzPSIt
+IHRvcGljL3Nob3J0ZGVzYyAiLz4gPGNvbmJvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSAgY29uY2Vw
+dC9jb25ib2R5ICI+IDxwIGNsYXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPHVsIGNsYXNz
+PSItIHRvcGljL3VsICI+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rh
+c2tzL2NvcHlTb3VyY2VzLmRpdGEiIGNsYXNzPSItIHRvcGljL3hyZWYgIj4lJSUzJSUlCjwveHJl
+Zj48L2xpPiA8bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj48eHJlZiBocmVmPSIuLi90YXNrcy9wc2V1
+ZG9UcmFuc2xhdGUuZGl0YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTQlJSUKPC94cmVmPjwv
+bGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rhc2tzL3JlbW92ZVRh
+cmdldHMuZGl0YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTUlJSUKPC94cmVmPjwvbGk+IDxs
+aSBjbGFzcz0iLSB0b3BpYy9saSAiPjx4cmVmIGhyZWY9Ii4uL3Rhc2tzL2FwcHJvdmVBbGwuZGl0
+YSIgY2xhc3M9Ii0gdG9waWMveHJlZiAiPiUlJTYlJSUKPC94cmVmPjwvbGk+IDwvdWw+IDxmaWcg
+Y2xhc3M9Ii0gdG9waWMvZmlnICI+IDxpbWFnZSBocmVmPSIuLi9pbWFnZXMvdHJhbnNsYXRpb25U
+YXNrcy5wbmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9
+IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU3JSUlCjwv
+YWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb25ib2R5PiA8L2NvbmNlcHQ+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3RyYW5zbGF0aW9uVGFza3MucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy90
+cmFuc2xhdGlvblRhc2tzLnBuZyJ9</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Translation Tasks</source>
+        <target xml:space="preserve">Traducciones</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Use the options in the <ph id="ph0"/>Translation Tasks<ph id="ph1"/> panel to:</source>
+        <target xml:space="preserve">Utilice las opciones del panel <ph id="ph0"/>Traducciones<ph id="ph1"/> para:</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve">Copy Source to all Untranslated Segments</source>
+        <target xml:space="preserve">Copiar origen a destino en todos los segmentos no traducidos</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <segment state="final" id="4">
+        <source xml:space="preserve">Pseudo-Translate Untranslated Segments</source>
+        <target xml:space="preserve">Pseudo-traducir segmentos no traducidos</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <segment state="final" id="5">
+        <source xml:space="preserve">Remove all Targets</source>
+        <target xml:space="preserve">Eliminar todas las traducciones</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <segment state="final" id="6">
+        <source xml:space="preserve">Approve all Segments</source>
+        <target xml:space="preserve">Aprobar todos los segmentos</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <segment state="final" id="7">
+        <source xml:space="preserve">Translation Tasks</source>
+        <target xml:space="preserve">Traducciones</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="concepts/xliffmanager_file_formats.dita" id="2">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0ieGxpZmZtYW5hZ2VyX2ZpbGVfZm9ybWF0cyI+
+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVz
+YyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIi8+IDxjb25ib2R5IGNsYXNzPSItIHRvcGljL2Jv
+ZHkgIGNvbmNlcHQvY29uYm9keSAiPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMiUlJQo8L3A+
+IDxzaW1wbGV0YWJsZSBjbGFzcz0iLSB0b3BpYy9zaW1wbGV0YWJsZSAiPiA8c3RoZWFkIGNsYXNz
+PSItIHRvcGljL3N0aGVhZCAiPiA8c3RlbnRyeSBjbGFzcz0iLSB0b3BpYy9zdGVudHJ5ICI+JSUl
+MyUlJQo8L3N0ZW50cnk+IDxzdGVudHJ5IGNsYXNzPSItIHRvcGljL3N0ZW50cnkgIj4lJSU0JSUl
+Cjwvc3RlbnRyeT4gPC9zdGhlYWQ+IDxzdHJvdyBjbGFzcz0iLSB0b3BpYy9zdHJvdyAiPiA8c3Rl
+bnRyeSBjbGFzcz0iLSB0b3BpYy9zdGVudHJ5ICI+IDx1bCBjbGFzcz0iLSB0b3BpYy91bCAiPiA8
+bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSU1JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9s
+aSAiPiUlJTYlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlNyUlJQo8L2xpPiA8
+bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSU4JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9s
+aSAiPiUlJTklJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTAlJSUKPC9saT4g
+PGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTElJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGlj
+L2xpICI+JSUlMTIlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTMlJSUKPC9s
+aT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTQlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRv
+cGljL2xpICI+JSUlMTUlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTYlJSUK
+PC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTclJSUKPC9saT4gPGxpIGNsYXNzPSIt
+IHRvcGljL2xpICI+JSUlMTglJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMTkl
+JSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMjAlJSUKPC9saT4gPGxpIGNsYXNz
+PSItIHRvcGljL2xpICI+JSUlMjElJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUl
+MjIlJSUKPHVsIGNsYXNzPSItIHRvcGljL3VsICI+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUl
+JTIzJSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUlJTI0JSUlCjwvbGk+IDxsaSBj
+bGFzcz0iLSB0b3BpYy9saSAiPiUlJTI1JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAi
+PiUlJTI2JSUlCjwvbGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUlJTI3JSUlCjwvbGk+IDwv
+dWw+IDwvbGk+IDwvdWw+IDwvc3RlbnRyeT4gPHN0ZW50cnkgY2xhc3M9Ii0gdG9waWMvc3RlbnRy
+eSAiPiA8dWwgY2xhc3M9Ii0gdG9waWMvdWwgIj4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUl
+MjglJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMjklJSUKPC9saT4gPGxpIGNs
+YXNzPSItIHRvcGljL2xpICI+JSUlMzAlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+
+JSUlMzElJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMzIlJSUKPC9saT4gPGxp
+IGNsYXNzPSItIHRvcGljL2xpICI+JSUlMzMlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xp
+ICI+JSUlMzQlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlMzUlJSUKPC9saT4g
+PC91bD4gPC9zdGVudHJ5PiA8L3N0cm93PiA8L3NpbXBsZXRhYmxlPiA8cCBjbGFzcz0iLSB0b3Bp
+Yy9wICI+JSUlMzYlJSUKPC9wPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Supported File Formats</source>
+        <target xml:space="preserve">Tipos de Archivo Compatibles</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">With XLIFF Manager you can create <ph id="ph0"/>XLIFF<ph id="ph1"/> files from the following document formats:</source>
+        <target xml:space="preserve">Con XLIFF Manager puede crear archivos <ph id="ph0"/>XLIFF<ph id="ph1"/> a partir de los siguientes tipos de documentos:</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve">General Documentation</source>
+        <target xml:space="preserve">Documentación General</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <segment state="final" id="4">
+        <source xml:space="preserve">Software Development</source>
+        <target xml:space="preserve">Desarrollo de Software</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <segment state="final" id="5">
+        <source xml:space="preserve">Adobe InCopy ICML</source>
+        <target xml:space="preserve">Adobe InCopy ICML</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <segment state="final" id="6">
+        <source xml:space="preserve">Adobe InDesign Interchange (INX)</source>
+        <target xml:space="preserve">Adobe InDesign Interchange (INX)</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <segment state="final" id="7">
+        <source xml:space="preserve">Adobe InDesign IDML CS4, CS5, CS6 &amp; CC</source>
+        <target xml:space="preserve">Adobe InDesign IDML CS4, CS5, CS6 y CC</target>
+      </segment>
+    </unit>
+    <unit id="8">
+      <segment state="final" id="8">
+        <source xml:space="preserve">HTML</source>
+        <target xml:space="preserve">HTML</target>
+      </segment>
+    </unit>
+    <unit id="9">
+      <segment state="final" id="9">
+        <source xml:space="preserve">Microsoft Office 2007/2008/2010/2011/2013/2016</source>
+        <target xml:space="preserve">Microsoft Office 2007/2008/2010/2011/2013/2016</target>
+      </segment>
+    </unit>
+    <unit id="10">
+      <segment state="final" id="10">
+        <source xml:space="preserve">Microsoft Visio XML Drawings 2007/2010/2013</source>
+        <target xml:space="preserve">Microsoft Visio XML Drawings 2007/2010/2013</target>
+      </segment>
+    </unit>
+    <unit id="11">
+      <segment state="final" id="11">
+        <source xml:space="preserve">MIF (Maker Interchange Format)</source>
+        <target xml:space="preserve">MIF (Maker Interchange Format)</target>
+      </segment>
+    </unit>
+    <unit id="12">
+      <segment state="final" id="12">
+        <source xml:space="preserve">OpenOffice/LibreOffice/StarOffice 1.x/2.x/3.x/4.x/5.x</source>
+        <target xml:space="preserve">OpenOffice/LibreOffice/StarOffice 1.x/2.x/3.x/4.x/5.x</target>
+      </segment>
+    </unit>
+    <unit id="13">
+      <segment state="final" id="13">
+        <source xml:space="preserve">Plain Text</source>
+        <target xml:space="preserve">Texto sin Formato</target>
+      </segment>
+    </unit>
+    <unit id="14">
+      <segment state="final" id="14">
+        <source xml:space="preserve">Trados Studio Packages</source>
+        <target xml:space="preserve">Paquetes de Trados Studio</target>
+      </segment>
+    </unit>
+    <unit id="15">
+      <segment state="final" id="15">
+        <source xml:space="preserve">SDLXLIFF (Trados Studio)</source>
+        <target xml:space="preserve">SDLXLIFF (Trados Studio)</target>
+      </segment>
+    </unit>
+    <unit id="16">
+      <segment state="final" id="16">
+        <source xml:space="preserve">SRT Subtitles</source>
+        <target xml:space="preserve">Subtítulos SRT</target>
+      </segment>
+    </unit>
+    <unit id="17">
+      <segment state="final" id="17">
+        <source xml:space="preserve">Wordfast/GlobalLink TXML (*.txml)</source>
+        <target xml:space="preserve">TXML de Wordfast/GlobalLink (*.txml)</target>
+      </segment>
+    </unit>
+    <unit id="18">
+      <segment state="final" id="18">
+        <source xml:space="preserve">Wordfast/GlobalLink XLIFF (*.txlf)</source>
+        <target xml:space="preserve">XLIFF de Wordfast/GlobalLink (*.txlf)</target>
+      </segment>
+    </unit>
+    <unit id="19">
+      <segment state="final" id="19">
+        <source xml:space="preserve">WPML XLIFF (WordPress Multilingual Plugin)</source>
+        <target xml:space="preserve">XLIFF de WPML (WordPress Multilingual Plugin)</target>
+      </segment>
+    </unit>
+    <unit id="20">
+      <segment state="final" id="20">
+        <source xml:space="preserve">XLIFF from Other Tools (*.mqxliff, *.xliff)</source>
+        <target xml:space="preserve">XLIFF de otras herramientas (*.mqxliff, *.xliff)</target>
+      </segment>
+    </unit>
+    <unit id="21">
+      <segment state="final" id="21">
+        <source xml:space="preserve">XML (Generic)</source>
+        <target xml:space="preserve">XML (Genérico)</target>
+      </segment>
+    </unit>
+    <unit id="22">
+      <segment state="final" id="22">
+        <source xml:space="preserve">XML with ready to use configuration files for: </source>
+        <target xml:space="preserve">XML con archivos de configuración listos para usar para: </target>
+      </segment>
+    </unit>
+    <unit id="23">
+      <segment state="final" id="23">
+        <source xml:space="preserve">DITA 1.0, 1.1, 1.2 and 1.3</source>
+        <target xml:space="preserve">DITA 1.0, 1.1, 1.2 y 1.3</target>
+      </segment>
+    </unit>
+    <unit id="24">
+      <segment state="final" id="24">
+        <source xml:space="preserve">DocBook 3.x, 4.x and 5.x</source>
+        <target xml:space="preserve">DocBook 3.x, 4.x y 5.x</target>
+      </segment>
+    </unit>
+    <unit id="25">
+      <segment state="final" id="25">
+        <source xml:space="preserve">SVG</source>
+        <target xml:space="preserve">SVG</target>
+      </segment>
+    </unit>
+    <unit id="26">
+      <segment state="final" id="26">
+        <source xml:space="preserve">Word 2003 ML</source>
+        <target xml:space="preserve">Word 2003 ML</target>
+      </segment>
+    </unit>
+    <unit id="27">
+      <segment state="final" id="27">
+        <source xml:space="preserve">XHTML</source>
+        <target xml:space="preserve">XHTML</target>
+      </segment>
+    </unit>
+    <unit id="28">
+      <segment state="final" id="28">
+        <source xml:space="preserve">JavaScript</source>
+        <target xml:space="preserve">JavaScript</target>
+      </segment>
+    </unit>
+    <unit id="29">
+      <segment state="final" id="29">
+        <source xml:space="preserve">Java Properties</source>
+        <target xml:space="preserve">Propiedades de Java</target>
+      </segment>
+    </unit>
+    <unit id="30">
+      <segment state="final" id="30">
+        <source xml:space="preserve">JSON</source>
+        <target xml:space="preserve">JSON</target>
+      </segment>
+    </unit>
+    <unit id="31">
+      <segment state="final" id="31">
+        <source xml:space="preserve">PHP Arrays</source>
+        <target xml:space="preserve">PHP Arrays</target>
+      </segment>
+    </unit>
+    <unit id="32">
+      <segment state="final" id="32">
+        <source xml:space="preserve">PO (Portable Objects)</source>
+        <target xml:space="preserve">PO (Portable Objects)</target>
+      </segment>
+    </unit>
+    <unit id="33">
+      <segment state="final" id="33">
+        <source xml:space="preserve">RC (Windows C/C++ Resources)</source>
+        <target xml:space="preserve">RC (Recursos de Windows C/C++)</target>
+      </segment>
+    </unit>
+    <unit id="34">
+      <segment state="final" id="34">
+        <source xml:space="preserve">ResX (Windows .NET Resources)</source>
+        <target xml:space="preserve">ResX (Recursos de Windows .NET)</target>
+      </segment>
+    </unit>
+    <unit id="35">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#35" matchQuality="100.0">
+          <source>TS (Qt Linguist translation source)</source>
+          <target>TS (Fuente de Traducción de Qt Linguist)</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#35" matchQuality="100.0">
+          <source>TS (Qt Linguist translation source)</source>
+          <target>TS (Fuente de Traducción de Qt Linguist)</target>
+        </mtc:match>
+      </mtc:matches>
+      <segment state="final" id="35">
+        <source xml:space="preserve">TS (Qt Linguist translation source)</source>
+        <target xml:space="preserve">TS (Fuente de Traducción de Qt Linguist)</target>
+      </segment>
+    </unit>
+    <unit id="36">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#36" matchQuality="97.0">
+          <source>The filter for XML files supports custom configuration. Users can define conversion rules for almost any XML vocabulary. Instructions for configuring the XML filer are available in <ph id="ph0"/>Swordfish's<ph id="ph1"/> documentation.</source>
+          <target>El filtro para archivos XML admite la configuración personalizada. Los usuarios pueden definir reglas de conversión para casi cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles en la documentación de <ph id="ph0"/>Swordfish<ph id="ph1"/>.</target>
+        </mtc:match>
+      </mtc:matches>
+      <mda:metadata id="36">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="https://www.maxprograms.com/products/swordfish.html" scope="external" class="- topic/xref " format="html"&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="36">
+        <source xml:space="preserve">The filter for XML files supports custom configuration. Users can define conversion rules for almost any XML vocabulary. Instructions for configuring the XML filter are available in <ph id="ph0"/>Swordfish's<ph id="ph1"/> documentation.</source>
+        <target xml:space="preserve">El filtro para archivos XML admite la configuración personalizada. Los usuarios pueden definir reglas de conversión para casi cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles en la documentación de <ph id="ph0"/>Swordfish<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="concepts/xliffmanager_introduction.dita" id="3">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0ieGxpZmZtYW5hZ2VyX2ludHJvZHVjdGlvbiI+
+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVz
+YyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIi8+IDxjb25ib2R5IGNsYXNzPSItIHRvcGljL2Jv
+ZHkgIGNvbmNlcHQvY29uYm9keSAiPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMiUlJQo8L3A+
+IDx1bCBjbGFzcz0iLSB0b3BpYy91bCAiIGlkPSJ1bF9sYmpfbW0xX2wzYiI+IDxsaSBjbGFzcz0i
+LSB0b3BpYy9saSAiPiUlJTMlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRvcGljL2xpICI+JSUlNCUl
+JQo8L2xpPiA8bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSU1JSUlCjwvbGk+IDxsaSBjbGFzcz0i
+LSB0b3BpYy9saSAiPiUlJTYlJSUKPC9saT4gPC91bD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcg
+Ij4gPGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9YbGlmZk1hbmFnZXIucG5nIiBwbGFjZW1lbnQ9ImJy
+ZWFrIiBzY2FsZWZpdD0ieWVzIiBjbGFzcz0iLSB0b3BpYy9pbWFnZSAiIGFsaWduPSJjZW50ZXIi
+PiA8YWx0IGNsYXNzPSItIHRvcGljL2FsdCAiPiUlJTclJSUKPC9hbHQ+IDwvaW1hZ2U+IDwvZmln
+PiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL1hsaWZmTWFuYWdlci5wbmciLCJocmVmIjoiLi4vaW1hZ2VzL1hsaWZm
+TWFuYWdlci5wbmcifQ==</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Introduction</source>
+        <target xml:space="preserve">Introducción</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="https://github.com/rmraya/OpenXLIFF" scope="external" class="- topic/xref " format="html"&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">XLIFF Manager provides an open source UI for <ph id="ph0"/>OpenXLIFF Filters<ph id="ph1"/>, a set of programs that let you:</source>
+        <target xml:space="preserve">XLIFF Manager proporciona una interfaz de usuario de código abierto para <ph id="ph0"/>OpenXLIFF Filters<ph id="ph1"/>, un conjunto de programas que le permiten:</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+        <data id="ph2">&lt;xref href="../glossaries/CAT.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">Create <ph id="ph0"/>XLIFF<ph id="ph1"/> 1.2 and 2.0 files that can be translated in any modern <ph id="ph2"/>CAT<ph id="ph3"/> tool.</source>
+        <target xml:space="preserve">Cree archivos <ph id="ph0"/>XLIFF<ph id="ph1"/> 1.2 y 2.0 que se pueden traducir en cualquier herramienta <ph id="ph2"/>TAO<ph id="ph3"/> moderna.</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <segment state="final" id="4">
+        <source xml:space="preserve">Convert your translated XLIFF files to original format with a couple of clicks.</source>
+        <target xml:space="preserve">Convertir sus archivos XLIFF traducidos al formato original con un par de clics.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <segment state="final" id="5">
+        <source xml:space="preserve">Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.</source>
+        <target xml:space="preserve">Validar archivos XLIFF creados por cualquier herramienta. La validación es compatible con XLIFF 1.0, 1.1, 1.2 y 2.0.</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <segment state="final" id="6">
+        <source xml:space="preserve">Produce an HTML file with word counts and segment status statistics from an XLIFF document.</source>
+        <target xml:space="preserve">Generar un archivo HTML con conteos de palabras y estadísticas de estado de segmentos a partir de un documento XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <segment state="final" id="7">
+        <source xml:space="preserve">XLIFF Manager GUI</source>
+        <target xml:space="preserve">XLIFF Manager GUI</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="concepts/xliffmanager_platforms.dita" id="4">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGNvbmNlcHQg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQ29uY2VwdC8vRU4iICJjb25jZXB0LmR0ZCI+Cjxj
+b25jZXB0IGRvbWFpbnM9Iih0b3BpYyBjb25jZXB0KSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyBjb25jZXB0L2NvbmNlcHQgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Bl
+bi5vcmcvYXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0ieGxpZmZtYW5hZ2VyX3BsYXRmb3JtcyI+IDx0
+aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVzYyBj
+bGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIi8+IDxjb25ib2R5IGNsYXNzPSItIHRvcGljL2JvZHkg
+IGNvbmNlcHQvY29uYm9keSAiPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMiUlJQo8L3A+IDx1
+bCBjbGFzcz0iLSB0b3BpYy91bCAiPiA8bGkgY2xhc3M9Ii0gdG9waWMvbGkgIj4lJSUzJSUlCjwv
+bGk+IDxsaSBjbGFzcz0iLSB0b3BpYy9saSAiPiUlJTQlJSUKPC9saT4gPGxpIGNsYXNzPSItIHRv
+cGljL2xpICI+JSUlNSUlJQo8L2xpPiA8L3VsPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Supported Platforms</source>
+        <target xml:space="preserve">Plataformas Compatibles</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <segment state="final" id="2">
+        <source xml:space="preserve">XLIFF Manager works on these platforms:</source>
+        <target xml:space="preserve">XLIFF Manager funciona en estas plataformas:</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve">Microsoft Windows (8, 8.1, 10 and 11)</source>
+        <target xml:space="preserve">Microsoft Windows (8, 8.1, 10 y 11)</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <segment state="final" id="4">
+        <source xml:space="preserve">macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11.0), Monterey (12.0) and Ventura (13.0)</source>
+        <target xml:space="preserve">macOS High Sierra (10.13), Mojave (10.14), Catalina (10.15), Big Sur (11.0), Monterey (12.0) y Ventura (13.0)</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <segment state="final" id="5">
+        <source xml:space="preserve">Linux (with GNOME Desktop Manager)</source>
+        <target xml:space="preserve">Linux (con GNOME Desktop Manager)</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="glossaries/CAT.dita" id="5">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJDQVQiPiA8Z2xvc3N0
+ZXJtIGNsYXNzPSItIHRvcGljL3RpdGxlIGNvbmNlcHQvdGl0bGUgZ2xvc3NlbnRyeS9nbG9zc3Rl
+cm0gIj4lJSUxJSUlCjwvZ2xvc3N0ZXJtPiA8Z2xvc3NkZWYgY2xhc3M9Ii0gdG9waWMvYWJzdHJh
+Y3QgY29uY2VwdC9hYnN0cmFjdCBnbG9zc2VudHJ5L2dsb3NzZGVmICI+JSUlMiUlJQo8L2dsb3Nz
+ZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">utf-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Computer Assisted Translation (CAT)</source>
+        <target xml:space="preserve">Traducción asistida por ordenador (TAO)</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <segment state="final" id="2">
+        <source xml:space="preserve">Computer technology application designed to assist human translators in the translation process.</source>
+        <target xml:space="preserve">Aplicación informática diseñada para ayudar a los traductores humanos en el proceso de traducción.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="glossaries/SRX.dita" id="6">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJTUlgiPiA8Z2xvc3N0
+ZXJtIGNsYXNzPSItIHRvcGljL3RpdGxlIGNvbmNlcHQvdGl0bGUgZ2xvc3NlbnRyeS9nbG9zc3Rl
+cm0gIj4lJSUxJSUlCjwvZ2xvc3N0ZXJtPiA8Z2xvc3NkZWYgY2xhc3M9Ii0gdG9waWMvYWJzdHJh
+Y3QgY29uY2VwdC9hYnN0cmFjdCBnbG9zc2VudHJ5L2dsb3NzZGVmICI+IDxwIGNsYXNzPSItIHRv
+cGljL3AgIj4lJSUyJSUlCjwvcD4gPHAgY2xhc3M9Ii0gdG9waWMvcCAiPiUlJTMlJSUKPC9wPiA8
+L2dsb3NzZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">utf-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">SRX</source>
+        <target xml:space="preserve">SRX</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="https://www.gala-global.org/" scope="external" class="- topic/xref " format="html"&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Segmentation Rules eXchange (SRX) is an XML-based standard that was maintained by Localization Industry Standards Association, until it became insolvent in 2011, and then by the <ph id="ph0"/>Globalization and Localization Association<ph id="ph1"/> (GALA).</source>
+        <target xml:space="preserve">Segmentation Rules eXchange (SRX) es un estándar basado en XML que fue mantenido por la Localization Industry Standards Association, hasta que se declaró insolvente en 2011, y luego por  <ph id="ph0"/>Globalization and Localization Association<ph id="ph1"/> (GALA).</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="TMX.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">SRX provides a common way to describe how to segment text for translation and other language-related processes. It was created when it was realized that TMX was less useful than expected in certain instances due to differences in how tools segment text. SRX is intended to enhance the <ph id="ph0"/>TMX <ph id="ph1"/> standard so that translation memory (TM) data that is exchanged between applications can be used more effectively. Having the segmentation rules available that were used when a TM was created increases the usefulness of the TM data.</source>
+        <target xml:space="preserve">SRX proporciona una forma estandar de describir cómo segmentar texto para traducción y otros procesos relacionados con el lenguaje. Se creó cuando se hizo evidente que TMX era menos útil de lo esperado en ciertos casos debido a las diferencias en la forma en que las herramientas segmentan el texto. SRX está diseñado para mejorar el estándar <ph id="ph0"/>TMX<ph id="ph1"/> para que los datos de la memoria de traducción (TM) que se intercambian entre aplicaciones se puedan utilizar de manera más efectiva. Tener disponibles las reglas de segmentación que se usaron cuando se creó una TM aumenta la utilidad de los datos de TM.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="glossaries/TMX.dita" id="7">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJUTVgiPiA8Z2xvc3N0
+ZXJtIGNsYXNzPSItIHRvcGljL3RpdGxlIGNvbmNlcHQvdGl0bGUgZ2xvc3NlbnRyeS9nbG9zc3Rl
+cm0gIj4lJSUxJSUlCjwvZ2xvc3N0ZXJtPiA8Z2xvc3NkZWYgY2xhc3M9Ii0gdG9waWMvYWJzdHJh
+Y3QgY29uY2VwdC9hYnN0cmFjdCBnbG9zc2VudHJ5L2dsb3NzZGVmICI+JSUlMiUlJQo8L2dsb3Nz
+ZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">utf-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">TMX</source>
+        <target xml:space="preserve">TMX</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <segment state="final" id="2">
+        <source xml:space="preserve">Translation Memory eXchange (TMX) is an open standard originally published by LISA (Localization Industry Standards Association). The purpose of TMX is to allow easier exchange of translation memory data between tools and/or translation vendors with little or no loss of critical data during the process.</source>
+        <target xml:space="preserve">Translation Memory eXchange (TMX) es un estándar abierto publicado originalmente por LISA (Localization Industry Standards Association). El propósito de TMX es permitir un intercambio más fácil de datos de memorias de traducción entre herramientas y/o proveedores de traducción con poca o ninguna pérdida de datos críticos durante el proceso.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="glossaries/XLIFF.dita" id="8">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJYTElGRiI+IDxnbG9z
+c3Rlcm0gY2xhc3M9Ii0gdG9waWMvdGl0bGUgY29uY2VwdC90aXRsZSBnbG9zc2VudHJ5L2dsb3Nz
+dGVybSAiPiUlJTElJSUKPC9nbG9zc3Rlcm0+IDxnbG9zc2RlZiBjbGFzcz0iLSB0b3BpYy9hYnN0
+cmFjdCBjb25jZXB0L2Fic3RyYWN0IGdsb3NzZW50cnkvZ2xvc3NkZWYgIj4lJSUyJSUlCjwvZ2xv
+c3NkZWY+IDwvZ2xvc3NlbnRyeT4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">utf-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">XLIFF</source>
+        <target xml:space="preserve">XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="http://www.oasis-open.org/" scope="external" class="- topic/xref " format="html"&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">XLIFF (XML Localization Interchange File Format) is an open standard developed by <ph id="ph0"/>OASIS<ph id="ph1"/> (Organization for the Advancement of Structured Information Standards). The purpose of this vocabulary is to store localizable data and carry it from one step of the localization process to the other, while allowing interoperability between tools.</source>
+        <target xml:space="preserve">XLIFF (XML Localization Interchange File Format) es un estándar abierto desarrollado por <ph id="ph0"/>OASIS<ph id="ph1"/> (Organization for the Advancement of Structured Information Standards). El propósito de este vocabulario es almacenar datos localizables y llevarlos de un paso del proceso de localización a otro, al tiempo que permite la interoperabilidad entre herramientas.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="glossaries/character_set.dita" id="9">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCFET0NUWVBFIGdsb3NzZW50
+cnkgUFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgR2xvc3NhcnkvL0VOIiAiaHR0cDovL2RvY3Mu
+b2FzaXMtb3Blbi5vcmcvZGl0YS92MS4xL09TL2R0ZC9nbG9zc2FyeS5kdGQiPgo8Z2xvc3NlbnRy
+eSBkb21haW5zPSIodG9waWMgY29uY2VwdCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIGNvbmNlcHQgZ2xvc3NlbnRyeSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgYShwcm9w
+cyBkZWxpdmVyeVRhcmdldCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGVxdWF0
+aW9uLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBoYXphcmQtZCkgICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhpLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBpbmRleGluZy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+YWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCkgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hdGhtbC1kKSAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICAodG9waWMgcHItZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGlj
+IHJlbG1nbXQtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN3LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBzdmctZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIHVpLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyB1dC1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWFya3VwLWQgeG1sLWQpICAgIiBk
+aXRhYXJjaDpESVRBQXJjaFZlcnNpb249IjEuMyIgY2xhc3M9Ii0gdG9waWMvdG9waWMgY29uY2Vw
+dC9jb25jZXB0IGdsb3NzZW50cnkvZ2xvc3NlbnRyeSAiIHhtbG5zOmRpdGFhcmNoPSJodHRwOi8v
+ZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iIGlkPSJjaGFyYWN0ZXJfc2V0
+Ij4gPGdsb3NzdGVybSBjbGFzcz0iLSB0b3BpYy90aXRsZSBjb25jZXB0L3RpdGxlIGdsb3NzZW50
+cnkvZ2xvc3N0ZXJtICI+JSUlMSUlJQo8L2dsb3NzdGVybT4gPGdsb3NzZGVmIGNsYXNzPSItIHRv
+cGljL2Fic3RyYWN0IGNvbmNlcHQvYWJzdHJhY3QgZ2xvc3NlbnRyeS9nbG9zc2RlZiAiPiUlJTIl
+JSUKPC9nbG9zc2RlZj4gPC9nbG9zc2VudHJ5Pg==</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">utf-8</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Character Set</source>
+        <target xml:space="preserve">Juego de Caracteres</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <segment state="final" id="2">
+        <source xml:space="preserve">A character set (sometimes referred to as code page) is a collection of characters that are associated with a sequence of natural numbers in order to facilitate the storage of text in computers and the transmission of text through telecommunication networks.</source>
+        <target xml:space="preserve">Un juego de caracteres (a veces denominado página de códigos) es una colección de caracteres que están asociados con una secuencia de números naturales para facilitar el almacenamiento de texto en computadoras y la transmisión de texto a través de redes de telecomunicaciones.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/analysis_xliff.dita" id="10">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgR2VuZXJhbCBUYXNrLy9FTiIgImdlbmVyYWxUYXNrLmR0
+ZCI+Cjx0YXNrIGRvbWFpbnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyB0YXNrL3Rhc2sgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcv
+YXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0iYW5hbHlzaXNfeGxpZmYiPiA8dGl0bGUgY2xhc3M9Ii0g
+dG9waWMvdGl0bGUgIj4lJSUxJSUlCjwvdGl0bGU+IDxzaG9ydGRlc2MgY2xhc3M9Ii0gdG9waWMv
+c2hvcnRkZXNjICIvPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
+ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
+YXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcgIj4g
+PGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9hbmFseXplWGxpZmYucG5nIiBwbGFjZW1lbnQ9ImJyZWFr
+IiBjbGFzcz0iLSB0b3BpYy9pbWFnZSAiIHNjYWxlPSI4MCIgYWxpZ249ImNlbnRlciI+IDxhbHQg
+Y2xhc3M9Ii0gdG9waWMvYWx0ICI+JSUlMyUlJQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwvY29u
+dGV4dD4gPHN0ZXBzIGNsYXNzPSItIHRvcGljL29sIHRhc2svc3RlcHMgIj4gPHN0ZXAgY2xhc3M9
+Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
+Ij4lJSU0JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
+cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNSUlJQo8L2NtZD4gPC9z
+dGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0
+b3BpYy9waCB0YXNrL2NtZCAiPiUlJTYlJSUKPC9jbWQ+IDxzdGVwcmVzdWx0IGNsYXNzPSItIHRv
+cGljL2l0ZW1ncm91cCB0YXNrL3N0ZXByZXN1bHQgIj4lJSU3JSUlCjwvc3RlcHJlc3VsdD4gPC9z
+dGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL2FuYWx5emVYbGlmZi5wbmciLCJocmVmIjoiLi4vaW1hZ2VzL2FuYWx5
+emVYbGlmZi5wbmcifQ==</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3N0YXRzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvc3RhdHMucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Generate Word Counts and Segment Statistics</source>
+        <target xml:space="preserve">Generar Conteos de Palabras y Estadísticas de Segmentos</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">XLIFF Manager lets you produce an HTML file with word counts and segment status statistics from an <ph id="ph0"/>XLIFF<ph id="ph1"/> document.</source>
+        <target xml:space="preserve">XLIFF Manager le permite generar un archivo HTML con conteos de palabras y estadísticas de estado de segmentos a partir de un documento <ph id="ph0"/>XLIFF<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve">Translation Status Analysis</source>
+        <target xml:space="preserve">Estado de la Traducción</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/stats.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Analyse XLIFF<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/>Analizar XLIFF<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to analyse in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <mda:metadata id="6">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="6">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Analyse XLIFF<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Analizar XLIFF<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <mda:metadata id="7">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph1">&lt;/codeph&gt;</data>
+      </originalData>
+      <segment state="final" id="7">
+        <source xml:space="preserve">XLIFF Manager generates an HTML report in the folder where the XLIFF file is located and its name is the name of the XLIFF plus <ph id="ph0"/>.log.html<ph id="ph1"/>.</source>
+        <target xml:space="preserve">XLIFF Manager genera un informe HTML en la carpeta donde se encuentra el archivo XLIFF y su nombre es el nombre del XLIFF mas <ph id="ph0"/>.log.html<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/approveAll.dita" id="11">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0iYXBwcm92ZUFsbCI+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUlJTEl
+JSUKPC90aXRsZT4gPHNob3J0ZGVzYyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIj4lJSUyJSUl
+Cjwvc2hvcnRkZXNjPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
+ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
+YXNzPSItIHRvcGljL3AgIj4lJSUzJSUlCjwvcD4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0g
+dG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAg
+Ij4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwvc3Rl
+cD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9w
+aWMvcGggdGFzay9jbWQgIj4lJSU1JSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRv
+cGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUl
+NiUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Approve all Segments</source>
+        <target xml:space="preserve">Aprobar Todos los Segmentos</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph4">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph6">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph1">&lt;/codeph&gt;</data>
+        <data id="ph2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph3">&lt;/codeph&gt;</data>
+        <data id="ph4">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph5">&lt;/codeph&gt;</data>
+        <data id="ph6">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph7">&lt;/codeph&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Set <ph id="ph0"/>approved="true"<ph id="ph1"/> in all <ph id="ph2"/>&lt;trans-unit&gt;<ph id="ph3"/> elements in an XLIFF 1.2 file or set <ph id="ph4"/>state="final"<ph id="ph5"/> in all <ph id="ph6"/>&lt;unit&gt;<ph id="ph7"/> elements of an XLIFF 2.0 document.</source>
+        <target xml:space="preserve">Asignar <ph id="ph0"/>approved="true"<ph id="ph1"/> en todos los elementos  <ph id="ph2"/>&lt;trans-unit&gt;<ph id="ph3"/> de un archivo XLIFF 1.2 o asignar <ph id="ph4"/>state="final"<ph id="ph5"/> en todos los elementos <ph id="ph6"/>&lt;unit&gt;<ph id="ph7"/> de un documento XLIFF 2.0.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">Some translation tools do not offer a way to confirm segments at translation time. Use this feature to confirm all segments, so you can select the <ph id="ph0"/>Export Approved Segments as TMX<ph id="ph1"/> option when using the <ph id="ph2"/>Merge XLIFF File<ph id="ph3"/> option. </source>
+        <target xml:space="preserve">Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <ph id="ph0"/>Exportar segmentos aprobados como TMX<ph id="ph1"/> cuando utilice la opción <ph id="ph2"/>Combinar XLIFF<ph id="ph3"/>. </target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Translation Tasks<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Traducciones<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to process in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <mda:metadata id="6">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="6">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Approve all Segments<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Aprobar Todos los Segmentos<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/copySources.dita" id="12">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0iY29weVNvdXJjZXMiPiA8dGl0bGUgY2xhc3M9Ii0gdG9waWMvdGl0bGUgIj4lJSUx
+JSUlCjwvdGl0bGU+IDxzaG9ydGRlc2MgY2xhc3M9Ii0gdG9waWMvc2hvcnRkZXNjICI+JSUlMiUl
+JQo8L3Nob3J0ZGVzYz4gPHRhc2tib2R5IGNsYXNzPSItIHRvcGljL2JvZHkgdGFzay90YXNrYm9k
+eSAiPiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTMlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
+ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU0JSUlCjwvY21kPiA8L3N0
+ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRv
+cGljL3BoIHRhc2svY21kICI+JSUlNSUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2ti
+b2R5PiA8L3Rhc2s+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Copy Source to all Untranslated Segments</source>
+        <target xml:space="preserve">Copiar origen a destino en todos los segmentos no traducidos</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph1">&lt;/codeph&gt;</data>
+        <data id="ph2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph3">&lt;/codeph&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Copy the content of <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> elements to new or existing empty <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> elements in an XLIFF file.</source>
+        <target xml:space="preserve">Copiar el contenido de los elementos <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> a los elementos <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Translation Tasks<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Traducciones<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to process in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Copy Source to Target<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Copiar origen a Destino<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/create_xliff.dita" id="13">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0iY3JlYXRlX3hsaWZmIj4gPHRpdGxlIGNsYXNzPSItIHRvcGljL3RpdGxlICI+JSUl
+MSUlJQo8L3RpdGxlPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5
+ICI+IDxjb250ZXh0IGNsYXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNs
+YXNzPSItIHRvcGljL3AgIj4lJSUyJSUlCjwvcD4gPGZpZyBjbGFzcz0iLSB0b3BpYy9maWcgIiBp
+ZD0iZmlnX3E0NF8ycDFfbDNiIj4gPGltYWdlIGhyZWY9Ii4uL2ltYWdlcy9jcmVhdGVYbGlmZi5w
+bmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9IjgwIiBh
+bGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSUzJSUlCjwvYWx0PiA8
+L2ltYWdlPiA8L2ZpZz4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9z
+dGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0i
+LSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9
+Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
+Ij4lJSU1JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZv
+ICI+IDxub3RlIHR5cGU9InRpcCIgY2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTYlJSUKPC9ub3Rl
+PiA8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxj
+bWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0ZXA+IDxz
+dGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3Bo
+IHRhc2svY21kICI+JSUlOCUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9s
+aSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTklJSUK
+PC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQg
+Y2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVwPiA8c3Rl
+cCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0
+YXNrL2NtZCAiPiUlJTExJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xp
+IHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTIlJSUK
+PC9jbWQ+IDxpbmZvIGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4gPG5vdGUg
+dHlwZT0idGlwIiBjbGFzcz0iLSB0b3BpYy9ub3RlICI+JSUlMTMlJSUKPC9ub3RlPiA8L2luZm8+
+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
+Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxNCUlJQo8L2NtZD4gPGluZm8gY2xhc3M9Ii0gdG9w
+aWMvaXRlbWdyb3VwIHRhc2svaW5mbyAiPiA8bm90ZSB0eXBlPSJub3RpY2UiIGNsYXNzPSItIHRv
+cGljL25vdGUgIj4lJSUxNSUlJQo8L25vdGU+IDwvaW5mbz4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTE2JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZv
+ICI+PG5vdGUgdHlwZT0ibm90aWNlIiBjbGFzcz0iLSB0b3BpYy9ub3RlICI+JSUlMTclJSUKPC9u
+b3RlPjwvaW5mbz4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4g
+PGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTE4JSUlCjwvY21kPiA8aW5mbyBj
+bGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+IDxub3RlIHR5cGU9Im5vdGljZSIg
+Y2xhc3M9Ii0gdG9waWMvbm90ZSAiPiUlJTE5JSUlCjwvbm90ZT4gPC9pbmZvPiA8L3N0ZXA+IDxz
+dGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3Bo
+IHRhc2svY21kICI+JSUlMjAlJSUKPC9jbWQ+IDwvc3RlcD4gPC9zdGVwcz4gPHJlc3VsdCBjbGFz
+cz0iLSB0b3BpYy9zZWN0aW9uIHRhc2svcmVzdWx0ICI+JSUlMjElJSUKPC9yZXN1bHQ+IDwvdGFz
+a2JvZHk+IDwvdGFzaz4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL2NyZWF0ZVhsaWZmLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvY3JlYXRl
+WGxpZmYucG5nIn0=</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Create XLIFF File</source>
+        <target xml:space="preserve">Crear Archivo XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-italic</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;i class="+ topic/ph hi-d/i "&gt;</data>
+        <data id="ph1">&lt;/i&gt;</data>
+        <data id="ph2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Use the <ph id="ph0"/>Create XLIFF<ph id="ph1"/> panel to generate an <ph id="ph2"/>XLIFF<ph id="ph3"/> file from a selected document.</source>
+        <target xml:space="preserve">Utilice el panel <ph id="ph0"/>Crear XLIFF<ph id="ph1"/> para generar un archivo <ph id="ph2"/>XLIFF<ph id="ph3"/> a partir de un documento seleccionado.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve">Create XLIFF File</source>
+        <target xml:space="preserve">Crear Archivo XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/plus.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve">On the left panel, click the <ph id="ph0"/><ph id="ph1"/> Create XLIFF<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Crear XLIFF<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">Type the name and location of the document to convert to XLIFF in the <ph id="ph0"/>Source File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a document from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph id="ph0"/>Archivo de origen<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un documento del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <mda:metadata id="6">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="6">
+        <source xml:space="preserve">If you use the <ph id="ph0"/>Browse...<ph id="ph1"/> button to select a file, the program tries to automatically guess its file type and character set.</source>
+        <target xml:space="preserve">Si utiliza el botón <ph id="ph0"/>Examinar...<ph id="ph1"/> para seleccionar un archivo, el programa intenta adivinar automáticamente su tipo de archivo y juego de caracteres.</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <mda:metadata id="7">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="7">
+        <source xml:space="preserve">Select the language of the document to convert using the <ph id="ph0"/>Source Language<ph id="ph1"/> drop-down list.</source>
+        <target xml:space="preserve">Seleccione el idioma del documento que desea convertir mediante la lista desplegable <ph id="ph0"/>Idioma de origen<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="8">
+      <mda:metadata id="8">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="8">
+        <source xml:space="preserve">Optionally, select the language of the translated document using the <ph id="ph0"/>Target Language<ph id="ph1"/> drop-down list.</source>
+        <target xml:space="preserve">Opcionalmente, seleccione el idioma del documento traducido mediante la lista desplegable <ph id="ph0"/>Idioma de destino<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="9">
+      <mda:metadata id="9">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="9">
+        <source xml:space="preserve">Select or adjust the type of source document using the <ph id="ph0"/>File Type<ph id="ph1"/> drop-down list.</source>
+        <target xml:space="preserve">Seleccione o ajuste el tipo de documento de origen mediante la lista desplegable <ph id="ph0"/>Tipo de archivo<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="10">
+      <mda:metadata id="10">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/character_set.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="10">
+        <source xml:space="preserve">Select or adjust the <ph id="ph0"/>character set<ph id="ph1"/> of the source document using the <ph id="ph2"/>Character Set<ph id="ph3"/> drop-down list.</source>
+        <target xml:space="preserve">Seleccione o ajuste el <ph id="ph0"/>juego de caracteres<ph id="ph1"/> del documento de origen mediante la lista desplegable <ph id="ph2"/>Juego de caracteres<ph id="ph3"/>.</target>
+      </segment>
+    </unit>
+    <unit id="11">
+      <mda:metadata id="11">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="11">
+        <source xml:space="preserve">If you are converting a DITA map and need to use a .ditaval file for conditional filtering, enter its path in the <ph id="ph0"/>DITAVAL File<ph id="ph1"/> text box or use the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a file from the file system.</source>
+        <target xml:space="preserve">Si está convirtiendo un mapa DITA y necesita utilizar un archivo .ditaval para el filtrado condicional, introduzca su ruta en el cuadro de texto <ph id="ph0"/>Archivo DITAVAL<ph id="ph1"/> o utilice el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un archivo del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="12">
+      <mda:metadata id="12">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="12">
+        <source xml:space="preserve">If you are converting a JSON document and need to use a custom configuration file, enter its name and location in the <ph id="ph0"/>JSON Configuration<ph id="ph1"/> text box or use the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a file from the file system.</source>
+        <target xml:space="preserve">Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <ph id="ph0"/>Configuración de JSON<ph id="ph1"/> o use el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un archivo del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="13">
+      <mda:metadata id="13">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" class="- topic/xref " format="html"&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="13">
+        <source xml:space="preserve">Information on configuration files for the JSON filter is available at <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph id="ph1"/></source>
+        <target xml:space="preserve">La información sobre los archivos de configuración para el filtro JSON está disponible en <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme<ph id="ph1"/></target>
+      </segment>
+    </unit>
+    <unit id="14">
+      <mda:metadata id="14">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="14">
+        <source xml:space="preserve">Select the <ph id="ph0"/>Generate XLIFF 2.0<ph id="ph1"/> check box if you want to generate XLIFF 2.0.</source>
+        <target xml:space="preserve">Active la casilla <ph id="ph0"/>Generar XLIFF 2.0<ph id="ph1"/> si desea generar XLIFF 2.0.</target>
+      </segment>
+    </unit>
+    <unit id="15">
+      <segment state="final" id="15">
+        <source xml:space="preserve">The program generates XLIFF 1.2 by default.</source>
+        <target xml:space="preserve">El programa genera XLIFF 1.2 de forma predeterminada.</target>
+      </segment>
+    </unit>
+    <unit id="16">
+      <mda:metadata id="16">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="16">
+        <source xml:space="preserve">Select the <ph id="ph0"/>Paragraph Segmentation<ph id="ph1"/> check box if you want source text to be segmented at paragraph level. </source>
+        <target xml:space="preserve">Active la casilla <ph id="ph0"/>Segmentar por párrafos<ph id="ph1"/> si desea que el texto de origen se segmente en el nivel de párrafo. </target>
+      </segment>
+    </unit>
+    <unit id="17">
+      <mda:metadata id="17">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+        <data id="ph2">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="17">
+        <source xml:space="preserve">The program uses sentence-level segmentation by default. You can select the default <ph id="ph0"/>SRX<ph id="ph1"/> file used for segmentation in the <ph id="ph2"/>Settings<ph id="ph3"/> dialog.</source>
+        <target xml:space="preserve">El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <ph id="ph0"/>SRX<ph id="ph1"/> predeterminado utilizado para la segmentación en el cuadro de diálogo <ph id="ph2"/>Configuración<ph id="ph3"/>.</target>
+      </segment>
+    </unit>
+    <unit id="18">
+      <mda:metadata id="18">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="18">
+        <source xml:space="preserve">Select the <ph id="ph0"/>Embed Skeleton<ph id="ph1"/> option if you want the skeleton file to be inserted in the generated XLIFF.</source>
+        <target xml:space="preserve">Seleccione la opción <ph id="ph0"/>Incrustar esqueleto<ph id="ph1"/> si desea que el archivo esqueleto se inserte en el XLIFF generado.</target>
+      </segment>
+    </unit>
+    <unit id="19">
+      <mda:metadata id="19">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="default_settings.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="19">
+        <source xml:space="preserve">The program generates a separated skeleton file in the folder defined in <ph id="ph0"/>Settings<ph id="ph1"/> dialog. An embedded skeleton allows merging the XLIFF file in any computer, not just the one where the XLIFF was generated.</source>
+        <target xml:space="preserve">El programa genera un archivo esqueleto separado en la carpeta definida en el cuadro de diálogo <ph id="ph0"/>Configuración<ph id="ph1"/>. Un esqueleto incrustado permite combinar el archivo XLIFF en cualquier computadora, no solo en aquella donde se generó el archivo XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="20">
+      <mda:metadata id="20">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="20">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Create XLIFF<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Crear XLIFF<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="21">
+      <segment state="final" id="21">
+        <source xml:space="preserve">The program generates an XLIFF file and the corresponding skeleton.</source>
+        <target xml:space="preserve">El programa genera un archivo XLIFF y el esqueleto correspondiente.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/default_settings.dita" id="14">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgR2VuZXJhbCBUYXNrLy9FTiIgImdlbmVyYWxUYXNrLmR0
+ZCI+Cjx0YXNrIGRvbWFpbnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVs
+aXZlcnlUYXJnZXQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1k
+KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgaW5kZXhpbmctZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1
+cC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAg
+ICAgICAgICAgICAgICAgICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICAodG9waWMgcmVsbWdtdC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRv
+cGljIHV0LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwt
+ZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3Bp
+YyB0YXNrL3Rhc2sgIiB4bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcv
+YXJjaGl0ZWN0dXJlLzIwMDUvIiBpZD0iZGVmYXVsdF9zZXR0aW5ncyI+IDx0aXRsZSBjbGFzcz0i
+LSB0b3BpYy90aXRsZSAiPiUlJTElJSUKPC90aXRsZT4gPHNob3J0ZGVzYyBjbGFzcz0iLSB0b3Bp
+Yy9zaG9ydGRlc2MgIj4lJSUyJSUlCjwvc2hvcnRkZXNjPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9w
+aWMvYm9keSB0YXNrL3Rhc2tib2R5ICI+IDxzdGVwcyBjbGFzcz0iLSB0b3BpYy9vbCB0YXNrL3N0
+ZXBzICI+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSIt
+IHRvcGljL3BoIHRhc2svY21kICI+JSUlMyUlJQo8dWljb250cm9sIGNsYXNzPSIrIHRvcGljL3Bo
+IHVpLWQvdWljb250cm9sICI+PHN2Zy1jb250YWluZXIgY2xhc3M9IisgdG9waWMvZm9yZWlnbiBz
+dmctZC9zdmctY29udGFpbmVyICI+IDxzdmc6c3ZnIGNvbnRlbnRTY3JpcHRUeXBlPSJhcHBsaWNh
+dGlvbi9lY21hc2NyaXB0IiB3aWR0aD0iMjQiIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlk
+IG1lZXQiIGNvbnRlbnRTdHlsZVR5cGU9InRleHQvY3NzIiB6b29tQW5kUGFuPSJtYWduaWZ5IiB2
+ZXJzaW9uPSIxLjEiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBo
+ZWlnaHQ9IjI0IiB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94
+PSIwIDAgMjQgMjQiPiA8c3ZnOnBhdGggZD0ibTkuMjUgMjItLjQtMy4ycS0uMzI1LS4xMjUtLjYx
+Mi0uMy0uMjg4LS4xNzUtLjU2My0uMzc1TDQuNyAxOS4zNzVsLTIuNzUtNC43NSAyLjU3NS0xLjk1
+UTQuNSAxMi41IDQuNSAxMi4zMzd2LS42NzVxMC0uMTYyLjAyNS0uMzM3TDEuOTUgOS4zNzVsMi43
+NS00Ljc1IDIuOTc1IDEuMjVxLjI3NS0uMi41NzUtLjM3NS4zLS4xNzUuNi0uM2wuNC0zLjJoNS41
+bC40IDMuMnEuMzI1LjEyNS42MTMuMy4yODcuMTc1LjU2Mi4zNzVsMi45NzUtMS4yNSAyLjc1IDQu
+NzUtMi41NzUgMS45NXEuMDI1LjE3NS4wMjUuMzM3di42NzVxMCAuMTYzLS4wNS4zMzhsMi41NzUg
+MS45NS0yLjc1IDQuNzUtMi45NS0xLjI1cS0uMjc1LjItLjU3NS4zNzUtLjMuMTc1LS42LjNsLS40
+IDMuMlptMi44LTYuNXExLjQ1IDAgMi40NzUtMS4wMjVRMTUuNTUgMTMuNDUgMTUuNTUgMTJxMC0x
+LjQ1LTEuMDI1LTIuNDc1UTEzLjUgOC41IDEyLjA1IDguNXEtMS40NzUgMC0yLjQ4OCAxLjAyNVE4
+LjU1IDEwLjU1IDguNTUgMTJxMCAxLjQ1IDEuMDEyIDIuNDc1UTEwLjU3NSAxNS41IDEyLjA1IDE1
+LjVabTAtMnEtLjYyNSAwLTEuMDYyLS40MzgtLjQzOC0uNDM3LS40MzgtMS4wNjJ0LjQzOC0xLjA2
+MnEuNDM3LS40MzggMS4wNjItLjQzOHQxLjA2My40MzhxLjQzNy40MzcuNDM3IDEuMDYydC0uNDM3
+IDEuMDYycS0uNDM4LjQzOC0xLjA2My40MzhaTTEyIDEyWm0tMSA4aDEuOTc1bC4zNS0yLjY1cS43
+NzUtLjIgMS40MzgtLjU4OC42NjItLjM4NyAxLjIxMi0uOTM3bDIuNDc1IDEuMDI1Ljk3NS0xLjct
+Mi4xNS0xLjYyNXEuMTI1LS4zNS4xNzUtLjczOC4wNS0uMzg3LjA1LS43ODd0LS4wNS0uNzg4cS0u
+MDUtLjM4Ny0uMTc1LS43MzdsMi4xNS0xLjYyNS0uOTc1LTEuNy0yLjQ3NSAxLjA1cS0uNTUtLjU3
+NS0xLjIxMi0uOTYzLS42NjMtLjM4Ny0xLjQzOC0uNTg3TDEzIDRoLTEuOTc1bC0uMzUgMi42NXEt
+Ljc3NS4yLTEuNDM3LjU4Ny0uNjYzLjM4OC0xLjIxMy45MzhMNS41NSA3LjE1bC0uOTc1IDEuNyAy
+LjE1IDEuNnEtLjEyNS4zNzUtLjE3NS43NS0uMDUuMzc1LS4wNS44IDAgLjQuMDUuNzc1dC4xNzUu
+NzVsLTIuMTUgMS42MjUuOTc1IDEuNyAyLjQ3NS0xLjA1cS41NS41NzUgMS4yMTMuOTYyLjY2Mi4z
+ODggMS40MzcuNTg4WiIvPiA8L3N2Zzpzdmc+IDwvc3ZnLWNvbnRhaW5lcj4lJSU0JSUlCjwvY21k
+PiA8c3RlcHJlc3VsdCBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9zdGVwcmVzdWx0ICI+
+JSUlNSUlJQo8ZmlnIGNsYXNzPSItIHRvcGljL2ZpZyAiPiA8aW1hZ2UgaHJlZj0iLi4vaW1hZ2Vz
+L3NldHRpbmdzLnBuZyIgcGxhY2VtZW50PSJicmVhayIgY2xhc3M9Ii0gdG9waWMvaW1hZ2UgIiBz
+Y2FsZT0iNjAiIGFsaWduPSJjZW50ZXIiPiA8YWx0IGNsYXNzPSItIHRvcGljL2FsdCAiPiUlJTYl
+JSUKPC9hbHQ+IDwvaW1hZ2U+IDwvZmlnPjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8c3RlcCBjbGFz
+cz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2Nt
+ZCAiPiUlJTclJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9z
+dGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU4JSUlCjwvY21kPiA8
+L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSIt
+IHRvcGljL3BoIHRhc2svY21kICI+JSUlOSUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTEwJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3Rl
+cCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlMTElJSUKPC9jbWQ+IDxp
+bmZvIGNsYXNzPSItIHRvcGljL2l0ZW1ncm91cCB0YXNrL2luZm8gIj4lJSUxMiUlJQo8L2luZm8+
+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9
+Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMyUlJQo8L2NtZD4gPGNob2ljZXMgY2xhc3M9Ii0g
+dG9waWMvdWwgdGFzay9jaG9pY2VzICI+IDxjaG9pY2UgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9j
+aG9pY2UgIj4lJSUxNCUlJQo8L2Nob2ljZT4gPGNob2ljZSBjbGFzcz0iLSB0b3BpYy9saSB0YXNr
+L2Nob2ljZSAiPiUlJTE1JSUlCjwvY2hvaWNlPiA8Y2hvaWNlIGNsYXNzPSItIHRvcGljL2xpIHRh
+c2svY2hvaWNlICI+JSUlMTYlJSUKPC9jaG9pY2U+IDwvY2hvaWNlcz4gPC9zdGVwPiA8c3RlcCBj
+bGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNr
+L2NtZCAiPiUlJTE3JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFz
+az4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3NldHRpbmdzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvc2V0dGluZ3Mu
+cG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Settings</source>
+        <target xml:space="preserve">Configuración</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Use the <ph id="ph0"/>Settings<ph id="ph1"/> dialog to set the default languages used by the application and to configure the main XML catalog and default folder used to store skeletons when creating <ph id="ph2"/>XLIFF<ph id="ph3"/> files.</source>
+        <target xml:space="preserve">Utilice el cuadro de diálogo <ph id="ph0"/>Configuración<ph id="ph1"/> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <ph id="ph2"/>XLIFF<ph id="ph3"/>.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve">On the left panel, click the </source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción </target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph4">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph7">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph8">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph10">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;/uicontrol&gt;</data>
+        <data id="ph1">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+        <data id="ph4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph5">&lt;/uicontrol&gt;</data>
+        <data id="ph6">&lt;/menucascade&gt;</data>
+        <data id="ph7">&lt;menucascade class="+ topic/ph ui-d/menucascade "&gt;</data>
+        <data id="ph8">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph9">&lt;/uicontrol&gt;</data>
+        <data id="ph10">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph11">&lt;/uicontrol&gt;</data>
+        <data id="ph12">&lt;/menucascade&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve"> Settings<ph id="ph0"/> option or select <ph id="ph1"/> <ph id="ph2"/>File<ph id="ph3"/> <ph id="ph4"/>Settings<ph id="ph5"/> <ph id="ph6"/> in main menu (<ph id="ph7"/> <ph id="ph8"/>XLIFF Manager<ph id="ph9"/> <ph id="ph10"/>Preferences<ph id="ph11"/> <ph id="ph12"/> on macOS).</source>
+        <target xml:space="preserve"> Configuración<ph id="ph0"/> o seleccione <ph id="ph1"/> <ph id="ph2"/>Archivo<ph id="ph3"/> <ph id="ph4"/>Configuración<ph id="ph5"/> <ph id="ph6"/> en el menú principal ( <ph id="ph7"/> <ph id="ph8"/>XLIFF Manager<ph id="ph9"/> <ph id="ph10"/>Preferencias...<ph id="ph11"/> <ph id="ph12"/>  en macOS).</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <segment state="final" id="5">
+        <source xml:space="preserve">The following dialog appears: </source>
+        <target xml:space="preserve">Aparece el siguiente cuadro de diálogo: </target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <segment state="final" id="6">
+        <source xml:space="preserve">Settings Dialog</source>
+        <target xml:space="preserve">Cuadro de diálogo Configuración</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <segment state="final" id="7">
+        <source xml:space="preserve">Select the apropriate default source and target languages to use when creating XLIFF files.</source>
+        <target xml:space="preserve">Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="8">
+      <mda:metadata id="8">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="8">
+        <source xml:space="preserve">If you wish to use a custom catalog for XML files, enter its location in the <ph id="ph0"/>System Catalog<ph id="ph1"/> text box or use the corresponding <ph id="ph2"/>Browse...<ph id="ph3"/> button to select it from the file system.</source>
+        <target xml:space="preserve">Si desea utilizar un catálogo personalizado para archivos XML, introduzca su ubicación en el cuadro de texto <ph id="ph0"/>Catálogo del sistema<ph id="ph1"/> o utilice el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionarlo del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="9">
+      <mda:metadata id="9">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="9">
+        <source xml:space="preserve">If you wish to change the folder where skeleton files are saved, enter the folder name in the <ph id="ph0"/>Skeletons Folder<ph id="ph1"/> text box or use the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select the new location in the file system. </source>
+        <target xml:space="preserve">Si desea cambiar la carpeta donde se guardan los archivos esqueleto, introduzca el nombre de la carpeta en el cuadro de texto <ph id="ph0"/>Carpeta de esqueletos<ph id="ph1"/> o utilice el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar la nueva ubicación en el sistema de archivos. </target>
+      </segment>
+    </unit>
+    <unit id="10">
+      <mda:metadata id="10">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph4">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/SRX.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+        <data id="ph4">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph5">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="10">
+        <source xml:space="preserve">To use a custom <ph id="ph0"/>SRX<ph id="ph1"/> file when creating XLIFF files, enter its location in the <ph id="ph2"/>Default SRX File<ph id="ph3"/> text box or use the <ph id="ph4"/>Browse...<ph id="ph5"/> button to select it from the file system.</source>
+        <target xml:space="preserve">Para utilizar un archivo <ph id="ph0"/>SRX<ph id="ph1"/> personalizado al crear archivos XLIFF, introduzca su ubicación en el cuadro de texto <ph id="ph2"/>Archivo SRX predeterminado<ph id="ph3"/> o utilice el botón <ph id="ph4"/>Examinar...<ph id="ph5"/> para seleccionarlo del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="11">
+      <mda:metadata id="11">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="11">
+        <source xml:space="preserve">Use the <ph id="ph0"/>Application Language<ph id="ph1"/> drop-down to select the language used in XLIFF Manager graphical user interface.</source>
+        <target xml:space="preserve">Utilice el menú desplegable <ph id="ph0"/>Idioma de la aplicación<ph id="ph1"/> para seleccionar el idioma utilizado en la interfaz gráfica de usuario de XLIFF Manager.</target>
+      </segment>
+    </unit>
+    <unit id="12">
+      <segment state="final" id="12">
+        <source xml:space="preserve">Changes to the application language will take effect after you restart the program.</source>
+        <target xml:space="preserve">Los cambios en el idioma de la aplicación surtirán efecto después de reiniciar el programa.</target>
+      </segment>
+    </unit>
+    <unit id="13">
+      <mda:metadata id="13">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="13">
+        <source xml:space="preserve">Use the <ph id="ph0"/>Theme<ph id="ph1"/> drop-down to select the colors used in the graphical user interface. Available options are: </source>
+        <target xml:space="preserve">Utilice el menú desplegable <ph id="ph0"/>Tema<ph id="ph1"/> para seleccionar los colores utilizados en la interfaz gráfica de usuario. Las opciones disponibles son: </target>
+      </segment>
+    </unit>
+    <unit id="14">
+      <mda:metadata id="14">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-bold</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;b class="+ topic/ph hi-d/b "&gt;</data>
+        <data id="ph1">&lt;/b&gt;</data>
+      </originalData>
+      <segment state="final" id="14">
+        <source xml:space="preserve"><ph id="ph0"/>System Default<ph id="ph1"/>: automatically selects Dark or Light colors according to the preferences set in the operating system.</source>
+        <target xml:space="preserve"><ph id="ph0"/>Predeterminado del sistema<ph id="ph1"/>: selecciona automáticamente los colores oscuros o claros según las preferencias establecidas en el sistema operativo.</target>
+      </segment>
+    </unit>
+    <unit id="15">
+      <mda:metadata id="15">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-bold</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;b class="+ topic/ph hi-d/b "&gt;</data>
+        <data id="ph1">&lt;/b&gt;</data>
+      </originalData>
+      <segment state="final" id="15">
+        <source xml:space="preserve"><ph id="ph0"/>Dark<ph id="ph1"/>: Uses dark background with white text.</source>
+        <target xml:space="preserve"><ph id="ph0"/>Oscuro<ph id="ph1"/>: utiliza fondo oscuro con texto blanco.</target>
+      </segment>
+    </unit>
+    <unit id="16">
+      <mda:metadata id="16">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-bold</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;b class="+ topic/ph hi-d/b "&gt;</data>
+        <data id="ph1">&lt;/b&gt;</data>
+      </originalData>
+      <segment state="final" id="16">
+        <source xml:space="preserve"><ph id="ph0"/>Light<ph id="ph1"/>: Uses light grey background with dark text</source>
+        <target xml:space="preserve"><ph id="ph0"/>Claro<ph id="ph1"/>: utiliza fondo gris claro con texto oscuro</target>
+      </segment>
+    </unit>
+    <unit id="17">
+      <mda:metadata id="17">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="17">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Save Settings<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Guardar Configuración<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/merge_xliff.dita" id="15">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0ibWVyZ2VfeGxpZmYiPiA8dGl0bGUgY2xhc3M9Ii0gdG9waWMvdGl0bGUgIj4lJSUx
+JSUlCjwvdGl0bGU+IDx0YXNrYm9keSBjbGFzcz0iLSB0b3BpYy9ib2R5IHRhc2svdGFza2JvZHkg
+Ij4gPGNvbnRleHQgY2xhc3M9Ii0gdG9waWMvc2VjdGlvbiB0YXNrL2NvbnRleHQgIj4gPHAgY2xh
+c3M9Ii0gdG9waWMvcCAiPiUlJTIlJSUKPC9wPiA8cCBjbGFzcz0iLSB0b3BpYy9wICI+JSUlMyUl
+JQo8L3A+IDxmaWcgY2xhc3M9Ii0gdG9waWMvZmlnICI+IDxpbWFnZSBocmVmPSIuLi9pbWFnZXMv
+bWVyZ2VYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsiIGNsYXNzPSItIHRvcGljL2ltYWdlICIg
+c2NhbGU9IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBjbGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU0
+JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb250ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9w
+aWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4g
+PGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTUlJSUKPC9jbWQ+IDwvc3RlcD4g
+PHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMv
+cGggdGFzay9jbWQgIj4lJSU2JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3Jv
+dXAgdGFzay9pbmZvICI+JSUlNyUlJQo8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9w
+aWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU4
+JSUlCjwvY21kPiA8aW5mbyBjbGFzcz0iLSB0b3BpYy9pdGVtZ3JvdXAgdGFzay9pbmZvICI+JSUl
+OSUlJQo8L2luZm8+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+
+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMCUlJQo8L2NtZD4gPC9zdGVw
+PiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3Bp
+Yy9waCB0YXNrL2NtZCAiPiUlJTExJSUlCjwvY21kPiA8L3N0ZXA+IDxzdGVwIGNsYXNzPSItIHRv
+cGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUl
+MTIlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+
+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSUxMyUlJQo8L2NtZD4gPHN0ZXBy
+ZXN1bHQgY2xhc3M9Ii0gdG9waWMvaXRlbWdyb3VwIHRhc2svc3RlcHJlc3VsdCAiPiUlJTE0JSUl
+Cjwvc3RlcHJlc3VsdD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL21lcmdlWGxpZmYucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9tZXJnZVhs
+aWZmLnBuZyJ9</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL21lcmdlLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvbWVyZ2UucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Merge XLIFF File</source>
+        <target xml:space="preserve">Combinar Archivo XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-italic</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;i class="+ topic/ph hi-d/i "&gt;</data>
+        <data id="ph1">&lt;/i&gt;</data>
+        <data id="ph2">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Use the <ph id="ph0"/>Merge XLIFF<ph id="ph1"/> panel to convert an <ph id="ph2"/>XLIFF<ph id="ph3"/> file to original format.</source>
+        <target xml:space="preserve">Utilice el panel <ph id="ph0"/>Combinar XLIFF<ph id="ph1"/> para convertir un archivo <ph id="ph2"/>XLIFF<ph id="ph3"/> al formato original.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-italic</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;i class="+ topic/ph hi-d/i "&gt;</data>
+        <data id="ph1">&lt;/i&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">XLIFF Manager can only merge XLIFF files that it generated or XLIFF files created with other tools that use <ph id="ph0"/>OpenXLIFF Filters<ph id="ph1"/>.</source>
+        <target xml:space="preserve">XLIFF Manager solo puede combinar archivos XLIFF que generó o archivos XLIFF creados con otras herramientas que utilizan <ph id="ph0"/>OpenXLIFF Filters<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <segment state="final" id="4">
+        <source xml:space="preserve">Merge XLIFF File</source>
+        <target xml:space="preserve">Combinar Archivo XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/merge.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Merge XLIFF<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Combinar XLIFF<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <mda:metadata id="6">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="6">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <mda:metadata id="7">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="7">
+        <source xml:space="preserve">If you use the <ph id="ph0"/>Browse...<ph id="ph1"/> button to locate the XLIFF file, the program tries to automatically generate a suitable target file or folder.</source>
+        <target xml:space="preserve">Si utiliza el botón <ph id="ph0"/>Examinar...<ph id="ph1"/> para localizar el archivo XLIFF, el programa intenta generar automáticamente un archivo o carpeta de destino adecuado.</target>
+      </segment>
+    </unit>
+    <unit id="8">
+      <mda:metadata id="8">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="8">
+        <source xml:space="preserve">Type the name of the translated file or folder for translated documents in the <ph id="ph0"/>Target File/Folder<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a file or folder.</source>
+        <target xml:space="preserve">Escriba el nombre del archivo o carpeta para los documentos traducidos en el cuadro de texto <ph id="ph0"/>Archivo/carpeta de destino<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un archivo o carpeta.</target>
+      </segment>
+    </unit>
+    <unit id="9">
+      <segment state="final" id="9">
+        <source xml:space="preserve">If the XLIFF file contains multiple documents inside, a folder is required to place all translated files in it. This is usually the case when the XLIFF was created from a DITA Map.</source>
+        <target xml:space="preserve">Si el archivo XLIFF contiene varios documentos en su interior, se requiere una carpeta para guardar los documentos traducidos. Este suele ser el caso cuando el archivo XLIFF se creó a partir de un mapa DITA.</target>
+      </segment>
+    </unit>
+    <unit id="10">
+      <mda:metadata id="10">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;xmlatt class="+ topic/keyword markup-d/markupname xml-d/xmlatt "&gt;</data>
+        <data id="ph3">&lt;/xmlatt&gt;</data>
+      </originalData>
+      <segment state="final" id="10">
+        <source xml:space="preserve">Select the <ph id="ph0"/>Accept Unapproved Segments<ph id="ph1"/> checkbox if you want to consider all segments as translated, even when the <ph id="ph2"/>approved<ph id="ph3"/> attribute is not set to "yes".</source>
+        <target xml:space="preserve">Seleccione la casilla de verificación <ph id="ph0"/>Aceptar segmentos no aprobados<ph id="ph1"/> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<ph id="ph2"/>approved<ph id="ph3"/>" no esté establecido en "yes".</target>
+      </segment>
+    </unit>
+    <unit id="11">
+      <mda:metadata id="11">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;xref href="../glossaries/TMX.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="11">
+        <source xml:space="preserve">Select the <ph id="ph0"/>Export Approved Segments as TMX<ph id="ph1"/> checkbox if you want to generate a <ph id="ph2"/>TMX<ph id="ph3"/> file from the XLIFF file. </source>
+        <target xml:space="preserve">Seleccione la casilla de verificación <ph id="ph0"/>Exportar segmentos aprobados como TMX<ph id="ph1"/> si desea generar un archivo <ph id="ph2"/>TMX<ph id="ph3"/> a partir del archivo XLIFF. </target>
+      </segment>
+    </unit>
+    <unit id="12">
+      <mda:metadata id="12">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="12">
+        <source xml:space="preserve">Select the <ph id="ph0"/>Open Translated File/Folder After Merging<ph id="ph1"/> checkbox if you want to automatically open the translated document or folder after a successful merge operation.</source>
+        <target xml:space="preserve">Seleccione la casilla de verificación <ph id="ph0"/>Abrir archivo/carpeta traducido después de combinar<ph id="ph1"/> si desea abrir automáticamente el documento o carpeta traducidos después de una operación de combinación correcta.</target>
+      </segment>
+    </unit>
+    <unit id="13">
+      <mda:metadata id="13">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="13">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Merge XLIFF<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Combinar XLIFF<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="14">
+      <segment state="final" id="14">
+        <source xml:space="preserve">XLIFF Manager merges the indicated file.</source>
+        <target xml:space="preserve">XLIFF Manager combina el archivo indicado.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/pseudoTranslate.dita" id="16">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0icHNldWRvVHJhbnNsYXRlIj4gPHRpdGxlIGNsYXNzPSItIHRvcGljL3RpdGxlICI+
+JSUlMSUlJQo8L3RpdGxlPiA8c2hvcnRkZXNjIGNsYXNzPSItIHRvcGljL3Nob3J0ZGVzYyAiPiUl
+JTIlJSUKPC9zaG9ydGRlc2M+IDx0YXNrYm9keSBjbGFzcz0iLSB0b3BpYy9ib2R5IHRhc2svdGFz
+a2JvZHkgIj4gPGNvbnRleHQgY2xhc3M9Ii0gdG9waWMvc2VjdGlvbiB0YXNrL2NvbnRleHQgIj4g
+PHAgY2xhc3M9Ii0gdG9waWMvcCAiPiUlJTMlJSUKPC9wPiA8L2NvbnRleHQ+IDxzdGVwcyBjbGFz
+cz0iLSB0b3BpYy9vbCB0YXNrL3N0ZXBzICI+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2sv
+c3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21kICI+JSUlNCUlJQo8L2NtZD4g
+PC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0i
+LSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTUlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9
+Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQg
+Ij4lJSU2JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
+          <source>Pseudo-Translate Untranslated Segments</source>
+          <target>Pseudo-traducir segmentos no traducidos</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
+          <source>Pseudo-Translate Untranslated Segments</source>
+          <target>Pseudo-traducir segmentos no traducidos</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
+          <source>Pseudo-Translate Untranslated Segments</source>
+          <target>Pseudo-traducir segmentos no traducidos</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#1" matchQuality="100.0">
+          <source>Pseudo-Translate Untranslated Segments</source>
+          <target>Pseudo-traducir segmentos no traducidos</target>
+        </mtc:match>
+      </mtc:matches>
+      <segment state="final" id="1">
+        <source xml:space="preserve">Pseudo-Translate Untranslated Segments</source>
+        <target xml:space="preserve">Pseudo-traducir Segmentos no Traducidos</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#2" matchQuality="93.0">
+          <source>Copy the content of <ph id="phph1"/>&lt;source&gt;<ph id="phph2"/> elements to new or existing empty <ph id="phph3"/>&lt;target<ph id="phph4"/> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</source>
+          <target>Copie el contenido de los elementos <ph id="phph1"/>&lt;source&gt;<ph id="phph2"/> a los correspondientes elementos <ph id="phph3"/>&lt;target&gt;<ph id="phph4"/> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#2" matchQuality="97.0">
+          <source>Copy the content of <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> elements to new or existing empty <ph id="ph2"/>&lt;target<ph id="ph3"/> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</source>
+          <target>Copie el contenido de los elementos <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> a los correspondientes elementos <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</target>
+        </mtc:match>
+      </mtc:matches>
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph1">&lt;/codeph&gt;</data>
+        <data id="ph2">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph3">&lt;/codeph&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Copy the content of <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> elements to new or existing empty <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> elements in an XLIFF file, replacing all regular vowels with an accented version (e.g.: e =&gt; é).</source>
+        <target xml:space="preserve">Copie el contenido de los elementos <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> a los correspondientes elementos <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#3" matchQuality="96.0">
+          <source>Use this method to generate a fake translation that you can use to test the <ph id="phph1"/>Merge XLIFF File<ph id="phph2"/> process. After making sure that Merge runs successfully, you can use the <ph id="phph3"/>Remove all Targets<ph id="phph4"/> option to clean your XLIFF file.</source>
+          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="phph1"/>Combinar XLIFF<ph id="phph2"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="phph3"/>Eliminar Todas las Traducciones<ph id="phph4"/> para limpiar el archivo XLIFF.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
+          <source>Use this method to generate a fake translation that you can use to test the <ph id="ph0"/>Merge XLIFF File<ph id="ph1"/> process. After making sure that Merge runs successfully, you can use the <ph id="ph2"/>Remove all Targets<ph id="ph3"/> option to clean your XLIFF file.</source>
+          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="ph0"/>Combinar XLIFF<ph id="ph1"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="ph2"/>Eliminar Todas las Traducciones<ph id="ph3"/> para limpiar el archivo XLIFF.</target>
+        </mtc:match>
+      </mtc:matches>
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="merge_xliff.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+        <data id="ph2">&lt;xref href="removeTargets.dita" class="- topic/xref "&gt;</data>
+        <data id="ph3">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">Use this method to generate a fake translation that you can use to test the <ph id="ph0"/>Merge XLIFF File<ph id="ph1"/> process. After making sure that Merge runs successfully, you can use the <ph id="ph2"/>Remove all Targets<ph id="ph3"/> option to clean your XLIFF file.</source>
+        <target xml:space="preserve">Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="ph0"/>Combinar XLIFF<ph id="ph1"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="ph2"/>Eliminar Todas las Traducciones<ph id="ph3"/> para limpiar el archivo XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Translation Tasks<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/>Traducciones<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to process in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <mda:metadata id="6">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="6">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Pseudo-Translate<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Pseudo-Traducir<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/removeTargets.dita" id="17">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0icmVtb3ZlVGFyZ2V0cyI+IDx0aXRsZSBjbGFzcz0iLSB0b3BpYy90aXRsZSAiPiUl
+JTElJSUKPC90aXRsZT4gPHNob3J0ZGVzYyBjbGFzcz0iLSB0b3BpYy9zaG9ydGRlc2MgIj4lJSUy
+JSUlCjwvc2hvcnRkZXNjPiA8dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2ti
+b2R5ICI+IDxzdGVwcyBjbGFzcz0iLSB0b3BpYy9vbCB0YXNrL3N0ZXBzICI+IDxzdGVwIGNsYXNz
+PSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRvcGljL3BoIHRhc2svY21k
+ICI+JSUlMyUlJQo8L2NtZD4gPC9zdGVwPiA8c3RlcCBjbGFzcz0iLSB0b3BpYy9saSB0YXNrL3N0
+ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAiPiUlJTQlJSUKPC9jbWQ+IDwv
+c3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVwICI+IDxjbWQgY2xhc3M9Ii0g
+dG9waWMvcGggdGFzay9jbWQgIj4lJSU1JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFz
+a2JvZHk+IDwvdGFzaz4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3Rhc2tzLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvdGFza3MucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Remove all Targets</source>
+        <target xml:space="preserve">Eliminar Todas las Traducciones</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
+          <source>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</source>
+          <target>Utilice esta función para eliminar todos los elementos &lt;target&gt; del archivo XLIFF.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
+          <source>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</source>
+          <target>Utilice esta función para eliminar todos los elementos &lt;target&gt; del archivo XLIFF.</target>
+        </mtc:match>
+      </mtc:matches>
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;codeph class="+ topic/ph pr-d/codeph "&gt;</data>
+        <data id="ph1">&lt;/codeph&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">Use this feature to remove all <ph id="ph0"/>&lt;target&gt;<ph id="ph1"/> elements from your XLIFF file.</source>
+        <target xml:space="preserve">Utilice esta función para eliminar todos los elementos <ph id="ph0"/>&lt;target&gt;<ph id="ph1"/> del archivo XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <mda:metadata id="3">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/tasks.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="3">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Translation Tasks<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/> Traducciones<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <mda:metadata id="4">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="4">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to process in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <mda:metadata id="5">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="5">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Remove all Targets<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Eliminar Todas las Traducciones<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="tasks/validate_xliff.dita" id="18">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHRhc2sgUFVC
+TElDICItLy9PQVNJUy8vRFREIERJVEEgVGFzay8vRU4iICJ0YXNrLmR0ZCI+Cjx0YXNrIGRvbWFp
+bnM9Iih0b3BpYyB0YXNrKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2
+LWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgIGEocHJvcHMgZGVsaXZlcnlUYXJnZXQpICAg
+ICAgICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBlcXVhdGlvbi1kKSAgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAodG9waWMgaGF6YXJkLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBoaS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaW5kZXhpbmct
+ZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIG1hcmt1cC1kKSAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICAodG9waWMgbWF0aG1sLWQpICAgICAgICAgICAgICAgICAgICAgICAg
+ICAgICh0b3BpYyBwci1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgcmVsbWdt
+dC1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgc3ctZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHN2Zy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAo
+dG9waWMgdWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgKHRvcGljIHRhc2sgc3RyaWN0VGFza2JvZHktYykgICAiIGRpdGFhcmNo
+OkRJVEFBcmNoVmVyc2lvbj0iMS4zIiBjbGFzcz0iLSB0b3BpYy90b3BpYyB0YXNrL3Rhc2sgIiB4
+bWxuczpkaXRhYXJjaD0iaHR0cDovL2RpdGEub2FzaXMtb3Blbi5vcmcvYXJjaGl0ZWN0dXJlLzIw
+MDUvIiBpZD0idmFsaWRhdGVfeGxpZmYiPiA8dGl0bGUgY2xhc3M9Ii0gdG9waWMvdGl0bGUgIj4l
+JSUxJSUlCjwvdGl0bGU+IDxzaG9ydGRlc2MgY2xhc3M9Ii0gdG9waWMvc2hvcnRkZXNjICIvPiA8
+dGFza2JvZHkgY2xhc3M9Ii0gdG9waWMvYm9keSB0YXNrL3Rhc2tib2R5ICI+IDxjb250ZXh0IGNs
+YXNzPSItIHRvcGljL3NlY3Rpb24gdGFzay9jb250ZXh0ICI+IDxwIGNsYXNzPSItIHRvcGljL3Ag
+Ij4lJSUyJSUlCjwvcD4gPHAgY2xhc3M9Ii0gdG9waWMvcCAiPiUlJTMlJSUKPC9wPiA8cCBjbGFz
+cz0iLSB0b3BpYy9wICI+JSUlNCUlJQo8L3A+IDxmaWcgY2xhc3M9Ii0gdG9waWMvZmlnICI+IDxp
+bWFnZSBocmVmPSIuLi9pbWFnZXMvdmFsaWRhdGVYbGlmZi5wbmciIHBsYWNlbWVudD0iYnJlYWsi
+IGNsYXNzPSItIHRvcGljL2ltYWdlICIgc2NhbGU9IjgwIiBhbGlnbj0iY2VudGVyIj4gPGFsdCBj
+bGFzcz0iLSB0b3BpYy9hbHQgIj4lJSU1JSUlCjwvYWx0PiA8L2ltYWdlPiA8L2ZpZz4gPC9jb250
+ZXh0PiA8c3RlcHMgY2xhc3M9Ii0gdG9waWMvb2wgdGFzay9zdGVwcyAiPiA8c3RlcCBjbGFzcz0i
+LSB0b3BpYy9saSB0YXNrL3N0ZXAgIj4gPGNtZCBjbGFzcz0iLSB0b3BpYy9waCB0YXNrL2NtZCAi
+PiUlJTYlJSUKPC9jbWQ+IDwvc3RlcD4gPHN0ZXAgY2xhc3M9Ii0gdG9waWMvbGkgdGFzay9zdGVw
+ICI+IDxjbWQgY2xhc3M9Ii0gdG9waWMvcGggdGFzay9jbWQgIj4lJSU3JSUlCjwvY21kPiA8L3N0
+ZXA+IDxzdGVwIGNsYXNzPSItIHRvcGljL2xpIHRhc2svc3RlcCAiPiA8Y21kIGNsYXNzPSItIHRv
+cGljL3BoIHRhc2svY21kICI+JSUlOCUlJQo8L2NtZD4gPHN0ZXByZXN1bHQgY2xhc3M9Ii0gdG9w
+aWMvaXRlbWdyb3VwIHRhc2svc3RlcHJlc3VsdCAiPiUlJTklJSUKPC9zdGVwcmVzdWx0PiA8L3N0
+ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL3ZhbGlkYXRlWGxpZmYucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy92YWxp
+ZGF0ZVhsaWZmLnBuZyJ9</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL2NoZWNrLnBuZyIsImhyZWYiOiIuLi9pbWFnZXMvY2hlY2sucG5nIn0=</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <segment state="final" id="1">
+        <source xml:space="preserve">Validate XLIFF</source>
+        <target xml:space="preserve">Validar XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <mda:metadata id="2">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-link</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;xref href="../glossaries/XLIFF.dita" class="- topic/xref "&gt;</data>
+        <data id="ph1">&lt;/xref&gt;</data>
+      </originalData>
+      <segment state="final" id="2">
+        <source xml:space="preserve">XLIFF Manager can validate <ph id="ph0"/>XLIFF<ph id="ph1"/> 1.0, 1.1, 1.2 and 2.0.</source>
+        <target xml:space="preserve">XLIFF Manager puede validar <ph id="ph0"/>XLIFF<ph id="ph1"/> 1.0, 1.1, 1.2 y 2.0.</target>
+      </segment>
+    </unit>
+    <unit id="3">
+      <segment state="final" id="3">
+        <source xml:space="preserve"> Validating XLIFF against XML grammars (DTD or XML Schemas) is not enough. XML Schema validation does not detect the use of duplicated 'id' attributes, wrong language codes and other constraints written in the different XLIFF specifications.</source>
+        <target xml:space="preserve"> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usand esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</target>
+      </segment>
+    </unit>
+    <unit id="4">
+      <segment state="final" id="4">
+        <source xml:space="preserve">In addition to validating all XLIFF 2.0 modules using XML Schema validation, extra validation is performed for XLIFF 2.0 Core and for Metadata, Matches and Glossary modules.</source>
+        <target xml:space="preserve">Además de validar todos los módulos XLIFF 2.0 mediante la validación de esquemas XML, se realiza una validación adicional para XLIFF 2.0 Core y para los módulos Metadata, Matches y Glossary.</target>
+      </segment>
+    </unit>
+    <unit id="5">
+      <segment state="final" id="5">
+        <source xml:space="preserve">Validate XLIFF File</source>
+        <target xml:space="preserve">Validar Archivo XLIFF</target>
+      </segment>
+    </unit>
+    <unit id="6">
+      <mda:metadata id="6">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph1">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;image href="../images/check.png" placement="inline" class="- topic/image "/&gt;</data>
+        <data id="ph2">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="6">
+        <source xml:space="preserve">On the left panel, click on the <ph id="ph0"/><ph id="ph1"/> Validate XLIFF<ph id="ph2"/> option.</source>
+        <target xml:space="preserve">En el panel izquierdo, haga clic en la opción <ph id="ph0"/><ph id="ph1"/>Validar XLIFF<ph id="ph2"/>.</target>
+      </segment>
+    </unit>
+    <unit id="7">
+      <mda:metadata id="7">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+        <data id="ph2">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph3">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="7">
+        <source xml:space="preserve">Type the name and location of the XLIFF file to validate in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
+        <target xml:space="preserve">Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
+      </segment>
+    </unit>
+    <unit id="8">
+      <mda:metadata id="8">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;uicontrol class="+ topic/ph ui-d/uicontrol "&gt;</data>
+        <data id="ph1">&lt;/uicontrol&gt;</data>
+      </originalData>
+      <segment state="final" id="8">
+        <source xml:space="preserve">Click the <ph id="ph0"/>Validate XLIFF<ph id="ph1"/> button.</source>
+        <target xml:space="preserve">Haga clic en el botón <ph id="ph0"/>Validar XLIFF<ph id="ph1"/>.</target>
+      </segment>
+    </unit>
+    <unit id="9">
+      <segment state="final" id="9">
+        <source xml:space="preserve">XLIFF Manager validates the indicated file.</source>
+        <target xml:space="preserve">XLIFF Manager valida el archivo indicado.</target>
+      </segment>
+    </unit>
+  </file>
+  <file original="xliffmanager.ditamap" id="19">
+    <skeleton>PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIGJvb2ttYXAg
+UFVCTElDICItLy9PQVNJUy8vRFREIERJVEEgQm9va01hcC8vRU4iCiJodHRwOi8vZG9jcy5vYXNp
+cy1vcGVuLm9yZy9kaXRhL2R0ZC9ib29rbWFwLmR0ZCI+Cjxib29rbWFwIGRvbWFpbnM9IihtYXAg
+bWFwZ3JvdXAtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKG1hcCBib29rbWFwKSAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgYWJicmV2LWQpICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICh0b3BpYyBkZWxheS1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICBhKHBy
+b3BzIGRlbGl2ZXJ5VGFyZ2V0KSAgICAgICAgICAgICAgICAgICAgICAgICAgICAobWFwIGRpdGF2
+YWxyZWYtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIGhhemFyZC1kKSAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICAodG9waWMgaGktZCkgICAgICAgICAgICAgICAgICAgICAg
+ICAgICAgKHRvcGljIGluZGV4aW5nLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAgICh0b3Bp
+YyBtYXJrdXAtZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHByLWQpICAgICAg
+ICAgICAgICAgICAgICAgICAgICAgICh0b3BpYyByZWxtZ210LWQpICAgICAgICAgICAgICAgICAg
+ICAgICAgICAgICh0b3BpYyBzdy1kKSAgICAgICAgICAgICAgICAgICAgICAgICAgICAodG9waWMg
+dWktZCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgKHRvcGljIHV0LWQpICAgICAgICAgICAg
+ICAgICAgICAgICAgICAgICh0b3BpYyB4bmFsLWQpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+ICh0b3BpYyBtYXJrdXAtZCB4bWwtZCkgICAiIGRpdGFhcmNoOkRJVEFBcmNoVmVyc2lvbj0iMS4z
+IiBjbGFzcz0iLSBtYXAvbWFwIGJvb2ttYXAvYm9va21hcCAiIHhtbG5zOmRpdGFhcmNoPSJodHRw
+Oi8vZGl0YS5vYXNpcy1vcGVuLm9yZy9hcmNoaXRlY3R1cmUvMjAwNS8iPiA8Ym9va3RpdGxlIGNs
+YXNzPSItIHRvcGljL3RpdGxlIGJvb2ttYXAvYm9va3RpdGxlICI+IDxtYWluYm9va3RpdGxlIGNs
+YXNzPSItIHRvcGljL3BoIGJvb2ttYXAvbWFpbmJvb2t0aXRsZSAiPiUlJTElJSUKPC9ib29rdGl0
+bGVhbHQ+IDwvYm9va3RpdGxlPiA8ZnJvbnRtYXR0ZXIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmIGJv
+b2ttYXAvZnJvbnRtYXR0ZXIgIj4gPGJvb2tsaXN0cyBjbGFzcz0iLSBtYXAvdG9waWNyZWYgYm9v
+a21hcC9ib29rbGlzdHMgIj4gPHRvYyBjbGFzcz0iLSBtYXAvdG9waWNyZWYgYm9va21hcC90b2Mg
+Ii8+IDwvYm9va2xpc3RzPiA8L2Zyb250bWF0dGVyPiA8Y2hhcHRlciBocmVmPSJjb25jZXB0cy94
+bGlmZm1hbmFnZXJfaW50cm9kdWN0aW9uLmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiBib29r
+bWFwL2NoYXB0ZXIgIj4gPHRvcGljcmVmIGhyZWY9ImNvbmNlcHRzL3hsaWZmbWFuYWdlcl9maWxl
+X2Zvcm1hdHMuZGl0YSIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmICIvPiA8dG9waWNyZWYgaHJlZj0i
+Y29uY2VwdHMveGxpZmZtYW5hZ2VyX3BsYXRmb3Jtcy5kaXRhIiBjbGFzcz0iLSBtYXAvdG9waWNy
+ZWYgIi8+IDwvY2hhcHRlcj4gPGNoYXB0ZXIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmIGJvb2ttYXAv
+Y2hhcHRlciAiPiA8dG9waWNtZXRhIGNsYXNzPSItIG1hcC90b3BpY21ldGEgIj4gPG5hdnRpdGxl
+IGNsYXNzPSItIHRvcGljL25hdnRpdGxlICI+JSUlMiUlJQo8L25hdnRpdGxlPiA8L3RvcGljbWV0
+YT4gPHRvcGljcmVmIGhyZWY9InRhc2tzL2NyZWF0ZV94bGlmZi5kaXRhIiBjbGFzcz0iLSBtYXAv
+dG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJ0YXNrcy9tZXJnZV94bGlmZi5kaXRhIiBjbGFz
+cz0iLSBtYXAvdG9waWNyZWYgIi8+IDwvY2hhcHRlcj4gPGNoYXB0ZXIgaHJlZj0idGFza3MvdmFs
+aWRhdGVfeGxpZmYuZGl0YSIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmIGJvb2ttYXAvY2hhcHRlciAi
+Lz4gPGNoYXB0ZXIgaHJlZj0idGFza3MvYW5hbHlzaXNfeGxpZmYuZGl0YSIgY2xhc3M9Ii0gbWFw
+L3RvcGljcmVmIGJvb2ttYXAvY2hhcHRlciAiLz4gPGNoYXB0ZXIgaHJlZj0iY29uY2VwdHMvdHJh
+bnNsYXRpb25UYWtzLmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiBib29rbWFwL2NoYXB0ZXIg
+Ij4gPHRvcGljcmVmIGhyZWY9InRhc2tzL2NvcHlTb3VyY2VzLmRpdGEiIGNsYXNzPSItIG1hcC90
+b3BpY3JlZiAiLz4gPHRvcGljcmVmIGhyZWY9InRhc2tzL3BzZXVkb1RyYW5zbGF0ZS5kaXRhIiBj
+bGFzcz0iLSBtYXAvdG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJ0YXNrcy9yZW1vdmVUYXJn
+ZXRzLmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiAiLz4gPHRvcGljcmVmIGhyZWY9InRhc2tz
+L2FwcHJvdmVBbGwuZGl0YSIgY2xhc3M9Ii0gbWFwL3RvcGljcmVmICIvPiA8L2NoYXB0ZXI+IDxj
+aGFwdGVyIGhyZWY9InRhc2tzL2RlZmF1bHRfc2V0dGluZ3MuZGl0YSIgY2xhc3M9Ii0gbWFwL3Rv
+cGljcmVmIGJvb2ttYXAvY2hhcHRlciAiLz4gPGJhY2ttYXR0ZXIgY2xhc3M9Ii0gbWFwL3RvcGlj
+cmVmIGJvb2ttYXAvYmFja21hdHRlciAiPiA8Ym9va2xpc3RzIGNsYXNzPSItIG1hcC90b3BpY3Jl
+ZiBib29rbWFwL2Jvb2tsaXN0cyAiPiA8Z2xvc3NhcnlsaXN0IGNodW5rPSJ0by1jb250ZW50IiBj
+bGFzcz0iLSBtYXAvdG9waWNyZWYgYm9va21hcC9nbG9zc2FyeWxpc3QgIj4gPHRvcGljcmVmIGhy
+ZWY9Imdsb3NzYXJpZXMvQ0FULmRpdGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiAiLz4gPHRvcGlj
+cmVmIGhyZWY9Imdsb3NzYXJpZXMvY2hhcmFjdGVyX3NldC5kaXRhIiBjbGFzcz0iLSBtYXAvdG9w
+aWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJnbG9zc2FyaWVzL1NSWC5kaXRhIiBjbGFzcz0iLSBt
+YXAvdG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJnbG9zc2FyaWVzL1RNWC5kaXRhIiBjbGFz
+cz0iLSBtYXAvdG9waWNyZWYgIi8+IDx0b3BpY3JlZiBocmVmPSJnbG9zc2FyaWVzL1hMSUZGLmRp
+dGEiIGNsYXNzPSItIG1hcC90b3BpY3JlZiAiLz4gPC9nbG9zc2FyeWxpc3Q+IDwvYm9va2xpc3Rz
+PiA8L2JhY2ttYXR0ZXI+IDwvYm9va21hcD4=</skeleton>
+    <mda:metadata>
+      <mda:metaGroup category="format">
+        <mda:meta type="datatype">x-ditamap</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="project-data">
+        <mda:meta type="product-name">XLIFF Manager</mda:meta>
+        <mda:meta type="project-id">1680174732565</mda:meta>
+        <mda:meta type="build-number">1</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="tool">
+        <mda:meta type="tool-id">OpenXLIFF</mda:meta>
+        <mda:meta type="tool-name">OpenXLIFF Filters</mda:meta>
+        <mda:meta type="tool-version">3.3.0 20230225_0742</mda:meta>
+      </mda:metaGroup>
+      <mda:metaGroup category="PI">
+        <mda:meta type="encoding">UTF-8</mda:meta>
+        <mda:meta type="images">eyJpbWFnZVBhdGgiOiIvVXNlcnMvcm1yYXlhL0RvY3VtZW50cy9HaXRIdWIvWExJRkZNYW5hZ2Vy
+L2RvY3MvZW4vaW1hZ2VzL29wZW54bGlmZi5wbmciLCJocmVmIjoiaW1hZ2VzL29wZW54bGlmZi5w
+bmcifQ==</mda:meta>
+      </mda:metaGroup>
+    </mda:metadata>
+    <unit id="1">
+      <mda:metadata id="1">
+        <mda:metaGroup category="attributes" id="ph0">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph2">
+          <mda:meta type="ctype">image</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph4">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+        <mda:metaGroup category="attributes" id="ph5">
+          <mda:meta type="ctype">x-other</mda:meta>
+        </mda:metaGroup>
+      </mda:metadata>
+      <originalData>
+        <data id="ph0">&lt;ph class="- topic/ph "&gt;</data>
+        <data id="ph1">&lt;/ph&gt;</data>
+        <data id="ph2">&lt;image href="images/openxliff.png" placement="break" class="- topic/image " scale="80"/&gt;</data>
+        <data id="ph3">&lt;/mainbooktitle&gt;</data>
+        <data id="ph4">&lt;booktitlealt class="- topic/ph bookmap/booktitlealt "&gt;</data>
+        <data id="ph5">&lt;ph class="- topic/ph "&gt;</data>
+        <data id="ph6">&lt;/ph&gt;</data>
+      </originalData>
+      <segment state="final" id="1">
+        <source xml:space="preserve"> <ph id="ph0"/>XLIFF Manager User Guide<ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/>Copyright © 2018-2023 Maxprograms<ph id="ph6"/> </source>
+        <target xml:space="preserve"> <ph id="ph0"/>Guía del Usuario de XLIFF Manager<ph id="ph1"/> <ph id="ph2"/> <ph id="ph3"/> <ph id="ph4"/> <ph id="ph5"/> Derechos de autor © 2018-2023 Maxprograms<ph id="ph6"/> </target>
+      </segment>
+    </unit>
+    <unit id="2">
+      <segment state="final" id="2">
+        <source xml:space="preserve">Creating and Merging XLIFF Files</source>
+        <target xml:space="preserve">Crear y Combinar Archivos XLIFF</target>
+      </segment>
+    </unit>
+  </file>
+</xliff>

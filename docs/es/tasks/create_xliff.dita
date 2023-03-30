@@ -34,7 +34,7 @@
         <cmd>Seleccione o ajuste el <xref href="../glossaries/character_set.dita">juego de caracteres</xref> del documento de origen mediante la lista desplegable <uicontrol>Juego de caracteres</uicontrol>.</cmd>
       </step>
       <step>
-        <cmd>If you are converting a DITA map and need to use a .ditaval file for conditional filtering, enter its path in the <uicontrol>DITAVAL File</uicontrol> text box or use the <uicontrol>Browse...</uicontrol> button next to it to select a file from the file system.</cmd>
+        <cmd>Si está convirtiendo un mapa DITA y necesita utilizar un archivo .ditaval para el filtrado condicional, introduzca su ruta en el cuadro de texto <uicontrol>Archivo DITAVAL</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo del sistema de archivos.</cmd>
       </step>
       <step>
         <cmd>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <uicontrol>Configuración de JSON</uicontrol> o use el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo del sistema de archivos.</cmd>

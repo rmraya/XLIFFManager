@@ -3,8 +3,8 @@
 <task id="pseudoTranslate">
     <title>Pseudo-Translate Untranslated Segments</title>
     <shortdesc>Copy the content of <codeph>&lt;source></codeph> elements to new or existing empty
-            <codeph>&lt;target</codeph> elements in an XLIFF file, replacing all regular vowels with
-        an accented version (e.g.: e => é).</shortdesc>
+            <codeph>&lt;target></codeph> elements in an XLIFF file, replacing all regular vowels
+        with an accented version (e.g.: e => é).</shortdesc>
     <taskbody>
         <context>
             <p>Use this method to generate a fake translation that you can use to test the <xref
