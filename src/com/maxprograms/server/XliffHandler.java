@@ -58,7 +58,6 @@ import com.maxprograms.languages.Language;
 import com.maxprograms.languages.LanguageUtils;
 import com.maxprograms.stats.RepetitionAnalysis;
 import com.maxprograms.validation.XliffChecker;
-import com.maxprograms.xliff2.ToXliff2;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -463,6 +462,8 @@ public class XliffHandler implements HttpHandler {
 		params.put("paragraph", paragraph ? "yes" : "no");
 		params.put("srxFile", srx);
 		params.put("xmlfilter", xmlfilter.getAbsolutePath());
+		params.put("xliff20", is20 ? "yes" : "no");
+		params.put("embed", embed ? "yes" : "no");
 		if (!tgtLang.isEmpty()) {
 			params.put("tgtLang", tgtLang);
 		}
@@ -472,19 +473,17 @@ public class XliffHandler implements HttpHandler {
 		if (type.equals(FileFormats.JSON) && !config.isEmpty()) {
 			params.put("config", config);
 		}
-
+		if (is20 && !paragraph && config.isEmpty()) {
+			params.put("resegment", "yes");
+			params.put("paragraph", "yes");
+		}
+		
 		new Thread(new Runnable() {
 
 			@Override
 			public void run() {
 				processMap.put(process, RUNNING);
 				List<String> result = Convert.run(params);
-				if (embed && Constants.SUCCESS.equals(result.get(0))) {
-					result = Convert.addSkeleton(xliff, catalog);
-				}
-				if (is20 && Constants.SUCCESS.equals(result.get(0))) {
-					result = ToXliff2.run(new File(xliff), catalog);
-				}
 				JSONObject jsonResult = new JSONObject();
 				if (Constants.SUCCESS.equals(result.get(0))) {
 					jsonResult.put(RESULT, SUCCESS);
