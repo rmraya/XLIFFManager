@@ -2,7 +2,7 @@
 
 Localizing XLIFF Manager requires processing 3 types of files:
 
-1. Java .properties files
+1. Java `.properties` files
 2. TypeScript strings in JSON format
 3. Documentation from DITA files
 
