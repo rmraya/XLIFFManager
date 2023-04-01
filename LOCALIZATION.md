@@ -8,7 +8,7 @@ Localizing XLIFF Manager requires processing 3 types of files:
 
 ## Localization of Java .properties
 
-[javaPM](https://www.maxprograms.com/products/javapm.html) is used to generate XLIFF from `/src` folder.
+[JavaPM](https://www.maxprograms.com/products/javapm.html) is used to generate XLIFF from `/src` folder.
 
 Use a command like this to generate XLIFF:
 
