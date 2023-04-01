@@ -27,6 +27,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -57,7 +58,6 @@ import com.maxprograms.languages.Language;
 import com.maxprograms.languages.LanguageUtils;
 import com.maxprograms.stats.RepetitionAnalysis;
 import com.maxprograms.validation.XliffChecker;
-import com.maxprograms.xliff2.ToXliff2;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -462,6 +462,8 @@ public class XliffHandler implements HttpHandler {
 		params.put("paragraph", paragraph ? "yes" : "no");
 		params.put("srxFile", srx);
 		params.put("xmlfilter", xmlfilter.getAbsolutePath());
+		params.put("xliff20", is20 ? "yes" : "no");
+		params.put("embed", embed ? "yes" : "no");
 		if (!tgtLang.isEmpty()) {
 			params.put("tgtLang", tgtLang);
 		}
@@ -471,19 +473,17 @@ public class XliffHandler implements HttpHandler {
 		if (type.equals(FileFormats.JSON) && !config.isEmpty()) {
 			params.put("config", config);
 		}
-
+		if (is20 && !paragraph && config.isEmpty()) {
+			params.put("resegment", "yes");
+			params.put("paragraph", "yes");
+		}
+		
 		new Thread(new Runnable() {
 
 			@Override
 			public void run() {
 				processMap.put(process, RUNNING);
 				List<String> result = Convert.run(params);
-				if (embed && Constants.SUCCESS.equals(result.get(0))) {
-					result = Convert.addSkeleton(xliff, catalog);
-				}
-				if (is20 && Constants.SUCCESS.equals(result.get(0))) {
-					result = ToXliff2.run(new File(xliff), catalog);
-				}
 				JSONObject jsonResult = new JSONObject();
 				if (Constants.SUCCESS.equals(result.get(0))) {
 					jsonResult.put(RESULT, SUCCESS);
@@ -533,16 +533,24 @@ public class XliffHandler implements HttpHandler {
 
 	private static String getTypes() {
 		String[] formats = FileFormats.getFormats();
+		List<FileType> types = new ArrayList<>();
+		for (int i = 0; i < formats.length; i++) {
+			String code = FileFormats.getShortName(formats[i]);
+			String description = FileFormats.getLocalizedName(formats[i]);
+			types.add(new FileType(code, description));
+		}
+		Collections.sort(types);
 		StringBuilder builder = new StringBuilder();
 		builder.append("{\"types\": [\n");
-		for (int i = 0; i < formats.length; i++) {
+		for (int i = 0; i < types.size(); i++) {
+			FileType type = types.get(i);
 			if (i > 0) {
 				builder.append(",\n");
 			}
 			builder.append("{\"type\":\"");
-			builder.append(FileFormats.getShortName(formats[i]));
+			builder.append(type.getCode());
 			builder.append("\", \"description\":\"");
-			builder.append(formats[i]);
+			builder.append(type.getDescription());
 			builder.append("\"}");
 		}
 		builder.append("]}\n");

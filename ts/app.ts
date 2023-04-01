@@ -11,9 +11,10 @@
  *******************************************************************************/
 
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, nativeTheme, net, Rectangle, session, shell } from "electron";
+import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, nativeTheme, net, Rectangle, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
+import { I18n } from "./i18n";
 
 class App {
 
@@ -43,8 +44,11 @@ class App {
     static latestVersion: string;
     static downloadLink: string;
 
+    static i18n: I18n;
+    static lang: string = 'en';
+
     ls: ChildProcessWithoutNullStreams;
-    stopping: boolean;
+    stopping: boolean = false;
 
     constructor() {
         if (!app.requestSingleInstanceLock()) {
@@ -76,12 +80,16 @@ class App {
                 srx: App.defaultSRX,
                 catalog: App.defaultCatalog,
                 skeleton: App.sklFolder,
-                theme: 'system'
+                theme: 'system',
+                appLang: 'en'
             }
-            writeFileSync(App.defaultsFile, JSON.stringify(defaults));
+            writeFileSync(App.defaultsFile, JSON.stringify(defaults, null, 2));
         }
+        this.loadDefaults();
 
-        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000'], { cwd: app.getAppPath() });
+        App.i18n = new I18n(App.path.join(app.getAppPath(), 'i18n', 'xliffmanager_' + App.lang + '.json'));
+
+        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000', '-lang', App.lang], { cwd: app.getAppPath() });
         if (!app.isPackaged) {
             this.ls.stdout.on('data', (data: Buffer | string) => {
                 console.log(data instanceof Buffer ? data.toString() : data);
@@ -95,7 +103,6 @@ class App {
         app.on('ready', () => {
             this.createWindow();
             this.createMenu();
-            this.loadDefaults();
             App.mainWindow.once('ready-to-show', () => {
                 App.loadLocation();
                 App.mainWindow.show();
@@ -209,6 +216,9 @@ class App {
         ipcMain.on('get-defaultTheme', (event: IpcMainEvent) => {
             event.sender.send('set-defaultTheme', App.defaultTheme);
         });
+        ipcMain.on('get-appLanguage', (event: IpcMainEvent) => {
+            event.sender.send('set-appLanguage', App.lang);
+        });
         ipcMain.on('get-version', (event: IpcMainEvent) => {
             this.getVersion(event);
         });
@@ -264,10 +274,16 @@ class App {
             shell.openExternal('file://' + arg.file, {
                 activate: true, workingDirectory: app.getAppPath()
             }).catch((error: Error) => {
-                dialog.showErrorBox('Error', error.message);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
             });
         });
         ipcMain.on('show-dialog', (event: IpcMainEvent, arg: any) => {
+            if (arg.key) {
+                arg.message = App.i18n.getString('Main', arg.key);
+            }
+            if (arg.titleKey) {
+                arg.title = App.i18n.getString('Main', arg.titleKey);
+            }
             dialog.showMessageBox(arg);
         });
         ipcMain.on('show-message', (event: IpcMainEvent, arg: any) => {
@@ -307,17 +323,16 @@ class App {
     static destroyWindow(window: BrowserWindow): void {
         if (window) {
             try {
-                let parent: BrowserWindow = window.getParentWindow();
+                let parent: BrowserWindow | null = window.getParentWindow();
                 window.hide();
                 window.destroy();
-                window = undefined;
                 if (parent) {
                     parent.focus();
                 } else {
                     App.mainWindow.focus();
                 }
             } catch (error: any) {
-                console.log(JSON.stringify(error));
+                console.error(error);
             }
         }
     }
@@ -334,7 +349,7 @@ class App {
             },
             height: 500
         });
-        App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'main.html'));
+        App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'main.html'));
         App.mainWindow.on('move', () => {
             App.saveLocation();
         });
@@ -344,7 +359,7 @@ class App {
         let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
         let position: number[] = App.mainWindow.getPosition();
         let pos: any = { x: position[0], y: position[1] }
-        writeFileSync(defaultsFile, JSON.stringify(pos));
+        writeFileSync(defaultsFile, JSON.stringify(pos, null, 2));
     }
 
     static loadLocation(): void {
@@ -355,13 +370,13 @@ class App {
                 let pos: any = JSON.parse(data.toString());
                 App.mainWindow.setPosition(pos.x, pos.y);
             } catch (error: any) {
-                console.log(JSON.stringify(error));
+                console.error(error);
             }
         }
     }
 
     saveDefaults(defaults: any): void {
-        writeFileSync(App.defaultsFile, JSON.stringify(defaults));
+        writeFileSync(App.defaultsFile, JSON.stringify(defaults, null, 2));
         App.settingsWindow.hide();
         App.settingsWindow.destroy();
         App.mainWindow.focus();
@@ -391,7 +406,22 @@ class App {
         if (defaults.theme) {
             App.defaultTheme = defaults.theme;
         }
-
+        if (defaults.appLang) {
+            if (app.isReady() && defaults.appLang !== App.lang) {
+                dialog.showMessageBox({
+                    type: 'question',
+                    message: App.i18n.getString('App', 'languageChanged'),
+                    buttons: [App.i18n.getString('App', 'restart'), App.i18n.getString('App', 'dismiss')],
+                    cancelId: 1
+                }).then((value: MessageBoxReturnValue) => {
+                    if (value.response == 0) {
+                        app.relaunch();
+                        app.quit();
+                    }
+                });
+            }
+            App.lang = defaults.appLang;
+        }
         let light = App.path.join(app.getAppPath(), 'css', 'light.css');
         let dark = App.path.join(app.getAppPath(), 'css', 'dark.css');
 
@@ -419,10 +449,11 @@ class App {
             (data: any) => {
                 data.srcLang = App.defaultSrcLang;
                 data.tgtLang = App.defaultTgtLang;
+                data.none = App.i18n.getString('Main', 'selectLanguage');
                 event.sender.send('languages-received', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -434,7 +465,7 @@ class App {
                 event.sender.send('package-languages', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -446,7 +477,7 @@ class App {
                 event.sender.send('xliff-languages', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -455,10 +486,11 @@ class App {
     getCharsets(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getCharsets' },
             (data: any) => {
+                data.none = App.i18n.getString('Main', 'selectCharset');
                 event.sender.send('charsets-received', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -467,10 +499,11 @@ class App {
     getTypes(event: IpcMainEvent): void {
         App.sendRequest({ command: 'getTypes' },
             (data: any) => {
+                data.none = App.i18n.getString('Main', 'selectFileType');
                 event.sender.send('types-received', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -484,40 +517,40 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'Any File', extensions: anyFile },
-                { name: 'Adobe InCopy ICML', extensions: ['icml'] },
-                { name: 'Adobe InDesign Interchange', extensions: ['inx'] },
-                { name: 'Adobe InDesign IDML', extensions: ['idml'] },
-                { name: 'DITA Map', extensions: ['ditamap', 'dita', 'xml'] },
-                { name: 'HTML Page', extensions: ['html', 'htm'] },
-                { name: 'JavaScript', extensions: ['js'] },
-                { name: 'Java Properties', extensions: ['properties'] },
-                { name: 'JSON', extensions: ['json'] },
-                { name: 'MIF (Maker Interchange Format)', extensions: ['mif'] },
-                { name: 'Microsoft Office 2007 Document', extensions: ['docx', 'xlsx', 'pptx'] },
-                { name: 'OpenOffice 1.x Document', extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
-                { name: 'OpenOffice 2.x Document', extensions: ['odt', 'ods', 'odp', 'odg'] },
-                { name: 'Plain Text', extensions: ['txt'] },
-                { name: 'PO (Portable Objects)', extensions: ['po', 'pot'] },
-                { name: 'RC (Windows C/C++ Resources)', extensions: ['rc'] },
-                { name: 'ResX (Windows .NET Resources)', extensions: ['resx'] },
-                { name: 'SDLXLIFF Document', extensions: ['sdlxliff'] },
-                { name: 'SRT Subtitle', extensions: ['srt'] },
-                { name: 'SVG (Scalable Vector Graphics)', extensions: ['svg'] },
-                { name: 'Trados Studio Package', extensions: ['sdlppx'] },
-                { name: 'TS (Qt Linguist translation source)', extensions: ['ts'] },
-                { name: 'TXML Document', extensions: ['txml'] },
-                { name: 'Visio XML Drawing', extensions: ['vsdx'] },
-                { name: 'Wordfast/GlobalLink XLIFF Document', extensions: ['txlf'] },
-                { name: 'XLIFF Document', extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
-                { name: 'XML Document', extensions: ['xml'] }
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: anyFile },
+                { name: App.i18n.getString('FileFormats', 'icml'), extensions: ['icml'] },
+                { name: App.i18n.getString('FileFormats', 'inx'), extensions: ['inx'] },
+                { name: App.i18n.getString('FileFormats', 'idml'), extensions: ['idml'] },
+                { name: App.i18n.getString('FileFormats', 'ditamap'), extensions: ['ditamap', 'dita', 'xml'] },
+                { name: App.i18n.getString('FileFormats', 'html'), extensions: ['html', 'htm'] },
+                { name: App.i18n.getString('FileFormats', 'javascript'), extensions: ['js'] },
+                { name: App.i18n.getString('FileFormats', 'properties'), extensions: ['properties'] },
+                { name: App.i18n.getString('FileFormats', 'json'), extensions: ['json'] },
+                { name: App.i18n.getString('FileFormats', 'mif'), extensions: ['mif'] },
+                { name: App.i18n.getString('FileFormats', 'office'), extensions: ['docx', 'xlsx', 'pptx'] },
+                { name: App.i18n.getString('FileFormats', 'openOffice1'), extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
+                { name: App.i18n.getString('FileFormats', 'openOffice2'), extensions: ['odt', 'ods', 'odp', 'odg'] },
+                { name: App.i18n.getString('FileFormats', 'plainText'), extensions: ['txt'] },
+                { name: App.i18n.getString('FileFormats', 'po'), extensions: ['po', 'pot'] },
+                { name: App.i18n.getString('FileFormats', 'rc'), extensions: ['rc'] },
+                { name: App.i18n.getString('FileFormats', 'resx'), extensions: ['resx'] },
+                { name: App.i18n.getString('FileFormats', 'sdlxliff'), extensions: ['sdlxliff'] },
+                { name: App.i18n.getString('FileFormats', 'srt'), extensions: ['srt'] },
+                { name: App.i18n.getString('FileFormats', 'svg'), extensions: ['svg'] },
+                { name: App.i18n.getString('FileFormats', 'tradosPackage'), extensions: ['sdlppx'] },
+                { name: App.i18n.getString('FileFormats', 'ts'), extensions: ['ts'] },
+                { name: App.i18n.getString('FileFormats', 'txml'), extensions: ['txml'] },
+                { name: App.i18n.getString('FileFormats', 'visio'), extensions: ['vsdx'] },
+                { name: App.i18n.getString('FileFormats', 'txlf'), extensions: ['txlf'] },
+                { name: App.i18n.getString('FileFormats', 'xliff'), extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
+                { name: App.i18n.getString('FileFormats', 'xml'), extensions: ['xml'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 this.getFileType(event, value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -525,7 +558,7 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -533,7 +566,7 @@ class App {
                 this.getTargetFile(event, value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -541,15 +574,15 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'DITAVAL File', extensions: ['ditaval'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'ditaval'), extensions: ['ditaval'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-ditaval-file', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -557,15 +590,15 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'JSON File', extensions: ['json'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'jsonFile'), extensions: ['json'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-config-file', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -575,7 +608,7 @@ class App {
         arg.srx = App.defaultSRX;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('conversion-started');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'creatingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -590,7 +623,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -600,14 +633,14 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-xliff-validation', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -615,14 +648,14 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-xliff-tasks', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -630,7 +663,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('validation-started', '');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'validatingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -645,7 +678,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -655,7 +688,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('process-started', '');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -670,7 +703,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -678,13 +711,13 @@ class App {
 
     selectTargetFile(event: IpcMainEvent): void {
         dialog.showSaveDialog({
-            title: 'Target File/Folder'
+            title: App.i18n.getString('App', 'targetFolder')
         }).then((value: Electron.SaveDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-target-file', value.filePath);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -692,7 +725,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('merge-created');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'mergingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -707,7 +740,7 @@ class App {
                 }, 1000);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -717,14 +750,14 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: 'XLIFF File', extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('add-xliff-analysis', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
@@ -732,7 +765,7 @@ class App {
         arg.catalog = App.defaultCatalog;
         App.sendRequest(arg,
             (data: any) => {
-                event.sender.send('analysis-started');
+                event.sender.send('set-status', { status: App.i18n.getString('App', 'analysingXliff') });
                 App.status = 'running';
                 let intervalObject = setInterval(() => {
                     App.getStatus(data.process);
@@ -747,7 +780,7 @@ class App {
                 }, 600);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -759,7 +792,7 @@ class App {
                 event.sender.send('add-source-file', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -771,11 +804,11 @@ class App {
                 if (data.result === 'Success') {
                     event.sender.send('add-target-file', data.target);
                 } else {
-                    dialog.showErrorBox('Error', data.reason);
+                    dialog.showErrorBox(App.i18n.getString('App', 'error'), data.reason);
                 }
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -788,7 +821,7 @@ class App {
             },
             (reason: string) => {
                 App.status = 'error';
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
@@ -800,7 +833,7 @@ class App {
                 event.sender.send(callback, data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
             }
         );
     }
@@ -846,7 +879,7 @@ class App {
                                 }
                             });
                             App.updatesWindow.setMenu(null);
-                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'updates.html'));
+                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', App.lang, 'updates.html'));
                             App.updatesWindow.once('ready-to-show', () => {
                                 App.updatesWindow.show();
                             });
@@ -857,7 +890,7 @@ class App {
                             if (!silent) {
                                 dialog.showMessageBox(App.mainWindow, {
                                     type: 'info',
-                                    message: 'There are currently no updates available'
+                                    message: App.i18n.getString('App', 'noUpdates')
                                 });
                             }
                         }
@@ -885,54 +918,62 @@ class App {
 
     createMenu(): void {
         let helpMenu: Menu = Menu.buildFromTemplate([
-            { label: 'XLIFF Manager User Guide', accelerator: 'F1', click: () => { App.showHelp() } },
+            { label: App.i18n.getString('App', 'userGuide'), accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
-            { label: 'Check for Updates', click: () => { App.checkUpdates(false); } },
+            { label: App.i18n.getString('App', 'checkUpdates'), click: () => { App.checkUpdates(false); } },
             { type: 'separator' },
-            { label: 'View Licenses', click: () => { App.showLicenses({ from: 'menu' }); } },
+            { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.showLicenses({ from: 'menu' }); } },
             { type: 'separator' },
-            { label: 'View Release History', click: () => { App.releaseHistory(); } },
-            { label: 'Support Group', click: () => { App.showSupportGroup(); } },
+            { label: App.i18n.getString('App', 'releaseHistory'), click: () => { App.releaseHistory(); } },
+            { label: App.i18n.getString('App', 'supportGroup'), click: () => { App.showSupportGroup(); } },
         ]);
         let template: MenuItem[] = [
-            new MenuItem({ label: '&Help', role: 'help', submenu: helpMenu })
+            new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
         ];
         if (!app.isPackaged) {
-            helpMenu.append(new MenuItem({ label: 'Open Development Tools', accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
+            helpMenu.append(new MenuItem({ label: App.i18n.getString('App', 'developmentTools'), accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
         }
 
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([
-                { label: 'About XLIFF Manager', click: () => { App.showAbout(); } },
-                { label: 'Preferences...', accelerator: 'Cmd+,', click: () => { App.showSettings(); } },
+                { label: App.i18n.getString('App', 'aboutMac'), click: () => { App.showAbout(); } },
+                { label: App.i18n.getString('App', 'preferences'), accelerator: 'Cmd+,', click: () => { App.showSettings(); } },
                 { type: 'separator' },
                 {
-                    label: 'Services', role: 'services', submenu: [
-                        { label: 'No Services Apply', enabled: false }
+                    label: App.i18n.getString('App', 'services'), role: 'services', submenu: [
+                        { label: App.i18n.getString('App', 'noServices'), enabled: false }
                     ]
                 },
                 { type: 'separator' },
-                { label: 'Quit XLIFF Manager', accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
+                { label: App.i18n.getString('App', 'quitMac'), accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
             ]);
-            template.unshift(new MenuItem({ label: 'XLIFF Manager', submenu: appleMenu }));
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'xliffManager'), submenu: appleMenu }));
         } else {
             let fileMenu: Menu = Menu.buildFromTemplate([
-                { label: 'Settings', click: () => { App.showSettings(); } },
+                { label: App.i18n.getString('App', 'settings'), click: () => { App.showSettings(); } },
                 { type: 'separator' }
             ]);
-            template.unshift(new MenuItem({ label: '&File', submenu: fileMenu }));
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'fileMenu'), submenu: fileMenu }));
         }
 
         if (process.platform === 'win32') {
-            template[0].submenu.append(new MenuItem({ label: 'Exit', accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
-            template[1].submenu.append(new MenuItem({ type: 'separator' }));
-            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+            if (template[0].submenu) {
+                template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'exit'), accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
+            }
+            if (template[1].submenu) {
+                template[1].submenu.append(new MenuItem({ type: 'separator' }));
+                template[1].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
+            }
         }
 
         if (process.platform === 'linux') {
-            template[0].submenu.append(new MenuItem({ label: 'Quit', accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
-            template[1].submenu.append(new MenuItem({ type: 'separator' }));
-            template[1].submenu.append(new MenuItem({ label: 'About...', click: () => { App.showAbout(); } }));
+            if (template[0].submenu) {
+                template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'quit'), accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
+            }
+            if (template[1].submenu) {
+                template[1].submenu.append(new MenuItem({ type: 'separator' }));
+                template[1].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
+            }
         }
 
         Menu.setApplicationMenu(Menu.buildFromTemplate(template));
@@ -953,7 +994,7 @@ class App {
             }
         });
         App.aboutWindow.setMenu(null);
-        App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'about.html'));
+        App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'about.html'));
         App.aboutWindow.once('ready-to-show', () => {
             App.aboutWindow.show();
         });
@@ -965,21 +1006,22 @@ class App {
     getVersion(event: IpcMainEvent): void {
         App.sendRequest({ command: 'version' },
             (data: any) => {
-                data.xliffManager = app.getVersion();
+                data.xliffManager = App.i18n.format(App.i18n.getString('About', 'xliffmanager'), [app.getVersion()]);
+                data.openxliff = App.i18n.format(App.i18n.getString('About', 'openxliff'), [data.tool, data.version, data.build]);
                 event.sender.send('set-version', data);
             },
             (reason: string) => {
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 console.log(reason);
             }
         );
     }
 
     static showHelp(): void {
-        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager.pdf'), {
+        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager_' + App.lang + '.pdf'), {
             activate: true, workingDirectory: app.getAppPath()
         }).catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
@@ -998,7 +1040,7 @@ class App {
             }
         });
         App.settingsWindow.setMenu(null);
-        App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', 'settings.html'));
+        App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'settings.html'));
         App.settingsWindow.once('ready-to-show', () => {
             App.settingsWindow.show();
         });
@@ -1009,43 +1051,43 @@ class App {
 
     selectSrx(event: IpcMainEvent): void {
         dialog.showOpenDialog({
-            title: 'Default SRX File',
+            title: App.i18n.getString('App', 'defaultSRX'),
             defaultPath: App.defaultSRX,
             properties: ['openFile'],
             filters: [
-                { name: 'SRX File', extensions: ['srx'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'srxFile'), extensions: ['srx'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('srx-received', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
     selectCatalog(event: IpcMainEvent): void {
         dialog.showOpenDialog({
-            title: 'Default Catalog',
+            title: App.i18n.getString('App', 'defaultCatalog'),
             defaultPath: App.defaultCatalog,
             properties: ['openFile'],
             filters: [
-                { name: 'XML File', extensions: ['xml'] },
-                { name: 'Any File', extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'xmlFile'), extensions: ['xml'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 event.sender.send('catalog-received', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
     selectSkeleton(event: IpcMainEvent): void {
         dialog.showOpenDialog({
-            title: 'Skeleton Folder',
+            title: App.i18n.getString('App', 'skeletonFolder'),
             defaultPath: App.sklFolder,
             properties: ['openDirectory', 'createDirectory']
         }).then((value: Electron.OpenDialogReturnValue) => {
@@ -1053,13 +1095,13 @@ class App {
                 event.sender.send('skeleton-received', value.filePaths[0]);
             }
         }).catch((error: any) => {
-            console.log(JSON.stringify(error));
+            console.error(error);
         });
     }
 
     static releaseHistory(): void {
         shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html").catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
@@ -1082,7 +1124,7 @@ class App {
             }
         });
         App.licensesWindow.setMenu(null);
-        App.licensesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', 'licenses.html'));
+        App.licensesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', App.lang, 'licenses.html'));
         App.licensesWindow.once('ready-to-show', () => {
             App.licensesWindow.show();
         });
@@ -1127,7 +1169,7 @@ class App {
                 title = 'LGPL 2.1';
                 break;
             default:
-                dialog.showErrorBox('Error', 'Unknown license');
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), 'Unknown license');
                 return;
         }
         let licenseWindow = new BrowserWindow({
@@ -1154,13 +1196,13 @@ class App {
 
     static showSupportGroup(): void {
         shell.openExternal('https://groups.io/g/maxprograms/').catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
     static showHomePage(): void {
-        shell.openExternal("https://www.maxprograms.com/").catch((error: Error) => {
-            dialog.showErrorBox('Error', error.message);
+        shell.openExternal("https://maxprograms.com/").catch((error: Error) => {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
         });
     }
 
@@ -1178,7 +1220,7 @@ class App {
                 error(e.message);
             });
             response.on('aborted', () => {
-                error('Request aborted');
+                error(App.i18n.getString('App', 'requestAborted'));
             });
             response.on('end', () => {
                 try {
@@ -1217,26 +1259,29 @@ class App {
         request.on('response', (response: IncomingMessage) => {
             let fileSize = Number.parseInt(response.headers['content-length'] as string);
             let received: number = 0;
+            let downloaded: string = App.i18n.getString('App', 'downloaded');
             response.on('data', (chunk: Buffer) => {
                 received += chunk.length;
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(received / fileSize);
                 }
-                App.mainWindow.webContents.send('set-status', { status: 'Downloaded: ' + Math.trunc(received * 100 / fileSize) + '%' });
+                App.mainWindow.webContents.send('set-status', {
+                    status: App.i18n.format(downloaded, ['' + Math.trunc(received * 100 / fileSize)])
+                });
                 appendFileSync(file, chunk);
             });
             response.on('end', () => {
                 App.mainWindow.webContents.send('set-status', { status: '' });
                 dialog.showMessageBox({
                     type: 'info',
-                    message: 'Update downloaded'
+                    message: App.i18n.getString('App', 'updateDownloaded')
                 });
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(0);
                     shell.openPath(file).then(() => {
                         app.quit();
                     }).catch((reason: string) => {
-                        dialog.showErrorBox('Error', reason);
+                        dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                     });
                 }
                 if (process.platform === 'linux') {
@@ -1245,7 +1290,7 @@ class App {
             });
             response.on('error', (reason: string) => {
                 App.mainWindow.webContents.send('set-status', { status: '' });
-                dialog.showErrorBox('Error', reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(0);
                 }
@@ -1254,6 +1299,7 @@ class App {
         request.end();
     }
 }
+
 try {
     new App();
 } catch (e) {

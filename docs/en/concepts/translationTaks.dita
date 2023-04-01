@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="translationTaks">
+    <title>Translation Tasks</title>
+    <shortdesc></shortdesc>
+    <conbody>
+        <p>Use the options in the <uicontrol>Translation Tasks</uicontrol> panel to:</p>
+        <ul>
+            <li><xref href="../tasks/copySources.dita">Copy Source to all Untranslated Segments</xref></li>
+            <li><xref href="../tasks/pseudoTranslate.dita">Pseudo-Translate Untranslated Segments</xref></li>
+            <li><xref href="../tasks/removeTargets.dita">Remove all Targets</xref></li>
+            <li><xref href="../tasks/approveAll.dita">Approve all Segments</xref></li>
+        </ul>
+        <fig>
+            <image align="center" placement="break" href="../images/translationTasks.png"
+                scalefit="yes">
+                <alt>Translation Tasks</alt>
+            </image>
+        </fig>
+    </conbody>
+</concept>

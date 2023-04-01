@@ -11,13 +11,13 @@
  *******************************************************************************/
 
 class Charset {
-    code: string;
-    description: string;
+    code!: string;
+    description!: string;
 }
 
 class Language {
-    code: string;
-    description: string;
+    code!: string;
+    description!: string;
 }
 
 class Main {
@@ -27,6 +27,8 @@ class Main {
 
     constructor() {
         this.electron.ipcRenderer.send('get-theme');
+
+        document.addEventListener('keydown', (event: KeyboardEvent) => { KeyboardHandler.keyListener(event); });
 
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
@@ -44,31 +46,31 @@ class Main {
             this.setStatus(arg.status);
         });
 
-        document.getElementById('createTab').addEventListener('click', () => { this.showCreate(); });
-        document.getElementById('mergeTab').addEventListener('click', () => { this.showMerge(); });
-        document.getElementById('validateTab').addEventListener('click', () => { this.showValidate(); });
-        document.getElementById('analysisTab').addEventListener('click', () => { this.showAnalysis(); });
-        document.getElementById('tasksTab').addEventListener('click', () => { this.showTasks(); });
-        document.getElementById('infoButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
-        document.getElementById('updatesButton').addEventListener('click', () => { this.electron.ipcRenderer.send('check-updates'); });
-        document.getElementById('settingsButton').addEventListener('click', () => { this.electron.ipcRenderer.send('show-settings'); });
-        document.getElementById('browseSource').addEventListener('click', () => { this.electron.ipcRenderer.send('select-source-file'); });
-        document.getElementById('typeSelect').addEventListener('change', () => { this.typeChanged(); });
-        document.getElementById('browseDitaVal').addEventListener('click', () => { this.electron.ipcRenderer.send('select-ditaval'); });
-        document.getElementById('browseConfig').addEventListener('click', () => { this.electron.ipcRenderer.send('select-config'); });
-        document.getElementById('createXLIFF').addEventListener('click', () => { this.createXLIFF(); });
-        document.getElementById('browseXLIFF').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-file'); });
-        document.getElementById('browseTarget').addEventListener('click', () => { this.electron.ipcRenderer.send('select-target-file'); });
-        document.getElementById('mergeXLIFF').addEventListener('click', () => { this.mergeXLIFF(); });
-        document.getElementById('browseXLIFFValidation').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-validation'); });
-        document.getElementById('validateButton').addEventListener('click', () => { this.validate(); });
-        document.getElementById('browseXLIFFAnalysis').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
-        document.getElementById('analyseButton').addEventListener('click', () => { this.analyse(); });
-        document.getElementById('browseXLIFFTasks').addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-tasks'); });
-        document.getElementById('copySourcesButton').addEventListener('click', () => { this.copySources(); });
-        document.getElementById('pseudoTranslateButton').addEventListener('click', () => { this.pseudoTranslate(); });
-        document.getElementById('removeTargetsButton').addEventListener('click', () => { this.removeTargets(); });
-        document.getElementById('approveAllButton').addEventListener('click', () => { this.approveAll(); });
+        (document.getElementById('createTab') as HTMLAnchorElement).addEventListener('click', () => { this.showCreate(); });
+        (document.getElementById('mergeTab') as HTMLAnchorElement).addEventListener('click', () => { this.showMerge(); });
+        (document.getElementById('validateTab') as HTMLAnchorElement).addEventListener('click', () => { this.showValidate(); });
+        (document.getElementById('analysisTab') as HTMLAnchorElement).addEventListener('click', () => { this.showAnalysis(); });
+        (document.getElementById('tasksTab') as HTMLAnchorElement).addEventListener('click', () => { this.showTasks(); });
+        (document.getElementById('infoButton') as HTMLAnchorElement).addEventListener('click', () => { this.electron.ipcRenderer.send('show-about'); });
+        (document.getElementById('updatesButton') as HTMLAnchorElement).addEventListener('click', () => { this.electron.ipcRenderer.send('check-updates'); });
+        (document.getElementById('settingsButton') as HTMLAnchorElement).addEventListener('click', () => { this.electron.ipcRenderer.send('show-settings'); });
+        (document.getElementById('browseSource') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-source-file'); });
+        (document.getElementById('typeSelect') as HTMLSelectElement).addEventListener('change', () => { this.typeChanged(); });
+        (document.getElementById('browseDitaVal') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-ditaval'); });
+        (document.getElementById('browseConfig') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-config'); });
+        (document.getElementById('createXLIFF') as HTMLButtonElement).addEventListener('click', () => { this.createXLIFF(); });
+        (document.getElementById('browseXLIFF') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-file'); });
+        (document.getElementById('browseTarget') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-target-file'); });
+        (document.getElementById('mergeXLIFF') as HTMLButtonElement).addEventListener('click', () => { this.mergeXLIFF(); });
+        (document.getElementById('browseXLIFFValidation') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-validation'); });
+        (document.getElementById('validateButton') as HTMLButtonElement).addEventListener('click', () => { this.validate(); });
+        (document.getElementById('browseXLIFFAnalysis') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-analysis'); });
+        (document.getElementById('analyseButton') as HTMLButtonElement).addEventListener('click', () => { this.analyse(); });
+        (document.getElementById('browseXLIFFTasks') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-xliff-tasks'); });
+        (document.getElementById('copySourcesButton') as HTMLButtonElement).addEventListener('click', () => { this.copySources(); });
+        (document.getElementById('pseudoTranslateButton') as HTMLButtonElement).addEventListener('click', () => { this.pseudoTranslate(); });
+        (document.getElementById('removeTargetsButton') as HTMLButtonElement).addEventListener('click', () => { this.removeTargets(); });
+        (document.getElementById('approveAllButton') as HTMLButtonElement).addEventListener('click', () => { this.approveAll(); });
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
@@ -106,24 +108,8 @@ class Main {
             this.charsetsReceived(arg);
         });
 
-        this.electron.ipcRenderer.on('conversion-started', () => {
-            this.setStatus('Creating XLIFF');
-        });
-
-        this.electron.ipcRenderer.on('validation-started', () => {
-            this.setStatus('Validating XLIFF');
-        });
-
-        this.electron.ipcRenderer.on('process-started', () => {
-            this.setStatus('Processing XLIFF');
-        });
-
         this.electron.ipcRenderer.on('process-completed', (event: Electron.IpcRendererEvent, arg: any) => {
             this.processCompleted(arg);
-        });
-
-        this.electron.ipcRenderer.on('analysis-started', () => {
-            this.setStatus('Analysing XLIFF');
         });
 
         this.electron.ipcRenderer.on('analysis-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -136,10 +122,6 @@ class Main {
 
         this.electron.ipcRenderer.on('conversion-completed', (event: Electron.IpcRendererEvent, arg: any) => {
             this.conversionCompleted(arg);
-        });
-
-        this.electron.ipcRenderer.on('merge-created', () => {
-            this.setStatus('Merging XLIFF');
         });
 
         this.electron.ipcRenderer.on('merge-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -160,7 +142,7 @@ class Main {
 
         this.electron.ipcRenderer.on('get-height', () => {
             this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
-        })
+        });
     }
 
     startWaiting(): void {
@@ -205,22 +187,22 @@ class Main {
     createXLIFF(): void {
         let sourceFile: string = (document.getElementById('sourceFile') as HTMLInputElement).value;
         if (!sourceFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'sourceFileWarning' });
             return;
         }
         let sourceLang: string = (document.getElementById('sourceSelect') as HTMLSelectElement).value;
         if (sourceLang === 'none') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select source language' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'sourceLanguageWarning' });
             return;
         }
         let fileType: string = (document.getElementById('typeSelect') as HTMLSelectElement).value;
         if (fileType === 'none') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select file type' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'fileTypeWarning' });
             return;
         }
         let charset: string = (document.getElementById('charsetSelect') as HTMLSelectElement).value;
         if (charset === 'none') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select character set' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'characterSetWarning' });
             return;
         }
         let args: any = { command: 'convert', file: sourceFile, srcLang: sourceLang, type: fileType, enc: charset };
@@ -261,7 +243,7 @@ class Main {
         this.endWaiting();
         this.setStatus('');
         if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file created' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'xliffCreated' });
         } else {
             this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
@@ -270,7 +252,7 @@ class Main {
     validate(): void {
         let xliffFile: string = (document.getElementById('xliffFileValidation') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let args = { command: 'validateXliff', file: xliffFile };
@@ -296,7 +278,7 @@ class Main {
     analyse(): void {
         let xliffFile: string = (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let args = { command: 'analyseXliff', file: xliffFile };
@@ -308,7 +290,7 @@ class Main {
         this.endWaiting();
         this.setStatus('');
         if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'Analysis completed' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'analysisCompleted' });
             this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
         } else {
             this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
@@ -325,21 +307,21 @@ class Main {
 
     typesReceived(arg: any): void {
         let array: any[] = arg.types;
-        let options: string = '<option value="none">Select File Type</option>';
+        let options: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((type: any) => {
             options = options + '<option value="' + type.type + '">' + type.description + '</option>';
         });
-        document.getElementById('typeSelect').innerHTML = options;
+        (document.getElementById('typeSelect') as HTMLSelectElement).innerHTML = options;
         this.electron.ipcRenderer.send('get-charsets');
     }
 
     charsetsReceived(arg: any): any {
         let array: Charset[] = arg.charsets;
-        let options: string = '<option value="none">Select Character Set</option>';
+        let options: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((charset: Charset) => {
             options = options + '<option value="' + charset.code + '">' + charset.description + '</option>';
         });
-        document.getElementById('charsetSelect').innerHTML = options;
+        (document.getElementById('charsetSelect') as HTMLSelectElement).innerHTML = options;
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
@@ -355,9 +337,10 @@ class Main {
         srcArray.forEach((lang: Language) => {
             srcOptions = srcOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
-        document.getElementById('sourceSelect').innerHTML = srcOptions;
+        let sourceSelect: HTMLSelectElement = document.getElementById('sourceSelect') as HTMLSelectElement;
+        sourceSelect.innerHTML = srcOptions;
         if (srcArray.length === 1) {
-            (document.getElementById('sourceSelect') as HTMLSelectElement).value = srcArray[0].code;
+            sourceSelect.value = srcArray[0].code;
         }
 
         let tgtArray: Language[] = arg.tgtLangs;
@@ -365,7 +348,8 @@ class Main {
         tgtArray.forEach((lang: Language) => {
             tgtOptions = tgtOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
-        document.getElementById('targetSelect').innerHTML = tgtOptions;
+        let targetSelect: HTMLSelectElement = document.getElementById('targetSelect') as HTMLSelectElement;
+        targetSelect.innerHTML = tgtOptions;
         if (tgtArray.length === 1) {
             (document.getElementById('targetSelect') as HTMLSelectElement).value = tgtArray[0].code;
         }
@@ -390,14 +374,16 @@ class Main {
 
     languagesReceived(arg: any): void {
         let array: Language[] = arg.languages;
-        let languageOptions: string = '<option value="none">Select Language</option>';
+        let languageOptions: string = '<option value="none">' + arg.none + '</option>';
         array.forEach((lang: Language) => {
             languageOptions = languageOptions + '<option value="' + lang.code + '">' + lang.description + '</option>';
         });
-        document.getElementById('sourceSelect').innerHTML = languageOptions;
-        (document.getElementById('sourceSelect') as HTMLSelectElement).value = arg.srcLang;
-        document.getElementById('targetSelect').innerHTML = languageOptions;
-        (document.getElementById('targetSelect') as HTMLSelectElement).value = arg.tgtLang;
+        let sourceSelect: HTMLSelectElement = document.getElementById('sourceSelect') as HTMLSelectElement;
+        sourceSelect.innerHTML = languageOptions;
+        sourceSelect.value = arg.srcLang;
+        let targetSelect: HTMLSelectElement = document.getElementById('targetSelect') as HTMLSelectElement;
+        targetSelect.innerHTML = languageOptions;
+        targetSelect.value = arg.tgtLang;
         this.languagesChanged = false;
         this.electron.ipcRenderer.send('get-types');
     }
@@ -405,12 +391,12 @@ class Main {
     mergeXLIFF(): void {
         let xliffFile: string = (document.getElementById('xliffFile') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let targetFile: string = (document.getElementById('targetFile') as HTMLInputElement).value;
         if (!targetFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select target file/folder' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'targetFileWarning' });
             return;
         }
         let args: any = { command: 'merge', xliff: xliffFile, target: targetFile };
@@ -430,7 +416,7 @@ class Main {
         this.endWaiting();
         this.setStatus('');
         if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', title: 'Success', message: 'XLIFF file merged' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'xliffMerged' });
             if ((document.getElementById('openTranslated') as HTMLInputElement).checked) {
                 this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('targetFile') as HTMLInputElement).value });
             }
@@ -472,79 +458,79 @@ class Main {
     }
 
     showCreate(): void {
-        document.getElementById('createTab').classList.add('selectedTab');
-        document.getElementById('mergeTab').classList.remove('selectedTab');
-        document.getElementById('validateTab').classList.remove('selectedTab');
-        document.getElementById('analysisTab').classList.remove('selectedTab');
-        document.getElementById('tasksTab').classList.remove('selectedTab');
-        document.getElementById('create').className = 'tabContent';
-        document.getElementById('merge').className = 'hiddenTab';
-        document.getElementById('validate').className = 'hiddenTab';
-        document.getElementById('analysis').className = 'hiddenTab';
-        document.getElementById('tasks').className = 'hiddenTab';
+        (document.getElementById('createTab') as HTMLAnchorElement).classList.add('selectedTab');
+        (document.getElementById('mergeTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('validateTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('analysisTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('tasksTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('create') as HTMLDivElement).className = 'tabContent';
+        (document.getElementById('merge') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('validate') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('analysis') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('tasks') as HTMLDivElement).className = 'hiddenTab';
         (document.getElementById('sourceFile') as HTMLInputElement).focus();
     }
 
     showMerge(): void {
-        document.getElementById('createTab').classList.remove('selectedTab');
-        document.getElementById('mergeTab').classList.add('selectedTab');
-        document.getElementById('validateTab').classList.remove('selectedTab');
-        document.getElementById('analysisTab').classList.remove('selectedTab');
-        document.getElementById('tasksTab').classList.remove('selectedTab');
-        document.getElementById('create').className = 'hiddenTab';
-        document.getElementById('merge').className = 'tabContent';
-        document.getElementById('validate').className = 'hiddenTab';
-        document.getElementById('analysis').className = 'hiddenTab';
-        document.getElementById('tasks').className = 'hiddenTab';
+        (document.getElementById('createTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('mergeTab') as HTMLAnchorElement).classList.add('selectedTab');
+        (document.getElementById('validateTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('analysisTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('tasksTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('create') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('merge') as HTMLDivElement).className = 'tabContent';
+        (document.getElementById('validate') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('analysis') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('tasks') as HTMLDivElement).className = 'hiddenTab';
         (document.getElementById('xliffFile') as HTMLInputElement).focus();
     }
 
     showValidate(): void {
-        document.getElementById('createTab').classList.remove('selectedTab');
-        document.getElementById('mergeTab').classList.remove('selectedTab');
-        document.getElementById('validateTab').classList.add('selectedTab');
-        document.getElementById('analysisTab').classList.remove('selectedTab');
-        document.getElementById('tasksTab').classList.remove('selectedTab');
-        document.getElementById('create').className = 'hiddenTab';
-        document.getElementById('merge').className = 'hiddenTab';
-        document.getElementById('validate').className = 'tabContent';
-        document.getElementById('analysis').className = 'hiddenTab';
-        document.getElementById('tasks').className = 'hiddenTab';
+        (document.getElementById('createTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('mergeTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('validateTab') as HTMLAnchorElement).classList.add('selectedTab');
+        (document.getElementById('analysisTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('tasksTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('create') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('merge') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('validate') as HTMLDivElement).className = 'tabContent';
+        (document.getElementById('analysis') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('tasks') as HTMLDivElement).className = 'hiddenTab';
         (document.getElementById('xliffFileValidation') as HTMLInputElement).focus();
     }
 
     showAnalysis(): void {
-        document.getElementById('createTab').classList.remove('selectedTab');
-        document.getElementById('mergeTab').classList.remove('selectedTab');
-        document.getElementById('validateTab').classList.remove('selectedTab');
-        document.getElementById('analysisTab').classList.add('selectedTab');
-        document.getElementById('tasksTab').classList.remove('selectedTab');
-        document.getElementById('create').className = 'hiddenTab';
-        document.getElementById('merge').className = 'hiddenTab';
-        document.getElementById('validate').className = 'hiddenTab';
-        document.getElementById('analysis').className = 'tabContent';
-        document.getElementById('tasks').className = 'hiddenTab';
+        (document.getElementById('createTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('mergeTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('validateTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('analysisTab') as HTMLAnchorElement).classList.add('selectedTab');
+        (document.getElementById('tasksTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('create') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('merge') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('validate') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('analysis') as HTMLDivElement).className = 'tabContent';
+        (document.getElementById('tasks') as HTMLDivElement).className = 'hiddenTab';
         (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
     }
 
     showTasks(): void {
-        document.getElementById('createTab').classList.remove('selectedTab');
-        document.getElementById('mergeTab').classList.remove('selectedTab');
-        document.getElementById('validateTab').classList.remove('selectedTab');
-        document.getElementById('analysisTab').classList.remove('selectedTab');
-        document.getElementById('tasksTab').classList.add('selectedTab');
-        document.getElementById('create').className = 'hiddenTab';
-        document.getElementById('merge').className = 'hiddenTab';
-        document.getElementById('validate').className = 'hiddenTab';
-        document.getElementById('analysis').className = 'hiddenTab';
-        document.getElementById('tasks').className = 'tabContent';
+        (document.getElementById('createTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('mergeTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('validateTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('analysisTab') as HTMLAnchorElement).classList.remove('selectedTab');
+        (document.getElementById('tasksTab') as HTMLAnchorElement).classList.add('selectedTab');
+        (document.getElementById('create') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('merge') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('validate') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('analysis') as HTMLDivElement).className = 'hiddenTab';
+        (document.getElementById('tasks') as HTMLDivElement).className = 'tabContent';
         (document.getElementById('xliffFileAnalysis') as HTMLInputElement).focus();
     }
 
     copySources(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let args = { command: 'copySources', file: xliffFile };
@@ -555,7 +541,7 @@ class Main {
     pseudoTranslate(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let args = { command: 'pseudoTranslate', file: xliffFile };
@@ -566,7 +552,7 @@ class Main {
     removeTargets(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let args = { command: 'removeTargets', file: xliffFile };
@@ -577,7 +563,7 @@ class Main {
     approveAll(): void {
         let xliffFile: string = (document.getElementById('xliffFileTasks') as HTMLInputElement).value;
         if (!xliffFile) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', message: 'Select XLIFF file' });
+            this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
         let args = { command: 'approveAll', file: xliffFile };

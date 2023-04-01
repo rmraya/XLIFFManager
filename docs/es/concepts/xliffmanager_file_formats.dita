@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xml:lang="es" id="xliffmanager_file_formats">
+  <title>Tipos de Archivo Compatibles</title>
+  <shortdesc/>
+  <conbody>
+    <p>Con XLIFF Manager puede crear archivos <xref href="../glossaries/XLIFF.dita">XLIFF</xref> a partir de los siguientes tipos de documentos:</p>
+    <simpletable>
+      <sthead>
+        <stentry>Documentación General</stentry>
+        <stentry>Desarrollo de Software</stentry>
+      </sthead>
+      <strow>
+        <stentry>
+          <ul>
+            <li>Adobe InCopy ICML</li>
+            <li>Adobe InDesign Interchange (INX)</li>
+            <li>Adobe InDesign IDML CS4, CS5, CS6 y CC</li>
+            <li>HTML</li>
+            <li>Microsoft Office 2007/2008/2010/2011/2013/2016</li>
+            <li>Microsoft Visio XML Drawings 2007/2010/2013</li>
+            <li>MIF (Maker Interchange Format)</li>
+            <li>OpenOffice/LibreOffice/StarOffice 1.x/2.x/3.x/4.x/5.x</li>
+            <li>Texto sin Formato</li>
+            <li>Paquetes de Trados Studio</li>
+            <li>SDLXLIFF (Trados Studio)</li>
+            <li>Subtítulos SRT</li>
+            <li>TXML de Wordfast/GlobalLink (*.txml)</li>
+            <li>XLIFF de Wordfast/GlobalLink (*.txlf)</li>
+            <li>XLIFF de WPML (WordPress Multilingual Plugin)</li>
+            <li>XLIFF de otras herramientas (*.mqxliff, *.xliff)</li>
+            <li>XML (Genérico)</li>
+            <li>XML con archivos de configuración listos para usar para: <ul>
+                <li>DITA 1.0, 1.1, 1.2 y 1.3</li>
+                <li>DocBook 3.x, 4.x y 5.x</li>
+                <li>SVG</li>
+                <li>Word 2003 ML</li>
+                <li>XHTML</li>
+              </ul> </li>
+          </ul>
+        </stentry>
+        <stentry>
+          <ul>
+            <li>JavaScript</li>
+            <li>Propiedades de Java</li>
+            <li>JSON</li>
+            <li>PHP Arrays</li>
+            <li>PO (Portable Objects)</li>
+            <li>RC (Recursos de Windows C/C++)</li>
+            <li>ResX (Recursos de Windows .NET)</li>
+            <li>TS (Fuente de Traducción de Qt Linguist)</li>
+          </ul>
+        </stentry>
+      </strow>
+    </simpletable>
+    <p>El filtro para archivos XML admite la configuración personalizada. Los usuarios pueden definir reglas de conversión para casi cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles en la documentación de <xref href="https://www.maxprograms.com/products/swordfish.html" scope="external" format="html">Swordfish</xref>.</p>
+  </conbody>
+</concept>

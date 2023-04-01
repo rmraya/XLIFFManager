@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="pseudoTranslate">
+    <title>Pseudo-Translate Untranslated Segments</title>
+    <shortdesc>Copy the content of <codeph>&lt;source></codeph> elements to new or existing empty
+            <codeph>&lt;target></codeph> elements in an XLIFF file, replacing all regular vowels
+        with an accented version (e.g.: e => é).</shortdesc>
+    <taskbody>
+        <context>
+            <p>Use this method to generate a fake translation that you can use to test the <xref
+                    href="merge_xliff.dita">Merge XLIFF File</xref> process. After making sure that
+                Merge runs successfully, you can use the <xref href="removeTargets.dita">Remove all
+                    Targets</xref> option to clean your XLIFF file.</p>
+        </context>
+        <steps>
+            <step>
+                <cmd>On the left panel, click on the <uicontrol><image href="../images/tasks.png"
+                            placement="inline"/> Translation Tasks</uicontrol> option.</cmd>
+            </step>
+            <step>
+                <cmd>Type the name and location of the XLIFF file to process in the <uicontrol>XLIFF
+                        File</uicontrol> text box or click the <uicontrol>Browse...</uicontrol>
+                    button to select an XLIFF file from the file system.</cmd>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Pseudo-Translate</uicontrol> button.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

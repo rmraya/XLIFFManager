@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task xml:lang="es" id="pseudoTranslate">
+  <title>Pseudo-traducir Segmentos no Traducidos</title>
+  <shortdesc>Copie el contenido de los elementos <codeph>&lt;source&gt;</codeph> a los correspondientes elementos <codeph>&lt;target&gt;</codeph> vacíos o no traducidos de un archivo XLIFF, reemplazando todas las vocales regulares con una versión acentuada (por ejemplo: e = &gt; é).</shortdesc>
+  <taskbody>
+    <context>
+      <p>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <xref href="merge_xliff.dita">Combinar XLIFF</xref>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <xref href="removeTargets.dita">Eliminar Todas las Traducciones</xref> para limpiar el archivo XLIFF.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/> Traducciones</uicontrol>.</cmd>
+      </step>
+      <step>
+        <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
+      </step>
+      <step>
+        <cmd>Haga clic en el botón <uicontrol>Pseudo-Traducir</uicontrol>.</cmd>
+      </step>
+    </steps>
+  </taskbody>
+</task>

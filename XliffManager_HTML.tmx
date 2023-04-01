@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx PUBLIC "-//LISA OSCAR:1998//DTD for Translation Memory eXchange//EN" "tmx14.dtd" >
+<tmx version="1.4">
+<header creationtool="Swordfish" creationtoolversion="4.23.0" srclang="en"  adminlang="en" datatype="xml" o-tmf="unknown" segtype="block" creationdate="20230322T092715Z"/>
+<body>
+<tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-0-85-85-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>About...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Acerca de...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-0-86-86-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF Manager</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>XLIFF Manager</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-0-87-87-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF Manager icon</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Icono de XLIFF Manager</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-0-88-88-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>OpenXLIFF Filters Version</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Versión de OpenXLIFF Filters</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-0-89-89-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Licenses</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Licencias</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-0-90-90-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Copyright © 2018-2023 <ph x="ph0">&lt;ph id="ph0"/&gt;</ph>Maxprograms</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Copyright © 2018-2023 <ph x="ph0">&lt;ph id="ph0"/&gt;</ph>Maxprograms</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-100-100-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>TypeScript</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>TypeScript</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-101-101-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Apache License 2.0</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Apache License 2.0</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-102-102-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Java SE</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Java SE</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-103-103-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>GPL2 with Classpath Exception</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>GPL2 with Classpath Exception</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-104-104-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>JSON</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>JSON</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-105-105-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>JSON.org</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>JSON.org</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-106-106-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>MapDB</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>MapDB</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-107-107-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Apache License 2.0</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Apache License 2.0</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-108-108-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>jsoup</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>jsoup</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-109-109-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>MIT License</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>MIT License</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-110-110-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>DTDParser</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>DTDParser</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-111-111-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>LGPL 2.1</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>LGPL 2.1</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-91-91-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Licenses</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Licencias</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-92-92-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF Manager</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>XLIFF Manager</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-93-93-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Eclipse Public License 1.0</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Eclipse Public License 1.0</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-94-94-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>OpenXLIFF Filters</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>OpenXLIFF Filters</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-95-95-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Eclipse Public License 1.0</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Eclipse Public License 1.0</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-96-96-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XMLJava</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>XMLJava</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-97-97-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Eclipse Public License 1.0</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Eclipse Public License 1.0</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-98-98-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Electron</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Electron</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-1-99-99-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>MIT License</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>MIT License</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-112-112-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF Manager</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>XLIFF Manager</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-113-113-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Create XLIFF<ph x="ph0">&lt;ph id="ph0"/&gt;</ph><ph x="ph1">&lt;ph id="ph1"/&gt;</ph> <ph x="ph2">&lt;ph id="ph2"/&gt;</ph><ph x="ph3">&lt;ph id="ph3"/&gt;</ph> <ph x="ph4">&lt;ph id="ph4"/&gt;</ph> <ph x="ph5">&lt;ph id="ph5"/&gt;</ph> <ph x="ph6">&lt;ph id="ph6"/&gt;</ph> <ph x="ph7">&lt;ph id="ph7"/&gt;</ph> <ph x="ph8">&lt;ph id="ph8"/&gt;</ph> <ph x="ph9">&lt;ph id="ph9"/&gt;</ph> <ph x="ph10">&lt;ph id="ph10"/&gt;</ph> <ph x="ph11">&lt;ph id="ph11"/&gt;</ph> <ph x="ph12">&lt;ph id="ph12"/&gt;</ph> <ph x="ph13">&lt;ph id="ph13"/&gt;</ph> <ph x="ph14">&lt;ph id="ph14"/&gt;</ph> <ph x="ph15">&lt;ph id="ph15"/&gt;</ph> <ph x="ph16">&lt;ph id="ph16"/&gt;</ph> <ph x="ph17">&lt;ph id="ph17"/&gt;</ph> <ph x="ph18">&lt;ph id="ph18"/&gt;</ph><ph x="ph19">&lt;ph id="ph19"/&gt;</ph>Merge XLIFF<ph x="ph20">&lt;ph id="ph20"/&gt;</ph><ph x="ph21">&lt;ph id="ph21"/&gt;</ph> <ph x="ph22">&lt;ph id="ph22"/&gt;</ph><ph x="ph23">&lt;ph id="ph23"/&gt;</ph> <ph x="ph24">&lt;ph id="ph24"/&gt;</ph> <ph x="ph25">&lt;ph id="ph25"/&gt;</ph> <ph x="ph26">&lt;ph id="ph26"/&gt;</ph><ph x="ph27">&lt;ph id="ph27"/&gt;</ph>Validate XLIFF<ph x="ph28">&lt;ph id="ph28"/&gt;</ph><ph x="ph29">&lt;ph id="ph29"/&gt;</ph> <ph x="ph30">&lt;ph id="ph30"/&gt;</ph><ph x="ph31">&lt;ph id="ph31"/&gt;</ph> <ph x="ph32">&lt;ph id="ph32"/&gt;</ph> <ph x="ph33">&lt;ph id="ph33"/&gt;</ph> <ph x="ph34">&lt;ph id="ph34"/&gt;</ph> <ph x="ph35">&lt;ph id="ph35"/&gt;</ph> <ph x="ph36">&lt;ph id="ph36"/&gt;</ph><ph x="ph37">&lt;ph id="ph37"/&gt;</ph>Analyse XLIFF<ph x="ph38">&lt;ph id="ph38"/&gt;</ph><ph x="ph39">&lt;ph id="ph39"/&gt;</ph> <ph x="ph40">&lt;ph id="ph40"/&gt;</ph><ph x="ph41">&lt;ph id="ph41"/&gt;</ph> <ph x="ph42">&lt;ph id="ph42"/&gt;</ph> <ph x="ph43">&lt;ph id="ph43"/&gt;</ph> <ph x="ph44">&lt;ph id="ph44"/&gt;</ph> <ph x="ph45">&lt;ph id="ph45"/&gt;</ph> <ph x="ph46">&lt;ph id="ph46"/&gt;</ph> <ph x="ph47">&lt;ph id="ph47"/&gt;</ph><ph x="ph48">&lt;ph id="ph48"/&gt;</ph>Translation Tasks</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Crear XLIFF<ph x="ph0">&lt;ph id="ph0"/&gt;</ph><ph x="ph1">&lt;ph id="ph1"/&gt;</ph> <ph x="ph2">&lt;ph id="ph2"/&gt;</ph><ph x="ph3">&lt;ph id="ph3"/&gt;</ph> <ph x="ph4">&lt;ph id="ph4"/&gt;</ph> <ph x="ph5">&lt;ph id="ph5"/&gt;</ph> <ph x="ph6">&lt;ph id="ph6"/&gt;</ph> <ph x="ph7">&lt;ph id="ph7"/&gt;</ph> <ph x="ph8">&lt;ph id="ph8"/&gt;</ph> <ph x="ph9">&lt;ph id="ph9"/&gt;</ph> <ph x="ph10">&lt;ph id="ph10"/&gt;</ph> <ph x="ph11">&lt;ph id="ph11"/&gt;</ph> <ph x="ph12">&lt;ph id="ph12"/&gt;</ph> <ph x="ph13">&lt;ph id="ph13"/&gt;</ph> <ph x="ph14">&lt;ph id="ph14"/&gt;</ph> <ph x="ph15">&lt;ph id="ph15"/&gt;</ph> <ph x="ph16">&lt;ph id="ph16"/&gt;</ph> <ph x="ph17">&lt;ph id="ph17"/&gt;</ph> <ph x="ph18">&lt;ph id="ph18"/&gt;</ph><ph x="ph19">&lt;ph id="ph19"/&gt;</ph>Combinar XLIFF<ph x="ph20">&lt;ph id="ph20"/&gt;</ph><ph x="ph21">&lt;ph id="ph21"/&gt;</ph> <ph x="ph22">&lt;ph id="ph22"/&gt;</ph><ph x="ph23">&lt;ph id="ph23"/&gt;</ph> <ph x="ph24">&lt;ph id="ph24"/&gt;</ph> <ph x="ph25">&lt;ph id="ph25"/&gt;</ph> <ph x="ph26">&lt;ph id="ph26"/&gt;</ph><ph x="ph27">&lt;ph id="ph27"/&gt;</ph>Validar XLIFF<ph x="ph28">&lt;ph id="ph28"/&gt;</ph><ph x="ph29">&lt;ph id="ph29"/&gt;</ph> <ph x="ph30">&lt;ph id="ph30"/&gt;</ph><ph x="ph31">&lt;ph id="ph31"/&gt;</ph> <ph x="ph32">&lt;ph id="ph32"/&gt;</ph> <ph x="ph33">&lt;ph id="ph33"/&gt;</ph> <ph x="ph34">&lt;ph id="ph34"/&gt;</ph> <ph x="ph35">&lt;ph id="ph35"/&gt;</ph> <ph x="ph36">&lt;ph id="ph36"/&gt;</ph><ph x="ph37">&lt;ph id="ph37"/&gt;</ph>Analizar XLIFF<ph x="ph38">&lt;ph id="ph38"/&gt;</ph><ph x="ph39">&lt;ph id="ph39"/&gt;</ph> <ph x="ph40">&lt;ph id="ph40"/&gt;</ph><ph x="ph41">&lt;ph id="ph41"/&gt;</ph> <ph x="ph42">&lt;ph id="ph42"/&gt;</ph> <ph x="ph43">&lt;ph id="ph43"/&gt;</ph> <ph x="ph44">&lt;ph id="ph44"/&gt;</ph> <ph x="ph45">&lt;ph id="ph45"/&gt;</ph> <ph x="ph46">&lt;ph id="ph46"/&gt;</ph> <ph x="ph47">&lt;ph id="ph47"/&gt;</ph><ph x="ph48">&lt;ph id="ph48"/&gt;</ph>Traducciones</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-114-114-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Check for Updates<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph> <ph x="ph2">&lt;ph id="ph2"/&gt;</ph> <ph x="ph3">&lt;ph id="ph3"/&gt;</ph> <ph x="ph4">&lt;ph id="ph4"/&gt;</ph> <ph x="ph5">&lt;ph id="ph5"/&gt;</ph><ph x="ph6">&lt;ph id="ph6"/&gt;</ph>Settings<ph x="ph7">&lt;ph id="ph7"/&gt;</ph> <ph x="ph8">&lt;ph id="ph8"/&gt;</ph> <ph x="ph9">&lt;ph id="ph9"/&gt;</ph> <ph x="ph10">&lt;ph id="ph10"/&gt;</ph> <ph x="ph11">&lt;ph id="ph11"/&gt;</ph> <ph x="ph12">&lt;ph id="ph12"/&gt;</ph><ph x="ph13">&lt;ph id="ph13"/&gt;</ph>About...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Buscar Actualizaciones<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph> <ph x="ph2">&lt;ph id="ph2"/&gt;</ph> <ph x="ph3">&lt;ph id="ph3"/&gt;</ph> <ph x="ph4">&lt;ph id="ph4"/&gt;</ph> <ph x="ph5">&lt;ph id="ph5"/&gt;</ph><ph x="ph6">&lt;ph id="ph6"/&gt;</ph>Configuración<ph x="ph7">&lt;ph id="ph7"/&gt;</ph> <ph x="ph8">&lt;ph id="ph8"/&gt;</ph> <ph x="ph9">&lt;ph id="ph9"/&gt;</ph> <ph x="ph10">&lt;ph id="ph10"/&gt;</ph> <ph x="ph11">&lt;ph id="ph11"/&gt;</ph> <ph x="ph12">&lt;ph id="ph12"/&gt;</ph><ph x="ph13">&lt;ph id="ph13"/&gt;</ph>Acerca de...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-115-115-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Source File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo de origen</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-116-116-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-117-117-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Source Language</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Idioma de origen</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-118-118-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Target Language</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Idioma de destino</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-119-119-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>File Type</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Tipo de archivo</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-120-120-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Character Set</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Juego de caracteres</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-121-121-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>DITAVAL File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo DITAVAL</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-122-122-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-123-123-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>JSON Configuration</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Configuración de JSON</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-124-124-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-125-125-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Generate XLIFF 2.0</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Generar XLIFF 2.0</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-126-126-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Paragraph Segmentation</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Segmentar por párrafos</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-127-127-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Embed Skeleton</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Incrustar esqueleto</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-128-128-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Create XLIFF</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Crear XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-129-129-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-130-130-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-131-131-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Target File/Folder</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo/carpeta de destino</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-132-132-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-133-133-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Accept Unaproved Segments</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Aceptar segmentos no aprobados</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-134-134-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Export Approved Segments as TMX</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Exportar segmentos aprobados como TMX</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-135-135-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Open Translated File/Folder After Merging</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Abrir archivo/carpeta traducido después de combinar</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-136-136-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Merge XLIFF</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Combinar XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-137-137-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-138-138-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-139-139-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Validate XLIFF</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Validar XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-140-140-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-141-141-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-142-142-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Analyse XLIFF</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Analizar XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-143-143-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>XLIFF File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo XLIFF</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-144-144-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-145-145-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Copy Source to Target</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Copiar Origen a Destino</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-146-146-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Pseudo-Translate</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Pseudo-Traducir</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-147-147-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Remove all Targets</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Eliminar Todas las Traducciones</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-2-148-148-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Approve all Segments</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Aprobar Todos los Segmentos</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-149-149-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Settings</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Configuración</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-150-150-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Default Source Language</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Idioma de origen predeterminado</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-151-151-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Default Target Language</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Idioma de destino predeterminado</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-152-152-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>System Catalog</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Catálogo del sistema</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-153-153-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-154-154-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Skeletons Folder</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Carpeta de esqueletos</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-155-155-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-156-156-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Default SRX File</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Archivo SRX predeterminado</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-157-157-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Browse...</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Examinar...</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-158-158-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Application Language</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Idioma de la aplicación</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-159-159-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>English<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph>Spanish</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Inglés<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph>Español</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-160-160-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Theme</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Tema</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-161-161-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>System Default<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph>Dark<ph x="ph2">&lt;ph id="ph2"/&gt;</ph> <ph x="ph3">&lt;ph id="ph3"/&gt;</ph>Light</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Predeterminado del sistema<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph>Oscuro<ph x="ph2">&lt;ph id="ph2"/&gt;</ph> <ph x="ph3">&lt;ph id="ph3"/&gt;</ph>Claro</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-3-162-162-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Save Settings</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Guardar Configuración</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-4-163-163-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Software Updates</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Actualizaciones de software</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-4-164-164-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>An updated version of XLIFF Manager is available</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Está disponible una versión actualizada de XLIFF Manager</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-4-165-165-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Installed Version:</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Versión instalada:</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-4-166-166-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>Latest version:</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Versión disponible:</seg>
+  </tuv>
+</tu><tu creationdate="20230322T092715Z" creationtool="Swordfish" creationtoolversion="4.23.0" tuid="-349201909-4-167-167-0">
+  <prop type="project">XLIFF Manager HTML</prop>
+  <tuv creationdate="20230322T092715Z" xml:lang="en">
+    <seg>View Release History<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph>Download Update</seg>
+  </tuv>
+  <tuv creationdate="20230322T092715Z" xml:lang="es">
+    <seg>Ver Historial<ph x="ph0">&lt;ph id="ph0"/&gt;</ph> <ph x="ph1">&lt;ph id="ph1"/&gt;</ph>Descargar Actualización</seg>
+  </tuv>
+</tu></body>
+</tmx>

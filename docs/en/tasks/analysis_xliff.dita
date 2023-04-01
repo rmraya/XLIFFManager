@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
+<task id="analysis_xliff">
+    <title>Generate Word Counts and Segment Statistics</title>
+    <shortdesc></shortdesc>
+    <taskbody>
+        <context>
+            <p>XLIFF Manager lets you produce an HTML file with word counts and segment status
+                statistics from an <xref href="../glossaries/XLIFF.dita">XLIFF</xref> document.</p>
+            <fig>
+                <image align="center" placement="break" href="../images/analyzeXliff.png"
+                    scalefit="yes">
+                    <alt>Translation Status Analysis</alt>
+                </image>
+            </fig>
+        </context>
+        <steps>
+            <step>
+                <cmd>On the left panel, click on the <uicontrol><image href="../images/stats.png" placement="inline"/> Analyse XLIFF</uicontrol>
+                    option.</cmd>
+            </step>
+            <step>
+                <cmd>Type the name and location of the XLIFF file to analyse in the <uicontrol>XLIFF
+                        File</uicontrol> text box or click the <uicontrol>Browse...</uicontrol>
+                    button to select an XLIFF file from the file system.</cmd>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Analyse XLIFF</uicontrol> button.</cmd>
+                <stepresult>XLIFF Manager generates an HTML report in the folder where the XLIFF
+                    file is located and its name is the name of the XLIFF plus
+                        <codeph>.log.html</codeph>.</stepresult>
+            </step>
+        </steps>
+    </taskbody>
+</task>

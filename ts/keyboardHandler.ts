@@ -19,10 +19,12 @@ class KeyboardHandler {
             let type: string = element.tagName;
             if (type === 'INPUT') {
                 let input: HTMLInputElement = element as HTMLInputElement;
-                let start: number = input.selectionStart;
-                let end: number = input.selectionEnd;
-                navigator.clipboard.writeText(input.value.substring(start, end));
-                input.setRangeText('');
+                let start: number | null = input.selectionStart;
+                let end: number | null = input.selectionEnd;
+                if (start && end) {
+                    navigator.clipboard.writeText(input.value.substring(start, end));
+                    input.setRangeText('');
+                }
             }
             if (type === 'TEXTAREA') {
                 let area: HTMLTextAreaElement = element as HTMLTextAreaElement;
@@ -37,7 +39,7 @@ class KeyboardHandler {
             event.preventDefault();
             let element: HTMLElement = event.target as HTMLElement;
             let type: string = element.tagName;
-            if (type === 'INPUT' ) {
+            if (type === 'INPUT') {
                 let input: HTMLInputElement = element as HTMLInputElement;
                 input.setSelectionRange(0, input.value.length);
             }
@@ -49,21 +51,26 @@ class KeyboardHandler {
 
         if ((event.ctrlKey || event.metaKey) && (event.key === 'c' || event.key === 'C')) {
             event.preventDefault();
-            navigator.clipboard.writeText(window.getSelection().toString());
+            let selection: Selection | null = window.getSelection();
+            if (selection) {
+                navigator.clipboard.writeText(selection.toString());
+            }
         }
 
         if ((event.ctrlKey || event.metaKey) && (event.key === 'v' || event.key === 'V')) {
             event.preventDefault();
             let element: HTMLElement = event.target as HTMLElement;
             let type: string = element.tagName;
-            if (type === 'INPUT' ) {
+            if (type === 'INPUT') {
                 navigator.clipboard.readText().then(
                     (clipText: string) => {
                         let input: HTMLInputElement = (element as HTMLInputElement);
                         let currentText: string = input.value;
-                        let start: number = input.selectionStart;
-                        let newText: string = currentText.substring(0, start) + clipText + currentText.substring(start);
-                        input.value = newText;
+                        let start: number | null = input.selectionStart;
+                        if (start) {
+                            let newText: string = currentText.substring(0, start) + clipText + currentText.substring(start);
+                            input.value = newText;
+                        }
                     }
                 );
             }

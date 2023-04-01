@@ -7,7 +7,8 @@
 /node_modules/
 /man/
 /out/
-/docs/out/
+/docs/en/out/
+/docs/es/out/
 /release
 /XLIFF Manager-darwin-x64/
 /XLIFF Manager-darwin-arm64/
@@ -15,5 +16,6 @@
 /XLIFF Manager-linux-x64/
 /.settings/
 /.scannerwork/
+/.vscode/
 .DS_Store
 package-lock.json

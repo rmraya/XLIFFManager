@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="copySources">
+    <title>Copy Source to all Untranslated Segments</title>
+    <shortdesc>Copy the content of <codeph>&lt;source></codeph> elements to new or existing empty
+            <codeph>&lt;target></codeph> elements in an XLIFF file.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>On the left panel, click on the <uicontrol><image href="../images/tasks.png"
+                            placement="inline"/> Translation Tasks</uicontrol> option.</cmd>
+            </step>
+            <step>
+                <cmd>Type the name and location of the XLIFF file to process in the <uicontrol>XLIFF
+                        File</uicontrol> text box or click the <uicontrol>Browse...</uicontrol>
+                    button to select an XLIFF file from the file system.</cmd>
+            </step>
+            <step>
+                <cmd>Click the <uicontrol>Copy Source to Target</uicontrol> button.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>
