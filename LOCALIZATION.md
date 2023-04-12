@@ -1,10 +1,11 @@
 # XLIFF Manager Localization
 
-Localizing XLIFF Manager requires processing 3 types of files:
+Localizing XLIFF Manager requires processing 4 types of files:
 
 1. Java `.properties` files
 2. TypeScript strings in JSON format
-3. Documentation from DITA files
+3. HTML files for the main UI
+4. Documentation from DITA files
 
 ## Localization of Java .properties
 
@@ -25,6 +26,12 @@ XLIFF Manager can be used to generate to generate XLIFF from the JSON files stor
 - Use `/i189/filterConfig.json` when generating XLIFF to handle `'&'` signs used in menu names as regular characters instead of HTML entities.
 - Select *Paragraph Segmentation* to avoid splitting strings at inconvenient places.
 - Select *Export Approved Segments as TMX* when merging the translated XLIFF and then reuse those translations when processing the User Guide.
+
+## Localization of HTML files
+
+You can generate XLIFF from the HTML files available in `/html` folder using XLIFF Manager.
+
+It is suggested to translate HTML before the DITA manuals because you will need the translations of all labels and you would need to capture new screenshots from the translated UI.
 
 ## Localization of DITA manuals
 
