@@ -15,6 +15,8 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+6.2.0 | Improved localization handling | June 2nd, 2023
+6.1.0 | Updated OpenXLIFF Filters to version 3.7.0 | May 16th, 2023
 6.0.0 | Added Spanish localization | April 1st, 2023
 5.8.0 | Updated OpenXLIFF Filters to version 3.3.0 | February 22nd, 2023
 5.7.0 | Updated OpenXLIFF Filters to version 3.1.0 | January 25th, 2023
