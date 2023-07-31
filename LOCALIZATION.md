@@ -19,6 +19,13 @@ Use a command like this to generate XLIFF:
 
 XLIFF Manager .properties are encoded in UTF-8; translated versions must be generated using UTF-8 character set.
 
+XLIFF Manager uses code from these two projects:
+
+- [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF)  
+- [XMLJava](https://github.com/rmraya/XMLJava)
+
+It is important to localize those projects and include localized versions of the libraries in the XLIFF Manager project for proper display of error messages and other user interface elements, like language names.
+
 ## Localization of TypeScript strings
 
 XLIFF Manager can be used to generate to generate XLIFF from the JSON files stored in `/i18n` folder.

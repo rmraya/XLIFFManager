@@ -75,11 +75,13 @@
             </step>
             <step>
                 <cmd>Select the <uicontrol>Paragraph Segmentation</uicontrol> check box if you want
-                    source text to be segmented at paragraph level. </cmd>
-                <info><note type="notice">The program uses sentence-level segmentation by default.
-                        You can select the default <xref href="../glossaries/SRX.dita">SRX</xref>
-                        file used for segmentation in the <xref href="default_settings.dita"
-                            >Settings</xref> dialog.</note></info>
+                    source text to be segmented at paragraph level.</cmd>
+                <info>
+                    <note type="notice">The program uses sentence-level segmentation by default. You
+                        can select the default <xref href="../glossaries/SRX.dita">SRX</xref> file
+                        used for segmentation in the <xref href="default_settings.dita"
+                            >Settings</xref> dialog.</note>
+                </info>
             </step>
             <step>
                 <cmd>Select the <uicontrol>Embed Skeleton</uicontrol> option if you want the
