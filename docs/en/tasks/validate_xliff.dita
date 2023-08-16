@@ -2,10 +2,11 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task id="validate_xliff">
     <title>Validate XLIFF</title>
-    <shortdesc></shortdesc>
+    <shortdesc/>
     <taskbody>
         <context>
-            <p>XLIFF Manager can validate <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.0, 1.1, 1.2 and 2.0.</p>
+            <p>XLIFF Manager can validate <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.0,
+                1.1, 1.2 and 2.0.</p>
             <p> Validating XLIFF against XML grammars (DTD or XML Schemas) is not enough. XML Schema
                 validation does not detect the use of duplicated 'id' attributes, wrong language
                 codes and other constraints written in the different XLIFF specifications.</p>
@@ -21,8 +22,12 @@
         </context>
         <steps>
             <step>
-                <cmd>On the left panel, click on the <uicontrol><image href="../images/check.png"
-                            placement="inline"/> Validate XLIFF</uicontrol> option.</cmd>
+                <cmd>In main menu, select <menucascade>
+                        <uicontrol>View</uicontrol>
+                        <uicontrol>Validate XLIFF</uicontrol>
+                    </menucascade> or click the <uicontrol><image href="../images/check.png"
+                        placement="inline"/>&nbsp;Validate XLIFF</uicontrol> option on the left
+                    panel.</cmd>
             </step>
             <step>
                 <cmd>Type the name and location of the XLIFF file to validate in the

@@ -21,6 +21,10 @@ import java.nio.file.Files;
 import java.text.MessageFormat;
 import java.util.Locale;
 
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
 import com.maxprograms.converters.Constants;
 import com.maxprograms.languages.LanguageUtils;
 import com.sun.net.httpserver.HttpServer;
@@ -30,7 +34,7 @@ public class FilterServer {
 	private static Logger logger = System.getLogger(FilterServer.class.getName());
 
 	private HttpServer server;
-	private File workDir;
+	private static File workDir;
 
 	public static void main(String[] args) {
 		String port = "8000";
@@ -51,7 +55,7 @@ public class FilterServer {
 						Locale locale = new Locale(lang);
 						Locale.setDefault(locale);
 					}
-				} catch (IOException e) {
+				} catch (IOException | SAXException | ParserConfigurationException e) {
 					logger.log(Level.WARNING, e);
 				}
 			}
@@ -82,15 +86,15 @@ public class FilterServer {
 		System.exit(0);
 	}
 
-	public File getWorkFolder() throws IOException {
+	public static File getWorkFolder() throws IOException {
 		if (workDir == null) {
 			String os = System.getProperty("os.name").toLowerCase();
 			if (os.startsWith("mac")) {
-				workDir = new File(System.getProperty("user.home") + "/Library/Application Support/OpenXLIFF/");
+				workDir = new File(System.getProperty("user.home") + "/Library/Application Support/XLIFF Manager/");
 			} else if (os.startsWith("windows")) {
-				workDir = new File(System.getenv("AppData") + "\\OpenXLIFF\\");
+				workDir = new File(System.getenv("AppData") + "\\XLIFF Manager\\");
 			} else {
-				workDir = new File(System.getProperty("user.home") + "/.openxliff/");
+				workDir = new File(System.getProperty("user.home") + "/.config/XLIFF Manager/");
 			}
 			if (!workDir.exists()) {
 				Files.createDirectories(workDir.toPath());

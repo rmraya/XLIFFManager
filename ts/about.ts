@@ -22,8 +22,11 @@ class About {
             this.electron.ipcRenderer.send('get-version');
         });
         this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
-            (document.getElementById('xliffmanager') as HTMLHeadingElement).innerHTML = arg.xliffManager;
-            (document.getElementById('openxliff') as HTMLParagraphElement).innerHTML = arg.openxliff;
+            (document.getElementById('xlfm_version') as HTMLTableCellElement).innerHTML = arg.XLIFFManager;
+            (document.getElementById('oxlf_version') as HTMLTableCellElement).innerHTML = arg.OpenXLIFF;
+            (document.getElementById('xmlj_version') as HTMLTableCellElement).innerHTML = arg.XMLJava;
+            (document.getElementById('java_version') as HTMLTableCellElement).innerHTML = arg.Java;
+            (document.getElementById('elect_version') as HTMLTableCellElement).innerHTML = arg.electron;
             this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: (document.body.clientHeight + 40) });
         });
         let licensesButton: HTMLButtonElement = document.getElementById('licensesButton') as HTMLButtonElement;

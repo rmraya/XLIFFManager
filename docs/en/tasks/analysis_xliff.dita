@@ -2,7 +2,7 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
 <task id="analysis_xliff">
     <title>Generate Word Counts and Segment Statistics</title>
-    <shortdesc></shortdesc>
+    <shortdesc/>
     <taskbody>
         <context>
             <p>XLIFF Manager lets you produce an HTML file with word counts and segment status
@@ -16,8 +16,12 @@
         </context>
         <steps>
             <step>
-                <cmd>On the left panel, click on the <uicontrol><image href="../images/stats.png" placement="inline"/> Analyse XLIFF</uicontrol>
-                    option.</cmd>
+                <cmd>In main menu, select <menucascade>
+                        <uicontrol>View</uicontrol>
+                        <uicontrol>Analyse XLIFF</uicontrol>
+                    </menucascade> or click the <uicontrol><image href="../images/stats.png"
+                            placement="inline"/>&nbsp;Analyse XLIFF</uicontrol> option on the left
+                    panel.</cmd>
             </step>
             <step>
                 <cmd>Type the name and location of the XLIFF file to analyse in the <uicontrol>XLIFF

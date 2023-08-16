@@ -15,8 +15,12 @@
         </context>
         <steps>
             <step>
-                <cmd>On the left panel, click the <uicontrol><image href="../images/plus.png"
-                            placement="inline"/> Create XLIFF</uicontrol> option.</cmd>
+                <cmd>In main menu, select <menucascade>
+                        <uicontrol>View</uicontrol>
+                        <uicontrol>Create XLIFF</uicontrol>
+                    </menucascade> or click the <uicontrol><image href="../images/plus.png"
+                        placement="inline"/>&nbsp;Create XLIFF</uicontrol> option on the left
+                    panel.</cmd>
             </step>
             <step>
                 <cmd>Type the name and location of the document to convert to XLIFF in the

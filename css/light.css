@@ -159,7 +159,7 @@ button:hover {
 .leftSide {
 	background-color: var(--gray50);
 	margin: 0 !important;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	height: calc(100% - 16px);
 }
@@ -296,4 +296,22 @@ svg {
 
 .hiddenTab {
 	display: none;
+}
+
+.appStatus {
+	position: fixed;
+	bottom: 0;
+	background: linear-gradient(to right, transparent,var(--themePrimary) 20%, var(--themePrimary) 80%, transparent 100%);
+	padding: 4px;
+	text-align: center;
+}
+
+.appStatus a {
+	width: 100%;
+	text-align: center;
+	color: var(--white) !important;
+}
+
+.left {
+	text-align: left;
 }

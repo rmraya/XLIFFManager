@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="subscriptions">
+    <title>Subscriptions</title>
+    <shortdesc/>
+    <conbody>
+        <p>Source code of XLIFF Manager is free. Anyone can download the source code from <xref
+                href="https://github.com/rmraya/XLIFFManager" scope="external" format="html"
+                >Github.com</xref>, compile, modify and use it at no cost in compliance with the
+            accompanying license terms.</p>
+        <p>Developing and maintaining a software project takes time, effort and resources. That is
+            why we offer subscriptions for support services such as technical assistance, bug fixes,
+            and feature requests. By subscribing to our support plan, you not only get access to our
+            expertise and help, but you also contribute to the continuous improvement of XLIFF
+            Manager. Your subscription fees help us pay for code development and ensure the quality
+            and reliability of our software.</p>
+        <p>Subscription Keys are available at <xref
+            href="https://www.maxprograms.com/store/buy.html" format="html" scope="external"
+            >Maxprograms Online Store</xref>. Subscription Keys cannot be shared or
+            transferred to different machines.</p>
+        <p>Subscriptions include unlimited direct email support at <xref scope="external"
+            format="html" href="mailto:tech@maxprograms.com">tech@maxprograms.com</xref></p>
+        <section>
+            <title>Register a Subscription Key</title>
+            <p>When you run the program without a registered subscription, the bottom of the screen
+                shows a <uicontrol>Register Subscription</uicontrol> link.</p>
+            <ol>
+                <li><p>In main menu, select <menucascade>
+                            <uicontrol>Help</uicontrol>
+                            <uicontrol>Register Subscription</uicontrol>
+                        </menucascade> or click the <uicontrol>Register Subscription</uicontrol>
+                        link displayed at the bottom of the screen.</p>
+                    <p>The <uicontrol>Subscription Management</uicontrol> dialog appears: <image
+                            href="../images/subscriptions.png" placement="break" align="center">
+                            <alt><uicontrol>Subscription Management</uicontrol> dialog</alt>
+                        </image>
+                    </p>
+                </li>
+                <li>If you have a subscription key, type it in the <uicontrol>Subscription
+                        Key</uicontrol> text box and click the <uicontrol>Register
+                        Subscription</uicontrol> button.</li>
+                <li>If you don't have a Subscrition Key and wish to purchase one, click the
+                        <uicontrol>Purchase Subscription</uicontrol> button to open <xref
+                        href="https://www.maxprograms.com/store/buy.html" format="html"
+                        scope="external">Maxprograms Online Store</xref> in your default web
+                    browser.</li>
+            </ol>
+        </section>
+    </conbody>
+</concept>

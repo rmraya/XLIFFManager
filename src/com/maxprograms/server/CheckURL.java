@@ -19,6 +19,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Locale;
 
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
 import com.maxprograms.languages.LanguageUtils;
 
 public class CheckURL {
@@ -38,7 +42,7 @@ public class CheckURL {
 						Locale locale = new Locale(lang);
 						Locale.setDefault(locale);
 					}
-				} catch (IOException e) {
+				} catch (IOException | SAXException | ParserConfigurationException e) {
 					logger.log(Level.WARNING, e);
 				}
 			}

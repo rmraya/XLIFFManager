@@ -33,4 +33,17 @@ public class FileType implements Comparable<FileType> {
 	public int compareTo(FileType o) {
 		return description.compareTo(o.description);
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (obj instanceof FileType ft) {
+			return code.equals(ft.code) && description.equals(ft.description);
+		}
+		return false;
+	}
+
+	@Override
+	public int hashCode() {
+		return code.hashCode() + description.hashCode();
+	}
 }

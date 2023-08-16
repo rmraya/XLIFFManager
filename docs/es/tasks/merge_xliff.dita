@@ -14,10 +14,13 @@
     </context>
     <steps>
       <step>
-        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/merge.png" placement="inline"/> Combinar XLIFF</uicontrol>.</cmd>
+        <cmd>En el menú principal, seleccione <menucascade>
+            <uicontrol>Ver</uicontrol>
+            <uicontrol>Combinar XLIFF</uicontrol>
+        </menucascade> o haga clic en la opción <uicontrol><image href="../images/merge.png" placement="inline"/>&nbsp;Combinar XLIFF</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
-        <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
+        <cmd>Escriba el nombre y la ubicación del archivo XLIFF a combinar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
         <info>Si utiliza el botón <uicontrol>Examinar...</uicontrol> para localizar el archivo XLIFF, el programa intenta generar automáticamente un archivo o carpeta de destino adecuado.</info>
       </step>
       <step>

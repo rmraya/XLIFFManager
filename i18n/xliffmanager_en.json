@@ -13,6 +13,7 @@
         "userGuide": "XLIFF Manager User Guide",
         "checkUpdates": "Check for Updates",
         "viewLicenses": "View Licenses",
+        "registerSubscription": "Register Subscription",
         "releaseHistory": "View Release History",
         "supportGroup": "Support Group",
         "helpMenu": "&Help",
@@ -22,7 +23,15 @@
         "services": "Services",
         "noServices": "No Services Apply",
         "quitMac": "Quit XLIFF Manager",
+        "viewMenu": "&View",
+        "createXliffView": "Create XLIFF",
+        "mergeXliffView": "Merge XLIFF",
+        "validateXliffView": "Validate XLIFF",
+        "analyseXliffView": "Analyse XLIFF",
+        "translationTaskView": "Translation Tasks",
+        "settingsView": "Settings",
         "settings": "Settings",
+        "settingsMenu": "&Settings",
         "fileMenu": "&File",
         "exit": "Exit",
         "about": "About...",
@@ -88,5 +97,8 @@
         "xliffFileWarning": "Select XLIFF file",
         "targetFileWarning": "Select target file/folder",
         "characterSetWarning": "Select character set"
+    },
+    "Subscriptions": {
+        "enterKey": "Enter subscription key"
     }
 }

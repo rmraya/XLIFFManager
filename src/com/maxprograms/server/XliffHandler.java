@@ -43,7 +43,6 @@ import org.json.JSONObject;
 import org.xml.sax.SAXException;
 
 import com.maxprograms.converters.ApproveAll;
-import com.maxprograms.converters.Constants;
 import com.maxprograms.converters.Convert;
 import com.maxprograms.converters.CopySources;
 import com.maxprograms.converters.EncodingResolver;
@@ -78,10 +77,8 @@ public class XliffHandler implements HttpHandler {
 	private Map<String, JSONObject> mergeResults;
 	private Map<String, JSONObject> analysisResults;
 	private Map<String, JSONObject> tasksResults;
-	private boolean embed;
 	private String xliff;
 	private String catalog;
-	private boolean is20;
 	private String target;
 	private boolean unapproved;
 	private boolean exportTmx;
@@ -116,11 +113,16 @@ public class XliffHandler implements HttpHandler {
 				command = json.getString("command");
 			}
 			if (command.equals("version")) {
-				json = new JSONObject();
-				json.put("tool", Constants.TOOLNAME);
-				json.put("version", Constants.VERSION);
-				json.put("build", Constants.BUILD);
-				response = json.toString(2);
+				JSONObject result = new JSONObject();
+				MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.11"));
+				result.put("XLIFFManager", mf.format(new String[] { Constants.VERSION, Constants.BUILD }));
+				result.put("OpenXLIFF", mf.format(new String[] { com.maxprograms.converters.Constants.VERSION,
+						com.maxprograms.converters.Constants.BUILD }));
+				result.put("XMLJava", mf.format(
+						new String[] { com.maxprograms.xml.Constants.VERSION, com.maxprograms.xml.Constants.BUILD }));
+				result.put("Java", mf.format(
+						new String[] { System.getProperty("java.version"), System.getProperty("java.vendor") }));
+				response = result.toString(2);
 			}
 			if (command.equals("convert")) {
 				response = convert(json);
@@ -211,39 +213,35 @@ public class XliffHandler implements HttpHandler {
 
 	private String processTasks(final JSONObject json) {
 		String process = "" + System.currentTimeMillis();
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				processMap.put(process, RUNNING);
-				JSONObject jsonResult = new JSONObject();
-				try {
-					switch (json.getString("command")) {
-						case "approveAll":
-							ApproveAll.approveAll(json.getString("file"), json.getString("catalog"));
-							break;
-						case "removeTargets":
-							RemoveTargets.removeTargets(json.getString("file"), json.getString("catalog"));
-							break;
-						case "pseudoTranslate":
-							PseudoTranslation.pseudoTranslate(json.getString("file"), json.getString("catalog"));
-							break;
-						case "copySources":
-							CopySources.copySources(json.getString("file"), json.getString("catalog"));
-							break;
-						default:
-							throw new IOException("Unknown task");
-					}
-					jsonResult.put(RESULT, SUCCESS);
-				} catch (IOException | JSONException | SAXException | ParserConfigurationException
-						| URISyntaxException e) {
-					jsonResult.put(RESULT, FAILED);
-					jsonResult.put(REASON, e.getMessage());
+		new Thread(() -> {
+			processMap.put(process, RUNNING);
+			JSONObject jsonResult = new JSONObject();
+			try {
+				switch (json.getString("command")) {
+					case "approveAll":
+						ApproveAll.approveAll(json.getString("file"), json.getString("catalog"));
+						break;
+					case "removeTargets":
+						RemoveTargets.removeTargets(json.getString("file"), json.getString("catalog"));
+						break;
+					case "pseudoTranslate":
+						PseudoTranslation.pseudoTranslate(json.getString("file"), json.getString("catalog"));
+						break;
+					case "copySources":
+						CopySources.copySources(json.getString("file"), json.getString("catalog"));
+						break;
+					default:
+						throw new IOException("Unknown task");
 				}
-				tasksResults.put(process, jsonResult);
-				if (processMap.get(process).equals((RUNNING))) {
-					processMap.put(process, COMPLETED);
-				}
+				jsonResult.put(RESULT, SUCCESS);
+			} catch (IOException | JSONException | SAXException | ParserConfigurationException
+					| URISyntaxException e) {
+				jsonResult.put(RESULT, FAILED);
+				jsonResult.put(REASON, e.getMessage());
+			}
+			tasksResults.put(process, jsonResult);
+			if (processMap.get(process).equals((RUNNING))) {
+				processMap.put(process, COMPLETED);
 			}
 		}).start();
 		return "{\"process\":\"" + process + "\"}";
@@ -309,33 +307,28 @@ public class XliffHandler implements HttpHandler {
 			exportTmx = json.getBoolean("exportTmx");
 		}
 		String process = "" + System.currentTimeMillis();
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				processMap.put(process, RUNNING);
-
-				List<String> result = Merge.merge(xliff, target, catalog, unapproved);
-				if (exportTmx && Constants.SUCCESS.equals(result.get(0))) {
-					String tmx = "";
-					if (xliff.toLowerCase().endsWith(".xlf")) {
-						tmx = xliff.substring(0, xliff.lastIndexOf('.')) + ".tmx";
-					} else {
-						tmx = xliff + ".tmx";
-					}
-					result = TmxExporter.export(xliff, tmx, catalog);
-				}
-				JSONObject jsonResult = new JSONObject();
-				if (Constants.SUCCESS.equals(result.get(0))) {
-					jsonResult.put(RESULT, SUCCESS);
+		new Thread(() -> {
+			processMap.put(process, RUNNING);
+			List<String> result = Merge.merge(xliff, target, catalog, unapproved);
+			if (exportTmx && Constants.SUCCESS.equals(result.get(0))) {
+				String tmx = "";
+				if (xliff.toLowerCase().endsWith(".xlf")) {
+					tmx = xliff.substring(0, xliff.lastIndexOf('.')) + ".tmx";
 				} else {
-					jsonResult.put(RESULT, FAILED);
-					jsonResult.put(REASON, result.get(1));
+					tmx = xliff + ".tmx";
 				}
-				mergeResults.put(process, jsonResult);
-				if (processMap.get(process).equals((RUNNING))) {
-					processMap.put(process, COMPLETED);
-				}
+				result = TmxExporter.export(xliff, tmx, catalog);
+			}
+			JSONObject jsonResult = new JSONObject();
+			if (Constants.SUCCESS.equals(result.get(0))) {
+				jsonResult.put(RESULT, SUCCESS);
+			} else {
+				jsonResult.put(RESULT, FAILED);
+				jsonResult.put(REASON, result.get(1));
+			}
+			mergeResults.put(process, jsonResult);
+			if (processMap.get(process).equals((RUNNING))) {
+				processMap.put(process, COMPLETED);
 			}
 		}).start();
 		return "{\"process\":\"" + process + "\"}";
@@ -435,7 +428,7 @@ public class XliffHandler implements HttpHandler {
 		if (json.has("config")) {
 			config = json.getString("config");
 		}
-		embed = false;
+		boolean embed = false;
 		if (json.has("embed")) {
 			embed = json.getBoolean("embed");
 		}
@@ -443,7 +436,7 @@ public class XliffHandler implements HttpHandler {
 		if (json.has("paragraph")) {
 			paragraph = json.getBoolean("paragraph");
 		}
-		is20 = false;
+		boolean is20 = false;
 		if (json.has("is20")) {
 			is20 = json.getBoolean("is20");
 		}
@@ -477,24 +470,20 @@ public class XliffHandler implements HttpHandler {
 			params.put("resegment", "yes");
 			params.put("paragraph", "yes");
 		}
-		
-		new Thread(new Runnable() {
 
-			@Override
-			public void run() {
-				processMap.put(process, RUNNING);
-				List<String> result = Convert.run(params);
-				JSONObject jsonResult = new JSONObject();
-				if (Constants.SUCCESS.equals(result.get(0))) {
-					jsonResult.put(RESULT, SUCCESS);
-				} else {
-					jsonResult.put(RESULT, FAILED);
-					jsonResult.put(REASON, result.get(1));
-				}
-				conversionResults.put(process, jsonResult);
-				if (processMap.get(process).equals((RUNNING))) {
-					processMap.put(process, COMPLETED);
-				}
+		new Thread(() -> {
+			processMap.put(process, RUNNING);
+			List<String> result = Convert.run(params);
+			JSONObject jsonResult = new JSONObject();
+			if (Constants.SUCCESS.equals(result.get(0))) {
+				jsonResult.put(RESULT, SUCCESS);
+			} else {
+				jsonResult.put(RESULT, FAILED);
+				jsonResult.put(REASON, result.get(1));
+			}
+			conversionResults.put(process, jsonResult);
+			if (processMap.get(process).equals((RUNNING))) {
+				processMap.put(process, COMPLETED);
 			}
 		}).start();
 		return "{\"process\":\"" + process + "\"}";
@@ -636,32 +625,28 @@ public class XliffHandler implements HttpHandler {
 		}
 
 		String process = "" + System.currentTimeMillis();
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				processMap.put(process, RUNNING);
-				List<String> result = new ArrayList<>();
-				try {
-					RepetitionAnalysis instance = new RepetitionAnalysis();
-					instance.analyse(file, catalog);
-					logger.log(Level.INFO, "Analysis completed");
-					result.add(Constants.SUCCESS);
-				} catch (IOException | SAXException | ParserConfigurationException | URISyntaxException e) {
-					logger.log(Level.ERROR, "Error analysing file", e);
-					result.add(Constants.ERROR);
-					result.add(e.getMessage());
-				}
-				JSONObject jsonResult = new JSONObject();
-				if (Constants.SUCCESS.equals(result.get(0))) {
-					jsonResult.put(RESULT, SUCCESS);
-				} else {
-					jsonResult.put(RESULT, FAILED);
-					jsonResult.put(REASON, result.get(1));
-				}
-				analysisResults.put(process, jsonResult);
-				processMap.put(process, COMPLETED);
+		new Thread(() -> {
+			processMap.put(process, RUNNING);
+			List<String> result = new ArrayList<>();
+			try {
+				RepetitionAnalysis instance = new RepetitionAnalysis();
+				instance.analyse(file, catalog);
+				logger.log(Level.INFO, "Analysis completed");
+				result.add(Constants.SUCCESS);
+			} catch (IOException | SAXException | ParserConfigurationException | URISyntaxException e) {
+				logger.log(Level.ERROR, "Error analysing file", e);
+				result.add(Constants.ERROR);
+				result.add(e.getMessage());
 			}
+			JSONObject jsonResult = new JSONObject();
+			if (Constants.SUCCESS.equals(result.get(0))) {
+				jsonResult.put(RESULT, SUCCESS);
+			} else {
+				jsonResult.put(RESULT, FAILED);
+				jsonResult.put(REASON, result.get(1));
+			}
+			analysisResults.put(process, jsonResult);
+			processMap.put(process, COMPLETED);
 		}).start();
 		return "{\"process\":\"" + process + "\"}";
 	}
@@ -678,33 +663,29 @@ public class XliffHandler implements HttpHandler {
 		}
 
 		String process = "" + System.currentTimeMillis();
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				processMap.put(process, RUNNING);
-				try {
-					XliffChecker validator = new XliffChecker();
-					boolean valid = validator.validate(file, catalog);
-					JSONObject result = new JSONObject();
-					result.put("valid", valid);
-					if (valid) {
-						String version = validator.getVersion();
-						MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.7"));
-						result.put("comment", mf.format(new String[] { version }));
-					} else {
-						String reason = validator.getReason();
-						result.put(REASON, reason);
-					}
-					validationResults.put(process, result);
-					if (processMap.get(process).equals((RUNNING))) {
-						logger.log(Level.INFO, Messages.getString("XliffHandler.8"));
-						processMap.put(process, COMPLETED);
-					}
-				} catch (IOException e) {
-					logger.log(Level.ERROR, Messages.getString("XliffHandler.9"), e);
-					processMap.put(process, e.getMessage());
+		new Thread(() -> {
+			processMap.put(process, RUNNING);
+			try {
+				XliffChecker validator = new XliffChecker();
+				boolean valid = validator.validate(file, catalog);
+				JSONObject result = new JSONObject();
+				result.put("valid", valid);
+				if (valid) {
+					String version = validator.getVersion();
+					MessageFormat mf = new MessageFormat(Messages.getString("XliffHandler.7"));
+					result.put("comment", mf.format(new String[] { version }));
+				} else {
+					String reason = validator.getReason();
+					result.put(REASON, reason);
 				}
+				validationResults.put(process, result);
+				if (processMap.get(process).equals((RUNNING))) {
+					logger.log(Level.INFO, Messages.getString("XliffHandler.8"));
+					processMap.put(process, COMPLETED);
+				}
+			} catch (IOException e) {
+				logger.log(Level.ERROR, Messages.getString("XliffHandler.9"), e);
+				processMap.put(process, e.getMessage());
 			}
 		}).start();
 		return "{\"process\":\"" + process + "\"}";

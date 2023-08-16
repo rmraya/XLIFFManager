@@ -13,7 +13,10 @@
     </context>
     <steps>
       <step>
-        <cmd>En el panel izquierdo, haga clic en la opción <uicontrol><image href="../images/plus.png" placement="inline"/> Crear XLIFF</uicontrol>.</cmd>
+        <cmd>En el menú principal, seleccione <menucascade>
+            <uicontrol>Ver</uicontrol>
+            <uicontrol>Crear XLIFF</uicontrol>
+          </menucascade> o haga clic en la opción <uicontrol><image href="../images/plus.png" placement="inline"/>&nbsp;Crear XLIFF</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <uicontrol>Archivo de origen</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un documento del sistema de archivos.</cmd>
@@ -49,7 +52,7 @@
         </info>
       </step>
       <step>
-        <cmd>Active la casilla <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente en el nivel de párrafo. </cmd>
+        <cmd>Active la casilla <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente en el nivel de párrafo.</cmd>
         <info>
           <note type="notice">El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <xref href="../glossaries/SRX.dita">SRX</xref> predeterminado utilizado para la segmentación en el cuadro de diálogo <xref href="default_settings.dita">Configuración</xref>.</note>
         </info>

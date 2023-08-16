@@ -11,10 +11,31 @@
 <body onload="new About();">
     <div class="tabContent">
         <div class="center">
-            <h3 id="xliffmanager">XLIFF Manager</h3>
-            <p class="fill_width" ><img src="../../img/xliffmanager.png" alt="Icono de XLIFF Manager"></p>
-            <p id="openxliff" class="fill_width" translate="no">Versi&oacute;n de OpenXLIFF Filters</p>
-        </div>        
+            <h2 id="xliffmanager">XLIFF Manager</h2>
+            <p class="fill_width"><img src="../../img/xliffmanager.png" alt="Icono de XLIFF Manager"></p>
+            <table style="margin:8px; width: calc(100% - 16px);">
+                <tr>
+                    <td class="left noWrap">XLIFF Manager</td>
+                    <td class="left noWrap" id="xlfm_version"></td>
+                </tr>
+                <tr>
+                    <td class="left noWrap">OpenXLIFF Filters</td>
+                    <td class="left noWrap" id="oxlf_version" ></td>
+                </tr>
+                <tr>
+                    <td class="left noWrap">XMLJava</td>
+                    <td class="left noWrap" id="xmlj_version" ></td>
+                </tr>
+                <tr>
+                    <td class="left noWrap">Java</td>
+                    <td class="left noWrap" id="java_version"></td>
+                </tr>
+                <tr>
+                    <td class="left noWrap">Electron</td>
+                    <td class="left noWrap" id="elect_version"></td>
+                </tr>
+            </table>
+        </div>
         <div style="display: flex; justify-content:flex-end;">
             <button id="licensesButton" style="margin-right: 24px;">Licencias</button>
         </div>

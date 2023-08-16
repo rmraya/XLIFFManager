@@ -46,6 +46,12 @@ class Main {
             this.setStatus(arg.status);
         });
 
+        this.electron.ipcRenderer.on('show-createXliff', () => { this.showCreate(); });
+        this.electron.ipcRenderer.on('show-mergeXliff', () => { this.showMerge(); });
+        this.electron.ipcRenderer.on('show-validateXliff', () => { this.showValidate(); });
+        this.electron.ipcRenderer.on('show-analyzeXliff', () => { this.showAnalysis(); });
+        this.electron.ipcRenderer.on('show-translationTasks', () => { this.showTasks(); });
+
         (document.getElementById('createTab') as HTMLAnchorElement).addEventListener('click', () => { this.showCreate(); });
         (document.getElementById('mergeTab') as HTMLAnchorElement).addEventListener('click', () => { this.showMerge(); });
         (document.getElementById('validateTab') as HTMLAnchorElement).addEventListener('click', () => { this.showValidate(); });
@@ -141,7 +147,17 @@ class Main {
         });
 
         this.electron.ipcRenderer.on('get-height', () => {
-            this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: document.body.clientHeight });
+            // there's only one tab visible at a time
+            let height: number = document.getElementsByClassName('tabContent')[0].clientHeight;
+            let hiddenTabs: HTMLCollectionOf<Element> = document.getElementsByClassName('hiddenTab');
+            for (let i: number = 0; i < hiddenTabs.length; i++) {
+                let tabHeight: number = hiddenTabs[i].clientHeight;
+                if (tabHeight > height) {
+                    height = tabHeight;
+                }
+            }
+            height += 16; // add extra padding at bottom
+            this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: height });
         });
     }
 

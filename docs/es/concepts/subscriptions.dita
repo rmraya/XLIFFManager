@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept xml:lang="es" id="subscriptions">
+  <title>Suscripciones</title>
+  <shortdesc/>
+  <conbody>
+    <p>El código fuente de XLIFF Manager es gratuito. Cualquiera puede descargar el código fuente de <xref href="https://github.com/rmraya/XLIFFManager" scope="external" format="html">Github.com</xref>, compilarlo, modificarlo y utilizarlo sin coste alguno respetando los términos de la licencia adjunta.</p>
+    <p>Desarrollar y mantener un proyecto de software requiere tiempo, esfuerzo y recursos. Por eso ofrecemos suscripciones a servicios de asistencia técnica, corrección de errores y solicitud de funciones. Al suscribirse a nuestro plan de asistencia, no sólo tendrá acceso a nuestra experiencia y ayuda, sino que también contribuirá a la mejora continua de XLIFF Manager. Su suscripción nos ayuda a pagar el desarrollo del código y a garantizar la calidad y fiabilidad de nuestro software.</p>
+    <p>Las claves de suscripción están disponibles en la <xref href="https://www.maxprograms.com/store/buy.html" scope="external" format="html">tienda en línea de Maxprograms</xref>. Las claves de suscripción no se pueden compartir ni transferir a diferentes máquinas.</p>
+    <p>Las suscripciones incluyen soporte por correo electrónico directo ilimitado en <xref href="mailto:tech@maxprograms.com" scope="external" format="html">tech@maxprograms.com</xref></p>
+    <section>
+      <title>Registrar  Clave de Suscripción</title>
+      <p>Cuando ejecuta el programa sin una suscripción registrada, en la parte inferior de la pantalla aparece un enlace <uicontrol>Registrar Suscripción</uicontrol>.</p>
+      <ol>
+        <li>
+          <p>En el menú principal, seleccione <menucascade>
+              <uicontrol>Ayuda</uicontrol>
+              <uicontrol>Registrar Suscripción</uicontrol>
+            </menucascade> o haga clic en el enlace <uicontrol>Registrar Suscripción</uicontrol> que aparece en la parte inferior de la pantalla.</p>
+          <p>El cuadro de diálogo <uicontrol>Manejo de Suscripciones</uicontrol> aparece: <image href="../images/subscriptions.png" placement="break" align="center">
+              <alt>Cuadro de diálogo <uicontrol>Manejo de Suscripciones</uicontrol></alt>
+            </image> </p>
+        </li>
+        <li>Si tiene una clave de suscripción, escríbala en el cuadro de texto <uicontrol>Clave de Suscripción</uicontrol> y haga clic en el botón <uicontrol>Registrar Suscripción</uicontrol>.</li>
+        <li>Si no tiene una clave de suscripción y desea comprar una, haga click en el botón <uicontrol>Comprar Suscripción</uicontrol> para abrir la <xref href="https://www.maxprograms.com/store/buy.html" scope="external" format="html">tienda en línea de Maxprograms</xref> en su navegador web predeterminado.</li>
+      </ol>
+    </section>
+  </conbody>
+</concept>

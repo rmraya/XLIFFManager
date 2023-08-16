@@ -35,6 +35,7 @@
     <topicref href="tasks/approveAll.dita"/>
   </chapter>
   <chapter href="tasks/default_settings.dita"/>
+  <chapter href="concepts/subscriptions.dita"/>
   <backmatter>
     <booklists>
       <glossarylist chunk="to-content">

@@ -11,7 +11,7 @@
  *******************************************************************************/
 
 import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, nativeTheme, net, Rectangle, session, shell } from "electron";
+import { BrowserWindow, ClientRequest, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, Rectangle, app, dialog, ipcMain, nativeTheme, net, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
 import { I18n } from "./i18n";
@@ -70,7 +70,6 @@ class App {
         App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
         if (process.platform === 'win32') {
             App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
-            App.verticalPadding = 60;
         }
         if (!existsSync(App.appHome)) {
             mkdirSync(App.appHome);
@@ -287,6 +286,9 @@ class App {
             dialog.showMessageBox(arg);
         });
         ipcMain.on('show-message', (event: IpcMainEvent, arg: any) => {
+            if (arg.key && arg.window) {
+                arg.message = App.i18n.getString(arg.window, arg.key);
+            }
             dialog.showMessageBoxSync(arg);
         });
         ipcMain.on('licenses-height', (event: IpcMainEvent, arg: any) => {
@@ -343,6 +345,7 @@ class App {
             maximizable: false,
             show: false,
             icon: App.appIcon,
+            useContentSize: true,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
@@ -873,6 +876,7 @@ class App {
                                 resizable: false,
                                 show: false,
                                 icon: App.appIcon,
+                                useContentSize: true,
                                 webPreferences: {
                                     nodeIntegration: true,
                                     contextIsolation: false
@@ -917,6 +921,13 @@ class App {
     }
 
     createMenu(): void {
+        let viewMenu: Menu = Menu.buildFromTemplate([
+            { label: App.i18n.getString('App', 'createXliffView'), accelerator: 'CmdOrCtrl+1', click: () => { App.createXliffView(); } },
+            { label: App.i18n.getString('App', 'mergeXliffView'), accelerator: 'CmdOrCtrl+2', click: () => { App.mergeXliffView(); } },
+            { label: App.i18n.getString('App', 'validateXliffView'), accelerator: 'CmdOrCtrl+3', click: () => { App.validateXliffView(); } },
+            { label: App.i18n.getString('App', 'analyseXliffView'), accelerator: 'CmdOrCtrl+4', click: () => { App.analyzeXliffView(); } },
+            { label: App.i18n.getString('App', 'translationTaskView'), accelerator: 'CmdOrCtrl+5', click: () => { App.translationTasksView(); } },
+        ]);
         let helpMenu: Menu = Menu.buildFromTemplate([
             { label: App.i18n.getString('App', 'userGuide'), accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
@@ -931,9 +942,9 @@ class App {
             new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
         ];
         if (!app.isPackaged) {
-            helpMenu.append(new MenuItem({ label: App.i18n.getString('App', 'developmentTools'), accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
+            viewMenu.append(new MenuItem({ type: 'separator' }));
+            viewMenu.append(new MenuItem({ label: App.i18n.getString('App', 'developmentTools'), accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
         }
-
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([
                 { label: App.i18n.getString('App', 'aboutMac'), click: () => { App.showAbout(); } },
@@ -947,12 +958,12 @@ class App {
                 { type: 'separator' },
                 { label: App.i18n.getString('App', 'quitMac'), accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
             ]);
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }));
             template.unshift(new MenuItem({ label: App.i18n.getString('App', 'xliffManager'), submenu: appleMenu }));
         } else {
-            let fileMenu: Menu = Menu.buildFromTemplate([
-                { label: App.i18n.getString('App', 'settings'), click: () => { App.showSettings(); } },
-                { type: 'separator' }
-            ]);
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'settingsMenu'), click: () => { App.showSettings(); } }));
+            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }));
+            let fileMenu: Menu = Menu.buildFromTemplate([]);
             template.unshift(new MenuItem({ label: App.i18n.getString('App', 'fileMenu'), submenu: fileMenu }));
         }
 
@@ -960,9 +971,9 @@ class App {
             if (template[0].submenu) {
                 template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'exit'), accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
             }
-            if (template[1].submenu) {
-                template[1].submenu.append(new MenuItem({ type: 'separator' }));
-                template[1].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
+            if (template[3].submenu) {
+                template[3].submenu.append(new MenuItem({ type: 'separator' }));
+                template[3].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
             }
         }
 
@@ -970,9 +981,9 @@ class App {
             if (template[0].submenu) {
                 template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'quit'), accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
             }
-            if (template[1].submenu) {
-                template[1].submenu.append(new MenuItem({ type: 'separator' }));
-                template[1].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
+            if (template[3].submenu) {
+                template[3].submenu.append(new MenuItem({ type: 'separator' }));
+                template[3].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
             }
         }
 
@@ -982,12 +993,13 @@ class App {
     static showAbout(): void {
         App.aboutWindow = new BrowserWindow({
             parent: App.mainWindow,
-            width: 360,
+            width: 380,
             minimizable: false,
             maximizable: false,
             resizable: false,
             show: false,
             icon: App.appIcon,
+            useContentSize: true,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
@@ -1006,8 +1018,7 @@ class App {
     getVersion(event: IpcMainEvent): void {
         App.sendRequest({ command: 'version' },
             (data: any) => {
-                data.xliffManager = App.i18n.format(App.i18n.getString('About', 'xliffmanager'), [app.getVersion()]);
-                data.openxliff = App.i18n.format(App.i18n.getString('About', 'openxliff'), [data.tool, data.version, data.build]);
+                data.electron = process.versions.electron;
                 event.sender.send('set-version', data);
             },
             (reason: string) => {
@@ -1034,6 +1045,7 @@ class App {
             resizable: false,
             show: false,
             icon: App.appIcon,
+            useContentSize: true,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
@@ -1118,6 +1130,7 @@ class App {
             resizable: false,
             show: false,
             icon: App.appIcon,
+            useContentSize: true,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
@@ -1179,6 +1192,7 @@ class App {
             show: false,
             title: title,
             icon: App.appIcon,
+            useContentSize: true,
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
@@ -1298,6 +1312,26 @@ class App {
         });
         request.end();
     }
+
+    static createXliffView(): void {
+        App.mainWindow.webContents.send('show-createXliff');
+    }
+
+    static mergeXliffView(): void {
+        App.mainWindow.webContents.send('show-mergeXliff');
+    }
+
+    static validateXliffView(): void {
+        App.mainWindow.webContents.send('show-validateXliff');
+    }
+
+    static analyzeXliffView(): void {
+        App.mainWindow.webContents.send('show-analyzeXliff');
+    }
+
+    static translationTasksView(): void {
+        App.mainWindow.webContents.send('show-translationTasks');
+    }    
 }
 
 try {
