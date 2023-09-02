@@ -46,9 +46,9 @@
         </info>
       </step>
       <step>
-        <cmd>Active la casilla <uicontrol>Generar XLIFF 2.0</uicontrol> si desea generar XLIFF 2.0.</cmd>
+        <cmd>Utilice los botones de opción <uicontrol>Versión de XLIFF</uicontrol> para seleccionar la versión de XLIFF que desea generar.</cmd>
         <info>
-          <note type="notice">El programa genera XLIFF 1.2 de forma predeterminada.</note>
+          <note type="notice">El programa genera XLIFF 2.0 de forma predeterminada.</note>
         </info>
       </step>
       <step>

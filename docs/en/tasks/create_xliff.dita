@@ -71,10 +71,10 @@
                 </info>
             </step>
             <step>
-                <cmd>Select the <uicontrol>Generate XLIFF 2.0</uicontrol> check box if you want to
-                    generate XLIFF 2.0.</cmd>
+                <cmd>Use the <uicontrol>XLIFF Version</uicontrol> radio buttons to select the
+                    version of XLIFF that you want to generate.</cmd>
                 <info>
-                    <note type="notice">The program generates XLIFF 1.2 by default.</note>
+                    <note type="notice">The program generates XLIFF 2.0 by default.</note>
                 </info>
             </step>
             <step>

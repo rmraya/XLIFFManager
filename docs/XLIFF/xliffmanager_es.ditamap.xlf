@@ -37,7 +37,7 @@ JSUKPC9saT4gPC9vbD4gPC9zZWN0aW9uPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -73,24 +73,12 @@ dWJzY3JpcHRpb25zLnBuZyJ9</mda:meta>
       </segment>
     </unit>
     <unit id="3">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Developing and maintaining a software project takes time, effort and resources. That is why we offer subscriptions for support services such as technical assistance, bug fixes, and feature requests. By subscribing to our support plan, you not only get access to our expertise and help, but you also contribute to the continuous improvement of XLIFF Manager. Your subscription fees help us pay for code development and ensure the quality and reliability of our software.</source>
-          <target>Desarrollar y mantener un proyecto de software requiere tiempo, esfuerzo y recursos. Por eso ofrecemos suscripciones a servicios de asistencia técnica, corrección de errores y solicitud de funciones. Al suscribirse a nuestro plan de asistencia, no sólo tendrá acceso a nuestra experiencia y ayuda, sino que también contribuirá a la mejora continua de XLIFF Manager. Su suscripción nos ayuda a pagar el desarrollo del código y a garantizar la calidad y fiabilidad de nuestro software.</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="3">
         <source xml:space="preserve">Developing and maintaining a software project takes time, effort and resources. That is why we offer subscriptions for support services such as technical assistance, bug fixes, and feature requests. By subscribing to our support plan, you not only get access to our expertise and help, but you also contribute to the continuous improvement of XLIFF Manager. Your subscription fees help us pay for code development and ensure the quality and reliability of our software.</source>
         <target xml:space="preserve">Desarrollar y mantener un proyecto de software requiere tiempo, esfuerzo y recursos. Por eso ofrecemos suscripciones a servicios de asistencia técnica, corrección de errores y solicitud de funciones. Al suscribirse a nuestro plan de asistencia, no sólo tendrá acceso a nuestra experiencia y ayuda, sino que también contribuirá a la mejora continua de XLIFF Manager. Su suscripción nos ayuda a pagar el desarrollo del código y a garantizar la calidad y fiabilidad de nuestro software.</target>
       </segment>
     </unit>
     <unit id="4">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="98.0">
-          <source>Subscription Keys are available at <ph id="ph48"/>Maxprograms Online Store<ph id="ph49"/>. Subscription Keys cannot be shared or transferred to different machines.</source>
-          <target>Las claves de suscripción están disponibles en la <ph id="ph48"/>tienda en línea de Maxprograms<ph id="ph49"/>. Las claves de suscripción no se pueden compartir ni transferir a diferentes máquinas.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="4">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-link</mda:meta>
@@ -172,12 +160,6 @@ dWJzY3JpcHRpb25zLnBuZyJ9</mda:meta>
       </segment>
     </unit>
     <unit id="9">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#9" matchQuality="97.0">
-          <source>The <ph id="ph48"/>Subscription Management<ph id="ph49"/> dialog appears: <ph id="ph50"/> </source>
-          <target>El cuadro de diálogo <ph id="ph48"/>Manejo de Suscripciones<ph id="ph49"/> aparece:<ph id="ph50"/> </target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="9">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -292,7 +274,7 @@ JQo8L2FsdD4gPC9pbWFnZT4gPC9maWc+IDwvY29uYm9keT4gPC9jb25jZXB0Pg==</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -416,7 +398,7 @@ Yy9wICI+JSUlMzYlJSUKPC9wPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -698,7 +680,7 @@ PiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -809,7 +791,7 @@ cGljL2xpICI+JSUlNSUlJQo8L2xpPiA8L3VsPiA8L2NvbmJvZHk+IDwvY29uY2VwdD4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -882,7 +864,7 @@ ZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -938,7 +920,7 @@ L2dsb3NzZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1017,7 +999,7 @@ ZGVmPiA8L2dsb3NzZW50cnk+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1072,7 +1054,7 @@ c3NkZWY+IDwvZ2xvc3NlbnRyeT4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1136,7 +1118,7 @@ JSUKPC9nbG9zc2RlZj4gPC9nbG9zc2VudHJ5Pg==</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1200,7 +1182,7 @@ IDwvc3RlcD4gPC9zdGVwcz4gPC90YXNrYm9keT4gPC90YXNrPg==</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1239,20 +1221,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="3">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Translation Status Analysis</source>
-          <target>Estado de la Traducción</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Translation Status Analysis</source>
-          <target>Estado de la Traducción</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Translation Status Analysis</source>
-          <target>Estado de la Traducción</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="3">
         <source xml:space="preserve">Translation Status Analysis</source>
         <target xml:space="preserve">Estado de la Traducción</target>
@@ -1293,48 +1261,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="5">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="83.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="83.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="87.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="5">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1421,7 +1347,7 @@ NiUlJQo8L2NtZD4gPC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1472,20 +1398,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="3">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="96.0">
-          <source>Some translation tools do not offer a way to confirm segments at translation time. Use this feature to confirm all segments, so you can select the <ph id="ph48"/>Export Approved Segments as TMX<ph id="ph49"/> option when using the <ph id="ph50"/>Merge XLIFF File<ph id="ph51"/> option. </source>
-          <target>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <ph id="ph48"/>Exportar segmentos aprobados como TMX<ph id="ph49"/> cuando utilice la opción <ph id="ph50"/>Combinar XLIFF<ph id="ph51"/>. </target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="96.0">
-          <source>Some translation tools do not offer a way to confirm segments at translation time. Use this feature to confirm all segments, so you can select the <ph id="ph110905"/>Export Approved Segments as TMX<ph id="ph110906"/> option when using the <ph id="ph110907"/>Merge XLIFF File<ph id="ph110908"/> option. </source>
-          <target>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <ph id="ph110905"/>Exportar segmentos aprobados como TMX<ph id="ph110906"/> cuando utilice la opción <ph id="ph110907"/>Combinar XLIFF<ph id="ph110908"/>. </target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Some translation tools do not offer a way to confirm segments at translation time. Use this feature to confirm all segments, so you can select the <ph id="ph0"/>Export Approved Segments as TMX<ph id="ph1"/> option when using the <ph id="ph2"/>Merge XLIFF File<ph id="ph3"/> option. </source>
-          <target>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <ph id="ph0"/>Exportar segmentos aprobados como TMX<ph id="ph1"/> cuando utilice la opción <ph id="ph2"/>Combinar XLIFF<ph id="ph3"/>. </target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="3">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1540,48 +1452,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="5">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="86.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="92.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="93.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="96.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="5">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1652,7 +1522,7 @@ b2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1673,20 +1543,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="2">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Copy the content of <ph id="ph48"/>&lt;source&gt;<ph id="ph49"/> elements to new or existing empty <ph id="ph50"/>&lt;target&gt;<ph id="ph51"/> elements in an XLIFF file.</source>
-          <target>Copiar el contenido de los elementos <ph id="ph48"/>&lt;source&gt;<ph id="ph49"/> a los elementos <ph id="ph50"/>&lt;target&gt;<ph id="ph51"/> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Copy the content of <ph id="ph110905"/>&lt;source&gt;<ph id="ph110906"/> elements to new or existing empty <ph id="ph110907"/>&lt;target&gt;<ph id="ph110908"/> elements in an XLIFF file.</source>
-          <target>Copiar el contenido de los elementos <ph id="ph110905"/>&lt;source&gt;<ph id="ph110906"/> a los elementos <ph id="ph110907"/>&lt;target&gt;<ph id="ph110908"/> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="100.0">
-          <source>Copy the content of <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> elements to new or existing empty <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> elements in an XLIFF file.</source>
-          <target>Copiar el contenido de los elementos <ph id="ph0"/>&lt;source&gt;<ph id="ph1"/> a los elementos <ph id="ph2"/>&lt;target&gt;<ph id="ph3"/> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="2">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1741,48 +1597,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="4">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="86.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="92.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="93.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="96.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="4">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -1883,7 +1697,7 @@ IDwvdGFza2JvZHk+IDwvdGFzaz4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -1926,48 +1740,6 @@ UFJPL2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</md
       </segment>
     </unit>
     <unit id="3">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="73.0">
-          <source>Validate XLIFF File</source>
-          <target>Validar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="73.0">
-          <source>Validate XLIFF File</source>
-          <target>Validar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="73.0">
-          <source>Validate XLIFF File</source>
-          <target>Validar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="78.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="78.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="78.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="78.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="78.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="78.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="3">
         <source xml:space="preserve">Create XLIFF File</source>
         <target xml:space="preserve">Crear Archivo XLIFF</target>
@@ -2008,24 +1780,6 @@ UFJPL2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</md
       </segment>
     </unit>
     <unit id="5">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="71.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="96.0">
-          <source>Type the name and location of the document to convert to XLIFF in the <ph id="ph110905"/>Source File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select a document from the file system.</source>
-          <target>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph id="ph110905"/>Archivo de origen<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> junto a él para seleccionar un documento del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="96.0">
-          <source>Type the name and location of the document to convert to XLIFF in the <ph id="ph48"/>Source File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select a document from the file system.</source>
-          <target>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph id="ph48"/>Archivo de origen<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> junto a él para seleccionar un documento del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="100.0">
-          <source>Type the name and location of the document to convert to XLIFF in the <ph id="ph0"/>Source File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a document from the file system.</source>
-          <target>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph id="ph0"/>Archivo de origen<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un documento del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="5">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2166,6 +1920,16 @@ UFJPL2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</md
       </segment>
     </unit>
     <unit id="13">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#13" matchQuality="98.0">
+          <source>Information on configuration files for the JSON filter is available at <ph id="ph48"/>https://github.com/rmraya/OpenXLIFF<ph id="ph49"/></source>
+          <target>Información sobre los archivos de configuración para el filtro JSON está disponible en <ph id="ph48"/>https://github.com/rmraya/OpenXLIFF<ph id="ph49"/></target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#13" matchQuality="100.0">
+          <source>Information on configuration files for the JSON filter is available at <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF<ph id="ph1"/></source>
+          <target>Información sobre los archivos de configuración para el filtro JSON está disponible en <ph id="ph0"/>https://github.com/rmraya/OpenXLIFF<ph id="ph1"/></target>
+        </mtc:match>
+      </mtc:matches>
       <mda:metadata id="13">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-link</mda:meta>
@@ -2191,17 +1955,45 @@ UFJPL2RvY3MvZW4vaW1hZ2VzL3BsdXMucG5nIiwiaHJlZiI6Ii4uL2ltYWdlcy9wbHVzLnBuZyJ9</md
         <data id="ph1">&lt;/uicontrol&gt;</data>
       </originalData>
       <segment state="final" id="14">
-        <source xml:space="preserve">Select the <ph id="ph0"/>Generate XLIFF 2.0<ph id="ph1"/> check box if you want to generate XLIFF 2.0.</source>
-        <target xml:space="preserve">Active la casilla <ph id="ph0"/>Generar XLIFF 2.0<ph id="ph1"/> si desea generar XLIFF 2.0.</target>
+        <source xml:space="preserve">Use the <ph id="ph0"/>XLIFF Version<ph id="ph1"/> radio buttons to select the version of XLIFF that you want to generate.</source>
+        <target xml:space="preserve">Utilice los botones de opción <ph id="ph0"/>Versión de XLIFF<ph id="ph1"/> para seleccionar la versión de XLIFF que desea generar.</target>
       </segment>
     </unit>
     <unit id="15">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#15" matchQuality="91.0">
+          <source>The program generates XLIFF 1.2 by default.</source>
+          <target>El programa genera XLIFF 1.2 de forma predeterminada.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#15" matchQuality="91.0">
+          <source>The program generates XLIFF 1.2 by default.</source>
+          <target>El programa genera XLIFF 1.2 de forma predeterminada.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#15" matchQuality="91.0">
+          <source>The program generates XLIFF 1.2 by default.</source>
+          <target>El programa genera XLIFF 1.2 de forma predeterminada.</target>
+        </mtc:match>
+      </mtc:matches>
       <segment state="final" id="15">
-        <source xml:space="preserve">The program generates XLIFF 1.2 by default.</source>
-        <target xml:space="preserve">El programa genera XLIFF 1.2 de forma predeterminada.</target>
+        <source xml:space="preserve">The program generates XLIFF 2.0 by default.</source>
+        <target xml:space="preserve">El programa genera XLIFF 2.0 de forma predeterminada.</target>
       </segment>
     </unit>
     <unit id="16">
+      <mtc:matches>
+        <mtc:match origin="1680174732565" ref="#16" matchQuality="98.0">
+          <source>Select the <ph id="ph48"/>Paragraph Segmentation<ph id="ph49"/> check box if you want source text to be segmented at paragraph level.</source>
+          <target>Active la casilla <ph id="ph48"/>Segmentar por párrafos<ph id="ph49"/> si desea que el texto de origen se segmente en el nivel de párrafo.</target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#16" matchQuality="98.0">
+          <source>Select the <ph id="ph110905"/>Paragraph Segmentation<ph id="ph110906"/> check box if you want source text to be segmented at paragraph level. </source>
+          <target>Active la casilla <ph id="ph110905"/>Segmentar por párrafos<ph id="ph110906"/> si desea que el texto de origen se segmente en el nivel de párrafo. </target>
+        </mtc:match>
+        <mtc:match origin="1680174732565" ref="#16" matchQuality="100.0">
+          <source>Select the <ph id="ph0"/>Paragraph Segmentation<ph id="ph1"/> check box if you want source text to be segmented at paragraph level. </source>
+          <target>Active la casilla <ph id="ph0"/>Segmentar por párrafos<ph id="ph1"/> si desea que el texto de origen se segmente en el nivel de párrafo. </target>
+        </mtc:match>
+      </mtc:matches>
       <mda:metadata id="16">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2367,7 +2159,7 @@ dGFza2JvZHk+IDwvdGFzaz4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2388,20 +2180,6 @@ Z3MucG5nIn0=</mda:meta>
       </segment>
     </unit>
     <unit id="2">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Use the <ph id="ph110905"/>Settings<ph id="ph110906"/> dialog to set the default languages used by the application and to configure the main XML catalog and default folder used to store skeletons when creating <ph id="ph110907"/>XLIFF<ph id="ph110908"/> files.</source>
-          <target>Utilice el cuadro de diálogo <ph id="ph110905"/>Configuración<ph id="ph110906"/> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <ph id="ph110907"/>XLIFF<ph id="ph110908"/>.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Use the <ph id="ph48"/>Settings<ph id="ph49"/> dialog to set the default languages used by the application and to configure the main XML catalog and default folder used to store skeletons when creating <ph id="ph50"/>XLIFF<ph id="ph51"/> files.</source>
-          <target>Utilice el cuadro de diálogo <ph id="ph48"/>Configuración<ph id="ph49"/> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <ph id="ph50"/>XLIFF<ph id="ph51"/>.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="100.0">
-          <source>Use the <ph id="ph0"/>Settings<ph id="ph1"/> dialog to set the default languages used by the application and to configure the main XML catalog and default folder used to store skeletons when creating <ph id="ph2"/>XLIFF<ph id="ph3"/> files.</source>
-          <target>Utilice el cuadro de diálogo <ph id="ph0"/>Configuración<ph id="ph1"/> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <ph id="ph2"/>XLIFF<ph id="ph3"/>.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="2">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2470,40 +2248,12 @@ Z3MucG5nIn0=</mda:meta>
       </segment>
     </unit>
     <unit id="5">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="100.0">
-          <source>The following dialog appears: </source>
-          <target>Aparece el siguiente cuadro de diálogo: </target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="100.0">
-          <source>The following dialog appears: </source>
-          <target>Aparece el siguiente cuadro de diálogo: </target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="100.0">
-          <source>The following dialog appears: </source>
-          <target>Aparece el siguiente cuadro de diálogo: </target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="5">
         <source xml:space="preserve">The following dialog appears: </source>
         <target xml:space="preserve">Aparece el siguiente cuadro de diálogo: </target>
       </segment>
     </unit>
     <unit id="6">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="87.0">
-          <source>Settings Dialog</source>
-          <target>Cuadro de diálogo Configuración</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="87.0">
-          <source>Settings Dialog</source>
-          <target>Cuadro de diálogo Configuración</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="87.0">
-          <source>Settings Dialog</source>
-          <target>Cuadro de diálogo Configuración</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="6">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -2519,20 +2269,6 @@ Z3MucG5nIn0=</mda:meta>
       </segment>
     </unit>
     <unit id="7">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="100.0">
-          <source>Select the apropriate default source and target languages to use when creating XLIFF files.</source>
-          <target>Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="100.0">
-          <source>Select the apropriate default source and target languages to use when creating XLIFF files.</source>
-          <target>Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="100.0">
-          <source>Select the apropriate default source and target languages to use when creating XLIFF files.</source>
-          <target>Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="7">
         <source xml:space="preserve">Select the apropriate default source and target languages to use when creating XLIFF files.</source>
         <target xml:space="preserve">Seleccione los idiomas de origen y destino predeterminados apropiados que desea utilizar al crear archivos XLIFF.</target>
@@ -2749,7 +2485,7 @@ NCUlJQo8L3N0ZXByZXN1bHQ+IDwvc3RlcD4gPC9zdGVwcz4gPC90YXNrYm9keT4gPC90YXNrPg==</sk
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -2808,48 +2544,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="4">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="78.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="78.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="78.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="78.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="78.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="78.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="100.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="100.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="100.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="100.0">
-          <source>Merge XLIFF File</source>
-          <target>Combinar Archivo XLIFF</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="4">
         <source xml:space="preserve">Merge XLIFF File</source>
         <target xml:space="preserve">Combinar Archivo XLIFF</target>
@@ -2890,40 +2584,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="6">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="71.0">
-          <source>Type the name and location of the document to convert to XLIFF in the <ph id="ph0"/>Source File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select a document from the file system.</source>
-          <target>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <ph id="ph0"/>Archivo de origen<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> junto a él para seleccionar un documento del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#6" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="6">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -3097,7 +2757,7 @@ Ij4lJSU2JSUlCjwvY21kPiA8L3N0ZXA+IDwvc3RlcHM+IDwvdGFza2JvZHk+IDwvdGFzaz4=</skelet
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -3138,20 +2798,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="3">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="96.0">
-          <source>Use this method to generate a fake translation that you can use to test the <ph id="ph48"/>Merge XLIFF File<ph id="ph49"/> process. After making sure that Merge runs successfully, you can use the <ph id="ph50"/>Remove all Targets<ph id="ph51"/> option to clean your XLIFF file.</source>
-          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="ph48"/>Combinar XLIFF<ph id="ph49"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="ph50"/>Eliminar Todas las Traducciones<ph id="ph51"/> para limpiar el archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="96.0">
-          <source>Use this method to generate a fake translation that you can use to test the <ph id="ph110905"/>Merge XLIFF File<ph id="ph110906"/> process. After making sure that Merge runs successfully, you can use the <ph id="ph110907"/>Remove all Targets<ph id="ph110908"/> option to clean your XLIFF file.</source>
-          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="ph110905"/>Combinar XLIFF<ph id="ph110906"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="ph110907"/>Eliminar Todas las Traducciones<ph id="ph110908"/> para limpiar el archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#3" matchQuality="100.0">
-          <source>Use this method to generate a fake translation that you can use to test the <ph id="ph0"/>Merge XLIFF File<ph id="ph1"/> process. After making sure that Merge runs successfully, you can use the <ph id="ph2"/>Remove all Targets<ph id="ph3"/> option to clean your XLIFF file.</source>
-          <target>Utilice este método para generar una traducción falsa que puede utilizar para probar el proceso <ph id="ph0"/>Combinar XLIFF<ph id="ph1"/>. Después de asegurarse de que la combinación se ejecuta correctamente, puede usar la opción <ph id="ph2"/>Eliminar Todas las Traducciones<ph id="ph3"/> para limpiar el archivo XLIFF.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="3">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-link</mda:meta>
@@ -3206,48 +2852,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="5">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="86.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="92.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="93.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="96.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="5">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -3318,7 +2922,7 @@ a2JvZHk+IDwvdGFzaz4=</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -3339,20 +2943,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="2">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="96.0">
-          <source>Use this feature to remove all &lt;target&gt; elements from your XLIFF file.</source>
-          <target>Utilice esta función para eliminar todos los elementos &lt;target&gt; del archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="98.0">
-          <source>Use this feature to remove all <ph id="ph48"/>&lt;target&gt;<ph id="ph49"/> elements from your XLIFF file.</source>
-          <target>Utilice esta función para eliminar todos los elementos <ph id="ph48"/>&lt;target&gt;<ph id="ph49"/> del archivo XLIFF.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#2" matchQuality="100.0">
-          <source>Use this feature to remove all <ph id="ph0"/>&lt;target&gt;<ph id="ph1"/> elements from your XLIFF file.</source>
-          <target>Utilice esta función para eliminar todos los elementos <ph id="ph0"/>&lt;target&gt;<ph id="ph1"/> del archivo XLIFF.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="2">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -3402,48 +2992,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="4">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="82.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="86.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="89.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="92.0">
-          <source>Type the name and location of the XLIFF file to validate in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea validar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="93.0">
-          <source>Type the name and location of the XLIFF file to analyse in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#4" matchQuality="96.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="4">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -3521,7 +3069,7 @@ PC9zdGVwPiA8L3N0ZXBzPiA8L3Rhc2tib2R5PiA8L3Rhc2s+</skeleton>
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>
@@ -3572,48 +3120,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="5">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Validate XLIFF</source>
-          <target>Validar XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Validate XLIFF</source>
-          <target>Validar XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Validate XLIFF</source>
-          <target>Validar XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="73.0">
-          <source>Create XLIFF File</source>
-          <target>Crear Archivo XLIFF</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#5" matchQuality="100.0">
-          <source>Validate XLIFF File</source>
-          <target>Validar Archivo XLIFF</target>
-        </mtc:match>
-      </mtc:matches>
       <segment state="final" id="5">
         <source xml:space="preserve">Validate XLIFF File</source>
         <target xml:space="preserve">Validar Archivo XLIFF</target>
@@ -3654,48 +3160,6 @@ In0=</mda:meta>
       </segment>
     </unit>
     <unit id="7">
-      <mtc:matches>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="83.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="83.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="87.0">
-          <source>Type the name and location of the XLIFF file to merge in the <ph id="ph0"/>XLIFF File<ph id="ph1"/> text box or click the <ph id="ph2"/>Browse...<ph id="ph3"/> button next to it to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea combinar en el cuadro de texto <ph id="ph0"/>Archivo XLIFF<ph id="ph1"/> o haga clic en el botón <ph id="ph2"/>Examinar...<ph id="ph3"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph48"/>XLIFF File<ph id="ph49"/> text box or click the <ph id="ph50"/>Browse...<ph id="ph51"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph48"/>Archivo XLIFF<ph id="ph49"/> o haga clic en el botón <ph id="ph50"/>Examinar...<ph id="ph51"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-        <mtc:match origin="1680174732565" ref="#7" matchQuality="88.0">
-          <source>Type the name and location of the XLIFF file to process in the <ph id="ph110905"/>XLIFF File<ph id="ph110906"/> text box or click the <ph id="ph110907"/>Browse...<ph id="ph110908"/> button to select an XLIFF file from the file system.</source>
-          <target>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <ph id="ph110905"/>Archivo XLIFF<ph id="ph110906"/> o haga clic en el botón <ph id="ph110907"/>Examinar...<ph id="ph110908"/> para seleccionar un archivo XLIFF del sistema de archivos.</target>
-        </mtc:match>
-      </mtc:matches>
       <mda:metadata id="7">
         <mda:metaGroup category="attributes" id="ph0">
           <mda:meta type="ctype">x-other</mda:meta>
@@ -3801,7 +3265,7 @@ PiA8L2dsb3NzYXJ5bGlzdD4gPC9ib29rbGlzdHM+IDwvYmFja21hdHRlcj4gPC9ib29rbWFwPg==</sk
       <mda:metaGroup category="project-data">
         <mda:meta type="product-name">XLIFF Manager</mda:meta>
         <mda:meta type="project-id">1680174732565</mda:meta>
-        <mda:meta type="build-number">5</mda:meta>
+        <mda:meta type="build-number">6</mda:meta>
       </mda:metaGroup>
       <mda:metaGroup category="tool">
         <mda:meta type="tool-id">OpenXLIFF</mda:meta>

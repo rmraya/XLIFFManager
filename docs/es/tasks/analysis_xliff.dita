@@ -17,7 +17,7 @@
         <cmd>En el menú principal, seleccione <menucascade>
             <uicontrol>Ver</uicontrol>
             <uicontrol>Analizar XLIFF</uicontrol>
-        </menucascade> o haga clic en la opción <uicontrol><image href="../images/stats.png" placement="inline"/>&nbsp;Analizar XLIFF</uicontrol> del panel izquierdo.</cmd>
+          </menucascade> o haga clic en la opción <uicontrol><image href="../images/stats.png" placement="inline"/>&nbsp;Analizar XLIFF</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea analizar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
