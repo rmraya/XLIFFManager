@@ -315,3 +315,7 @@ svg {
 .left {
 	text-align: left;
 }
+
+.paddedTop {
+	padding-top: 4px;
+}

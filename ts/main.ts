@@ -242,6 +242,12 @@ class Main {
         let is20: boolean = (document.getElementById('is20') as HTMLInputElement).checked;
         if (is20) {
             args.is20 = true;
+            args.is21 = false;
+        }
+        let is21: boolean = (document.getElementById('is21') as HTMLInputElement).checked;
+        if (is21) {
+            args.is20 = false;
+            args.is21 = true;
         }
         let isParagraph: boolean = (document.getElementById('isParagraph') as HTMLInputElement).checked;
         if (isParagraph) {

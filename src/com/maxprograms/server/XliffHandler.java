@@ -310,7 +310,7 @@ public class XliffHandler implements HttpHandler {
 		new Thread(() -> {
 			processMap.put(process, RUNNING);
 			List<String> result = Merge.merge(xliff, target, catalog, unapproved);
-			if (exportTmx && Constants.SUCCESS.equals(result.get(0))) {
+			if (exportTmx && com.maxprograms.converters.Constants.SUCCESS.equals(result.get(0))) {
 				String tmx = "";
 				if (xliff.toLowerCase().endsWith(".xlf")) {
 					tmx = xliff.substring(0, xliff.lastIndexOf('.')) + ".tmx";
@@ -320,7 +320,7 @@ public class XliffHandler implements HttpHandler {
 				result = TmxExporter.export(xliff, tmx, catalog);
 			}
 			JSONObject jsonResult = new JSONObject();
-			if (Constants.SUCCESS.equals(result.get(0))) {
+			if (com.maxprograms.converters.Constants.SUCCESS.equals(result.get(0))) {
 				jsonResult.put(RESULT, SUCCESS);
 			} else {
 				jsonResult.put(RESULT, FAILED);
@@ -440,6 +440,10 @@ public class XliffHandler implements HttpHandler {
 		if (json.has("is20")) {
 			is20 = json.getBoolean("is20");
 		}
+		boolean is21 = false;
+		if (json.has("is21")) {
+			is21 = json.getBoolean("is21");
+		}
 		String process = "" + System.currentTimeMillis();
 
 		File xmlfilter = new File(new File(System.getProperty("user.dir")), "xmlfilter");
@@ -456,6 +460,7 @@ public class XliffHandler implements HttpHandler {
 		params.put("srxFile", srx);
 		params.put("xmlfilter", xmlfilter.getAbsolutePath());
 		params.put("xliff20", is20 ? "yes" : "no");
+		params.put("xliff21", is21 ? "yes" : "no");
 		params.put("embed", embed ? "yes" : "no");
 		if (!tgtLang.isEmpty()) {
 			params.put("tgtLang", tgtLang);
@@ -466,7 +471,7 @@ public class XliffHandler implements HttpHandler {
 		if (type.equals(FileFormats.JSON) && !config.isEmpty()) {
 			params.put("config", config);
 		}
-		if (is20 && !paragraph && config.isEmpty()) {
+		if ((is20 || is21) && !paragraph && config.isEmpty()) {
 			params.put("resegment", "yes");
 			params.put("paragraph", "yes");
 		}
@@ -475,7 +480,7 @@ public class XliffHandler implements HttpHandler {
 			processMap.put(process, RUNNING);
 			List<String> result = Convert.run(params);
 			JSONObject jsonResult = new JSONObject();
-			if (Constants.SUCCESS.equals(result.get(0))) {
+			if (com.maxprograms.converters.Constants.SUCCESS.equals(result.get(0))) {
 				jsonResult.put(RESULT, SUCCESS);
 			} else {
 				jsonResult.put(RESULT, FAILED);

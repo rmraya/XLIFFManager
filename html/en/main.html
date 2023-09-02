@@ -138,17 +138,22 @@
                         </tr>
                     </table>
 
-                    <div class="row middle">
-                        <input id="is20" type="checkbox">
-                        <label for="is20" style="padding-top: 4px;" class="noWrap">Generate XLIFF 2.0</label>
+                    <div class="row middle paddedTop">
+                        <label class="paddedTop">XLIFF Version:</label>
+                        <input type="radio" name="version" id="is12" value="1"  />
+                        <label for="is12" class="paddedTop">1.2</label>
+                        <input type="radio" name="version" id="is20" value="1" checked/>
+                        <label for="is20" class="paddedTop">2.0</label>
+                        <input type="radio" name="version" id="is21" value="1" />
+                        <label for="is21" class="paddedTop">2.1</label>
                     </div>
-                    <div class="row middle">
+                    <div class="row middle paddedTop">
                         <input id="isParagraph" type="checkbox">
-                        <label for="isParagraph" style="padding-top: 4px;" class="noWrap">Paragraph Segmentation</label>
+                        <label for="isParagraph" class="noWrap paddedTop">Paragraph Segmentation</label>
                     </div>
                     <div class="row middle">
                         <input id="isEmbed" type="checkbox">
-                        <label for="isEmbed" style="padding-top: 4px;" class="noWrap">Embed Skeleton</label>
+                        <label for="isEmbed" class="noWrap paddedTop">Embed Skeleton</label>
                     </div>
                     <div class="buttonArea">
                         <button id="createXLIFF">Create XLIFF</button>
@@ -173,17 +178,17 @@
                             <td>
                                 <div class="row middle">
                                     <input id="unapproved" type="checkbox">
-                                    <label for="unapproved" style="padding-top: 4px;" class="noWrap">Accept Unaproved
+                                    <label for="unapproved" class="noWrap paddedTop">Accept Unaproved
                                         Segments</label>
                                 </div>
                                 <div class="row middle">
                                     <input id="exportTmx" type="checkbox">
-                                    <label for="exportTmx" style="padding-top: 4px;" class="noWrap">Export Approved
+                                    <label for="exportTmx" class="noWrap paddedTop">Export Approved
                                         Segments as TMX</label>
                                 </div>
                                 <div class="row middle">
                                     <input id="openTranslated" type="checkbox">
-                                    <label for="openTranslated" style="padding-top: 4px;" class="noWrap">Open Translated
+                                    <label for="openTranslated" class="noWrap paddedTop">Open Translated
                                         File/Folder After Merging</label>
                                 </div>
                             </td>
