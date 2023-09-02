@@ -1,6 +1,6 @@
 # XLIFF Manager
 
-<img src="https://maxprograms.com/images/xliffmanager_90.png" alt="XLIFF Manager logo"/>
+![XLIFF Manager logo](img/xliffmanager.png)
 
 An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). OpenXLIFF is a set of programs that let you:
 
@@ -9,7 +9,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
 - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-<img src="https://www.maxprograms.com/images/XliffManagerUI.png" alt="XLIFF Manager on Windows 11" width="680"/>
+![XLIFF Manager](docs/en/images/createXliff.png)
 
 ## Releases
 
