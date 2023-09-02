@@ -9,7 +9,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
 - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
 
-<img src="https://www.maxprograms.com/images/XliffManager_Windows.png" alt="XLIFF Manager on Windows 11" width="680"/>
+<img src="https://www.maxprograms.com/images/XliffManagerUI.png" alt="XLIFF Manager on Windows 11" width="680"/>
 
 ## Releases
 
