@@ -4,7 +4,7 @@
 
 An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). OpenXLIFF is a set of programs that let you:
 
-- Create XLIFF 1.2 and 2.0 files that can be translated in any modern CAT tool.
+- Create XLIFF 1.2, 2.0 and 2.1 files that can be translated in any modern CAT tool.
 - Convert your translated XLIFF files to original format with a couple of clicks.
 - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
 - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
