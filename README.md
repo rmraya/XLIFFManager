@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+7.4.0 | Updated OpenXLIFF to version 3.17.0; migrated to Java 21 | January 12, 2024
 7.3.0 | Updated OpenXLIFF to version 3.16.0 | October 31, 2023
 7.2.0 | Updated OpenXLIFF to version 3.15.0 | September 13, 2023
 7.1.0 | Added option to generate XLIFF 2.1; Updated OpenXLIFF to version 3.14.0 | September 1, 2023
@@ -120,19 +121,23 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 
 Source code of XLIFF Manager is free. Anyone can download the source code, compile, modify and use it at no cost in compliance with the accompanying license terms.
 
+Subscriptions are available for technical support, bug fixes, and feature requests. By subscribing to a support plan, you contribute to the continuous improvement of XLIFF Manager. Your subscription fees pay for code development costs and ensure the quality and reliability of the software.
+
+Subscription Keys are available at [Maxprograms Online Store](https://www.maxprograms.com/store/buy.html). Subscription Keys cannot be shared or transferred to different machines.
+
 You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at Groups.io and request peer assistance for the source code there.
 
 ## Requirements
 
-- JDK 17 or newer is required for compiling and building. Get it from [Adoptium](https://adoptium.net/).
-- Apache Ant 1.10.12 or newer. Get it from [https://ant.apache.org/](https://ant.apache.org/)
-- Node.js 18.0.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- TypeScript 5.0.0 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+- JDK 21 or newer is required for compiling and building. Get it from [Adoptium](https://adoptium.net/).
+- Apache Ant 1.10.13 or newer. Get it from [https://ant.apache.org/](https://ant.apache.org/)
+- Node.js 20.10.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
+- TypeScript 5.3.3 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
 
 ## Building
 
 - Checkout this repository.
-- Point your `JAVA_HOME` environment variable to JDK 17
+- Point your `JAVA_HOME` environment variable to JDK 21
 - Run `ant` to compile the Java code
 - Run `npm install` to download and install NodeJS dependencies
 - Run `npm start` to launch XLIFF Manager
@@ -146,5 +151,3 @@ You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at 
   npm install
   npm start
 ```
-
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/rmraya/XLIFFManager)

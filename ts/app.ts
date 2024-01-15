@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2023 Maxprograms.
+ * Copyright (c) 2018 - 2024 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -53,13 +53,11 @@ class App {
     constructor() {
         if (!app.requestSingleInstanceLock()) {
             app.quit();
-        } else {
-            if (App.mainWindow) {
-                if (App.mainWindow.isMinimized()) {
-                    App.mainWindow.restore();
-                }
-                App.mainWindow.focus();
+        } else if (App.mainWindow) {
+            if (App.mainWindow.isMinimized()) {
+                App.mainWindow.restore();
             }
+            App.mainWindow.focus();
         }
         App.appHome = App.path.join(app.getPath('appData'), app.name);
         App.appIcon = App.path.join(app.getAppPath(), 'icons', 'openxliff.png');

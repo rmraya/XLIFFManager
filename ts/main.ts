@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2023 Maxprograms.
+ * Copyright (c) 2018 - 2024 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -188,10 +188,8 @@ class Main {
                 this.electron.ipcRenderer.send('get-xliff-languages', { command: 'getXliffLangs', xliff: arg.file });
             } else if ('SDLPPX' === type) {
                 this.electron.ipcRenderer.send('get-package-languages', { command: 'getPackageLangs', package: arg.file });
-            } else {
-                if (this.languagesChanged) {
-                    this.electron.ipcRenderer.send('get-languages');
-                }
+            } else if (this.languagesChanged) {
+                this.electron.ipcRenderer.send('get-languages');
             }
         }
         let encoding: string = arg.encoding;

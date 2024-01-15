@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2023 Maxprograms.
+ * Copyright (c) 2018 - 2024 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.lang.System.Logger;
 import java.lang.System.Logger.Level;
 import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.Locale;
 
@@ -39,7 +41,7 @@ public class CheckURL {
 				String lang = args[i + 1];
 				try {
 					if (LanguageUtils.getLanguage(lang) != null) {
-						Locale locale = new Locale(lang);
+						Locale locale = Locale.forLanguageTag(lang);
 						Locale.setDefault(locale);
 					}
 				} catch (IOException | SAXException | ParserConfigurationException e) {
@@ -57,7 +59,7 @@ public class CheckURL {
 			try {
 				connect(string);
 				waiting = false;
-			} catch (IOException e) {
+			} catch (IOException | URISyntaxException e) {
 				try {
 					Thread.sleep(500);
 					count++;
@@ -74,8 +76,8 @@ public class CheckURL {
 		}
 	}
 
-	private static void connect(String string) throws IOException {
-		URL url = new URL(string);
+	private static void connect(String string) throws IOException, URISyntaxException {
+		URL url = new URI(string).toURL();
 		HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		connection.setConnectTimeout(1000);
 		connection.connect();

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2023 Maxprograms.
+ * Copyright (c) 2018 - 2024 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -52,7 +52,7 @@ public class FilterServer {
 				String lang = args[i + 1];
 				try {
 					if (LanguageUtils.getLanguage(lang) != null) {
-						Locale locale = new Locale(lang);
+						Locale locale = Locale.forLanguageTag(lang);
 						Locale.setDefault(locale);
 					}
 				} catch (IOException | SAXException | ParserConfigurationException e) {
