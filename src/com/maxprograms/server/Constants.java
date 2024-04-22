@@ -18,8 +18,8 @@ public class Constants {
         // do not instantiate this class
     }
 
-    public static final String VERSION = "7.4.0";
-    public static final String BUILD = "20240112_0815";
+    public static final String VERSION = "7.5.0";
+    public static final String BUILD = "20240421_1342";
     public static final String STATUS = "Status";
     public static final String REASON = "Reason";
     public static final String APPNAME = "XLIFFManager";

@@ -120,6 +120,10 @@ public class XliffHandler implements HttpHandler {
 						com.maxprograms.converters.Constants.BUILD }));
 				result.put("XMLJava", mf.format(
 						new String[] { com.maxprograms.xml.Constants.VERSION, com.maxprograms.xml.Constants.BUILD }));
+				result.put("BCP47J", mf.format(
+						new String[] { com.maxprograms.languages.Constants.VERSION,
+								com.maxprograms.languages.Constants.BUILD }));
+
 				result.put("Java", mf.format(
 						new String[] { System.getProperty("java.version"), System.getProperty("java.vendor") }));
 				response = result.toString(2);

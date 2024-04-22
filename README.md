@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+7.5.0 | Updated OpenXLIFF to version 3.20.0 | April 21, 2024
 7.4.0 | Updated OpenXLIFF to version 3.17.0; migrated to Java 21 | January 12, 2024
 7.3.0 | Updated OpenXLIFF to version 3.16.0 | October 31, 2023
 7.2.0 | Updated OpenXLIFF to version 3.15.0 | September 13, 2023

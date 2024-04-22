@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2023 Maxprograms.
+ * Copyright (c) 2018 - 2024 Maxprograms.
  *
  * This program and the accompanying materials are made available under the
  * terms of the Eclipse Public License 1.0 which accompanies this distribution,
@@ -14,10 +14,10 @@ module xliffmanager {
 	requires openxliff;
 	requires dtd;
 	requires jsoup;
-	requires mapdb;
 	requires java.base;
 	requires java.logging;
 	requires java.net.http;
+	requires transitive javabcp47;
 	requires transitive xmljava;
 	requires transitive json;
 	requires transitive jdk.httpserver;

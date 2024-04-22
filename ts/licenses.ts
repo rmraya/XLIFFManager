@@ -40,8 +40,8 @@ class Licenses {
         (document.getElementById('JSON') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('JSON');
         });
-        (document.getElementById('MapDB') as HTMLAnchorElement).addEventListener('click', () => {
-            this.openLicense('MapDB');
+        (document.getElementById('bcp47j') as HTMLAnchorElement).addEventListener('click', () => {
+            this.openLicense('BCP47J');
         });
         (document.getElementById('jsoup') as HTMLAnchorElement).addEventListener('click', () => {
             this.openLicense('jsoup');

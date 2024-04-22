@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project basedir="." default="dist" name="XLIFFManager">
-    <property name="target" value="17" />
-    <property name="source" value="17" />
+    <property name="target" value="21" />
+    <property name="source" value="21" />
     <property name="build.compiler" value="javac10+" />
     <path id="XLIFFManager.classpath">
+        <pathelement location="jars/bcp47j.jar" />
         <pathelement location="jars/dtd.jar" />
         <pathelement location="jars/json.jar" />
         <pathelement location="jars/jsoup.jar" />
-        <pathelement location="jars/mapdb.jar" />
         <pathelement location="jars/openxliff.jar" />
         <pathelement location="jars/xmljava.jar" />
     </path>

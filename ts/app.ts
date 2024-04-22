@@ -1150,6 +1150,7 @@ class App {
         switch (type) {
             case 'XLIFFManager':
             case "OpenXLIFF":
+            case "BCP47J":
             case "XMLJava":
                 licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
                 title = 'Eclipse Public License 1.0';
@@ -1159,7 +1160,6 @@ class App {
                 title = 'MIT License';
                 break;
             case "TypeScript":
-            case "MapDB":
                 licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'Apache2.0.html');
                 title = 'Apache 2.0';
                 break;

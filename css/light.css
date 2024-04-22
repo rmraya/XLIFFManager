@@ -316,6 +316,10 @@ svg {
 	text-align: left;
 }
 
+.paddedArea {
+	padding: 8px;
+}
+
 .paddedTop {
 	padding-top: 4px;
 }

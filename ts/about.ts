@@ -25,6 +25,7 @@ class About {
             (document.getElementById('xlfm_version') as HTMLTableCellElement).innerHTML = arg.XLIFFManager;
             (document.getElementById('oxlf_version') as HTMLTableCellElement).innerHTML = arg.OpenXLIFF;
             (document.getElementById('xmlj_version') as HTMLTableCellElement).innerHTML = arg.XMLJava;
+            (document.getElementById('bcp47j_version') as HTMLTableCellElement).innerHTML = arg.BCP47J;
             (document.getElementById('java_version') as HTMLTableCellElement).innerHTML = arg.Java;
             (document.getElementById('elect_version') as HTMLTableCellElement).innerHTML = arg.electron;
             this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: (document.body.clientHeight + 40) });
