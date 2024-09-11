@@ -39,8 +39,6 @@ class App {
     static defaultSrcLang: string = 'none';
     static defaultTgtLang: string = 'none';
 
-    static verticalPadding: number = 46;
-
     static latestVersion: string;
     static downloadLink: string;
 
@@ -124,16 +122,15 @@ class App {
                 } else {
                     App.currentTheme = App.path.join(app.getAppPath(), 'css', 'light.css');
                 }
-                App.mainWindow.webContents.send('set-theme', App.currentTheme);
+                let windows: BrowserWindow[] = BrowserWindow.getAllWindows();
+                for (let window of windows) {
+                    window.webContents.send('set-theme', App.currentTheme);
+                }
             }
         });
 
         ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
-            let rect: Rectangle = App.mainWindow.getBounds();
-            if (rect.height < arg.height + App.verticalPadding) {
-                rect.height = arg.height + App.verticalPadding;
-                App.mainWindow.setBounds(rect);
-            }
+            App.mainWindow.setContentSize(arg.width, arg.height);
         });
         ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.aboutWindow, arg);
@@ -315,9 +312,7 @@ class App {
     }
 
     static setHeight(window: BrowserWindow, arg: any) {
-        let rect: Rectangle = window.getBounds();
-        rect.height = arg.height + App.verticalPadding;
-        window.setBounds(rect);
+        window.setContentSize(arg.width, arg.height);
     }
 
     static destroyWindow(window: BrowserWindow): void {
@@ -340,6 +335,7 @@ class App {
     createWindow(): void {
         App.mainWindow = new BrowserWindow({
             width: 860,
+            height: 500,
             maximizable: false,
             show: false,
             icon: App.appIcon,
@@ -347,8 +343,7 @@ class App {
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: false
-            },
-            height: 500
+            }
         });
         App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'main.html'));
         App.mainWindow.on('move', () => {
@@ -869,6 +864,7 @@ class App {
                             App.updatesWindow = new BrowserWindow({
                                 parent: this.mainWindow,
                                 width: 600,
+                                height: 220,
                                 minimizable: false,
                                 maximizable: false,
                                 resizable: false,
@@ -919,6 +915,12 @@ class App {
     }
 
     createMenu(): void {
+        let editMenu: Menu = Menu.buildFromTemplate([
+            { label: App.i18n.getString('App', 'cut'), accelerator: 'CmdOrCtrl+X', click: () => { BrowserWindow.getFocusedWindow()?.webContents.cut(); } },
+            { label: App.i18n.getString('App', 'copy'), accelerator: 'CmdOrCtrl+C', click: () => { BrowserWindow.getFocusedWindow()?.webContents.copy(); } },
+            { label: App.i18n.getString('App', 'paste'), accelerator: 'CmdOrCtrl+V', click: () => { BrowserWindow.getFocusedWindow()?.webContents.paste(); } },
+            { label: App.i18n.getString('App', 'selectAll'), accelerator: 'CmdOrCtrl+A', click: () => { BrowserWindow.getFocusedWindow()?.webContents.selectAll(); } }
+        ]);
         let viewMenu: Menu = Menu.buildFromTemplate([
             { label: App.i18n.getString('App', 'createXliffView'), accelerator: 'CmdOrCtrl+1', click: () => { App.createXliffView(); } },
             { label: App.i18n.getString('App', 'mergeXliffView'), accelerator: 'CmdOrCtrl+2', click: () => { App.mergeXliffView(); } },
@@ -937,6 +939,7 @@ class App {
             { label: App.i18n.getString('App', 'supportGroup'), click: () => { App.showSupportGroup(); } },
         ]);
         let template: MenuItem[] = [
+            new MenuItem({ label: App.i18n.getString('App', 'editMenu'),  submenu: editMenu }),
             new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
         ];
         if (!app.isPackaged) {
@@ -956,22 +959,29 @@ class App {
                 { type: 'separator' },
                 { label: App.i18n.getString('App', 'quitMac'), accelerator: 'Cmd+Q', role: 'quit', click: () => { app.quit(); } }
             ]);
-            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }));
-            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'xliffManager'), submenu: appleMenu }));
+            template = [
+                new MenuItem({ label: App.i18n.getString('App', 'xliffManager'), submenu: appleMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'editMenu'),  submenu: editMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
+            ];
         } else {
-            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'settingsMenu'), click: () => { App.showSettings(); } }));
-            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }));
             let fileMenu: Menu = Menu.buildFromTemplate([]);
-            template.unshift(new MenuItem({ label: App.i18n.getString('App', 'fileMenu'), submenu: fileMenu }));
-        }
+            template = [
+                new MenuItem({ label: App.i18n.getString('App', 'fileMenu'), submenu: fileMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'editMenu'),  submenu: editMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'settingsMenu'), click: () => { App.showSettings(); } }),
+                new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
+            ];        }
 
         if (process.platform === 'win32') {
             if (template[0].submenu) {
                 template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'exit'), accelerator: 'Alt+F4', role: 'quit', click: () => { app.quit(); } }));
             }
-            if (template[3].submenu) {
-                template[3].submenu.append(new MenuItem({ type: 'separator' }));
-                template[3].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
+            if (template[4].submenu) {
+                template[4].submenu.append(new MenuItem({ type: 'separator' }));
+                template[4].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
             }
         }
 
@@ -979,9 +989,9 @@ class App {
             if (template[0].submenu) {
                 template[0].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'quit'), accelerator: 'Ctrl+Q', role: 'quit', click: () => { app.quit(); } }));
             }
-            if (template[3].submenu) {
-                template[3].submenu.append(new MenuItem({ type: 'separator' }));
-                template[3].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
+            if (template[4].submenu) {
+                template[4].submenu.append(new MenuItem({ type: 'separator' }));
+                template[4].submenu.append(new MenuItem({ label: App.i18n.getString('App', 'about'), click: () => { App.showAbout(); } }));
             }
         }
 
@@ -992,6 +1002,7 @@ class App {
         App.aboutWindow = new BrowserWindow({
             parent: App.mainWindow,
             width: 380,
+            height: 520,
             minimizable: false,
             maximizable: false,
             resizable: false,
@@ -1038,6 +1049,7 @@ class App {
         App.settingsWindow = new BrowserWindow({
             parent: App.mainWindow,
             width: 640,
+            height: 410,
             minimizable: false,
             maximizable: false,
             resizable: false,
@@ -1123,6 +1135,7 @@ class App {
         App.licensesWindow = new BrowserWindow({
             parent: parent,
             width: 430,
+            height: 390,
             minimizable: false,
             maximizable: false,
             resizable: false,

@@ -28,8 +28,6 @@ class Main {
     constructor() {
         this.electron.ipcRenderer.send('get-theme');
 
-        document.addEventListener('keydown', (event: KeyboardEvent) => { KeyboardHandler.keyListener(event); });
-
         this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
             this.electron.ipcRenderer.send('get-languages');

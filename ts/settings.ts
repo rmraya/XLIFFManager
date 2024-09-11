@@ -17,8 +17,6 @@ class Settings {
     constructor() {
         this.electron.ipcRenderer.send('get-theme');
 
-        document.addEventListener('keydown', (event: KeyboardEvent) => { KeyboardHandler.keyListener(event); });
-
         (document.getElementById('browseCatalog') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-catalog'); });
         (document.getElementById('browseSkeleton') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-skeleton'); });
         (document.getElementById('browseSRX') as HTMLButtonElement).addEventListener('click', () => { this.electron.ipcRenderer.send('select-srx'); });

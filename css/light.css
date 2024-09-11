@@ -12,6 +12,7 @@ body {
 	stroke: var(--gray190);
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 
 .wait {

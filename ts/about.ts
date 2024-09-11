@@ -28,7 +28,7 @@ class About {
             (document.getElementById('bcp47j_version') as HTMLTableCellElement).innerHTML = arg.BCP47J;
             (document.getElementById('java_version') as HTMLTableCellElement).innerHTML = arg.Java;
             (document.getElementById('elect_version') as HTMLTableCellElement).innerHTML = arg.electron;
-            this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: (document.body.clientHeight + 40) });
+            this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         });
         let licensesButton: HTMLButtonElement = document.getElementById('licensesButton') as HTMLButtonElement;
         licensesButton.addEventListener('click', () => {
