@@ -19,10 +19,11 @@ Use a command like this to generate XLIFF:
 
 XLIFF Manager .properties are encoded in UTF-8; translated versions must be generated using UTF-8 character set.
 
-XLIFF Manager uses code from these two projects:
+XLIFF Manager uses code from these additional projects:
 
 - [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF)  
 - [XMLJava](https://github.com/rmraya/XMLJava)
+- [BCP47J](https://github.com/rmraya/BCP47J)
 
 It is important to localize those projects and include localized versions of the libraries in the XLIFF Manager project for proper display of error messages and other user interface elements, like language names.
 
