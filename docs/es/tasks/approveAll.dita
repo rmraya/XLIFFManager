@@ -2,17 +2,17 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task xml:lang="es" id="approveAll">
   <title>Aprobar Todos los Segmentos</title>
-  <shortdesc>Asignar <codeph>approved="true"</codeph> en todos los elementos  <codeph>&lt;trans-unit&gt;</codeph> de un archivo XLIFF 1.2 o asignar <codeph>state="final"</codeph> en todos los elementos <codeph>&lt;unit&gt;</codeph> de un documento XLIFF 2.0.</shortdesc>
+  <shortdesc>Asignar <codeph>approved="true"</codeph> en todos los elementos  <codeph>&lt;trans-unit&gt;</codeph> de un archivo XLIFF 1.2 o asignar <codeph>state="final"</codeph> en todos los elementos <codeph>&lt;unit&gt;</codeph> de un documento XLIFF 2.0 o 2.1.</shortdesc>
   <taskbody>
     <context>
-      <p>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> cuando utilice la opción <xref href="merge_xliff.dita">Combinar XLIFF</xref>. </p>
+      <p>Algunas herramientas de traducción no ofrecen una forma de confirmar segmentos en el momento de la traducción. Utilice esta función para confirmar todos los segmentos, de modo que pueda seleccionar la opción <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> cuando utilice la opción <xref href="merge_xliff.dita">Combinar XLIFF</xref>.</p>
     </context>
     <steps>
       <step>
         <cmd>En el menú principal, seleccione <menucascade>
             <uicontrol>Ver</uicontrol>
             <uicontrol>Traducciones</uicontrol>
-          </menucascade> o haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/>&nbsp;Traducciones</uicontrol> del panel izquierdo.</cmd>
+          </menucascade> o haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/>Traducciones</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>

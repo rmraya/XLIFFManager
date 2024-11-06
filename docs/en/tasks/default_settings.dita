@@ -42,7 +42,7 @@
                 <cmd>If you wish to change the folder where skeleton files are saved, enter the
                     folder name in the <uicontrol>Skeletons Folder</uicontrol> text box or use the
                         <uicontrol>Browse...</uicontrol> button to select the new location in the
-                    file system. </cmd>
+                    file system.</cmd>
             </step>
             <step>
                 <cmd>To use a custom <xref href="../glossaries/SRX.dita">SRX</xref> file when

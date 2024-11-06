@@ -75,6 +75,7 @@ class Main {
         (document.getElementById('pseudoTranslateButton') as HTMLButtonElement).addEventListener('click', () => { this.pseudoTranslate(); });
         (document.getElementById('removeTargetsButton') as HTMLButtonElement).addEventListener('click', () => { this.removeTargets(); });
         (document.getElementById('approveAllButton') as HTMLButtonElement).addEventListener('click', () => { this.approveAll(); });
+        (document.getElementById('registerLink') as HTMLAnchorElement).addEventListener('click', () => { this.registerSubscription(); });
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
@@ -154,9 +155,18 @@ class Main {
                     height = tabHeight;
                 }
             }
-            height += 16; // add extra padding at bottom
+            let appStatus: HTMLDivElement = document.getElementById('appStatus') as HTMLDivElement;
+            height += appStatus.clientHeight + 16; // add extra padding at bottom
             this.electron.ipcRenderer.send('main-height', { width: document.body.clientWidth, height: height });
         });
+
+        let appStatus: HTMLDivElement = document.getElementById('appStatus') as HTMLDivElement;
+        appStatus.style.width = (appStatus.parentElement as HTMLTableCellElement).clientWidth + 'px';
+
+        this.electron.ipcRenderer.on('registration-status', (event: Electron.IpcRendererEvent, arg: any) => {
+            appStatus.style.display = arg.Status === 'Success' ? 'none' : 'block';
+        });
+
     }
 
     startWaiting(): void {
@@ -234,6 +244,12 @@ class Main {
             if (config) {
                 args.config = config;
             }
+        }
+        if ((document.getElementById('ignoreSVG') as HTMLInputElement).disabled === false) {
+            let ignoreSVG: boolean = (document.getElementById('ignoreSVG') as HTMLInputElement).checked;
+            if (ignoreSVG) {
+                args.ignoresvg = true;
+            }    
         }
         let is20: boolean = (document.getElementById('is20') as HTMLInputElement).checked;
         if (is20) {
@@ -446,12 +462,14 @@ class Main {
     enableDitaVal(): void {
         (document.getElementById('browseDitaVal') as HTMLButtonElement).disabled = false;
         (document.getElementById('ditavalFile') as HTMLInputElement).disabled = false;
+        (document.getElementById('ignoreSVG') as HTMLInputElement).disabled = false;
     }
 
     disableDitaVal(): void {
         (document.getElementById('browseDitaVal') as HTMLButtonElement).disabled = true;
         (document.getElementById('ditavalFile') as HTMLInputElement).value = '';
         (document.getElementById('ditavalFile') as HTMLInputElement).disabled = true;
+        (document.getElementById('ignoreSVG') as HTMLInputElement).disabled = true;
     }
 
     enableConfig(): void {
@@ -596,4 +614,9 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
         }
     }
+
+    registerSubscription(): void {
+        this.electron.ipcRenderer.send('show-register-dialog');
+    }
+
 }

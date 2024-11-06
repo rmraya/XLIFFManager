@@ -48,7 +48,7 @@
             <step>
                 <cmd>Select the <uicontrol>Export Approved Segments as TMX</uicontrol> checkbox if
                     you want to generate a <xref href="../glossaries/TMX.dita">TMX</xref> file from
-                    the XLIFF file. </cmd>
+                    the XLIFF file.</cmd>
             </step>
             <step>
                 <cmd>Select the <uicontrol>Open Translated File/Folder After Merging</uicontrol>

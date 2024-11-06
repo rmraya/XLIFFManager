@@ -17,7 +17,7 @@
         <cmd>En el menú principal, seleccione <menucascade>
             <uicontrol>Ver</uicontrol>
             <uicontrol>Combinar XLIFF</uicontrol>
-          </menucascade> o haga clic en la opción <uicontrol><image href="../images/merge.png" placement="inline"/>&nbsp;Combinar XLIFF</uicontrol> del panel izquierdo.</cmd>
+          </menucascade> o haga clic en la opción <uicontrol><image href="../images/merge.png" placement="inline"/>Combinar XLIFF</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF a combinar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>
@@ -28,13 +28,13 @@
         <info>Si el archivo XLIFF contiene varios documentos en su interior, se requiere una carpeta para guardar los documentos traducidos. Este suele ser el caso cuando el archivo XLIFF se creó a partir de un mapa DITA.</info>
       </step>
       <step>
-        <cmd>Seleccione la casilla de verificación <uicontrol>Aceptar segmentos no aprobados</uicontrol> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<xmlatt>approved</xmlatt>" no esté establecido en "yes".</cmd>
+        <cmd>Seleccione la opción <uicontrol>Aceptar segmentos no aprobados</uicontrol> si desea considerar todos los segmentos como traducidos, incluso cuando el atributo "<xmlatt>approved</xmlatt>" no esté establecido en "yes".</cmd>
       </step>
       <step>
-        <cmd>Seleccione la casilla de verificación <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> si desea generar un archivo <xref href="../glossaries/TMX.dita">TMX</xref> a partir del archivo XLIFF. </cmd>
+        <cmd>Seleccione la opción <uicontrol>Exportar segmentos aprobados como TMX</uicontrol> si desea generar un archivo <xref href="../glossaries/TMX.dita">TMX</xref> a partir del archivo XLIFF.</cmd>
       </step>
       <step>
-        <cmd>Seleccione la casilla de verificación <uicontrol>Abrir archivo/carpeta traducido después de combinar</uicontrol> si desea abrir automáticamente el documento o carpeta traducidos después de una operación de combinación correcta.</cmd>
+        <cmd>Seleccione la opción <uicontrol>Abrir archivo/carpeta traducido después de combinar</uicontrol> si desea abrir automáticamente el documento o carpeta traducidos después de una operación de combinación correcta.</cmd>
       </step>
       <step>
         <cmd>Haga clic en el botón <uicontrol>Combinar XLIFF</uicontrol>.</cmd>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task xml:lang="es" id="copySources">
-  <title>Copiar Origen a Destino en Todos los Segmentos no Traducidos</title>
+  <title>Copiar origen a destino en todos los segmentos no traducidos</title>
   <shortdesc>Copiar el contenido de los elementos <codeph>&lt;source&gt;</codeph> a los elementos <codeph>&lt;target&gt;</codeph> que estén vacíos, creando nuevos elementos de ser necesario,  en un archivo XLIFF.</shortdesc>
   <taskbody>
     <steps>
@@ -9,7 +9,7 @@
         <cmd>En el menú principal, seleccione <menucascade>
             <uicontrol>Ver</uicontrol>
             <uicontrol>Traducciones</uicontrol>
-          </menucascade> o haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/>&nbsp;Traducciones</uicontrol> del panel izquierdo.</cmd>
+          </menucascade> o haga clic en la opción <uicontrol><image href="../images/tasks.png" placement="inline"/>Traducciones</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del archivo XLIFF que desea procesar en el cuadro de texto <uicontrol>Archivo XLIFF</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> para seleccionar un archivo XLIFF del sistema de archivos.</cmd>

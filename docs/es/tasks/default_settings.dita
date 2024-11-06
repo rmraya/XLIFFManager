@@ -29,7 +29,7 @@
         <cmd>Si desea utilizar un catálogo personalizado para archivos XML, introduzca su ubicación en el cuadro de texto <uicontrol>Catálogo del sistema</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionarlo del sistema de archivos.</cmd>
       </step>
       <step>
-        <cmd>Si desea cambiar la carpeta donde se guardan los archivos esqueleto, introduzca el nombre de la carpeta en el cuadro de texto <uicontrol>Carpeta de esqueletos</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionar la nueva ubicación en el sistema de archivos. </cmd>
+        <cmd>Si desea cambiar la carpeta donde se guardan los archivos esqueleto, introduzca el nombre de la carpeta en el cuadro de texto <uicontrol>Carpeta de esqueletos</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionar la nueva ubicación en el sistema de archivos.</cmd>
       </step>
       <step>
         <cmd>Para utilizar un archivo <xref href="../glossaries/SRX.dita">SRX</xref> personalizado al crear archivos XLIFF, introduzca su ubicación en el cuadro de texto <uicontrol>Archivo SRX predeterminado</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> para seleccionarlo del sistema de archivos.</cmd>

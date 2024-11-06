@@ -4,13 +4,13 @@
     <title>Approve all Segments</title>
     <shortdesc>Set <codeph>approved="true"</codeph> in all <codeph>&lt;trans-unit></codeph> elements
         in an XLIFF 1.2 file or set <codeph>state="final"</codeph> in all <codeph>&lt;unit></codeph>
-        elements of an XLIFF 2.0 document.</shortdesc>
+        elements of an XLIFF 2.0 or 2.1 document.</shortdesc>
     <taskbody>
         <context>
             <p>Some translation tools do not offer a way to confirm segments at translation time.
                 Use this feature to confirm all segments, so you can select the <uicontrol>Export
                     Approved Segments as TMX</uicontrol> option when using the <xref
-                    href="merge_xliff.dita">Merge XLIFF File</xref> option. </p>
+                    href="merge_xliff.dita">Merge XLIFF File</xref> option.</p>
         </context>
         <steps>
             <step>

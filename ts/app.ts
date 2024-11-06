@@ -1313,9 +1313,9 @@ class App {
                     shell.showItemInFolder(file);
                 }
             });
-            response.on('error', (reason: string) => {
+            response.on('error', (error: Error) => {
                 App.mainWindow.webContents.send('set-status', { status: '' });
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
+                dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
                 if (process.platform === 'win32' || process.platform === 'darwin') {
                     App.mainWindow.setProgressBar(0);
                 }

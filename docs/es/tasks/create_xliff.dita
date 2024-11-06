@@ -16,7 +16,7 @@
         <cmd>En el menú principal, seleccione <menucascade>
             <uicontrol>Ver</uicontrol>
             <uicontrol>Crear XLIFF</uicontrol>
-          </menucascade> o haga clic en la opción <uicontrol><image href="../images/plus.png" placement="inline"/>&nbsp;Crear XLIFF</uicontrol> del panel izquierdo.</cmd>
+          </menucascade> o haga clic en la opción <uicontrol><image href="../images/plus.png" placement="inline"/>Crear XLIFF</uicontrol> del panel izquierdo.</cmd>
       </step>
       <step>
         <cmd>Escriba el nombre y la ubicación del documento que desea convertir a XLIFF en el cuadro de texto <uicontrol>Archivo de origen</uicontrol> o haga clic en el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un documento del sistema de archivos.</cmd>
@@ -40,9 +40,12 @@
         <cmd>Si está convirtiendo un mapa DITA y necesita utilizar un archivo .ditaval para el filtrado condicional, introduzca su ruta en el cuadro de texto <uicontrol>Archivo DITAVAL</uicontrol> o utilice el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo del sistema de archivos.</cmd>
       </step>
       <step>
+        <cmd>Seleccione la opción <uicontrol>Ignorar archivos SVG traducibles</uicontrol> si está convirtiendo un mapa DITA y necesita excluir los archivos SVG del XLIFF generado.</cmd>
+      </step>
+      <step>
         <cmd>Si está convirtiendo un documento JSON y necesita usar un archivo de configuración personalizado, escriba su nombre y ubicación en el cuadro de texto <uicontrol>Configuración de JSON</uicontrol> o use el botón <uicontrol>Examinar...</uicontrol> junto a él para seleccionar un archivo del sistema de archivos.</cmd>
         <info>
-          <note type="tip">Información sobre los archivos de configuración para el filtro JSON está disponible en <xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" format="html">https://github.com/rmraya/OpenXLIFF</xref></note>
+          <note type="tip">En <xref href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/json#readme" scope="external" format="html">https://github.com/rmraya/OpenXLIFF</xref> hay información sobre los archivos de configuración para el filtro JSON.</note>
         </info>
       </step>
       <step>
@@ -52,7 +55,7 @@
         </info>
       </step>
       <step>
-        <cmd>Active la casilla <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente en el nivel de párrafo.</cmd>
+        <cmd>Seleccione la opción <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente en el nivel de párrafo.</cmd>
         <info>
           <note type="notice">El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <xref href="../glossaries/SRX.dita">SRX</xref> predeterminado utilizado para la segmentación en el cuadro de diálogo <xref href="default_settings.dita">Configuración</xref>.</note>
         </info>

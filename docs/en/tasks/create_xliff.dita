@@ -57,6 +57,11 @@
                     a file from the file system.</cmd>
             </step>
             <step>
+                <cmd>Select the <uicontrol>Ignore Translatable SVG Files</uicontrol> checkbox if you
+                    are converting a DITA map and need to exclude SVG files from the generated
+                    XLIFF.</cmd>
+            </step>
+            <step>
                 <cmd>If you are converting a JSON document and need to use a custom configuration
                     file, enter its name and location in the <uicontrol>JSON
                         Configuration</uicontrol> text box or use the
@@ -78,7 +83,7 @@
                 </info>
             </step>
             <step>
-                <cmd>Select the <uicontrol>Paragraph Segmentation</uicontrol> check box if you want
+                <cmd>Select the <uicontrol>Paragraph Segmentation</uicontrol> checkbox if you want
                     source text to be segmented at paragraph level.</cmd>
                 <info>
                     <note type="notice">The program uses sentence-level segmentation by default. You
@@ -88,7 +93,7 @@
                 </info>
             </step>
             <step>
-                <cmd>Select the <uicontrol>Embed Skeleton</uicontrol> option if you want the
+                <cmd>Select the <uicontrol>Embed Skeleton</uicontrol> checkbox if you want the
                     skeleton file to be inserted in the generated XLIFF.</cmd>
                 <info>
                     <note type="notice">The program generates a separated skeleton file in the

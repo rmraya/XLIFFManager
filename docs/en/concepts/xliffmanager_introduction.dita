@@ -8,7 +8,9 @@
                 href="https://github.com/rmraya/OpenXLIFF" format="html" scope="external">OpenXLIFF
                 Filters</xref>, a set of programs that let you:</p>
         <ul id="ul_lbj_mm1_l3b">
-            <li>Create <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.2 and 2.0 files that can be translated in any modern <xref href="../glossaries/CAT.dita">CAT</xref> tool.</li>
+            <li>Create <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.2, 2.0 and 2.1 files
+                that can be translated in any modern <xref href="../glossaries/CAT.dita">CAT</xref>
+                tool.</li>
             <li>Convert your translated XLIFF files to original format with a couple of clicks.</li>
             <li>Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0,
                 1.1, 1.2 and 2.0.</li>

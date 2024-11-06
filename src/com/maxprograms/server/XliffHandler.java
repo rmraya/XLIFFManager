@@ -436,6 +436,10 @@ public class XliffHandler implements HttpHandler {
 		if (json.has("embed")) {
 			embed = json.getBoolean("embed");
 		}
+		boolean ignoresvg = false;
+		if (json.has("ignoresvg")) {
+			ignoresvg = json.getBoolean("ignoresvg");
+		}
 		boolean paragraph = false;
 		if (json.has("paragraph")) {
 			paragraph = json.getBoolean("paragraph");
@@ -466,6 +470,7 @@ public class XliffHandler implements HttpHandler {
 		params.put("xliff20", is20 ? "yes" : "no");
 		params.put("xliff21", is21 ? "yes" : "no");
 		params.put("embed", embed ? "yes" : "no");
+		params.put("ignoresvg", ignoresvg ? "yes" : "no");
 		if (!tgtLang.isEmpty()) {
 			params.put("tgtLang", tgtLang);
 		}
@@ -479,7 +484,6 @@ public class XliffHandler implements HttpHandler {
 			params.put("resegment", "yes");
 			params.put("paragraph", "yes");
 		}
-
 		new Thread(() -> {
 			processMap.put(process, RUNNING);
 			List<String> result = Convert.run(params);
