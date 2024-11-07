@@ -55,10 +55,16 @@
                 </stentry>
             </strow>
         </simpletable>
-        <p>The filter for XML files supports custom configuration. Users can define conversion rules
-            for almost any XML vocabulary. Instructions for configuring the XML filter are available
-            in <xref format="html" scope="external"
-                href="https://www.maxprograms.com/products/swordfish.html">Swordfish's</xref>
-            documentation.</p>
+
+
+        <p>The XML filter is customizable. Users can define conversion rules for almost any XML
+            vocabulary. Instructions for configuring the XML filter are available on GitHub, at <xref
+                format="html" scope="external"
+                href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/xml#readme"
+                >XLIFF Filter Configuration Files</xref>.</p>
+        <p>The JSON filter supports user-defined configuration files. Instructions for writing
+            configuration files are available on GitHub, at <xref
+                href="https://github.com/rmraya/OpenXLIFF/blob/master/src/com/maxprograms/converters/json/README.md"
+                format="html" scope="external">JSON Filter Configuration Files</xref>.</p>
     </conbody>
 </concept>

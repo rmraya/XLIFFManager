@@ -53,6 +53,11 @@
         </stentry>
       </strow>
     </simpletable>
-    <p>El filtro para archivos XML admite la configuración personalizada. Los usuarios pueden definir reglas de conversión para casi cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles en la documentación de <xref href="https://www.maxprograms.com/products/swordfish.html" scope="external" format="html">Swordfish</xref>.</p>
+    <p>El filtro XML es personalizable. Los usuarios pueden definir reglas de conversión para casi
+      cualquier vocabulario XML. Las instrucciones para configurar el filtro XML están disponibles
+      en GitHub, en <xref
+        href="https://github.com/rmraya/OpenXLIFF/tree/master/src/com/maxprograms/converters/xml#readme"
+        scope="external" format="html">XLIFF Filter Configuration Files</xref>.</p>
+    <p>El filtro JSON admite archivos de configuración definidos por el usuario. Las instrucciones para escribir archivos de configuración están disponibles en GitHub, en <xref href="https://github.com/rmraya/OpenXLIFF/blob/master/src/com/maxprograms/converters/json/README.md" scope="external" format="html">JSON Filter Configuration Files</xref>.</p>
   </conbody>
 </concept>
