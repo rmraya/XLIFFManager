@@ -154,7 +154,7 @@ You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at 
   cd ..
   git clone https://github.com/rmraya/XLIFFManager.git
   cd XLIFFManager
-  cp -r ../OpenXLIFF/dist .
+  cp -r ../OpenXLIFF/dist/* .
   npm install
   npm start
 ```
