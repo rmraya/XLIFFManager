@@ -15,7 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
-8.0.0 | Removed Java code | December 28, 2024
+8.0.0 | Removed Java code; Added high contrast theme | December 28, 2024
 7.7.0 | Updated OpenXLIFF Filters to version 3.23.0 | November 6, 2024
 7.6.0 | Updated OpenXLIFF Filters to version 3.21.0 | September 4, 2024
 7.5.0 | Updated OpenXLIFF to version 3.20.0 | April 21, 2024
