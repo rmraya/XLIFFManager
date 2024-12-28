@@ -30,11 +30,6 @@ class About {
             (document.getElementById('elect_version') as HTMLTableCellElement).innerHTML = arg.electron;
             this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: document.body.clientHeight });
         });
-        let licensesButton: HTMLButtonElement = document.getElementById('licensesButton') as HTMLButtonElement;
-        licensesButton.addEventListener('click', () => {
-            this.electron.ipcRenderer.send('licenses-clicked');
-            licensesButton.blur();
-        });
         document.addEventListener('keydown', (event: KeyboardEvent) => {
             if (event.code === 'Escape') {
                 this.electron.ipcRenderer.send('close-about');

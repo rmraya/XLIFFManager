@@ -19,3 +19,6 @@
 /.vscode/
 .DS_Store
 package-lock.json
+/catalog/
+/xmlfilter/
+/srx/

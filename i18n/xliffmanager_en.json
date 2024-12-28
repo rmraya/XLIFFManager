@@ -12,11 +12,13 @@
         "xliffManager": "XLIFF Manager",
         "userGuide": "XLIFF Manager User Guide",
         "checkUpdates": "Check for Updates",
-        "viewLicenses": "View Licenses",
+        "viewLicenses": "View License",
         "registerSubscription": "Register Subscription",
+        "subscriptionError": "Error checking subscription",
         "releaseHistory": "View Release History",
         "supportGroup": "Support Group",
         "helpMenu": "&Help",
+        "editMenu": "&Edit",
         "developmentTools": "Open Development Tools",
         "aboutMac": "About XLIFF Manager",
         "preferences": "Preferences...",
@@ -43,7 +45,11 @@
         "validatingXliff": "Validating XLIFF",
         "processingXliff": "Processing XLIFF",
         "mergingXliff": "Merging XLIFF",
-        "analysingXliff": "Analysing XLIFF"
+        "analysingXliff": "Analysing XLIFF",
+        "cut": "Cut",
+        "copy": "Copy",
+        "paste": "Paste",
+        "selectAll": "Select All"
     },
     "FileFormats": {
         "anyFile": "Any File",

@@ -15,6 +15,7 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+8.0.0 | Removed Java code | December 28, 2024
 7.7.0 | Updated OpenXLIFF Filters to version 3.23.0 | November 6, 2024
 7.6.0 | Updated OpenXLIFF Filters to version 3.21.0 | September 4, 2024
 7.5.0 | Updated OpenXLIFF to version 3.20.0 | April 21, 2024
@@ -132,25 +133,28 @@ You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at 
 
 ## Requirements
 
-- JDK 21 or newer is required for compiling and building. Get it from [Adoptium](https://adoptium.net/).
-- Apache Ant 1.10.13 or newer. Get it from [https://ant.apache.org/](https://ant.apache.org/)
 - Node.js 20.10.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- TypeScript 5.3.3 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+- TypeScript 5.7.2 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+- OpenXLIFF Filters 4.1.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
 
 ## Building
 
+- Checkout and build [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF).
 - Checkout this repository.
-- Point your `JAVA_HOME` environment variable to JDK 21
-- Run `ant` to compile the Java code
+- Copy `dist` folder from OpenXLIFF Filters to the root of this repository.
 - Run `npm install` to download and install NodeJS dependencies
 - Run `npm start` to launch XLIFF Manager
 
 ### Steps for building
 
 ``` bash
+  git clone https://github.com/rmraya/OpenXLIFF.git
+  cd OpenXLIFF
+  ant
+  cd ..
   git clone https://github.com/rmraya/XLIFFManager.git
   cd XLIFFManager
-  ant
+  cp -r ../OpenXLIFF/dist .
   npm install
   npm start
 ```

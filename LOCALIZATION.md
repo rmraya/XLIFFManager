@@ -2,28 +2,16 @@
 
 Localizing XLIFF Manager requires processing 4 types of files:
 
-1. Java `.properties` files
-2. TypeScript strings in JSON format
-3. HTML files for the main UI
-4. Documentation from DITA files
-
-## Localization of Java .properties
-
-[JavaPM](https://www.maxprograms.com/products/javapm.html) is used to generate XLIFF from `/src` folder.
-
-Use a command like this to generate XLIFF:
-
-```bash
-/path-to-Javapm/createxliff.sh -src XLIFFManager/src -xliff yourXliffFile.xlf -srcLang en -tgtLang fr -enc UTF-8
-```
-
-XLIFF Manager .properties are encoded in UTF-8; translated versions must be generated using UTF-8 character set.
+1. TypeScript strings in JSON format
+2. HTML files for the main UI
+3. Documentation from DITA files
 
 XLIFF Manager uses code from these additional projects:
 
 - [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF)  
 - [XMLJava](https://github.com/rmraya/XMLJava)
 - [BCP47J](https://github.com/rmraya/BCP47J)
+- [TypesBCP47](https://github.com/rmraya/TypesBCP47)
 
 It is important to localize those projects and include localized versions of the libraries in the XLIFF Manager project for proper display of error messages and other user interface elements, like language names.
 

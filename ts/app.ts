@@ -10,10 +10,11 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
-import { ChildProcessWithoutNullStreams, execFileSync, spawn } from "child_process";
-import { BrowserWindow, ClientRequest, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, Rectangle, app, dialog, ipcMain, nativeTheme, net, session, shell } from "electron";
+import { spawnSync, SpawnSyncReturns } from "child_process";
+import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, nativeTheme, net, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
+import { Language, LanguageUtils } from "typesbcp47";
 import { I18n } from "./i18n";
 
 class App {
@@ -45,8 +46,7 @@ class App {
     static i18n: I18n;
     static lang: string = 'en';
 
-    ls: ChildProcessWithoutNullStreams;
-    stopping: boolean = false;
+    static javaErrors: boolean = false;
 
     constructor() {
         if (!app.requestSingleInstanceLock()) {
@@ -84,17 +84,6 @@ class App {
 
         App.i18n = new I18n(App.path.join(app.getAppPath(), 'i18n', 'xliffmanager_' + App.lang + '.json'));
 
-        this.ls = spawn(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.FilterServer', '-port', '8000', '-lang', App.lang], { cwd: app.getAppPath() });
-        if (!app.isPackaged) {
-            this.ls.stdout.on('data', (data: Buffer | string) => {
-                console.log(data instanceof Buffer ? data.toString() : data);
-            });
-            this.ls.stderr.on('data', (data: Buffer | string) => {
-                console.error(data instanceof Buffer ? data.toString() : data);
-            });
-        }
-        execFileSync(App.javapath, ['--module-path', 'lib', '-m', 'xliffmanager/com.maxprograms.server.CheckURL', 'http://localhost:8000/FilterServer'], { cwd: app.getAppPath() });
-
         app.on('ready', () => {
             this.createWindow();
             this.createMenu();
@@ -105,22 +94,23 @@ class App {
             });
         });
 
-        app.on('quit', () => {
-            this.stopServer();
-        });
-
         app.on('window-all-closed', () => {
-            this.stopServer();
             app.quit();
         });
 
         nativeTheme.on('updated', () => {
             this.loadDefaults();
+            let dark = App.path.join(app.getAppPath(), 'css', 'dark.css');
+            let light = App.path.join(app.getAppPath(), 'css', 'light.css');
+            let highcontrast = App.path.join(app.getAppPath(), 'css', 'highcontrast.css');
             if (App.defaultTheme === 'system') {
                 if (nativeTheme.shouldUseDarkColors) {
-                    App.currentTheme = App.path.join(app.getAppPath(), 'css', 'dark.css');
+                    App.currentTheme = dark;
                 } else {
-                    App.currentTheme = App.path.join(app.getAppPath(), 'css', 'light.css');
+                    App.currentTheme = light;
+                }
+                if (nativeTheme.shouldUseHighContrastColors) {
+                    App.currentTheme = highcontrast;
                 }
                 let windows: BrowserWindow[] = BrowserWindow.getAllWindows();
                 for (let window of windows) {
@@ -137,9 +127,6 @@ class App {
         });
         ipcMain.on('close-about', () => {
             App.destroyWindow(App.aboutWindow);
-        });
-        ipcMain.on('licenses-clicked', () => {
-            App.showLicenses({ from: 'about' });
         });
         ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
             App.setHeight(App.settingsWindow, arg);
@@ -162,11 +149,20 @@ class App {
         ipcMain.on('select-xliff-tasks', (event: IpcMainEvent) => {
             this.selectXliffTasks(event);
         });
-        ipcMain.on('processTask', (event: IpcMainEvent, arg: any) => {
-            this.processTask(event, arg);
+        ipcMain.on('approve-all', (event: IpcMainEvent, xliff: string) => {
+            this.approveAll(event, xliff);
         });
-        ipcMain.on('validate', (event: IpcMainEvent, arg: any) => {
-            this.validate(event, arg);
+        ipcMain.on('copy-sources', (event: IpcMainEvent, xliff: string) => {
+            this.copySources(event, xliff);
+        });
+        ipcMain.on('pseudo-translate', (event: IpcMainEvent, xliff: string) => {
+            this.pseudoTranslate(event, xliff);
+        });
+        ipcMain.on('remove-targets', (event: IpcMainEvent, xliff: string) => {
+            this.removeTargets(event, xliff);
+        });
+        ipcMain.on('validate', (event: IpcMainEvent, xliff: string) => {
+            this.validate(event, xliff);
         });
         ipcMain.on('select-xliff-analysis', (event: IpcMainEvent) => {
             this.selectXliffAnalysis(event);
@@ -180,8 +176,8 @@ class App {
         ipcMain.on('select-target-file', (event: IpcMainEvent) => {
             this.selectTargetFile(event);
         });
-        ipcMain.on('analyse', (event: IpcMainEvent, arg: any) => {
-            this.analyse(event, arg);
+        ipcMain.on('analyse', (event: IpcMainEvent, file: string) => {
+            this.analyse(event, file);
         });
         ipcMain.on('merge', (event: IpcMainEvent, arg: any) => {
             this.merge(event, arg);
@@ -293,7 +289,7 @@ class App {
             App.destroyWindow(App.licensesWindow);
         });
         ipcMain.on('open-license', (event: IpcMainEvent, arg: any) => {
-            App.openLicense(arg.type);
+            App.openLicense();
         });
     }
 
@@ -304,11 +300,23 @@ class App {
         }, 800);
     }
 
-    stopServer(): void {
-        if (!this.stopping) {
-            this.stopping = true;
-            this.ls.kill();
+    static runJava(module: string, arg: string[]): string {
+        App.javaErrors = false;
+        let javapath: string = process.platform === 'win32' ? App.path.join(app.getAppPath(), 'bin', 'java.exe') : App.path.join(app.getAppPath(), 'bin', 'java');
+        let params: string[] = ['--module-path', 'lib', '-m', module];
+        if (arg) {
+            params = params.concat(arg);
         }
+        let ls: SpawnSyncReturns<Buffer> = spawnSync(javapath, params, { cwd: app.getAppPath(), windowsHide: true });
+        let stdout: Buffer = ls.stdout;
+        let stderr: Buffer = ls.stderr;
+        if (stderr.length > 0) {
+            if (stderr.toString().indexOf('SEVERE:') !== -1) {
+                App.javaErrors = true;
+            }
+            return stderr.toString();
+        }
+        return stdout.toString();
     }
 
     static setHeight(window: BrowserWindow, arg: any) {
@@ -420,12 +428,15 @@ class App {
         }
         let light = App.path.join(app.getAppPath(), 'css', 'light.css');
         let dark = App.path.join(app.getAppPath(), 'css', 'dark.css');
-
+        let highcontrast = App.path.join(app.getAppPath(), 'css', 'highcontrast.css');
         if (App.defaultTheme === 'system') {
             if (nativeTheme.shouldUseDarkColors) {
                 App.currentTheme = dark;
             } else {
                 App.currentTheme = light;
+            }
+            if (nativeTheme.shouldUseHighContrastColors) {
+                App.currentTheme = highcontrast;
             }
         }
         if (App.defaultTheme === 'dark') {
@@ -434,6 +445,9 @@ class App {
         if (App.defaultTheme === 'light') {
             App.currentTheme = light;
         }
+        if (App.defaultTheme === 'highcontrast') {
+            App.currentTheme = highcontrast;
+        }
     }
 
     setTheme(): void {
@@ -441,79 +455,59 @@ class App {
     }
 
     getLanguages(event: IpcMainEvent): void {
-        App.sendRequest({ command: 'getLanguages' },
-            (data: any) => {
-                data.srcLang = App.defaultSrcLang;
-                data.tgtLang = App.defaultTgtLang;
-                data.none = App.i18n.getString('Main', 'selectLanguage');
-                event.sender.send('languages-received', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let languages: Array<Language> = LanguageUtils.getCommonLanguages(App.lang);
+        let data: any = {
+            srcLang: App.defaultSrcLang,
+            tgtLang: App.defaultTgtLang,
+            none: App.i18n.getString('Main', 'selectLanguage'),
+            languages: languages
+        };
+        event.sender.send('languages-received', data);
     }
 
     getPackageLanguages(event: IpcMainEvent, arg: any): void {
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('package-languages', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.sdlppx.Sdlppx2Xliff', ['-lang', App.lang, '-file', arg.package]);
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        }
+        let parsed: any = JSON.parse(result);
+        event.sender.send('package-languages', parsed);
     }
 
     getXliffLanguages(event: IpcMainEvent, arg: any): void {
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('xliff-languages', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.xliff.XliffUtils', ['-lang', App.lang, '-file', arg.xliff]);
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        }
+        let parsed: any = JSON.parse(result);
+        event.sender.send('xliff-languages', parsed);
     }
 
     getCharsets(event: IpcMainEvent): void {
-        App.sendRequest({ command: 'getCharsets' },
-            (data: any) => {
-                data.none = App.i18n.getString('Main', 'selectCharset');
-                event.sender.send('charsets-received', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let charsets: any = JSON.parse(App.runJava('openxliff/com.maxprograms.converters.EncodingResolver', ['-lang', App.lang, '-list']).trim());
+        let data: any = {
+            none: App.i18n.getString('Main', 'selectCharset'),
+            charsets: charsets
+        }
+        event.sender.send('charsets-received', data);
     }
 
     getTypes(event: IpcMainEvent): void {
-        App.sendRequest({ command: 'getTypes' },
-            (data: any) => {
-                data.none = App.i18n.getString('Main', 'selectFileType');
-                event.sender.send('types-received', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let types: any = JSON.parse(App.runJava('openxliff/com.maxprograms.converters.FileFormats', ['-lang', App.lang, '-list']).trim());
+        let data: any = {
+            none: App.i18n.getString('Main', 'selectFileType'),
+            types: types
+        }
+        event.sender.send('types-received', data);
     }
 
     selectSourceFile(event: IpcMainEvent): void {
-        let anyFile: string[] = [];
-        if (process.platform === 'linux') {
-            anyFile = ['*'];
-        }
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: anyFile },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] },
                 { name: App.i18n.getString('FileFormats', 'icml'), extensions: ['icml'] },
                 { name: App.i18n.getString('FileFormats', 'inx'), extensions: ['inx'] },
                 { name: App.i18n.getString('FileFormats', 'idml'), extensions: ['idml'] },
@@ -554,7 +548,8 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -571,7 +566,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: App.i18n.getString('FileFormats', 'ditaval'), extensions: ['ditaval'] },
-                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -587,7 +582,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: App.i18n.getString('FileFormats', 'jsonFile'), extensions: ['json'] },
-                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -602,34 +597,71 @@ class App {
         arg.sklFolder = App.sklFolder;
         arg.catalog = App.defaultCatalog;
         arg.srx = App.defaultSRX;
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('set-status', { status: App.i18n.getString('App', 'creatingXliff') });
-                App.status = 'running';
-                let intervalObject = setInterval(() => {
-                    App.getStatus(data.process);
-                    if (App.status === 'completed') {
-                        App.getResult(data.process, event, 'conversionResult', 'conversion-completed');
-                        clearInterval(intervalObject);
-                    } else if (App.status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        clearInterval(intervalObject);
-                    }
-                }, 1000);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
+        let file: any = {
+            source: arg.file,
+            xliff: arg.file + '.xlf',
+            type: arg.type,
+            catalog: App.defaultCatalog,
+            enc: arg.enc,
+            srcLang: arg.srcLang,
+            tgtLang: arg.tgtLang,
+            srx: App.defaultSRX,
+            is20: arg.is20,
+            is21: arg.is21
+        }
+        if (arg.embed) {
+            file.embed = true;
+        } else {
+            let baseName: string = App.path.basename(arg.file);
+            let extension: string = App.path.extname(baseName);
+            let name: string = baseName.substring(0, baseName.length - extension.length);
+            let skeletonName = name + Date.now() + '.skl';
+            let skeleton = App.path.join(App.sklFolder, skeletonName);
+            file.skl = skeleton;
+        }
+        if (arg.paragraph) {
+            file.paragraph = true;
+        }
+        if (arg.ignoresvg) {
+            file.ignoresvg = true;
+        }
+        if (arg.config) {
+            file.config = arg.config;
+        }
+        if (arg.ditaval) {
+            file.ditaval = arg.ditaval;
+        }
+        let json: any = {
+            files: [file]
+        }
+
+        let jsonFile: string = App.path.join(app.getPath('temp'), 'convert.json');
+        writeFileSync(jsonFile, JSON.stringify(json, null, 2));
+
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'creatingXliff') });
+
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.Convert', ['-lang', App.lang, '-json', jsonFile]);
+
+        if (App.javaErrors) {
+            let errorLine: string = '';
+            let lines: string[] = result.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].indexOf('SEVERE') !== -1) {
+                    errorLine = lines[i];
+                }
             }
-        );
+            event.sender.send('conversion-completed', { result: 'Error', reason: errorLine });
+        } else {
+            event.sender.send('conversion-completed', { result: 'Success' });
+        }
     }
 
     selectXliffValidation(event: IpcMainEvent): void {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -644,7 +676,8 @@ class App {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -655,54 +688,60 @@ class App {
         });
     }
 
-    validate(event: IpcMainEvent, arg: any): void {
-        arg.catalog = App.defaultCatalog;
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('set-status', { status: App.i18n.getString('App', 'validatingXliff') });
-                App.status = 'running';
-                let intervalObject = setInterval(() => {
-                    App.getStatus(data.process);
-                    if (App.status === 'completed') {
-                        App.getResult(data.process, event, 'validationResult', 'validation-result');
-                        clearInterval(intervalObject);
-                    } else if (App.status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        clearInterval(intervalObject);
-                    }
-                }, 1000);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+    validate(event: IpcMainEvent, xliff: string): void {
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'validatingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.validation.XliffChecker', ['-lang', App.lang, '-xliff', xliff, '-catalog', App.defaultCatalog]);
+        event.sender.send('validation-completed');
+        while (result.indexOf('SEVERE:') !== -1) {
+            result = result.substring(result.indexOf('SEVERE:') + 'SEVERE:'.length);
+        }
+        if (result.indexOf('INFO:') !== -1) {
+            result = result.substring(result.indexOf('INFO:') + 'INFO:'.length);
+        }
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        }
+        dialog.showMessageBox(App.mainWindow, {
+            type: 'info',
+            message: result,
+        });
     }
 
-    processTask(event: IpcMainEvent, arg: any): void {
-        arg.catalog = App.defaultCatalog;
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
-                App.status = 'running';
-                let intervalObject = setInterval(() => {
-                    App.getStatus(data.process);
-                    if (App.status === 'completed') {
-                        App.getResult(data.process, event, 'tasksResult', 'process-completed');
-                        clearInterval(intervalObject);
-                    } else if (App.status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        clearInterval(intervalObject);
-                    }
-                }, 1000);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+    copySources(event: IpcMainEvent, xliff: string): void {
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.CopySources', ['-lang', App.lang, '-xliff', xliff, '-catalog', App.defaultCatalog]);
+        event.sender.send('process-completed');
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+        }
+    }
+
+    pseudoTranslate(event: IpcMainEvent, xliff: string): void {
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.PseudoTranslation', ['-lang', App.lang, '-xliff', xliff, '-catalog', App.defaultCatalog]);
+        event.sender.send('process-completed');
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+        }
+    }
+
+    removeTargets(event: IpcMainEvent, xliff: string): void {
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.RemoveTargets', ['-lang', App.lang, '-xliff', xliff, '-catalog', App.defaultCatalog]);
+        event.sender.send('process-completed');
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+        }
+    }
+
+    approveAll(event: IpcMainEvent, xliff: string): void {
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'processingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.ApproveAll', ['-lang', App.lang, '-xliff', xliff, '-catalog', App.defaultCatalog]);
+        event.sender.send('process-completed');
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+        }
     }
 
     selectTargetFile(event: IpcMainEvent): void {
@@ -718,35 +757,29 @@ class App {
     }
 
     merge(event: IpcMainEvent, arg: any): void {
-        arg.catalog = App.defaultCatalog;
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('set-status', { status: App.i18n.getString('App', 'mergingXliff') });
-                App.status = 'running';
-                let intervalObject = setInterval(() => {
-                    App.getStatus(data.process);
-                    if (App.status === 'completed') {
-                        App.getResult(data.process, event, 'mergeResult', 'merge-completed');
-                        clearInterval(intervalObject);
-                    } else if (App.status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        clearInterval(intervalObject);
-                    }
-                }, 1000);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let params: string[] = ['-lang', App.lang, '-xliff', arg.xliff, '-target', arg.target, '-catalog', App.defaultCatalog];
+        if (arg.unapproved) {
+            params.push('-unapproved');
+        }
+        if (arg.exportTmx) {
+            params.push('-export');
+        }
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'mergingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.Merge', params);
+        console.log(result);
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        }
+        event.sender.send('merge-completed');
     }
 
     selectXliffAnalysis(event: IpcMainEvent): void {
         dialog.showOpenDialog({
             properties: ['openFile'],
             filters: [
-                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] }
+                { name: App.i18n.getString('FileFormats', 'xliffFile'), extensions: ['xlf'] },
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -757,81 +790,46 @@ class App {
         });
     }
 
-    analyse(event: IpcMainEvent, arg: any): void {
-        arg.catalog = App.defaultCatalog;
-        App.sendRequest(arg,
-            (data: any) => {
-                event.sender.send('set-status', { status: App.i18n.getString('App', 'analysingXliff') });
-                App.status = 'running';
-                let intervalObject = setInterval(() => {
-                    App.getStatus(data.process);
-                    if (App.status === 'completed') {
-                        App.getResult(data.process, event, 'analysisResult', 'analysis-completed');
-                        clearInterval(intervalObject);
-                    } else if (App.status === 'running') {
-                        // it's OK, keep waiting
-                    } else {
-                        clearInterval(intervalObject);
-                    }
-                }, 600);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+    analyse(event: IpcMainEvent, file: string): void {
+        event.sender.send('set-status', { status: App.i18n.getString('App', 'analysingXliff') });
+        let result: string = App.runJava('openxliff/com.maxprograms.stats.RepetitionAnalysis', ['-lang', App.lang, '-xliff', file, '-catalog', App.defaultCatalog]);
+        console.log(result);
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        }
+        event.sender.send('analysis-completed');
     }
 
     getFileType(event: IpcMainEvent, file: string): void {
-        App.sendRequest({ command: 'getFileType', file: file },
-            (data: any) => {
-                event.sender.send('add-source-file', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
+        let params: any = { file: file };
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.FileFormats', ['-file', file]);
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        } else {
+            let parsed: any = JSON.parse(result);
+            params.type = parsed.format;
+            if (parsed.format !== 'Unknown') {
+                result = App.runJava('openxliff/com.maxprograms.converters.EncodingResolver', ['-file', file, '-type', parsed.format]);
+                if (!App.javaErrors) {
+                    parsed = JSON.parse(result);
+                    params.encoding = parsed.encoding;
+                }
+            } else {
+                params.encoding = 'Unknown';
             }
-        );
+        }
+        event.sender.send('add-source-file', params);
     }
 
     getTargetFile(event: IpcMainEvent, file: string): void {
-        App.sendRequest({ command: 'getTargetFile', file: file },
-            (data: any) => {
-                if (data.result === 'Success') {
-                    event.sender.send('add-target-file', data.target);
-                } else {
-                    dialog.showErrorBox(App.i18n.getString('App', 'error'), data.reason);
-                }
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
-    }
-
-    static getStatus(processId: string): void {
-        App.sendRequest({ command: 'status', process: processId },
-            (data: any) => {
-                App.status = data.status;
-            },
-            (reason: string) => {
-                App.status = 'error';
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
-    }
-
-    static getResult(processId: string, event: IpcMainEvent, command: string, callback: string): void {
-        App.sendRequest({ command: command, process: processId },
-            (data: any) => {
-                event.sender.send(callback, data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-            }
-        );
+        let result: string = App.runJava('openxliff/com.maxprograms.converters.Merge', ['-xliff', file, '-getTarget']);
+        if (App.javaErrors) {
+            dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
+            return;
+        }
+        event.sender.send('add-target-file', result);
     }
 
     static checkUpdates(silent: boolean): void {
@@ -933,13 +931,13 @@ class App {
             { type: 'separator' },
             { label: App.i18n.getString('App', 'checkUpdates'), click: () => { App.checkUpdates(false); } },
             { type: 'separator' },
-            { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.showLicenses({ from: 'menu' }); } },
+            { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.openLicense(); } },
             { type: 'separator' },
             { label: App.i18n.getString('App', 'releaseHistory'), click: () => { App.releaseHistory(); } },
             { label: App.i18n.getString('App', 'supportGroup'), click: () => { App.showSupportGroup(); } },
         ]);
         let template: MenuItem[] = [
-            new MenuItem({ label: App.i18n.getString('App', 'editMenu'),  submenu: editMenu }),
+            new MenuItem({ label: App.i18n.getString('App', 'editMenu'), submenu: editMenu }),
             new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
         ];
         if (!app.isPackaged) {
@@ -961,7 +959,7 @@ class App {
             ]);
             template = [
                 new MenuItem({ label: App.i18n.getString('App', 'xliffManager'), submenu: appleMenu }),
-                new MenuItem({ label: App.i18n.getString('App', 'editMenu'),  submenu: editMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'editMenu'), submenu: editMenu }),
                 new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }),
                 new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
             ];
@@ -969,11 +967,12 @@ class App {
             let fileMenu: Menu = Menu.buildFromTemplate([]);
             template = [
                 new MenuItem({ label: App.i18n.getString('App', 'fileMenu'), submenu: fileMenu }),
-                new MenuItem({ label: App.i18n.getString('App', 'editMenu'),  submenu: editMenu }),
+                new MenuItem({ label: App.i18n.getString('App', 'editMenu'), submenu: editMenu }),
                 new MenuItem({ label: App.i18n.getString('App', 'viewMenu'), submenu: viewMenu }),
                 new MenuItem({ label: App.i18n.getString('App', 'settingsMenu'), click: () => { App.showSettings(); } }),
                 new MenuItem({ label: App.i18n.getString('App', 'helpMenu'), role: 'help', submenu: helpMenu })
-            ];        }
+            ];
+        }
 
         if (process.platform === 'win32') {
             if (template[0].submenu) {
@@ -1002,7 +1001,7 @@ class App {
         App.aboutWindow = new BrowserWindow({
             parent: App.mainWindow,
             width: 380,
-            height: 520,
+            height: 460,
             minimizable: false,
             maximizable: false,
             resizable: false,
@@ -1025,16 +1024,16 @@ class App {
     }
 
     getVersion(event: IpcMainEvent): void {
-        App.sendRequest({ command: 'version' },
-            (data: any) => {
-                data.electron = process.versions.electron;
-                event.sender.send('set-version', data);
-            },
-            (reason: string) => {
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), reason);
-                console.log(reason);
-            }
-        );
+        let version: any = JSON.parse(App.runJava('openxliff/com.maxprograms.converters.Constants', []).trim());
+        let data: any = {
+            'XLIFFManager': app.getVersion(),
+            'Java': version.java + ' - ' + version.javaVendor,
+            'XMLJava': version.xmlVersion + ' - ' + version.xmlBuild,
+            'OpenXLIFF': version.version + ' - ' + version.build,
+            'BCP47J': version.bcp47jVersion + ' - ' + version.bcp47jBuild,
+            'electron': process.versions.electron
+        };
+        event.sender.send('set-version', data);
     }
 
     static showHelp(): void {
@@ -1078,7 +1077,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: App.i18n.getString('FileFormats', 'srxFile'), extensions: ['srx'] },
-                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -1096,7 +1095,7 @@ class App {
             properties: ['openFile'],
             filters: [
                 { name: App.i18n.getString('FileFormats', 'xmlFile'), extensions: ['xml'] },
-                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: [] }
+                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] }
             ]
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
@@ -1127,75 +1126,9 @@ class App {
         });
     }
 
-    static showLicenses(arg: any): void {
-        let parent: BrowserWindow = App.mainWindow;
-        if (arg.from === 'about' && App.aboutWindow) {
-            parent = App.aboutWindow;
-        }
-        App.licensesWindow = new BrowserWindow({
-            parent: parent,
-            width: 430,
-            height: 390,
-            minimizable: false,
-            maximizable: false,
-            resizable: false,
-            show: false,
-            icon: App.appIcon,
-            useContentSize: true,
-            webPreferences: {
-                nodeIntegration: true,
-                contextIsolation: false
-            }
-        });
-        App.licensesWindow.setMenu(null);
-        App.licensesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', App.lang, 'licenses.html'));
-        App.licensesWindow.once('ready-to-show', () => {
-            App.licensesWindow.show();
-        });
-        App.licensesWindow.on('close', () => {
-            parent.focus();
-        });
-    }
-
-    static openLicense(type: string) {
-        let licenseFile = '';
-        let title = '';
-        switch (type) {
-            case 'XLIFFManager':
-            case "OpenXLIFF":
-            case "BCP47J":
-            case "XMLJava":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
-                title = 'Eclipse Public License 1.0';
-                break;
-            case "electron":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'electron.txt');
-                title = 'MIT License';
-                break;
-            case "TypeScript":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'Apache2.0.html');
-                title = 'Apache 2.0';
-                break;
-            case "Java":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'java.html');
-                title = 'GPL2 with Classpath Exception';
-                break;
-            case "JSON":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'json.txt');
-                title = 'JSON.org License';
-                break;
-            case "jsoup":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'jsoup.txt');
-                title = 'MIT License';
-                break;
-            case "DTDParser":
-                licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'LGPL2.1.txt');
-                title = 'LGPL 2.1';
-                break;
-            default:
-                dialog.showErrorBox(App.i18n.getString('App', 'error'), 'Unknown license');
-                return;
-        }
+    static openLicense() {
+        let licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
+        let title = 'Eclipse Public License 1.0';
         let licenseWindow = new BrowserWindow({
             parent: this.licensesWindow,
             width: 680,
@@ -1215,7 +1148,7 @@ class App {
             licenseWindow.show();
         });
         licenseWindow.on('close', () => {
-            App.licensesWindow.focus();
+            App.mainWindow.focus();
         });
     }
 
@@ -1342,7 +1275,7 @@ class App {
 
     static translationTasksView(): void {
         App.mainWindow.webContents.send('show-translationTasks');
-    }    
+    }
 }
 
 try {

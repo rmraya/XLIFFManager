@@ -18,6 +18,7 @@ class Charset {
 class Language {
     code!: string;
     description!: string;
+    suppressedScript!: string;
 }
 
 class Main {
@@ -121,8 +122,8 @@ class Main {
             this.analysisCompleted(arg);
         });
 
-        this.electron.ipcRenderer.on('validation-result', (event: Electron.IpcRendererEvent, arg: any) => {
-            this.validationResult(arg);
+        this.electron.ipcRenderer.on('validation-completed', () => {
+            this.validationCompleted();
         });
 
         this.electron.ipcRenderer.on('conversion-completed', (event: Electron.IpcRendererEvent, arg: any) => {
@@ -249,7 +250,7 @@ class Main {
             let ignoreSVG: boolean = (document.getElementById('ignoreSVG') as HTMLInputElement).checked;
             if (ignoreSVG) {
                 args.ignoresvg = true;
-            }    
+            }
         }
         let is20: boolean = (document.getElementById('is20') as HTMLInputElement).checked;
         if (is20) {
@@ -289,19 +290,13 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
-        let args = { command: 'validateXliff', file: xliffFile };
         this.startWaiting();
-        this.electron.ipcRenderer.send('validate', args);
+        this.electron.ipcRenderer.send('validate', xliffFile);
     }
 
-    validationResult(arg: any): void {
+    validationCompleted(): void {
         this.endWaiting();
         this.setStatus('');
-        if (arg.valid) {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', message: arg.comment });
-        } else {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
-        }
     }
 
     showError(arg: any): void {
@@ -315,20 +310,14 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
-        let args = { command: 'analyseXliff', file: xliffFile };
         this.startWaiting();
-        this.electron.ipcRenderer.send('analyse', args);
+        this.electron.ipcRenderer.send('analyse', xliffFile);
     }
 
     analysisCompleted(arg: any): void {
         this.endWaiting();
         this.setStatus('');
-        if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'analysisCompleted' });
-            this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
-        } else {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
-        }
+        this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('xliffFileAnalysis') as HTMLInputElement).value + '.log.html' });
     }
 
     typeChanged(): void {
@@ -449,13 +438,8 @@ class Main {
     mergeCompleted(arg: any): void {
         this.endWaiting();
         this.setStatus('');
-        if (arg.result === 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'info', titleKey: 'titleSuccess', key: 'xliffMerged' });
-            if ((document.getElementById('openTranslated') as HTMLInputElement).checked) {
-                this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('targetFile') as HTMLInputElement).value });
-            }
-        } else {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
+        if ((document.getElementById('openTranslated') as HTMLInputElement).checked) {
+            this.electron.ipcRenderer.send('show-file', { file: (document.getElementById('targetFile') as HTMLInputElement).value });
         }
     }
 
@@ -569,9 +553,8 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
-        let args = { command: 'copySources', file: xliffFile };
         this.startWaiting();
-        this.electron.ipcRenderer.send('processTask', args);
+        this.electron.ipcRenderer.send('copy-sources', xliffFile);
     }
 
     pseudoTranslate(): void {
@@ -580,9 +563,8 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
-        let args = { command: 'pseudoTranslate', file: xliffFile };
         this.startWaiting();
-        this.electron.ipcRenderer.send('processTask', args);
+        this.electron.ipcRenderer.send('pseudo-translate', xliffFile);
     }
 
     removeTargets(): void {
@@ -591,9 +573,8 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
-        let args = { command: 'removeTargets', file: xliffFile };
         this.startWaiting();
-        this.electron.ipcRenderer.send('processTask', args);
+        this.electron.ipcRenderer.send('remove-targets', xliffFile);
     }
 
     approveAll(): void {
@@ -602,17 +583,13 @@ class Main {
             this.electron.ipcRenderer.send('show-dialog', { type: 'warning', key: 'xliffFileWarning' });
             return;
         }
-        let args = { command: 'approveAll', file: xliffFile };
         this.startWaiting();
-        this.electron.ipcRenderer.send('processTask', args);
+        this.electron.ipcRenderer.send('approve-all', xliffFile);
     }
 
     processCompleted(arg: any): void {
         this.endWaiting();
         this.setStatus('');
-        if (arg.result !== 'Success') {
-            this.electron.ipcRenderer.send('show-dialog', { type: 'error', message: arg.reason });
-        }
     }
 
     registerSubscription(): void {
