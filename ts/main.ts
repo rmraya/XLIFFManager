@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 - 2024 Maxprograms.
+ * Copyright (c) 2018 - 2025 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -76,7 +76,6 @@ class Main {
         (document.getElementById('pseudoTranslateButton') as HTMLButtonElement).addEventListener('click', () => { this.pseudoTranslate(); });
         (document.getElementById('removeTargetsButton') as HTMLButtonElement).addEventListener('click', () => { this.removeTargets(); });
         (document.getElementById('approveAllButton') as HTMLButtonElement).addEventListener('click', () => { this.approveAll(); });
-        (document.getElementById('registerLink') as HTMLAnchorElement).addEventListener('click', () => { this.registerSubscription(); });
 
         this.electron.ipcRenderer.on('add-source-file', (event: Electron.IpcRendererEvent, arg: any) => {
             this.addSourceFile(arg);
