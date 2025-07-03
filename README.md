@@ -4,7 +4,7 @@
 
 An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). OpenXLIFF is a set of programs that let you:
 
-- Create XLIFF 1.2, 2.0 and 2.1 files that can be translated in any modern CAT tool.
+- Create XLIFF 1.2, 2.0, 2.1 and 2.2 files that can be translated in any modern CAT tool.
 - Convert your translated XLIFF files to original format with a couple of clicks.
 - Validate XLIFF files created by any tool. Validation is supported for XLIFF 1.0, 1.1, 1.2 and 2.0.
 - Produce an HTML file with word counts and segment status statistics from an XLIFF document.
@@ -15,6 +15,8 @@ An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). 
 
 Version | Comment | Release Date
 :------:|---------|:-----------:
+8.3.0 | Updated OpenXLIFF Filters to version 4.6.0 | July 3, 2025
+8.2.0 | Added support for XLIFF 2.2 and QTI files/packages | February 26, 2025
 8.1.0 | Updated OpenXLIFF Filters to version 4.2.0 | January 4, 2025
 8.0.0 | Removed Java code; Added high contrast theme | December 28, 2024
 7.7.0 | Updated OpenXLIFF Filters to version 3.23.0 | November 6, 2024
@@ -134,9 +136,9 @@ You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at 
 
 ## Requirements
 
-- Node.js 20.10.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- TypeScript 5.7.2 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
-- OpenXLIFF Filters 4.1.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
+- Node.js 22.17.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
+- TypeScript 5.8.3 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
+- OpenXLIFF Filters 4.6.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
 
 ## Building
 

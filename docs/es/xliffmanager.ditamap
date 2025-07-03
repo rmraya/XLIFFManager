@@ -3,11 +3,11 @@
 <bookmap xml:lang="es">
   <booktitle>
     <mainbooktitle>
-      <ph>Guía del Usuario de XLIFF Manager </ph>
+      <ph>Guía del Usuario de XLIFF Manager</ph>
       <image href="images/openxliff.png" placement="break" scale="60"/>
     </mainbooktitle>
     <booktitlealt>
-      <ph>Copyright © 2018 - 2025 Maxprograms</ph>
+      <ph>Derechos de autor © 2018 - 2025 Maxprograms</ph>
     </booktitlealt>
   </booktitle>
   <frontmatter>

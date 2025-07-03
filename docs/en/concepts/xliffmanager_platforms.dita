@@ -4,11 +4,14 @@
     <title>Supported Platforms</title>
     <shortdesc/>
     <conbody>
-        <p>XLIFF Manager works on these platforms:</p>
-        <ul>
-            <li>Microsoft Windows 10 and 11</li>
-            <li>macOS Monterey (12.0), Ventura (13.0) Sonoma (14.0) and Sequoia (15.0)</li>
-            <li>Linux (with GNOME Desktop Manager)</li>
+        <p>XLIFF Manager works on these Operating Systems: <ul>
+                <li>Microsoft Windows 10 and 11</li>
+                <li>macOS Big Sur (11.0), Monterey (12.0), Ventura (13.0), Sonoma (14.0) and Sequoia
+                    (15.0)</li>
+                <li>Linux for 64-bit x86 (Intel/AMD) processors</li>
         </ul>
+        </p>
+        <note type="notice">XLIFF Manager installers for Linux are built and tested on Ubuntu
+            24.04 LTS. The installers are not tested on other distributions.</note>
     </conbody>
 </concept>

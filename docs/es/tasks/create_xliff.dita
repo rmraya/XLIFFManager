@@ -51,13 +51,13 @@
       <step>
         <cmd>Utilice los botones de opción <uicontrol>Versión de XLIFF</uicontrol> para seleccionar la versión de XLIFF que desea generar.</cmd>
         <info>
-          <note type="notice">El programa genera XLIFF 2.0 de forma predeterminada.</note>
+          <note type="notice">El programa genera XLIFF 2.1 de forma predeterminada.</note>
         </info>
       </step>
       <step>
-        <cmd>Seleccione la opción <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente en el nivel de párrafo.</cmd>
+        <cmd>Seleccione la opción <uicontrol>Segmentar por párrafos</uicontrol> si desea que el texto de origen se segmente a nivel de párrafo.</cmd>
         <info>
-          <note type="notice">El programa utiliza la segmentación a nivel de oración por defecto. Puede seleccionar el archivo <xref href="../glossaries/SRX.dita">SRX</xref> predeterminado utilizado para la segmentación en el cuadro de diálogo <xref href="default_settings.dita">Configuración</xref>.</note>
+          <note type="notice">El programa utiliza la segmentación a nivel de oración en fprma predeterminada. Puede seleccionar el archivo <xref href="../glossaries/SRX.dita">SRX</xref> utilizado para la segmentación en el cuadro de diálogo <xref href="default_settings.dita">Configuración</xref>.</note>
         </info>
       </step>
       <step>

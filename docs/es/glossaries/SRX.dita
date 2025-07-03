@@ -3,7 +3,7 @@
 <glossentry xml:lang="es" id="SRX">
   <glossterm>SRX</glossterm>
   <glossdef>
-    <p>Segmentation Rules eXchange (SRX) es un estándar basado en XML que fue mantenido por la Localization Industry Standards Association, hasta que se declaró insolvente en 2011, y luego por  <xref href="https://www.gala-global.org/" scope="external" format="html">Globalization and Localization Association</xref> (GALA).</p>
+    <p>Segmentation Rules eXchange (SRX) es un estándar basado en XML que fue mantenido por la Localization Industry Standards Association, hasta que se declaró insolvente en 2011, y luego por el <xref href="https://www.gala-global.org/" scope="external" format="html">Globalization and Localization Association</xref> (GALA).</p>
     <p>SRX proporciona una forma estandar de describir cómo segmentar texto para traducción y otros procesos relacionados con el lenguaje. Se creó cuando se hizo evidente que TMX era menos útil de lo esperado en ciertos casos debido a las diferencias en la forma en que las herramientas segmentan el texto. SRX está diseñado para mejorar el estándar <xref href="TMX.dita">TMX</xref> para que los datos de la memoria de traducción (TM) que se intercambian entre aplicaciones se puedan utilizar de manera más efectiva. Tener disponibles las reglas de segmentación que se usaron cuando se creó una TM aumenta la utilidad de los datos de TM.</p>
   </glossdef>
 </glossentry>

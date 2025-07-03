@@ -255,11 +255,19 @@ class Main {
         if (is20) {
             args.is20 = true;
             args.is21 = false;
+            args.is22 = false;
         }
         let is21: boolean = (document.getElementById('is21') as HTMLInputElement).checked;
         if (is21) {
             args.is20 = false;
             args.is21 = true;
+            args.is22 = false;
+        }
+        let is22: boolean = (document.getElementById('is22') as HTMLInputElement).checked;
+        if (is22) {
+            args.is20 = false;
+            args.is21 = false;
+            args.is22 = true;
         }
         let isParagraph: boolean = (document.getElementById('isParagraph') as HTMLInputElement).checked;
         if (isParagraph) {

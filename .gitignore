@@ -1,19 +1,15 @@
-/js/
-/bin/
-/conf/
-/include/
-/legal/
-/lib/
-/node_modules/
-/man/
-/out/
-/docs/en/out/
+js/
+bin/
+conf/
+include/
+legal/
+lib/
+node_modules/
+man/
+out/
+docs/en/out/
 /docs/es/out/
 /release
-/XLIFF Manager-darwin-x64/
-/XLIFF Manager-darwin-arm64/
-/XLIFF Manager-win32-x64/
-/XLIFF Manager-linux-x64/
 /.settings/
 /.scannerwork/
 /.vscode/
@@ -22,3 +18,4 @@ package-lock.json
 /catalog/
 /xmlfilter/
 /srx/
+licenses/

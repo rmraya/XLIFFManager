@@ -4,7 +4,7 @@
     <title>Approve all Segments</title>
     <shortdesc>Set <codeph>approved="true"</codeph> in all <codeph>&lt;trans-unit></codeph> elements
         in an XLIFF 1.2 file or set <codeph>state="final"</codeph> in all <codeph>&lt;unit></codeph>
-        elements of an XLIFF 2.0 or 2.1 document.</shortdesc>
+        elements of an XLIFF 2.0, 2.1 o 2.2 document.</shortdesc>
     <taskbody>
         <context>
             <p>Some translation tools do not offer a way to confirm segments at translation time.

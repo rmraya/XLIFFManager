@@ -2,7 +2,7 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
 <task xml:lang="es" id="default_settings">
   <title>Configuración</title>
-  <shortdesc>Utilice el cuadro de diálogo <uicontrol>Configuración</uicontrol> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta predeterminada utilizada para almacenar esqueletos al crear archivos <xref href="../glossaries/XLIFF.dita">XLIFF</xref>.</shortdesc>
+  <shortdesc>Utilice el cuadro de diálogo <uicontrol>Configuración</uicontrol> para establecer los idiomas predeterminados utilizados por la aplicación y para configurar el catálogo XML principal y la carpeta utilizada para almacenar esqueletos al crear archivos <xref href="../glossaries/XLIFF.dita">XLIFF</xref>.</shortdesc>
   <taskbody>
     <steps>
       <step>
