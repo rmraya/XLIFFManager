@@ -126,19 +126,43 @@ You can get ready to use installers of XLIFF Manager for Windows, macOS and Linu
 
 ## Licenses
 
+XLIFF Manager is available in two modes:
+
+- Source Code
+- Yearly Subscriptions for installers and support
+
+### Source Code
+
 Source code of XLIFF Manager is free. Anyone can download the source code, compile, modify and use it at no cost in compliance with the accompanying license terms.
 
-Subscriptions are available for technical support, bug fixes, and feature requests. By subscribing to a support plan, you contribute to the continuous improvement of XLIFF Manager. Your subscription fees pay for code development costs and ensure the quality and reliability of the software.
+You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at Groups.io and request peer assistance for the source code version there.
 
-Subscription Keys are available at [Maxprograms Online Store](https://www.maxprograms.com/store/buy.html). Subscription Keys cannot be shared or transferred to different machines.
+### Subscriptions
 
-You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at Groups.io and request peer assistance for the source code there.
+The version of XLIFF Manager included in the official installers from [Maxprograms Download Page](https://maxprograms.com/products/xliffdownload.html) can be used at no cost for 7 days requesting a free Evaluation Key.
+
+Personal Subscription Keys are available in  [Maxprograms Online Store](https://www.maxprograms.com/store/buy.html).
+
+Subscription Keys cannot be shared or transferred to different machines.
+
+Installers may occasionally be updated before the corresponding source code changes appear in this repository. Source code updates are published later, once they are ready for release. This timing difference is expected and does not affect the availability or completeness of the open source code.
+
+Subscription version includes unlimited email support at [tech@maxprograms.com](mailto:tech@maxprograms.com)
+
+### Differences sumary
+
+Differences | Source Code | Subscription Based
+----------- | :---------: | :-----------------:
+Ready To Use Installers | No | Yes
+Notarized macOS launcher | No | Yes
+Signed launcher and installer for Windows | No | Yes
+Restricted Features | None | None
+Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/) | - Direct email at [tech@maxprograms.com](mailto:tech@maxprograms.com)  <br> - Peer support at [Groups.io](https://groups.io/g/maxprograms/)
 
 ## Requirements
 
-- Node.js 22.17.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- TypeScript 5.8.3 or newer.  Get it from [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
-- OpenXLIFF Filters 4.6.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
+- Node.js 24.13.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
+- OpenXLIFF Filters 4.10.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
 
 ## Building
 
@@ -153,7 +177,7 @@ You can subscribe to [Maxprograms Support](https://groups.io/g/maxprograms/) at 
 ``` bash
   git clone https://github.com/rmraya/OpenXLIFF.git
   cd OpenXLIFF
-  ant
+  gradle
   cd ..
   git clone https://github.com/rmraya/XLIFFManager.git
   cd XLIFFManager
