@@ -70,6 +70,8 @@
         <cmd>Haga clic en el botón <uicontrol>Crear XLIFF</uicontrol>.</cmd>
       </step>
     </steps>
-    <result>El programa genera un archivo XLIFF y el esqueleto correspondiente.</result>
+    <result>
+      <p>El programa genera un archivo XLIFF y el esqueleto correspondiente.</p>
+    </result>
   </taskbody>
 </task>

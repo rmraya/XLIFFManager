@@ -8,7 +8,7 @@
     <link id="theme" rel="stylesheet" href="../../css/light.css">
 </head>
 
-<body onload="new Settings();">
+<body>
     <div class="tabContent">
         <table style="width: calc(100% - 8px);">
             <tr>
@@ -40,9 +40,8 @@
             <tr>
                 <td class="middle noWrap"><label for="sourceSelect">Idioma de la aplicaci&oacute;n</label></td>
                 <td class="fill_width">
-                    <select id="appLangSelect"  style="width: 300px;">
-                        <option value="en">Ingl&eacute;s</option> 
-                        <option value="es">Espa&ntilde;ol</option>
+                    <select id="appLangSelect" style="width: 300px;">
+                        <option value="en">Ingl&eacute;s</option> <option value="es">Espa&ntilde;ol</option>
                     </select>
                 </td>
             </tr>
@@ -50,10 +49,7 @@
                 <td class="middle noWrap"><label for="themeColor">Tema</label></td>
                 <td class="fill_width">
                     <select id="themeColor" style="width: 300px;">
-                        <option value="system">Predeterminado del sistema</option> 
-                        <option value="dark">Oscuro</option> 
-                        <option value="light">Claro</option>
-                        <option value="highcontrast">Alto Contraste</option>
+                        <option value="system">Predeterminado del Sistema</option> <option value="dark">Oscuro</option> <option value="light">Claro</option> <option value="highcontrast">Alto Contraste</option>
                     </select>
                 </td>
             </tr>
@@ -62,7 +58,10 @@
             <button id="saveSettings">Guardar Configuraci&oacute;n</button>
         </div>
     </div>
-    <script src="../../js/settings.js"></script>
+    <script>
+        const { Settings } = require('../../js/settings.js');
+        new Settings();
+    </script>
 </body>
 
 </html>

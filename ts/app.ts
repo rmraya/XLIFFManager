@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 - 2025 Maxprograms.
+ * Copyright (c) 2018-2026 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -13,13 +13,12 @@
 import { spawnSync, SpawnSyncReturns } from "child_process";
 import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, nativeTheme, net, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
-import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "fs";
+import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
 import { Language, LanguageUtils } from "typesbcp47";
-import { I18n } from "./i18n";
+import { I18n } from "./i18n.js";
+import { basename, extname, join } from 'node:path';
 
 class App {
-
-    static path = require('path');
 
     static mainWindow: BrowserWindow;
     static settingsWindow: BrowserWindow;
@@ -57,15 +56,15 @@ class App {
             }
             App.mainWindow.focus();
         }
-        App.appHome = App.path.join(app.getPath('appData'), app.name);
-        App.appIcon = App.path.join(app.getAppPath(), 'icons', 'openxliff.png');
-        App.defaultSRX = App.path.join(app.getAppPath(), 'srx', 'default.srx');
-        App.defaultCatalog = App.path.join(app.getAppPath(), 'catalog', 'catalog.xml');
-        App.sklFolder = App.path.join(app.getPath('appData'), app.name, 'skl');
-        App.defaultsFile = App.path.join(app.getPath('appData'), app.name, 'defaults.json');
-        App.javapath = App.path.join(app.getAppPath(), 'bin', 'java');
+        App.appHome = join(app.getPath('appData'), app.name);
+        App.appIcon = join(app.getAppPath(), 'img', 'xliffmanager.png');
+        App.defaultSRX = join(app.getAppPath(), 'srx', 'default.srx');
+        App.defaultCatalog = join(app.getAppPath(), 'catalog', 'catalog.xml');
+        App.sklFolder = join(app.getPath('appData'), app.name, 'skl');
+        App.defaultsFile = join(app.getPath('appData'), app.name, 'defaults.json');
+        App.javapath = join(app.getAppPath(), 'bin', 'java');
         if (process.platform === 'win32') {
-            App.javapath = App.path.join(app.getAppPath(), 'bin', 'java.exe');
+            App.javapath = join(app.getAppPath(), 'bin', 'java.exe');
         }
         if (!existsSync(App.appHome)) {
             mkdirSync(App.appHome);
@@ -82,7 +81,7 @@ class App {
         }
         this.loadDefaults();
 
-        App.i18n = new I18n(App.path.join(app.getAppPath(), 'i18n', 'xliffmanager_' + App.lang + '.json'));
+        App.i18n = new I18n(join(app.getAppPath(), 'i18n', 'xliffmanager_' + App.lang + '.json'));
 
         app.on('ready', () => {
             this.createWindow();
@@ -100,9 +99,10 @@ class App {
 
         nativeTheme.on('updated', () => {
             this.loadDefaults();
-            let dark = App.path.join(app.getAppPath(), 'css', 'dark.css');
-            let light = App.path.join(app.getAppPath(), 'css', 'light.css');
-            let highcontrast = App.path.join(app.getAppPath(), 'css', 'highcontrast.css');
+            this.createMenu();
+            let dark = join(app.getAppPath(), 'css', 'dark.css');
+            let light = join(app.getAppPath(), 'css', 'light.css');
+            let highcontrast = join(app.getAppPath(), 'css', 'highcontrast.css');
             if (App.defaultTheme === 'system') {
                 if (nativeTheme.shouldUseDarkColors) {
                     App.currentTheme = dark;
@@ -118,18 +118,11 @@ class App {
                 }
             }
         });
-
-        ipcMain.on('main-height', (event: IpcMainEvent, arg: any) => {
-            App.mainWindow.setContentSize(arg.width, arg.height);
-        });
-        ipcMain.on('about-height', (event: IpcMainEvent, arg: any) => {
-            App.setHeight(App.aboutWindow, arg);
+        ipcMain.on('set-height', (event: IpcMainEvent, arg: { window: string, width: number, height: number }) => {
+            App.setHeight(arg.window, arg.width, arg.height);
         });
         ipcMain.on('close-about', () => {
             App.destroyWindow(App.aboutWindow);
-        });
-        ipcMain.on('settings-height', (event: IpcMainEvent, arg: any) => {
-            App.setHeight(App.settingsWindow, arg);
         });
         ipcMain.on('close-settings', () => {
             App.destroyWindow(App.settingsWindow);
@@ -245,9 +238,6 @@ class App {
         ipcMain.on('get-versions', (event: IpcMainEvent) => {
             event.sender.send('set-versions', { current: app.getVersion(), latest: App.latestVersion });
         });
-        ipcMain.on('updates-height', (event: IpcMainEvent, arg: any) => {
-            App.setHeight(App.updatesWindow, arg);
-        });
         ipcMain.on('release-history', () => {
             App.releaseHistory();
         });
@@ -276,25 +266,9 @@ class App {
             }
             dialog.showMessageBox(arg);
         });
-        ipcMain.on('show-message', (event: IpcMainEvent, arg: any) => {
-            if (arg.key && arg.window) {
-                arg.message = App.i18n.getString(arg.window, arg.key);
-            }
-            dialog.showMessageBoxSync(arg);
-        });
-        ipcMain.on('licenses-height', (event: IpcMainEvent, arg: any) => {
-            App.setHeight(App.licensesWindow, arg);
-        });
-        ipcMain.on('close-licenses', () => {
-            App.destroyWindow(App.licensesWindow);
-        });
-        ipcMain.on('open-license', (event: IpcMainEvent, arg: any) => {
-            App.openLicense();
-        });
     }
 
     static startup(): void {
-        App.mainWindow.webContents.send('get-height', App.currentTheme);
         setTimeout(() => {
             App.checkUpdates(true);
         }, 800);
@@ -302,7 +276,7 @@ class App {
 
     static runJava(module: string, arg: string[]): string {
         App.javaErrors = false;
-        let javapath: string = process.platform === 'win32' ? App.path.join(app.getAppPath(), 'bin', 'java.exe') : App.path.join(app.getAppPath(), 'bin', 'java');
+        let javapath: string = process.platform === 'win32' ? join(app.getAppPath(), 'bin', 'java.exe') : join(app.getAppPath(), 'bin', 'java');
         let params: string[] = ['--module-path', 'lib', '-m', module];
         if (arg) {
             params = params.concat(arg);
@@ -319,8 +293,21 @@ class App {
         return stdout.toString();
     }
 
-    static setHeight(window: BrowserWindow, arg: any) {
-        window.setContentSize(arg.width, arg.height);
+    static setHeight(window: string, width: number, height: number): void {
+        switch (window) {
+            case 'main':
+                App.mainWindow.setContentSize(width, height);
+                break;
+            case 'about':
+                App.aboutWindow.setContentSize(width, height);
+                break;
+            case 'settings':
+                App.settingsWindow.setContentSize(width, height);
+                break;
+            case 'updates':
+                App.updatesWindow.setContentSize(width, height);
+                break;
+        }
     }
 
     static destroyWindow(window: BrowserWindow): void {
@@ -353,21 +340,21 @@ class App {
                 contextIsolation: false
             }
         });
-        App.mainWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'main.html'));
+        App.mainWindow.loadURL('file://' + join(app.getAppPath(), 'html', App.lang, 'main.html'));
         App.mainWindow.on('move', () => {
             App.saveLocation();
         });
     }
 
     static saveLocation(): void {
-        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
+        let defaultsFile: string = join(app.getPath('appData'), app.name, 'position.json');
         let position: number[] = App.mainWindow.getPosition();
         let pos: any = { x: position[0], y: position[1] }
         writeFileSync(defaultsFile, JSON.stringify(pos, null, 2));
     }
 
     static loadLocation(): void {
-        let defaultsFile: string = App.path.join(app.getPath('appData'), app.name, 'position.json');
+        let defaultsFile: string = join(app.getPath('appData'), app.name, 'position.json');
         if (existsSync(defaultsFile)) {
             try {
                 let data: Buffer = readFileSync(defaultsFile);
@@ -426,9 +413,9 @@ class App {
             }
             App.lang = defaults.appLang;
         }
-        let light = App.path.join(app.getAppPath(), 'css', 'light.css');
-        let dark = App.path.join(app.getAppPath(), 'css', 'dark.css');
-        let highcontrast = App.path.join(app.getAppPath(), 'css', 'highcontrast.css');
+        let light = join(app.getAppPath(), 'css', 'light.css');
+        let dark = join(app.getAppPath(), 'css', 'dark.css');
+        let highcontrast = join(app.getAppPath(), 'css', 'highcontrast.css');
         if (App.defaultTheme === 'system') {
             if (nativeTheme.shouldUseDarkColors) {
                 App.currentTheme = dark;
@@ -607,16 +594,17 @@ class App {
             tgtLang: arg.tgtLang,
             srx: App.defaultSRX,
             is20: arg.is20,
-            is21: arg.is21
+            is21: arg.is21,
+            is22: arg.is22
         }
         if (arg.embed) {
             file.embed = true;
         } else {
-            let baseName: string = App.path.basename(arg.file);
-            let extension: string = App.path.extname(baseName);
+            let baseName: string = basename(arg.file);
+            let extension: string = extname(baseName);
             let name: string = baseName.substring(0, baseName.length - extension.length);
             let skeletonName = name + Date.now() + '.skl';
-            let skeleton = App.path.join(App.sklFolder, skeletonName);
+            let skeleton = join(App.sklFolder, skeletonName);
             file.skl = skeleton;
         }
         if (arg.paragraph) {
@@ -635,7 +623,7 @@ class App {
             files: [file]
         }
 
-        let jsonFile: string = App.path.join(app.getPath('temp'), 'convert.json');
+        let jsonFile: string = join(app.getPath('temp'), 'convert.json');
         writeFileSync(jsonFile, JSON.stringify(json, null, 2));
 
         event.sender.send('set-status', { status: App.i18n.getString('App', 'creatingXliff') });
@@ -875,7 +863,7 @@ class App {
                                 }
                             });
                             App.updatesWindow.setMenu(null);
-                            App.updatesWindow.loadURL('file://' + this.path.join(app.getAppPath(), 'html', App.lang, 'updates.html'));
+                            App.updatesWindow.loadURL('file://' + join(app.getAppPath(), 'html', App.lang, 'updates.html'));
                             App.updatesWindow.once('ready-to-show', () => {
                                 App.updatesWindow.show();
                             });
@@ -913,6 +901,7 @@ class App {
     }
 
     createMenu(): void {
+        const iconFolder: string = nativeTheme.shouldUseHighContrastColors ? 'dark' : (nativeTheme.shouldUseDarkColors ? 'dark' : 'light');
         let editMenu: Menu = Menu.buildFromTemplate([
             { label: App.i18n.getString('App', 'cut'), accelerator: 'CmdOrCtrl+X', click: () => { BrowserWindow.getFocusedWindow()?.webContents.cut(); } },
             { label: App.i18n.getString('App', 'copy'), accelerator: 'CmdOrCtrl+C', click: () => { BrowserWindow.getFocusedWindow()?.webContents.copy(); } },
@@ -920,16 +909,16 @@ class App {
             { label: App.i18n.getString('App', 'selectAll'), accelerator: 'CmdOrCtrl+A', click: () => { BrowserWindow.getFocusedWindow()?.webContents.selectAll(); } }
         ]);
         let viewMenu: Menu = Menu.buildFromTemplate([
-            { label: App.i18n.getString('App', 'createXliffView'), accelerator: 'CmdOrCtrl+1', click: () => { App.createXliffView(); } },
-            { label: App.i18n.getString('App', 'mergeXliffView'), accelerator: 'CmdOrCtrl+2', click: () => { App.mergeXliffView(); } },
-            { label: App.i18n.getString('App', 'validateXliffView'), accelerator: 'CmdOrCtrl+3', click: () => { App.validateXliffView(); } },
-            { label: App.i18n.getString('App', 'analyseXliffView'), accelerator: 'CmdOrCtrl+4', click: () => { App.analyzeXliffView(); } },
-            { label: App.i18n.getString('App', 'translationTaskView'), accelerator: 'CmdOrCtrl+5', click: () => { App.translationTasksView(); } },
+            { label: App.i18n.getString('App', 'createXliffView'), accelerator: 'CmdOrCtrl+1', click: () => { App.createXliffView(); }, icon: join(app.getAppPath(), 'img', iconFolder, 'create.png') },
+            { label: App.i18n.getString('App', 'mergeXliffView'), accelerator: 'CmdOrCtrl+2', click: () => { App.mergeXliffView(); }, icon: join(app.getAppPath(), 'img', iconFolder, 'merge.png') },
+            { label: App.i18n.getString('App', 'validateXliffView'), accelerator: 'CmdOrCtrl+3', click: () => { App.validateXliffView(); }, icon: join(app.getAppPath(), 'img', iconFolder, 'validate.png') },
+            { label: App.i18n.getString('App', 'analyseXliffView'), accelerator: 'CmdOrCtrl+4', click: () => { App.analyzeXliffView(); }, icon: join(app.getAppPath(), 'img', iconFolder, 'analyse.png') },
+            { label: App.i18n.getString('App', 'translationTaskView'), accelerator: 'CmdOrCtrl+5', click: () => { App.translationTasksView(); }, icon: join(app.getAppPath(), 'img', iconFolder, 'translation.png') },
         ]);
         let helpMenu: Menu = Menu.buildFromTemplate([
             { label: App.i18n.getString('App', 'userGuide'), accelerator: 'F1', click: () => { App.showHelp() } },
             { type: 'separator' },
-            { label: App.i18n.getString('App', 'checkUpdates'), click: () => { App.checkUpdates(false); } },
+            { label: App.i18n.getString('App', 'checkUpdates'), click: () => { App.checkUpdates(false); }, icon: join(app.getAppPath(), 'img', iconFolder, 'updates.png') },
             { type: 'separator' },
             { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.openLicense(); } },
             { type: 'separator' },
@@ -942,7 +931,7 @@ class App {
         ];
         if (!app.isPackaged) {
             viewMenu.append(new MenuItem({ type: 'separator' }));
-            viewMenu.append(new MenuItem({ label: App.i18n.getString('App', 'developmentTools'), accelerator: 'F12', click: () => { App.mainWindow.webContents.openDevTools() } }));
+            viewMenu.append(new MenuItem({ label: App.i18n.getString('App', 'developmentTools'), accelerator: 'F12', click: () => { BrowserWindow.getFocusedWindow()?.webContents.openDevTools() } }));
         }
         if (process.platform === 'darwin') {
             let appleMenu: Menu = Menu.buildFromTemplate([
@@ -1014,7 +1003,7 @@ class App {
             }
         });
         App.aboutWindow.setMenu(null);
-        App.aboutWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'about.html'));
+        App.aboutWindow.loadURL('file://' + join(app.getAppPath(), 'html', App.lang, 'about.html'));
         App.aboutWindow.once('ready-to-show', () => {
             App.aboutWindow.show();
         });
@@ -1037,7 +1026,7 @@ class App {
     }
 
     static showHelp(): void {
-        shell.openExternal('file://' + App.path.join(app.getAppPath(), 'xliffmanager_' + App.lang + '.pdf'), {
+        shell.openExternal('file://' + join(app.getAppPath(), 'xliffmanager_' + App.lang + '.pdf'), {
             activate: true, workingDirectory: app.getAppPath()
         }).catch((error: Error) => {
             dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
@@ -1061,7 +1050,7 @@ class App {
             }
         });
         App.settingsWindow.setMenu(null);
-        App.settingsWindow.loadURL('file://' + App.path.join(app.getAppPath(), 'html', App.lang, 'settings.html'));
+        App.settingsWindow.loadURL('file://' + join(app.getAppPath(), 'html', App.lang, 'settings.html'));
         App.settingsWindow.once('ready-to-show', () => {
             App.settingsWindow.show();
         });
@@ -1127,7 +1116,7 @@ class App {
     }
 
     static openLicense() {
-        let licenseFile = 'file://' + this.path.join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
+        let licenseFile = 'file://' + join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
         let title = 'Eclipse Public License 1.0';
         let licenseWindow = new BrowserWindow({
             parent: this.licensesWindow,

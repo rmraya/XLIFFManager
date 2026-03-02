@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task xml:lang="es" id="subscription_renewal">
+  <title>Renovación de Suscripción</title>
+  <taskbody>
+    <context>
+      <p>Puede registrar una nueva Clave de Suscripción antes de que caduque su suscripción existente.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>En el menú principal, seleccione <menucascade>
+            <uicontrol>Ayuda</uicontrol>
+            <uicontrol>Registrar Suscripción...</uicontrol>
+          </menucascade>.</cmd>
+        <stepresult>Aparece el siguiente cuadro de diálogo:<image href="../images/register_subscription.png" placement="break" scale="80" align="center">
+            <alt>Cuadro de diálogo Registrar Suscripción</alt>
+          </image> </stepresult>
+      </step>
+      <step>
+        <cmd>Si no tiene una Clave de Suscripción, haga clic en el botón <uicontrol>Comprar Suscripción</uicontrol> para abrir la <xref href="https://www.maxprograms.com/store/buy.html" scope="external" format="html">tienda en línea de Maxprograms</xref> en su navegador de Internet.</cmd>
+      </step>
+      <step>
+        <cmd>Si tiene una clave de suscripción, escríbala en el cuadro de texto <uicontrol>Clave de Suscripción</uicontrol> y haga clic en el botón <uicontrol>Registrar Suscripción</uicontrol>.</cmd>
+        <stepresult>La suscripción se registra y el período de suscripción se ajusta automáticamente.</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

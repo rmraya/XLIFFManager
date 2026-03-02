@@ -8,7 +8,7 @@
     <link id="theme" rel="stylesheet" href="../../css/light.css">
 </head>
 
-<body onload="new Main();">
+<body>
     <table style="height: 100vh;">
         <tr>
             <td class="leftSide">
@@ -260,7 +260,10 @@
             </td>
         </tr>
     </table>
-    <script src="../../js/main.js"></script>
+    <script>
+        const { Main } = require('../../js/main.js');
+        new Main();
+    </script>
 </body>
 
 </html>

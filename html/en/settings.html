@@ -8,7 +8,7 @@
     <link id="theme" rel="stylesheet" href="../../css/light.css">
 </head>
 
-<body onload="new Settings();">
+<body>
     <div class="tabContent">
         <table style="width: calc(100% - 8px);">
             <tr>
@@ -40,7 +40,7 @@
             <tr>
                 <td class="middle noWrap"><label for="sourceSelect">Application Language</label></td>
                 <td class="fill_width">
-                    <select id="appLangSelect"  style="width: 300px;">
+                    <select id="appLangSelect" style="width: 300px;">
                         <option value="en">English</option>
                         <option value="es">Spanish</option>
                     </select>
@@ -62,7 +62,10 @@
             <button id="saveSettings">Save Settings</button>
         </div>
     </div>
-    <script src="../../js/settings.js"></script>
+    <script>
+        const { Settings } = require('../../js/settings.js');
+        new Settings();
+    </script>
 </body>
 
 </html>

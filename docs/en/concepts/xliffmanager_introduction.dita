@@ -2,7 +2,6 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="xliffmanager_introduction">
     <title>Introduction</title>
-    <shortdesc></shortdesc>
     <conbody>
         <p>XLIFF Manager provides an open source UI for <xref
                 href="https://github.com/rmraya/OpenXLIFF" format="html" scope="external">OpenXLIFF
@@ -18,7 +17,7 @@
                 document.</li>
         </ul>
         <fig>
-            <image href="../images/XliffManager.png" align="center" placement="break"
+            <image href="../images/createXliff.png" align="center" placement="break"
                 scalefit="yes">
                 <alt>XLIFF Manager GUI</alt>
             </image>

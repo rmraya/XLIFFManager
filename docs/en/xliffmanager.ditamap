@@ -2,50 +2,54 @@
 <!DOCTYPE bookmap PUBLIC "-//OASIS//DTD DITA BookMap//EN"
 "http://docs.oasis-open.org/dita/dtd/bookmap.dtd">
 <bookmap>
-    <booktitle>
+  <booktitle>
         <mainbooktitle>
             <ph>XLIFF Manager User Guide</ph>
             <image href="images/openxliff.png" placement="break" scale="60"/>
         </mainbooktitle>
         <booktitlealt>
-            <ph>Copyright © 2018 - 2025 Maxprograms</ph>
+            <ph>Copyright © 2018 - 2026 Maxprograms</ph>
         </booktitlealt>
     </booktitle>
-    <frontmatter>
-        <booklists>
-            <toc/>
-        </booklists>
-    </frontmatter>
-    <chapter href="concepts/xliffmanager_introduction.dita">
-        <topicref href="concepts/xliffmanager_file_formats.dita"/>
-        <topicref href="concepts/xliffmanager_platforms.dita"/>
-    </chapter>
-    <chapter>
-        <topicmeta>
-            <navtitle>Creating and Merging XLIFF Files</navtitle>
-        </topicmeta>
-        <topicref href="tasks/create_xliff.dita"/>
-        <topicref href="tasks/merge_xliff.dita"/>
-    </chapter>
-    <chapter href="tasks/validate_xliff.dita"/>
-    <chapter href="tasks/analysis_xliff.dita"/>
-    <chapter href="concepts/translationTaks.dita">
-        <topicref href="tasks/copySources.dita"/>
-        <topicref href="tasks/pseudoTranslate.dita"/>
-        <topicref href="tasks/removeTargets.dita"/>
-        <topicref href="tasks/approveAll.dita"/>
-    </chapter>
-    <chapter href="tasks/default_settings.dita"/>
-    <chapter href="concepts/subscriptions.dita"/>
-    <backmatter>
-        <booklists>
-            <glossarylist chunk="to-content">
-                <topicref href="glossaries/CAT.dita"/>
-                <topicref href="glossaries/character_set.dita"/>
-                <topicref href="glossaries/SRX.dita"/>
-                <topicref href="glossaries/TMX.dita"/>
-                <topicref href="glossaries/XLIFF.dita"/>
-            </glossarylist>
-        </booklists>
-    </backmatter>
+  <frontmatter>
+    <booklists>
+      <toc/>
+    </booklists>
+  </frontmatter>
+  <chapter href="concepts/xliffmanager_introduction.dita">
+    <topicref href="concepts/xliffmanager_file_formats.dita"/>
+    <topicref href="concepts/xliffmanager_platforms.dita"/>
+  </chapter>
+  <chapter>
+    <topicmeta>
+      <navtitle>Creating and Merging XLIFF Files</navtitle>
+    </topicmeta>
+    <topicref href="tasks/create_xliff.dita"/>
+    <topicref href="tasks/merge_xliff.dita"/>
+  </chapter>
+  <chapter href="tasks/validate_xliff.dita"/>
+  <chapter href="tasks/analysis_xliff.dita"/>
+  <chapter href="concepts/translationTaks.dita">
+    <topicref href="tasks/copySources.dita"/>
+    <topicref href="tasks/pseudoTranslate.dita"/>
+    <topicref href="tasks/removeTargets.dita"/>
+    <topicref href="tasks/approveAll.dita"/>
+  </chapter>
+  <chapter href="tasks/default_settings.dita"/>
+  <chapter href="concepts/opensource_subscription.dita">
+    <topicref href="tasks/subscription_registration.dita"/>
+    <topicref href="tasks/subscription_renewal.dita"/>
+  </chapter>
+  <backmatter>
+    <booklists>
+      <glossarylist chunk="to-content">
+        <topicref href="glossaries/CAT.dita"/>
+        <topicref href="glossaries/character_set.dita"/>
+        <topicref href="glossaries/subscription_key.dita"/>
+        <topicref href="glossaries/SRX.dita"/>
+        <topicref href="glossaries/TMX.dita"/>
+        <topicref href="glossaries/XLIFF.dita"/>
+      </glossarylist>
+    </booklists>
+  </backmatter>
 </bookmap>

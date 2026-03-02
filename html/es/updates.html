@@ -7,10 +7,10 @@
     <link rel="stylesheet" type="text/css" href="../../css/fonts.css">
 </head>
 
-<body onload="new Updates();">
-    <div class="tabContent"  style="height: 12em;">
+<body>
+    <div class="tabContent" style="height: 12em;">
         <div class="row">
-            <img src="../../icons/xliffmanager.png" width="120" style="padding: 10px;" />
+            <img src="../../img/xliffmanager.png" width="120" style="padding: 10px;" />
             <div>
                 <p class="center">Est&aacute; disponible una versi&oacute;n actualizada de XLIFF Manager</p>
                 <table>
@@ -30,7 +30,10 @@
             <button id="release">Ver Historial</button> <button id="download">Descargar Actualizaci&oacute;n</button>
         </div>
     </div>
-    <script src="../../js/updates.js"></script>
+    <script>
+        const { Updates } = require('../../js/updates.js');
+        new Updates();
+    </script>
 </body>
 
 </html>

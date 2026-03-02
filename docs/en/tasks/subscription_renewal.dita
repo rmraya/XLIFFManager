@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="subscription_renewal">
+  <title>Subscription Renewal</title>
+  <taskbody>
+    <context>
+      <p>You can register a new subscription key before your existing subscription expires.</p>
+    </context>
+    <steps>
+      <step>
+        <cmd>In main menu, select <menucascade>
+            <uicontrol>Help</uicontrol>
+            <uicontrol>Register Subscription...</uicontrol>
+          </menucascade>.</cmd>
+        <stepresult>The following dialog appears:<image href="../images/register_subscription.png"
+            placement="break" scale="80" align="center">
+            <alt>Register Subscription Dialog</alt>
+          </image>
+        </stepresult>
+      </step>
+      <step>
+        <cmd>If you don't have a subscription key yet, click on the <uicontrol>Purchase
+            Subscription</uicontrol> button to open <xref
+            href="https://www.maxprograms.com/store/buy.html" format="html" scope="external"
+            >Maxprograms Online Store</xref> on your internet browser.</cmd>
+      </step>
+      <step>
+        <cmd>If you have a Subscription Key, type it in the <uicontrol>Subscription Key</uicontrol>
+          text box and click the <uicontrol>Register Subscription</uicontrol> button.</cmd>
+        <stepresult>Subscription is registered and subscription period is automatically adjusted.</stepresult>
+      </step>
+    </steps>
+  </taskbody>
+</task>

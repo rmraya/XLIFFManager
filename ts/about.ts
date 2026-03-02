@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (c) 2018 - 2025 Maxprograms.
+ * Copyright (c) 2018-2026 Maxprograms.
  *
  * This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License 1.0
@@ -10,33 +10,35 @@
  *     Maxprograms - initial API and implementation
  *******************************************************************************/
 
-class About {
+import { ipcRenderer } from "electron";
 
-    electron = require('electron');
+export class About {
 
     constructor() {
-        this.electron.ipcRenderer.send('get-theme');
+        ipcRenderer.send('get-theme');
 
-        this.electron.ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
+        ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
-            this.electron.ipcRenderer.send('get-version');
+            ipcRenderer.send('get-version');
         });
-        this.electron.ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
+        ipcRenderer.on('set-version', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('xlfm_version') as HTMLTableCellElement).innerHTML = arg.XLIFFManager;
             (document.getElementById('oxlf_version') as HTMLTableCellElement).innerHTML = arg.OpenXLIFF;
             (document.getElementById('xmlj_version') as HTMLTableCellElement).innerHTML = arg.XMLJava;
             (document.getElementById('bcp47j_version') as HTMLTableCellElement).innerHTML = arg.BCP47J;
             (document.getElementById('java_version') as HTMLTableCellElement).innerHTML = arg.Java;
             (document.getElementById('elect_version') as HTMLTableCellElement).innerHTML = arg.electron;
-            this.electron.ipcRenderer.send('about-height', { width: document.body.clientWidth, height: document.body.clientHeight });
+            setTimeout(() => {
+                ipcRenderer.send('set-height', { window: 'about', width: document.body.clientWidth, height: document.body.clientHeight });
+            }, 100);
         });
         document.addEventListener('keydown', (event: KeyboardEvent) => {
             if (event.code === 'Escape') {
-                this.electron.ipcRenderer.send('close-about');
+                ipcRenderer.send('close-about');
             }
         });
         (document.getElementById('maxprograms') as HTMLAnchorElement).addEventListener('click', () => {
-            this.electron.ipcRenderer.send('show-home');
+            ipcRenderer.send('show-home');
         });
     }
 }

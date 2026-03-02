@@ -2,7 +2,6 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept xml:lang="es" id="xliffmanager_file_formats">
   <title>Tipos de Archivo Compatibles</title>
-  <shortdesc/>
   <conbody>
     <p>Con XLIFF Manager puede crear archivos <xref href="../glossaries/XLIFF.dita">XLIFF</xref> a partir de los siguientes tipos de documentos:</p>
     <ul>

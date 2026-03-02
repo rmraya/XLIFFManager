@@ -2,17 +2,18 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
 <task xml:lang="es" id="validate_xliff">
   <title>Validar XLIFF</title>
-  <shortdesc/>
   <taskbody>
     <context>
-      <p>XLIFF Manager puede validar <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.0, 1.1, 1.2 y 2.0.</p>
+      <p>XLIFF Manager puede validar <xref href="../glossaries/XLIFF.dita">XLIFF</xref> 1.0, 1.1, 1.2, 2.0, 2.1 y 2.2.</p>
       <p> Validar XLIFF con gramáticas XML (DTD o esquemas XML) no es suficiente. La validación usando esquema XML no detecta el uso de atributos 'id' duplicados, códigos de idioma incorrectos y otras restricciones escritas en las diferentes especificaciones XLIFF.</p>
       <p>Además de validar todos los módulos XLIFF 2.0 mediante la validación de esquemas XML, se realiza una validación adicional para XLIFF 2.0 Core y para los módulos Metadata, Matches y Glossary.</p>
-      <fig>
-        <image href="../images/validateXliff.png" placement="break" scalefit="yes" align="center">
-          <alt>Validar Archivo XLIFF</alt>
-        </image>
-      </fig>
+      <p>
+        <fig>
+          <image href="../images/validateXliff.png" placement="break" scalefit="yes" align="center">
+            <alt>Validar Archivo XLIFF</alt>
+          </image>
+        </fig>
+      </p>
     </context>
     <steps>
       <step>

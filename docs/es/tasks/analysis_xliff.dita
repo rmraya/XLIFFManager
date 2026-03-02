@@ -2,7 +2,6 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA General Task//EN" "generalTask.dtd">
 <task xml:lang="es" id="analysis_xliff">
   <title>Generar Conteos de Palabras y Estadísticas de Segmentos</title>
-  <shortdesc/>
   <taskbody>
     <context>
       <p>XLIFF Manager le permite generar un archivo HTML con conteos de palabras y estadísticas de estado de segmentos a partir de un documento <xref href="../glossaries/XLIFF.dita">XLIFF</xref>.</p>

@@ -2,7 +2,6 @@
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="xliffmanager_file_formats">
     <title>Supported File Formats</title>
-    <shortdesc/>
     <conbody>
         <p>With XLIFF Manager you can create <xref href="../glossaries/XLIFF.dita">XLIFF</xref>
             files from the following document formats:</p>

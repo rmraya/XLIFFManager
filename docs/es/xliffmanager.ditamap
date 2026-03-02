@@ -7,7 +7,7 @@
       <image href="images/openxliff.png" placement="break" scale="60"/>
     </mainbooktitle>
     <booktitlealt>
-      <ph>Derechos de autor © 2018 - 2025 Maxprograms</ph>
+      <ph>Derechos de autor © 2018 - 2026 Maxprograms</ph>
     </booktitlealt>
   </booktitle>
   <frontmatter>
@@ -35,12 +35,16 @@
     <topicref href="tasks/approveAll.dita"/>
   </chapter>
   <chapter href="tasks/default_settings.dita"/>
-  <chapter href="concepts/subscriptions.dita"/>
+  <chapter href="concepts/opensource_subscription.dita">
+    <topicref href="tasks/subscription_registration.dita"/>
+    <topicref href="tasks/subscription_renewal.dita"/>
+  </chapter>
   <backmatter>
     <booklists>
       <glossarylist chunk="to-content">
         <topicref href="glossaries/CAT.dita"/>
         <topicref href="glossaries/character_set.dita"/>
+        <topicref href="glossaries/subscription_key.dita"/>
         <topicref href="glossaries/SRX.dita"/>
         <topicref href="glossaries/TMX.dita"/>
         <topicref href="glossaries/XLIFF.dita"/>
