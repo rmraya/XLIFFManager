@@ -17,6 +17,6 @@ release
 catalog/
 xmlfilter/
 srx/
-licenses/
+./licenses/
 *.sh
 *.cmd
