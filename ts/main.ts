@@ -20,16 +20,13 @@ export class Main {
 
     constructor() {
         ipcRenderer.send('get-theme');
-
+        ipcRenderer.send('get-languages');        
         ipcRenderer.on('set-theme', (event: Electron.IpcRendererEvent, arg: any) => {
             (document.getElementById('theme') as HTMLLinkElement).href = arg;
-            ipcRenderer.send('get-languages');
         });
-
         ipcRenderer.on('languages-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.languagesReceived(arg);
         });
-
         ipcRenderer.on('types-received', (event: Electron.IpcRendererEvent, arg: any) => {
             this.typesReceived(arg);
         });
@@ -137,7 +134,7 @@ export class Main {
             (document.getElementById('configFile') as HTMLInputElement).value = arg;
         });
         setTimeout(() => {
-             ipcRenderer.send('set-height', { window: 'main', width: document.body.clientWidth, height: document.body.clientHeight });
+            ipcRenderer.send('set-height', { window: 'main', width: document.body.clientWidth, height: document.body.clientHeight });
         }, 200);
     }
 

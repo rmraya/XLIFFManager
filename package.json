@@ -1,7 +1,7 @@
 {
   "name": "xliffmanager",
   "productName": "XLIFF Manager",
-  "version": "8.5.0",
+  "version": "8.6.0",
   "description": "XLIFF Manager, a cross-platform open source graphical user interface for OpenXLIFF Filters",
   "main": "js/app.js",
   "scripts": {
@@ -26,7 +26,7 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^40.6.1",
+    "electron": "^40.8.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {

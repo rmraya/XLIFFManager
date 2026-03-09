@@ -49,7 +49,8 @@
     "settingsMenu": "&Configuración",
     "registerSubscription": "Registrar Suscripción",
     "noServices": "No se Aplican Servicios",
-    "quit": "Salir"
+    "quit": "Salir",
+    "unknownLicense": "Licencia desconocida"
   },
   "FileFormats": {
     "tradosPackage": "Paquete de Trados Studio",
@@ -85,7 +86,9 @@
     "po": "PO (Portable Objects)",
     "ts": "TS (Fuente de Traducción de Qt Linguist)"
   },
-  "Subscriptions": {"enterKey": "Introduzca la clave de suscripción"},
+  "Subscriptions": {
+    "enterKey": "Introduzca la clave de suscripción"
+  },
   "Main": {
     "selectLanguage": "Seleccione Idioma",
     "fileTypeWarning": "Seleccione el tipo de archivo",

@@ -12,7 +12,7 @@
         "xliffManager": "XLIFF Manager",
         "userGuide": "XLIFF Manager User Guide",
         "checkUpdates": "Check for Updates",
-        "viewLicenses": "View License",
+        "viewLicenses": "View Licenses",
         "registerSubscription": "Register Subscription",
         "subscriptionError": "Error checking subscription",
         "releaseHistory": "Release History",
@@ -49,7 +49,8 @@
         "cut": "Cut",
         "copy": "Copy",
         "paste": "Paste",
-        "selectAll": "Select All"
+        "selectAll": "Select All",
+        "unknownLicense": "Unknown license"
     },
     "register": {
         "evaluationRequested": "We received your request. An Evaluation Key was sent to the indicated email address.\n\nCheck your spam filter if you don't receive the Evaluation Key in the next few minutes.",

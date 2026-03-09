@@ -250,6 +250,9 @@ class App {
         ipcMain.on('close-updates', () => {
             App.destroyWindow(App.updatesWindow);
         });
+        ipcMain.on('open-license', (event: IpcMainEvent, type: string) => {
+            App.openLicense(type);
+        });
         ipcMain.on('show-file', (event: IpcMainEvent, arg: any) => {
             shell.openExternal('file://' + arg.file, {
                 activate: true, workingDirectory: app.getAppPath()
@@ -300,6 +303,9 @@ class App {
                 break;
             case 'about':
                 App.aboutWindow.setContentSize(width, height);
+                break;
+            case 'licenses':
+                App.licensesWindow.setContentSize(width, height);
                 break;
             case 'settings':
                 App.settingsWindow.setContentSize(width, height);
@@ -920,7 +926,7 @@ class App {
             { type: 'separator' },
             { label: App.i18n.getString('App', 'checkUpdates'), click: () => { App.checkUpdates(false); }, icon: join(app.getAppPath(), 'img', iconFolder, 'updates.png') },
             { type: 'separator' },
-            { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.openLicense(); } },
+            { label: App.i18n.getString('App', 'viewLicenses'), click: () => { App.showLicenses(); } },
             { type: 'separator' },
             { label: App.i18n.getString('App', 'releaseHistory'), click: () => { App.releaseHistory(); } },
             { label: App.i18n.getString('App', 'supportGroup'), click: () => { App.showSupportGroup(); } },
@@ -1009,6 +1015,105 @@ class App {
         });
         App.aboutWindow.on('close', () => {
             App.mainWindow.focus();
+        });
+    }
+
+    static showLicenses(): void {
+        this.licensesWindow = new BrowserWindow({
+            parent: App.mainWindow,
+            width: 480,
+            height: 350,
+            minimizable: false,
+            maximizable: false,
+            resizable: false,
+            show: false,
+            icon: App.appIcon,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false
+            }
+        });
+        this.licensesWindow.setMenu(null);
+        let filePath: string = join(app.getAppPath(), 'html', App.lang, 'licenses.html');
+        let fileUrl: URL = new URL('file://' + filePath);
+        this.licensesWindow.loadURL(fileUrl.href);
+        this.licensesWindow.once('ready-to-show', () => {
+            this.licensesWindow.show();
+        });
+        this.licensesWindow.on('close', () => {
+            App.mainWindow.focus();
+        });
+    }
+
+    static openLicense(type: string): void {
+        let licenseFile: string = '';
+        let title: string = '';
+        switch (type) {
+            case 'XLIFFManager':
+            case "OpenXLIFF":
+            case "TypesBCP47":
+                licenseFile = 'EclipsePublicLicense1.0.html';
+                title = 'Eclipse Public License 1.0';
+                break;
+            case "BCP47J":
+                licenseFile = 'bcp47j.html';
+                title = 'Custom License';
+                break;
+            case "XMLJava":
+                licenseFile = 'xmljava.html';
+                title = 'Custom License';
+                break;
+            case "electron":
+                licenseFile = 'electron.txt';
+                title = 'MIT License';
+                break;
+            case "MapDB":
+                licenseFile = 'Apache2.0.html';
+                title = 'Apache 2.0';
+                break;
+            case "Java":
+                licenseFile = 'java.html';
+                title = 'GPL2 with Classpath Exception';
+                break;
+            case "jsoup":
+                licenseFile = 'jsoup.txt';
+                title = 'MIT License';
+                break;
+            default:
+                dialog.showMessageBox({
+                    type: 'info',
+                    message: App.i18n.getString('App', 'unknownLicense')
+                });
+                return;
+        }
+        let licenseWindow: BrowserWindow = new BrowserWindow({
+            parent: this.licensesWindow,
+            width: 680,
+            height: 400,
+            show: false,
+            title: title,
+            icon: App.appIcon,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false
+            }
+        });
+        licenseWindow.setMenu(null);
+        let filePath: string = join(app.getAppPath(), 'html', 'licenses', licenseFile);
+        let fileUrl: URL = new URL('file://' + filePath);
+        licenseWindow.loadURL(fileUrl.href);
+        licenseWindow.once('ready-to-show', () => {
+            licenseWindow.show();
+        });
+        licenseWindow.on('close', () => {
+            if (this.licensesWindow && !this.licensesWindow.isDestroyed()) {
+                this.licensesWindow.focus();
+            }
+        });
+        licenseWindow.webContents.on('did-finish-load', () => {
+            let css: string = readFileSync(App.currentTheme, { encoding: 'utf8' });
+            licenseWindow.webContents.insertCSS(css.toString());
+            licenseWindow.webContents.insertCSS('body { overflow: auto; }');
         });
     }
 
@@ -1112,32 +1217,6 @@ class App {
     static releaseHistory(): void {
         shell.openExternal("https://www.maxprograms.com/products/xliffmanagerlog.html").catch((error: Error) => {
             dialog.showErrorBox(App.i18n.getString('App', 'error'), error.message);
-        });
-    }
-
-    static openLicense() {
-        let licenseFile = 'file://' + join(app.getAppPath(), 'html', 'licenses', 'EclipsePublicLicense1.0.html');
-        let title = 'Eclipse Public License 1.0';
-        let licenseWindow = new BrowserWindow({
-            parent: this.licensesWindow,
-            width: 680,
-            height: 400,
-            show: false,
-            title: title,
-            icon: App.appIcon,
-            useContentSize: true,
-            webPreferences: {
-                nodeIntegration: true,
-                contextIsolation: false
-            }
-        });
-        licenseWindow.setMenu(null);
-        licenseWindow.loadURL(licenseFile);
-        licenseWindow.once('ready-to-show', () => {
-            licenseWindow.show();
-        });
-        licenseWindow.on('close', () => {
-            App.mainWindow.focus();
         });
     }
 
