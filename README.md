@@ -2,7 +2,7 @@
 
 ![XLIFF Manager logo](img/xliffmanager.png)
 
-An open source UI for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). OpenXLIFF is a set of programs that let you:
+A graphical user interface (GUI) for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). OpenXLIFF is a set of programs that let you:
 
 - Create XLIFF 1.2, 2.0, 2.1 and 2.2 files that can be translated in any modern CAT tool.
 - Convert your translated XLIFF files to original format with a couple of clicks.
@@ -75,7 +75,7 @@ Personal Subscription Keys are available in  [Maxprograms Online Store](https://
 
 Subscription Keys cannot be shared or transferred to different machines.
 
-Installers may occasionally be updated before the corresponding source code changes appear in this repository. Source code updates are published later, once they are ready for release. This timing difference is expected and does not affect the availability or completeness of the open source code.
+Installers may occasionally be updated before the corresponding source code changes appear in this repository. Source code updates are published later, once they are ready for release. This timing difference is expected and does not affect the availability or completeness of the source code.
 
 Subscription version includes unlimited email support at [tech@maxprograms.com](mailto:tech@maxprograms.com)
 
@@ -91,8 +91,8 @@ Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/
 
 ## Requirements
 
-- Node.js 24.13.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- OpenXLIFF Filters 4.10.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
+- Node.js 24.14.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
+- OpenXLIFF Filters 5.0.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
 
 ## Building
 
@@ -115,4 +115,3 @@ Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/
   npm install
   npm start
 ```
-
