@@ -26,10 +26,10 @@
     "url": "https://github.com/rmraya/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^40.8.0",
-    "typescript": "^5.9.3"
+    "electron": "^41.2.0",
+    "typescript": "^6.0.2"
   },
   "dependencies": {
-    "typesbcp47": "^1.18.0"
+    "typesbcp47": "^1.18.1"
   }
 }
