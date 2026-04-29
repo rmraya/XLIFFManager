@@ -2,7 +2,7 @@
 
 ![XLIFF Manager logo](img/xliffmanager.png)
 
-A graphical user interface (GUI) for [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF). OpenXLIFF is a set of programs that let you:
+A graphical user interface (GUI) for [OpenXLIFF Filters](https://github.com/maxprograms-com/OpenXLIFF). OpenXLIFF is a set of programs that let you:
 
 - Create XLIFF 1.2, 2.0, 2.1 and 2.2 files that can be translated in any modern CAT tool.
 - Convert your translated XLIFF files to original format with a couple of clicks.
