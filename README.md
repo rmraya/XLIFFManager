@@ -96,8 +96,8 @@ Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/
 
 ## Building
 
-- Checkout and build [OpenXLIFF Filters](https://github.com/rmraya/OpenXLIFF).
-- Checkout this repository.
+- Clone and build [OpenXLIFF Filters](https://github.com/maxprograms-com/OpenXLIFF).
+- Clone this repository.
 - Copy `dist` folder from OpenXLIFF Filters to the root of this repository.
 - Run `npm install` to download and install NodeJS dependencies
 - Run `npm start` to launch XLIFF Manager
@@ -105,11 +105,11 @@ Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/
 ### Steps for building
 
 ``` bash
-  git clone https://github.com/rmraya/OpenXLIFF.git
+  git clone https://github.com/maxprograms-com/OpenXLIFF.git
   cd OpenXLIFF
   gradle
   cd ..
-  git clone https://github.com/rmraya/XLIFFManager.git
+  git clone https://github.com/maxprograms-com/XLIFFManager.git
   cd XLIFFManager
   cp -r ../OpenXLIFF/dist/* .
   npm install
