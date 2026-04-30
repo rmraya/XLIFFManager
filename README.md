@@ -92,7 +92,7 @@ Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/
 ## Requirements
 
 - Node.js 24.14.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- OpenXLIFF Filters 5.0.0 or newer. Get it from [https://github.com/rmraya/OpenXLIFF](https://github.com/rmraya/OpenXLIFF)
+- OpenXLIFF Filters 5.0.0 or newer. Get it from [https://github.com/maxprograms-com/OpenXLIFF](https://github.com/maxprograms-com/OpenXLIFF)
 
 ## Building
 
