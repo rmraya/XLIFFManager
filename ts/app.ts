@@ -14,9 +14,9 @@ import { spawnSync, SpawnSyncReturns } from "child_process";
 import { app, BrowserWindow, ClientRequest, dialog, ipcMain, IpcMainEvent, Menu, MenuItem, MessageBoxReturnValue, nativeTheme, net, session, shell } from "electron";
 import { IncomingMessage } from "electron/main";
 import { appendFileSync, existsSync, mkdirSync, readFileSync, unlinkSync, writeFileSync } from "node:fs";
+import { basename, extname, join } from 'node:path';
 import { Language, LanguageUtils } from "typesbcp47";
 import { I18n } from "./i18n.js";
-import { basename, extname, join } from 'node:path';
 
 class App {
 
@@ -86,9 +86,9 @@ class App {
         app.on('ready', () => {
             this.createWindow();
             this.createMenu();
+            App.loadLocation();
             App.mainWindow.once('ready-to-show', () => {
-                App.loadLocation();
-                App.mainWindow.show();
+                App.mainWindow?.show();
                 App.startup();
             });
         });
@@ -280,20 +280,23 @@ class App {
     static runJava(module: string, arg: string[]): string {
         App.javaErrors = false;
         let javapath: string = process.platform === 'win32' ? join(app.getAppPath(), 'bin', 'java.exe') : join(app.getAppPath(), 'bin', 'java');
-        let params: string[] = ['--module-path', 'lib', '-m', module];
+        let params: string[] = ['-XX:+UseCompactObjectHeaders', '--module-path', 'lib', '-m', module];
         if (arg) {
             params = params.concat(arg);
         }
         let ls: SpawnSyncReturns<Buffer> = spawnSync(javapath, params, { cwd: app.getAppPath(), windowsHide: true });
         let stdout: Buffer = ls.stdout;
         let stderr: Buffer = ls.stderr;
-        if (stderr.length > 0) {
-            if (stderr.toString().indexOf('SEVERE:') !== -1) {
+        if (stderr && stderr.length > 0) {
+            const message: string = stderr.toString();
+            if (message.indexOf('ERROR:') !== -1) {
+                console.error(message);
                 App.javaErrors = true;
+                return message;
             }
-            return stderr.toString();
+            return message;
         }
-        return stdout.toString();
+        return stdout ? stdout.toString() : '';
     }
 
     static setHeight(window: string, width: number, height: number): void {
@@ -386,13 +389,17 @@ class App {
         let defaults = JSON.parse(data.toString());
 
         if (defaults.srx) {
-            App.defaultSRX = defaults.srx;
+            if (existsSync(defaults.srx)) {
+                App.defaultSRX = defaults.srx;
+            }
         }
         if (defaults.skeleton) {
             App.sklFolder = defaults.skeleton;
         }
         if (defaults.catalog) {
-            App.defaultCatalog = defaults.catalog;
+            if (existsSync(defaults.catalog)) {
+                App.defaultCatalog = defaults.catalog;
+            }
         }
         if (defaults.srcLang) {
             App.defaultSrcLang = defaults.srcLang;
@@ -497,37 +504,16 @@ class App {
     }
 
     selectSourceFile(event: IpcMainEvent): void {
+        let extensions: string[] = ['inx', 'icml', 'idml', 'ditamap', 'dita', 'xml', 'html', 'htm', 'js', 'properties', 'json', 'mif', 'docx', 'xlsx', 'pptx',
+            'sxw', 'sxc', 'sxi', 'sxd', 'odt', 'ods', 'odp', 'odg', 'txt', 'po', 'pot', 'rc', 'resx', 'sdlxliff', 'srt', 'svg', 'sdlppx', 'ts', 'txml', 'vsdx',
+            'xlf', 'xliff', 'mqxliff', 'txlf'];
+        let filters: any[] = [
+            { name: App.i18n.getString('FileFormats', 'supportedFiles'), extensions: extensions },
+            { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] },
+        ];
         dialog.showOpenDialog({
             properties: ['openFile'],
-            filters: [
-                { name: App.i18n.getString('FileFormats', 'anyFile'), extensions: ['*'] },
-                { name: App.i18n.getString('FileFormats', 'icml'), extensions: ['icml'] },
-                { name: App.i18n.getString('FileFormats', 'inx'), extensions: ['inx'] },
-                { name: App.i18n.getString('FileFormats', 'idml'), extensions: ['idml'] },
-                { name: App.i18n.getString('FileFormats', 'ditamap'), extensions: ['ditamap', 'dita', 'xml'] },
-                { name: App.i18n.getString('FileFormats', 'html'), extensions: ['html', 'htm'] },
-                { name: App.i18n.getString('FileFormats', 'javascript'), extensions: ['js'] },
-                { name: App.i18n.getString('FileFormats', 'properties'), extensions: ['properties'] },
-                { name: App.i18n.getString('FileFormats', 'json'), extensions: ['json'] },
-                { name: App.i18n.getString('FileFormats', 'mif'), extensions: ['mif'] },
-                { name: App.i18n.getString('FileFormats', 'office'), extensions: ['docx', 'xlsx', 'pptx'] },
-                { name: App.i18n.getString('FileFormats', 'openOffice1'), extensions: ['sxw', 'sxc', 'sxi', 'sxd'] },
-                { name: App.i18n.getString('FileFormats', 'openOffice2'), extensions: ['odt', 'ods', 'odp', 'odg'] },
-                { name: App.i18n.getString('FileFormats', 'plainText'), extensions: ['txt'] },
-                { name: App.i18n.getString('FileFormats', 'po'), extensions: ['po', 'pot'] },
-                { name: App.i18n.getString('FileFormats', 'rc'), extensions: ['rc'] },
-                { name: App.i18n.getString('FileFormats', 'resx'), extensions: ['resx'] },
-                { name: App.i18n.getString('FileFormats', 'sdlxliff'), extensions: ['sdlxliff'] },
-                { name: App.i18n.getString('FileFormats', 'srt'), extensions: ['srt'] },
-                { name: App.i18n.getString('FileFormats', 'svg'), extensions: ['svg'] },
-                { name: App.i18n.getString('FileFormats', 'tradosPackage'), extensions: ['sdlppx'] },
-                { name: App.i18n.getString('FileFormats', 'ts'), extensions: ['ts'] },
-                { name: App.i18n.getString('FileFormats', 'txml'), extensions: ['txml'] },
-                { name: App.i18n.getString('FileFormats', 'visio'), extensions: ['vsdx'] },
-                { name: App.i18n.getString('FileFormats', 'txlf'), extensions: ['txlf'] },
-                { name: App.i18n.getString('FileFormats', 'xliff'), extensions: ['xlf', 'xliff', 'mqxliff', 'txlf'] },
-                { name: App.i18n.getString('FileFormats', 'xml'), extensions: ['xml'] }
-            ]
+            filters: filters
         }).then((value: Electron.OpenDialogReturnValue) => {
             if (!value.canceled) {
                 this.getFileType(event, value.filePaths[0]);
@@ -640,7 +626,7 @@ class App {
             let errorLine: string = '';
             let lines: string[] = result.split('\n');
             for (let i = 0; i < lines.length; i++) {
-                if (lines[i].indexOf('SEVERE') !== -1) {
+                if (lines[i].indexOf('ERROR') !== -1) {
                     errorLine = lines[i];
                 }
             }
@@ -686,8 +672,8 @@ class App {
         event.sender.send('set-status', { status: App.i18n.getString('App', 'validatingXliff') });
         let result: string = App.runJava('openxliff/com.maxprograms.validation.XliffChecker', ['-lang', App.lang, '-xliff', xliff, '-catalog', App.defaultCatalog]);
         event.sender.send('validation-completed');
-        while (result.indexOf('SEVERE:') !== -1) {
-            result = result.substring(result.indexOf('SEVERE:') + 'SEVERE:'.length);
+        while (result.indexOf('ERROR:') !== -1) {
+            result = result.substring(result.indexOf('ERROR:') + 'ERROR:'.length);
         }
         if (result.indexOf('INFO:') !== -1) {
             result = result.substring(result.indexOf('INFO:') + 'INFO:'.length);
@@ -760,7 +746,6 @@ class App {
         }
         event.sender.send('set-status', { status: App.i18n.getString('App', 'mergingXliff') });
         let result: string = App.runJava('openxliff/com.maxprograms.converters.Merge', params);
-        console.log(result);
         if (App.javaErrors) {
             dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
             return;
@@ -787,7 +772,6 @@ class App {
     analyse(event: IpcMainEvent, file: string): void {
         event.sender.send('set-status', { status: App.i18n.getString('App', 'analysingXliff') });
         let result: string = App.runJava('openxliff/com.maxprograms.stats.RepetitionAnalysis', ['-lang', App.lang, '-xliff', file, '-catalog', App.defaultCatalog]);
-        console.log(result);
         if (App.javaErrors) {
             dialog.showErrorBox(App.i18n.getString('App', 'error'), result);
             return;
