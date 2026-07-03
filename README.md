@@ -18,16 +18,21 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - Adobe InDesign Interchange (INX)
   - Adobe InDesign IDML CS4, CS5, CS6 & CC
   - HTML
+  - Markdown (CommonMark, GitHub Flavored Markdown, Pandoc and other dialects)
   - Microsoft Office (2007 and newer)
   - Microsoft Visio XML Drawings (2007 and newer)
   - MIF (Maker Interchange Format)
   - OpenOffice / LibreOffice / StarOffice
   - Plain Text
+  - QTI (IMS Question and Test Interoperability)
+  - QTI Packages
   - SDLXLIFF (Trados Studio)
   - SRT Subtitles
   - Trados Studio Packages (*.sdlppx)
   - TXML (GlobalLink/Wordfast PRO)
+  - VTT Subtitles (WebVTT)
   - WPML XLIFF (WordPress Multilingual Plugin)
+  - Wordfast/GlobalLink XLIFF (*.txlf)
   - XLIFF from Other Tools (.mqxliff, .txlf, .xliff, etc.)
 - **XML Formats**
   - XML (Generic)
@@ -40,6 +45,7 @@ With XLIFF Manager you can create XLIFF for all formats supported by OpenXLIFF F
   - JavaScript
   - JSON
   - Java Properties
+  - PHP Arrays
   - PO (Portable Objects)
   - RC (Windows C/C++ Resources)
   - ResX (Windows .NET Resources)
@@ -91,8 +97,8 @@ Technical Support | Peer support at [Groups.io](https://groups.io/g/maxprograms/
 
 ## Requirements
 
-- Node.js 24.15.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
-- OpenXLIFF Filters 5.0.0 or newer. Get it from [https://github.com/maxprograms-com/OpenXLIFF](https://github.com/maxprograms-com/OpenXLIFF)
+- Node.js 24.17.0 LTS or newer. Get it from [https://nodejs.org/](https://nodejs.org/)
+- OpenXLIFF Filters 6.2.0 or newer. Get it from [https://github.com/maxprograms-com/OpenXLIFF](https://github.com/maxprograms-com/OpenXLIFF)
 
 ## Building
 

@@ -7,12 +7,13 @@
             files from the following document formats:</p>
         <ul>
             <li>
-                <p><b>General Documentation</b></p>
+                <p><b>General Documentation Types</b></p>
                 <ul>
                     <li>Adobe InCopy ICML</li>
                     <li>Adobe InDesign Interchange (INX)</li>
                     <li>Adobe InDesign IDML CS4, CS5, CS6 &amp; CC</li>
                     <li>HTML</li>
+                    <li>Markdown (CommonMark, GitHub Flavored Markdown, Pandoc and other dialects)</li>
                     <li>Microsoft Office (2007 and newer)</li>
                     <li>Microsoft Visio XML Drawings (2007 and newer)</li>
                     <li>MIF (Maker Interchange Format)</li>
@@ -21,11 +22,13 @@
                     <li>QTI (IMS Question and Test Interoperability)</li>
                     <li>QTI Packages</li>
                     <li>SRT Subtitles</li>
+                    <li>VTT Subtitles (WebVTT)</li>
                 </ul>
             </li>
             <li>
                 <p><b>Localization Files</b></p>
                 <ul>
+                    <li>PO (gettext Portable Object)</li>
                     <li>SDLXLIFF (Trados Studio)</li>
                     <li>Trados Studio Packages (*.sdlppx)</li>
                     <li>Wordfast/GlobalLink TXML (*.txml)</li>
@@ -46,7 +49,7 @@
                 </ul>
             </li>
             <li>
-                <p><b>Software Development</b></p>
+                <p><b>Software Development Types</b></p>
                 <ul>
                     <li>JavaScript</li>
                     <li>Java Properties</li>

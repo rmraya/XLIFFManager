@@ -16,12 +16,14 @@
           <li>HTML</li>
           <li>Microsoft Office (2007 y versiones posteriores)</li>
           <li>Dibujos XML de Microsoft Visio (2007 y versiones posteriores)</li>
+          <li>Markdown (CommonMark, GitHub Flavored Markdown, Pandoc y otros dialectos)</li>
           <li>MIF (Maker Interchange Format)</li>
           <li>OpenOffice / LibreOffice / StarOffice</li>
           <li>Texto sin Formato</li>
           <li>QTI (IMS Question and Test Interoperability)</li>
           <li>Paquetes QTI</li>
           <li>Subtítulos SRT</li>
+          <li>Subtítulos VTT (WebVTT)</li>
         </ul>
       </li>
       <li>
