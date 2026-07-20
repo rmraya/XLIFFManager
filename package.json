@@ -26,10 +26,10 @@
     "url": "https://github.com/maxprograms-com/XLIFFManager.git"
   },
   "devDependencies": {
-    "electron": "^42.5.1",
+    "electron": "^43.1.1",
     "typescript": "^6.0.3"
   },
   "dependencies": {
-    "typesbcp47": "^1.24.0"
+    "typesbcp47": "^1.24.1"
   }
 }
